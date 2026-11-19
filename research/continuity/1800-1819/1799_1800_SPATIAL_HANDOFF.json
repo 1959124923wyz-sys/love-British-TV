@@ -16,19 +16,19 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 616,
-    "linked_to_1800_public_geometry": 476,
+    "1799_prior_records_reviewed": 640,
+    "linked_to_1800_public_geometry": 504,
     "by_disposition": {
-      "anchor": 278,
+      "anchor": 297,
       "claim_evidence": 7,
-      "continued": 162,
+      "continued": 172,
       "event_history": 12,
-      "fiscal_evidence": 36,
-      "needs_boundary_or_site_review": 23,
+      "fiscal_evidence": 35,
+      "needs_boundary_or_site_review": 20,
       "network_evidence": 59,
       "occupation": 8,
       "political_relation_evidence": 11,
-      "renewed_scope": 20
+      "renewed_scope": 19
     },
     "continue_in_original_public_layer": 1
   },
@@ -446,8 +446,11 @@
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "1782后Salsette公司岛港参考",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "bombay-salsette-historical-main-island-1800"
+      ],
+      "notes": "旧矩形由萨尔塞特主岛档案岸线接替，其它小岛分别落点。"
     },
     {
       "prior_id": "B37-I-Z038",
@@ -1209,16 +1212,22 @@
       "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
       "name_zh": "1775—1799 Thana东印度公司行政日志",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-thana-administration-1800"
+      ],
+      "notes": "旧框由塔纳历史镇的民政地点接替，征收制度有独立分期。"
     },
     {
       "prior_id": "B39-G-Z034",
       "source_dataset": "data/eighteenth-century-b39-gulf-surat-factories.json",
       "name_zh": "1788—1799 Thana公司土地政务记录延续",
       "prior_record_kind": "revenue",
-      "resolution": "fiscal_evidence",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-thana-administration-1800"
+      ],
+      "notes": "旧框由塔纳历史镇的民政地点接替，征收制度有独立分期。"
     },
     {
       "prior_id": "B39-G-Z045",
@@ -1266,11 +1275,11 @@
       "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
       "name_zh": "1668年后东印度公司孟买岛：王室授予的港口司法和军事管辖",
       "prior_record_kind": "公司港岛行政参考",
-      "resolution": "renewed_scope",
+      "resolution": "continued",
       "features_at_1800": [
         "19CT7-bombay-company-main-island"
       ],
-      "notes": "按1812年东印度公司图的历史孟买主岛复核，萨尔塞特岛及周边各点另立台账。"
+      "notes": "孟买港岛晚期样貌复用1800年图形。早期殖民港另设具名地点。"
     },
     {
       "prior_id": "MADRAS",
@@ -2039,8 +2048,11 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "18世纪末萨尔塞特岛及孟买周边英公司经营",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "bombay-salsette-historical-main-island-1800"
+      ],
+      "notes": "旧矩形由萨尔塞特主岛档案岸线接替，其它小岛分别落点。"
     },
     {
       "prior_id": "PONDICHERRY_BRITISH",
@@ -6107,6 +6119,270 @@
         "malacca-st-john-hill-fort-1800"
       ],
       "notes": "沿原址点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_HISTORIC_MAIN_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买 · 历史主港岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "19CT7-bombay-company-main-island"
+      ],
+      "notes": "沿同一历史轮廓接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_SALSETTE_MAIN_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买北部 · 萨尔塞特历史主岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "bombay-salsette-historical-main-island-1800"
+      ],
+      "notes": "沿同一历史轮廓接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_TROMBAY_HISTORIC",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "萨尔塞特东南 · 特龙贝旧聚落",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-trombay-historical-site-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_ELEPHANTA_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买港湾 · 埃莱芬塔岛",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-elephanta-gharapuri-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_NHAVE_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买港湾 · 恩哈韦岛",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-nhave-hog-island-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_KARANJA_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买港湾 · 卡兰贾岛",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-karanja-island-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_DRONAGIRI_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "卡兰贾 · 德罗讷吉里山堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-karanja-dronagiri-fort-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_MADH_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "萨尔塞特西岸 · 马德堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-madh-versova-fort-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_BASSEIN_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买北岸 · 瓦赛堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "bombay-vasai-bassein-fort-1800"
+      ],
+      "notes": "沿同一历史轮廓接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_THANA_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "塔纳 · 塔纳堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-thana-fort-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_THANA_COUNTRY_ADMIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "塔纳 · 公司行政与村赋",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-thana-administration-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_SION_CAUSEWAY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买北侧 · 锡安堤道",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-sion-historical-causeway-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_THANA_WEST_CURTAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "塔纳堡 · 西棱堡及南向幕墙",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "bombay-thana-west-curtain-1800"
+      ],
+      "notes": "沿同一测图线段接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_THANA_NORTH_SHOULDER",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "塔纳堡 · 北棱堡及东肩",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "bombay-thana-north-shoulder-1800"
+      ],
+      "notes": "沿同一测图线段接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_CASTLE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买 · 东印度公司城堡",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-castle-historic-core-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_DONGRI_OLD_FORT_CLEARANCE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买 · 东格里旧堡与拆迁地段",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-dongri-fort-and-clearance-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_OLD_DOCKYARD",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买 · 公司旧船坞",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-first-dry-dock-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_GATE_APOLLO",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买旧城 · 阿波罗门",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-historic-apollo-gate-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_GATE_CHURCH",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买旧城 · 教堂门",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-historic-church-gate-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_GATE_BAZAAR",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买旧城 · 市集门",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-historic-bazaar-gate-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_FORT_ST_GEORGE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买 · 圣乔治堡主围垒",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "bombay-fort-st-george-1800"
+      ],
+      "notes": "沿同一历史轮廓接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_LATE_LANDWARD_WORKS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买旧城 · 晚期陆侧工事带",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "bombay-late-landward-works-1800"
+      ],
+      "notes": "沿同一测图线段接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_SION_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买北侧 · 锡安堡",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-sion-historic-fort-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
+    },
+    {
+      "prior_id": "BOMBAY_MAZAGON_OLD_DOCK",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "孟买 · 马扎冈卡萨拉湾旧船坞",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bombay-mazagon-kasara-dock-1800"
+      ],
+      "notes": "沿同一具名地点接入1800年。"
     }
   ]
 }

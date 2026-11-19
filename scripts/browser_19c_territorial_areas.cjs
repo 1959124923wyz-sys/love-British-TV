@@ -1594,6 +1594,57 @@ async function verify() {
    await malaccaNineteenth('malacca-west-bank-mercantile-town-1800').filter({ hasText: title }).waitFor();
   }
 
+  const bombaySalsette = [19.185, 72.911];
+  const bombayVasai = [19.33049, 72.81448];
+  const bombayThana = [19.19999, 72.98319];
+  const bombayCastle = [18.93177, 72.83805];
+  const bombay18 = id => page.locator('[data-overlap-id="18c:' + id + '"]');
+  const bombay19 = id => page.locator('[data-historic-overlap-id$=":' + id + '"]');
+  await jump(1741);
+  await setView([...bombayCastle, 17]);
+  await openSeamDossier(bombayCastle, 1741, /孟买城堡.*奴役交易规章与跨洋押运/);
+  assert.match(await page.locator('#dossierBody').textContent(), /马达加斯加运来19人/);
+
+  await jump(1774);
+  await setView([...bombayThana, 16]);
+  await openSeamDossier(bombayThana, 1774, /塔纳堡.*12月28日英军强攻/);
+  await jump(1776);
+  await setView([...bombaySalsette, 12]);
+  await clickAreaAt(...bombaySalsette);
+  await bombay18('BOMBAY_SALSETTE_MAIN_ISLAND').filter({ hasText: /普兰达尔约后公司续占/ }).waitFor();
+
+  for (const [year, title] of [[1780, /12月11日英军攻占/], [1782, /条约议定归还/], [1783, /实际交还马拉塔/]]) {
+   await jump(year);
+   await setView([...bombayVasai, 15]);
+   await clickAreaAt(...bombayVasai);
+   await bombay18('BOMBAY_BASSEIN_FORT').filter({ hasText: title }).waitFor();
+  }
+
+  await jump(1799);
+  const olderBombay = await page.evaluate(() => ({
+   mass: window.eighteenthMassSpatial.getAudit(),
+   early: window.eighteenthSpatial.getAudit(),
+   b37: window.eighteenthBatch37Spatial.getAudit(),
+   b39: window.eighteenthBatch39Spatial.getAudit()
+  }));
+  assert(!olderBombay.early.activeAreas.includes('BOMBAY'));
+  assert(!olderBombay.b37.activeZoneIds.includes('B37-I-Z026'));
+  assert(!olderBombay.b39.activeZoneIds.includes('B39-G-Z030'));
+  assert(!olderBombay.b39.activeZoneIds.includes('B39-G-Z034'));
+  assert(olderBombay.mass.activeRegionalLines.includes('BOMBAY_THANA_WEST_CURTAIN'));
+  assert(olderBombay.mass.activeRegionalLines.includes('BOMBAY_THANA_NORTH_SHOULDER'));
+  await setView([...bombaySalsette, 12]);
+  await clickAreaAt(...bombaySalsette);
+  await bombay18('BOMBAY_SALSETTE_MAIN_ISLAND').filter({ hasText: /土地经营及锡安工程/ }).waitFor();
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...bombaySalsette);
+  await bombay19('bombay-salsette-historical-main-island-1800').filter({ hasText: /公司管治和村赋/ }).waitFor();
+
+  await setView([...bombayVasai, 15]);
+  await clickAreaAt(...bombayVasai);
+  await bombay19('bombay-vasai-bassein-fort-1800').filter({ hasText: /马拉塔驻地延续/ }).waitFor();
+
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
  } finally {

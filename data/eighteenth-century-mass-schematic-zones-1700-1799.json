@@ -5399,7 +5399,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "BOMBAY_SALSETTE_MAIN_ISLAND"
     },
     {
       "id": "PONDICHERRY_BRITISH",
@@ -26988,6 +26989,1136 @@
         "coordinates": [
           102.24857,
           2.19369
+        ]
+      }
+    },
+    {
+      "id": "BOMBAY_EARLY_COMPANY_PORT",
+      "stable_id": "bombay-early-company-port",
+      "title": "孟买 · 东印度公司旧港",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1736,
+          "title": "孟买旧港 · 东印度公司西岸驻地",
+          "note": "英国王室在1668年把孟买授予东印度公司。十八世纪初，公司在东岸旧港和城堡运作。"
+        },
+        {
+          "start_year": 1737,
+          "end_year": 1763,
+          "title": "孟买旧港 · 葡马战争期间的公司港口",
+          "note": "1737年马拉塔方面攻取萨尔塞特大部。孟买公司官员派拉姆吉·普拉布交涉，并继续经营原有港口。"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1783,
+          "title": "孟买旧港 · 港城扩建与军事用地",
+          "note": "公司扩张防务和造船设施。东格里清场及城内外迁居改变旧港周边的住宅分布。"
+        }
+      ],
+      "source_urls": [
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/greater_bombay/general.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://old-digitalcollections.nypl.org/items/510d47e4-65c5-a3d9-e040-e00a18064a99",
+        "https://searcharchives.bl.uk/catalog/032-000173250"
+      ],
+      "geometry_method": "Historic harbour-side complex in the old Fort precinct, using the named port-side area and Thornton chart as positional evidence.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 220,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8382,
+          18.9322
+        ]
+      }
+    },
+    {
+      "id": "BOMBAY_TROMBAY_HISTORIC",
+      "stable_id": "bombay-trombay-historical-site",
+      "title": "萨尔塞特东南 · 特龙贝旧聚落",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1737,
+          "end_year": 1773,
+          "title": "特龙贝 · 萨尔塞特东南沿岸村落",
+          "note": "特龙贝位于孟买港湾北端，旧水道和低地将其山地与萨尔塞特其他部分隔开。地方志记录葡方旧教堂及港岸设施。"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1799,
+          "title": "特龙贝 · 公司接管后的港北聚落",
+          "note": "英军攻取塔纳及萨尔塞特驻地后，港湾北头特龙贝进入公司管理的岛区。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/places_Trombay.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/greater_bombay/general.html",
+        "https://www.amdigital.co.uk/insights/blog/the-topography-of-colonialism-maps-in-east-india-company",
+        "https://searcharchives.bl.uk/catalog/040-000741270",
+        "https://old-digitalcollections.nypl.org/items/510d47e4-65c5-a3d9-e040-e00a18064a99",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/histroy_marathas.html",
+        "https://www.tcil.net.in/tender/pdf/25F2457.pdf"
+      ],
+      "geometry_method": "Trombay Koliwada named coastal locality, identified on the India Office chart by the hill-island and checked against a federally published site coordinate. Historic marsh boundaries are unresolved.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 1000,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.949124,
+          19.031468
+        ]
+      },
+      "cross_century_feature_id": "bombay-trombay-historical-site-1800"
+    },
+    {
+      "id": "BOMBAY_ELEPHANTA_ISLAND",
+      "stable_id": "bombay-elephanta-gharapuri",
+      "title": "孟买港湾 · 埃莱芬塔岛",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1775,
+          "title": "埃莱芬塔岛 · 公司接管",
+          "note": "1774年末塔纳落入英军手中。至1775年初，港湾东侧的埃莱芬塔岛由公司接管。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1781,
+          "title": "埃莱芬塔岛 · 普兰达尔约后续占",
+          "note": "普兰达尔条约约定萨尔塞特及英方占有的小岛暂维持现状。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "title": "埃莱芬塔岛 · 萨尔拜条约确认留英",
+          "note": "1782年5月17日《萨尔拜条约》第二条列明，萨尔塞特、埃莱芬塔、卡兰贾和恩哈韦继续由公司占有。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799,
+          "title": "埃莱芬塔岛 · 换约后的公司岛屿",
+          "note": "1783年2月，双方最终交换批准书。公司继续占有条约第二条列明的四座岛屿。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/land_acquisition.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/histroy_marathas.html",
+        "https://upload.wikimedia.org/wikipedia/commons/0/06/A_Collection_Of_Treaties%2CEngagements%2CAnd_Sunnuds%2C_Relating_To_India_And_Neighbouring_Countries._Vol-Iii_%28IA_ACollectionOfTreatiesEngagementsAndSunnudsRelatingToIndiaAndNeighbouringCountriesVolIII%29.pdf",
+        "https://searcharchives.bl.uk/catalog/040-000004727",
+        "https://dl.tufts.edu/downloads/z890s5462?filename=1j92gm26m.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://whc.unesco.org/en/list/244/maps/",
+        "https://culture.gov.in/elephanta-caves"
+      ],
+      "geometry_method": "Named island anchor from the historic chart and corresponding gazetteer or heritage inventory. Shoreline is resolved separately.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 850,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.93583,
+          18.96667
+        ]
+      },
+      "cross_century_feature_id": "bombay-elephanta-gharapuri-1800"
+    },
+    {
+      "id": "BOMBAY_NHAVE_ISLAND",
+      "stable_id": "bombay-nhave-hog-island",
+      "title": "孟买港湾 · 恩哈韦岛",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1775,
+          "title": "恩哈韦岛 · 公司接管",
+          "note": "1774年末塔纳失陷后，港湾东侧的小岛陆续易手。至1775年初英方接管当时称霍格岛的恩哈韦。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1781,
+          "title": "恩哈韦岛 · 普兰达尔约后续占",
+          "note": "普兰达尔条约约定萨尔塞特及英方占有的小岛暂维持现状。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "title": "恩哈韦岛 · 萨尔拜条约确认留英",
+          "note": "1782年5月17日《萨尔拜条约》第二条列明，萨尔塞特、埃莱芬塔、卡兰贾和恩哈韦继续由公司占有。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799,
+          "title": "恩哈韦岛 · 换约后的公司岛屿",
+          "note": "1783年2月，双方最终交换批准书。公司继续占有条约第二条列明的四座岛屿。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/land_acquisition.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/histroy_marathas.html",
+        "https://upload.wikimedia.org/wikipedia/commons/0/06/A_Collection_Of_Treaties%2CEngagements%2CAnd_Sunnuds%2C_Relating_To_India_And_Neighbouring_Countries._Vol-Iii_%28IA_ACollectionOfTreatiesEngagementsAndSunnudsRelatingToIndiaAndNeighbouringCountriesVolIII%29.pdf",
+        "https://searcharchives.bl.uk/catalog/040-000004727",
+        "https://dl.tufts.edu/downloads/z890s5462?filename=1j92gm26m.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/places_Hog.html",
+        "https://www.geonames.org/1261464/nhave.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/greater_bombay/general.html"
+      ],
+      "geometry_method": "Named island anchor from the historic chart and corresponding gazetteer or heritage inventory. Shoreline is resolved separately.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 850,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.96667,
+          18.95
+        ]
+      },
+      "cross_century_feature_id": "bombay-nhave-hog-island-1800"
+    },
+    {
+      "id": "BOMBAY_KARANJA_ISLAND",
+      "stable_id": "bombay-karanja-island",
+      "title": "孟买港湾 · 卡兰贾岛",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1775,
+          "title": "卡兰贾岛 · 公司接管",
+          "note": "塔纳战事后，英军派部队接收卡兰贾。公司随后安排驻官管理该岛。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1781,
+          "title": "卡兰贾岛 · 普兰达尔约后续占",
+          "note": "普兰达尔条约约定萨尔塞特及英方占有的小岛暂维持现状。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "title": "卡兰贾岛 · 萨尔拜条约确认留英",
+          "note": "1782年5月17日《萨尔拜条约》第二条列明，萨尔塞特、埃莱芬塔、卡兰贾和恩哈韦继续由公司占有。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799,
+          "title": "卡兰贾岛 · 换约后的公司岛屿",
+          "note": "1783年2月，双方最终交换批准书。公司继续占有条约第二条列明的四座岛屿。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/land_acquisition.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/histroy_marathas.html",
+        "https://upload.wikimedia.org/wikipedia/commons/0/06/A_Collection_Of_Treaties%2CEngagements%2CAnd_Sunnuds%2C_Relating_To_India_And_Neighbouring_Countries._Vol-Iii_%28IA_ACollectionOfTreatiesEngagementsAndSunnudsRelatingToIndiaAndNeighbouringCountriesVolIII%29.pdf",
+        "https://searcharchives.bl.uk/catalog/040-000004727",
+        "https://dl.tufts.edu/downloads/z890s5462?filename=1j92gm26m.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/KOLABA/places_Karanja.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/land_british.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/greater_bombay/general.html"
+      ],
+      "geometry_method": "Uran settlement reference on the island shown as Caranja in Horsburgh’s 1803–04 chart and the Maharashtra place gazetteer.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 850,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9334,
+          18.8883
+        ]
+      },
+      "cross_century_feature_id": "bombay-karanja-island-1800"
+    },
+    {
+      "id": "BOMBAY_DRONAGIRI_FORT",
+      "stable_id": "bombay-karanja-dronagiri-fort",
+      "title": "卡兰贾 · 德罗讷吉里山堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1787,
+          "title": "德罗讷吉里山堡 · 卡兰贾易手时期",
+          "note": "塔纳失陷后，英方派基廷部前往卡兰贾。岛上山顶小堡撤守，英军接管卡兰贾。山上的德罗讷吉里遗址与水池边低地小堡分址。"
+        },
+        {
+          "start_year": 1788,
+          "end_year": 1799,
+          "title": "德罗讷吉里山堡 · 旅行者所见遗址",
+          "note": "1788年到访者在卡兰贾山地记有废弃堡址。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/KOLABA/places_Karanja.html",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/History%20Part/History_III/chapter_3.pdf",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/land_acquisition.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Gazetteer%20of%20Bombay%20Presidency/history_of_the_konkan/section_9.pdf",
+        "https://hpip.org/en/heritage/details/279"
+      ],
+      "geometry_method": "Named hilltop fort distinct from the low fort by the tank in the Kolaba Gazetteer; corroborated by the historic Caranja Great Hill placement on Horsburgh’s survey.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 165,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9359,
+          18.86699
+        ]
+      },
+      "cross_century_feature_id": "bombay-karanja-dronagiri-fort-1800"
+    },
+    {
+      "id": "BOMBAY_MADH_FORT",
+      "stable_id": "bombay-madh-versova-fort",
+      "title": "萨尔塞特西岸 · 马德堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1736,
+          "title": "马德堡 · 葡方守望据点",
+          "note": "马德堡在韦尔索瓦港口对岸，葡方用以守望西岸水道。"
+        },
+        {
+          "start_year": 1737,
+          "end_year": 1773,
+          "title": "马德堡 · 葡马争夺萨尔塞特时期",
+          "note": "塔纳陷落之初，韦尔索瓦一带仍在抵抗马拉塔进攻。"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1799,
+          "title": "马德堡 · 公司接管萨尔塞特后的港防",
+          "note": "公司占有萨尔塞特后，马德堡仍位于韦尔索瓦港对岸。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/places_Versova.html",
+        "https://indiacinehub.gov.in/location/madh-island",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/History%20Part/History_III/chapter_3.pdf",
+        "https://www.amdigital.co.uk/insights/blog/the-topography-of-colonialism-maps-in-east-india-company",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Named fort on the Madd beach ridge opposite the historical port of Versova, matched by the label on IOR/F/4/674 f. 619.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 90,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.794785,
+          19.132283
+        ]
+      },
+      "cross_century_feature_id": "bombay-madh-versova-fort-1800"
+    },
+    {
+      "id": "BOMBAY_THANA_FORT",
+      "stable_id": "bombay-thana-fort",
+      "title": "塔纳 · 塔纳堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1737,
+          "end_year": 1737,
+          "title": "塔纳堡 · 3月马拉塔军接管",
+          "note": "3月下旬马拉塔军突袭塔纳渡口，葡方总督离岛，塔纳堡随后投降。"
+        },
+        {
+          "start_year": 1738,
+          "end_year": 1773,
+          "title": "塔纳堡 · 马拉塔改修河岸工事",
+          "note": "塔纳由马拉塔方面治守。河岸的两处圆形棱堡在这一时期改修。"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1774,
+          "title": "塔纳堡 · 12月28日英军强攻",
+          "note": "英军在12月28日傍晚强攻夺取五角堡。地方志与到场的詹姆斯·福布斯都记有守军遭大量杀害。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1775,
+          "end_year": 1777,
+          "title": "塔纳堡 · 公司驻军与修复",
+          "note": "公司接收后修复塔纳堡。福布斯另绘有1777年修复后的堡垒图。1776年，公司拆除堡西和西南侧民屋，开辟堡外空地。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1781,
+          "title": "塔纳堡 · 公司驻军",
+          "note": "塔纳继续作为萨尔塞特的公司驻军点。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1783,
+          "title": "塔纳堡 · 萨尔拜条约及换约后留英",
+          "note": "1782年5月17日《萨尔拜条约》第二条列明，萨尔塞特、埃莱芬塔、卡兰贾和恩哈韦继续由公司占有。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "title": "塔纳堡 · 公司驻防持续",
+          "note": "公司继续扼守塔纳水道和通向内陆的交通。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/places_Thana.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/histroy_marathas.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/History%20Part/History_III/chapter_3.pdf",
+        "https://ead-pdfs.library.yale.edu/11734.pdf",
+        "https://www.amdigital.co.uk/insights/blog/the-topography-of-colonialism-maps-in-east-india-company",
+        "https://purl.pt/22221",
+        "https://mapcarta.com/W627248997",
+        "https://www.udri.org/wp-content/uploads/Mumbai%20Reader/MR%209/25%20Sidh%20Losa%20Mendiratta%20-%20Uncovering%20Portuguese%20Histories%20Within%20Mumbai%E2%80%99s%20Urban%20History.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Surviving Thana fort at the historic prison precinct. Name and position checked against IOR/F/4/674 and Forbes’s eyewitness drawings; modern prison grounds excluded.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 90,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.98319,
+          19.19999
+        ]
+      },
+      "cross_century_feature_id": "bombay-thana-fort-1800"
+    },
+    {
+      "id": "BOMBAY_THANA_COUNTRY_ADMIN",
+      "stable_id": "bombay-thana-administration",
+      "title": "塔纳 · 公司行政与村赋",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1776,
+          "title": "塔纳公司官署 · 驻官与村赋承包",
+          "note": "夺取岛上主要驻地后，公司设萨尔塞特驻官。塔纳档案卷册记录驻地的日记与咨询，村赋依旧由竞争取得征收权的商人承包。"
+        },
+        {
+          "start_year": 1777,
+          "end_year": 1782,
+          "title": "塔纳公司官署 · 驻地咨询与征收",
+          "note": "东印度公司塔纳日记和咨询卷留存这一阶段的日常民政。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1787,
+          "title": "塔纳公司官署 · 换约后的民政治理",
+          "note": "和约换约后英方继续管治萨尔塞特。塔纳驻地续办民政和土地事务。"
+        },
+        {
+          "start_year": 1788,
+          "end_year": 1794,
+          "title": "塔纳公司官署 · 村赋改由官员管理",
+          "note": "公司不再发包萨尔塞特村赋，把村社征收交给官员。1788年以后塔纳驻地日记及咨询卷继续登记。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "塔纳公司官署 · 土地及司法文书",
+          "note": "塔纳咨询、土地与司法文书延续，新规逐步调整驻地官员和萨尔塞特法院的职权。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/places_Thana.html",
+        "https://searcharchives.bl.uk/catalog/036-000178280",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/land_british.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/land_acquisition.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/histroy_marathas.html",
+        "https://searcharchives.bl.uk/catalog/040-000178284",
+        "https://searcharchives.bl.uk/catalog/040-000178286",
+        "https://searcharchives.bl.uk/catalog/040-000178287"
+      ],
+      "geometry_method": "Thana historic town and administration locality at settlement scale, referenced against port-side town and fort on archival views. Point distinct from the military perimeter; specific office room not established.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 550,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9781,
+          19.1941
+        ]
+      },
+      "cross_century_feature_id": "bombay-thana-administration-1800"
+    },
+    {
+      "id": "BOMBAY_SION_CAUSEWAY",
+      "stable_id": "bombay-sion-historical-causeway",
+      "title": "孟买北侧 · 锡安堤道",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "锡安堤道 · 跨岛工程开工",
+          "note": "1798年5月开工，工程连通孟买北侧锡安与对岸萨尔塞特。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_1/Roads.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://portal.mcgm.gov.in/irj/go/km/docs/documents/Draft%20DPR%20of%20Coastal%20Road%20Project/Environmental%20Assessment%20Report%20-%20Vol%20-%20VIII/Environmental%20Assessment%20Report.pdf",
+        "https://www.amdigital.co.uk/insights/blog/the-topography-of-colonialism-maps-in-east-india-company",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/histroy_marathas.html",
+        "https://www.rarebooksocietyofindia.org/book_archive/196174216674_10152354816361675.pdf"
+      ],
+      "geometry_method": "Representative tidal crossing north of Sion Fort, shown as the causeway marked A in IOR/F/4/674 and described in the Bombay Gazetteer. Endpoints and later widening are unresolved.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 400,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86768,
+          19.04964
+        ]
+      },
+      "cross_century_feature_id": "bombay-sion-historical-causeway-1800"
+    },
+    {
+      "id": "BOMBAY_CASTLE",
+      "stable_id": "bombay-castle-historic-core",
+      "title": "孟买 · 东印度公司城堡",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1740,
+          "title": "孟买城堡 · 公司军政与港口驻地",
+          "note": "孟买城堡为东印度公司西岸军政和港口事务的驻地。"
+        },
+        {
+          "start_year": 1741,
+          "end_year": 1741,
+          "title": "孟买城堡 · 奴役交易规章与跨洋押运",
+          "note": "6月3日总督与议会在城堡发布公告，以买卖双方的种姓、宗教为条件限制被奴役者的交易。9月会议记公司船从马达加斯加运来19人，下令为其中的成年男子配军装并训练。"
+        },
+        {
+          "start_year": 1742,
+          "end_year": 1747,
+          "title": "孟买城堡 · 公司军政机构",
+          "note": "公司继续办理西岸驻地的防务和行政事务。"
+        },
+        {
+          "start_year": 1748,
+          "end_year": 1748,
+          "title": "孟买城堡 · 公司命令登记被奴役者",
+          "note": "4月19日议会命奴役者呈报被奴役者的姓名、年龄和出生地，未申报者会被公司没收。"
+        },
+        {
+          "start_year": 1749,
+          "end_year": 1756,
+          "title": "孟买城堡 · 港城扩修时期",
+          "note": "公司继续扩充港城的堡防与船坞，商住街巷分布在周围。"
+        },
+        {
+          "start_year": 1757,
+          "end_year": 1757,
+          "title": "孟买城堡 · 筑墙工人争取服役条件",
+          "note": "1757年公司讨论雨季留用外来筑墙工。卡马蒂工人争取在本地服役及伤亡补偿。"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1768,
+          "title": "孟买城堡 · 公司驻地与城防",
+          "note": "公司驻堡及防务、行政职能继续。"
+        },
+        {
+          "start_year": 1769,
+          "end_year": 1779,
+          "title": "孟买城堡 · 扩防与清场",
+          "note": "1769年英方拆除东格里旧堡。其后公司推进新堡、外部空地和住区迁拆。"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1799,
+          "title": "孟买城堡 · 继续办理公司军政",
+          "note": "东印度公司继续在城堡及附近办公和驻军。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg"
+      ],
+      "geometry_method": "Named castle inside the walled town, tied to the Grose city plan and 1803–04 Horsburgh harbour survey. Civil, slave registration and construction orders are documented in the Bombay Presidency record extracts.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 90,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83805,
+          18.93177
+        ]
+      },
+      "cross_century_feature_id": "bombay-castle-historic-core-1800"
+    },
+    {
+      "id": "BOMBAY_DONGRI_OLD_FORT_CLEARANCE",
+      "stable_id": "bombay-dongri-fort-and-clearance",
+      "title": "孟买 · 东格里旧堡与拆迁地段",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1768,
+          "title": "孟买东格里 · 山顶旧堡与周边居民",
+          "note": "格罗斯城图标出东格里旧堡。炮台及旧堡邻近东格里住区。"
+        },
+        {
+          "start_year": 1769,
+          "end_year": 1769,
+          "title": "孟买东格里 · 公司炸除旧堡",
+          "note": "孟买方面在扩充城防时炸除东格里的旧堡。"
+        },
+        {
+          "start_year": 1770,
+          "end_year": 1771,
+          "title": "孟买东格里 · 科利渔民住屋被拆",
+          "note": "英方清场时拆除了东格里山顶科利渔民的房屋。"
+        },
+        {
+          "start_year": 1772,
+          "end_year": 1779,
+          "title": "孟买东格里 · 旧堡周围的军事清场",
+          "note": "民居拆迁后，孟买方面进一步平整和扩展城外空地。"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1799,
+          "title": "孟买东格里 · 拆堡后的旧址",
+          "note": "原旧堡位置和周边住区在扩防清场后有变化。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Grose plan in the Bhau Daji Lad collection tied to the surviving St Thomas Cathedral, castle and former gate-area anchors. Relative registration checked against the 1760 print and later survey. Historic street and wall positions approximate. Grose reference 20, Dunghary’s Fort. Old hilltop locality used for the surrounding displacement narrative.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 150,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.838909,
+          18.940823
+        ]
+      },
+      "cross_century_feature_id": "bombay-dongri-fort-and-clearance-1800"
+    },
+    {
+      "id": "BOMBAY_OLD_DOCKYARD",
+      "stable_id": "bombay-first-dry-dock",
+      "title": "孟买 · 公司旧船坞",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1768,
+          "title": "孟买公司旧船坞 · 干船坞与修造船",
+          "note": "十八世纪中叶，公司旧船坞开始使用干船坞，造船和修舰依靠瓦迪亚家族及其工匠。"
+        },
+        {
+          "start_year": 1769,
+          "end_year": 1799,
+          "title": "孟买公司旧船坞 · 港口扩充",
+          "note": "船坞继续为公司港口建造和维修船只。孟买方面也讨论在马扎冈另建新船坞。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright",
+        "https://ignca.gov.in/Asi_data/4870.pdf"
+      ],
+      "geometry_method": "Grose plan in the Bhau Daji Lad collection tied to the surviving St Thomas Cathedral, castle and former gate-area anchors. Relative registration checked against the 1760 print and later survey. Historic street and wall positions approximate. Reference 9, Great Dock, south chamber of the fort-side dockyard.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 110,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.835544,
+          18.930014
+        ]
+      },
+      "cross_century_feature_id": "bombay-first-dry-dock-1800"
+    },
+    {
+      "id": "BOMBAY_FORT_ST_GEORGE_BUILD",
+      "stable_id": "bombay-fort-st-george-build-site",
+      "title": "孟买 · 圣乔治堡",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1770,
+          "end_year": 1770,
+          "title": "孟买圣乔治堡 · 旧东格里堡拆除后新筑",
+          "note": "1769年孟买方面拆除东格里旧堡。1770年1月1日，公司首席工程师在近旁为新圣乔治堡奠基。"
+        },
+        {
+          "start_year": 1771,
+          "end_year": 1779,
+          "title": "孟买圣乔治堡 · 旧城北侧公司驻防",
+          "note": "圣乔治堡位于旧城北侧的港岸，承担东印度公司港防。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.stgh.in/about-us/history/"
+      ],
+      "geometry_method": "Builder’s locality on the composite 1771–1864 fortification chart at the northern surviving fort. Cross-checked on Horsburgh 1803–04 and against the known surviving wall; the different early Dongri fort has its own location.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 135,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8382,
+          18.94062
+        ]
+      }
+    },
+    {
+      "id": "BOMBAY_GATE_APOLLO",
+      "stable_id": "bombay-historic-apollo-gate",
+      "title": "孟买旧城 · 阿波罗门",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1769,
+          "title": "阿波罗门 · 旧城陆门",
+          "note": "阿波罗门位于陆墙靠南的一段，和旧城街网相接。"
+        },
+        {
+          "start_year": 1770,
+          "end_year": 1779,
+          "title": "阿波罗门 · 扩防清场和住区迁拆",
+          "note": "1772年公司限制教堂街以南的新建住宅，南侧城门位于受影响街区。"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1799,
+          "title": "阿波罗门 · 城内外通道",
+          "note": "孟买城外清场与驻防调整后，旧门仍连通城内外。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Grose plan in the Bhau Daji Lad collection tied to the surviving St Thomas Cathedral, castle and former gate-area anchors. Relative registration checked against the 1760 print and later survey. Historic street and wall positions approximate. Named gate location cross-checked on Bombay surveys; surviving street axis retained as anchor.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 90,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.832965,
+          18.926678
+        ]
+      },
+      "cross_century_feature_id": "bombay-historic-apollo-gate-1800"
+    },
+    {
+      "id": "BOMBAY_GATE_CHURCH",
+      "stable_id": "bombay-historic-church-gate",
+      "title": "孟买旧城 · 教堂门",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1769,
+          "title": "教堂门 · 旧城陆门",
+          "note": "教堂门位于旧城陆墙中段，通往教堂街。"
+        },
+        {
+          "start_year": 1770,
+          "end_year": 1779,
+          "title": "教堂门 · 扩防清场和住区迁拆",
+          "note": "1770年公司拆除教堂门与市集门间的多处住房，搬运工等居民受影响。"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1799,
+          "title": "教堂门 · 城内外通道",
+          "note": "孟买城外清场与驻防调整后，旧门仍连通城内外。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Grose plan in the Bhau Daji Lad collection tied to the surviving St Thomas Cathedral, castle and former gate-area anchors. Relative registration checked against the 1760 print and later survey. Historic street and wall positions approximate. Named gate location cross-checked on Bombay surveys; surviving street axis retained as anchor.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 90,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.831491,
+          18.932512
+        ]
+      },
+      "cross_century_feature_id": "bombay-historic-church-gate-1800"
+    },
+    {
+      "id": "BOMBAY_GATE_BAZAAR",
+      "stable_id": "bombay-historic-bazaar-gate",
+      "title": "孟买旧城 · 市集门",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1769,
+          "title": "市集门 · 旧城陆门",
+          "note": "市集门是旧城北侧通道，商市沿附近街道展开。"
+        },
+        {
+          "start_year": 1770,
+          "end_year": 1779,
+          "title": "市集门 · 扩防清场和住区迁拆",
+          "note": "1772年有关住宅限制使部分穆斯林居民及经营椰园者转往市集门外北侧营建。"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1799,
+          "title": "市集门 · 城内外通道",
+          "note": "孟买城外清场与驻防调整后，旧门仍连通城内外。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Grose plan in the Bhau Daji Lad collection tied to the surviving St Thomas Cathedral, castle and former gate-area anchors. Relative registration checked against the 1760 print and later survey. Historic street and wall positions approximate. Named gate location cross-checked on Bombay surveys; surviving street axis retained as anchor.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 90,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.835976,
+          18.938376
+        ]
+      },
+      "cross_century_feature_id": "bombay-historic-bazaar-gate-1800"
+    },
+    {
+      "id": "BOMBAY_SION_FORT",
+      "stable_id": "bombay-sion-historic-fort",
+      "title": "孟买北侧 · 锡安堡",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1702,
+          "end_year": 1741,
+          "title": "锡安堡 · 海峡入口的岸防工程",
+          "note": "1702年公司议在锡安建小堡。堡址在孟买北侧，面向通往萨尔塞特的水道。"
+        },
+        {
+          "start_year": 1742,
+          "end_year": 1764,
+          "title": "锡安堡 · 增驻与库室修缮",
+          "note": "1742年因堡垒邻近多条赴萨尔塞特的水道，议增派军官，并有库房和药库屋顶待修报告。"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1788,
+          "title": "锡安堡 · 公司北岸防御工务",
+          "note": "1765年孟买方面检查锡安与雷瓦之间的防务设施并报告需要维修。"
+        },
+        {
+          "start_year": 1789,
+          "end_year": 1799,
+          "title": "锡安堡 · 航道旁的英方堡址",
+          "note": "麦夸里1789年到访，詹姆斯·威尔士随后描下堡垒和与萨尔塞特相隔的水道。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_1/Roads.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://www.amdigital.co.uk/insights/blog/the-topography-of-colonialism-maps-in-east-india-company",
+        "https://www.mq.edu.au/macquarie-archive/lema/gallery/wales/sionfort1.html",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf"
+      ],
+      "geometry_method": "Named fort above the crossing, matched to James Wales views and Macquarie’s 1789 visit, distinct from the later causeway alignment.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 70,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.867725,
+          19.046663
+        ]
+      },
+      "cross_century_feature_id": "bombay-sion-historic-fort-1800"
+    },
+    {
+      "id": "BOMBAY_MAZAGON_OLD_DOCK",
+      "stable_id": "bombay-mazagon-kasara-dock",
+      "title": "孟买 · 马扎冈卡萨拉湾旧船坞",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1769,
+          "end_year": 1770,
+          "title": "马扎冈旧船坞 · 议建船坞",
+          "note": "1769年公司讨论另设船坞，拟定可接纳船只的吨位上限。"
+        },
+        {
+          "start_year": 1771,
+          "end_year": 1773,
+          "title": "马扎冈旧船坞 · 董事会授权收费",
+          "note": "1771年4月25日，公司董事会准建船坞和库房，授权向使用设施维修的私人船只收费。"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1799,
+          "title": "马扎冈旧船坞 · 小干船坞投入使用",
+          "note": "船厂纪年在1774年记有小干船坞，使用邻近后来称卡萨拉湾的旧水口。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://www.mazagondock.in/English/pages/Information-Manual"
+      ],
+      "geometry_method": "Representative location at historic Kasara Basin, recognized in the Bombay Port history pp. 53, 56 as the old tidal bay adjoining the early Mazagon dock. Exact dock slot remains uncertain at this scale.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 550,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84805,
+          18.96953
+        ]
+      },
+      "cross_century_feature_id": "bombay-mazagon-kasara-dock-1800"
+    },
+    {
+      "id": "BOMBAY_BANIAN_BASTION_CLEARANCE",
+      "stable_id": "bombay-banian-bastion-clearance",
+      "title": "孟买旧城 · 榕堡民居迁拆地段",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1757,
+          "end_year": 1757,
+          "title": "孟买榕堡附近 · 调查拆迁住屋",
+          "note": "1757年12月20日，负责改造榕堡的公司工程师提出调查相邻房屋和树篱的迁移。"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1758,
+          "title": "孟买榕堡附近 · 八所住宅迁移",
+          "note": "1758年1月3日主管报告涉及八所住宅。公司议会核拨给业主共400卢比搬迁费。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Banian Bastion (key 22) on the composite Gazetteer fortification survey, used as a vicinity anchor for the 1757–58 demolition inquiry. Individual house sites are unresolved.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 95,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.833086,
+          18.936
+        ]
+      }
+    },
+    {
+      "id": "BOMBAY_MADAGASCAR_TOWN",
+      "stable_id": "bombay-madagascar-town-inset",
+      "title": "孟买城外 · 海图所记马达加斯加镇",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1768,
+          "title": "孟买马达加斯加镇 · 海图上的墙外街区",
+          "note": "十八世纪六十年代的海图城镇附图在陆墙外绘出六个街块，称作马达加斯加镇。孟买当时已有来自西印度洋的非洲社群。"
+        }
+      ],
+      "source_urls": [
+        "https://bdh.bne.es/bnesearch/detalle/bdh0000015788",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-564623",
+        "https://brill.com/view/journals/hima/31/2/article-p161_7.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf"
+      ],
+      "geometry_method": "Named cluster of six street blocks in the Nichelson town inset issued on a later impression, corroborated to the 1760s state by the still-existing old Dongri fort. The six-point affine fit RMS is 29 m; vicinity anchor outside the walled town.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 100,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.829974,
+          18.937453
         ]
       }
     }
@@ -72108,6 +73239,2053 @@
       ],
       "outline_only": true,
       "cross_century_feature_id": "malacca-west-bank-mercantile-town-1800"
+    },
+    {
+      "id": "BOMBAY_HISTORIC_MAIN_ISLAND",
+      "stable_id": "bombay-company-main-island",
+      "title": "孟买 · 历史主港岛",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1790,
+          "title": "孟买主港岛 · 大缺口海堤闭合后",
+          "note": "霍恩比时期的海堤截断潮水入侵旧低地的通道，连接已经经营的港岛部分。"
+        },
+        {
+          "start_year": 1791,
+          "end_year": 1797,
+          "title": "孟买主港岛 · 港口与海堤回收地",
+          "note": "征税官登记岛内堤后盐田、稻作地及土地手续。公司港口通过造船、贸易和防务继续运作。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "title": "孟买主港岛 · 北端兴筑锡安堤道",
+          "note": "1798年5月，锡安堤道开工，从孟买岛北端通向萨尔塞特。"
+        }
+      ],
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:Island_of_Bombay_Map_1812-16.jpg",
+        "https://nla.gov.au/nla.obj-373085743",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/greater_bombay/general.html",
+        "https://www.mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://en.wikipedia.org/wiki/List_of_forts_in_Mumbai",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://portal.mcgm.gov.in/irj/go/km/docs/documents/Draft%20DPR%20of%20Coastal%20Road%20Project/Environmental%20Assessment%20Report%20-%20Vol%20-%20VIII/Environmental%20Assessment%20Report.pdf",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/greater_bombay/agriculture.html",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg"
+      ],
+      "geometry_method": "Black 1812–16 shoreline hand-traced from Dickinson’s government survey, excluding later red reclamations and neighbouring islands; seven fort and cape anchors, affine RMS 163 metres. Harbour-facing shore independently checked on Horsburgh’s 1803–04 survey. Reused for the late eighteenth century after closure of the Hornby Vellard; only continuing main-island core is mapped.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 380,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.859007,
+              19.049327
+            ],
+            [
+              72.860475,
+              19.04775
+            ],
+            [
+              72.862459,
+              19.047422
+            ],
+            [
+              72.864194,
+              19.047087
+            ],
+            [
+              72.865927,
+              19.046629
+            ],
+            [
+              72.867294,
+              19.046658
+            ],
+            [
+              72.86815,
+              19.045687
+            ],
+            [
+              72.868633,
+              19.044708
+            ],
+            [
+              72.868365,
+              19.043342
+            ],
+            [
+              72.867356,
+              19.042331
+            ],
+            [
+              72.866601,
+              19.041697
+            ],
+            [
+              72.865834,
+              19.040197
+            ],
+            [
+              72.865688,
+              19.03871
+            ],
+            [
+              72.866539,
+              19.037367
+            ],
+            [
+              72.867398,
+              19.036644
+            ],
+            [
+              72.868501,
+              19.035554
+            ],
+            [
+              72.868854,
+              19.034201
+            ],
+            [
+              72.868957,
+              19.032719
+            ],
+            [
+              72.869687,
+              19.031622
+            ],
+            [
+              72.871177,
+              19.03153
+            ],
+            [
+              72.871409,
+              19.030422
+            ],
+            [
+              72.870766,
+              19.028924
+            ],
+            [
+              72.872364,
+              19.027721
+            ],
+            [
+              72.872343,
+              19.026237
+            ],
+            [
+              72.871321,
+              19.02436
+            ],
+            [
+              72.871423,
+              19.022754
+            ],
+            [
+              72.869533,
+              19.020983
+            ],
+            [
+              72.867886,
+              19.018846
+            ],
+            [
+              72.866615,
+              19.01684
+            ],
+            [
+              72.864981,
+              19.015569
+            ],
+            [
+              72.862741,
+              19.015397
+            ],
+            [
+              72.862224,
+              19.014026
+            ],
+            [
+              72.861199,
+              19.011902
+            ],
+            [
+              72.8603,
+              19.009904
+            ],
+            [
+              72.860032,
+              19.008538
+            ],
+            [
+              72.860508,
+              19.007064
+            ],
+            [
+              72.859625,
+              19.00618
+            ],
+            [
+              72.859355,
+              19.00469
+            ],
+            [
+              72.85909,
+              19.003571
+            ],
+            [
+              72.859575,
+              19.002716
+            ],
+            [
+              72.859428,
+              19.001105
+            ],
+            [
+              72.859156,
+              18.999492
+            ],
+            [
+              72.857408,
+              18.99896
+            ],
+            [
+              72.855538,
+              18.998549
+            ],
+            [
+              72.85367,
+              18.998262
+            ],
+            [
+              72.852902,
+              18.996762
+            ],
+            [
+              72.852013,
+              18.995383
+            ],
+            [
+              72.851742,
+              18.993893
+            ],
+            [
+              72.851229,
+              18.992769
+            ],
+            [
+              72.850593,
+              18.991766
+            ],
+            [
+              72.84921,
+              18.990624
+            ],
+            [
+              72.847208,
+              18.989715
+            ],
+            [
+              72.845826,
+              18.988697
+            ],
+            [
+              72.844819,
+              18.98781
+            ],
+            [
+              72.842701,
+              18.987394
+            ],
+            [
+              72.841324,
+              18.986746
+            ],
+            [
+              72.840319,
+              18.985983
+            ],
+            [
+              72.839678,
+              18.984609
+            ],
+            [
+              72.839534,
+              18.983245
+            ],
+            [
+              72.841017,
+              18.982659
+            ],
+            [
+              72.842862,
+              18.981337
+            ],
+            [
+              72.84409,
+              18.980374
+            ],
+            [
+              72.844955,
+              18.980022
+            ],
+            [
+              72.84682,
+              18.980061
+            ],
+            [
+              72.847303,
+              18.979082
+            ],
+            [
+              72.847031,
+              18.977469
+            ],
+            [
+              72.84664,
+              18.976224
+            ],
+            [
+              72.84575,
+              18.974844
+            ],
+            [
+              72.846599,
+              18.973378
+            ],
+            [
+              72.846331,
+              18.972012
+            ],
+            [
+              72.84656,
+              18.970657
+            ],
+            [
+              72.846538,
+              18.969172
+            ],
+            [
+              72.845892,
+              18.967427
+            ],
+            [
+              72.845623,
+              18.966061
+            ],
+            [
+              72.843867,
+              18.964911
+            ],
+            [
+              72.843975,
+              18.9638
+            ],
+            [
+              72.842233,
+              18.963639
+            ],
+            [
+              72.840977,
+              18.962747
+            ],
+            [
+              72.839473,
+              18.961849
+            ],
+            [
+              72.838579,
+              18.960223
+            ],
+            [
+              72.838189,
+              18.958978
+            ],
+            [
+              72.8378,
+              18.957857
+            ],
+            [
+              72.837904,
+              18.956498
+            ],
+            [
+              72.837382,
+              18.954756
+            ],
+            [
+              72.837366,
+              18.953643
+            ],
+            [
+              72.837225,
+              18.952527
+            ],
+            [
+              72.836957,
+              18.951161
+            ],
+            [
+              72.83719,
+              18.950052
+            ],
+            [
+              72.837292,
+              18.948571
+            ],
+            [
+              72.837651,
+              18.947589
+            ],
+            [
+              72.837507,
+              18.946226
+            ],
+            [
+              72.837732,
+              18.944623
+            ],
+            [
+              72.837089,
+              18.943125
+            ],
+            [
+              72.837439,
+              18.941525
+            ],
+            [
+              72.837796,
+              18.940419
+            ],
+            [
+              72.837282,
+              18.939295
+            ],
+            [
+              72.83689,
+              18.937927
+            ],
+            [
+              72.837494,
+              18.936703
+            ],
+            [
+              72.837103,
+              18.935458
+            ],
+            [
+              72.837081,
+              18.933973
+            ],
+            [
+              72.836317,
+              18.93272
+            ],
+            [
+              72.836049,
+              18.931354
+            ],
+            [
+              72.83504,
+              18.930344
+            ],
+            [
+              72.834641,
+              18.92848
+            ],
+            [
+              72.833868,
+              18.926609
+            ],
+            [
+              72.832982,
+              18.925477
+            ],
+            [
+              72.832338,
+              18.923979
+            ],
+            [
+              72.831322,
+              18.922474
+            ],
+            [
+              72.830072,
+              18.921952
+            ],
+            [
+              72.829088,
+              18.922673
+            ],
+            [
+              72.828852,
+              18.923534
+            ],
+            [
+              72.828757,
+              18.925511
+            ],
+            [
+              72.829025,
+              18.926877
+            ],
+            [
+              72.829174,
+              18.928611
+            ],
+            [
+              72.829327,
+              18.930593
+            ],
+            [
+              72.82936,
+              18.93282
+            ],
+            [
+              72.829141,
+              18.934918
+            ],
+            [
+              72.828676,
+              18.937134
+            ],
+            [
+              72.828701,
+              18.938866
+            ],
+            [
+              72.828352,
+              18.940466
+            ],
+            [
+              72.827384,
+              18.942301
+            ],
+            [
+              72.826409,
+              18.94364
+            ],
+            [
+              72.825436,
+              18.945104
+            ],
+            [
+              72.824593,
+              18.946941
+            ],
+            [
+              72.823378,
+              18.948894
+            ],
+            [
+              72.822036,
+              18.950596
+            ],
+            [
+              72.8202,
+              18.952536
+            ],
+            [
+              72.818607,
+              18.95411
+            ],
+            [
+              72.81651,
+              18.955179
+            ],
+            [
+              72.814287,
+              18.956121
+            ],
+            [
+              72.812665,
+              18.955715
+            ],
+            [
+              72.810795,
+              18.955305
+            ],
+            [
+              72.808675,
+              18.954765
+            ],
+            [
+              72.807407,
+              18.953007
+            ],
+            [
+              72.805769,
+              18.951488
+            ],
+            [
+              72.804267,
+              18.950714
+            ],
+            [
+              72.802885,
+              18.949695
+            ],
+            [
+              72.801256,
+              18.948795
+            ],
+            [
+              72.799754,
+              18.948021
+            ],
+            [
+              72.79824,
+              18.946505
+            ],
+            [
+              72.797104,
+              18.945244
+            ],
+            [
+              72.796338,
+              18.943867
+            ],
+            [
+              72.795202,
+              18.942607
+            ],
+            [
+              72.794805,
+              18.940991
+            ],
+            [
+              72.794162,
+              18.939493
+            ],
+            [
+              72.793651,
+              18.938493
+            ],
+            [
+              72.792795,
+              18.939464
+            ],
+            [
+              72.793189,
+              18.940956
+            ],
+            [
+              72.793585,
+              18.942572
+            ],
+            [
+              72.793357,
+              18.943928
+            ],
+            [
+              72.792758,
+              18.945523
+            ],
+            [
+              72.793153,
+              18.947015
+            ],
+            [
+              72.793172,
+              18.948376
+            ],
+            [
+              72.793569,
+              18.949992
+            ],
+            [
+              72.794334,
+              18.951369
+            ],
+            [
+              72.795593,
+              18.952508
+            ],
+            [
+              72.796489,
+              18.954259
+            ],
+            [
+              72.797627,
+              18.955643
+            ],
+            [
+              72.79914,
+              18.957159
+            ],
+            [
+              72.80065,
+              18.958428
+            ],
+            [
+              72.802289,
+              18.960071
+            ],
+            [
+              72.80319,
+              18.962192
+            ],
+            [
+              72.803345,
+              18.964298
+            ],
+            [
+              72.803496,
+              18.966156
+            ],
+            [
+              72.803777,
+              18.968388
+            ],
+            [
+              72.804672,
+              18.970138
+            ],
+            [
+              72.804947,
+              18.971999
+            ],
+            [
+              72.805839,
+              18.973502
+            ],
+            [
+              72.806605,
+              18.974879
+            ],
+            [
+              72.806747,
+              18.976119
+            ],
+            [
+              72.808127,
+              18.977014
+            ],
+            [
+              72.810117,
+              18.97718
+            ],
+            [
+              72.811746,
+              18.97808
+            ],
+            [
+              72.812391,
+              18.979701
+            ],
+            [
+              72.813773,
+              18.98072
+            ],
+            [
+              72.814048,
+              18.982581
+            ],
+            [
+              72.813693,
+              18.98381
+            ],
+            [
+              72.81359,
+              18.985292
+            ],
+            [
+              72.813114,
+              18.986766
+            ],
+            [
+              72.812367,
+              18.986626
+            ],
+            [
+              72.812513,
+              18.988113
+            ],
+            [
+              72.813527,
+              18.989495
+            ],
+            [
+              72.814296,
+              18.991119
+            ],
+            [
+              72.814813,
+              18.99249
+            ],
+            [
+              72.814582,
+              18.993722
+            ],
+            [
+              72.813856,
+              18.995067
+            ],
+            [
+              72.813517,
+              18.99741
+            ],
+            [
+              72.813045,
+              18.999131
+            ],
+            [
+              72.813578,
+              19.001616
+            ],
+            [
+              72.814107,
+              19.003853
+            ],
+            [
+              72.814628,
+              19.005472
+            ],
+            [
+              72.815525,
+              19.007346
+            ],
+            [
+              72.816786,
+              19.008609
+            ],
+            [
+              72.817427,
+              19.009983
+            ],
+            [
+              72.818326,
+              19.011981
+            ],
+            [
+              72.817973,
+              19.013334
+            ],
+            [
+              72.818119,
+              19.014821
+            ],
+            [
+              72.81789,
+              19.016176
+            ],
+            [
+              72.818414,
+              19.018043
+            ],
+            [
+              72.817565,
+              19.019509
+            ],
+            [
+              72.816968,
+              19.021227
+            ],
+            [
+              72.816617,
+              19.022704
+            ],
+            [
+              72.816264,
+              19.024057
+            ],
+            [
+              72.817489,
+              19.022846
+            ],
+            [
+              72.818339,
+              19.021504
+            ],
+            [
+              72.81906,
+              19.019788
+            ],
+            [
+              72.819403,
+              19.017693
+            ],
+            [
+              72.820115,
+              19.015358
+            ],
+            [
+              72.822729,
+              19.015661
+            ],
+            [
+              72.824983,
+              19.016822
+            ],
+            [
+              72.826984,
+              19.01773
+            ],
+            [
+              72.828868,
+              19.01913
+            ],
+            [
+              72.83038,
+              19.020523
+            ],
+            [
+              72.831897,
+              19.022286
+            ],
+            [
+              72.833545,
+              19.024547
+            ],
+            [
+              72.835197,
+              19.027056
+            ],
+            [
+              72.836596,
+              19.029312
+            ],
+            [
+              72.837376,
+              19.031678
+            ],
+            [
+              72.837781,
+              19.033912
+            ],
+            [
+              72.83856,
+              19.036155
+            ],
+            [
+              72.838464,
+              19.038132
+            ],
+            [
+              72.83837,
+              19.040232
+            ],
+            [
+              72.838764,
+              19.041724
+            ],
+            [
+              72.841006,
+              19.042019
+            ],
+            [
+              72.843119,
+              19.042064
+            ],
+            [
+              72.845863,
+              19.042741
+            ],
+            [
+              72.848601,
+              19.043046
+            ],
+            [
+              72.850104,
+              19.04382
+            ],
+            [
+              72.852111,
+              19.045099
+            ],
+            [
+              72.853869,
+              19.046373
+            ],
+            [
+              72.855618,
+              19.047029
+            ],
+            [
+              72.857607,
+              19.047071
+            ],
+            [
+              72.858618,
+              19.048206
+            ],
+            [
+              72.859007,
+              19.049327
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        72.792758,
+        18.921952,
+        72.872364,
+        19.049327
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "19CT7-bombay-company-main-island"
+    },
+    {
+      "id": "BOMBAY_SALSETTE_MAIN_ISLAND",
+      "stable_id": "bombay-salsette-historical-main-island",
+      "title": "孟买北部 · 萨尔塞特历史主岛",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1736,
+          "title": "萨尔塞特主岛 · 葡方堡镇时期",
+          "note": "葡方在塔纳等水道要点驻堡，岛上有多个村镇、教堂和渡口。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1737,
+          "end_year": 1773,
+          "title": "萨尔塞特主岛 · 马拉塔方面占有",
+          "note": "1737年3月马拉塔军渡水攻取塔纳，并向岛上各据点推进。部分沿岸堡镇随后易手。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1774,
+          "title": "萨尔塞特主岛 · 塔纳失陷后英占",
+          "note": "12月28日，孟买方面派出的英军攻陷塔纳堡。英方随后占据萨尔塞特的主要驻地。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1775,
+          "end_year": 1775,
+          "title": "萨尔塞特主岛 · 英占与苏拉特协议",
+          "note": "3月7日，拉古纳特·拉奥与孟买方面签署苏拉特协议。公司据岛并沿用村赋承包。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1781,
+          "title": "萨尔塞特主岛 · 普兰达尔约后公司续占",
+          "note": "1776年3月1日，普兰达尔条约第三条约定萨尔塞特等岛暂按现状留置。村赋征收权继续公开承包。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "title": "萨尔塞特主岛 · 萨尔拜条约确认留英",
+          "note": "1782年5月17日《萨尔拜条约》第二条列明，萨尔塞特、埃莱芬塔、卡兰贾和恩哈韦继续由公司占有。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1787,
+          "title": "萨尔塞特主岛 · 换约与村赋承包",
+          "note": "1783年2月，双方最终交换批准书。公司继续占有条约第二条列明的四座岛屿。岛上村赋仍由承包商征收。"
+        },
+        {
+          "start_year": 1788,
+          "end_year": 1794,
+          "title": "萨尔塞特主岛 · 公司官员直接管理村赋",
+          "note": "1788年公司停止把村赋征收权出包，将村社税务交由官员办理。部分土地随后授予英籍经营者。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "萨尔塞特主岛 · 土地经营及锡安工程",
+          "note": "公司管理村赋并授出部分大地产。1798年锡安堤道开工。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/History%20Part/History_III/chapter_3.pdf",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/histroy_marathas.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/land_acquisition.html",
+        "https://searcharchives.bl.uk/catalog/040-000004727",
+        "https://dl.tufts.edu/downloads/z890s5462?filename=1j92gm26m.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/0/06/A_Collection_Of_Treaties%2CEngagements%2CAnd_Sunnuds%2C_Relating_To_India_And_Neighbouring_Countries._Vol-Iii_%28IA_ACollectionOfTreatiesEngagementsAndSunnudsRelatingToIndiaAndNeighbouringCountriesVolIII%29.pdf",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/land_british.html",
+        "https://searcharchives.bl.uk/catalog/040-000004387",
+        "https://searcharchives.bl.uk/catalog/040-000741270",
+        "https://www.amdigital.co.uk/insights/blog/the-topography-of-colonialism-maps-in-east-india-company",
+        "https://old-digitalcollections.nypl.org/items/510d47e4-65c5-a3d9-e040-e00a18064a99",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/way/627248997",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Outline of the historic main landmass shown on India Office chart IOR/F/4/674 f. 619. Affine fit to Bassein, Ghodbunder, Thana, Sion, Mahim, Madh and Mount Mary, RMS 418 m. Historical channels checked on Thornton. Adjacent beach ridges and Trombay left as separately depicted. ODbL positional reference.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 1100,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.841357,
+              19.31455
+            ],
+            [
+              72.854507,
+              19.315354
+            ],
+            [
+              72.868403,
+              19.308777
+            ],
+            [
+              72.878411,
+              19.302478
+            ],
+            [
+              72.88481,
+              19.294692
+            ],
+            [
+              72.890165,
+              19.287331
+            ],
+            [
+              72.898038,
+              19.280835
+            ],
+            [
+              72.908738,
+              19.274138
+            ],
+            [
+              72.920768,
+              19.273626
+            ],
+            [
+              72.928722,
+              19.277245
+            ],
+            [
+              72.932645,
+              19.286037
+            ],
+            [
+              72.940441,
+              19.294203
+            ],
+            [
+              72.952034,
+              19.300003
+            ],
+            [
+              72.965124,
+              19.299416
+            ],
+            [
+              72.977756,
+              19.296419
+            ],
+            [
+              72.988749,
+              19.288304
+            ],
+            [
+              72.997713,
+              19.282429
+            ],
+            [
+              73.003315,
+              19.272607
+            ],
+            [
+              73.005325,
+              19.261646
+            ],
+            [
+              73.00477,
+              19.248774
+            ],
+            [
+              73.005794,
+              19.239628
+            ],
+            [
+              73.004315,
+              19.229963
+            ],
+            [
+              72.999684,
+              19.221222
+            ],
+            [
+              72.992889,
+              19.211589
+            ],
+            [
+              72.987522,
+              19.202202
+            ],
+            [
+              72.980802,
+              19.194308
+            ],
+            [
+              72.977555,
+              19.18477
+            ],
+            [
+              72.972218,
+              19.176079
+            ],
+            [
+              72.967528,
+              19.165946
+            ],
+            [
+              72.963808,
+              19.15365
+            ],
+            [
+              72.958675,
+              19.141455
+            ],
+            [
+              72.952451,
+              19.12864
+            ],
+            [
+              72.946183,
+              19.114781
+            ],
+            [
+              72.941697,
+              19.101144
+            ],
+            [
+              72.939917,
+              19.084522
+            ],
+            [
+              72.935069,
+              19.078937
+            ],
+            [
+              72.924581,
+              19.074104
+            ],
+            [
+              72.913431,
+              19.070365
+            ],
+            [
+              72.90259,
+              19.065557
+            ],
+            [
+              72.891366,
+              19.060079
+            ],
+            [
+              72.884307,
+              19.052558
+            ],
+            [
+              72.87242,
+              19.048174
+            ],
+            [
+              72.861052,
+              19.047592
+            ],
+            [
+              72.847594,
+              19.047856
+            ],
+            [
+              72.835489,
+              19.046628
+            ],
+            [
+              72.824783,
+              19.044952
+            ],
+            [
+              72.818964,
+              19.041529
+            ],
+            [
+              72.818143,
+              19.047171
+            ],
+            [
+              72.821683,
+              19.055293
+            ],
+            [
+              72.825502,
+              19.06165
+            ],
+            [
+              72.826967,
+              19.070967
+            ],
+            [
+              72.829491,
+              19.080208
+            ],
+            [
+              72.827467,
+              19.090821
+            ],
+            [
+              72.82936,
+              19.101852
+            ],
+            [
+              72.829178,
+              19.114078
+            ],
+            [
+              72.825267,
+              19.122035
+            ],
+            [
+              72.819424,
+              19.126291
+            ],
+            [
+              72.81625,
+              19.134893
+            ],
+            [
+              72.81773,
+              19.144558
+            ],
+            [
+              72.817278,
+              19.150522
+            ],
+            [
+              72.823157,
+              19.155336
+            ],
+            [
+              72.825726,
+              19.16562
+            ],
+            [
+              72.828371,
+              19.177644
+            ],
+            [
+              72.825625,
+              19.18796
+            ],
+            [
+              72.821052,
+              19.197011
+            ],
+            [
+              72.822269,
+              19.208788
+            ],
+            [
+              72.827064,
+              19.221357
+            ],
+            [
+              72.831475,
+              19.233254
+            ],
+            [
+              72.835902,
+              19.2455
+            ],
+            [
+              72.840667,
+              19.257372
+            ],
+            [
+              72.84371,
+              19.270414
+            ],
+            [
+              72.83949,
+              19.27944
+            ],
+            [
+              72.835331,
+              19.289857
+            ],
+            [
+              72.835059,
+              19.299996
+            ],
+            [
+              72.837599,
+              19.309585
+            ],
+            [
+              72.841357,
+              19.31455
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        72.81625,
+        19.041529,
+        73.005794,
+        19.315354
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "bombay-salsette-historical-main-island-1800"
+    },
+    {
+      "id": "BOMBAY_BASSEIN_FORT",
+      "stable_id": "bombay-vasai-bassein-fort",
+      "title": "孟买北岸 · 瓦赛堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1738,
+          "title": "瓦赛堡 · 葡方北部海岸驻地",
+          "note": "葡方以瓦赛堡守卫水口，城堡内有教会建筑、官署和驻军。"
+        },
+        {
+          "start_year": 1739,
+          "end_year": 1739,
+          "title": "瓦赛堡 · 马拉塔围城后受降",
+          "note": "公历1739年5月16日葡方签降，23日马拉塔方面实际接收。同期英方公文仍用旧历。"
+        },
+        {
+          "start_year": 1740,
+          "end_year": 1779,
+          "title": "瓦赛堡 · 马拉塔驻地及苏拉特割让条款",
+          "note": "瓦赛堡主要由马拉塔方面驻守。1775年拉古纳特·拉奥与孟买方面的协议把瓦赛列入割让，但英军随后另行围攻主堡。"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "瓦赛堡 · 12月11日英军攻占",
+          "note": "戈达德部围攻瓦赛堡。12月11日堡内守军投降。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "瓦赛堡 · 英军战时据守",
+          "note": "英军在攻取后据守瓦赛堡。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "title": "瓦赛堡 · 条约议定归还",
+          "note": "5月17日萨尔拜条约第一条把瓦赛及有关战时占领地列为应归还。英军年内仍据瓦赛。",
+          "kind": "diplomacy"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "瓦赛堡 · 实际交还马拉塔",
+          "note": "双方交换批准书后，瓦赛在1783年交回马拉塔方面。现存书信分别记录归还原定期限和随后发出的交接指令。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "title": "瓦赛堡 · 归还后的马拉塔堡镇",
+          "note": "瓦赛于1783年实际交还。此后瓦赛堡继续由马拉塔方面掌管。"
+        }
+      ],
+      "source_urls": [
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/places_Bassein.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/History%20Part/History_III/chapter_3.pdf",
+        "https://commons.wikimedia.org/wiki/File:Maratha_siege_of_Vasai,_1739.jpg",
+        "https://www.nma.gov.in/showfile.php?lang=2&level=1&lid=2073&ls_id=1669",
+        "https://searcharchives.bl.uk/catalog/032-003268269",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/histroy_marathas.html",
+        "https://dl.tufts.edu/downloads/z890s5462?filename=1j92gm26m.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/0/06/A_Collection_Of_Treaties%2CEngagements%2CAnd_Sunnuds%2C_Relating_To_India_And_Neighbouring_Countries._Vol-Iii_%28IA_ACollectionOfTreatiesEngagementsAndSunnudsRelatingToIndiaAndNeighbouringCountriesVolIII%29.pdf",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/histroy_english.html",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/Thane-II/land_acquisition.html",
+        "https://www.openstreetmap.org/copyright",
+        "https://sahitya.marathi.gov.in/scans/Portuguese%20Mahratta%20Relations.pdf",
+        "https://www.ibiblio.org/britishraj/Duff2/chapter14.html",
+        "https://upload.wikimedia.org/wikipedia/commons/3/30/The_Gaikwads_Of_Baroda_English_Documents_Vol.iii_%28IA_in.ernet.dli.2015.63310%29.pdf"
+      ],
+      "geometry_method": "Indian National Monuments Authority / ASI Annexure I outer fort survey; 11 extant curtain and bastion corners affine-registered (RMS 13.5 m). Historic perimeter compared with Biblioteca Nacional de Portugal D.337 A, ca. 1739, and the dated 1780 siege view. ODbL positional reference.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 48,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.810993,
+              19.332549
+            ],
+            [
+              72.810875,
+              19.332443
+            ],
+            [
+              72.810708,
+              19.332056
+            ],
+            [
+              72.810642,
+              19.331789
+            ],
+            [
+              72.810177,
+              19.33085
+            ],
+            [
+              72.809923,
+              19.330343
+            ],
+            [
+              72.809827,
+              19.330459
+            ],
+            [
+              72.80944,
+              19.330199
+            ],
+            [
+              72.80979,
+              19.329868
+            ],
+            [
+              72.809938,
+              19.329975
+            ],
+            [
+              72.810614,
+              19.328766
+            ],
+            [
+              72.810474,
+              19.328468
+            ],
+            [
+              72.810586,
+              19.328338
+            ],
+            [
+              72.812807,
+              19.327798
+            ],
+            [
+              72.812989,
+              19.327832
+            ],
+            [
+              72.813055,
+              19.327715
+            ],
+            [
+              72.813955,
+              19.327721
+            ],
+            [
+              72.81398,
+              19.327854
+            ],
+            [
+              72.815647,
+              19.327803
+            ],
+            [
+              72.815651,
+              19.3277
+            ],
+            [
+              72.815838,
+              19.327616
+            ],
+            [
+              72.816125,
+              19.327696
+            ],
+            [
+              72.816348,
+              19.327834
+            ],
+            [
+              72.816266,
+              19.327979
+            ],
+            [
+              72.818125,
+              19.328802
+            ],
+            [
+              72.818068,
+              19.328713
+            ],
+            [
+              72.818401,
+              19.328779
+            ],
+            [
+              72.818641,
+              19.328888
+            ],
+            [
+              72.818482,
+              19.329032
+            ],
+            [
+              72.818942,
+              19.329735
+            ],
+            [
+              72.818992,
+              19.329987
+            ],
+            [
+              72.819099,
+              19.330004
+            ],
+            [
+              72.819141,
+              19.330093
+            ],
+            [
+              72.819458,
+              19.330543
+            ],
+            [
+              72.819345,
+              19.330688
+            ],
+            [
+              72.819195,
+              19.330625
+            ],
+            [
+              72.817527,
+              19.331458
+            ],
+            [
+              72.81761,
+              19.331666
+            ],
+            [
+              72.817229,
+              19.332011
+            ],
+            [
+              72.816558,
+              19.332011
+            ],
+            [
+              72.816503,
+              19.331848
+            ],
+            [
+              72.816614,
+              19.331747
+            ],
+            [
+              72.815401,
+              19.332295
+            ],
+            [
+              72.815548,
+              19.332431
+            ],
+            [
+              72.815195,
+              19.332835
+            ],
+            [
+              72.814511,
+              19.332776
+            ],
+            [
+              72.814486,
+              19.332643
+            ],
+            [
+              72.813432,
+              19.333002
+            ],
+            [
+              72.813578,
+              19.333168
+            ],
+            [
+              72.813094,
+              19.333422
+            ],
+            [
+              72.81262,
+              19.333072
+            ],
+            [
+              72.812778,
+              19.332958
+            ],
+            [
+              72.811394,
+              19.332455
+            ],
+            [
+              72.811551,
+              19.332709
+            ],
+            [
+              72.811414,
+              19.332706
+            ],
+            [
+              72.811295,
+              19.33263
+            ],
+            [
+              72.810993,
+              19.332549
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        72.80944,
+        19.327616,
+        72.819458,
+        19.333422
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "bombay-vasai-bassein-fort-1800"
+    },
+    {
+      "id": "BOMBAY_CASTLE_GROSE_CORE",
+      "stable_id": "bombay-castle-grose-core-1750",
+      "title": "孟买 · 格罗斯图上的城堡本体",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1760,
+          "title": "孟买城堡本体 · 格罗斯所绘内堡",
+          "note": "格罗斯图绘出靠东岸的城堡内围，外侧另有城镇街巷、守门处和船坞。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Grose plan in the Bhau Daji Lad collection tied to the surviving St Thomas Cathedral, castle and former gate-area anchors. Relative registration checked against the 1760 print and later survey. Historic street and wall positions approximate. Traces the small polygon A of the castle itself, excluding adjacent northern water tank.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 55,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.837656,
+              18.930736
+            ],
+            [
+              72.837509,
+              18.931196
+            ],
+            [
+              72.837537,
+              18.931307
+            ],
+            [
+              72.837339,
+              18.931651
+            ],
+            [
+              72.83713,
+              18.931552
+            ],
+            [
+              72.836763,
+              18.931904
+            ],
+            [
+              72.837303,
+              18.932107
+            ],
+            [
+              72.837382,
+              18.932022
+            ],
+            [
+              72.837878,
+              18.932395
+            ],
+            [
+              72.837832,
+              18.932517
+            ],
+            [
+              72.838006,
+              18.932939
+            ],
+            [
+              72.838197,
+              18.932719
+            ],
+            [
+              72.838122,
+              18.932417
+            ],
+            [
+              72.838387,
+              18.931885
+            ],
+            [
+              72.838649,
+              18.931943
+            ],
+            [
+              72.838958,
+              18.931609
+            ],
+            [
+              72.838601,
+              18.931465
+            ],
+            [
+              72.838492,
+              18.931582
+            ],
+            [
+              72.837923,
+              18.931238
+            ],
+            [
+              72.837922,
+              18.931034
+            ],
+            [
+              72.837656,
+              18.930736
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        72.836763,
+        18.930736,
+        72.838958,
+        18.932939
+      ],
+      "outline_only": true
+    },
+    {
+      "id": "BOMBAY_FORT_ST_GEORGE",
+      "stable_id": "bombay-fort-st-george",
+      "title": "孟买 · 圣乔治堡主围垒",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "孟买圣乔治堡 · 弹药库与城防工务",
+          "note": "1780年议程记有圣乔治堡东面炮台弹药库的防潮台及修整安排。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1799,
+          "title": "孟买圣乔治堡 · 港北主围垒",
+          "note": "圣乔治堡在旧城北侧邻港，继续用于东印度公司的驻防。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright",
+        "https://www.stgh.in/about-us/history/"
+      ],
+      "geometry_method": "Primary St George enclosure on the Gazetteer composite 1771–1864 plate, cross-checked against 1778–80 specifications and Horsburgh’s 1803–04 Fort George. Eight locational controls RMS 43 m; extant parcels and exterior works omitted.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 80,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.837763,
+              18.941387
+            ],
+            [
+              72.838056,
+              18.941441
+            ],
+            [
+              72.838289,
+              18.941663
+            ],
+            [
+              72.838596,
+              18.941429
+            ],
+            [
+              72.838796,
+              18.941571
+            ],
+            [
+              72.838841,
+              18.941066
+            ],
+            [
+              72.839046,
+              18.940942
+            ],
+            [
+              72.838995,
+              18.940597
+            ],
+            [
+              72.839094,
+              18.940263
+            ],
+            [
+              72.838716,
+              18.939969
+            ],
+            [
+              72.838485,
+              18.93986
+            ],
+            [
+              72.838319,
+              18.939716
+            ],
+            [
+              72.838211,
+              18.939784
+            ],
+            [
+              72.838057,
+              18.939538
+            ],
+            [
+              72.837695,
+              18.939191
+            ],
+            [
+              72.837553,
+              18.939057
+            ],
+            [
+              72.837341,
+              18.938711
+            ],
+            [
+              72.83689,
+              18.938687
+            ],
+            [
+              72.836695,
+              18.938893
+            ],
+            [
+              72.836331,
+              18.938731
+            ],
+            [
+              72.835829,
+              18.938966
+            ],
+            [
+              72.836256,
+              18.939483
+            ],
+            [
+              72.836356,
+              18.939651
+            ],
+            [
+              72.836544,
+              18.939885
+            ],
+            [
+              72.836406,
+              18.940088
+            ],
+            [
+              72.836287,
+              18.940248
+            ],
+            [
+              72.836476,
+              18.94039
+            ],
+            [
+              72.836729,
+              18.940396
+            ],
+            [
+              72.837021,
+              18.940235
+            ],
+            [
+              72.837535,
+              18.940306
+            ],
+            [
+              72.837803,
+              18.940638
+            ],
+            [
+              72.837794,
+              18.940956
+            ],
+            [
+              72.837763,
+              18.941387
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        72.835829,
+        18.938687,
+        72.839094,
+        18.941663
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "bombay-fort-st-george-1800"
     }
   ],
   "regional_lines": [
@@ -76921,6 +80099,503 @@
         ]
       },
       "cross_century_feature_id": "malacca-goldsmith-historic-axis-1800"
+    },
+    {
+      "id": "BOMBAY_THANA_WEST_CURTAIN",
+      "stable_id": "bombay-thana-west-curtain",
+      "title": "塔纳堡 · 西棱堡及南向幕墙",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1737,
+          "end_year": 1773,
+          "title": "塔纳堡西棱堡及南向幕墙 · 可定位的旧墙",
+          "note": "十八世纪葡方实测图绘出堡体的这一段外墙，马拉塔方面接管后又调整河侧工事。"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1777,
+          "title": "塔纳堡西棱堡及南向幕墙 · 强攻与修复",
+          "note": "1774年英军强攻，继而修复旧堡。福布斯留下攻取后和1777年修复后的图。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1799,
+          "title": "塔纳堡西棱堡及南向幕墙 · 公司驻堡的旧墙段",
+          "note": "塔纳进入公司驻防时期，主堡旧墙有可定位的墙段。"
+        }
+      ],
+      "source_urls": [
+        "https://permalinkbnd.bnportugal.gov.pt/records/item/33231-planta-da-cidadella-de-tannaperspectiva-de-dous-balluartes-e-3-cortinas-desta-cidadella",
+        "https://hpip.org/en/Heritage/Details/1900",
+        "https://www.udri.org/wp-content/uploads/Mumbai%20Reader/MR%209/25%20Sidh%20Losa%20Mendiratta%20-%20Uncovering%20Portuguese%20Histories%20Within%20Mumbai%E2%80%99s%20Urban%20History.pdf",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/places_Thana.html",
+        "https://ead-pdfs.library.yale.edu/11734.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Hand digitize BNP D.333 A outer wall; affine fit to 12 modern surviving fort wall control features (RMS approximately 20 m). Retain two independently verifiable sections that closely agree with the surviving stone wall. Omit northwestern prison walls, uncertain changes along east bastion and Maratha-period riverside round towers. Control RMS 19.95 m. ODbL positional reference.",
+      "geometry_precision": "source_backed_historical_line",
+      "position_uncertainty_m": 35,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.981677,
+            19.200314
+          ],
+          [
+            72.982215,
+            19.19976
+          ],
+          [
+            72.982442,
+            19.199848
+          ],
+          [
+            72.982634,
+            19.199178
+          ]
+        ]
+      },
+      "cross_century_feature_id": "bombay-thana-west-curtain-1800"
+    },
+    {
+      "id": "BOMBAY_THANA_NORTH_SHOULDER",
+      "stable_id": "bombay-thana-north-shoulder",
+      "title": "塔纳堡 · 北棱堡及东肩",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1737,
+          "end_year": 1773,
+          "title": "塔纳堡北棱堡及东肩 · 可定位的旧墙",
+          "note": "十八世纪葡方实测图绘出堡体的这一段外墙，马拉塔方面接管后又调整河侧工事。"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1777,
+          "title": "塔纳堡北棱堡及东肩 · 强攻与修复",
+          "note": "1774年英军强攻，继而修复旧堡。福布斯留下攻取后和1777年修复后的图。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1799,
+          "title": "塔纳堡北棱堡及东肩 · 公司驻堡的旧墙段",
+          "note": "塔纳进入公司驻防时期，主堡旧墙有可定位的墙段。"
+        }
+      ],
+      "source_urls": [
+        "https://permalinkbnd.bnportugal.gov.pt/records/item/33231-planta-da-cidadella-de-tannaperspectiva-de-dous-balluartes-e-3-cortinas-desta-cidadella",
+        "https://hpip.org/en/Heritage/Details/1900",
+        "https://www.udri.org/wp-content/uploads/Mumbai%20Reader/MR%209/25%20Sidh%20Losa%20Mendiratta%20-%20Uncovering%20Portuguese%20Histories%20Within%20Mumbai%E2%80%99s%20Urban%20History.pdf",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Thana%20District/places_Thana.html",
+        "https://ead-pdfs.library.yale.edu/11734.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Hand digitize BNP D.333 A outer wall; affine fit to 12 modern surviving fort wall control features (RMS approximately 20 m). Retain two independently verifiable sections that closely agree with the surviving stone wall. Omit northwestern prison walls, uncertain changes along east bastion and Maratha-period riverside round towers. Control RMS 19.95 m. ODbL positional reference.",
+      "geometry_precision": "source_backed_historical_line",
+      "position_uncertainty_m": 35,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.983132,
+            19.201285
+          ],
+          [
+            72.983439,
+            19.201756
+          ],
+          [
+            72.983803,
+            19.201104
+          ],
+          [
+            72.983684,
+            19.20082
+          ],
+          [
+            72.983942,
+            19.200676
+          ]
+        ]
+      },
+      "cross_century_feature_id": "bombay-thana-north-shoulder-1800"
+    },
+    {
+      "id": "BOMBAY_LAND_GATE_CURTAIN_GROSE",
+      "stable_id": "bombay-land-gate-curtain-1750",
+      "title": "孟买旧城 · 西侧陆墙",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1760,
+          "title": "孟买旧城西侧陆墙 · 三座旧门之间",
+          "note": "格罗斯城图显示阿波罗门、教堂门和市集门沿西侧陆墙分列。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Grose plan in the Bhau Daji Lad collection tied to the surviving St Thomas Cathedral, castle and former gate-area anchors. Relative registration checked against the 1760 print and later survey. Historic street and wall positions approximate. Westen land-facing curtain from Royal Bastion via Apollo, Church and Bazaar gates; later northern extension is not included.",
+      "geometry_precision": "source_backed_historical_line",
+      "position_uncertainty_m": 65,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.833924,
+            18.926121
+          ],
+          [
+            72.833246,
+            18.926576
+          ],
+          [
+            72.832394,
+            18.926902
+          ],
+          [
+            72.831953,
+            18.927053
+          ],
+          [
+            72.831784,
+            18.92742
+          ],
+          [
+            72.83098,
+            18.92833
+          ],
+          [
+            72.830358,
+            18.928636
+          ],
+          [
+            72.830564,
+            18.929055
+          ],
+          [
+            72.830783,
+            18.929238
+          ],
+          [
+            72.830617,
+            18.931033
+          ],
+          [
+            72.830955,
+            18.931645
+          ],
+          [
+            72.831097,
+            18.931635
+          ],
+          [
+            72.831849,
+            18.933201
+          ],
+          [
+            72.831624,
+            18.933269
+          ],
+          [
+            72.831763,
+            18.933775
+          ],
+          [
+            72.832133,
+            18.933779
+          ],
+          [
+            72.833416,
+            18.935416
+          ],
+          [
+            72.833393,
+            18.935556
+          ],
+          [
+            72.83362,
+            18.936018
+          ],
+          [
+            72.833796,
+            18.936114
+          ],
+          [
+            72.834569,
+            18.937724
+          ],
+          [
+            72.834401,
+            18.937792
+          ],
+          [
+            72.834546,
+            18.938312
+          ],
+          [
+            72.835874,
+            18.938357
+          ],
+          [
+            72.836827,
+            18.938349
+          ],
+          [
+            72.836872,
+            18.938551
+          ],
+          [
+            72.837446,
+            18.938559
+          ]
+        ]
+      }
+    },
+    {
+      "id": "BOMBAY_LATE_LANDWARD_WORKS",
+      "stable_id": "bombay-late-landward-works",
+      "title": "孟买旧城 · 晚期陆侧工事带",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1799,
+          "title": "孟买旧城陆侧工事带 · 城外清场后的工事",
+          "note": "英方在1770年代拆除部分居民住房、扩展驻堡空地。其后继续调整陆侧护沟和外部防御工事。"
+        }
+      ],
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_2/British%20Period_1764-1819.html",
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Gazetteer_of_the_Bombay_Presidency_%28IA_cu31924070623776%29.pdf",
+        "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Horsburgh_1806_nla.obj-373085743.jpg",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://mmrhcs.org.in/images/documents/projects/precinct-studies/Revitalisation_and_Management_plan_for_the_forts_within_Mumbai_i82LQM/forts_report_vol_1.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Landward works and ditch edge on the Gazetteer composite plate, checked to late-century construction minutes and the Horsburgh survey. Eight georeferencing anchors with RMS 43 m. The line traces selected works, including parts of the ditch, and does not enclose a jurisdiction.",
+      "geometry_precision": "source_backed_historical_line",
+      "position_uncertainty_m": 90,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.83417,
+            18.925906
+          ],
+          [
+            72.833626,
+            18.926072
+          ],
+          [
+            72.833011,
+            18.926027
+          ],
+          [
+            72.832777,
+            18.926492
+          ],
+          [
+            72.832459,
+            18.926429
+          ],
+          [
+            72.832255,
+            18.926851
+          ],
+          [
+            72.832074,
+            18.92678
+          ],
+          [
+            72.831833,
+            18.927081
+          ],
+          [
+            72.831674,
+            18.927305
+          ],
+          [
+            72.830708,
+            18.927302
+          ],
+          [
+            72.830932,
+            18.928148
+          ],
+          [
+            72.830342,
+            18.928521
+          ],
+          [
+            72.830196,
+            18.928653
+          ],
+          [
+            72.830627,
+            18.929701
+          ],
+          [
+            72.830034,
+            18.929952
+          ],
+          [
+            72.830673,
+            18.930405
+          ],
+          [
+            72.830572,
+            18.931229
+          ],
+          [
+            72.830805,
+            18.931758
+          ],
+          [
+            72.83093,
+            18.931842
+          ],
+          [
+            72.830499,
+            18.932902
+          ],
+          [
+            72.830961,
+            18.93312
+          ],
+          [
+            72.831165,
+            18.932892
+          ],
+          [
+            72.831356,
+            18.932952
+          ],
+          [
+            72.831125,
+            18.933243
+          ],
+          [
+            72.831137,
+            18.933344
+          ],
+          [
+            72.831435,
+            18.933439
+          ],
+          [
+            72.831339,
+            18.933905
+          ],
+          [
+            72.831769,
+            18.934145
+          ],
+          [
+            72.831659,
+            18.935093
+          ],
+          [
+            72.832779,
+            18.935333
+          ],
+          [
+            72.832838,
+            18.935749
+          ],
+          [
+            72.833116,
+            18.935967
+          ],
+          [
+            72.832873,
+            18.936156
+          ],
+          [
+            72.833317,
+            18.936416
+          ],
+          [
+            72.833164,
+            18.936783
+          ],
+          [
+            72.833896,
+            18.937148
+          ],
+          [
+            72.83405,
+            18.937589
+          ],
+          [
+            72.834146,
+            18.937625
+          ],
+          [
+            72.834387,
+            18.938019
+          ],
+          [
+            72.834911,
+            18.93808
+          ],
+          [
+            72.834964,
+            18.937944
+          ],
+          [
+            72.835773,
+            18.938079
+          ],
+          [
+            72.835775,
+            18.938192
+          ],
+          [
+            72.836165,
+            18.938188
+          ],
+          [
+            72.83669,
+            18.938249
+          ]
+        ]
+      },
+      "cross_century_feature_id": "bombay-late-landward-works-1800"
     }
   ]
 }
