@@ -5836,7 +5836,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "SIERRA_GRANVILLE_FIRST"
     },
     {
       "id": "FREETOWN_1792",
@@ -5864,7 +5865,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "SIERRA_FREETOWN_EARLY_GRID"
     },
     {
       "id": "GOLD_COAST_TRADE",
@@ -5920,7 +5922,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "CAPE_OLD_TOWN_1795"
     },
     {
       "id": "NSW_CROWN_CLAIM",
@@ -7751,7 +7754,8 @@
       "category": "dated_city_or_port_core",
       "historical_city_wall_survey": false,
       "area_sqkm": null,
-      "screen_radius_not_ground_area": true
+      "screen_radius_not_ground_area": true,
+      "superseded_by": "SIERRA_FREETOWN_COMPANY_OFFICE"
     },
     {
       "id": "GRANVILLE_TOWN",
@@ -10194,6 +10198,771 @@
     }
   ],
   "regional_sites": [
+    {
+      "id": "CAPE_RUSTENBURG_CAPITULATION",
+      "stable_id": "cape-rustenburg-capitulation",
+      "title": "鲁斯滕堡 · 签降地",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "鲁斯滕堡 · 9月16日签署投降条款",
+          "note": "斯勒伊斯肯代表荷兰东印度公司签降，英方由克拉克与埃尔芬斯通指挥。条款规定交接公司财产，并规定居民财产与原有宗教权益。"
+        }
+      ],
+      "source_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf",
+        "https://sahistory.org.za/place/rustenburg-house-together-its-summer-house-main-road-rondebosch"
+      ],
+      "geometry_method": "South African History Online P-0065859, Rustenburg House and Summer House, Rondebosch.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 110,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.469,
+          -33.958
+        ]
+      }
+    },
+    {
+      "id": "CAPE_SIMONS_BAY_ANCHORAGE",
+      "stable_id": "cape-simons-bay-anchorage",
+      "title": "西蒙湾 · 舰队锚地",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "西蒙湾 · 英国舰队抵达并扣船",
+          "note": "英国舰队于6月抵达并提出接管要求。交战期间英舰扣留荷兰东印度公司的舰船，舰队以西蒙湾为登陆和补给据点。"
+        }
+      ],
+      "source_urls": [
+        "https://ir.unisa.ac.za/bitstream/handle/10500/3636/Van%20Niekerk%20Johan%208%20December%202005.pdf?isAllowed=y&sequence=1",
+        "https://www.atlasofmutualheritage.nl/page/2798/map-of-the-battle-of-muizenberg",
+        "https://archive.parliament.gov.za/items/78d46680-7a19-4d9b-ab16-1bad2db89080"
+      ],
+      "geometry_method": "Named Simon’s Bay anchorage, representative position in the bay off Simon’s Town; no ship-by-ship positions inferred.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 1300,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.445,
+          -34.182
+        ]
+      }
+    },
+    {
+      "id": "CAPE_SIMONS_TOWN_DOCK",
+      "stable_id": "cape-simons-town-dock",
+      "title": "西蒙镇 · 旧仓库和兵营",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1743,
+          "end_year": 1794,
+          "title": "西蒙镇 · 荷兰东印度公司冬季补给站",
+          "note": "公司在湾岸设仓库、军械与补给设施，为改在此处停泊的舰船供水和补充物资。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "西蒙镇 · 荷军撤出后英军登陆",
+          "note": "荷方守军撤往穆曾贝赫，英国陆军和水兵在镇上建立驻地。7月图所绘仓库、兵营、阅兵地和码头均在旧湾岸。"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1799,
+          "title": "西蒙镇 · 英军海军补给驻地",
+          "note": "英军继续使用旧仓库和岸上设施，并在镇东加强防御。"
+        }
+      ],
+      "source_urls": [
+        "https://archive.parliament.gov.za/items/78d46680-7a19-4d9b-ab16-1bad2db89080",
+        "https://www.artefacts.co.za/main/Buildings/bldgframes.php?bldgid=16225",
+        "https://simonstown.org/wp-content/uploads/2022/03/Vol-IV-No-1_WM.pdf",
+        "https://ir.unisa.ac.za/bitstream/handle/10500/3636/Van%20Niekerk%20Johan%208%20December%202005.pdf?isAllowed=y&sequence=1"
+      ],
+      "geometry_method": "Historic precinct by West Dockyard, identified by Simon’s Town Historical Society and the July 1795 A. Farquhar plan. Later dockyard works prevent a reliable building-by-building georeference.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 160,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.42922,
+          -34.1927
+        ]
+      },
+      "cross_century_feature_id": "cape-simons-town-dock-1800"
+    },
+    {
+      "id": "CAPE_MUIZENBERG_BATTERY",
+      "stable_id": "cape-muizenberg-battery",
+      "title": "穆曾贝赫 · 荷军堡址",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "穆曾贝赫 · 8月7日荷方防线失守",
+          "note": "四艘英国军舰炮击岸上工事，英军从西蒙镇沿岸推进，荷军撤向内陆。翌日潘杜尔队参与反击。"
+        }
+      ],
+      "source_urls": [
+        "https://www.capetown.gov.za/media-and-news/city-secures-battle-of-muizenberg-site-as-a-provincial-heritage-site/",
+        "https://www.atlasofmutualheritage.nl/page/2798/map-of-the-battle-of-muizenberg",
+        "https://sahistory.org.za/place/battle-muizenburg-monument-muizenburg",
+        "https://scielo.org.za/scielo.php?pid=S0041-47512020000100013&script=sci_arttext"
+      ],
+      "geometry_method": "SAHO battle-site anchor by Rust en Vrede; provincial declaration locates surviving works on several parcels of mixed construction dates.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 170,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.465,
+          -34.113
+        ]
+      }
+    },
+    {
+      "id": "CAPE_MUIZENBERG_POSTHUYS",
+      "stable_id": "cape-muizenberg-posthuys",
+      "title": "穆曾贝赫 · 赫特邮站",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "赫特邮站 · 8月7日遭炮击",
+          "note": "英国舰炮击中荷兰东印度公司邮站的门前平台，邻接建筑受毁。"
+        }
+      ],
+      "source_urls": [
+        "https://www.sahra.org.za/Wordpress/wp-content/uploads/2020/01/SAHRA-Properties-Booklet.pdf",
+        "https://www.capetown.gov.za/media-and-news/city-secures-battle-of-muizenberg-site-as-a-provincial-heritage-site/"
+      ],
+      "geometry_method": "SAHRA heritage booklet GPS, Het Posthuys, 180 Main Road.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 22,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.4670167,
+          -34.1102667
+        ]
+      }
+    },
+    {
+      "id": "CAPE_MUIZENBERG_SANDVLEI",
+      "stable_id": "cape-muizenberg-sandvlei",
+      "title": "桑德弗莱 · 潘杜尔队反击",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "桑德弗莱 · 8月8日反击",
+          "note": "在荷兰军中服役的科伊科伊潘杜尔兵反击英军前卫。9月，潘杜尔兵向荷兰东印度公司抗议酬劳和待遇。"
+        }
+      ],
+      "source_urls": [
+        "https://scielo.org.za/scielo.php?pid=S0041-47512020000100013&script=sci_arttext",
+        "https://www.capetown.gov.za/media-and-news/city-secures-battle-of-muizenberg-site-as-a-provincial-heritage-site/",
+        "https://www.atlasofmutualheritage.nl/page/2798/map-of-the-battle-of-muizenberg"
+      ],
+      "geometry_method": "Named Sandvlei/Zandvlei sector north of Muizenberg; route and positions are not claimed.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 1000,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.4658,
+          -34.1007
+        ]
+      }
+    },
+    {
+      "id": "CAPE_SIMONS_MARTELLO",
+      "stable_id": "cape-simons-martello",
+      "title": "西蒙镇 · 马特洛塔",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799,
+          "title": "西蒙镇马特洛塔 · 克雷格下令兴建",
+          "note": "英军首次占领后，詹姆斯·克雷格下令在西蒙镇建圆形炮塔，加强海湾防御。"
+        }
+      ],
+      "source_urls": [
+        "https://sahistory.org.za/place/martello-tower-simonstown",
+        "https://sahistory.org.za/place/dutch-and-british-coastal-fortifications-cape-good-hope-1665-1829"
+      ],
+      "geometry_method": "SAHO national monument place record P-0065865.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 125,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.44,
+          -34.193
+        ]
+      },
+      "cross_century_feature_id": "cape-simons-martello-1800"
+    },
+    {
+      "id": "CAPE_KINGS_BLOCKHOUSE",
+      "stable_id": "cape-kings-blockhouse",
+      "title": "魔鬼峰 · 国王碉堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1799,
+          "title": "国王碉堡 · 开普敦防线延伸",
+          "note": "克雷格命令把原有防线向魔鬼峰山坡延伸。国王碉堡兼作向好望堡和其他驻点传讯的设施。"
+        }
+      ],
+      "source_urls": [
+        "https://www.sanparks.org/parks/table-mountain/explore/heritage/kings-blockhouse",
+        "https://artefacts.co.za/main/Buildings/bldgframes.php?bldgid=108",
+        "https://sahistory.org.za/place/dutch-and-british-coastal-fortifications-cape-good-hope-1665-1829",
+        "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf"
+      ],
+      "geometry_method": "Extant King’s Blockhouse, Artefacts DMS converted to WGS84, cross-checked with SANParks location.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 25,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.4504806,
+          -33.9506694
+        ]
+      },
+      "cross_century_feature_id": "cape-kings-blockhouse-1800"
+    },
+    {
+      "id": "CAPE_GRAAFF_REINET",
+      "stable_id": "cape-graaff-reinet",
+      "title": "赫拉夫－里内特 · 地方衙署",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "赫拉夫－里内特 · 反抗荷兰东印度公司",
+          "note": "当地布尔移民驱逐荷兰东印度公司地方官。随后英军接管开普敦，赫拉夫－里内特的归服另行处理。"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1798,
+          "title": "赫拉夫－里内特 · 英国任命地方官",
+          "note": "英国当局在当地恢复地方衙署，继续与当地移民就承认英国管辖交涉。"
+        },
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "赫拉夫－里内特 · 英军镇压范亚尔斯费尔德叛乱",
+          "note": "万德勒尔部队于3月抵达地方衙署。英国当局逮捕或追捕参与叛乱的移民。"
+        }
+      ],
+      "source_urls": [
+        "https://sahistory.org.za/place/graaff-reinet",
+        "https://scientiamilitaria.journals.ac.za/pub/article/view/1094",
+        "https://samilitaryhistory.org/vol035jd.html"
+      ],
+      "geometry_method": "Named Graaff-Reinet town/drostdy sector, SAHO settlement position; not the later Reinet House building.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 600,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.532,
+          -32.249
+        ]
+      },
+      "cross_century_feature_id": "cape-graaff-reinet-1800"
+    },
+    {
+      "id": "CAPE_ALGOA_KHOE_DISARMAMENT",
+      "stable_id": "cape-algoa-khoe-disarmament",
+      "title": "阿尔戈阿湾 · 科伊科伊人抵抗",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "阿尔戈阿湾 · 英军解除科伊科伊人武装",
+          "note": "万德勒尔在镇压移民叛乱后解除湾区部分科伊科伊人的武装。科伊科伊人反对夺牛、侵占牧地和强迫劳动，部分人与科萨人联合抵抗。"
+        }
+      ],
+      "source_urls": [
+        "https://scientiamilitaria.journals.ac.za/pub/article/view/1094",
+        "https://samilitaryhistory.org/vol035jd.html",
+        "https://www.camissamuseum.co.za/index.php/7-tributaries/1-cape-indigenous-africans/resistance-wars"
+      ],
+      "geometry_method": "Named Algoa Bay/Baakens coastal sector as a locality for the 1799 action; individual encounters not pinned.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 1200,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.628,
+          -33.961
+        ]
+      }
+    },
+    {
+      "id": "SIERRA_GRANVILLE_FIRST",
+      "stable_id": "sierra-granville-first",
+      "title": "第一处格兰维尔镇 · 自由黑人聚落",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1787,
+          "end_year": 1787,
+          "title": "格兰维尔镇 · 第一批定居者抵达",
+          "note": "从伦敦来的黑人移民在特姆内首领汤姆等同意下建立聚落。迁移由伦敦慈善团体组织。"
+        },
+        {
+          "start_year": 1788,
+          "end_year": 1788,
+          "title": "格兰维尔镇 · 奈姆巴纳与英方的土地文书",
+          "note": "当地的土地协议是后来塞拉利昂公司提出用地权和双方发生争议的依据。"
+        },
+        {
+          "start_year": 1789,
+          "end_year": 1789,
+          "title": "格兰维尔镇 · 吉米首领焚毁聚落",
+          "note": "在一艘英国军舰袭击吉米首领的村落之后，吉米驱散居民并焚毁第一处格兰维尔镇。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://digicoll.lib.berkeley.edu/record/222243/files/b15613620_c072597650.pdf",
+        "https://academic.oup.com/cornell-scholarship-online/book/30815/chapter/262429667",
+        "https://eap.bl.uk/archive-file/EAP284-4-1",
+        "https://www.wmf.org/sites/default/files/article/pdfs/freetown_report-r.pdf"
+      ],
+      "geometry_method": "First settlement locality at the later Freetown terrace, using Clarkson’s direct account. Durham puts the early nucleus east of the later centre; the point is a 700 m locality, not an allotment or building.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 700,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.2355,
+          8.4891
+        ]
+      }
+    },
+    {
+      "id": "SIERRA_GRANVILLE_SECOND",
+      "stable_id": "sierra-granville-second",
+      "title": "克莱恩镇邻近 · 第二处格兰维尔镇",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1791,
+          "title": "第二处格兰维尔镇 · 安置原聚落幸存者",
+          "note": "亚历山大·福尔肯布里奇召集流散的第一处格兰维尔镇居民，在原址上游另设聚落。"
+        },
+        {
+          "start_year": 1792,
+          "end_year": 1799,
+          "title": "第二处格兰维尔镇 · 与弗里敦并存",
+          "note": "1792年日记同时记载格兰维尔镇居民与弗里敦新定居者，两地各有居民。"
+        }
+      ],
+      "source_urls": [
+        "https://www.sierra-leone.org/Books/Two%20Voyages%20to%20Sierra%20Leone%20during%20the%20years%201791-2-3.pdf",
+        "https://sierraleoneheritage.org/sites/monuments/oldfourahbay",
+        "https://www.perlego.com/book/1663049/the-rise-of-british-west-africa-pdf",
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+      ],
+      "geometry_method": "Named Cline Town/Fourah Bay vicinity. Falconbridge Letter IV describes the later settlement upriver of King Jemmy and before Signor Domingo; the named precinct does not represent a lot or its perimeter.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 900,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.2137,
+          8.487
+        ]
+      },
+      "cross_century_feature_id": "sierra-granville-second-1800"
+    },
+    {
+      "id": "SIERRA_FREETOWN_COMPANY_OFFICE",
+      "stable_id": "freetown-governing-core",
+      "title": "弗里敦 · 塞拉利昂公司行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1792,
+          "title": "塞拉利昂公司 · 新斯科舍黑人移民建镇",
+          "note": "黑人定居者于这一年建立弗里敦，建设房屋、组织社群，并向公司要求兑现土地承诺。公司设官署并主导授地。"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1793,
+          "title": "塞拉利昂公司 · 土地分配迟延",
+          "note": "定居者要求取得许诺的地块。测量员转而筹建桑顿堡，公司尚未完成分地。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "塞拉利昂公司 · 法国海军袭击与档案毁损",
+          "note": "法国海军劫掠弗里敦，焚毁部分公共建筑及公司记录。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1798,
+          "title": "塞拉利昂公司 · 重建驻地与收取地租",
+          "note": "公司在袭击后重建办公设施，试图向定居者收取土地年租。"
+        },
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "塞拉利昂公司 · 地权争端延续",
+          "note": "定居者要求自由保有土地，公司继续掌握行政、土地分配及司法。"
+        }
+      ],
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801",
+        "https://etheses.dur.ac.uk/9968/1/9968_6762.PDF#page=40",
+        "https://www.jstor.org/stable/10.3138/j.ctt2ttwm0",
+        "https://www.legislation.gov.uk/ukpga/Geo3Sess2/47/44/pdfs/ukpga_18070044_en.pdf"
+      ],
+      "geometry_method": "Reuses existing published freetown-office-1800 old government wharf precinct anchor; the governor’s separate named Thornton Hill position is independently recorded.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 250,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.237722,
+          8.488925
+        ]
+      },
+      "cross_century_feature_id": "freetown-office-1800"
+    },
+    {
+      "id": "SIERRA_FORT_THORNTON",
+      "stable_id": "sierra-fort-thornton",
+      "title": "弗里敦 · 桑顿堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1793,
+          "title": "桑顿堡 · 筹划山上工事",
+          "note": "福尔肯布里奇记载，测量员暂停分地，转为在亨利·桑顿命名的山岗筹建堡垒。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "桑顿堡 · 法国舰队袭击时工事未成",
+          "note": "法国舰队劫掠弗里敦时，城南山岗堡垒尚未完工。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "桑顿堡 · 继续兴建堡垒",
+          "note": "塞拉利昂公司继续修筑堡垒，被破坏的港城也陆续重建。"
+        }
+      ],
+      "source_urls": [
+        "https://sierraleoneheritage.org/sites/monuments/fortthornton",
+        "https://www.sierra-leone.org/Books/Two%20Voyages%20to%20Sierra%20Leone%20during%20the%20years%201791-2-3.pdf",
+        "https://etheses.dur.ac.uk/9968/1/9968_6762.PDF#page=40",
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801"
+      ],
+      "geometry_method": "Bastions at Government House / State House per Sierra Leone Monuments and Relics Commission; mapped on the documented hill, not its modern enclosure.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 65,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.2342342,
+          8.4865813
+        ]
+      },
+      "cross_century_feature_id": "sierra-fort-thornton-1800"
+    },
+    {
+      "id": "SIERRA_FREETOWN_SUSAN_STORE",
+      "stable_id": "sierra-freetown-susan-store",
+      "title": "弗里敦 · 苏珊湾仓库",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1792,
+          "title": "苏珊湾 · 公司暂缓筹建仓库",
+          "note": "1792年11月21日，克拉克森收到董事会来信。董事会计划从英国运来若干建筑构件，聚落暂缓在苏珊湾兴建仓库。"
+        }
+      ],
+      "source_urls": [
+        "https://digicoll.lib.berkeley.edu/record/222243/files/b15613620_c072597650.pdf",
+        "https://etheses.dur.ac.uk/9968/1/9968_6762.PDF#page=40",
+        "https://www.wmf.org/sites/default/files/article/pdfs/freetown_report-r.pdf"
+      ],
+      "geometry_method": "Susan’s Bay on the east side of the early settlement, checked against Fig. 2.1; no exact storehouse plot.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 260,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.22957,
+          8.49015
+        ]
+      }
+    },
+    {
+      "id": "SIERRA_BUNCE_EARLY_POST",
+      "stable_id": "sierra-bunce-early-post",
+      "title": "邦斯岛 · 皇家非洲公司旧堡址",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1703,
+          "title": "邦斯岛旧堡 · 皇家非洲公司经营",
+          "note": "英格兰皇家非洲公司在岛北经营贩奴堡。1707年之前，公司在英格兰取得特许。"
+        },
+        {
+          "start_year": 1704,
+          "end_year": 1704,
+          "title": "邦斯岛旧堡 · 法军袭击",
+          "note": "法国军队打击驻岛贸易设施。皇家非洲公司后来恢复驻点。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1705,
+          "end_year": 1718,
+          "title": "邦斯岛旧堡 · 公司继续驻用",
+          "note": "皇家非洲公司继续利用岛北据点进行大西洋奴隶贸易。"
+        },
+        {
+          "start_year": 1719,
+          "end_year": 1720,
+          "title": "邦斯岛旧堡 · 遭海盗袭击",
+          "note": "邦斯岛贩奴堡于1719及1720年遭海盗袭击，堡垒又经修补。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1721,
+          "end_year": 1727,
+          "title": "邦斯岛旧堡 · 皇家非洲公司继续经营",
+          "note": "英国皇家非洲公司继续在此关押被奴役者。1726年威廉·史密斯绘制堡区。"
+        },
+        {
+          "start_year": 1728,
+          "end_year": 1728,
+          "title": "邦斯岛旧堡 · 10月被德莫拉攻毁",
+          "note": "贩奴商若泽·洛佩斯·达莫拉率队攻毁旧堡，皇家非洲公司撤离。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1729,
+          "end_year": 1743,
+          "title": "邦斯岛旧堡 · 弃置",
+          "note": "皇家非洲公司撤离后，旧堡弃置。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1744,
+          "end_year": 1747,
+          "title": "邦斯岛旧堡 · 英国私商重开",
+          "note": "塞拉利昂申遗资料将私人商人重启据点系于1744年；格兰特和奥斯瓦尔德等人的经营自1748年有确切记载。"
+        }
+      ],
+      "source_urls": [
+        "https://journals.uoregon.edu/beads/article/download/6234/7985/11878",
+        "https://static1.squarespace.com/static/5bd0e66f8d97400eb0099556/t/5c252a0521c67c9c84aab1b1/1545939499037/Paper%2B2%2B-%2BDeCorse.pdf",
+        "https://www.academia.edu/43169001/Bunce_Island_Sierra_Leone_National_Historic_Site_GENERAL_MANAGEMENT_PLAN",
+        "https://whc.unesco.org/en/tentativelists/5745/",
+        "https://sierraleoneheritage.org/v12.6/sites/monuments/bunce/"
+      ],
+      "geometry_method": "North rise of Bunce Island, historic location found on William Smith’s 1726 drawing and later archaeological survey. Early fort perimeter cannot be carried forward from surviving reconstructed walls.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 80,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0397287,
+          8.5714803
+        ]
+      }
+    },
+    {
+      "id": "SIERRA_BUNCE_SLAVE_YARD",
+      "stable_id": "sierra-bunce-slave-yard",
+      "title": "邦斯岛 · 奴役关押院",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1792,
+          "end_year": 1793,
+          "title": "奴役关押院 · 男子与妇孺分开关押",
+          "note": "被奴役者在开敞院落内等候出售与登船。堡内分开关押男子和妇孺。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "奴役关押院 · 商堡遇袭",
+          "note": "法国海军袭击邦斯岛并破坏堡垒。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "奴役关押院 · 随商堡恢复贩奴",
+          "note": "安德森商号继续在邦斯岛贩卖被拘押的非洲人。"
+        }
+      ],
+      "source_urls": [
+        "https://static1.squarespace.com/static/5bd0e66f8d97400eb0099556/t/5c252a0521c67c9c84aab1b1/1545939499037/Paper%2B2%2B-%2BDeCorse.pdf",
+        "https://www.academia.edu/43169001/Bunce_Island_Sierra_Leone_National_Historic_Site_GENERAL_MANAGEMENT_PLAN",
+        "https://sierraleoneheritage.org/v12.6/sites/monuments/bunce/"
+      ],
+      "geometry_method": "Slave-yard sector immediately behind the main house, from archaeological fig. 2 passage and excavation reports; exact men/women partition dates are unverified.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 45,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0394923,
+          8.5715365
+        ]
+      },
+      "cross_century_feature_id": "sierra-bunce-slave-yard-1800"
+    },
+    {
+      "id": "SIERRA_BUNCE_ADAMS_TOWN",
+      "stable_id": "sierra-bunce-adams-town",
+      "title": "邦斯岛 · 亚当镇",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1791,
+          "end_year": 1791,
+          "title": "亚当镇 · 堡外非洲劳工聚落",
+          "note": "福尔肯布里奇访问城堡南面的聚落，记下称为亚当的当地管事统领一批自由黑人雇工；他们参与堡垒日常运作。"
+        }
+      ],
+      "source_urls": [
+        "https://www.sierra-leone.org/Books/Two%20Voyages%20to%20Sierra%20Leone%20during%20the%20years%201791-2-3.pdf",
+        "https://static1.squarespace.com/static/5bd0e66f8d97400eb0099556/t/5c252a0521c67c9c84aab1b1/1545939499037/Paper%2B2%2B-%2BDeCorse.pdf",
+        "https://www.academia.edu/43169001/Bunce_Island_Sierra_Leone_National_Historic_Site_GENERAL_MANAGEMENT_PLAN"
+      ],
+      "geometry_method": "Village locality on the ridge south of the main fort. Named by Falconbridge in 1791; DeCorse’s test pits do not fix the village perimeter or locate each household.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 130,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.04013,
+          8.57054
+        ]
+      }
+    },
     {
       "id": "PLACENTIA_FORT_ROYAL",
       "title": "普拉森舍城堡山 · 皇家堡",
@@ -23513,6 +24282,1088 @@
     }
   ],
   "regional_zones": [
+    {
+      "id": "CAPE_OLD_TOWN_1795",
+      "stable_id": "cape-old-town-1795",
+      "title": "开普敦 · 旧城街区",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "开普敦旧城 · 9月16日英军接收",
+          "note": "阿卢雷德·克拉克与乔治·埃尔芬斯通所部接收开普敦。投降条款规定开列清册后交出荷兰东印度公司财产，保留居民、教会和公共机构的财产。"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1799,
+          "title": "开普敦旧城 · 第一次英国占领",
+          "note": "英占当局继续利用旧城的行政和港口设施。1797年，第一任英国文职总督麦卡特尼到任。"
+        }
+      ],
+      "source_urls": [
+        "https://open.uct.ac.za/server/api/core/bitstreams/a176e1c5-9a05-4482-9d1a-d906765780e6/content#page=46",
+        "https://www.rijksmuseum.nl/en/collection/object/Kaart-van-Kaapstad-en-omgeving--7f5fc37a9d374b166801b7ad3df8501d",
+        "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf",
+        "https://sahistory.org.za/dated-event/britain-returns-cape-netherlands-and-flag-batavian-republic-hoisted-castle"
+      ],
+      "geometry_method": "Cape Archives map 85, Cape Town 1795 redrawing in UCT fig. 8. Outer occupied street blocks traced, with 1782 Gordon plan check; anchored to Greenmarket, Riebeeck Square, garden entrance and Castle by similarity fit. No Table Bay or outlying farms.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 350,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.4194023,
+              -33.9194593
+            ],
+            [
+              18.4201007,
+              -33.9201233
+            ],
+            [
+              18.4208924,
+              -33.9203971
+            ],
+            [
+              18.4221411,
+              -33.9210683
+            ],
+            [
+              18.4236948,
+              -33.9222165
+            ],
+            [
+              18.4254312,
+              -33.9233208
+            ],
+            [
+              18.4266529,
+              -33.9239756
+            ],
+            [
+              18.426252,
+              -33.9245056
+            ],
+            [
+              18.425366,
+              -33.9243635
+            ],
+            [
+              18.4243758,
+              -33.9237975
+            ],
+            [
+              18.4234838,
+              -33.9231193
+            ],
+            [
+              18.4228735,
+              -33.922921
+            ],
+            [
+              18.4222986,
+              -33.9234142
+            ],
+            [
+              18.4218426,
+              -33.924031
+            ],
+            [
+              18.422932,
+              -33.9243651
+            ],
+            [
+              18.424204,
+              -33.9250333
+            ],
+            [
+              18.4237822,
+              -33.9257052
+            ],
+            [
+              18.4235297,
+              -33.9261362
+            ],
+            [
+              18.424771,
+              -33.9267685
+            ],
+            [
+              18.4244412,
+              -33.9275477
+            ],
+            [
+              18.423724,
+              -33.9282983
+            ],
+            [
+              18.4230314,
+              -33.9293041
+            ],
+            [
+              18.4217042,
+              -33.9287228
+            ],
+            [
+              18.419817,
+              -33.9283344
+            ],
+            [
+              18.4193893,
+              -33.9280923
+            ],
+            [
+              18.4198026,
+              -33.9267453
+            ],
+            [
+              18.4201203,
+              -33.9256495
+            ],
+            [
+              18.4197674,
+              -33.9252981
+            ],
+            [
+              18.4191741,
+              -33.9260721
+            ],
+            [
+              18.4179629,
+              -33.9273649
+            ],
+            [
+              18.4173441,
+              -33.9272474
+            ],
+            [
+              18.4163502,
+              -33.9270399
+            ],
+            [
+              18.4155548,
+              -33.9271245
+            ],
+            [
+              18.4147729,
+              -33.9270284
+            ],
+            [
+              18.4155097,
+              -33.9258775
+            ],
+            [
+              18.4161938,
+              -33.9249523
+            ],
+            [
+              18.4166266,
+              -33.9243386
+            ],
+            [
+              18.4160469,
+              -33.9241761
+            ],
+            [
+              18.4145911,
+              -33.9236714
+            ],
+            [
+              18.4147591,
+              -33.923172
+            ],
+            [
+              18.4156672,
+              -33.9234305
+            ],
+            [
+              18.4147542,
+              -33.9228942
+            ],
+            [
+              18.4162558,
+              -33.9216229
+            ],
+            [
+              18.4168087,
+              -33.9210133
+            ],
+            [
+              18.4175488,
+              -33.9213933
+            ],
+            [
+              18.4183738,
+              -33.9207082
+            ],
+            [
+              18.4194023,
+              -33.9194593
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        18.4145911,
+        -33.9293041,
+        18.4266529,
+        -33.9194593
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "cape-old-town-1795-1800"
+    },
+    {
+      "id": "CAPE_CASTLE_FIVE_BASTIONS",
+      "stable_id": "cape-castle-five-bastions",
+      "title": "开普敦 · 好望堡五棱堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "好望堡 · 9月16日交堡",
+          "note": "鲁斯滕堡投降条款第一条规定，好望堡与城镇在签字当天上午十一时交给英王部队。"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1799,
+          "title": "好望堡 · 英军驻堡",
+          "note": "英军继续驻堡，接用荷兰东印度公司的军用库房和行政设施。"
+        }
+      ],
+      "source_urls": [
+        "https://www.rijksmuseum.nl/en/collection/object/Kaart-van-Kaapstad-en-omgeving--7f5fc37a9d374b166801b7ad3df8501d",
+        "https://open.uct.ac.za/server/api/core/bitstreams/a176e1c5-9a05-4482-9d1a-d906765780e6/content#page=46",
+        "https://www.castleofgoodhope.co.za/",
+        "https://upload.wikimedia.org/wikipedia/commons/5/51/Select_constitutional_documents_illustrating_South_African_history%2C_1795-1910_%28IA_cu31924030542165%29.pdf",
+        "https://sahistory.org.za/dated-event/britain-returns-cape-netherlands-and-flag-batavian-republic-hoisted-castle"
+      ],
+      "geometry_method": "Five surviving bastions and connecting curtain walls from OSM relation 57263 exterior way 8035421, checked on Esri imagery and on the 1782 and 1795 plans; dry moat and outworks excluded.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 30,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.4272095,
+              -33.9269022
+            ],
+            [
+              18.4271944,
+              -33.926842
+            ],
+            [
+              18.4271176,
+              -33.9265358
+            ],
+            [
+              18.4272463,
+              -33.9264712
+            ],
+            [
+              18.4268721,
+              -33.9259691
+            ],
+            [
+              18.4267507,
+              -33.9260319
+            ],
+            [
+              18.4263837,
+              -33.9257979
+            ],
+            [
+              18.4267741,
+              -33.9256042
+            ],
+            [
+              18.4268866,
+              -33.9256849
+            ],
+            [
+              18.4270896,
+              -33.9254967
+            ],
+            [
+              18.4270782,
+              -33.9254884
+            ],
+            [
+              18.4270835,
+              -33.9254834
+            ],
+            [
+              18.4270939,
+              -33.9254735
+            ],
+            [
+              18.4270992,
+              -33.9254685
+            ],
+            [
+              18.4271039,
+              -33.925464
+            ],
+            [
+              18.4271137,
+              -33.9254547
+            ],
+            [
+              18.4271191,
+              -33.9254495
+            ],
+            [
+              18.4271305,
+              -33.9254578
+            ],
+            [
+              18.4273555,
+              -33.9252423
+            ],
+            [
+              18.4272416,
+              -33.9251573
+            ],
+            [
+              18.4273836,
+              -33.9248337
+            ],
+            [
+              18.4273987,
+              -33.9247993
+            ],
+            [
+              18.4277274,
+              -33.9250573
+            ],
+            [
+              18.4276696,
+              -33.9251728
+            ],
+            [
+              18.4283282,
+              -33.9253997
+            ],
+            [
+              18.428391,
+              -33.9252702
+            ],
+            [
+              18.4288489,
+              -33.9252891
+            ],
+            [
+              18.4288294,
+              -33.9253249
+            ],
+            [
+              18.4286626,
+              -33.9256403
+            ],
+            [
+              18.4285139,
+              -33.9256316
+            ],
+            [
+              18.4284615,
+              -33.9262251
+            ],
+            [
+              18.4286106,
+              -33.9262311
+            ],
+            [
+              18.4287261,
+              -33.9265965
+            ],
+            [
+              18.4283854,
+              -33.9265658
+            ],
+            [
+              18.4282763,
+              -33.926556
+            ],
+            [
+              18.4282424,
+              -33.9264406
+            ],
+            [
+              18.427548,
+              -33.9265762
+            ],
+            [
+              18.4275829,
+              -33.9266957
+            ],
+            [
+              18.4272095,
+              -33.9269022
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        18.4263837,
+        -33.9269022,
+        18.4288489,
+        -33.9247993
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "cape-castle-five-bastions-1800"
+    },
+    {
+      "id": "CAPE_SLAVE_LODGE",
+      "stable_id": "cape-slave-lodge",
+      "title": "开普敦 · 奴隶收容所",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1750,
+          "title": "奴隶收容所 · 荷兰东印度公司关押与役使",
+          "note": "荷兰东印度公司把它所奴役的人集中关押；公司令其中一些人在附近花园、码头和市内工地劳动。"
+        },
+        {
+          "start_year": 1751,
+          "end_year": 1794,
+          "title": "奴隶收容所 · 加建楼层",
+          "note": "1751年加建第二层，继续关押被公司奴役的男性、女性和儿童。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "奴隶收容所 · 英军接管后的拘禁与劳役",
+          "note": "1795年政权易手后，收容所仍关押被奴役者，部分房间也作医疗和拘押使用。",
+          "kind": "wartime_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://resource.capetown.gov.za/documentcentre/Documents/Procedures%2C%20guidelines%20and%20regulations/Company%27s%20Garden%20Self%20Guided%20Walk.pdf",
+        "https://www.iziko.org.za/museums/slave-lodge/",
+        "https://open.uct.ac.za/server/api/core/bitstreams/a176e1c5-9a05-4482-9d1a-d906765780e6/content#page=46"
+      ],
+      "geometry_method": "Surviving VOC Slave Lodge block, OSM relation 21445411 outer way 48801575. Cape Town heritage walk documents a later relocation of the Adderley frontage by about 13 metres.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 35,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.4201724,
+              -33.9251087
+            ],
+            [
+              18.4206705,
+              -33.925466
+            ],
+            [
+              18.4209559,
+              -33.925192
+            ],
+            [
+              18.4204578,
+              -33.9248348
+            ],
+            [
+              18.4201724,
+              -33.9251087
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        18.4201724,
+        -33.925466,
+        18.4209559,
+        -33.9248348
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "cape-slave-lodge-1800"
+    },
+    {
+      "id": "CAPE_COMPANY_GARDEN",
+      "stable_id": "cape-company-garden",
+      "title": "开普敦 · 公司花园",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "公司花园 · 殖民补给与被奴役者劳役",
+          "note": "花园原为荷兰东印度公司的补给园地。英国接管后，这里继续由殖民当局使用。附近收容所的被奴役者曾被派到园中劳动。"
+        }
+      ],
+      "source_urls": [
+        "https://open.uct.ac.za/server/api/core/bitstreams/a176e1c5-9a05-4482-9d1a-d906765780e6/content#page=46",
+        "https://www.rijksmuseum.nl/en/collection/object/Kaart-van-Kaapstad-en-omgeving--7f5fc37a9d374b166801b7ad3df8501d",
+        "https://resource.capetown.gov.za/documentcentre/Documents/Procedures%2C%20guidelines%20and%20regulations/Company%27s%20Garden%20Self%20Guided%20Walk.pdf"
+      ],
+      "geometry_method": "Hatched historic garden in the 1795 Cape Archives map 85 redrawing; Northern tip checked on Wale/Adderley precinct and 1782 Gordon plan.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 350,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.4198312,
+              -33.9251306
+            ],
+            [
+              18.420341,
+              -33.9253023
+            ],
+            [
+              18.4211191,
+              -33.9257569
+            ],
+            [
+              18.4206201,
+              -33.9267771
+            ],
+            [
+              18.4195057,
+              -33.9284549
+            ],
+            [
+              18.4186095,
+              -33.9296466
+            ],
+            [
+              18.417326,
+              -33.9311875
+            ],
+            [
+              18.4166039,
+              -33.932416
+            ],
+            [
+              18.4157154,
+              -33.932135
+            ],
+            [
+              18.4148295,
+              -33.931615
+            ],
+            [
+              18.4155687,
+              -33.930603
+            ],
+            [
+              18.4167002,
+              -33.9291418
+            ],
+            [
+              18.4177373,
+              -33.9278122
+            ],
+            [
+              18.4187953,
+              -33.9263407
+            ],
+            [
+              18.4198312,
+              -33.9251306
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        18.4148295,
+        -33.932416,
+        18.4211191,
+        -33.9251306
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "cape-company-garden-1800"
+    },
+    {
+      "id": "CAPE_ALGOA_FORT_FREDERICK",
+      "stable_id": "cape-algoa-fort-frederick",
+      "title": "阿尔戈阿湾 · 弗雷德里克堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "弗雷德里克堡 · 1799年英军修建",
+          "note": "英军在巴肯斯河口上方修筑石堡，保护登陆和补给点，并防范敌方从阿尔戈阿湾登陆。"
+        }
+      ],
+      "source_urls": [
+        "https://sahistory.org.za/place/fort-frederick-port-elizabeth",
+        "https://scientiamilitaria.journals.ac.za/pub/article/view/1094"
+      ],
+      "geometry_method": "Surviving 1799 stone walls at Belmont Terrace above the Baakens River, traced on Esri World Imagery. SAHO legacy town coordinate disagrees with its correct street/river description; footprint uses the visible monument.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 25,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              25.621185,
+              -33.966515
+            ],
+            [
+              25.6215,
+              -33.96633
+            ],
+            [
+              25.621675,
+              -33.966565
+            ],
+            [
+              25.62138,
+              -33.966735
+            ],
+            [
+              25.621185,
+              -33.966515
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        25.621185,
+        -33.966735,
+        25.621675,
+        -33.96633
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "cape-algoa-fort-frederick-1800"
+    },
+    {
+      "id": "SIERRA_FREETOWN_EARLY_GRID",
+      "stable_id": "sierra-freetown-early-grid",
+      "title": "弗里敦 · 早期街网",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "弗里敦旧街区 · 法国舰队袭击",
+          "note": "法国海军在当年袭击弗里敦，焚烧住宅和公共建筑，毁损公司记录。居民返回后陆续修复。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "弗里敦旧街区 · 袭击后重建",
+          "note": "居民和公司重建房屋与公共设施，港口聚落继续有人居住。"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1798,
+          "title": "弗里敦旧街区 · 居民代表争取土地权",
+          "note": "部分定居者通过社群代表抗议公司征租和迟延承认自由保有权。"
+        },
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "弗里敦旧街区 · 年租与自由保有争议",
+          "note": "居民继续要求能够自由处置被分配的土地，拒绝接受公司对年租和司法的控制。"
+        }
+      ],
+      "source_urls": [
+        "https://etheses.dur.ac.uk/9968/1/9968_6762.PDF#page=40",
+        "https://www.wmf.org/sites/default/files/article/pdfs/freetown_report-r.pdf",
+        "https://digicoll.lib.berkeley.edu/record/222243/files/b15613620_c072597650.pdf",
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801",
+        "https://www.jstor.org/stable/10.3138/j.ctt2ttwm0",
+        "https://www.legislation.gov.uk/ukpga/Geo3Sess2/47/44/pdfs/ukpga_18070044_en.pdf"
+      ],
+      "geometry_method": "Street grid and developed town edge traced on Durham Fig. 2.1 (1815 after Porter); the study compares this same grid to the 1794 company map. Registered to Gloucester, Charlotte, George, Walpole and Wilberforce junctions with modern Siaka Stevens/Lightfoot Boston. Town-wall masonry and unbuilt inland allotments excluded.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 85,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -13.2383616,
+              8.4881924
+            ],
+            [
+              -13.2389916,
+              8.488521
+            ],
+            [
+              -13.2388998,
+              8.4890336
+            ],
+            [
+              -13.2386135,
+              8.4894256
+            ],
+            [
+              -13.2382994,
+              8.4894019
+            ],
+            [
+              -13.237928,
+              8.4893484
+            ],
+            [
+              -13.2376737,
+              8.4895057
+            ],
+            [
+              -13.2376172,
+              8.4898049
+            ],
+            [
+              -13.2372468,
+              8.4901626
+            ],
+            [
+              -13.2370153,
+              8.4904333
+            ],
+            [
+              -13.2366123,
+              8.4907789
+            ],
+            [
+              -13.2362181,
+              8.4910711
+            ],
+            [
+              -13.2359279,
+              8.4911952
+            ],
+            [
+              -13.2355414,
+              8.4913996
+            ],
+            [
+              -13.2350572,
+              8.4915675
+            ],
+            [
+              -13.2345867,
+              8.4918199
+            ],
+            [
+              -13.2339976,
+              8.4922038
+            ],
+            [
+              -13.2334746,
+              8.4925641
+            ],
+            [
+              -13.2330031,
+              8.4928643
+            ],
+            [
+              -13.2325806,
+              8.4930354
+            ],
+            [
+              -13.2323375,
+              8.492667
+            ],
+            [
+              -13.232032,
+              8.4920486
+            ],
+            [
+              -13.2317056,
+              8.4915981
+            ],
+            [
+              -13.2313513,
+              8.491191
+            ],
+            [
+              -13.2309695,
+              8.4909919
+            ],
+            [
+              -13.2305719,
+              8.4908039
+            ],
+            [
+              -13.230219,
+              8.4905135
+            ],
+            [
+              -13.2298762,
+              8.4902043
+            ],
+            [
+              -13.22963,
+              8.4899792
+            ],
+            [
+              -13.2332257,
+              8.4874326
+            ],
+            [
+              -13.2334432,
+              8.487372
+            ],
+            [
+              -13.2352516,
+              8.4874742
+            ],
+            [
+              -13.235613,
+              8.4875467
+            ],
+            [
+              -13.2363737,
+              8.4876293
+            ],
+            [
+              -13.2371458,
+              8.4878097
+            ],
+            [
+              -13.2377528,
+              8.4878604
+            ],
+            [
+              -13.2383616,
+              8.4881924
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -13.2389916,
+        8.487372,
+        -13.22963,
+        8.4930354
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "sierra-freetown-early-grid-1800"
+    },
+    {
+      "id": "SIERRA_BUNCE_SLAVE_FORT",
+      "stable_id": "sierra-bunce-slave-fort",
+      "title": "邦斯岛 · 私营贩奴堡",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1748,
+          "end_year": 1755,
+          "title": "邦斯岛贩奴堡 · 格兰特和奥斯瓦尔德等人经营",
+          "note": "伦敦私商接管并经营这处贩奴堡。1748年英方卷宗记载堡及商站布局。"
+        },
+        {
+          "start_year": 1756,
+          "end_year": 1778,
+          "title": "邦斯岛贩奴堡 · 向卡罗来纳和乔治亚运送被奴役者",
+          "note": "商人从此把被关押的非洲人运往美洲。从1756年起，定期航线将被奴役者运至南卡罗来纳和乔治亚；亨利·劳伦斯曾任查尔斯敦代理。"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "邦斯岛贩奴堡 · 法国海军袭击",
+          "note": "美国独立战争期间，法国舰队袭击并毁损这处英国私商堡垒。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1783,
+          "title": "邦斯岛贩奴堡 · 格兰特和奥斯瓦尔德企业重建",
+          "note": "英国经营者在受袭后重建，继续贩运被奴役者。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1793,
+          "title": "邦斯岛贩奴堡 · 约翰与亚历山大·安德森接手",
+          "note": "安德森企业接手续营。堡内分别拘押男子与妇孺，附近有受雇非洲劳工居住。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "邦斯岛贩奴堡 · 法国海军再度袭击",
+          "note": "法国舰队袭击弗里敦后继续袭击上游贩奴堡，毁损商人据点。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "邦斯岛贩奴堡 · 安德森企业恢复经营",
+          "note": "遭袭后邦斯岛恢复经营。被奴役者仍从此被装船运往大西洋彼岸。"
+        }
+      ],
+      "source_urls": [
+        "https://static1.squarespace.com/static/5bd0e66f8d97400eb0099556/t/5c252a0521c67c9c84aab1b1/1545939499037/Paper%2B2%2B-%2BDeCorse.pdf",
+        "https://www.academia.edu/43169001/Bunce_Island_Sierra_Leone_National_Historic_Site_GENERAL_MANAGEMENT_PLAN",
+        "https://whc.unesco.org/en/tentativelists/5745/",
+        "https://sierraleoneheritage.org/v12.6/sites/monuments/bunce/"
+      ],
+      "geometry_method": "North-end fort precinct from DeCorse archaeological fig. 2, cross-checked against historic 1748/1807 plans and registered approximately on six OSM-known extant fort corners. Individual wall rebuild phases are not copied back from modern ruins.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 65,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -13.0400643,
+              8.5713148
+            ],
+            [
+              -13.0399742,
+              8.5714447
+            ],
+            [
+              -13.039911,
+              8.5715676
+            ],
+            [
+              -13.0398937,
+              8.5716605
+            ],
+            [
+              -13.0398404,
+              8.5717253
+            ],
+            [
+              -13.0397603,
+              8.5717737
+            ],
+            [
+              -13.0396803,
+              8.5718065
+            ],
+            [
+              -13.0395934,
+              8.5718041
+            ],
+            [
+              -13.0394963,
+              8.5718462
+            ],
+            [
+              -13.0394335,
+              8.5718094
+            ],
+            [
+              -13.0393817,
+              8.5717632
+            ],
+            [
+              -13.0393429,
+              8.5716998
+            ],
+            [
+              -13.0393079,
+              8.5716229
+            ],
+            [
+              -13.0392636,
+              8.5715341
+            ],
+            [
+              -13.0392484,
+              8.571446
+            ],
+            [
+              -13.0393166,
+              8.5713876
+            ],
+            [
+              -13.0393809,
+              8.5713134
+            ],
+            [
+              -13.0394343,
+              8.5712409
+            ],
+            [
+              -13.039483,
+              8.5711702
+            ],
+            [
+              -13.0395484,
+              8.5710922
+            ],
+            [
+              -13.0396625,
+              8.5711168
+            ],
+            [
+              -13.0397574,
+              8.5711427
+            ],
+            [
+              -13.0398504,
+              8.5711609
+            ],
+            [
+              -13.0399557,
+              8.5711872
+            ],
+            [
+              -13.040025,
+              8.5711852
+            ],
+            [
+              -13.0400888,
+              8.5712337
+            ],
+            [
+              -13.0400643,
+              8.5713148
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -13.0400888,
+        8.5710922,
+        -13.0392484,
+        8.5718462
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "sierra-bunce-slave-fort-1800"
+    },
     {
       "id": "FORT_ANNE_ROYAL_PORT",
       "title": "阿卡迪亚皇家港 · 安妮堡",
@@ -65074,6 +66925,153 @@
     }
   ],
   "regional_lines": [
+    {
+      "id": "CAPE_OLD_TABLE_BAY_SHORE",
+      "stable_id": "cape-old-table-bay-shore",
+      "title": "开普敦 · 1795年桌湾旧岸",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "桌湾旧岸 · 接收开普敦时的海滨",
+          "note": "港岸沿旧城街区向东南延伸。英军接管开普敦后使用既有港口为往来舰船补给。"
+        }
+      ],
+      "source_urls": [
+        "https://open.uct.ac.za/server/api/core/bitstreams/a176e1c5-9a05-4482-9d1a-d906765780e6/content#page=46",
+        "https://www.rijksmuseum.nl/en/collection/object/Kaart-van-Kaapstad-en-omgeving--7f5fc37a9d374b166801b7ad3df8501d"
+      ],
+      "geometry_method": "Trace of signed Table Bay shoreline in UCT figure 8, cross-checked on 1782 Gordon plan. Ports and projected defence lines are not used as control points.",
+      "geometry_precision": "source_backed_historical_line",
+      "position_uncertainty_m": 350,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.4231324,
+            -33.9163439
+          ],
+          [
+            18.422968,
+            -33.9172406
+          ],
+          [
+            18.4230511,
+            -33.9181843
+          ],
+          [
+            18.4232066,
+            -33.9188798
+          ],
+          [
+            18.423628,
+            -33.9197194
+          ],
+          [
+            18.4241266,
+            -33.9205886
+          ],
+          [
+            18.4248078,
+            -33.9214139
+          ],
+          [
+            18.4255271,
+            -33.9219359
+          ],
+          [
+            18.4262819,
+            -33.9223936
+          ],
+          [
+            18.4271679,
+            -33.9229135
+          ],
+          [
+            18.4281519,
+            -33.9233212
+          ],
+          [
+            18.4291801,
+            -33.9235838
+          ],
+          [
+            18.430131,
+            -33.9238168
+          ]
+        ]
+      }
+    },
+    {
+      "id": "SIERRA_FREETOWN_CROSS_STREET",
+      "stable_id": "sierra-freetown-cross-street",
+      "title": "弗里敦 · 早期横街",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "title": "早期横街 · 连接弗里敦居民地块",
+          "note": "横街把沃尔波尔街、格洛斯特街、夏洛特街等早期街区连在一起。镇上住宅、公共建筑和临河街道分布在这套街网中。"
+        }
+      ],
+      "source_urls": [
+        "https://etheses.dur.ac.uk/9968/1/9968_6762.PDF#page=40",
+        "https://www.wmf.org/sites/default/files/article/pdfs/freetown_report-r.pdf"
+      ],
+      "geometry_method": "Cross Street in Fig. 2.1 (1815 plan; author matched same grid on company 1794 map). Extant intersections along Lightfoot Boston Street control line.",
+      "geometry_precision": "source_backed_historical_line",
+      "position_uncertainty_m": 65,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.2366126,
+            8.4885658
+          ],
+          [
+            -13.2356384,
+            8.4892707
+          ],
+          [
+            -13.2351132,
+            8.4896444
+          ],
+          [
+            -13.234588,
+            8.4900181
+          ],
+          [
+            -13.2341042,
+            8.4903505
+          ],
+          [
+            -13.2335477,
+            8.4907465
+          ],
+          [
+            -13.2330303,
+            8.4911146
+          ],
+          [
+            -13.2319979,
+            8.4918375
+          ]
+        ]
+      },
+      "cross_century_feature_id": "sierra-freetown-cross-street-1800"
+    },
     {
       "id": "CALCUTTA_1794_TOLLYS_NULLAH_BOUNDARY",
       "title": "加尔各答法定南界 · 托利水道段",

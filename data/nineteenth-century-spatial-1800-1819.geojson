@@ -12,8 +12,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          18.427,
-          -33.925
+          18.427715,
+          -33.925879
         ]
       },
       "properties": {
@@ -21,7 +21,7 @@
         "start_year": 1800,
         "end_year": 1819,
         "display_kind": "control",
-        "summary_zh": "英国在1795年夺取开普后继续治理开普敦。1802年《亚眠和约》议定归还开普。",
+        "summary_zh": "英方自1795年9月16日起驻用好望堡，1803年2月21日交还，1806年重新接收。1811年民政机关迁出，军方留驻。",
         "source_ids": [
           "19C-AMIENS",
           "19C-CAPE-TIMELINE",
@@ -32,7 +32,9 @@
           "https://mjp.univ-perp.fr/traites/1802amiens.htm",
           "https://sahistory.org.za/article/cape-town-timeline-1300-1997?id=2",
           "https://sahistory.org.za/place/castle-good-hope-castle-street-cape-town",
-          "https://hansard.parliament.uk/Commons/1815-06-09/debates/f8babd0e-ce7b-48ef-878c-0038979c8cd5/CommonsChamber"
+          "https://hansard.parliament.uk/Commons/1815-06-09/debates/f8babd0e-ce7b-48ef-878c-0038979c8cd5/CommonsChamber",
+          "https://sahistory.org.za/dated-event/britain-returns-cape-netherlands-and-flag-batavian-republic-hoisted-castle",
+          "https://castleofgoodhope.co.za/reps_pubs/ccb_Integrated-Conservation-Management-Plan_Sep18.pdf"
         ],
         "named_anchors": [
           "开普敦好望堡"
@@ -52,31 +54,38 @@
         "year_stages": [
           {
             "start_year": 1800,
-            "end_year": 1802,
+            "end_year": 1801,
             "controller": "british",
             "title": "开普敦 · 第一次英占",
-            "summary_zh": "英国在1795年夺取开普后继续治理开普敦。1802年《亚眠和约》议定归还开普。"
+            "summary_zh": "第一次英占期间，英国殖民政府继续在开普敦及好望堡运作。"
+          },
+          {
+            "start_year": 1802,
+            "end_year": 1802,
+            "controller": "british",
+            "title": "开普敦 · 《亚眠和约》议定归还",
+            "summary_zh": "1802年3月27日，和约议定开普归还巴达维亚共和国，英军仍在开普敦驻守。"
           },
           {
             "start_year": 1803,
             "end_year": 1805,
             "controller": "batavian",
             "title": "开普敦 · 巴达维亚政府",
-            "summary_zh": "巴达维亚共和国从英国接收开普，扬森斯任总督。"
+            "summary_zh": "1803年2月21日，英国正式交还开普，巴达维亚共和国的国旗在好望堡升起。扬森斯任总督。"
           },
           {
             "start_year": 1806,
-            "end_year": 1813,
+            "end_year": 1810,
             "controller": "british",
             "title": "开普敦 · 第二次英占",
             "summary_zh": "布劳乌贝赫战役后，英国再次接管开普。"
           },
           {
-            "start_year": 1814,
+            "start_year": 1811,
             "end_year": 1819,
-            "controller": "british",
-            "title": "开普敦 · 英国殖民政府",
-            "summary_zh": "英荷公约确认英国保有开普，殖民政府继续在开普敦运作。"
+            "title": "开普敦好望堡 · 民政机关迁出，军方留驻",
+            "summary_zh": "1811年民政机关从堡内迁出。军事部门继续驻用此处。",
+            "controller": "british"
           }
         ]
       }

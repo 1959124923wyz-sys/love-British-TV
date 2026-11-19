@@ -16,16 +16,16 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 538,
-    "linked_to_1800_public_geometry": 374,
+    "1799_prior_records_reviewed": 557,
+    "linked_to_1800_public_geometry": 392,
     "by_disposition": {
-      "anchor": 221,
+      "anchor": 227,
       "claim_evidence": 7,
-      "continued": 117,
-      "event_history": 9,
+      "continued": 129,
+      "event_history": 11,
       "fiscal_evidence": 36,
       "needs_boundary_or_site_review": 47,
-      "network_evidence": 63,
+      "network_evidence": 62,
       "occupation": 9,
       "political_relation_evidence": 11,
       "renewed_scope": 18
@@ -147,8 +147,11 @@
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "1795—1799 Bunce Island英国私人贸易",
       "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "sierra-bunce-slave-fort-1800"
+      ],
+      "notes": "旧商堡矩形由岛北考古勘测堡区接替。"
     },
     {
       "prior_id": "B37-A-Z029",
@@ -156,17 +159,20 @@
       "name_zh": "Sierra Leone河港奴隶贸易船运流域",
       "prior_record_kind": "trade_influence",
       "resolution": "network_evidence",
-      "features_at_1800": []
+      "features_at_1800": [],
+      "notes": "河口航运史料保留，航运流域矩形退役。邦斯岛的据点另有可点档案。"
     },
     {
       "prior_id": "B37-A-Z031",
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "1792—1799 Freetown黑人定居与公司治理",
       "prior_record_kind": "administration",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
+        "sierra-freetown-early-grid-1800",
         "freetown-office-1800"
-      ]
+      ],
+      "notes": "旧矩形由早期街区与公司行政点接替。"
     },
     {
       "prior_id": "B37-A-Z032",
@@ -1981,10 +1987,12 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "1792年后塞拉利昂公司弗里敦聚落",
       "prior_record_kind": "administration",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
+        "sierra-freetown-early-grid-1800",
         "freetown-office-1800"
-      ]
+      ],
+      "notes": "旧矩形由早期街区与公司行政点接替。"
     },
     {
       "prior_id": "GOLD_COAST_TRADE",
@@ -2003,11 +2011,12 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "1795年英军开普敦与桌湾军事控制",
       "prior_record_kind": "wartime_occupation",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
+        "cape-old-town-1795-1800",
         "cape-town-government"
       ],
-      "notes": "旧桌湾参考框按既有好望堡点位承接；1803年由巴达维亚共和国接收，1806年英国再次占领。"
+      "notes": "旧矩形由1795年旧城街区接替，既有好望堡行政点同时接续。"
     },
     {
       "prior_id": "NSW_CROWN_CLAIM",
@@ -5162,6 +5171,211 @@
       "resolution": "anchor",
       "features_at_1800": [
         "norfolk-phillipsburg-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CAPE_OLD_TOWN_1795",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "开普敦 · 旧城街区",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "cape-old-town-1795-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CAPE_CASTLE_FIVE_BASTIONS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "开普敦 · 好望堡五棱堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "cape-castle-five-bastions-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CAPE_SLAVE_LODGE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "开普敦 · 奴隶收容所",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "cape-slave-lodge-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CAPE_COMPANY_GARDEN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "开普敦 · 公司花园",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "cape-company-garden-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CAPE_OLD_TABLE_BAY_SHORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "开普敦 · 1795年桌湾旧岸",
+      "prior_record_kind": "settlement",
+      "resolution": "event_history",
+      "features_at_1800": [],
+      "notes": "保留当年行动，十九世纪另据后续行动落图。"
+    },
+    {
+      "prior_id": "CAPE_SIMONS_TOWN_DOCK",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "西蒙镇 · 旧仓库和兵营",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cape-simons-town-dock-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CAPE_SIMONS_MARTELLO",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "西蒙镇 · 马特洛塔",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cape-simons-martello-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CAPE_KINGS_BLOCKHOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "魔鬼峰 · 国王碉堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cape-kings-blockhouse-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CAPE_GRAAFF_REINET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "赫拉夫－里内特 · 地方衙署",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cape-graaff-reinet-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CAPE_ALGOA_KHOE_DISARMAMENT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿尔戈阿湾 · 科伊科伊人抵抗",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "event_history",
+      "features_at_1800": [],
+      "notes": "保留当年行动，十九世纪另据后续行动落图。"
+    },
+    {
+      "prior_id": "CAPE_ALGOA_FORT_FREDERICK",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿尔戈阿湾 · 弗雷德里克堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "cape-algoa-fort-frederick-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SIERRA_GRANVILLE_SECOND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "克莱恩镇邻近 · 第二处格兰维尔镇",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sierra-granville-second-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SIERRA_FREETOWN_EARLY_GRID",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "弗里敦 · 早期街网",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "sierra-freetown-early-grid-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SIERRA_FREETOWN_CROSS_STREET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "弗里敦 · 早期横街",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "sierra-freetown-cross-street-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SIERRA_FREETOWN_COMPANY_OFFICE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "弗里敦 · 塞拉利昂公司行政",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "freetown-office-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SIERRA_FORT_THORNTON",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "弗里敦 · 桑顿堡",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sierra-fort-thornton-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SIERRA_BUNCE_SLAVE_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "邦斯岛 · 私营贩奴堡",
+      "prior_record_kind": "company_post",
+      "resolution": "continued",
+      "features_at_1800": [
+        "sierra-bunce-slave-fort-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "SIERRA_BUNCE_SLAVE_YARD",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "邦斯岛 · 奴役关押院",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sierra-bunce-slave-yard-1800"
+      ],
+      "notes": "1799与1800保留同一稳定ID及几何。"
+    },
+    {
+      "prior_id": "CAPE_TOWN",
+      "source_dataset": "data/eighteenth-century-dynamic-spatial-1700-1799.json",
+      "name_zh": "开普敦 · 好望堡行政驻地",
+      "prior_record_kind": "administration",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cape-town-government"
       ],
       "notes": "1799与1800保留同一稳定ID及几何。"
     }
