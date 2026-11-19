@@ -5435,7 +5435,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "PONDICHERRY_BOULEVARD_TOWN"
     },
     {
       "id": "HYDERABAD_INFLUENCE",
@@ -7573,7 +7574,8 @@
       "category": "dated_city_or_port_core",
       "historical_city_wall_survey": false,
       "area_sqkm": null,
-      "screen_radius_not_ground_area": true
+      "screen_radius_not_ground_area": true,
+      "superseded_by": "PONDICHERRY_BOULEVARD_TOWN"
     },
     {
       "id": "SERINGAPATAM",
@@ -10199,6 +10201,331 @@
     }
   ],
   "regional_sites": [
+    {
+      "id": "PONDICHERRY_EARLY_TOWN",
+      "stable_id": "pondicherry-early-town",
+      "title": "本地治里 · 早期法属港镇",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1747,
+          "title": "本地治里 · 法属港镇早期街网",
+          "note": "荷兰占领结束后，法方扩建原有港镇街网。1705年德费尔与科卡尔城图及1716年德尼翁城图保存了建设中的街区。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1748,
+          "end_year": 1748,
+          "title": "本地治里 · 1748年英军围城后法方仍守城",
+          "note": "英国海军与陆军围攻本地治里，法国守军保住该城。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1749,
+          "end_year": 1754,
+          "title": "本地治里 · 杜普莱时期的法国驻地",
+          "note": "法国继续管理港镇，现存城图记载泰米尔居民街区、欧洲街区和城内主堡。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://heritage.bnf.fr/france-southasia/en/pondicherry",
+        "https://gallica.bnf.fr/ark:/12148/btv1b55005623v",
+        "https://ppa.py.gov.in/sites/default/files/draft-proposal-report-draft-cdp-puducherry.pdf#page=292",
+        "https://www.openstreetmap.org/#map=16/11.93370/79.83180",
+        "https://searcharchives.bl.uk/catalog/040-002247443"
+      ],
+      "geometry_method": "Named early urban core in the surviving Grand Bazaar grid, identified with the French and Dutch surveys and PPA fig. 8-1. Earlier town perimeter and its changed fortification are held separately.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 300,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.83091,
+          11.9338
+        ]
+      }
+    },
+    {
+      "id": "PONDICHERRY_FORT_LOUIS",
+      "stable_id": "pondicherry-fort-louis",
+      "title": "本地治里 · 路易堡旧址",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1716,
+          "end_year": 1759,
+          "title": "路易堡 · 法国五棱主堡",
+          "note": "德尼·德尼翁1716年的城图上，路易堡居海滨街区之后，设五座棱堡并储存军火。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1760,
+          "title": "路易堡 · 英军围城中的法方主堡",
+          "note": "英军由9月起围城，法军继续防守。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1761,
+          "end_year": 1761,
+          "title": "路易堡 · 签降后被英军拆毁",
+          "note": "英国接收本地治里后拆毁路易堡。1778年围城时，主堡已从后期城防图中消失。",
+          "kind": "conflict_damage"
+        }
+      ],
+      "source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b55005623v",
+        "https://ppa.py.gov.in/sites/default/files/draft-proposal-report-draft-cdp-puducherry.pdf#page=292",
+        "https://www.openstreetmap.org/node/5267562519",
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts/map-of-pondicherry-1760-61-puducherry-tamil-nadu-india-11deg5548n-79deg4948e-1",
+        "https://militarymaps.rct.uk/american-war-of-independence-1775-83/map-of-the-siege-of-pondicherry-1778-puducherry-tamil-nadu-india-11deg5548n-79deg4948e"
+      ],
+      "geometry_method": "Named Fort Louis anchor at Bharathi Park (PPA fig. 8-1 and OSM node 5267562519, © OpenStreetMap contributors, ODbL). The 1716 map is orientated west to top. Four-point Wikimaps Warper preview puts the fort several hundred metres southwest of the modern park node; the walls are not traced.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 300,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.83472,
+          11.9336
+        ]
+      }
+    },
+    {
+      "id": "PONDICHERRY_PERAMBAI_1793",
+      "stable_id": "pondicherry-perambai-1793",
+      "title": "佩兰拜 · 1793年英军推进地点",
+      "kind": "military_vicinity",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1793,
+          "title": "佩兰拜 · 7月12日英军抵达",
+          "note": "英军由陆路推进到本地治里以西的佩兰拜。英舰两天后出现于港外，8月4日起炮击本地治里。"
+        }
+      ],
+      "source_urls": [
+        "https://statistics.py.gov.in/sites/default/files/ii-iii-the-modern-period.pdf",
+        "https://moef.gov.in/uploads/2019/10/ossudu.pdf"
+      ],
+      "geometry_method": "Named revenue-village coordinate in the Indian gazette notification on Ossudu Lake, Annexure III, Perambai row. It marks the village and does not locate the camp.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 1000,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.754444,
+          11.933056
+        ]
+      }
+    },
+    {
+      "id": "PONDICHERRY_VILLIANUR_1785",
+      "stable_id": "pondicherry-villianur-1785",
+      "title": "维利亚努尔 · 本地治里属地交割",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "维利亚努尔 · 和约第十四条",
+          "note": "英法和约约定将维利亚努尔和巴胡尔作为本地治里的附属地区交予法国。"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1785,
+          "title": "维利亚努尔 · 2月1日移交法国",
+          "note": "德·布瓦斯泰尔代表法方接收本地治里时，一并接收维利亚努尔和巴胡尔。"
+        }
+      ],
+      "source_urls": [
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://statistics.py.gov.in/sites/default/files/ii-iii-the-modern-period.pdf",
+        "https://police.py.gov.in/lat_log_police%20unit.php"
+      ],
+      "geometry_method": "Named modern town reference for Valanour in the treaty from Puducherry Police’s Villianur station coordinates. The district boundary is not georeferenced.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 1200,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.7548,
+          11.913658
+        ]
+      }
+    },
+    {
+      "id": "PONDICHERRY_BAHOUR_1785",
+      "stable_id": "pondicherry-bahour-1785",
+      "title": "巴胡尔 · 本地治里属地交割",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "巴胡尔 · 和约第十四条",
+          "note": "英法和约将巴胡尔和维利亚努尔列入将要交予法国的两个地区。"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1785,
+          "title": "巴胡尔 · 2月1日移交法国",
+          "note": "法国随本地治里正式接收巴胡尔及维利亚努尔。"
+        }
+      ],
+      "source_urls": [
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://statistics.py.gov.in/sites/default/files/ii-iii-the-modern-period.pdf",
+        "https://police.py.gov.in/lat_log_police%20unit.php"
+      ],
+      "geometry_method": "Named modern town reference for Bahour in the treaty from Puducherry Police’s Bahour station coordinates. The district boundary is not georeferenced.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 1200,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.743347,
+          11.806439
+        ]
+      }
+    },
+    {
+      "id": "NAGAPATTINAM_PORT_TOWN",
+      "stable_id": "nagapattinam-port-town",
+      "title": "纳加帕蒂南 · 旧港与荷兰驻地",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1780,
+          "title": "纳加帕蒂南旧港 · 荷兰公司驻地",
+          "note": "荷兰东印度公司自1687年以此为科罗曼德尔海岸行政总部，城防包括五感堡。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "纳加帕蒂南旧港 · 英军围攻与受降",
+          "note": "芒罗和海军将领休斯于10月在陆海两面进军。迈索尔出兵协助荷兰公司，双方守军在11月11日至12日议降及移交。英方取得军需物资和荷方贸易货物。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1783,
+          "title": "纳加帕蒂南旧港 · 英方军事占领",
+          "note": "英方继续掌握港城，荷兰公司的海岸行政总部迁回普利卡特。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1798,
+          "title": "纳加帕蒂南旧港 · 条约正式割让",
+          "note": "1784年5月20日英荷和约第四条将纳加帕蒂南及其属地割让英国，保留荷方提出等价交换的交涉条款。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "纳加帕蒂南旧港 · 坦焦尔行政驻地",
+          "note": "坦焦尔统治转变后，英方将地区行政驻地设于旧港。",
+          "kind": "administration"
+        }
+      ],
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/4946/nagappattinam",
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts/map-of-negapatam-1781-nagapattinam-tamil-nadu-india-10deg4600n-79deg5000e",
+        "https://www.atlasofmutualheritage.nl/page/881/map-of-vyf-sinnen-castle-at-nagapatnam",
+        "https://wellcomecollection.org/works/asm77zja",
+        "https://journals.sagepub.com/doi/10.1177/09683445211030301",
+        "https://www.emersonkent.com/historic_documents/treaty_of_paris_1784_transcript_translation.htm",
+        "https://ignca.gov.in/Asi_data/30077.pdf",
+        "https://ibiblio.org/britishraj/Marshman1/chapter14.html"
+      ],
+      "geometry_method": "Named historic settlement coordinates from the Atlas of Mutual Heritage Nagappattinam site entry. VEL1080 and RCIN 734070.b identify the fortress separately, but they are not tied to sufficient modern controls to assert a fortress footprint.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 850,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.84732,
+          10.764993
+        ]
+      },
+      "cross_century_feature_id": "nagapattinam-port-town-1800"
+    },
+    {
+      "id": "NAGORE_1781",
+      "stable_id": "nagore-1781",
+      "title": "纳戈尔 · 纳加帕蒂南以北港镇",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "title": "纳戈尔 · 公司接收地方行政",
+          "note": "地方志记载东印度公司接收以纳戈尔为行政驻地的一组村落。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "纳戈尔 · 英军夺取北侧港镇",
+          "note": "赫克托·芒罗的部队在纳加帕蒂南战役期间夺取了北侧的纳戈尔。当地长期居住着从事海贸的马拉卡亚尔社群。",
+          "kind": "military_vicinity"
+        }
+      ],
+      "source_urls": [
+        "https://nagapattinam.nic.in/about-district/history/",
+        "https://ignca.gov.in/Asi_data/30077.pdf",
+        "https://www.atlasofmutualheritage.nl/page/6435/nagore"
+      ],
+      "geometry_method": "Named historic port coordinates from the Atlas of Mutual Heritage. No historic village boundaries or marching line.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 850,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.840815,
+          10.817288
+        ]
+      }
+    },
     {
       "id": "WILLIAMSBURG_WREN_SEAT",
       "stable_id": "williamsburg-wren-legislature",
@@ -24637,6 +24964,213 @@
     }
   ],
   "regional_zones": [
+    {
+      "id": "PONDICHERRY_BOULEVARD_TOWN",
+      "stable_id": "pondicherry-boulevard-town",
+      "title": "本地治里 · 旧城街区",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1759,
+          "title": "本地治里旧城 · 法属港镇",
+          "note": "科罗曼德尔海岸的法国殖民港在大运河两侧形成泰米尔和欧洲街区。居民包括织工、商人、手工业者及其他从业者。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1760,
+          "title": "本地治里旧城 · 9月英军围城",
+          "note": "1760年9月27日，艾尔·库特指挥英军围城，城内仍由法国驻军守卫。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1761,
+          "end_year": 1762,
+          "title": "本地治里旧城 · 英军占领与拆城",
+          "note": "1761年1月16日法方签降。英军拆毁路易堡、城墙与大量建筑，城镇居民流散。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1764,
+          "title": "本地治里旧城 · 和约约定归还",
+          "note": "《巴黎和约》第十一条约定归还法国商站。英国占领延续到1765年办理移交。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1765,
+          "end_year": 1777,
+          "title": "本地治里旧城 · 4月11日法国接收并重建",
+          "note": "1765年4月11日，洛·德·洛里斯通接收城镇及属地。居民在旧址上重建房屋，法国另建城防。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1779,
+          "title": "本地治里旧城 · 10月18日再次签降",
+          "note": "1778年，赫克托·芒罗指挥公司军围攻。贝勒孔布于10月18日签降，英方接管旧城。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1782,
+          "title": "本地治里旧城 · 居民反抗英方占领",
+          "note": "1780年10月，第二次英迈战争中，城内发生反英起事。英军从马德拉斯南下平定，维持对港城的占领。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1784,
+          "title": "本地治里旧城 · 条约约定交还，法军获准进城",
+          "note": "1783年和约第十四条约定交还。英方准许法军和物资由古德洛尔迁入，正式移交前禁止升法国旗。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1792,
+          "title": "本地治里旧城 · 2月1日正式交还法国",
+          "note": "德·布瓦斯泰尔代表法方接收旧城、近郊及维利亚努尔、巴胡尔。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1797,
+          "title": "本地治里旧城 · 8月23日第三次签降",
+          "note": "1793年围城后，公司军接管。英军任命城防指挥官，撤销自治市政机构并设警务官。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1798,
+          "title": "本地治里旧城 · 裁撤原司法机构",
+          "note": "英方裁撤原司法行政机构，将司法事务交由古德洛尔与本地治里的地区行政长官。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "本地治里旧城 · 公司按名单驱逐居民",
+          "note": "1月27日，驻城军官格兰特送出首份名单，列出278名男子，初拟驱逐其中143人。2月，公司逮捕部分法国平民，与战俘一同押上特里同号，经好望角、圣赫勒拿押往朴次茅斯。",
+          "kind": "wartime_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://heritage.bnf.fr/france-southasia/en/pondicherry",
+        "https://ppa.py.gov.in/sites/default/files/draft-proposal-report-draft-cdp-puducherry.pdf#page=292",
+        "https://www.intachpondicherry.org/About_pondy.php",
+        "https://www.openstreetmap.org/#map=16/11.93370/79.83180",
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts/map-of-pondicherry-1760-61-puducherry-tamil-nadu-india-11deg5548n-79deg4948e-1",
+        "https://militarymaps.rct.uk/american-war-of-independence-1775-83/map-of-the-siege-of-pondicherry-1778-puducherry-tamil-nadu-india-11deg5548n-79deg4948e",
+        "https://statistics.py.gov.in/sites/default/files/ii-iii-the-modern-period.pdf",
+        "https://avalon.law.yale.edu/18th_century/paris763.asp",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://searcharchives.bl.uk/catalog/041-000736505",
+        "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/politics-of-colonial-lists-conspiracies-deportations-and-knowledge-in-1790s-pondicherry/B25DED3C8D5AC160E3CB88C8F262B1BA"
+      ],
+      "geometry_method": "Historic street core cross-checked between BnF 1756 plan index, the 1778 siege-plan catalogue and PPA draft CDP pp. 272–273, figs. 8-1–2. Trace follows the surviving outer boulevards and beachfront street on OSM tiles z16 x47299–47302 y30578–30581 (© OpenStreetMap contributors, ODbL); this is the old street envelope, with no bastion or exact historic shoreline reconstruction.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 150,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.830394,
+              11.942139
+            ],
+            [
+              79.828334,
+              11.941509
+            ],
+            [
+              79.827411,
+              11.940544
+            ],
+            [
+              79.826295,
+              11.939116
+            ],
+            [
+              79.825137,
+              11.937017
+            ],
+            [
+              79.824278,
+              11.93328
+            ],
+            [
+              79.82372,
+              11.930425
+            ],
+            [
+              79.824471,
+              11.927716
+            ],
+            [
+              79.825094,
+              11.926772
+            ],
+            [
+              79.825888,
+              11.926142
+            ],
+            [
+              79.827261,
+              11.925512
+            ],
+            [
+              79.830823,
+              11.924882
+            ],
+            [
+              79.834149,
+              11.925638
+            ],
+            [
+              79.834857,
+              11.927339
+            ],
+            [
+              79.835758,
+              11.931978
+            ],
+            [
+              79.836423,
+              11.935526
+            ],
+            [
+              79.836466,
+              11.937668
+            ],
+            [
+              79.836144,
+              11.939074
+            ],
+            [
+              79.833119,
+              11.940796
+            ],
+            [
+              79.830394,
+              11.942139
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        79.82372,
+        11.924882,
+        79.836466,
+        11.942139
+      ],
+      "cross_century_feature_id": "pondicherry-boulevard-town-1800"
+    },
     {
       "id": "ST_HELENA_ISLAND",
       "stable_id": "st-helena-main-island",
