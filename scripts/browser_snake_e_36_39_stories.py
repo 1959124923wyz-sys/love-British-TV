@@ -32,9 +32,16 @@ try:
         driver.find_element(By.CSS_SELECTOR,button).click()
         wait.until(lambda d:d.execute_script('return document.querySelector(".major-story-article")?.dataset.storyId===arguments[0]',slug))
         selector='[data-story-event="'+link+'"]'
-        wait.until(lambda d:d.execute_script('return !!document.querySelector(arguments[0])',selector))
+        wait.until(lambda d:d.execute_script('''
+            return !!document.querySelector(arguments[0]) && !!window.atlasStoryBridge.eventById(arguments[1]) &&
+                document.querySelector('#workspace').getAnimations().every(animation => animation.playState !== 'running');
+        ''',selector,link))
         el=driver.find_element(By.CSS_SELECTOR,selector)
-        driver.execute_script('arguments[0].scrollIntoView({block:"center"})',el)
+        driver.execute_script('arguments[0].scrollIntoView({block:"center",behavior:"instant"})',el)
+        wait.until(lambda d:d.execute_script('''
+            const link = arguments[0], box = link.getBoundingClientRect();
+            return link.contains(document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2));
+        ''',el))
         el.click()
         wait.until(lambda d:d.execute_script('return document.querySelector("#bigYear")?.textContent===arguments[0]',str(year)))
         wait.until(lambda d:d.execute_script('return !!document.querySelector(".major-story-article")'))
