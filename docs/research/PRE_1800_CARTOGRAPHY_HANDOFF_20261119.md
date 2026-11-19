@@ -1,6 +1,6 @@
 # 1497—1799 年制图进展与待办｜主编 35 交接
 
-2026 年 11 月 19 日复核。正式地图以 [主分支 ad5bde1](https://github.com/1959124923wyz-sys/love-British-TV/commit/ad5bde1ec740f23d1130bdb90f6e19073c38f2ee) 为统计基线，截至第 5J 批。打开 [1799 年地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1799) 可以用「下一年」查看 1800 年的接续。
+2026 年 11 月 19 日复核。统计截至第 5K 批。打开 [1799 年地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1799) 可以用「下一年」查看 1800 年的接续。
 
 ## 当前盘点
 
@@ -8,8 +8,8 @@
 | --- | ---: | --- |
 | 1497—1599 | 原盘点识别为 0 条 | 补清点只有点位或概略范围的加来、图尔奈、帕莱，以及莱伊什／奥法利和芒斯特没收地。 |
 | 1600—1699 | 26 条 | 商站查万丹、苏拉特、胡格利，港堡查海岸角、丹吉尔，另查北美早期聚落。7 条默认隐藏的最大纸面特许范围另有档案。 |
-| 1700—1799 | 345 条，其中 146 条在 1799 年显示 | 先查下方 92 条重点旧框，再处理其余 253 条。 |
-| 合计 | **371 条** | [第 5D 批原始盘点 #457](https://github.com/1959124923wyz-sys/love-British-TV/pull/457) 共 403 条，后续六批累计替换 32 条。 |
+| 1700—1799 | 334 条，其中 143 条在 1799 年显示 | 先查下方 83 条重点旧框，再处理其余 251 条。 |
+| 合计 | **360 条** | [第 5D 批原始盘点 #457](https://github.com/1959124923wyz-sys/love-British-TV/pull/457) 共 403 条，后续七批累计替换 43 条。 |
 
 计数单位是地图记录。同一地点可有多个时段或多条旧记录。1497—1699 的矩形数沿用 #457 的桌面盘点，十八世纪使用本次主分支数据重新计算。只有点位或尚未入库的范围仍待建立完整名录。
 
@@ -23,42 +23,35 @@
 | 5G | [安汶、班达与北摩鹿加](18C_MALUKU_FORTS_AND_SPICE_HANDOFF.md) · [#460](https://github.com/1959124923wyz-sys/love-British-TV/pull/460) | 2 | 358 | 155 | 23 |
 | 5H | [马六甲、河西旧城与南宁](18C_MALACCA_FORT_AND_PORT_HANDOFF.md) · [#461](https://github.com/1959124923wyz-sys/love-British-TV/pull/461) | 2 | 356 | 153 | 23 |
 | 5I | [孟买港岛、萨尔塞特、塔纳与瓦赛](18C_BOMBAY_SALSETTE_THANA_HANDOFF.md) · [#462](https://github.com/1959124923wyz-sys/love-British-TV/pull/462) | 8 | 348 | 149 | 20 |
-| 5J | [新不伦瑞克与圣约翰岛](18C_MARITIME_PROVINCES_HANDOFF.md) · [#464](https://github.com/1959124923wyz-sys/love-British-TV/pull/464) | 3 | **345** | **146** | **20** |
+| 5J | [新不伦瑞克与圣约翰岛](18C_MARITIME_PROVINCES_HANDOFF.md) · [#464](https://github.com/1959124923wyz-sys/love-British-TV/pull/464) | 3 | 345 | 146 | 20 |
+| 5K | [五大湖与哈德孙湾](18C_GREAT_LAKES_HUDSON_BAY_HANDOFF.md) · [#466](https://github.com/1959124923wyz-sys/love-British-TV/pull/466) | 11 | **334** | **143** | **19** |
 
 更早批次见 [十八世纪制图路线图](18C_CARTOGRAPHY_ROADMAP.md)。第 5J 批发布后，正式站桌面实点了拉茹瓦港 1758 年驱逐、马德堡 1774 年受降，并从 1799 年原位打开新不伦瑞克和爱德华王子岛的 1800 年档案。
 
 ## 接手顺序
 
-- [ ] **第 5K 批先清五大湖重复旧框。** 先处理 `B36-Z014` 米希利麦基诺克旧堡和 `B36-Z016` 麦基诺岛新堡，联查 `B36-Z015` 的 1763 年夺堡记录与三者的代理点。把大陆旧堡和岛上新堡分开。岛堡已有 `MACKINAC_ISLAND_FORT` 和 1800 年的 `fort-mackinac-garrison-1800`，先比较年份及档案覆盖，尤其核对 1780–1781 年迁驻和 1796 年实际接防。逐条核准替代关系后，再处理安大略湖、尼亚加拉河和俄亥俄旧框。[魁北克与五大湖](18C_QUEBEC_BORDERLANDS_HANDOFF.md) · [安大略湖与尼亚加拉河](18C_LAKE_ONTARIO_HANDOFF.md) · [B36 旧框](../../data/eighteenth-century-expansion-batch36-1700-1799.json)
+- [x] **第 5K 批清理五大湖和哈德孙湾。** 先做大陆旧堡、岛上新堡、匹特堡、威尔士亲王堡、丘吉尔上游商站和坎伯兰豪斯。[第 5K 批交接](18C_GREAT_LAKES_HUDSON_BAY_HANDOFF.md)
+- [ ] **北美余下 20 条重点旧框。** 先查福克斯的红堡，独立战争南部驻堡及行政旧框各自成组。丘吉尔上游两期商站已定位，贸易活动与原住民族活动范围可查同一批档案。
 - [ ] **加勒比 44 条重点旧框按岛、港和短占时期归并。** 同一岛的驻防、行政和短期军事行动逐项对照。先核现有城港图能接替的记录，再找可配准的历史外廓。
 - [ ] **西非 12 条重点旧框按堡和治理主体核查。** 复用已完成的黄金海岸驻堡。将堡址、港口交易和当地政权分别追到可证期限。与下方跨年表中的奥图阿姆、普兰普兰、温内巴、阿达等一并对照。
 - [ ] **亚洲／印度洋 6 条、欧洲／地中海 1 条重点旧框。** 单列短占、驻防和行政。对照已完成的安汶—班达、马六甲、孟买等较细专题及各自档案。
-- [ ] **把 20 条跨年待核逐条清账。** 有接续证据时更新稳定 ID、去向与首期状态。只有贸易、政治关系或原住民活动证据的条目保留对应语义。对旧矩形与跨年待核重叠的条目，同时更新两处状态。
+- [ ] **把 19 条跨年待核逐条清账。** 有接续证据时更新稳定 ID、去向与首期状态。只有贸易、政治关系或原住民活动证据的条目保留对应语义。对旧矩形与跨年待核重叠的条目，同时更新两处状态。
 - [ ] **补建 16、17 世纪点位及缺绘名录。** 记录时间、主体、地点和证据，分别查清可配准史图、定界条款及地方驻点。18 世纪其余旧框也按证据分别保留事件、点、线或面。
 - [ ] **接续十九世纪研究归档。** [研究草稿 PR #463](https://github.com/1959124923wyz-sys/love-British-TV/pull/463) 为并行资料入库，待审内容含 59 个专题、150 个章节、1,980 条分章年表和 1,520 条史料索引。历史专题先核源档和候选地图 ID，地图发布状态查 [正式章节](../../data/chapters.json) 和 [专题索引](../../data/stories/index.json)。
 
-## 92 条重点旧框逐条清单
+## 83 条重点旧框逐条清单
 
 逐条对照原盘点的 113 条驻防、行政及占领记录。下列 ID 在本次基线上仍使用旧矩形。同一地点的档案可能已经有较细的图形，后续须核验分期覆盖再登记替代。
 
 <details>
-<summary>北美大陆／北大西洋（29 条）</summary>
+<summary>北美大陆／北大西洋（20 条）</summary>
 
 | 记录 ID | 原档案名称 | 1799 年显示 | 数据文件 |
 | --- | --- | --- | --- |
 | `B36-Z010` | 1750年代达特茅斯殖民港市 | 是 | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
-| `B36-Z014` | 1761年后米希利麦基诺克英国旧要塞 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
-| `B36-Z016` | 1781年麦基诺岛英国新要塞 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
-| `B36-Z019` | 1763年匹兹堡英军守堡 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
 | `B36-Z035` | 1783后谢尔本保皇派移民定居港 | 是 | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
 | `B36-Z036` | 1783后迪格比保皇派定居港 | 是 | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
 | `B36-Z038` | 1776—1783斯塔滕岛英军后勤与驻扎区 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
-| `B38-H-Z008` | 1717—1730 Churchill River Post英国公司据点 | — | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
-| `B38-H-Z009` | 1731—1771 Prince of Wales Fort英公司石堡建设 | — | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
-| `B38-H-Z010` | 1772—1781 Prince of Wales Fort英军商堡驻守 | — | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
-| `B38-H-Z011` | 1782法国舰队攻取Prince of Wales Fort | — | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
-| `B38-H-Z013` | 1783后Fort Churchill重新建立英商驻站 | 是 | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
-| `B38-H-Z017` | 1774 Cumberland House首处内陆HBC商馆 | 是 | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
 | `B38-H-Z022` | 1738后The Forks法国贸易站Fort Rouge | — | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
 | `B38-S-Z001` | 1780年英军在卡姆登军事驻镇近郊 | — | [eighteenth-century-b38-south-campaign.json](../../data/eighteenth-century-b38-south-campaign.json) |
 | `B38-S-Z004` | 1780年Ninety Six英军筑星形堡局部 | — | [eighteenth-century-b38-south-campaign.json](../../data/eighteenth-century-b38-south-campaign.json) |
@@ -173,9 +166,9 @@
 
 </details>
 
-## 1799 → 1800 年尚待核对的 20 条
+## 1799 → 1800 年尚待核对的 19 条
 
-[期末台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json) 已查 646 条期末记录，510 条关联到 1800 年公开几何。下表按原 ID 保留 20 条待核记录。原住民政权和活动范围需按其各自证据处理。
+[期末台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json) 已查 649 条期末记录，515 条关联到 1800 年公开几何。下表按原 ID 保留 19 条待核记录。原住民政权和活动范围需按其各自证据处理。
 
 | 记录 ID | 原档案名称 | 数据文件 |
 | --- | --- | --- |
@@ -184,7 +177,6 @@
 | `B37-A-Z038` | Ouidah原住王国及1727后Dahomey政治 | [eighteenth-century-b37-africa.json](../../data/eighteenth-century-b37-africa.json) |
 | `B37-C-Z030` | 18世纪Bermuda St George英方殖民港 | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
 | `B37-C-Z035` | 18世纪Montserrat Plymouth英殖民定居港 | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
-| `B38-H-Z013` | 1783后Fort Churchill重新建立英商驻站 | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
 | `B38-H-Z015` | Cree Dene Inuit在Churchill河岸长期利用区域 | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
 | `B38-H-Z024` | Assiniboin原住民湖湾交易中介政治影响 | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
 | `B38-I-Z045` | 1784年Burma征服Arakan与英属Chittagong边境 | [eighteenth-century-b38-india-mysore.json](../../data/eighteenth-century-b38-india-mysore.json) |
