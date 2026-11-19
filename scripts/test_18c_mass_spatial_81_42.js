@@ -376,6 +376,10 @@ a.equal(s('FREETOWN').superseded_by,'SIERRA_FREETOWN_COMPANY_OFFICE');
 a.equal(z('FREETOWN_1787').superseded_by,'SIERRA_GRANVILLE_FIRST');
 a.equal(z('FREETOWN_1792').superseded_by,'SIERRA_FREETOWN_EARLY_GRID');
 a.equal(z('CAPE_TOWN_ZONE').superseded_by,'CAPE_OLD_TOWN_1795');
+const capeGovernment=previous.control_sites.find(x=>x.id==='CAPE_TOWN');
+a.deepEqual(capeGovernment.geometry,late(capeGovernment.cross_century_feature_id).geometry);
+a.equal(capeGovernment.stable_id,late(capeGovernment.cross_century_feature_id).properties.stable_id);
+
 a.equal(stageAt('CAPE_CASTLE_FIVE_BASTIONS',1794),undefined);
 a.match(stageAt('CAPE_CASTLE_FIVE_BASTIONS',1795).title,/9月16日交堡/);
 a.match(late('cape-castle-five-bastions-1800').properties.year_stages.find(p=>p.start_year===1803).title,/2月21日/);

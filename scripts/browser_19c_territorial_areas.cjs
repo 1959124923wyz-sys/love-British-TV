@@ -1254,7 +1254,7 @@ async function verify() {
   assert.match(await freetown1800.textContent(), /新司法特许/);
   await page.screenshot({ path: join(screenshotDir, '19c-freetown-1800-handoff.png') });
 
-  const capeCastle = [-33.92582, 18.42766];
+  const capeCastle = [-33.92579, 18.42825];
   await jump(1795);
   await setView([...capeCastle, 16]);
   await clickAreaAt(...capeCastle);

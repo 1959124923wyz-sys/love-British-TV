@@ -12,8 +12,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          18.427,
-          -33.925
+          18.427715,
+          -33.925879
         ]
       },
       "properties": {
@@ -21,7 +21,7 @@
         "start_year": 1800,
         "end_year": 1819,
         "display_kind": "control",
-        "summary_zh": "英国在1795年夺取开普后继续治理开普敦。1802年《亚眠和约》议定归还开普。",
+        "summary_zh": "英方自1795年9月16日起驻用好望堡，1803年2月21日交还巴达维亚共和国。1806年1月10日英军再次接收。",
         "source_ids": [
           "19C-AMIENS",
           "19C-CAPE-TIMELINE",
@@ -32,7 +32,8 @@
           "https://mjp.univ-perp.fr/traites/1802amiens.htm",
           "https://sahistory.org.za/article/cape-town-timeline-1300-1997?id=2",
           "https://sahistory.org.za/place/castle-good-hope-castle-street-cape-town",
-          "https://hansard.parliament.uk/Commons/1815-06-09/debates/f8babd0e-ce7b-48ef-878c-0038979c8cd5/CommonsChamber"
+          "https://hansard.parliament.uk/Commons/1815-06-09/debates/f8babd0e-ce7b-48ef-878c-0038979c8cd5/CommonsChamber",
+          "https://sahistory.org.za/dated-event/britain-returns-cape-netherlands-and-flag-batavian-republic-hoisted-castle"
         ],
         "named_anchors": [
           "开普敦好望堡"
@@ -52,17 +53,24 @@
         "year_stages": [
           {
             "start_year": 1800,
-            "end_year": 1802,
+            "end_year": 1801,
             "controller": "british",
             "title": "开普敦 · 第一次英占",
-            "summary_zh": "英国在1795年夺取开普后继续治理开普敦。1802年《亚眠和约》议定归还开普。"
+            "summary_zh": "第一次英占期间，英国殖民政府继续在开普敦及好望堡运作。"
+          },
+          {
+            "start_year": 1802,
+            "end_year": 1802,
+            "controller": "british",
+            "title": "开普敦 · 《亚眠和约》议定归还",
+            "summary_zh": "1802年3月27日，和约议定开普归还巴达维亚共和国，英军仍在开普敦驻守。"
           },
           {
             "start_year": 1803,
             "end_year": 1805,
             "controller": "batavian",
             "title": "开普敦 · 巴达维亚政府",
-            "summary_zh": "巴达维亚共和国从英国接收开普，扬森斯任总督。"
+            "summary_zh": "1803年2月21日，英国正式交还开普，巴达维亚共和国的国旗在好望堡升起。扬森斯任总督。"
           },
           {
             "start_year": 1806,
