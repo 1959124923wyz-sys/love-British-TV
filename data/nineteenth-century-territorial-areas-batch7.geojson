@@ -8,6 +8,26 @@
   },
   "sources": [
     {
+      "id": "19CT7-18C5K-PA-CHURCHILL",
+      "title": "加拿大公园局威尔士亲王堡管理计划",
+      "url": "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024"
+    },
+    {
+      "id": "19CT7-18C5K-PA-BUILD",
+      "title": "加拿大公园局威尔士亲王堡筑堡史",
+      "url": "https://www.parcs.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover1"
+    },
+    {
+      "id": "19CT7-18C5K-OSM-CHURCHILL",
+      "title": "OpenStreetMap 威尔士亲王堡存墙及 ODbL",
+      "url": "https://www.openstreetmap.org/way/324277534"
+    },
+    {
+      "id": "19CT7-18C5K-CUMBERLAND",
+      "title": "坎伯兰旧商馆考古及迁址日志，引 HBCA B.49/a/25a",
+      "url": "https://central.bac-lac.gc.ca/.item?app=Library&id=TC-SSU-06182009145051&oclc_number=1032941317&op=pdf"
+    },
+    {
       "id": "19CT7-18C5D-PON-GAZ",
       "label": "本地治里政府地方志，第223—226页｜英国占领、比诺签降及实际归还",
       "url": "https://statistics.py.gov.in/sites/default/files/ii-iii-the-modern-period.pdf"
@@ -5901,6 +5921,147 @@
   "features": [
     {
       "type": "Feature",
+      "id": "prince-of-wales-fort-ruins-1800",
+      "properties": {
+        "name": "威尔士亲王堡 · 石堡遗迹",
+        "stable_id": "prince-of-wales-stone-fort",
+        "start_year": 1800,
+        "end_year": 1899,
+        "display_kind": "settlement",
+        "label_type": "堡垒遗迹",
+        "summary_zh": "河口石堡1782年遭法国舰队破坏。哈德孙湾公司1783年返回丘吉尔河后恢复上游商站，河口堡垒继续荒废。",
+        "source_ids": [
+          "19CT7-18C5K-PA-CHURCHILL",
+          "19CT7-18C5K-PA-BUILD",
+          "19CT7-18C5K-OSM-CHURCHILL"
+        ],
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024",
+          "https://www.parcs.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover1",
+          "https://www.openstreetmap.org/way/324277534",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Principal visible stone enclosure, including four bastions, on surviving wall geometry from OpenStreetMap way 324277534 © contributors (ODbL). The Parks Canada management plan corroborates the four bastions and connecting walls of the 1771 fort. Outer works and the upriver post excluded.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "prior_record_ids": [
+          "PRINCE_OF_WALES_STONE_FORT",
+          "B38-H-Z012"
+        ],
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 12
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.2139746,
+              58.7969952
+            ],
+            [
+              -94.2138325,
+              58.7970633
+            ],
+            [
+              -94.2136098,
+              58.7970125
+            ],
+            [
+              -94.2135677,
+              58.7970016
+            ],
+            [
+              -94.2135401,
+              58.7969952
+            ],
+            [
+              -94.2133014,
+              58.7969396
+            ],
+            [
+              -94.2132853,
+              58.7968465
+            ],
+            [
+              -94.2129393,
+              58.7967131
+            ],
+            [
+              -94.212883,
+              58.7969271
+            ],
+            [
+              -94.213001,
+              58.7970063
+            ],
+            [
+              -94.2127596,
+              58.7972953
+            ],
+            [
+              -94.2126067,
+              58.7973009
+            ],
+            [
+              -94.2123385,
+              58.7974746
+            ],
+            [
+              -94.2127462,
+              58.7975051
+            ],
+            [
+              -94.2128615,
+              58.7974412
+            ],
+            [
+              -94.2134516,
+              58.7975566
+            ],
+            [
+              -94.2134462,
+              58.7976455
+            ],
+            [
+              -94.2137761,
+              58.7978067
+            ],
+            [
+              -94.2138486,
+              58.7975732
+            ],
+            [
+              -94.2137332,
+              58.7974913
+            ],
+            [
+              -94.2139532,
+              58.7972161
+            ],
+            [
+              -94.2141195,
+              58.7972189
+            ],
+            [
+              -94.214393,
+              58.7970257
+            ],
+            [
+              -94.2139746,
+              58.7969952
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "pondicherry-boulevard-town-1800",
       "properties": {
         "name": "本地治里 · 旧城街区",
@@ -7249,14 +7410,16 @@
         "end_year": 1899,
         "display_kind": "local_governance",
         "label_type": "公司贸易驻地",
-        "summary_zh": "1793年迁至西侧新址的公司站继续经营。1821年公司与西北公司合并后，新的内陆贸易路线降低了这个站的转运地位。",
+        "summary_zh": "1794年迁至旧址西北的新商馆继续经营。1821年哈德孙湾公司与西北公司合并后，新的内陆贸易路线降低了本站的转运地位。",
         "source_ids": [
           "19CT7-HBC-CUMB",
-          "19CT7-HBC-CUMB-LOC"
+          "19CT7-HBC-CUMB-LOC",
+          "19CT7-18C5K-CUMBERLAND"
         ],
         "source_urls": [
           "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=736",
-          "https://mapcarta.com/24213478"
+          "https://mapcarta.com/24213478",
+          "https://central.bac-lac.gc.ca/.item?app=Library&id=TC-SSU-06182009145051&oclc_number=1032941317&op=pdf"
         ],
         "related_event_ids": [],
         "mapping_method": "Cumberland House site and community reference checked by Parks Canada; not the abandoned 1774 post",
@@ -7267,13 +7430,18 @@
         "area_sqkm": null,
         "territorial_claim": false,
         "prior_record_ids": [
+          "CUMBERLAND_HOUSE_RELOCATED_POST",
           "B38-H-Z017"
         ],
-        "geometry_precision": "named_place_anchor"
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 250
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-102.266,53.95361]
+        "coordinates": [
+          -102.266,
+          53.95361
+        ]
       }
     },
     {

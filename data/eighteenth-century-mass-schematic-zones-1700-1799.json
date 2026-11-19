@@ -10203,6 +10203,185 @@
   ],
   "regional_sites": [
     {
+      "id": "MICHILIMACKINAC_MAINLAND_EARLY_SITE",
+      "title": "米希利麦基诺克大陆旧堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1715,
+          "end_year": 1760,
+          "title": "米希利麦基诺克大陆旧堡 · 法国商贸驻地",
+          "note": "1715年前后法方在海峡南岸筑堡，与周边原住民族交易，并在此维系联盟。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1761,
+          "end_year": 1762,
+          "title": "米希利麦基诺克大陆旧堡 · 英军进驻",
+          "note": "英军于1761年接防，法国裔居民和贸易商仍在堡内外生活。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "米希利麦基诺克大陆旧堡 · 奥吉布瓦夺堡",
+          "note": "1763年6月2日，奥吉布瓦战士夺取旧堡，部分英军被杀或被俘。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1764,
+          "title": "米希利麦基诺克大陆旧堡 · 英军回驻",
+          "note": "周边原住民于1764年把堡交回英方，英军恢复驻防。"
+        }
+      ],
+      "source_urls": [
+        "https://www.mackinacparks.com/explore/history/colonial-michilimackinac-history/",
+        "https://npshistory.com/series/archeology/acrs/7.pdf"
+      ],
+      "geometry_method": "Anchor within the excavated and reconstructed mainland stockade, at the Michigan State Historic Park. The dated wall outline is a separate record from 1765.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.73601,
+          45.78653
+        ]
+      },
+      "stable_id": "michilimackinac-mainland-early-site",
+      "position_uncertainty_m": 28,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "uncertain_line_dashed": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "PRINCE_OF_WALES_FORT_CONSTRUCTION",
+      "title": "威尔士亲王堡 · 石堡工地",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1731,
+          "end_year": 1731,
+          "title": "威尔士亲王堡 · 公司派遣筑堡工人",
+          "note": "哈德孙湾公司派工人到丘吉尔河口筹建石堡。"
+        },
+        {
+          "start_year": 1732,
+          "end_year": 1770,
+          "title": "威尔士亲王堡 · 石堡施工",
+          "note": "1732年6月3日铺下第一块基石。工人开采并搬运石材，逐步砌筑堡墙、棱堡和内部设施。"
+        },
+        {
+          "start_year": 1771,
+          "end_year": 1771,
+          "title": "威尔士亲王堡 · 石堡完工",
+          "note": "堡墙与四座棱堡建成，成为哈德孙湾公司在河口的贸易及防御驻地。"
+        }
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024",
+        "https://www.parcs.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover1",
+        "https://www.openstreetmap.org/way/324277534",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Construction locality inside the surviving enclosure; the Parks Canada dates support a point for the whole 1731–1771 building sequence.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.21365,
+          58.79725
+        ]
+      },
+      "stable_id": "prince-of-wales-fort-construction",
+      "position_uncertainty_m": 40,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "uncertain_line_dashed": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "CUMBERLAND_HOUSE_ORIGINAL_SITE",
+      "title": "坎伯兰豪斯 · 最初商馆",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1774,
+          "end_year": 1774,
+          "title": "坎伯兰豪斯 · 公司进入内陆",
+          "note": "塞缪尔·赫恩一行在坎伯兰湖南岸设站，先搭建简易木屋和库房。站点与当地克里人的交易联系密切。"
+        },
+        {
+          "start_year": 1775,
+          "end_year": 1793,
+          "title": "坎伯兰豪斯 · 湖南岸旧商馆",
+          "note": "公司在原址经营，依靠当地贸易者、向导和供应者。洪水、建筑失修和近处薪柴短缺促使公司另择站址。"
+        }
+      ],
+      "source_urls": [
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=736",
+        "https://central.bac-lac.gc.ca/.item?app=Library&id=TC-SSU-06182009145051&oclc_number=1032941317&op=pdf"
+      ],
+      "geometry_method": "Generalized south-shore locality, about 1.5 km southeast of the successor anchor, based on the excavated FIMn-8 site in the archaeological thesis (text and fig. 2.1). The figure and text differ in distance; use only for locality-scale placement.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.246,
+          53.9473
+        ]
+      },
+      "stable_id": "cumberland-house-original-site",
+      "position_uncertainty_m": 2200,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "uncertain_line_dashed": true,
+      "geometry_precision": "named_place_anchor"
+    },
+    {
+      "id": "CUMBERLAND_HOUSE_RELOCATED_POST",
+      "title": "坎伯兰豪斯 · 迁建商馆",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "坎伯兰豪斯 · 迁建商馆启用",
+          "note": "哈德孙湾公司在原商馆西北另建站。1794年4月12日日志记载新屋完工，本站随后接替旧站。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "坎伯兰豪斯 · 哈德孙湾公司内陆商站",
+          "note": "迁建后的站点继续收集和转运毛皮，克里人等当地交易者仍是贸易的一方。"
+        }
+      ],
+      "source_urls": [
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=736",
+        "https://central.bac-lac.gc.ca/.item?app=Library&id=TC-SSU-06182009145051&oclc_number=1032941317&op=pdf"
+      ],
+      "geometry_method": "Reuses the published Cumberland House locality anchor for the post opened in 1794; verified against the national designation and HBCA B.49/a/25a as cited in the archaeological thesis.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.266,
+          53.95361
+        ]
+      },
+      "stable_id": "cumberland-house-post",
+      "position_uncertainty_m": 250,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "uncertain_line_dashed": true,
+      "geometry_precision": "named_place_anchor",
+      "cross_century_feature_id": "cumberland-house-1800-post"
+    },
+    {
       "id": "PONDICHERRY_EARLY_TOWN",
       "stable_id": "pondicherry-early-town",
       "title": "本地治里 · 早期法属港镇",
@@ -15163,7 +15342,8 @@
         "https://www.fortpittblockhouse.com/what-was-fort-pitt/",
         "https://www.fortpittblockhouse.com/timeline/",
         "https://postalmuseum.si.edu/exhibition/indians-at-the-post-office-murals-conflict/the-battle-of-bushy-run",
-        "https://www.archives.gov/research/native-americans/treaties/catalog-links"
+        "https://www.archives.gov/research/native-americans/treaties/catalog-links",
+        "https://hsp.org/sites/default/files/attachments/trents_journal_transcription.pdf"
       ],
       "geometry_method": "Named anchor in the historic pentagonal fort between the delineated Monongahela and Music bastions. Surviving redoubt at a distinct mapped footprint.",
       "historical_boundary_confirmed": false,
@@ -15173,7 +15353,10 @@
       "exclude_from_territorial_area_totals": true,
       "geometry": {
         "type": "Point",
-        "coordinates": [-80.00949,40.441052]
+        "coordinates": [
+          -80.00949,
+          40.441052
+        ]
       },
       "stable_id": "pitt-fort-main",
       "position_uncertainty_m": 75,
@@ -28410,6 +28593,249 @@
     }
   ],
   "regional_zones": [
+    {
+      "id": "MICHILIMACKINAC_MAINLAND_STOCKADE",
+      "title": "米希利麦基诺克大陆旧堡 · 木栅",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1779,
+          "title": "米希利麦基诺克大陆旧堡 · 殖民驻防与贸易",
+          "note": "英军在海峡南岸驻堡。毛皮贸易商与原住民交易者继续在堡内外往来。"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1780,
+          "title": "米希利麦基诺克大陆旧堡 · 开始迁往岛上",
+          "note": "英军在麦基诺岛开建新堡，大陆旧堡的驻军和居民开始迁移。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1781,
+          "title": "米希利麦基诺克大陆旧堡 · 驻军迁出",
+          "note": "1781年，英军转驻岛堡，部分建筑和居民也移往岛上。"
+        }
+      ],
+      "source_urls": [
+        "https://npshistory.com/series/archeology/acrs/7.pdf",
+        "https://www.mackinacparks.com/explore/history/colonial-michilimackinac-history/",
+        "https://www.mackinacparks.com/explore/history/fort-mackinac-history/",
+        "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9"
+      ],
+      "geometry_method": "Main stockade generalized from the archaeology-based reconstruction on Esri World Imagery, checked against NPS ACRS 7 figures 2 and 4 (1765 and 1769). Selected wall joins approximated; detached buildings excluded.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -84.7368333,
+              45.7866133
+            ],
+            [
+              -84.7365067,
+              45.7867733
+            ],
+            [
+              -84.73658,
+              45.7868667
+            ],
+            [
+              -84.73642,
+              45.7869333
+            ],
+            [
+              -84.7357933,
+              45.7871067
+            ],
+            [
+              -84.73522,
+              45.7864933
+            ],
+            [
+              -84.7355467,
+              45.7861467
+            ],
+            [
+              -84.7361533,
+              45.7859933
+            ],
+            [
+              -84.7368333,
+              45.7866133
+            ]
+          ]
+        ]
+      },
+      "stable_id": "michilimackinac-mainland-stockade",
+      "position_uncertainty_m": 18,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "bbox": [
+        -84.7368333,
+        45.7859933,
+        -84.73522,
+        45.7871067
+      ],
+      "outline_only": true,
+      "uncertain_line_dashed": true,
+      "geometry_precision": "source_backed_historical_outline"
+    },
+    {
+      "id": "PRINCE_OF_WALES_STONE_FORT",
+      "title": "威尔士亲王堡 · 石堡",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1772,
+          "end_year": 1781,
+          "title": "威尔士亲王堡 · 哈德孙湾公司驻守",
+          "note": "石制堡墙及四座棱堡已建成。公司将皮毛运往欧洲，堡内人员也依靠克里人、德内人和因纽特人提供物资与劳务。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "title": "威尔士亲王堡 · 法国舰队夺堡",
+          "note": "拉佩鲁兹率法国舰队抵达。当时堡内有39人，塞缪尔·赫恩决定投降，法军随后掠走物资并毁坏工事。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799,
+          "title": "威尔士亲王堡 · 石堡遗迹",
+          "note": "哈德孙湾公司1783年返回丘吉尔河，恢复上游贸易站，河口的石堡由此废弃。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/prince/info/gestion-management/plan-2024",
+        "https://www.parcs.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover1",
+        "https://www.openstreetmap.org/way/324277534",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Principal visible stone enclosure, including four bastions, on surviving wall geometry from OpenStreetMap way 324277534 © contributors (ODbL). The Parks Canada management plan corroborates the four bastions and connecting walls of the 1771 fort. Outer works and the upriver post excluded.",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.2139746,
+              58.7969952
+            ],
+            [
+              -94.2138325,
+              58.7970633
+            ],
+            [
+              -94.2136098,
+              58.7970125
+            ],
+            [
+              -94.2135677,
+              58.7970016
+            ],
+            [
+              -94.2135401,
+              58.7969952
+            ],
+            [
+              -94.2133014,
+              58.7969396
+            ],
+            [
+              -94.2132853,
+              58.7968465
+            ],
+            [
+              -94.2129393,
+              58.7967131
+            ],
+            [
+              -94.212883,
+              58.7969271
+            ],
+            [
+              -94.213001,
+              58.7970063
+            ],
+            [
+              -94.2127596,
+              58.7972953
+            ],
+            [
+              -94.2126067,
+              58.7973009
+            ],
+            [
+              -94.2123385,
+              58.7974746
+            ],
+            [
+              -94.2127462,
+              58.7975051
+            ],
+            [
+              -94.2128615,
+              58.7974412
+            ],
+            [
+              -94.2134516,
+              58.7975566
+            ],
+            [
+              -94.2134462,
+              58.7976455
+            ],
+            [
+              -94.2137761,
+              58.7978067
+            ],
+            [
+              -94.2138486,
+              58.7975732
+            ],
+            [
+              -94.2137332,
+              58.7974913
+            ],
+            [
+              -94.2139532,
+              58.7972161
+            ],
+            [
+              -94.2141195,
+              58.7972189
+            ],
+            [
+              -94.214393,
+              58.7970257
+            ],
+            [
+              -94.2139746,
+              58.7969952
+            ]
+          ]
+        ]
+      },
+      "stable_id": "prince-of-wales-stone-fort",
+      "position_uncertainty_m": 12,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "bbox": [
+        -94.214393,
+        58.7967131,
+        -94.2123385,
+        58.7978067
+      ],
+      "outline_only": true,
+      "uncertain_line_dashed": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "cross_century_feature_id": "prince-of-wales-fort-ruins-1800"
+    },
     {
       "id": "PONDICHERRY_BOULEVARD_TOWN",
       "stable_id": "pondicherry-boulevard-town",
@@ -42166,9 +42592,15 @@
       "periods": [
         {
           "start_year": 1780,
+          "end_year": 1780,
+          "title": "麦基诺岛堡 · 英军开始筑堡",
+          "note": "英军1780年在岛上高处开建新堡，大陆旧堡这年仍在使用。"
+        },
+        {
+          "start_year": 1781,
           "end_year": 1782,
-          "title": "麦基诺岛堡 · 旧大陆驻地迁上岛",
-          "note": "英军自1780年修建岛堡，旧大陆堡的驻军和毛皮贸易群体分批迁往岛上。"
+          "title": "麦基诺岛堡 · 英军完成迁驻",
+          "note": "英军1781年迁入岛堡。来自海峡南岸旧堡的部分居民、贸易商和建筑一同迁移。"
         },
         {
           "start_year": 1783,
@@ -42201,21 +42633,66 @@
         "type": "Polygon",
         "coordinates": [
           [
-            [-84.618513,45.851758],
-            [-84.618276,45.851635],
-            [-84.618259,45.851581],
-            [-84.616734,45.851854],
-            [-84.616675,45.851813],
-            [-84.616619,45.85188],
-            [-84.616245,45.851948],
-            [-84.616619,45.852201],
-            [-84.616672,45.852595],
-            [-84.616872,45.852516],
-            [-84.617235,45.852791],
-            [-84.617781,45.852429],
-            [-84.617982,45.852465],
-            [-84.618023,45.852017],
-            [-84.618513,45.851758]
+            [
+              -84.618513,
+              45.851758
+            ],
+            [
+              -84.618276,
+              45.851635
+            ],
+            [
+              -84.618259,
+              45.851581
+            ],
+            [
+              -84.616734,
+              45.851854
+            ],
+            [
+              -84.616675,
+              45.851813
+            ],
+            [
+              -84.616619,
+              45.85188
+            ],
+            [
+              -84.616245,
+              45.851948
+            ],
+            [
+              -84.616619,
+              45.852201
+            ],
+            [
+              -84.616672,
+              45.852595
+            ],
+            [
+              -84.616872,
+              45.852516
+            ],
+            [
+              -84.617235,
+              45.852791
+            ],
+            [
+              -84.617781,
+              45.852429
+            ],
+            [
+              -84.617982,
+              45.852465
+            ],
+            [
+              -84.618023,
+              45.852017
+            ],
+            [
+              -84.618513,
+              45.851758
+            ]
           ]
         ]
       },

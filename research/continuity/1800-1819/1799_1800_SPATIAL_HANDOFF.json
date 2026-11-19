@@ -16,13 +16,13 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 646,
-    "linked_to_1800_public_geometry": 510,
+    "1799_prior_records_reviewed": 648,
+    "linked_to_1800_public_geometry": 513,
     "by_disposition": {
-      "anchor": 299,
+      "anchor": 300,
       "claim_evidence": 7,
-      "continued": 176,
-      "event_history": 12,
+      "continued": 178,
+      "event_history": 11,
       "fiscal_evidence": 35,
       "needs_boundary_or_site_review": 20,
       "network_evidence": 59,
@@ -33,6 +33,28 @@
     "continue_in_original_public_layer": 1
   },
   "records": [
+    {
+      "prior_id": "PRINCE_OF_WALES_STONE_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "威尔士亲王堡 · 石堡",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "continued",
+      "features_at_1800": [
+        "prince-of-wales-fort-ruins-1800"
+      ],
+      "notes": "1799和1800沿用同一石墙外廓，档案为遗迹。"
+    },
+    {
+      "prior_id": "CUMBERLAND_HOUSE_RELOCATED_POST",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "坎伯兰豪斯 · 迁建商馆",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cumberland-house-1800-post"
+      ],
+      "notes": "1794年启用的迁建商馆原坐标接续。"
+    },
     {
       "prior_id": "B37-A-Z001",
       "source_dataset": "data/eighteenth-century-b37-africa.json",
@@ -601,8 +623,11 @@
       "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
       "name_zh": "1783—1799 Prince of Wales Fort废堡遗迹",
       "prior_record_kind": "battle",
-      "resolution": "event_history",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "prince-of-wales-fort-ruins-1800"
+      ],
+      "notes": "1783年后石堡作为遗迹保存，旧框已由石墙外廓接替。上游商站另列。"
     },
     {
       "prior_id": "B38-H-Z013",
@@ -636,7 +661,8 @@
       "resolution": "anchor",
       "features_at_1800": [
         "cumberland-house-1800-post"
-      ]
+      ],
+      "notes": "1774原站与1794迁建站分开。1799年在迁建站，同坐标接入1800年。"
     },
     {
       "prior_id": "B38-H-Z018",

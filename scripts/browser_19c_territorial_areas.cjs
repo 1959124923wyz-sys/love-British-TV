@@ -1686,6 +1686,42 @@ async function verify() {
   await page.locator('[data-historic-overlap-id$=":new-brunswick-early-colonial-province-1800"]')
    .filter({ hasText: /殖民省与北方争界/ }).waitFor();
 
+  const mainlandMackinac = [45.78653, -84.73601];
+  const princeOfWales = [58.79725, -94.21365];
+  const cumberlandNew = [53.95361, -102.266];
+  await jump(1763);
+  await setView([...mainlandMackinac, 15]);
+  await openSeamDossier(mainlandMackinac, 1763, /大陆旧堡.*奥吉布瓦夺堡/);
+  const earlyMainland = await page.evaluate(() => window.eighteenthBatch36Spatial.getAudit());
+  assert(!earlyMainland.activeZoneIds.includes('B36-Z015'));
+
+  await jump(1769);
+  await clickAreaAt(...mainlandMackinac);
+  await page.locator('[data-overlap-id="18c:MICHILIMACKINAC_MAINLAND_STOCKADE"]')
+   .filter({ hasText: /殖民驻防与贸易/ }).waitFor();
+
+  await jump(1782);
+  await setView([...princeOfWales, 15]);
+  await clickAreaAt(...princeOfWales);
+  await page.locator('[data-overlap-id="18c:PRINCE_OF_WALES_STONE_FORT"]')
+   .filter({ hasText: /法国舰队夺堡/ }).waitFor();
+
+  await jump(1799);
+  await clickAreaAt(...princeOfWales);
+  await page.locator('[data-overlap-id="18c:PRINCE_OF_WALES_STONE_FORT"]')
+   .filter({ hasText: /石堡遗迹/ }).waitFor();
+  await setView([...cumberlandNew, 15]);
+  await openSeamDossier(cumberlandNew, 1799, /坎伯兰豪斯.*内陆商站/);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...cumberlandNew);
+  await page.locator('[data-historic-overlap-id$=":cumberland-house-1800-post"]')
+   .filter({ hasText: /内陆贸易站/ }).waitFor();
+  await setView([...princeOfWales, 15]);
+  await clickAreaAt(...princeOfWales);
+  await page.locator('[data-historic-overlap-id$=":prince-of-wales-fort-ruins-1800"]')
+   .filter({ hasText: /石堡遗迹/ }).waitFor();
+
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
  } finally {
