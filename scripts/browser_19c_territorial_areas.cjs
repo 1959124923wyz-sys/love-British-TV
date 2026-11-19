@@ -1512,6 +1512,43 @@ async function verify() {
   await page.locator('[data-historic-overlap-id$=":beraku-good-hope-fort-1800"]')
    .filter({ hasText: /好望堡.*荷方驻地/ }).waitFor();
 
+  const ambonVictoria = [-3.69257, 128.18235];
+  const bandaBelgica = [-4.52611, 129.89884];
+  const bandaBojauw = [-4.5491, 129.9151];
+  const ternateOranje = [0.792747, 127.386732];
+  const malukuCard = id => page.locator(`[data-overlap-id="18c:${id}"]`);
+  const malukuDossier = id => page.locator(`[data-historic-overlap-id$=":${id}-1800"]`);
+  await jump(1796);
+  await setView([...ambonVictoria, 16]);
+  await clickAreaAt(...ambonVictoria);
+  await dossierTitle.filter({ hasText: /新维多利亚堡.*2月17日英军接收/ }).or(
+   malukuCard('MALUKU_AMBON_NIEUW_VICTORIA').filter({ hasText: /2月17日英军接收/ })
+  ).waitFor();
+  const malukuPrevious = await page.evaluate(() => window.eighteenthBatch37Spatial.getAudit());
+  for (const id of ['B37-I-Z053', 'B37-I-Z054']) assert(!malukuPrevious.activeZoneIds.includes(id), id);
+  for (const id of ['B37-I-P053', 'B37-I-P054']) assert(!malukuPrevious.activeSiteIds.includes(id), id);
+
+  await setView([...bandaBelgica, 16]);
+  await clickAreaAt(...bandaBelgica);
+  await malukuCard('MALUKU_BANDA_BELGICA').filter({ hasText: /班达签降后英军接收/ }).waitFor();
+  await jump(1799);
+  await clickAreaAt(...bandaBelgica);
+  await malukuCard('MALUKU_BANDA_BELGICA').filter({ hasText: /贝尔吉卡堡.*英方驻防/ }).waitFor();
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...bandaBelgica);
+  await malukuDossier('banda-neira-fort-belgica').filter({ hasText: /贝尔吉卡堡.*英方驻地/ }).waitFor();
+
+  for (const [year, title] of [[1800, /奥兰治堡.*荷方仍驻守/], [1801, /奥兰治堡.*6月21日签降/]]) {
+   await jump(year);
+   await setView([...ternateOranje, 15]);
+   await openSeamDossier(ternateOranje, year, title);
+  }
+  await jump(1803);
+  await setView([...bandaBojauw, 15]);
+  await openSeamDossier(bandaBojauw, 1803, /博尧.*庄园奴役与交割/);
+  assert.match(await page.locator('#dossierBody').textContent(), /作价每人25里克斯达勒/);
+
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
  } finally {

@@ -16,15 +16,15 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 589,
-    "linked_to_1800_public_geometry": 446,
+    "1799_prior_records_reviewed": 602,
+    "linked_to_1800_public_geometry": 461,
     "by_disposition": {
-      "anchor": 257,
+      "anchor": 269,
       "claim_evidence": 7,
-      "continued": 152,
+      "continued": 155,
       "event_history": 12,
       "fiscal_evidence": 36,
-      "needs_boundary_or_site_review": 25,
+      "needs_boundary_or_site_review": 23,
       "network_evidence": 60,
       "occupation": 9,
       "political_relation_evidence": 11,
@@ -531,16 +531,22 @@
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "1796 Ambon旧荷兰香料港战时英占",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ambon-old-spice-harbor-1800"
+      ],
+      "notes": "旧矩形和中心代理点已由具名旧港及独立堡址档案接替。"
     },
     {
       "prior_id": "B37-I-Z054",
       "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
       "name_zh": "1796 Banda岛荷兰商站战时英占",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "banda-neira-old-spice-port-1800"
+      ],
+      "notes": "旧矩形和中心代理点已由具名旧港及独立堡址档案接替。"
     },
     {
       "prior_id": "B37-I-Z055",
@@ -5801,6 +5807,149 @@
         "accra-christiansborg-castle-1800"
       ],
       "notes": "同一轮廓或具名堡址接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_AMBON_HARBOR",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "安汶旧港 · 丁香贸易与英占",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ambon-old-spice-harbor-1800"
+      ],
+      "notes": "沿原具名地点接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_AMBON_NIEUW_VICTORIA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "安汶 · 新维多利亚堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ambon-nieuw-victoria-1800"
+      ],
+      "notes": "沿原具名地点接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_HILA_AMSTERDAM",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "希拉 · 阿姆斯特丹堡",
+      "prior_record_kind": "company_post",
+      "resolution": "continued",
+      "features_at_1800": [
+        "hila-fort-amsterdam-1800"
+      ],
+      "notes": "沿原堡墙轮廓接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_HARUKU_ZEELANDIA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "哈鲁库泽兰迪亚旧堡",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "haruku-fort-zeelandia-1800"
+      ],
+      "notes": "沿原具名地点接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_SAPARUA_DUURSTEDE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "萨帕鲁阿迪尔斯特德堡",
+      "prior_record_kind": "company_post",
+      "resolution": "continued",
+      "features_at_1800": [
+        "saparua-fort-duurstede-1800"
+      ],
+      "notes": "沿原堡墙轮廓接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_BANDA_NEIRA_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "班达尼拉旧港 · 肉豆蔻贸易与英占",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "banda-neira-old-spice-port-1800"
+      ],
+      "notes": "沿原具名地点接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_BANDA_BELGICA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "班达尼拉 · 贝尔吉卡堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "banda-neira-fort-belgica-1800"
+      ],
+      "notes": "沿原堡墙轮廓接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_BANDA_NASSAU",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "班达尼拉 · 拿骚堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "banda-neira-fort-nassau-1800"
+      ],
+      "notes": "沿原具名地点接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_BOJAUW_PERK",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大班达岛 · 博尧肉豆蔻庄园",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "banda-bojauw-nutmeg-perk-1800"
+      ],
+      "notes": "沿原具名地点接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_TERNATE_ORANJE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "德尔纳特 · 奥兰治堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ternate-fort-oranje-1800"
+      ],
+      "notes": "沿原具名地点接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_TIDORE_SOASIO",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "蒂多雷 · 索阿西奥与努库政权",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "tidore-soasio-nuku-1800"
+      ],
+      "notes": "沿原具名地点接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_AI_REVENGE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "班达艾岛 · 复仇堡",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "pulau-ai-fort-revenge-1800"
+      ],
+      "notes": "沿原具名地点接入1800年。"
+    },
+    {
+      "prior_id": "MALUKU_WAJER_CONCORDIA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大班达岛瓦耶尔 · 协和堡",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "wajer-fort-concordia-1800"
+      ],
+      "notes": "沿原具名地点接入1800年。"
     }
   ]
 }
