@@ -244,16 +244,23 @@ const topics = [
     }
     await visit('?review18c=1&year=1718');
     await page.waitForFunction(() => window.eighteenthBatch37Spatial?.getAudit().loaded &&
-      window.eighteenthBatch39Spatial?.getAudit().loaded);
-    for (const [year, present] of [[1718,true],[1719,false],[1720,false],[1721,true],[1723,true]]) {
+      window.eighteenthBatch39Spatial?.getAudit().loaded &&
+      window.eighteenthMassSpatial?.getAudit().loaded);
+    for (const [year, earlySite, rebuiltOutline] of [
+      [1718, true, false], [1719, true, false], [1720, false, false],
+      [1721, true, false], [1723, false, true]
+    ]) {
       await page.evaluate(year => window.atlasStoryBridge.setYear(year), year);
       await yearIs(year);
       const state = await page.evaluate(() => {
-        const data = window.eighteenthBatch37Spatial.getAudit();
-        return [data.activeZoneIds.includes('B37-I-Z038'), data.activeSiteIds.includes('B37-I-P038'),
+        const mass = window.eighteenthMassSpatial.getAudit();
+        const legacy = window.eighteenthBatch37Spatial.getAudit();
+        return [mass.activeRegionalSites.includes('BENCOOLEN_MARLBOROUGH_EARLY'),
+          mass.activeRegionalZones.includes('BENCOOLEN_MARLBOROUGH_18C'),
+          legacy.activeZoneIds.includes('B37-I-Z038'), legacy.activeSiteIds.includes('B37-I-P038'),
           window.eighteenthSpatial.getAudit().activeAreas.includes('BENCOOLEN')];
       });
-      assert.deepEqual(state, [present,present,present], 'Bencoolen in ' + year);
+      assert.deepEqual(state, [earlySite, rebuiltOutline, false, false, false], 'Bencoolen in ' + year);
     }
     for (const [year, present] of [[1721, false], [1722, true]]) {
       await page.evaluate(year => window.atlasStoryBridge.setYear(year), year);
