@@ -2,6 +2,10 @@
 
 此目录用于保存英格兰、苏格兰、大不列颠/英国殖民扩张与政治暴力的**史料调查底稿**，不是网站的正式数据目录。**正式发表只读取** `../data/chapters.json` 中状态为 `published` 的 `data/atlas-*.json` 及其已审核GIS/专题数据；`research/` 的档案不应被自动载入地图。
 
+## 十九世纪专题资料
+
+- [19世纪专题目录、史料与制图交接](19c/consolidated/README.md) 汇集 1800–1899 年 59 个专题，可按原案号和史料编号回查。
+
 ## 17世纪项目正在研究
 
 - **调查甲**：1600—1699 爱尔兰与不列颠内部殖民、战争、财产剥夺，分支 [`research/1600-1699-a-ireland-domestic`](https://github.com/1959124923wyz-sys/love-British-TV/tree/research/1600-1699-a-ireland-domestic)，[Issue #163](https://github.com/1959124923wyz-sys/love-British-TV/issues/163)。
