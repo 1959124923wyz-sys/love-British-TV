@@ -1387,6 +1387,28 @@ async function verify() {
   await page.locator('#dossierBody h2').filter({ hasText: '阿康蓬' }).waitFor();
   assert.match(await page.locator('#dossierBody h2').textContent(), /马龙社区与地方治理/);
 
+  const openSeamDossier = async (point, year, title) => {
+   await page.waitForFunction(() => {
+    const map = window.__historicOverlapHost.map;
+    return document.querySelector('#workspace').getAnimations().every(animation => animation.playState !== 'running') &&
+     map.getSize().x === map.getContainer().clientWidth;
+   });
+   await clickAreaAt(...point);
+   await dossierTitle.filter({ hasText: title }).waitFor();
+   assert.match(await page.locator('#dossierBody .dossier-kicker').textContent(), new RegExp(year + '年'));
+  };
+  for (const [year, point, zoom, title] of [
+   [1699, [37.27083, -76.70917], 11, /威廉斯堡/],
+   [1799, [44.647308, -63.580392], 14, /(?=.*哈利法克斯)(?=.*第三座)/]
+  ]) {
+   await jump(year);
+   await setView([...point, zoom]);
+   await openSeamDossier(point, year, title);
+   await page.locator('#nextYear').click();
+   await page.waitForFunction(value => window.atlasStoryBridge.currentYear() === value, year + 1);
+   await openSeamDossier(point, year + 1, title);
+  }
+
   assert.deepEqual(errors, []);
   console.log('19C desktop: annual transitions, territory switches, source drawers and hover outlines passed');
  } finally {

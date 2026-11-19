@@ -7,7 +7,7 @@
       1600,
       1699
     ],
-    "feature_count": 191,
+    "feature_count": 192,
     "confirmed_territorial_polygons": 0,
     "geometry_notice": "No fabricated impact-area polygons. Circle diameters are fixed screen pixels, never measurable historical radius. No colonial area inference.",
     "uncertain_area_warning": "All feature geometries are fixed-pixel site cues, NOT verified military ranges, historic cadastral land boundaries, territorial fill or actual province-wide dispossession. Episode-only policy references display on explicitly documented periods, not by interpolation.",
@@ -17,7 +17,7 @@
       "military_impact": "红色虚线 · 具名军事行动点",
       "local_governance": "浅紫虚线 · 公司地方治理与设防据点"
     },
-    "source_policy": "All added anchors inherit published atlas decade event IDs, source links and original representative coordinates; source metadata is independent from area or sovereignty proof.",
+    "source_policy": "Sites carry published Atlas event IDs where available. A source-only site requires named-place evidence and institutional sources.",
     "episode_safe_rendering": true,
     "royal_african_company_coastal_site_audit_20261021": "Cape Coast Castle 1665 onward: English fort then RAC site; Kormantin/Abandze 1665 captured by Dutch. 2 separate modern fort site references, no trade-wide or region-wide English sovereignty.",
     "quality_note_20261023": "Sourced named-place reference cues added for Glencoe oath/massacre/inquiry and Barbados 1661-1692 statute episodes; no generated geo buffers, no sovereignty claims. Bombay cue now links to underlying 1661/1668 canonical events.",
@@ -117,10 +117,12 @@
         "display_through_year": 1699,
         "display_kind": "local_governance",
         "label_type": "有据局部治理/定居地点 · 非历史界线",
-        "description": "1607年建立英格兰常住殖民据点，屏幕圆圈仅为具名殖民聚落参考，不代表弗吉尼亚整体原住民领土被占。",
-        "summary_zh": "1607年建立英格兰常住殖民据点，屏幕圆圈仅为具名殖民聚落参考，不代表弗吉尼亚整体原住民领土被占。",
+        "description": "1607年英格兰建立詹姆斯敦殖民据点。1699年殖民首府迁往威廉斯堡，詹姆斯敦仍有居民。",
+        "summary_zh": "1607年英格兰建立詹姆斯敦殖民据点。1699年殖民首府迁往威廉斯堡，詹姆斯敦仍有居民。",
         "source_urls": [
-          "https://www.nps.gov/jame/learn/historyculture/the-virginia-company-of-london.htm"
+          "https://www.nps.gov/jame/learn/historyculture/the-virginia-company-of-london.htm",
+          "https://www.nps.gov/jame/learn/historyculture/chronology-of-jamestown-events.htm",
+          "https://vga.virginia.gov/visit/about-capitol/three-capital-cities/"
         ],
         "related_event_ids": [
           "1600S-E004"
@@ -7443,6 +7445,41 @@
         "map_layer": "territory_reference_not_political_control",
         "mapping_method": "Published year-specific historical resistance and named region/site reference as a fixed screen-pixel marker; NOT a measured revolt location, passage GPS, cadastral area, or political control zone.",
         "geometry_precision": "modern_unesco_site_or_arrival_island_not_1681_or_ship_revolt_survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "williamsburg-wren-1699",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.70917,
+          37.27083
+        ]
+      },
+      "properties": {
+        "name": "威廉斯堡 · 弗吉尼亚新首府",
+        "stable_id": "williamsburg-wren-legislature",
+        "start_year": 1699,
+        "display_through_year": 1699,
+        "display_kind": "local_governance",
+        "label_type": "殖民行政地点",
+        "description": "1699年，弗吉尼亚殖民议会在原中部种植地设立威廉斯堡并定为首府。新议事厅建成前，议会使用学院的雷恩楼作为临时议事场所。",
+        "summary_zh": "1699年，弗吉尼亚殖民议会在原中部种植地设立威廉斯堡并定为首府。新议事厅建成前，议会使用学院的雷恩楼作为临时议事场所。",
+        "source_urls": [
+          "https://vga.virginia.gov/visit/about-capitol/three-capital-cities/",
+          "https://www.wm.edu/sites/historiccampus/wrenbuilding/",
+          "https://www.wm.edu/about/visiting/campusmap/location/wren.php"
+        ],
+        "related_event_ids": [],
+        "source_only": true,
+        "map_layer": "territory_reference_not_political_control",
+        "mapping_method": "Named location on the College of William & Mary map with a fixed screen-pixel halo.",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,

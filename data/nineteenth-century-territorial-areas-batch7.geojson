@@ -4571,6 +4571,81 @@
       "id": "19CT7-18C5B-BUNCEARCHIVE",
       "label": "塞拉利昂历史遗产｜邦斯岛古迹",
       "url": "https://sierraleoneheritage.org/v12.6/sites/monuments/bunce/"
+    },
+    {
+      "id": "19CT7-18C5C-STHELENA",
+      "label": "圣赫勒拿岛政府｜岛上殖民历史与档案",
+      "url": "https://www.sainthelena.gov.sh/st-helena/history-and-heritage/"
+    },
+    {
+      "id": "19CT7-18C5C-HELENAARCHIVES",
+      "label": "圣赫勒拿岛政府｜岛屿行政记录",
+      "url": "https://www.sainthelena.gov.sh/documents/ST-HELENA-RECORDS.pdf"
+    },
+    {
+      "id": "19CT7-18C5C-MONTSERRAT",
+      "label": "布朗大学｜蒙特塞拉特考古与纪年",
+      "url": "https://sites.brown.edu/archaeology/fieldwork/montserrat/montserrats-archaeological-resources/"
+    },
+    {
+      "id": "19CT7-18C5C-MONTSERRATSTUDY",
+      "label": "历史考古学期刊｜蒙特塞拉特糖业与种植园考古",
+      "url": "https://doi.org/10.1007/s10761-015-0292-7"
+    },
+    {
+      "id": "19CT7-18C5C-DAVID",
+      "label": "古德洛尔县政府｜圣大卫堡遗址及沿革",
+      "url": "https://cuddalore.nic.in/tourist-place/fort-st-david/"
+    },
+    {
+      "id": "19CT7-18C5C-DAVIDAREA",
+      "label": "古德洛尔县政府｜地方行政与法英易手",
+      "url": "https://cuddalore.nic.in/history/"
+    },
+    {
+      "id": "19CT7-18C5C-DAVIDLOC",
+      "label": "圣大卫堡遗址地名坐标",
+      "url": "https://en.wikipedia.org/wiki/Fort_St._David"
+    },
+    {
+      "id": "19CT7-18C5C-DAVIDGAZ",
+      "label": "早期《不列颠百科全书》｜古德洛尔、旧堡与拆毁记录",
+      "url": "https://jimclifford.ca/britannica-articles-2/a/EB.11/192015838/26.html"
+    },
+    {
+      "id": "19CT7-18C5C-HALIFAX",
+      "label": "加拿大公园局｜哈利法克斯四代主堡",
+      "url": "https://parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels"
+    },
+    {
+      "id": "19CT7-18C5C-HALIFAXREGISTER",
+      "label": "加拿大公园局｜哈利法克斯堡国家遗址名录",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=281"
+    },
+    {
+      "id": "19CT7-18C5C-EDWARD",
+      "label": "加拿大公园局｜爱德华堡与皮西吉德驱逐",
+      "url": "https://www.parks.canada.ca/lhn-nhs/ns/edward/culture/histoire-history"
+    },
+    {
+      "id": "19CT7-18C5C-EDWARDPLAN",
+      "label": "加拿大公园局｜1758年爱德华堡平面图",
+      "url": "https://www.parks.canada.ca/lhn-nhs/ns/edward/culture/carte-historique-1758-historic-map"
+    },
+    {
+      "id": "19CT7-18C5C-PLACENTIA",
+      "label": "加拿大公园局｜普拉森舍城堡山国家遗址",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=230"
+    },
+    {
+      "id": "19CT7-18C5C-LOUISBOURG",
+      "label": "加拿大公园局｜路易堡旧城遗址",
+      "url": "https://parks.canada.ca/lhn-nhs/ns/louisbourg/decouvrir-discover/visite-tour"
+    },
+    {
+      "id": "19CT7-18C5C-LOUISBOURGLOC",
+      "label": "加拿大地名数据库｜路易堡旧镇",
+      "url": "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBUWT"
     }
   ],
   "features": [
@@ -5642,13 +5717,17 @@
         "area_sqkm": null,
         "territorial_claim": false,
         "prior_record_ids": [
-          "B38-H-Z004"
+          "B38-H-Z004",
+          "YORK_FACTORY_III"
         ],
         "geometry_precision": "named_place_anchor"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-92.30443,57.00271]
+        "coordinates": [
+          -92.30443,
+          57.00271
+        ]
       }
     },
     {
@@ -6766,7 +6845,316 @@
       "id": "bermuda-st-george-1800",
       "geometry": {
         "type": "MultiPolygon",
-        "coordinates": [[[[-64.676096,32.388658],[-64.697255,32.373521],[-64.713132,32.364352],[-64.72202,32.352512],[-64.736387,32.34381],[-64.74166,32.333073],[-64.739488,32.328695],[-64.734739,32.327702],[-64.732899,32.333733],[-64.724637,32.338786],[-64.713132,32.342648],[-64.705381,32.336059],[-64.713907,32.32947],[-64.718558,32.323656],[-64.736,32.322881],[-64.740263,32.324044],[-64.75121,32.313625],[-64.76183,32.31094],[-64.780141,32.303412],[-64.810834,32.307559],[-64.813967,32.303978],[-64.805377,32.293425],[-64.794525,32.289549],[-64.779021,32.291099],[-64.780914,32.287543],[-64.819717,32.267457],[-64.829019,32.266681],[-64.832895,32.259705],[-64.846848,32.254666],[-64.8577,32.254666],[-64.864289,32.262418],[-64.863131,32.269008],[-64.848786,32.267844],[-64.848786,32.270945],[-64.867002,32.272883],[-64.872041,32.276371],[-64.869806,32.279785],[-64.867002,32.291099],[-64.858088,32.297688],[-64.86894,32.308928],[-64.872429,32.303114],[-64.879793,32.30544],[-64.874548,32.295681],[-64.877977,32.286074],[-64.876634,32.278912],[-64.885994,32.282572],[-64.882893,32.27172],[-64.876304,32.257767],[-64.860801,32.248853],[-64.834058,32.248077],[-64.809253,32.256217],[-64.783285,32.267457],[-64.763905,32.282572],[-64.754872,32.293118],[-64.698404,32.326369],[-64.677862,32.334508],[-64.704993,32.343035],[-64.708094,32.351562],[-64.691428,32.363965],[-64.685226,32.357376],[-64.680781,32.361732],[-64.667397,32.358926],[-64.65577,32.350399],[-64.655382,32.359314],[-64.647631,32.368228],[-64.676096,32.388658]]],[[[-64.811966,32.289936],[-64.82088,32.287223],[-64.829407,32.289161],[-64.832508,32.287223],[-64.829795,32.281797],[-64.802664,32.281022],[-64.799951,32.283347],[-64.807702,32.286448],[-64.811966,32.289936]]]]
+        "coordinates": [
+          [
+            [
+              [
+                -64.676096,
+                32.388658
+              ],
+              [
+                -64.697255,
+                32.373521
+              ],
+              [
+                -64.713132,
+                32.364352
+              ],
+              [
+                -64.72202,
+                32.352512
+              ],
+              [
+                -64.736387,
+                32.34381
+              ],
+              [
+                -64.74166,
+                32.333073
+              ],
+              [
+                -64.739488,
+                32.328695
+              ],
+              [
+                -64.734739,
+                32.327702
+              ],
+              [
+                -64.732899,
+                32.333733
+              ],
+              [
+                -64.724637,
+                32.338786
+              ],
+              [
+                -64.713132,
+                32.342648
+              ],
+              [
+                -64.705381,
+                32.336059
+              ],
+              [
+                -64.713907,
+                32.32947
+              ],
+              [
+                -64.718558,
+                32.323656
+              ],
+              [
+                -64.736,
+                32.322881
+              ],
+              [
+                -64.740263,
+                32.324044
+              ],
+              [
+                -64.75121,
+                32.313625
+              ],
+              [
+                -64.76183,
+                32.31094
+              ],
+              [
+                -64.780141,
+                32.303412
+              ],
+              [
+                -64.810834,
+                32.307559
+              ],
+              [
+                -64.813967,
+                32.303978
+              ],
+              [
+                -64.805377,
+                32.293425
+              ],
+              [
+                -64.794525,
+                32.289549
+              ],
+              [
+                -64.779021,
+                32.291099
+              ],
+              [
+                -64.780914,
+                32.287543
+              ],
+              [
+                -64.819717,
+                32.267457
+              ],
+              [
+                -64.829019,
+                32.266681
+              ],
+              [
+                -64.832895,
+                32.259705
+              ],
+              [
+                -64.846848,
+                32.254666
+              ],
+              [
+                -64.8577,
+                32.254666
+              ],
+              [
+                -64.864289,
+                32.262418
+              ],
+              [
+                -64.863131,
+                32.269008
+              ],
+              [
+                -64.848786,
+                32.267844
+              ],
+              [
+                -64.848786,
+                32.270945
+              ],
+              [
+                -64.867002,
+                32.272883
+              ],
+              [
+                -64.872041,
+                32.276371
+              ],
+              [
+                -64.869806,
+                32.279785
+              ],
+              [
+                -64.867002,
+                32.291099
+              ],
+              [
+                -64.858088,
+                32.297688
+              ],
+              [
+                -64.86894,
+                32.308928
+              ],
+              [
+                -64.872429,
+                32.303114
+              ],
+              [
+                -64.879793,
+                32.30544
+              ],
+              [
+                -64.874548,
+                32.295681
+              ],
+              [
+                -64.877977,
+                32.286074
+              ],
+              [
+                -64.876634,
+                32.278912
+              ],
+              [
+                -64.885994,
+                32.282572
+              ],
+              [
+                -64.882893,
+                32.27172
+              ],
+              [
+                -64.876304,
+                32.257767
+              ],
+              [
+                -64.860801,
+                32.248853
+              ],
+              [
+                -64.834058,
+                32.248077
+              ],
+              [
+                -64.809253,
+                32.256217
+              ],
+              [
+                -64.783285,
+                32.267457
+              ],
+              [
+                -64.763905,
+                32.282572
+              ],
+              [
+                -64.754872,
+                32.293118
+              ],
+              [
+                -64.698404,
+                32.326369
+              ],
+              [
+                -64.677862,
+                32.334508
+              ],
+              [
+                -64.704993,
+                32.343035
+              ],
+              [
+                -64.708094,
+                32.351562
+              ],
+              [
+                -64.691428,
+                32.363965
+              ],
+              [
+                -64.685226,
+                32.357376
+              ],
+              [
+                -64.680781,
+                32.361732
+              ],
+              [
+                -64.667397,
+                32.358926
+              ],
+              [
+                -64.65577,
+                32.350399
+              ],
+              [
+                -64.655382,
+                32.359314
+              ],
+              [
+                -64.647631,
+                32.368228
+              ],
+              [
+                -64.676096,
+                32.388658
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -64.811966,
+                32.289936
+              ],
+              [
+                -64.82088,
+                32.287223
+              ],
+              [
+                -64.829407,
+                32.289161
+              ],
+              [
+                -64.832508,
+                32.287223
+              ],
+              [
+                -64.829795,
+                32.281797
+              ],
+              [
+                -64.802664,
+                32.281022
+              ],
+              [
+                -64.799951,
+                32.283347
+              ],
+              [
+                -64.807702,
+                32.286448
+              ],
+              [
+                -64.811966,
+                32.289936
+              ]
+            ]
+          ]
+        ]
       },
       "properties": {
         "name": "百慕大 · 圣乔治为首府",
@@ -6791,7 +7179,10 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "dash_only": true,
-        "territorial_claim": false
+        "territorial_claim": false,
+        "prior_record_ids": [
+          "BERMUDA_ISLANDS_18C"
+        ]
       }
     },
     {
@@ -7293,7 +7684,86 @@
       "id": "montserrat-colonial-1800",
       "geometry": {
         "type": "Polygon",
-        "coordinates": [[[-62.147369,16.744289],[-62.156321,16.760321],[-62.170033,16.777004],[-62.179311,16.794501],[-62.174672,16.813137],[-62.182932,16.81273],[-62.202016,16.819322],[-62.218861,16.776313],[-62.230133,16.727607],[-62.218861,16.688707],[-62.167877,16.67536],[-62.157826,16.677314],[-62.14977,16.681789],[-62.144032,16.688218],[-62.140533,16.696479],[-62.14391,16.70897],[-62.151763,16.724514],[-62.147694,16.737047],[-62.147369,16.744289]]]
+        "coordinates": [
+          [
+            [
+              -62.147369,
+              16.744289
+            ],
+            [
+              -62.156321,
+              16.760321
+            ],
+            [
+              -62.170033,
+              16.777004
+            ],
+            [
+              -62.179311,
+              16.794501
+            ],
+            [
+              -62.174672,
+              16.813137
+            ],
+            [
+              -62.182932,
+              16.81273
+            ],
+            [
+              -62.202016,
+              16.819322
+            ],
+            [
+              -62.218861,
+              16.776313
+            ],
+            [
+              -62.230133,
+              16.727607
+            ],
+            [
+              -62.218861,
+              16.688707
+            ],
+            [
+              -62.167877,
+              16.67536
+            ],
+            [
+              -62.157826,
+              16.677314
+            ],
+            [
+              -62.14977,
+              16.681789
+            ],
+            [
+              -62.144032,
+              16.688218
+            ],
+            [
+              -62.140533,
+              16.696479
+            ],
+            [
+              -62.14391,
+              16.70897
+            ],
+            [
+              -62.151763,
+              16.724514
+            ],
+            [
+              -62.147694,
+              16.737047
+            ],
+            [
+              -62.147369,
+              16.744289
+            ]
+          ]
+        ]
       },
       "properties": {
         "name": "蒙特塞拉特 · 英国殖民行政",
@@ -7302,18 +7772,22 @@
         "end_year": 1870,
         "display_kind": "administrative",
         "label_type": "英国殖民行政",
-        "summary_zh": "1783年英法条约将蒙特塞拉特归还英国。19世纪前期保留在英国殖民行政体系内。",
+        "summary_zh": "1783年英法和约约定归还蒙特塞拉特，英国殖民行政于1784年恢复。十九世纪前期继续属于英国背风群岛殖民体系。",
         "source_ids": [
           "19CT7-VERS-FR",
           "19CT7-CAR-TNA",
           "19CT7-LEEWARD-ODNB",
-          "19CT7-NE-ISLANDS"
+          "19CT7-NE-ISLANDS",
+          "19CT7-18C5C-MONTSERRAT",
+          "19CT7-18C5C-MONTSERRATSTUDY"
         ],
         "source_urls": [
           "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
           "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/",
           "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579443264",
-          "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/"
+          "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "https://sites.brown.edu/archaeology/fieldwork/montserrat/montserrats-archaeological-resources/",
+          "https://doi.org/10.1007/s10761-015-0292-7"
         ],
         "related_event_ids": [],
         "mapping_method": "historical_island_jurisdiction_on_generalized_physical_coast; complete land-only island components; no maritime envelope or territorial area claim",
@@ -7322,7 +7796,10 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "dash_only": true,
-        "territorial_claim": false
+        "territorial_claim": false,
+        "prior_record_ids": [
+          "MONTSERRAT_ISLAND_18C"
+        ]
       }
     },
     {
@@ -10747,7 +11224,122 @@
       "id": "19CT7-bencoolen-marlborough-company",
       "geometry": {
         "type": "Polygon",
-        "coordinates": [[[102.2514224,-3.7869872],[102.2513818,-3.7869692],[102.2511021,-3.7871987],[102.2513953,-3.7873652],[102.2514674,-3.787318],[102.2516149,-3.7873967],[102.2515392,-3.7874901],[102.2513585,-3.7873804],[102.2513381,-3.7878377],[102.2517292,-3.7876789],[102.2515866,-3.7875331],[102.2516694,-3.787427],[102.2517674,-3.7875575],[102.2517066,-3.7876218],[102.2519231,-3.7878694],[102.2520674,-3.7875633],[102.2520223,-3.7875273],[102.2522253,-3.7871717],[102.252293,-3.7872077],[102.2525231,-3.7869602],[102.2522614,-3.7868341],[102.2522253,-3.7868701],[102.2518825,-3.7866586],[102.2519005,-3.7865731],[102.2517291,-3.7864065],[102.2515848,-3.7866451],[102.2516209,-3.7867036],[102.2514224,-3.7869872]]]
+        "coordinates": [
+          [
+            [
+              102.2514224,
+              -3.7869872
+            ],
+            [
+              102.2513818,
+              -3.7869692
+            ],
+            [
+              102.2511021,
+              -3.7871987
+            ],
+            [
+              102.2513953,
+              -3.7873652
+            ],
+            [
+              102.2514674,
+              -3.787318
+            ],
+            [
+              102.2516149,
+              -3.7873967
+            ],
+            [
+              102.2515392,
+              -3.7874901
+            ],
+            [
+              102.2513585,
+              -3.7873804
+            ],
+            [
+              102.2513381,
+              -3.7878377
+            ],
+            [
+              102.2517292,
+              -3.7876789
+            ],
+            [
+              102.2515866,
+              -3.7875331
+            ],
+            [
+              102.2516694,
+              -3.787427
+            ],
+            [
+              102.2517674,
+              -3.7875575
+            ],
+            [
+              102.2517066,
+              -3.7876218
+            ],
+            [
+              102.2519231,
+              -3.7878694
+            ],
+            [
+              102.2520674,
+              -3.7875633
+            ],
+            [
+              102.2520223,
+              -3.7875273
+            ],
+            [
+              102.2522253,
+              -3.7871717
+            ],
+            [
+              102.252293,
+              -3.7872077
+            ],
+            [
+              102.2525231,
+              -3.7869602
+            ],
+            [
+              102.2522614,
+              -3.7868341
+            ],
+            [
+              102.2522253,
+              -3.7868701
+            ],
+            [
+              102.2518825,
+              -3.7866586
+            ],
+            [
+              102.2519005,
+              -3.7865731
+            ],
+            [
+              102.2517291,
+              -3.7864065
+            ],
+            [
+              102.2515848,
+              -3.7866451
+            ],
+            [
+              102.2516209,
+              -3.7867036
+            ],
+            [
+              102.2514224,
+              -3.7869872
+            ]
+          ]
+        ]
       },
       "properties": {
         "stable_id": "bencoolen-marlborough-fort",
@@ -10778,7 +11370,10 @@
         "dash_only": true,
         "exclude_from_area_aggregation": true,
         "area_sqkm": null,
-        "territorial_claim": false
+        "territorial_claim": false,
+        "prior_record_ids": [
+          "BENCOOLEN_MARLBOROUGH_18C"
+        ]
       }
     },
     {
@@ -10848,7 +11443,8 @@
         "area_sqkm": null,
         "territorial_claim": false,
         "prior_record_ids": [
-          "B36-Z001"
+          "B36-Z001",
+          "FORT_ANNE_ROYAL_PORT"
         ]
       },
       "geometry": {
@@ -47430,6 +48026,355 @@
         "coordinates": [
           -13.0394923,
           8.5715365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "st-helena-jamestown-company-1800",
+      "properties": {
+        "name": "圣赫勒拿 · 詹姆斯敦公司港口",
+        "stable_id": "st-helena-jamestown-company",
+        "start_year": 1800,
+        "end_year": 1833,
+        "display_kind": "commercial",
+        "label_type": "詹姆斯敦公司港口",
+        "summary_zh": "东印度公司继续从詹姆斯敦经营海外航运补给及港口行政。",
+        "source_urls": [
+          "https://www.sainthelena.gov.sh/st-helena/history-and-heritage/",
+          "https://www.sainthelena.gov.sh/documents/ST-HELENA-RECORDS.pdf"
+        ],
+        "source_ids": [
+          "19CT7-18C5C-STHELENA",
+          "19CT7-18C5C-HELENAARCHIVES"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1814,
+            "title": "圣赫勒拿 · 詹姆斯敦公司港口",
+            "summary_zh": "东印度公司继续从詹姆斯敦经营海外航运补给及港口行政。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1815,
+            "end_year": 1833,
+            "title": "圣赫勒拿 · 公司港口与英军驻防",
+            "summary_zh": "1815年，拿破仑被押至圣赫勒拿。英军负责监守，公司仍掌管岛上民政；1833年英国议会通过新的安排。",
+            "controller": "british"
+          }
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Retained Jamestown waterfront and colonial settlement anchor, distinct from the whole-island outline.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 140,
+        "prior_record_ids": [
+          "ST_HELENA_JAMESTOWN",
+          "ST_HELENA_CORE"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.7168,
+          -15.9246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cuddalore-fort-st-david-1800",
+      "properties": {
+        "name": "古德洛尔 · 圣大卫堡",
+        "stable_id": "cuddalore-fort-st-david",
+        "start_year": 1800,
+        "end_year": 1808,
+        "display_kind": "settlement",
+        "label_type": "圣大卫堡",
+        "summary_zh": "世纪之交，原有堡垒已丧失昔日地位。",
+        "source_urls": [
+          "https://cuddalore.nic.in/tourist-place/fort-st-david/",
+          "https://cuddalore.nic.in/history/",
+          "https://en.wikipedia.org/wiki/Fort_St._David",
+          "https://jimclifford.ca/britannica-articles-2/a/EB.11/192015838/26.html"
+        ],
+        "source_ids": [
+          "19CT7-18C5C-DAVID",
+          "19CT7-18C5C-DAVIDAREA",
+          "19CT7-18C5C-DAVIDLOC",
+          "19CT7-18C5C-DAVIDGAZ"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1800,
+            "title": "圣大卫堡 · 河口旧址",
+            "summary_zh": "世纪之交，原有堡垒已丧失昔日地位。"
+          },
+          {
+            "start_year": 1801,
+            "end_year": 1808,
+            "title": "圣大卫堡 · 旧址与古德洛尔地方行政",
+            "summary_zh": "1801年公司取得卡纳蒂克的直接行政权。地方档案记录旧堡与邻近村落划入古德洛尔方面的行政。"
+          }
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Named ruin near the Gadilam River mouth, using the published site coordinate cross-checked with district heritage siting.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 160,
+        "prior_record_ids": [
+          "CUDDALORE_FORT_ST_DAVID",
+          "B36-Z098"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.78111,
+          11.74028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "halifax-citadel-hill-1800",
+      "properties": {
+        "name": "哈利法克斯 · 堡垒山",
+        "stable_id": "halifax-citadel-hill",
+        "start_year": 1800,
+        "end_year": 1899,
+        "display_kind": "local_governance",
+        "label_type": "堡垒山",
+        "summary_zh": "第三座土木堡在约四年施工后建成，继续为英军港防服务。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels",
+          "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=281"
+        ],
+        "source_ids": [
+          "19CT7-18C5C-HALIFAX",
+          "19CT7-18C5C-HALIFAXREGISTER"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1811,
+            "title": "哈利法克斯 · 第三座堡垒建成",
+            "summary_zh": "第三座土木堡在约四年施工后建成，继续为英军港防服务。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1812,
+            "end_year": 1815,
+            "title": "哈利法克斯 · 第三座堡垒在战争中修缮",
+            "summary_zh": "1812年战争期间继续修缮土木工事。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1816,
+            "end_year": 1827,
+            "title": "哈利法克斯 · 第三座堡垒衰败",
+            "summary_zh": "旧堡逐渐衰败，到1825年已成废墟。英方着手规划第四座堡垒。"
+          },
+          {
+            "start_year": 1828,
+            "end_year": 1855,
+            "title": "哈利法克斯 · 第四座堡垒施工",
+            "summary_zh": "第四座星形石堡于1828年8月开工。",
+            "controller": "british"
+          },
+          {
+            "start_year": 1856,
+            "end_year": 1899,
+            "title": "哈利法克斯 · 第四座堡垒建成",
+            "summary_zh": "石堡于1856年完工，十九世纪余下时间继续为英方军事基地。",
+            "controller": "british"
+          }
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Citadel Hill as used in the Acadia atlas, above Mi’kma’ki’s Kjipuktuk harbour. The named hill anchors the different fortifications without projecting modern masonry over earlier sites.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 150,
+        "prior_record_ids": [
+          "HALIFAX_CITADEL_HILL",
+          "B36-Z002"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.580392,
+          44.647308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pisiquid-fort-edward-1800",
+      "properties": {
+        "name": "皮西吉德 · 爱德华堡",
+        "stable_id": "pisiquid-fort-edward",
+        "start_year": 1800,
+        "end_year": 1815,
+        "display_kind": "settlement",
+        "label_type": "爱德华堡",
+        "summary_zh": "堡址工事保留，早年的战略地位已经衰退。",
+        "source_urls": [
+          "https://www.parks.canada.ca/lhn-nhs/ns/edward/culture/histoire-history",
+          "https://www.parks.canada.ca/lhn-nhs/ns/edward/culture/carte-historique-1758-historic-map"
+        ],
+        "source_ids": [
+          "19CT7-18C5C-EDWARD",
+          "19CT7-18C5C-EDWARDPLAN"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1811,
+            "title": "皮西吉德 · 爱德华堡旧工事",
+            "summary_zh": "堡址工事保留，早年的战略地位已经衰退。"
+          },
+          {
+            "start_year": 1812,
+            "end_year": 1815,
+            "title": "皮西吉德 · 爱德华堡修复与短期驻军",
+            "summary_zh": "英美开战后，殖民军方为预防袭击而修复堡垒，并重新派兵进驻。",
+            "controller": "british"
+          }
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Blockhouse locality from the Acadia atlas, checked against Parks Canada’s historic site and 1758 plan. Only the named site is located.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 65,
+        "prior_record_ids": [
+          "PISIQUID_FORT_EDWARD",
+          "B36-Z009"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.134978,
+          44.996456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "placentia-castle-hill-ruins-1800",
+      "properties": {
+        "name": "普拉森舍城堡山 · 皇家堡",
+        "stable_id": "placentia-castle-hill-ruins",
+        "start_year": 1800,
+        "end_year": 1811,
+        "display_kind": "settlement",
+        "label_type": "皇家堡",
+        "summary_zh": "十九世纪初，山顶堡垒已成为废墟。加拿大遗址名录注明城堡山周边曾继续作防务使用至1811年。",
+        "source_urls": [
+          "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=230"
+        ],
+        "source_ids": [
+          "19CT7-18C5C-PLACENTIA"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1811,
+            "title": "普拉森舍城堡山 · 格雷夫斯堡遗迹",
+            "summary_zh": "十九世纪初，山顶堡垒已成为废墟。加拿大遗址名录注明城堡山周边曾继续作防务使用至1811年。"
+          }
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Fort Royal and Castle Graves shared hilltop site. Node 472251564 © OpenStreetMap contributors (ODbL); named ruin and distinction from surrounding forts corroborated by Parks Canada and Grange. No inferred walls. 1715–1761 no assertion of permanent use of this specific redoubt.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 80,
+        "prior_record_ids": [
+          "PLACENTIA_FORT_ROYAL"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -53.97172,
+          47.25098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "louisbourg-old-town-ruins-1800",
+      "properties": {
+        "name": "路易堡 · 拆防后遗址",
+        "stable_id": "louisbourg-old-town-ruins",
+        "start_year": 1800,
+        "end_year": 1899,
+        "display_kind": "settlement",
+        "label_type": "拆防后遗址",
+        "summary_zh": "英国驻军早已撤出，旧法国城镇与工事持续以遗址形态存在。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/ns/louisbourg/decouvrir-discover/visite-tour",
+          "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBUWT"
+        ],
+        "source_ids": [
+          "19CT7-18C5C-LOUISBOURG",
+          "19CT7-18C5C-LOUISBOURGLOC"
+        ],
+        "year_stages": [
+          {
+            "start_year": 1800,
+            "end_year": 1899,
+            "title": "路易堡 · 拆防后的旧城遗址",
+            "summary_zh": "英国驻军早已撤出，旧法国城镇与工事持续以遗址形态存在。"
+          }
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Canadian Geographical Names Database CBUWT old town anchor, with the dated demolition and troop withdrawal from Parks Canada.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 80,
+        "prior_record_ids": [
+          "LOUISBOURG_AFTER_DEMOLITION"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -59.982778,
+          45.891667
         ]
       }
     }

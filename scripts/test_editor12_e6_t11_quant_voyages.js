@@ -176,7 +176,7 @@ assert(stats.resistance_case_reference.albion_revolt_killed_secondary.warning.in
 
 
 const site=read('data/seventeenth-century-spatial-evidence-1600-1699.geojson'),study=read('data/seventeenth-century-regional-studies-1600-1699.geojson');
-assert.equal(site.features.length,191);assert.equal(site.metadata.feature_count,191);
+assert.equal(site.features.length,192);assert.equal(site.metadata.feature_count,192);
 assert.equal(study.features.length,32);assert.equal(study.metadata.feature_count,32);
 const points=site.features.filter(x=>x.properties.related_story_ids?.includes(article.id));assert.equal(points.length,10);
 for(const f of points){const e=evs.get(f.properties.related_event_ids[0]);assert(e);

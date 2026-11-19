@@ -4972,7 +4972,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "MONTSERRAT_ISLAND_18C"
     },
     {
       "id": "BARBUDA",
@@ -10199,6 +10200,334 @@
   ],
   "regional_sites": [
     {
+      "id": "WILLIAMSBURG_WREN_SEAT",
+      "stable_id": "williamsburg-wren-legislature",
+      "title": "威廉斯堡 · 雷恩楼临时官署",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1703,
+          "title": "威廉斯堡 · 雷恩楼临时官署",
+          "note": "弗吉尼亚殖民首府于1699年从詹姆斯敦迁到威廉斯堡。新议事厅建成前，殖民议会与政府暂用威廉与玛丽学院的雷恩楼。"
+        },
+        {
+          "start_year": 1704,
+          "end_year": 1704,
+          "title": "威廉斯堡 · 官署迁入新议事厅",
+          "note": "第一座新议事厅在1704年启用，殖民官署离开学校。截至这一年，雷恩楼作为临时官署的时期结束。"
+        }
+      ],
+      "source_urls": [
+        "https://vga.virginia.gov/visit/about-capitol/three-capital-cities/",
+        "https://www.wm.edu/sites/historiccampus/wrenbuilding/",
+        "https://www.wm.edu/about/visiting/campusmap/location/wren.php"
+      ],
+      "geometry_method": "Wren Building, Historic Campus of William & Mary. The same building locality serves as the place anchor for the 1699 capital designation and the subsequent temporary government.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 40,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.70917,
+          37.27083
+        ]
+      }
+    },
+    {
+      "id": "ST_HELENA_JAMESTOWN",
+      "stable_id": "st-helena-jamestown-company",
+      "title": "圣赫勒拿 · 詹姆斯敦公司港口",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799,
+          "title": "圣赫勒拿 · 詹姆斯敦公司港口",
+          "note": "东印度公司从詹姆斯敦管理港口、供应船队。岛上政府档案记有被奴役者、土地与供给管理。"
+        }
+      ],
+      "source_urls": [
+        "https://www.sainthelena.gov.sh/st-helena/history-and-heritage/",
+        "https://www.sainthelena.gov.sh/documents/ST-HELENA-RECORDS.pdf"
+      ],
+      "geometry_method": "Retained Jamestown waterfront and colonial settlement anchor, distinct from the whole-island outline.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 140,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.7168,
+          -15.9246
+        ]
+      },
+      "cross_century_feature_id": "st-helena-jamestown-company-1800"
+    },
+    {
+      "id": "CUDDALORE_FORT_ST_DAVID",
+      "stable_id": "cuddalore-fort-st-david",
+      "title": "古德洛尔 · 圣大卫堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1724,
+          "title": "圣大卫堡 · 东印度公司设防据点",
+          "note": "公司在1690年前后取得德瓦南帕蒂南河口堡址。"
+        },
+        {
+          "start_year": 1725,
+          "end_year": 1745,
+          "title": "圣大卫堡 · 公司扩筑",
+          "note": "公司从1725年前后开始加强工事，以维持科罗曼德尔沿岸航运和贸易。"
+        },
+        {
+          "start_year": 1746,
+          "end_year": 1752,
+          "title": "圣大卫堡 · 公司临时总部",
+          "note": "法军攻取马德拉斯后，圣大卫堡成为公司在南印度的临时总部，并抵御法方进攻。"
+        },
+        {
+          "start_year": 1753,
+          "end_year": 1757,
+          "title": "圣大卫堡 · 公司驻地",
+          "note": "公司总部迁回马德拉斯。1756年克莱武出任圣大卫堡总督。"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1759,
+          "title": "圣大卫堡 · 法军夺堡及拆防",
+          "note": "法军于1758年夺取圣大卫堡并拆毁工事。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1781,
+          "title": "圣大卫堡 · 法军撤出后的旧堡",
+          "note": "法军于1760年撤出，英国方面重新掌握堡址。旧堡的区域军事地位下降。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1784,
+          "title": "古德洛尔 · 再次易手与1783年围城",
+          "note": "古德洛尔一带于1782年再被法军攻占，1783年发生围城。围城针对港城及周边阵地。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1799,
+          "title": "圣大卫堡 · 英方收回后的旧址",
+          "note": "古德洛尔县史将英方收回记于1785年。旧堡的军事用途衰退，随后弃置。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://cuddalore.nic.in/tourist-place/fort-st-david/",
+        "https://cuddalore.nic.in/history/",
+        "https://en.wikipedia.org/wiki/Fort_St._David",
+        "https://jimclifford.ca/britannica-articles-2/a/EB.11/192015838/26.html"
+      ],
+      "geometry_method": "Named ruin near the Gadilam River mouth, using the published site coordinate cross-checked with district heritage siting.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 160,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.78111,
+          11.74028
+        ]
+      },
+      "cross_century_feature_id": "cuddalore-fort-st-david-1800"
+    },
+    {
+      "id": "HALIFAX_CITADEL_HILL",
+      "stable_id": "halifax-citadel-hill",
+      "title": "哈利法克斯 · 堡垒山",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1749,
+          "end_year": 1760,
+          "title": "哈利法克斯 · 第一座木堡",
+          "note": "英方在米克马克人的克吉普图克港建立新聚落，第一座木堡于1749年9月11日完工。"
+        },
+        {
+          "start_year": 1761,
+          "end_year": 1775,
+          "title": "哈利法克斯 · 第二座堡垒规划与停工",
+          "note": "第一座木堡到1761年已严重失修。同年开建新堡，工程多次停顿，驻防一度转向港口其他据点。"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1783,
+          "title": "哈利法克斯 · 第二座堡垒",
+          "note": "美国独立战争期间，英军扩大旧方案施工，以八角塔作为驻军营房。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1794,
+          "title": "哈利法克斯 · 第二座堡垒遗迹",
+          "note": "第二座堡垒到1784年已经破败。1794年英方重新评估港口防御。",
+          "kind": "historic_ruins"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "哈利法克斯 · 第三座堡垒获准兴建",
+          "note": "当局批准在堡垒山营建新堡。旧工事被推平，山顶被挖低。"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1799,
+          "title": "哈利法克斯 · 第三座堡垒施工",
+          "note": "1796年全面开工。第三座堡垒由土木构筑，设置营房、粮库和火药库。"
+        }
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/ns/halifax/culture/histoire-history/citadelles-4-citadels",
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=281"
+      ],
+      "geometry_method": "Citadel Hill as used in the Acadia atlas, above Mi’kma’ki’s Kjipuktuk harbour. The named hill anchors the different fortifications without projecting modern masonry over earlier sites.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 150,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.580392,
+          44.647308
+        ]
+      },
+      "cross_century_feature_id": "halifax-citadel-hill-1800"
+    },
+    {
+      "id": "PISIQUID_FORT_EDWARD",
+      "stable_id": "pisiquid-fort-edward",
+      "title": "皮西吉德 · 爱德华堡",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1754,
+          "title": "皮西吉德 · 爱德华堡建成",
+          "note": "英国在两条河流交汇附近筑堡，以管制陆路以及阿卡迪亚人与米克马克人经常来往的地区。"
+        },
+        {
+          "start_year": 1755,
+          "end_year": 1755,
+          "title": "皮西吉德 · 爱德华堡强制驱逐",
+          "note": "约1200名来自皮西吉德村落的阿卡迪亚男女和儿童被集中驱逐。"
+        },
+        {
+          "start_year": 1756,
+          "end_year": 1774,
+          "title": "皮西吉德 · 爱德华堡拘押与驻地",
+          "note": "部分逃避驱逐的人在随后几年被关押于此。1758年实测图分别画出碉楼、营房和仓库。"
+        },
+        {
+          "start_year": 1775,
+          "end_year": 1783,
+          "title": "皮西吉德 · 爱德华堡再修驻军",
+          "note": "美国独立战争期间，英军修缮并派兵驻守。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "title": "皮西吉德 · 爱德华堡旧工事",
+          "note": "独立战争后，爱德华堡的战略作用下降。碉楼和其他工事所在的山丘保留。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://www.parks.canada.ca/lhn-nhs/ns/edward/culture/histoire-history",
+        "https://www.parks.canada.ca/lhn-nhs/ns/edward/culture/carte-historique-1758-historic-map"
+      ],
+      "geometry_method": "Blockhouse locality from the Acadia atlas, checked against Parks Canada’s historic site and 1758 plan. Only the named site is located.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 65,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.134978,
+          44.996456
+        ]
+      },
+      "cross_century_feature_id": "pisiquid-fort-edward-1800"
+    },
+    {
+      "id": "BENCOOLEN_MARLBOROUGH_EARLY",
+      "stable_id": "bencoolen-marlborough-early",
+      "title": "明古伦 · 马尔伯勒堡初建地点",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1714,
+          "end_year": 1718,
+          "title": "明古伦 · 马尔伯勒堡初建",
+          "note": "公司于1714年在新址开建，逐渐从约克堡迁移。"
+        },
+        {
+          "start_year": 1719,
+          "end_year": 1719,
+          "title": "明古伦 · 地方联军迫使公司撤离",
+          "note": "反抗者袭击堡站并迫使公司撤离。初建工事遭毁；现存主堡来自后来的重建。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1721,
+          "end_year": 1722,
+          "title": "明古伦 · 公司人员回驻",
+          "note": "1721年公司人员重新在明古伦议事。堡站接到西勒巴政治主张者阿卜杜拉赫曼来函，马尔伯勒堡随后于1723年重建。"
+        }
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A",
+        "https://budaya.data.kemdikbud.go.id/cagarbudaya/objek/KB000059",
+        "https://searcharchives.bl.uk/catalog/040-000178036",
+        "https://doi.org/10.1080/13639811.2014.957572"
+      ],
+      "geometry_method": "Named Marlborough site approximated by a point inside the surviving later fort. The first works and perimeter are not reconstructed.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 150,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.25182983397505,
+          -3.7870794500000002
+        ]
+      }
+    },
+    {
       "id": "CAPE_RUSTENBURG_CAPITULATION",
       "stable_id": "cape-rustenburg-capitulation",
       "title": "鲁斯滕堡 · 签降地",
@@ -11031,7 +11360,9 @@
           -53.97172,
           47.25098
         ]
-      }
+      },
+      "stable_id": "placentia-castle-hill-ruins",
+      "cross_century_feature_id": "placentia-castle-hill-ruins-1800"
     },
     {
       "id": "YORK_FACTORY_I_II",
@@ -11136,7 +11467,8 @@
           -92.30443,
           57.00271
         ]
-      }
+      },
+      "stable_id": "york-factory-iii-post"
     },
     {
       "id": "FORT_ANNE_PRE_1708",
@@ -11274,7 +11606,8 @@
       "source_urls": [
         "https://parkscanadahistory.com/publications/louisbourg/preserving-louisbourg-1983.pdf",
         "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=303",
-        "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBUWT"
+        "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBUWT",
+        "https://parks.canada.ca/lhn-nhs/ns/louisbourg/decouvrir-discover/visite-tour"
       ],
       "geometry_method": "Canadian Geographical Names Database CBUWT old town anchor, with the dated demolition and troop withdrawal from Parks Canada.",
       "historical_boundary_confirmed": false,
@@ -11288,7 +11621,9 @@
           -59.982778,
           45.891667
         ]
-      }
+      },
+      "stable_id": "louisbourg-old-town-ruins",
+      "cross_century_feature_id": "louisbourg-old-town-ruins-1800"
     },
     {
       "id": "LOUISBOURG_ROYAL_BATTERY",
@@ -18752,9 +19087,29 @@
         "https://nljdigital.nlj.gov.jm/items/show/5208",
         "https://jnht.gov.jm/site_spanish_town.php",
         "https://jis.gov.jm/information/jamaica-heritage-sites/st-catherine-heritage-sites/",
-        "https://www.openstreetmap.org/way/374570627"
+        "https://www.openstreetmap.org/way/374570627",
+        "https://www.parishhistoriesofjamaica.org/wp-content/uploads/2022/03/A-HISTORY-OF-KINGSTON-completed_compressed-1_compressed-1.pdf"
       ],
       "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1754,
+          "title": "官署广场 · 西班牙镇早期殖民行政",
+          "note": "牙买加殖民机关沿用西班牙镇的政务核心。广场上的新总督府尚未兴建。"
+        },
+        {
+          "start_year": 1755,
+          "end_year": 1757,
+          "title": "官署广场 · 议会和官署暂迁金斯敦",
+          "note": "1755年殖民总督将首府暂迁金斯敦。这里标出迁走前的旧政务地点。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1758,
+          "end_year": 1761,
+          "title": "官署广场 · 官署恢复办公",
+          "note": "1758年殖民官署迁回西班牙镇。广场周边随后营建新总督府。"
+        },
         {
           "start_year": 1762,
           "end_year": 1773,
@@ -24283,6 +24638,806 @@
   ],
   "regional_zones": [
     {
+      "id": "ST_HELENA_ISLAND",
+      "stable_id": "st-helena-main-island",
+      "title": "圣赫勒拿岛 · 东印度公司治理",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799,
+          "title": "圣赫勒拿岛 · 东印度公司治理",
+          "note": "公司在岛上掌管行政和船舶补给。岛上定居和公司经济与被奴役者及契约劳工的劳动密切相关。"
+        }
+      ],
+      "source_urls": [
+        "https://www.sainthelena.gov.sh/st-helena/history-and-heritage/",
+        "https://www.sainthelena.gov.sh/documents/ST-HELENA-RECORDS.pdf",
+        "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+      ],
+      "geometry_method": "Same generalized Natural Earth land-only geographic outline used in 1800. It is a location reference for the documented administration at island scale, not a surveyed border, parcel or sea claim.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 450,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -5.666656,
+              -15.902114
+            ],
+            [
+              -5.65038,
+              -15.948907
+            ],
+            [
+              -5.66275,
+              -15.979587
+            ],
+            [
+              -5.701975,
+              -16.005141
+            ],
+            [
+              -5.715647,
+              -15.990899
+            ],
+            [
+              -5.74649,
+              -16.013849
+            ],
+            [
+              -5.780181,
+              -16.008233
+            ],
+            [
+              -5.78954,
+              -15.995294
+            ],
+            [
+              -5.770131,
+              -15.945245
+            ],
+            [
+              -5.721832,
+              -15.908949
+            ],
+            [
+              -5.666656,
+              -15.902114
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -5.78954,
+        -16.013849,
+        -5.65038,
+        -15.902114
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "st-helena-1800"
+    },
+    {
+      "id": "BERMUDA_ISLANDS_18C",
+      "stable_id": "bermuda-19c-islands",
+      "title": "百慕大 · 以圣乔治为首府",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799,
+          "title": "百慕大 · 以圣乔治为首府",
+          "note": "1684年起由王室直接管理。殖民总督、议会和法院继续设在圣乔治。"
+        }
+      ],
+      "source_urls": [
+        "https://parliament.bm/about/view/12",
+        "https://whc.unesco.org/en/list/983/",
+        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/"
+      ],
+      "geometry_method": "Same generalized Natural Earth land-only geographic outline used in 1800. It is a location reference for the documented administration at island scale, not a surveyed border, parcel or sea claim.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 500,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -64.676096,
+                32.388658
+              ],
+              [
+                -64.697255,
+                32.373521
+              ],
+              [
+                -64.713132,
+                32.364352
+              ],
+              [
+                -64.72202,
+                32.352512
+              ],
+              [
+                -64.736387,
+                32.34381
+              ],
+              [
+                -64.74166,
+                32.333073
+              ],
+              [
+                -64.739488,
+                32.328695
+              ],
+              [
+                -64.734739,
+                32.327702
+              ],
+              [
+                -64.732899,
+                32.333733
+              ],
+              [
+                -64.724637,
+                32.338786
+              ],
+              [
+                -64.713132,
+                32.342648
+              ],
+              [
+                -64.705381,
+                32.336059
+              ],
+              [
+                -64.713907,
+                32.32947
+              ],
+              [
+                -64.718558,
+                32.323656
+              ],
+              [
+                -64.736,
+                32.322881
+              ],
+              [
+                -64.740263,
+                32.324044
+              ],
+              [
+                -64.75121,
+                32.313625
+              ],
+              [
+                -64.76183,
+                32.31094
+              ],
+              [
+                -64.780141,
+                32.303412
+              ],
+              [
+                -64.810834,
+                32.307559
+              ],
+              [
+                -64.813967,
+                32.303978
+              ],
+              [
+                -64.805377,
+                32.293425
+              ],
+              [
+                -64.794525,
+                32.289549
+              ],
+              [
+                -64.779021,
+                32.291099
+              ],
+              [
+                -64.780914,
+                32.287543
+              ],
+              [
+                -64.819717,
+                32.267457
+              ],
+              [
+                -64.829019,
+                32.266681
+              ],
+              [
+                -64.832895,
+                32.259705
+              ],
+              [
+                -64.846848,
+                32.254666
+              ],
+              [
+                -64.8577,
+                32.254666
+              ],
+              [
+                -64.864289,
+                32.262418
+              ],
+              [
+                -64.863131,
+                32.269008
+              ],
+              [
+                -64.848786,
+                32.267844
+              ],
+              [
+                -64.848786,
+                32.270945
+              ],
+              [
+                -64.867002,
+                32.272883
+              ],
+              [
+                -64.872041,
+                32.276371
+              ],
+              [
+                -64.869806,
+                32.279785
+              ],
+              [
+                -64.867002,
+                32.291099
+              ],
+              [
+                -64.858088,
+                32.297688
+              ],
+              [
+                -64.86894,
+                32.308928
+              ],
+              [
+                -64.872429,
+                32.303114
+              ],
+              [
+                -64.879793,
+                32.30544
+              ],
+              [
+                -64.874548,
+                32.295681
+              ],
+              [
+                -64.877977,
+                32.286074
+              ],
+              [
+                -64.876634,
+                32.278912
+              ],
+              [
+                -64.885994,
+                32.282572
+              ],
+              [
+                -64.882893,
+                32.27172
+              ],
+              [
+                -64.876304,
+                32.257767
+              ],
+              [
+                -64.860801,
+                32.248853
+              ],
+              [
+                -64.834058,
+                32.248077
+              ],
+              [
+                -64.809253,
+                32.256217
+              ],
+              [
+                -64.783285,
+                32.267457
+              ],
+              [
+                -64.763905,
+                32.282572
+              ],
+              [
+                -64.754872,
+                32.293118
+              ],
+              [
+                -64.698404,
+                32.326369
+              ],
+              [
+                -64.677862,
+                32.334508
+              ],
+              [
+                -64.704993,
+                32.343035
+              ],
+              [
+                -64.708094,
+                32.351562
+              ],
+              [
+                -64.691428,
+                32.363965
+              ],
+              [
+                -64.685226,
+                32.357376
+              ],
+              [
+                -64.680781,
+                32.361732
+              ],
+              [
+                -64.667397,
+                32.358926
+              ],
+              [
+                -64.65577,
+                32.350399
+              ],
+              [
+                -64.655382,
+                32.359314
+              ],
+              [
+                -64.647631,
+                32.368228
+              ],
+              [
+                -64.676096,
+                32.388658
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -64.811966,
+                32.289936
+              ],
+              [
+                -64.82088,
+                32.287223
+              ],
+              [
+                -64.829407,
+                32.289161
+              ],
+              [
+                -64.832508,
+                32.287223
+              ],
+              [
+                -64.829795,
+                32.281797
+              ],
+              [
+                -64.802664,
+                32.281022
+              ],
+              [
+                -64.799951,
+                32.283347
+              ],
+              [
+                -64.807702,
+                32.286448
+              ],
+              [
+                -64.811966,
+                32.289936
+              ]
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -64.885994,
+        32.248077,
+        -64.647631,
+        32.388658
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "bermuda-st-george-1800"
+    },
+    {
+      "id": "MONTSERRAT_ISLAND_18C",
+      "stable_id": "montserrat-19c-islands",
+      "title": "蒙特塞拉特 · 主岛行政",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1711,
+          "title": "蒙特塞拉特 · 英属殖民地与糖业种植园",
+          "note": "岛上糖业种植园依靠被奴役者劳动，岛屿处于英国背风群岛殖民政制内。"
+        },
+        {
+          "start_year": 1712,
+          "end_year": 1712,
+          "title": "蒙特塞拉特 · 法军袭岛",
+          "note": "法军于1712年袭岛。岛上发生战事。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1713,
+          "end_year": 1767,
+          "title": "蒙特塞拉特 · 英属糖业殖民地",
+          "note": "种植园和糖业运转依赖奴役，地方殖民政制继续。"
+        },
+        {
+          "start_year": 1768,
+          "end_year": 1768,
+          "title": "蒙特塞拉特 · 圣帕特里克节起事计划遭镇压",
+          "note": "被奴役者与自由居民计划反抗种植园主的暴力统治。计划泄露，当局实施戒严并处决被捕的参与者。"
+        },
+        {
+          "start_year": 1769,
+          "end_year": 1781,
+          "title": "蒙特塞拉特 · 英属殖民行政",
+          "note": "殖民政制及糖业种植园继续维持。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "title": "蒙特塞拉特 · 法军占岛",
+          "note": "法国军队于1782年占据蒙特塞拉特。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "title": "蒙特塞拉特 · 和约约定归还，仍由法方占领",
+          "note": "英法和约约定归还蒙特塞拉特。考古与历史研究将法方占领期记为1782至1784年。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1784,
+          "title": "蒙特塞拉特 · 英方恢复行政",
+          "note": "法国占领至1784年结束。实际交接日仍待核。"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1799,
+          "title": "蒙特塞拉特 · 英属殖民行政恢复",
+          "note": "岛上继续实施英国殖民行政，种植园的劳动制度继续依靠奴役。"
+        }
+      ],
+      "source_urls": [
+        "https://sites.brown.edu/archaeology/fieldwork/montserrat/montserrats-archaeological-resources/",
+        "https://doi.org/10.1007/s10761-015-0292-7",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/"
+      ],
+      "geometry_method": "Same generalized Natural Earth land-only geographic outline used in 1800. It is a location reference for the documented administration at island scale, not a surveyed border, parcel or sea claim.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 550,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.147369,
+              16.744289
+            ],
+            [
+              -62.156321,
+              16.760321
+            ],
+            [
+              -62.170033,
+              16.777004
+            ],
+            [
+              -62.179311,
+              16.794501
+            ],
+            [
+              -62.174672,
+              16.813137
+            ],
+            [
+              -62.182932,
+              16.81273
+            ],
+            [
+              -62.202016,
+              16.819322
+            ],
+            [
+              -62.218861,
+              16.776313
+            ],
+            [
+              -62.230133,
+              16.727607
+            ],
+            [
+              -62.218861,
+              16.688707
+            ],
+            [
+              -62.167877,
+              16.67536
+            ],
+            [
+              -62.157826,
+              16.677314
+            ],
+            [
+              -62.14977,
+              16.681789
+            ],
+            [
+              -62.144032,
+              16.688218
+            ],
+            [
+              -62.140533,
+              16.696479
+            ],
+            [
+              -62.14391,
+              16.70897
+            ],
+            [
+              -62.151763,
+              16.724514
+            ],
+            [
+              -62.147694,
+              16.737047
+            ],
+            [
+              -62.147369,
+              16.744289
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -62.230133,
+        16.67536,
+        -62.140533,
+        16.819322
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "montserrat-colonial-1800"
+    },
+    {
+      "id": "BENCOOLEN_MARLBOROUGH_18C",
+      "stable_id": "bencoolen-marlborough-fort",
+      "title": "明古伦 · 马尔伯勒堡公司驻地",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1723,
+          "end_year": 1759,
+          "title": "明古伦 · 马尔伯勒堡重建及公司驻地",
+          "note": "地方联军于1719年迫使公司撤出。公司重新立足后，于1723年开始重建。"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1760,
+          "title": "明古伦 · 行政升格与法军攻堡",
+          "note": "公司决定升格明古伦为总统辖区。同年4月马尔伯勒堡向法军投降，圣乔治堡的同年公司函件证实堡站失守。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1761,
+          "end_year": 1762,
+          "title": "明古伦 · 失守后的重建过渡",
+          "note": "法军在战事中损毁工事。战后公司重返堡区的具体日期仍待考证。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "明古伦 · 公司驻地恢复与和约确认归还",
+          "note": "公司档案中已有1763年1月3日从堡内发出的信件。2月《巴黎和约》第十一条约定归还明古伦及两处苏门答腊据点。"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1784,
+          "title": "明古伦 · 马尔伯勒堡公司行政",
+          "note": "公司重建堡站，继续经营港口、胡椒贸易，并强迫被奴役者劳动。"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1785,
+          "title": "明古伦 · 英国方面批准行政降格",
+          "note": "3月4日，印度事务监督机构批准将明古伦降为驻地，改隶孟加拉。"
+        },
+        {
+          "start_year": 1786,
+          "end_year": 1799,
+          "title": "明古伦 · 降格后的公司驻地",
+          "note": "马尔伯勒堡和港口继续运作，行政和经费由孟加拉方面监督。"
+        }
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A",
+        "https://www.tamildigitallibrary.in/admin/assets/book/TVA_BOK_0046525/TVA_BOK_0046525_Letters_from_Fort_St_George_1760_Vol_35.pdf",
+        "https://searcharchives.bl.uk/?f%5Bparent_reference_ssi%5D%5B%5D=IOR%2FG%2F35&per_page=20&sort=hierarchy",
+        "https://avalon.law.yale.edu/18th_century/paris763.asp",
+        "https://budaya.data.kemdikbud.go.id/cagarbudaya/objek/KB000059",
+        "https://benteng.architectureheritage.or.id/web/benteng_detail.php?id=174&page=ARSITEKTUR",
+        "https://www.openstreetmap.org/way/236152556"
+      ],
+      "geometry_method": "Restricted to the surviving fort perimeter (© OpenStreetMap contributors, ODbL; way 236152556). Indonesian cultural heritage inventory records Dutch repairs without changing the main fort shape.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 85,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.2514224,
+              -3.7869872
+            ],
+            [
+              102.2513818,
+              -3.7869692
+            ],
+            [
+              102.2511021,
+              -3.7871987
+            ],
+            [
+              102.2513953,
+              -3.7873652
+            ],
+            [
+              102.2514674,
+              -3.787318
+            ],
+            [
+              102.2516149,
+              -3.7873967
+            ],
+            [
+              102.2515392,
+              -3.7874901
+            ],
+            [
+              102.2513585,
+              -3.7873804
+            ],
+            [
+              102.2513381,
+              -3.7878377
+            ],
+            [
+              102.2517292,
+              -3.7876789
+            ],
+            [
+              102.2515866,
+              -3.7875331
+            ],
+            [
+              102.2516694,
+              -3.787427
+            ],
+            [
+              102.2517674,
+              -3.7875575
+            ],
+            [
+              102.2517066,
+              -3.7876218
+            ],
+            [
+              102.2519231,
+              -3.7878694
+            ],
+            [
+              102.2520674,
+              -3.7875633
+            ],
+            [
+              102.2520223,
+              -3.7875273
+            ],
+            [
+              102.2522253,
+              -3.7871717
+            ],
+            [
+              102.252293,
+              -3.7872077
+            ],
+            [
+              102.2525231,
+              -3.7869602
+            ],
+            [
+              102.2522614,
+              -3.7868341
+            ],
+            [
+              102.2522253,
+              -3.7868701
+            ],
+            [
+              102.2518825,
+              -3.7866586
+            ],
+            [
+              102.2519005,
+              -3.7865731
+            ],
+            [
+              102.2517291,
+              -3.7864065
+            ],
+            [
+              102.2515848,
+              -3.7866451
+            ],
+            [
+              102.2516209,
+              -3.7867036
+            ],
+            [
+              102.2514224,
+              -3.7869872
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        102.2511021,
+        -3.7878694,
+        102.2525231,
+        -3.7864065
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "19CT7-bencoolen-marlborough-company"
+    },
+    {
       "id": "CAPE_OLD_TOWN_1795",
       "stable_id": "cape-old-town-1795",
       "title": "开普敦 · 旧城街区",
@@ -25422,42 +26577,150 @@
         "type": "Polygon",
         "coordinates": [
           [
-            [-65.5177838, 44.7415022],
-            [-65.5181368, 44.7417265],
-            [-65.5182948, 44.7417153],
-            [-65.5183339, 44.741718],
-            [-65.5184243, 44.7418055],
-            [-65.5184127, 44.7418235],
-            [-65.5184915, 44.7418998],
-            [-65.5185166, 44.7419006],
-            [-65.5186362, 44.7420164],
-            [-65.5186357, 44.7420334],
-            [-65.5185798, 44.7421141],
-            [-65.5187911, 44.7423713],
-            [-65.5190492, 44.7421874],
-            [-65.5190556, 44.7421467],
-            [-65.5190456, 44.742055],
-            [-65.5194477, 44.7418581],
-            [-65.5195475, 44.7419077],
-            [-65.519618, 44.7418998],
-            [-65.5200482, 44.7417652],
-            [-65.5196806, 44.7415854],
-            [-65.5196387, 44.7415799],
-            [-65.5194941, 44.74161],
-            [-65.5191567, 44.7412777],
-            [-65.5192406, 44.7412006],
-            [-65.5192551, 44.7411561],
-            [-65.5192288, 44.7411013],
-            [-65.5190874, 44.7408532],
-            [-65.5187792, 44.7410941],
-            [-65.51876, 44.7411283],
-            [-65.5187998, 44.7412019],
-            [-65.518763, 44.7412191],
-            [-65.5183912, 44.7414102],
-            [-65.518351, 44.7414123],
-            [-65.5182851, 44.7413719],
-            [-65.5182378, 44.7413731],
-            [-65.5177838, 44.7415022]
+            [
+              -65.5177838,
+              44.7415022
+            ],
+            [
+              -65.5181368,
+              44.7417265
+            ],
+            [
+              -65.5182948,
+              44.7417153
+            ],
+            [
+              -65.5183339,
+              44.741718
+            ],
+            [
+              -65.5184243,
+              44.7418055
+            ],
+            [
+              -65.5184127,
+              44.7418235
+            ],
+            [
+              -65.5184915,
+              44.7418998
+            ],
+            [
+              -65.5185166,
+              44.7419006
+            ],
+            [
+              -65.5186362,
+              44.7420164
+            ],
+            [
+              -65.5186357,
+              44.7420334
+            ],
+            [
+              -65.5185798,
+              44.7421141
+            ],
+            [
+              -65.5187911,
+              44.7423713
+            ],
+            [
+              -65.5190492,
+              44.7421874
+            ],
+            [
+              -65.5190556,
+              44.7421467
+            ],
+            [
+              -65.5190456,
+              44.742055
+            ],
+            [
+              -65.5194477,
+              44.7418581
+            ],
+            [
+              -65.5195475,
+              44.7419077
+            ],
+            [
+              -65.519618,
+              44.7418998
+            ],
+            [
+              -65.5200482,
+              44.7417652
+            ],
+            [
+              -65.5196806,
+              44.7415854
+            ],
+            [
+              -65.5196387,
+              44.7415799
+            ],
+            [
+              -65.5194941,
+              44.74161
+            ],
+            [
+              -65.5191567,
+              44.7412777
+            ],
+            [
+              -65.5192406,
+              44.7412006
+            ],
+            [
+              -65.5192551,
+              44.7411561
+            ],
+            [
+              -65.5192288,
+              44.7411013
+            ],
+            [
+              -65.5190874,
+              44.7408532
+            ],
+            [
+              -65.5187792,
+              44.7410941
+            ],
+            [
+              -65.51876,
+              44.7411283
+            ],
+            [
+              -65.5187998,
+              44.7412019
+            ],
+            [
+              -65.518763,
+              44.7412191
+            ],
+            [
+              -65.5183912,
+              44.7414102
+            ],
+            [
+              -65.518351,
+              44.7414123
+            ],
+            [
+              -65.5182851,
+              44.7413719
+            ],
+            [
+              -65.5182378,
+              44.7413731
+            ],
+            [
+              -65.5177838,
+              44.7415022
+            ]
           ]
         ]
       },
@@ -25467,7 +26730,8 @@
         -65.5177838,
         44.7423713
       ],
-      "geometry_precision": "source_backed_historical_outline"
+      "geometry_precision": "source_backed_historical_outline",
+      "stable_id": "annapolis-royal-fort-anne-core"
     },
     {
       "id": "FORT_ANNE_FLAG_BASTION_1726",
