@@ -1235,6 +1235,42 @@ async function verify() {
   assert.match(await huts1800.textContent(), /流放住区/);
   await page.screenshot({ path: join(screenshotDir, '19c-parramatta-1800-handoff.png') });
 
+  const freetown = [8.48978, -13.23426];
+  await jump(1794);
+  await setView([...freetown, 16]);
+  await clickAreaAt(...freetown);
+  const freetownGrid = page.locator('[data-overlap-id="18c:SIERRA_FREETOWN_EARLY_GRID"]');
+  await freetownGrid.waitFor();
+  assert.match(await freetownGrid.textContent(), /法国舰队袭击/);
+  assert(!(await atlantic()).activeZones.includes('FREETOWN_1792'));
+  await jump(1799);
+  await clickAreaAt(...freetown);
+  assert.match(await freetownGrid.textContent(), /年租与自由保有争议/);
+  await page.locator('#nextYear').click();
+  await page.waitForFunction(() => window.atlasStoryBridge.currentYear() === 1800);
+  await clickAreaAt(...freetown);
+  const freetown1800 = page.locator('[data-historic-overlap-id$=":sierra-freetown-early-grid-1800"]');
+  await freetown1800.waitFor();
+  assert.match(await freetown1800.textContent(), /新司法特许/);
+  await page.screenshot({ path: join(screenshotDir, '19c-freetown-1800-handoff.png') });
+
+  const capeCastle = [-33.92582, 18.42766];
+  await jump(1795);
+  await setView([...capeCastle, 16]);
+  await clickAreaAt(...capeCastle);
+  const firstCapeSurrender = page.locator('[data-overlap-id="18c:CAPE_CASTLE_FIVE_BASTIONS"]');
+  await firstCapeSurrender.waitFor();
+  assert.match(await firstCapeSurrender.textContent(), /9月16日交堡/);
+  assert(!(await atlantic()).activeZones.includes('CAPE_TOWN_ZONE'));
+  const cape19c = page.locator('[data-historic-overlap-id$=":cape-castle-five-bastions-1800"]');
+  for (const [year, text] of [[1802, /亚眠和约/], [1803, /2月21日巴达维亚共和国接收/]]) {
+   await jump(year);
+   await clickAreaAt(...capeCastle);
+   await cape19c.waitFor();
+   assert.match(await cape19c.textContent(), text);
+  }
+  await page.screenshot({ path: join(screenshotDir, '19c-cape-1803-handover.png') });
+
   const charleston = [32.7756125, -79.93197257];
   const charlestonTown = page.locator('[data-overlap-id="18c:CHARLESTON_OLD_TOWN_1780"]');
   for (const [year, title] of [[1780, /5月12日英军占城/], [1782, /12月14日英军撤离/]]) {

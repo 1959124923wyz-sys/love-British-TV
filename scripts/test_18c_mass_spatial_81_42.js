@@ -372,7 +372,27 @@ a.equal(z('CHARLESTON_GARRISON').superseded_by,'CHARLESTON_OLD_TOWN_1780');
 a.match(stageAt('TRINCOMALEE_FORT_FREDERICK',1795).title,/8月26日/);
 a.match(stageAt('TRINCOMALEE_FORT_OOSTENBURG',1795).title,/8月31日/);
 
-a(isOn(s('FREETOWN'),1792)&&!isOn(s('FREETOWN'),1787));
+a.equal(s('FREETOWN').superseded_by,'SIERRA_FREETOWN_COMPANY_OFFICE');
+a.equal(z('FREETOWN_1787').superseded_by,'SIERRA_GRANVILLE_FIRST');
+a.equal(z('FREETOWN_1792').superseded_by,'SIERRA_FREETOWN_EARLY_GRID');
+a.equal(z('CAPE_TOWN_ZONE').superseded_by,'CAPE_OLD_TOWN_1795');
+a.equal(stageAt('CAPE_CASTLE_FIVE_BASTIONS',1794),undefined);
+a.match(stageAt('CAPE_CASTLE_FIVE_BASTIONS',1795).title,/9月16日交堡/);
+a.match(late('cape-castle-five-bastions-1800').properties.year_stages.find(p=>p.start_year===1803).title,/2月21日/);
+a.match(stageAt('SIERRA_GRANVILLE_FIRST',1789).title,/吉米首领焚毁/);
+a.equal(stageAt('SIERRA_FREETOWN_EARLY_GRID',1791),undefined);
+a.match(stageAt('SIERRA_FREETOWN_EARLY_GRID',1794).title,/法国舰队袭击/);
+a.match(late('sierra-freetown-early-grid-1800').properties.year_stages[0].summary_zh,/9月25日.*10月15日/);
+a.equal(stageAt('SIERRA_BUNCE_EARLY_POST',1730).kind,'historic_ruins');
+a.equal(stageAt('SIERRA_BUNCE_SLAVE_FORT',1747),undefined);
+a.match(stageAt('SIERRA_BUNCE_SLAVE_FORT',1784).title,/安德森接手/);
+a.match(late('sierra-bunce-slave-fort-1800').properties.year_stages.at(-1).title,/停止大西洋贩奴/);
+const batch37Africa=JSON.parse(read('data/eighteenth-century-b37-africa.json'));
+for(const id of [22,23,24,25,26,27,28,30,31]){
+ const ref=String(id).padStart(3,'0');
+ a(atlantic(batch37Africa.zones.find(x=>x.id==='B37-A-Z'+ref).superseded_by));
+ a(atlantic(batch37Africa.sites.find(x=>x.id==='B37-A-P'+ref).superseded_by));
+}
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));
 a(html.includes('js/eighteenth-mass-spatial.js?v='));
