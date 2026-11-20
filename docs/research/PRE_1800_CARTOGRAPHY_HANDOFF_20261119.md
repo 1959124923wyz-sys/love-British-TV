@@ -1,6 +1,6 @@
 # 1497—1799 年制图进展与待办｜主编 35 交接
 
-2026 年 11 月 20 日复核。此表统计截至第 5T 批。打开 [1799 年地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1799) 可以用「下一年」查看 1800 年的接续。
+2026 年 11 月 20 日复核。此表统计截至第 5U 批。打开 [1799 年地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1799) 可以用「下一年」查看 1800 年的接续。
 
 ## 当前盘点
 
@@ -8,10 +8,10 @@
 | --- | ---: | --- |
 | 1497—1599 | 原盘点识别为 0 条 | 补清点只有点位或概略范围的加来、图尔奈、帕莱，以及莱伊什／奥法利和芒斯特没收地。 |
 | 1600—1699 | 26 条 | 商站查万丹、苏拉特、胡格利，港堡查海岸角、丹吉尔，另查北美早期聚落。7 条默认隐藏的最大纸面特许范围另有档案。 |
-| 1700—1799 | 251 条，其中 120 条在 1799 年显示 | 先查下方 22 条重点旧框，再处理其余 229 条。 |
-| 合计 | **277 条** | [第 5D 批原始盘点 #457](https://github.com/1959124923wyz-sys/love-British-TV/pull/457) 共 403 条，至第 5T 批累计替换 126 条。 |
+| 1700—1799 | 246 条，其中 119 条在 1799 年显示 | 先查下方 17 条重点旧框，再处理其余 229 条。 |
+| 合计 | **272 条** | [第 5D 批原始盘点 #457](https://github.com/1959124923wyz-sys/love-British-TV/pull/457) 共 403 条，至第 5U 批累计替换 131 条。 |
 
-计数单位是地图记录。同一地点可有多个时段或多条旧记录。1497—1699 的矩形数沿用 #457 的桌面盘点，十八世纪使用第 5T 批数据重新计算。只有点位或尚未入库的范围仍待建立完整名录。
+计数单位是地图记录。同一地点可有多个时段或多条旧记录。1497—1699 的矩形数沿用 #457 的桌面盘点，十八世纪使用第 5U 批数据重新计算。只有点位或尚未入库的范围仍待建立完整名录。
 
 ## 补绘批次
 
@@ -33,7 +33,8 @@
 | 5Q | [马提尼克两轮英占与两港接续](18C_MARTINIQUE_1762_1802_SOURCE_NOTES.md) | 8 | 281 | 137 | 16 |
 | 5R | [多巴哥与圣卢西亚港堡](18C_TOBAGO_SAINT_LUCIA_SOURCE_NOTES.md) | 4 | 277 | 135 | 16 |
 | 5S | [背风群岛五岛、四港与驻堡](18C_LEEWARD_ISLANDS_HARBOURS_HANDOFF.md) | 12 | 265 | 126 | 15 |
-| 5T | [圣文森特、格林纳达、拿骚与圣乔治旧港](18C_VINCENT_GRENADA_NASSAU_BERMUDA_HANDOFF.md) | 14 | **251** | **120** | **14** |
+| 5T | [圣文森特、格林纳达、拿骚与圣乔治旧港](18C_VINCENT_GRENADA_NASSAU_BERMUDA_HANDOFF.md) | 14 | 251 | 120 | 14 |
+| 5U | [开曼、玛丽加朗特、埃格蒙特港、费拉约港与圣路易斯堡](18C_CAYMAN_MARIE_EGMONT_ELBA_SENEGAL_HANDOFF.md) | 5 | **246** | **119** | **14** |
 
 更早批次见 [十八世纪制图路线图](18C_CARTOGRAPHY_ROADMAP.md)。第 5J 批发布后，正式站桌面实点了拉茹瓦港 1758 年驱逐、马德堡 1774 年受降，并从 1799 年原位打开新不伦瑞克和爱德华王子岛的 1800 年档案。
 
@@ -49,30 +50,19 @@
 - [x] **第 5R 批补绘多巴哥与圣卢西亚港堡。** 本岛海岸、两座港城、三处堡址与鸽子岛分别落图。两港、两个港防驻地与多巴哥本岛接续至 1800 年。[第 5R 批交接](18C_TOBAGO_SAINT_LUCIA_SOURCE_NOTES.md)
 - [x] **第 5S 批补绘背风群岛五岛。** 落图圣基茨、尼维斯、安提瓜与巴布达，接续蒙特塞拉特旧港和四岛港堡。12 处地区或地点接续至 1800 年。[第 5S 批交接](18C_LEEWARD_ISLANDS_HARBOURS_HANDOFF.md)
 - [x] **第 5T 批补绘圣文森特、格林纳达、巴哈马拿骚与百慕大圣乔治。** 核对加里富纳土地条约、巴利索岛拘留、费东起义中的港堡与拿骚两次接管。百慕大圣乔治旧港原位接入 1800 年。[第 5T 批交接](18C_VINCENT_GRENADA_NASSAU_BERMUDA_HANDOFF.md)
-- [ ] **加勒比及中南美余 3 条重点旧框。** 核对开曼群岛、玛丽加朗特和福克兰群岛埃格蒙特港。
-- [ ] **西非 12 条重点旧框按堡和治理主体核查。** 复用已完成的黄金海岸驻堡。将堡址、港口交易和当地政权分别追到可证期限。与下方跨年表中的奥图阿姆、普兰普兰、温内巴、阿达等一并对照。
-- [ ] **亚洲／印度洋 6 条、欧洲／地中海 1 条重点旧框。** 单列短占、驻防和行政。对照已完成的安汶—班达、马六甲、孟买等较细专题及各自档案。
+- [x] **第 5U 批补绘开曼、玛丽加朗特、埃格蒙特港、费拉约港与圣路易斯堡。** 加勒比及中南美、欧洲及地中海两组重点旧框已全部替换。西非圣路易斯堡原址和开曼、玛丽加朗特七处地理对象接至 1800 年。[第 5U 批交接](18C_CAYMAN_MARIE_EGMONT_ELBA_SENEGAL_HANDOFF.md)
+- [ ] **西非 11 条重点旧框按堡和治理主体核查。** 复用已完成的黄金海岸驻堡。将堡址、港口交易和当地政权分别追到可证期限。与下方跨年表中的奥图阿姆、普兰普兰、温内巴、阿达等一并对照。
+- [ ] **亚洲／印度洋 6 条重点旧框。** 单列短占、驻防和行政。对照已完成的安汶—班达、马六甲、孟买等较细专题及各自档案。
 - [ ] **把 14 条跨年待核逐条清账。** 有接续证据时更新稳定 ID、去向与首期状态。只有贸易、政治关系或原住民活动证据的条目保留对应语义。对旧矩形与跨年待核重叠的条目，同时更新两处状态。
 - [ ] **补建 16、17 世纪点位及缺绘名录。** 记录时间、主体、地点和证据，分别查清可配准史图、定界条款及地方驻点。18 世纪其余旧框也按证据分别保留事件、点、线或面。
 - [ ] **接续十九世纪研究归档。** [研究草稿 PR #463](https://github.com/1959124923wyz-sys/love-British-TV/pull/463) 为并行资料入库，待审内容含 59 个专题、150 个章节、1,980 条分章年表和 1,520 条史料索引。历史专题先核源档和候选地图 ID，地图发布状态查 [正式章节](../../data/chapters.json) 和 [专题索引](../../data/stories/index.json)。
 
-## 22 条重点旧框逐条清单
+## 17 条重点旧框逐条清单
 
 逐条对照原盘点的 113 条驻防、行政及占领记录。下列 ID 在本次基线上仍使用旧矩形。同一地点的档案可能已经有较细的图形，后续须核验分期覆盖再登记替代。
 
 <details>
-<summary>加勒比／中南美（3 条）</summary>
-
-| 记录 ID | 原档案名称 | 1799 年显示 | 数据文件 |
-| --- | --- | --- | --- |
-| `CAYMAN` | 开曼群岛殖民隶属及奴役贸易参考 | 是 | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
-| `MARIE_GALANTE` | 玛丽加朗特1759—1763英军短占 | — | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
-| `PORT_EGMONT` | 福克兰群岛Port Egmont英军短期据点范围 | — | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
-
-</details>
-
-<details>
-<summary>非洲（12 条）</summary>
+<summary>非洲（11 条）</summary>
 
 | 记录 ID | 原档案名称 | 1799 年显示 | 数据文件 |
 | --- | --- | --- | --- |
@@ -87,7 +77,6 @@
 | `B39-A-Z021` | 1783年Ada丹麦Fort Kongenstein建堡 | 是 | [eighteenth-century-b39-gold-coast-forts.json](../../data/eighteenth-century-b39-gold-coast-forts.json) |
 | `B39-A-Z026` | 1700—1730 Anomabu Fort Charles英商旧堡 | — | [eighteenth-century-b39-gold-coast-forts.json](../../data/eighteenth-century-b39-gold-coast-forts.json) |
 | `B39-A-Z029` | 1757后Anomabu Fort William英堡完工 | 是 | [eighteenth-century-b39-gold-coast-forts.json](../../data/eighteenth-century-b39-gold-coast-forts.json) |
-| `SENEGAL_STLOUIS` | 圣路易斯堡英军港口占领范围 | — | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
 
 </details>
 
@@ -105,18 +94,9 @@
 
 </details>
 
-<details>
-<summary>欧洲／地中海（1 条）</summary>
-
-| 记录 ID | 原档案名称 | 1799 年显示 | 数据文件 |
-| --- | --- | --- | --- |
-| `ELBA_1796` | 1796—1797英国短期占驻厄尔巴军事港岛 | — | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
-
-</details>
-
 ## 1799 → 1800 年尚待核对的 14 条
 
-[期末台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json) 已查 684 条期末记录，556 条关联到 1800 年公开几何。下表按原 ID 保留 14 条待核记录。原住民政权和活动范围需按其各自证据处理。
+[期末台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json) 已查 692 条期末记录，564 条关联到 1800 年公开几何。下表按原 ID 保留 14 条待核记录。原住民政权和活动范围需按其各自证据处理。
 
 | 记录 ID | 原档案名称 | 数据文件 |
 | --- | --- | --- |

@@ -16,12 +16,12 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 684,
-    "linked_to_1800_public_geometry": 556,
+    "1799_prior_records_reviewed": 692,
+    "linked_to_1800_public_geometry": 564,
     "by_disposition": {
-      "anchor": 305,
+      "anchor": 311,
       "claim_evidence": 7,
-      "continued": 210,
+      "continued": 212,
       "event_history": 11,
       "fiscal_evidence": 35,
       "needs_boundary_or_site_review": 14,
@@ -2096,7 +2096,8 @@
       "resolution": "continued",
       "features_at_1800": [
         "cayman-local-1800"
-      ]
+      ],
+      "notes": "旧框由 CAYMAN_ISLANDS_18C 接替，三岛陆地原形和稳定ID接至1800年。"
     },
     {
       "prior_id": "NASSAU_PORT",
@@ -6886,6 +6887,94 @@
       "features_at_1800": [
         "bermuda-st-george-historic-port-1800"
       ]
+    },
+    {
+      "prior_id": "CAYMAN_ISLANDS_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "开曼三岛 · 地方议事与牙买加联系",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "cayman-local-1800"
+      ],
+      "notes": "按同一稳定ID及地理形状进入1800年。"
+    },
+    {
+      "prior_id": "MARIE_GALANTE_MAIN_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "玛丽加朗特 · 本岛",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "marie-galante-main-island-1800"
+      ],
+      "notes": "按同一稳定ID及地理形状进入1800年。"
+    },
+    {
+      "prior_id": "CAYMAN_HOGSTY_BAY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大开曼 · 猪圈湾旧港",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cayman-hogsty-bay-1800"
+      ],
+      "notes": "按同一稳定ID及地理形状进入1800年。"
+    },
+    {
+      "prior_id": "CAYMAN_FORT_GEORGE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大开曼 · 乔治堡",
+      "prior_record_kind": "military_vicinity",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cayman-fort-george-1800"
+      ],
+      "notes": "按同一稳定ID及地理形状进入1800年。"
+    },
+    {
+      "prior_id": "CAYMAN_PEDRO_ST_JAMES",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大开曼 · 佩德罗圣詹姆斯宅",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cayman-pedro-st-james-1800"
+      ],
+      "notes": "按同一稳定ID及地理形状进入1800年。"
+    },
+    {
+      "prior_id": "CAYMAN_BODDEN_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大开曼 · 博登镇",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cayman-bodden-town-1800"
+      ],
+      "notes": "按同一稳定ID及地理形状进入1800年。"
+    },
+    {
+      "prior_id": "SENEGAL_NDAR_SAINT_LOUIS_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "恩达尔岛 · 圣路易斯堡旧址",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "senegal-ndar-saint-louis-fort-1800"
+      ],
+      "notes": "按同一稳定ID及地理形状进入1800年。"
+    },
+    {
+      "prior_id": "MARIE_GALANTE_GRAND_BOURG",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "玛丽加朗特 · 格朗堡旧港",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "marie-galante-grand-bourg-1800"
+      ],
+      "notes": "按同一稳定ID及地理形状进入1800年。"
     }
   ]
 }
