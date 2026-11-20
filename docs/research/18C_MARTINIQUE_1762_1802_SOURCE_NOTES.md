@@ -1,6 +1,6 @@
 # 第 5Q 批 · 马提尼克两轮英占史料底稿
 
-接续第 5P 批提交 `c0dca45`。本稿给出十八世纪落图对象、退役候选和 1800 年接续去向。
+接续第 5P 批提交 `c0dca45`。本批补绘本岛、罗亚尔港、圣皮埃尔与圣路易堡四条虚线轮廓，新增波旁堡具名点和 14 条十八世纪分期。8 条旧矩形和 6 个代理点归档退出。五处稳定 ID 与几何原样接入 1800 年。
 
 ## 分期和地点
 
@@ -20,9 +20,21 @@
 - [格雷文书档案索引](https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml) · [法国国防历史档案机构马提尼克卷](https://www.servicehistorique.sga.defense.gouv.fr/ark/489232) · [格林尼治馆藏 1794 年罗亚尔堡](https://www.rmg.co.uk/collections/objects/rmgc-object-11958) · [1794 年圣路易堡](https://www.rmg.co.uk/collections/objects/rmgc-object-11960)。
 - [法国奴隶制记忆基金会法令资料](https://memoire-esclavage.org/napoleon-et-le-retablissement-de-lesclavage/lessentiel-dossier-napoleon-et-le-retablissement-de) · [1802 年 7 月 5 日委任原文](https://www.napoleonica.org/document/53538) · [交接笔录档号与日期](https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11)。
 
-## 制图接续
+## 几何来源与配准
 
-- **圣皮埃尔。** 美国国会图书馆 74691322 号约 1763 年圣皮埃尔港城图比例约 1:8,400，北向在左上，可用于描绘街区、岸线和工事。以镇规划报告的旧城研究及河口位置作配准参照。1794 年如沿用图形，需以同期档案复核建成范围与岸线变化。[史图](https://www.loc.gov/item/74691322/) · [圣皮埃尔镇规划报告，第 74 页](https://www.geoportail-urbanisme.gouv.fr/api/document/565cbdb6924d269cab7a124a1d79b5f0/download-file/97225_rapport_20230923.pdf#page=74)。
-- **罗亚尔港城。** RCIN 733042 用于 1762 年堡与城的各自轮廓，RCIN 733041 用于上下文核对。1794 年对照法国海外档案馆 CP 1PL 2227 及两处堡垒的具名档案，分别核圣路易堡、波旁堡和港城。暂待取得 1794 年图件的可配准影像。[法国海外档案馆图档索引](https://recherche-anom.culture.gouv.fr/data/files/anom.diffusion/images/PDF/FRANOM_18001_IR.pdf)。
-- **全岛与跨年。** [十九世纪第七批地图](../../data/nineteenth-century-territorial-areas-batch7.geojson) 的 `martinique-occupation-1800` 已有陆地海岸轮廓，对应 1800–1801 两个年末。它可作为复用的物理岛廓。三条跨年台账记录 `B37-C-Z013`、`B37-C-Z014` 和 `MARTINIQUE_1794` 目前都连到这块全岛图形，绘完两港以后前两条逐港接续。1802 年条约、委任和移交分别登记。[1799→1800 台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json)。
-- **旧框。** 重点清单有 8 条：`MARTINIQUE_1762`、`MARTINIQUE_1794`、`B39-C-Z013`、`B39-C-Z014`、`B39-C-Z015`、`B39-C-Z017`、`B37-C-Z013`、`B37-C-Z014`。另有 1762 年南岸马兰港的 `B39-C-Z016`，先独立找具名地点和行动记录。待各旧记录的分期与档案都有对应去处后，再更新总盘点及跨年台账。
+- **圣皮埃尔。** 描摹美国国会图书馆 74691322 号约 1763 年地图的旧城建成区，沿罗克瑟拉讷河分绘北段和南段。以北岸旧堡教堂遗址及南岸原多明我会教堂、今主教座堂地点配准。罗克瑟拉讷现代河口与史图核查位置相差约 60 米，整体保留 150 米位置不确定度。1794 年及以后共用两岸早期可证的街区核心。[圣皮埃尔原图](https://www.loc.gov/item/74691322/) · [旧城规划报告，第 74 页](https://www.geoportail-urbanisme.gouv.fr/api/document/565cbdb6924d269cab7a124a1d79b5f0/download-file/97225_rapport_20230923.pdf#page=74)。
+- **罗亚尔港旧城。** 描摹美国国会图书馆 2010593374 号 1762 年图所见城镇，沿马达姆河口、岬角底部的陆地和现代老街网校核，保留约 200 米位置不确定度。1760 年德凯吕斯图用于核对旧街区和港湾。1794 年图层保留早期旧城核心，后期扩展街区另待查证。[1762 年图](https://www.loc.gov/item/2010593374/) · [1760 年图](https://www.loc.gov/item/2010593375/)。
+- **圣路易堡和波旁堡。** 圣路易堡沿 1762 年原图的主堡外围描线，另以现存北侧入口和南端棱堡做独立配准，保留约 100 米位置不确定度。波旁堡使用今德塞堡具名点，展示 1794 年 3 月 21–22 日的独立投降阶段。[圣路易堡原图](https://www.loc.gov/item/2010593374/) · [英国国家陆军博物馆两堡图](https://collection.nam.ac.uk/detail.php?acc=1971-02-33-250-1) · [格雷文书 GRE/A234](https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml)。
+- **本岛。** 沿用十九世纪第七批 Natural Earth 的陆地岛廓。两次军事占领与法国恢复殖民统治分别登记。配准使用现代海岸、街网、门墙和具名地点，© OpenStreetMap contributors。[Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/) · [OpenStreetMap 数据许可](https://www.openstreetmap.org/copyright)。
+
+## 旧记录去向与跨年账
+
+| 退役的旧矩形 | 接替记录 |
+| --- | --- |
+| `MARTINIQUE_1762`、`MARTINIQUE_1794`、`B39-C-Z013`、`B39-C-Z017` | `MARTINIQUE_MAIN_ISLAND_18C` |
+| `B39-C-Z014`、`B37-C-Z013` | `MARTINIQUE_FORT_ROYAL_TOWN`。新增圣路易堡和波旁堡独立档案。 |
+| `B39-C-Z015`、`B37-C-Z014` | `MARTINIQUE_ST_PIERRE_TOWN` |
+
+两港、两堡和本岛均以相同稳定 ID 和几何进入 1800 年。1800、1801 年末显示英国军事占领，1802 年交接事件见各档案。1799 年的三条原记录在台账中保留替代去向，待核总数仍为 16 条。[1799→1800 台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json) · [全世纪交接](PRE_1800_CARTOGRAPHY_HANDOFF_20261119.md)。
+
+马兰港 `B39-C-Z016` 后续独立查证。圣皮埃尔 1794 年的取城日与实收战利品数量仍待查看格雷文书原件。法兰西堡 1794 年的扩展街区和其他工事待取得同期可配准图件。[法国海外档案馆图档索引](https://recherche-anom.culture.gouv.fr/data/files/anom.diffusion/images/PDF/FRANOM_18001_IR.pdf)。
