@@ -1,6 +1,6 @@
 # 1497—1799 年制图进展与待办｜主编 35 交接
 
-2026 年 11 月 20 日复核。统计截至第 5N 批。打开 [1799 年地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1799) 可以用「下一年」查看 1800 年的接续。
+2026 年 11 月 20 日复核。统计截至第 5O 批。打开 [1799 年地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1799) 可以用「下一年」查看 1800 年的接续。
 
 ## 当前盘点
 
@@ -8,8 +8,8 @@
 | --- | ---: | --- |
 | 1497—1599 | 原盘点识别为 0 条 | 补清点只有点位或概略范围的加来、图尔奈、帕莱，以及莱伊什／奥法利和芒斯特没收地。 |
 | 1600—1699 | 26 条 | 商站查万丹、苏拉特、胡格利，港堡查海岸角、丹吉尔，另查北美早期聚落。7 条默认隐藏的最大纸面特许范围另有档案。 |
-| 1700—1799 | 306 条，其中 140 条在 1799 年显示 | 先查下方 66 条重点旧框，再处理其余 240 条。 |
-| 合计 | **332 条** | [第 5D 批原始盘点 #457](https://github.com/1959124923wyz-sys/love-British-TV/pull/457) 共 403 条，后续十批累计替换 71 条。 |
+| 1700—1799 | 298 条，其中 140 条在 1799 年显示 | 先查下方 59 条重点旧框，再处理其余 239 条。 |
+| 合计 | **324 条** | [第 5D 批原始盘点 #457](https://github.com/1959124923wyz-sys/love-British-TV/pull/457) 共 403 条，后续十一批累计替换 79 条。 |
 
 计数单位是地图记录。同一地点可有多个时段或多条旧记录。1497—1699 的矩形数沿用 #457 的桌面盘点，十八世纪使用本次主分支数据重新计算。只有点位或尚未入库的范围仍待建立完整名录。
 
@@ -27,7 +27,8 @@
 | 5K | [五大湖与哈德孙湾](18C_GREAT_LAKES_HUDSON_BAY_HANDOFF.md) · [#466](https://github.com/1959124923wyz-sys/love-British-TV/pull/466) | 11 | 334 | 143 | 19 |
 | 5L | [南部战事驻地与福克斯红堡](18C_SOUTHERN_GARRISONS_AND_FORT_ROUGE_HANDOFF.md) | 20 | 314 | 143 | 19 |
 | 5M | [新斯科舍港镇与斯塔滕岛](18C_NOVA_SCOTIA_PORTS_AND_STATEN_ISLAND_HANDOFF.md) | 4 | 310 | 140 | 16 |
-| 5N | [波士顿围城与东、西佛罗里达](18C_BOSTON_AND_FLORIDA_PROVINCES_HANDOFF.md) | 4 | **306** | **140** | **16** |
+| 5N | [波士顿围城与东、西佛罗里达](18C_BOSTON_AND_FLORIDA_PROVINCES_HANDOFF.md) | 4 | 306 | 140 | 16 |
+| 5O | [北美四殖民地与圣尤斯特歇斯](18C_ATLANTIC_PROVINCES_AND_STATIA_HANDOFF.md) | 8 | **298** | **140** | **16** |
 
 更早批次见 [十八世纪制图路线图](18C_CARTOGRAPHY_ROADMAP.md)。第 5J 批发布后，正式站桌面实点了拉茹瓦港 1758 年驱逐、马德堡 1774 年受降，并从 1799 年原位打开新不伦瑞克和爱德华王子岛的 1800 年档案。
 
@@ -37,32 +38,20 @@
 - [x] **第 5L 批清理南部驻堡和红堡。** 星堡按实存土墙绘虚线，南部各驻点、战场及红堡按证据落点。[第 5L 批交接](18C_SOUTHERN_GARRISONS_AND_FORT_ROUGE_HANDOFF.md)
 - [x] **第 5M 批清理新斯科舍港镇和斯塔滕岛。** 三港接续到 1800 年，黑人社区单列，斯塔滕岛旗杆山和海峡岸炮台各自落点。[第 5M 批交接](18C_NOVA_SCOTIA_PORTS_AND_STATEN_ISLAND_HANDOFF.md)
 - [x] **第 5N 批清理波士顿及两佛罗里达。** 落图波士顿旧镇和围城工事，按 1763 与 1764 年文件绘佛罗里达省界，逐堡标出西班牙沿墨西哥湾推进。[第 5N 批交接](18C_BOSTON_AND_FLORIDA_PROVINCES_HANDOFF.md)
-- [ ] **北美余下 4 条重点旧框。** 康涅狄格、佐治亚和南北卡罗来纳先按 Newberry 界线纪年梳理法令和实地勘界，再配始年与后续分期。已找到 [1775 年行政地理数据](https://www.arcgis.com/home/item.html?id=aaf0f38f260c488caf8a2809c6aae5f6)，其中四省仅覆盖该年附近形态。
-- [ ] **加勒比 43 条重点旧框按岛、港和短占时期归并。** 同一岛的驻防、行政和短期军事行动逐项对照。先核现有城港图能接替的记录，再找可配准的历史外廓。
+- [x] **第 5O 批清理北美四殖民地和圣尤斯特歇斯。** 四地按殖民县、教区和司法区分期。圣尤斯特歇斯用主堡、仓储带和锚地接替重复旧框。[第 5O 批交接](18C_ATLANTIC_PROVINCES_AND_STATIA_HANDOFF.md)
+- [ ] **加勒比 40 条重点旧框按岛、港和短占时期归并。** 同一岛的驻防、行政和短期军事行动逐项对照。先合核圣多明各的热雷米、圣尼古拉斯角和太子港重复记录，再做马提尼克的两轮短占和港城档案。
 - [ ] **西非 12 条重点旧框按堡和治理主体核查。** 复用已完成的黄金海岸驻堡。将堡址、港口交易和当地政权分别追到可证期限。与下方跨年表中的奥图阿姆、普兰普兰、温内巴、阿达等一并对照。
 - [ ] **亚洲／印度洋 6 条、欧洲／地中海 1 条重点旧框。** 单列短占、驻防和行政。对照已完成的安汶—班达、马六甲、孟买等较细专题及各自档案。
 - [ ] **把 16 条跨年待核逐条清账。** 有接续证据时更新稳定 ID、去向与首期状态。只有贸易、政治关系或原住民活动证据的条目保留对应语义。对旧矩形与跨年待核重叠的条目，同时更新两处状态。
 - [ ] **补建 16、17 世纪点位及缺绘名录。** 记录时间、主体、地点和证据，分别查清可配准史图、定界条款及地方驻点。18 世纪其余旧框也按证据分别保留事件、点、线或面。
 - [ ] **接续十九世纪研究归档。** [研究草稿 PR #463](https://github.com/1959124923wyz-sys/love-British-TV/pull/463) 为并行资料入库，待审内容含 59 个专题、150 个章节、1,980 条分章年表和 1,520 条史料索引。历史专题先核源档和候选地图 ID，地图发布状态查 [正式章节](../../data/chapters.json) 和 [专题索引](../../data/stories/index.json)。
 
-## 66 条重点旧框逐条清单
+## 59 条重点旧框逐条清单
 
 逐条对照原盘点的 113 条驻防、行政及占领记录。下列 ID 在本次基线上仍使用旧矩形。同一地点的档案可能已经有较细的图形，后续须核验分期覆盖再登记替代。
 
 <details>
-<summary>北美大陆／北大西洋（4 条）</summary>
-
-| 记录 ID | 原档案名称 | 1799 年显示 | 数据文件 |
-| --- | --- | --- | --- |
-| `CONNECTICUT` | 康涅狄格英属殖民行政参考 | — | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
-| `GEORGIA_COLONY` | 1732年后佐治亚英属殖民行政参考 | — | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
-| `NC_COLONY` | 北卡罗来纳英属殖民行政参考 | — | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
-| `SC_COLONY` | 南卡罗来纳英属殖民行政参考 | — | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
-
-</details>
-
-<details>
-<summary>加勒比／中南美（43 条）</summary>
+<summary>加勒比／中南美（40 条）</summary>
 
 | 记录 ID | 原档案名称 | 1799 年显示 | 数据文件 |
 | --- | --- | --- | --- |
@@ -71,14 +60,11 @@
 | `B36-Z115` | 1793—1797英军热雷米海港占据 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
 | `B36-Z116` | 1793—1797英军圣尼古拉斯角驻军 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
 | `B36-Z117` | 1794—1797英军太子港占据 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
-| `B36-Z119` | 1781圣尤斯特歇斯Oranjestad英军抄没商产 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
-| `B36-Z120` | 1781圣尤斯特歇斯港湾英军短期控制 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
 | `B36-Z125` | 1782年巴哈马拿骚被西班牙军占领 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
 | `B37-C-Z009` | 1781—1792 Tobago法军控制Scarborough | — | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
 | `B37-C-Z010` | 1793后Tobago Scarborough英军夺岛 | 是 | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
 | `B37-C-Z013` | 1794—1799英国占Martinique Fort de France | 是 | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
 | `B37-C-Z014` | 1794—1799英国占Martinique Saint Pierre港 | 是 | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
-| `B37-C-Z022` | 1781英军短占St Eustatius Oranjestad | — | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
 | `B37-C-Z024` | 1793—1797英军Saint Domingue Jérémie海港 | — | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
 | `B37-C-Z025` | 1793—1797英军Saint Domingue Môle St Nicolas | — | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
 | `B37-C-Z026` | 1794—1797英军Saint Domingue Port au Prince | — | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |

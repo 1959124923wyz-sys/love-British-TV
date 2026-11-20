@@ -4,10 +4,10 @@
   "scope": "逐项对照1699年旧区域记录和1700年实际启用的同形参考、岛屿外廓和具名地点。地域、法律声索类别及挂接的地方地点均保留独立身份。",
   "counts": {
     "legacy_geometry_retained": 16,
-    "legacy_replacement_envelope": 3,
+    "legacy_replacement_envelope": 2,
     "named_sites": 3,
     "no_area_inherited": 1,
-    "redrawn_land": 4
+    "redrawn_land": 5
   },
   "records": [
     {
@@ -140,13 +140,14 @@
     },
     {
       "previous_id": "claim-connecticut-1662",
-      "display_at_1700": "legacy_replacement_envelope",
+      "display_at_1700": "redrawn_land",
       "records_at_1700": [
         {
           "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
-          "id": "CONNECTICUT"
+          "id": "CT_COLONIAL_COUNTIES_1700"
         }
-      ]
+      ],
+      "notes": "1700年改绘东部本土县区范围。1662年特许状的西扩文字与后来的异地争议另查。"
     },
     {
       "previous_id": "claim-new-york-duke-1674",
