@@ -16,16 +16,16 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 664,
-    "linked_to_1800_public_geometry": 533,
+    "1799_prior_records_reviewed": 676,
+    "linked_to_1800_public_geometry": 547,
     "by_disposition": {
-      "anchor": 306,
+      "anchor": 307,
       "claim_evidence": 7,
-      "continued": 184,
+      "continued": 197,
       "event_history": 11,
       "fiscal_evidence": 35,
-      "needs_boundary_or_site_review": 16,
-      "network_evidence": 59,
+      "needs_boundary_or_site_review": 15,
+      "network_evidence": 58,
       "occupation": 16,
       "political_relation_evidence": 11,
       "renewed_scope": 19
@@ -390,10 +390,11 @@
       "source_dataset": "data/eighteenth-century-b37-caribbean.json",
       "name_zh": "18世纪St Kitts Basseterre英殖民港",
       "prior_record_kind": "administration",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
         "basseterre-port-1800"
-      ]
+      ],
+      "notes": "旧框由 BASSETERRE_HISTORIC_TOWN 接替，1800年沿用相同的稳定ID与几何。"
     },
     {
       "prior_id": "B37-C-Z032",
@@ -403,33 +404,41 @@
       "resolution": "anchor",
       "features_at_1800": [
         "charlestown-nevis-port-1800"
-      ]
+      ],
+      "notes": "旧框由 CHARLESTOWN_NEVIS_PORT 接替，1800年沿用相同的稳定ID与几何。"
     },
     {
       "prior_id": "B37-C-Z033",
       "source_dataset": "data/eighteenth-century-b37-caribbean.json",
       "name_zh": "18世纪Antigua St Johns殖民商港",
       "prior_record_kind": "administration",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
         "st-johns-antigua-port-1800"
-      ]
+      ],
+      "notes": "旧框由 ST_JOHNS_ANTIGUA_HISTORIC_TOWN 接替，1800年沿用相同的稳定ID与几何。"
     },
     {
       "prior_id": "B37-C-Z034",
       "source_dataset": "data/eighteenth-century-b37-caribbean.json",
       "name_zh": "18世纪Antigua English Harbour军港",
       "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "antigua-naval-dockyard-1800"
+      ],
+      "notes": "旧框由 ANTIGUA_ENGLISH_HARBOUR_DOCKYARD 接替，1800年沿用相同的稳定ID与几何。"
     },
     {
       "prior_id": "B37-C-Z035",
       "source_dataset": "data/eighteenth-century-b37-caribbean.json",
       "name_zh": "18世纪Montserrat Plymouth英殖民定居港",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "plymouth-montserrat-port-1800"
+      ],
+      "notes": "旧框由 PLYMOUTH_MONTSERRAT_HISTORIC_PORT 接替，1800年沿用相同的稳定ID与几何。"
     },
     {
       "prior_id": "B37-C-Z036",
@@ -2027,7 +2036,8 @@
       "resolution": "continued",
       "features_at_1800": [
         "st-kitts-colonial-1800"
-      ]
+      ],
+      "notes": "旧框由 ST_KITTS_MAIN_ISLAND_18C 接替，1800年沿用相同的稳定ID与几何。"
     },
     {
       "prior_id": "NEVIS",
@@ -2037,7 +2047,8 @@
       "resolution": "continued",
       "features_at_1800": [
         "nevis-colonial-1800"
-      ]
+      ],
+      "notes": "旧框由 NEVIS_MAIN_ISLAND_18C 接替，1800年沿用相同的稳定ID与几何。"
     },
     {
       "prior_id": "ANTIGUA",
@@ -2047,7 +2058,8 @@
       "resolution": "continued",
       "features_at_1800": [
         "antigua-colonial-1800"
-      ]
+      ],
+      "notes": "旧框由 ANTIGUA_MAIN_ISLAND_18C 接替，1800年沿用相同的稳定ID与几何。"
     },
     {
       "prior_id": "MONTSERRAT",
@@ -2068,7 +2080,8 @@
       "resolution": "continued",
       "features_at_1800": [
         "barbuda-lease-1800"
-      ]
+      ],
+      "notes": "旧框由 BARBUDA_CODRINGTON_LEASE_18C 接替，1800年沿用相同的稳定ID与几何。"
     },
     {
       "prior_id": "CAYMAN",
@@ -6664,6 +6677,126 @@
       "resolution": "occupation",
       "features_at_1800": [
         "tobago-scarborough-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "ST_KITTS_MAIN_ISLAND_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣基茨本岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "st-kitts-colonial-1800"
+      ]
+    },
+    {
+      "prior_id": "NEVIS_MAIN_ISLAND_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "尼维斯本岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "nevis-colonial-1800"
+      ]
+    },
+    {
+      "prior_id": "ANTIGUA_MAIN_ISLAND_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "安提瓜本岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "antigua-colonial-1800"
+      ]
+    },
+    {
+      "prior_id": "BARBUDA_CODRINGTON_LEASE_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "巴布达 · 科德林顿家族承租地",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "barbuda-lease-1800"
+      ]
+    },
+    {
+      "prior_id": "BASSETERRE_HISTORIC_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "巴斯特尔 · 港城旧街区",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "basseterre-port-1800"
+      ]
+    },
+    {
+      "prior_id": "ST_JOHNS_ANTIGUA_HISTORIC_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣约翰 · 港城旧街区",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "st-johns-antigua-port-1800"
+      ]
+    },
+    {
+      "prior_id": "ANTIGUA_ENGLISH_HARBOUR_DOCKYARD",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "英吉利港 · 皇家海军主船坞",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "antigua-naval-dockyard-1800"
+      ]
+    },
+    {
+      "prior_id": "BRIMSTONE_FORT_GEORGE_LATE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布里姆斯通山 · 乔治堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "brimstone-fort-george-1800"
+      ]
+    },
+    {
+      "prior_id": "NEVIS_FORT_CHARLES_CORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "尼维斯 · 查尔斯堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "nevis-fort-charles-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTOWN_WATERFRONT_STOREYARD",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "查尔斯敦 · 滨海仓地",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "charlestown-waterfront-storeyard-1800"
+      ]
+    },
+    {
+      "prior_id": "CHARLESTOWN_NEVIS_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "查尔斯敦 · 旧港",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "charlestown-nevis-port-1800"
+      ]
+    },
+    {
+      "prior_id": "PLYMOUTH_MONTSERRAT_HISTORIC_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "蒙特塞拉特 · 普利茅斯旧港",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "plymouth-montserrat-port-1800"
       ]
     }
   ]
