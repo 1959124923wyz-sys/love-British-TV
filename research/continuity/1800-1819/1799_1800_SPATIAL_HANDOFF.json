@@ -16,8 +16,8 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 656,
-    "linked_to_1800_public_geometry": 525,
+    "1799_prior_records_reviewed": 661,
+    "linked_to_1800_public_geometry": 530,
     "by_disposition": {
       "anchor": 308,
       "claim_evidence": 7,
@@ -26,7 +26,7 @@
       "fiscal_evidence": 35,
       "needs_boundary_or_site_review": 16,
       "network_evidence": 59,
-      "occupation": 8,
+      "occupation": 13,
       "political_relation_evidence": 11,
       "renewed_scope": 19
     },
@@ -361,9 +361,9 @@
       "prior_record_kind": "military",
       "resolution": "occupation",
       "features_at_1800": [
-        "martinique-occupation-1800"
+        "martinique-fort-royal-town-1800"
       ],
-      "notes": "1802年法国接收，1809年英军再次占领，1814年交还法国。"
+      "notes": "旧框由 MARTINIQUE_FORT_ROYAL_TOWN 接替。1800年沿用替代记录的稳定ID和几何，1802年9月14日交还法国。"
     },
     {
       "prior_id": "B37-C-Z014",
@@ -372,9 +372,9 @@
       "prior_record_kind": "military",
       "resolution": "occupation",
       "features_at_1800": [
-        "martinique-occupation-1800"
+        "martinique-saint-pierre-town-1800"
       ],
-      "notes": "1802年法国接收，1809年英军再次占领，1814年交还法国。"
+      "notes": "旧框由 MARTINIQUE_ST_PIERRE_TOWN 接替。1800年沿用替代记录的稳定ID和几何，1802年9月14日交还法国。"
     },
     {
       "prior_id": "B37-C-Z030",
@@ -2016,7 +2016,7 @@
       "features_at_1800": [
         "martinique-occupation-1800"
       ],
-      "notes": "1802年法国接收，1809年英军再次占领，1814年交还法国。"
+      "notes": "旧框由 MARTINIQUE_MAIN_ISLAND_18C 接替。1800年沿用替代记录的稳定ID和几何，1802年9月14日交还法国。"
     },
     {
       "prior_id": "ST_KITTS",
@@ -6579,6 +6579,61 @@
         "saint-john-charter-port-1800"
       ],
       "notes": "沿同一具名地点接续1800年。"
+    },
+    {
+      "prior_id": "MARTINIQUE_MAIN_ISLAND_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "马提尼克本岛",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "martinique-occupation-1800"
+      ],
+      "notes": "以同一几何和稳定ID接入1800年。1802年9月14日法方接收。"
+    },
+    {
+      "prior_id": "MARTINIQUE_FORT_ROYAL_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "罗亚尔港 · 旧城街廓",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "martinique-fort-royal-town-1800"
+      ],
+      "notes": "以同一几何和稳定ID接入1800年。1802年9月14日法方接收。"
+    },
+    {
+      "prior_id": "MARTINIQUE_ST_PIERRE_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣皮埃尔 · 旧城与滨海街区",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "martinique-saint-pierre-town-1800"
+      ],
+      "notes": "以同一几何和稳定ID接入1800年。1802年9月14日法方接收。"
+    },
+    {
+      "prior_id": "MARTINIQUE_FORT_SAINT_LOUIS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣路易堡 · 港湾岬角",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "martinique-fort-saint-louis-1800"
+      ],
+      "notes": "以同一几何和稳定ID接入1800年。1802年9月14日法方接收。"
+    },
+    {
+      "prior_id": "MARTINIQUE_FORT_BOURBON",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "波旁堡 · 今德塞堡",
+      "prior_record_kind": "military",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "martinique-fort-bourbon-1800"
+      ],
+      "notes": "以同一几何和稳定ID接入1800年。1802年9月14日法方接收。"
     }
   ]
 }

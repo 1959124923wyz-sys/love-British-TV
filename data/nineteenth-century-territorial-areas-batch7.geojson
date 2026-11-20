@@ -6041,6 +6041,41 @@
       "id": "19CT7-ATLANTIC-5J-19",
       "label": "美国国会图书馆｜1780年代沃拉斯托克河测图",
       "url": "https://www.loc.gov/item/73694671/"
+    },
+    {
+      "id": "19CT7-MART-ROYAL-LOC",
+      "label": "美国国会图书馆，1762年罗亚尔港堡镇图",
+      "url": "https://www.loc.gov/item/2010593374/"
+    },
+    {
+      "id": "19CT7-MART-PIERRE-LOC",
+      "label": "美国国会图书馆，约1763年圣皮埃尔港城图",
+      "url": "https://www.loc.gov/item/74691322/"
+    },
+    {
+      "id": "19CT7-MART-GREY",
+      "label": "杜伦大学格雷文书，马提尼克战役、投降与民事公告",
+      "url": "https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml"
+    },
+    {
+      "id": "19CT7-MART-NAM",
+      "label": "英国国家陆军博物馆，波旁堡与圣路易堡",
+      "url": "https://collection.nam.ac.uk/detail.php?acc=1971-02-33-250-1"
+    },
+    {
+      "id": "19CT7-MART-APPOINTMENT",
+      "label": "拿破仑基金会，1802年7月5日两岛接收委任",
+      "url": "https://www.napoleonica.org/document/53538"
+    },
+    {
+      "id": "19CT7-MART-TRANSFER",
+      "label": "1802年9月14日马提尼克交接笔录档号",
+      "url": "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11"
+    },
+    {
+      "id": "19CT7-MART-OSM",
+      "label": "OpenStreetMap 街口、教堂、门墙与海岸定位",
+      "url": "https://www.openstreetmap.org/copyright"
     }
   ],
   "features": [
@@ -10557,18 +10592,22 @@
         "end_year": 1801,
         "display_kind": "military_impact",
         "label_type": "英国军事占领",
-        "summary_zh": "英军在1794年战役后占领马提尼克。1802年《亚眠和约》后交还法国。",
+        "summary_zh": "英军1794年战役后占领马提尼克。1802年《亚眠和约》约定归还，法方代表维拉雷-茹瓦约斯于9月14日在罗亚尔港接收。",
         "source_ids": [
           "19CT7-AMIENS",
           "19CT7-FR-ANTILLES",
           "19CT7-MARTINIQUE1814",
-          "19CT7-NE-LAND"
+          "19CT7-NE-LAND",
+          "19CT7-MART-APPOINTMENT",
+          "19CT7-MART-TRANSFER"
         ],
         "source_urls": [
           "https://www.oas.org/sap/peacefund/belizeandguatemala/timelinedocuments/amiensTreaty.pdf",
           "https://www.persee.fr/doc/outre_0300-9513_1974_num_61_223_1769_t1_0338_0000_2",
           "https://www.usni.org/magazines/proceedings/1942/august/naval-history-martinique",
-          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+          "https://www.napoleonica.org/document/53538",
+          "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11"
         ],
         "related_event_ids": [],
         "mapping_method": "historical_island_jurisdiction_on_generalized_physical_coast; complete land-only island components; no maritime envelope or territorial area claim",
@@ -59185,6 +59224,705 @@
       "geometry": {
         "type": "Point",
         "coordinates": [-66.06, 45.27]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "martinique-fort-royal-town-1800",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.073266,
+              14.604358
+            ],
+            [
+              -61.073401,
+              14.604005
+            ],
+            [
+              -61.073299,
+              14.603665
+            ],
+            [
+              -61.073292,
+              14.603151
+            ],
+            [
+              -61.073434,
+              14.602856
+            ],
+            [
+              -61.073381,
+              14.602593
+            ],
+            [
+              -61.073062,
+              14.60244
+            ],
+            [
+              -61.072653,
+              14.602646
+            ],
+            [
+              -61.072023,
+              14.602511
+            ],
+            [
+              -61.071554,
+              14.60261
+            ],
+            [
+              -61.070952,
+              14.602379
+            ],
+            [
+              -61.070416,
+              14.602541
+            ],
+            [
+              -61.069814,
+              14.60231
+            ],
+            [
+              -61.069319,
+              14.602164
+            ],
+            [
+              -61.069015,
+              14.602796
+            ],
+            [
+              -61.069052,
+              14.603298
+            ],
+            [
+              -61.068765,
+              14.603804
+            ],
+            [
+              -61.068606,
+              14.604453
+            ],
+            [
+              -61.068456,
+              14.605146
+            ],
+            [
+              -61.069189,
+              14.605052
+            ],
+            [
+              -61.070219,
+              14.605164
+            ],
+            [
+              -61.071165,
+              14.605124
+            ],
+            [
+              -61.071349,
+              14.604734
+            ],
+            [
+              -61.071769,
+              14.604786
+            ],
+            [
+              -61.072668,
+              14.604654
+            ],
+            [
+              -61.073108,
+              14.604552
+            ],
+            [
+              -61.073266,
+              14.604358
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "罗亚尔港 · 英占港城",
+        "stable_id": "martinique-fort-royal-town",
+        "start_year": 1800,
+        "end_year": 1801,
+        "display_kind": "military_impact",
+        "label_type": "英国军事占领",
+        "summary_zh": "英国自1794年占领港城。1802年9月14日法方在罗亚尔港重新接收马提尼克。",
+        "source_ids": [
+          "19CT7-MART-ROYAL-LOC",
+          "19CT7-MART-GREY",
+          "19CT7-MART-APPOINTMENT",
+          "19CT7-MART-TRANSFER",
+          "19CT7-MART-OSM"
+        ],
+        "source_urls": [
+          "https://www.loc.gov/item/2010593374/",
+          "https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml",
+          "https://www.napoleonica.org/document/53538",
+          "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "LoC 2010593374, town core hand-traced from the main map; similarity fit from Rivière Madame outlet and peninsula head, checked against LoC 2010593375 and the modern street grid. Later phases retain the historic core.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "prior_record_ids": [
+          "MARTINIQUE_FORT_ROYAL_TOWN",
+          "B39-C-Z014",
+          "B37-C-Z013"
+        ],
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 200
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "martinique-saint-pierre-town-1800",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.181685,
+                14.754042
+              ],
+              [
+                -61.181261,
+                14.753546
+              ],
+              [
+                -61.180606,
+                14.752701
+              ],
+              [
+                -61.179952,
+                14.751856
+              ],
+              [
+                -61.179399,
+                14.750929
+              ],
+              [
+                -61.179297,
+                14.750226
+              ],
+              [
+                -61.179041,
+                14.749362
+              ],
+              [
+                -61.178656,
+                14.748852
+              ],
+              [
+                -61.178258,
+                14.74887
+              ],
+              [
+                -61.177878,
+                14.749275
+              ],
+              [
+                -61.177296,
+                14.749624
+              ],
+              [
+                -61.1773,
+                14.749971
+              ],
+              [
+                -61.177899,
+                14.750227
+              ],
+              [
+                -61.178269,
+                14.750699
+              ],
+              [
+                -61.178328,
+                14.751069
+              ],
+              [
+                -61.177824,
+                14.751389
+              ],
+              [
+                -61.177436,
+                14.751884
+              ],
+              [
+                -61.178044,
+                14.752048
+              ],
+              [
+                -61.178725,
+                14.751836
+              ],
+              [
+                -61.179043,
+                14.752066
+              ],
+              [
+                -61.179359,
+                14.752515
+              ],
+              [
+                -61.179868,
+                14.753109
+              ],
+              [
+                -61.180471,
+                14.753712
+              ],
+              [
+                -61.180982,
+                14.754087
+              ],
+              [
+                -61.181685,
+                14.754042
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.178443,
+                14.748321
+              ],
+              [
+                -61.178119,
+                14.747963
+              ],
+              [
+                -61.177734,
+                14.747453
+              ],
+              [
+                -61.17707,
+                14.746698
+              ],
+              [
+                -61.176688,
+                14.745969
+              ],
+              [
+                -61.176458,
+                14.744834
+              ],
+              [
+                -61.176324,
+                14.743488
+              ],
+              [
+                -61.176275,
+                14.742241
+              ],
+              [
+                -61.176265,
+                14.740979
+              ],
+              [
+                -61.176331,
+                14.739907
+              ],
+              [
+                -61.176563,
+                14.738686
+              ],
+              [
+                -61.176671,
+                14.73738
+              ],
+              [
+                -61.17634,
+                14.736894
+              ],
+              [
+                -61.175861,
+                14.737161
+              ],
+              [
+                -61.175627,
+                14.737815
+              ],
+              [
+                -61.175028,
+                14.738346
+              ],
+              [
+                -61.174122,
+                14.738337
+              ],
+              [
+                -61.173958,
+                14.739053
+              ],
+              [
+                -61.174232,
+                14.739735
+              ],
+              [
+                -61.17385,
+                14.740358
+              ],
+              [
+                -61.173837,
+                14.740887
+              ],
+              [
+                -61.173969,
+                14.741666
+              ],
+              [
+                -61.173515,
+                14.742447
+              ],
+              [
+                -61.173541,
+                14.742961
+              ],
+              [
+                -61.174022,
+                14.743261
+              ],
+              [
+                -61.173771,
+                14.744097
+              ],
+              [
+                -61.173727,
+                14.744549
+              ],
+              [
+                -61.174208,
+                14.744849
+              ],
+              [
+                -61.17439,
+                14.745304
+              ],
+              [
+                -61.175004,
+                14.745597
+              ],
+              [
+                -61.17532,
+                14.746046
+              ],
+              [
+                -61.175206,
+                14.746438
+              ],
+              [
+                -61.175757,
+                14.746798
+              ],
+              [
+                -61.176105,
+                14.747104
+              ],
+              [
+                -61.175887,
+                14.747797
+              ],
+              [
+                -61.176039,
+                14.748176
+              ],
+              [
+                -61.17677,
+                14.748425
+              ],
+              [
+                -61.177365,
+                14.748333
+              ],
+              [
+                -61.177973,
+                14.748497
+              ],
+              [
+                -61.178443,
+                14.748321
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "圣皮埃尔 · 英占商港",
+        "stable_id": "martinique-saint-pierre-town",
+        "start_year": 1800,
+        "end_year": 1801,
+        "display_kind": "military_impact",
+        "label_type": "英国军事占领",
+        "summary_zh": "英国1794年攻占圣皮埃尔，英国驻占延续至马提尼克归还。1802年9月14日，全岛由法方接收。",
+        "source_ids": [
+          "19CT7-MART-PIERRE-LOC",
+          "19CT7-MART-GREY",
+          "19CT7-MART-APPOINTMENT",
+          "19CT7-MART-TRANSFER",
+          "19CT7-MART-OSM"
+        ],
+        "source_urls": [
+          "https://www.loc.gov/item/74691322/",
+          "https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml",
+          "https://www.napoleonica.org/document/53538",
+          "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "LoC 74691322, north and south historic built blocks on either side of Roxelane, similarity fit to the Fort and Mouillage church sites. Roxelane outlet cross-check about 60 m. Later phases retain the mapped historic core.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "prior_record_ids": [
+          "MARTINIQUE_ST_PIERRE_TOWN",
+          "B39-C-Z015",
+          "B37-C-Z014"
+        ],
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 150
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "martinique-fort-saint-louis-1800",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.067148,
+              14.601616
+            ],
+            [
+              -61.067241,
+              14.601428
+            ],
+            [
+              -61.067221,
+              14.601226
+            ],
+            [
+              -61.066935,
+              14.601107
+            ],
+            [
+              -61.066818,
+              14.600886
+            ],
+            [
+              -61.066693,
+              14.600494
+            ],
+            [
+              -61.066778,
+              14.600187
+            ],
+            [
+              -61.066702,
+              14.599857
+            ],
+            [
+              -61.066678,
+              14.599448
+            ],
+            [
+              -61.066773,
+              14.599094
+            ],
+            [
+              -61.066782,
+              14.5987
+            ],
+            [
+              -61.066715,
+              14.598297
+            ],
+            [
+              -61.066627,
+              14.597884
+            ],
+            [
+              -61.066413,
+              14.597618
+            ],
+            [
+              -61.06609,
+              14.59752
+            ],
+            [
+              -61.065867,
+              14.597622
+            ],
+            [
+              -61.065894,
+              14.597891
+            ],
+            [
+              -61.06599,
+              14.59818
+            ],
+            [
+              -61.065855,
+              14.5984
+            ],
+            [
+              -61.065894,
+              14.598778
+            ],
+            [
+              -61.065837,
+              14.599162
+            ],
+            [
+              -61.065696,
+              14.599341
+            ],
+            [
+              -61.06548,
+              14.599537
+            ],
+            [
+              -61.065648,
+              14.599896
+            ],
+            [
+              -61.065859,
+              14.600302
+            ],
+            [
+              -61.065948,
+              14.600767
+            ],
+            [
+              -61.065935,
+              14.601197
+            ],
+            [
+              -61.065987,
+              14.601684
+            ],
+            [
+              -61.066105,
+              14.601956
+            ],
+            [
+              -61.066355,
+              14.601853
+            ],
+            [
+              -61.066592,
+              14.601937
+            ],
+            [
+              -61.066851,
+              14.601736
+            ],
+            [
+              -61.067148,
+              14.601616
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "圣路易堡 · 英占要塞",
+        "stable_id": "martinique-fort-saint-louis",
+        "start_year": 1800,
+        "end_year": 1801,
+        "display_kind": "military_impact",
+        "label_type": "英国军事占领",
+        "summary_zh": "英军于1794年3月20日夺取圣路易堡。罗亚尔港到1802年9月14日交还法国。",
+        "source_ids": [
+          "19CT7-MART-ROYAL-LOC",
+          "19CT7-MART-NAM",
+          "19CT7-MART-APPOINTMENT",
+          "19CT7-MART-TRANSFER",
+          "19CT7-MART-OSM"
+        ],
+        "source_urls": [
+          "https://www.loc.gov/item/2010593374/",
+          "https://collection.nam.ac.uk/detail.php?acc=1971-02-33-250-1",
+          "https://www.napoleonica.org/document/53538",
+          "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "LoC 2010593374 historical citadel outer trace, separate similarity fit at the surviving fort entrance and south bastion; cross-checked against the inset and extant wall alignment.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "prior_record_ids": [
+          "MARTINIQUE_FORT_SAINT_LOUIS",
+          "B39-C-Z014",
+          "B37-C-Z013"
+        ],
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "martinique-fort-bourbon-1800",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.065935,
+          14.616449
+        ]
+      },
+      "properties": {
+        "name": "波旁堡 · 英占要塞",
+        "stable_id": "martinique-fort-bourbon",
+        "start_year": 1800,
+        "end_year": 1801,
+        "display_kind": "military_impact",
+        "label_type": "英国军事占领",
+        "summary_zh": "波旁堡1794年3月议降，随马提尼克处于英方军事占领。1802年法国恢复对岛上要塞的管辖。",
+        "source_ids": [
+          "19CT7-MART-GREY",
+          "19CT7-MART-NAM",
+          "19CT7-MART-APPOINTMENT",
+          "19CT7-MART-TRANSFER",
+          "19CT7-MART-OSM"
+        ],
+        "source_urls": [
+          "https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml",
+          "https://collection.nam.ac.uk/detail.php?acc=1971-02-33-250-1",
+          "https://www.napoleonica.org/document/53538",
+          "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "related_event_ids": [],
+        "mapping_method": "Named site of Fort Bourbon / Fort Desaix (OSM way 710698711); capitulation attested in GRE/A234a–d.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "prior_record_ids": [
+          "MARTINIQUE_FORT_BOURBON"
+        ],
+        "geometry_precision": "named_place_anchor"
       }
     }
   ]

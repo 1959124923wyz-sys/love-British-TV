@@ -6346,7 +6346,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "MARTINIQUE_MAIN_ISLAND_18C"
     },
     {
       "id": "MARTINIQUE_1794",
@@ -6374,7 +6375,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "MARTINIQUE_MAIN_ISLAND_18C"
     },
     {
       "id": "ST_KITTS",
@@ -8914,7 +8916,8 @@
       "category": "dated_city_or_port_core",
       "historical_city_wall_survey": false,
       "area_sqkm": null,
-      "screen_radius_not_ground_area": true
+      "screen_radius_not_ground_area": true,
+      "superseded_by": "MARTINIQUE_FORT_ROYAL_TOWN"
     },
     {
       "id": "PORT_OF_SPAIN",
@@ -31789,6 +31792,51 @@
       "uncertain_line_dashed": true,
       "area_sqkm": null,
       "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "MARTINIQUE_FORT_BOURBON",
+      "stable_id": "martinique-fort-bourbon",
+      "title": "波旁堡 · 今德塞堡",
+      "kind": "wartime_occupation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.065935,
+          14.616449
+        ]
+      },
+      "geometry_precision": "named_place_anchor",
+      "mapping_method": "Named site of Fort Bourbon / Fort Desaix (OSM way 710698711); capitulation attested in GRE/A234a–d.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml",
+        "https://collection.nam.ac.uk/detail.php?acc=1971-02-33-250-1",
+        "https://mapcarta.com/fr/19487320",
+        "https://www.napoleonica.org/document/53538",
+        "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "kind": "wartime_occupation",
+          "title": "波旁堡 · 3月21–22日议降",
+          "note": "罗尚博所部在圣路易堡失守后议降。格雷文书保存21至22日的法文条款和英译。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "kind": "military",
+          "title": "波旁堡 · 英占时期",
+          "note": "1794年议降后的要塞随马提尼克处于英国军事占领。"
+        }
+      ],
+      "cross_century_feature_id": "martinique-fort-bourbon-1800"
     }
   ],
   "regional_zones": [
@@ -91251,6 +91299,1201 @@
         -62.984905,
         17.48656
       ]
+    },
+    {
+      "id": "MARTINIQUE_MAIN_ISLAND_18C",
+      "stable_id": "martinique-19c-islands",
+      "title": "马提尼克本岛",
+      "kind": "wartime_occupation",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.810414,
+              14.461982
+            ],
+            [
+              -60.810414,
+              14.468736
+            ],
+            [
+              -60.81664,
+              14.480902
+            ],
+            [
+              -60.819814,
+              14.496649
+            ],
+            [
+              -60.825266,
+              14.510403
+            ],
+            [
+              -60.838368,
+              14.516588
+            ],
+            [
+              -60.830922,
+              14.527086
+            ],
+            [
+              -60.824778,
+              14.530219
+            ],
+            [
+              -60.832997,
+              14.541002
+            ],
+            [
+              -60.836415,
+              14.552965
+            ],
+            [
+              -60.835846,
+              14.56566
+            ],
+            [
+              -60.832143,
+              14.578599
+            ],
+            [
+              -60.845204,
+              14.571234
+            ],
+            [
+              -60.84496,
+              14.588609
+            ],
+            [
+              -60.848378,
+              14.596096
+            ],
+            [
+              -60.865061,
+              14.601711
+            ],
+            [
+              -60.873158,
+              14.619615
+            ],
+            [
+              -60.893381,
+              14.630805
+            ],
+            [
+              -60.901031,
+              14.638577
+            ],
+            [
+              -60.907297,
+              14.653754
+            ],
+            [
+              -60.894358,
+              14.659817
+            ],
+            [
+              -60.88679,
+              14.660549
+            ],
+            [
+              -60.920277,
+              14.674872
+            ],
+            [
+              -60.928863,
+              14.66352
+            ],
+            [
+              -60.937489,
+              14.666409
+            ],
+            [
+              -60.93928,
+              14.674994
+            ],
+            [
+              -60.927113,
+              14.681098
+            ],
+            [
+              -60.93456,
+              14.688463
+            ],
+            [
+              -60.907297,
+              14.702826
+            ],
+            [
+              -60.912668,
+              14.708564
+            ],
+            [
+              -60.918935,
+              14.712226
+            ],
+            [
+              -60.926178,
+              14.712714
+            ],
+            [
+              -60.93456,
+              14.70897
+            ],
+            [
+              -60.936676,
+              14.731269
+            ],
+            [
+              -60.933827,
+              14.750312
+            ],
+            [
+              -60.926178,
+              14.755561
+            ],
+            [
+              -60.914133,
+              14.736314
+            ],
+            [
+              -60.892974,
+              14.757392
+            ],
+            [
+              -60.895375,
+              14.763821
+            ],
+            [
+              -60.892445,
+              14.767768
+            ],
+            [
+              -60.879303,
+              14.777289
+            ],
+            [
+              -60.903188,
+              14.777086
+            ],
+            [
+              -60.926584,
+              14.771145
+            ],
+            [
+              -60.946889,
+              14.761379
+            ],
+            [
+              -60.961293,
+              14.749945
+            ],
+            [
+              -60.978993,
+              14.784735
+            ],
+            [
+              -60.990631,
+              14.787909
+            ],
+            [
+              -60.995676,
+              14.795356
+            ],
+            [
+              -60.998158,
+              14.804185
+            ],
+            [
+              -61.002268,
+              14.811428
+            ],
+            [
+              -61.018625,
+              14.821723
+            ],
+            [
+              -61.057851,
+              14.83869
+            ],
+            [
+              -61.101959,
+              14.866197
+            ],
+            [
+              -61.135894,
+              14.876899
+            ],
+            [
+              -61.170969,
+              14.87637
+            ],
+            [
+              -61.210601,
+              14.854438
+            ],
+            [
+              -61.219472,
+              14.846503
+            ],
+            [
+              -61.226186,
+              14.835517
+            ],
+            [
+              -61.228831,
+              14.821967
+            ],
+            [
+              -61.226186,
+              14.807766
+            ],
+            [
+              -61.219106,
+              14.795478
+            ],
+            [
+              -61.190541,
+              14.766343
+            ],
+            [
+              -61.182973,
+              14.756415
+            ],
+            [
+              -61.177113,
+              14.74494
+            ],
+            [
+              -61.174794,
+              14.732896
+            ],
+            [
+              -61.18163,
+              14.713039
+            ],
+            [
+              -61.170237,
+              14.696438
+            ],
+            [
+              -61.167348,
+              14.68476
+            ],
+            [
+              -61.159576,
+              14.666938
+            ],
+            [
+              -61.141591,
+              14.650092
+            ],
+            [
+              -61.105865,
+              14.626451
+            ],
+            [
+              -61.095937,
+              14.610256
+            ],
+            [
+              -61.091624,
+              14.605943
+            ],
+            [
+              -61.085927,
+              14.604641
+            ],
+            [
+              -61.043568,
+              14.605455
+            ],
+            [
+              -61.016469,
+              14.612779
+            ],
+            [
+              -61.014312,
+              14.595852
+            ],
+            [
+              -60.996002,
+              14.565009
+            ],
+            [
+              -61.003326,
+              14.550523
+            ],
+            [
+              -61.01773,
+              14.545315
+            ],
+            [
+              -61.033274,
+              14.549872
+            ],
+            [
+              -61.043813,
+              14.565009
+            ],
+            [
+              -61.052317,
+              14.557074
+            ],
+            [
+              -61.078521,
+              14.544582
+            ],
+            [
+              -61.105865,
+              14.516588
+            ],
+            [
+              -61.092397,
+              14.508287
+            ],
+            [
+              -61.091624,
+              14.496772
+            ],
+            [
+              -61.069569,
+              14.466702
+            ],
+            [
+              -61.061187,
+              14.461982
+            ],
+            [
+              -61.046376,
+              14.464179
+            ],
+            [
+              -61.021596,
+              14.474026
+            ],
+            [
+              -61.005971,
+              14.476264
+            ],
+            [
+              -60.947621,
+              14.468736
+            ],
+            [
+              -60.920033,
+              14.473375
+            ],
+            [
+              -60.913401,
+              14.472113
+            ],
+            [
+              -60.914133,
+              14.461982
+            ],
+            [
+              -60.898101,
+              14.460883
+            ],
+            [
+              -60.882232,
+              14.470526
+            ],
+            [
+              -60.86852,
+              14.475979
+            ],
+            [
+              -60.858876,
+              14.461982
+            ],
+            [
+              -60.859853,
+              14.446723
+            ],
+            [
+              -60.869496,
+              14.441474
+            ],
+            [
+              -60.880767,
+              14.437974
+            ],
+            [
+              -60.88679,
+              14.427802
+            ],
+            [
+              -60.882476,
+              14.413275
+            ],
+            [
+              -60.870595,
+              14.408108
+            ],
+            [
+              -60.856435,
+              14.409369
+            ],
+            [
+              -60.845204,
+              14.41413
+            ],
+            [
+              -60.834828,
+              14.427558
+            ],
+            [
+              -60.822662,
+              14.456692
+            ],
+            [
+              -60.810414,
+              14.461982
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "mapping_method": "Natural Earth 1:10m main island coastline reused from martinique-occupation-1800. Colonial occupation and restitution dated independently.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://cwfjdrlsc.omeka.net/items/show/14",
+        "https://loyalist.lib.unb.ca/sites/default/files/WO%2034%20Volume%2055_Document%20List.pdf",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-fort-royal-1762-fort-de-france-martinique-14deg3632n-61deg0424w",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml",
+        "https://memoire-esclavage.org/napoleon-et-le-retablissement-de-lesclavage/lessentiel-dossier-napoleon-et-le-retablissement-de",
+        "https://www.napoleonica.org/document/53538",
+        "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11",
+        "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+      ],
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "kind": "wartime_occupation",
+          "title": "马提尼克本岛 · 英方接收殖民地",
+          "note": "1762年2月4日罗亚尔港守军投降。德拉图什提交全岛投降条件后，蒙克顿于2月16日在圣皮埃尔接收殖民地。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1793,
+          "kind": "foreign_occupation",
+          "title": "马提尼克本岛 · 法国恢复殖民统治",
+          "note": "七年战争结束后马提尼克交还法国。种植园生产与奴役制度继续。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "kind": "wartime_occupation",
+          "title": "马提尼克本岛 · 英国再次占领",
+          "note": "1794年英军先攻取圣皮埃尔，再占罗亚尔港，波旁堡于3月21至22日议降。法国1794年废奴法令未在英占马提尼克实施。岛上奴役制度延续。"
+        }
+      ],
+      "cross_century_feature_id": "martinique-occupation-1800",
+      "bbox": [
+        -61.228831,
+        14.408108,
+        -60.810414,
+        14.876899
+      ]
+    },
+    {
+      "id": "MARTINIQUE_FORT_ROYAL_TOWN",
+      "stable_id": "martinique-fort-royal-town",
+      "title": "罗亚尔港 · 旧城街廓",
+      "kind": "wartime_occupation",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.073266,
+              14.604358
+            ],
+            [
+              -61.073401,
+              14.604005
+            ],
+            [
+              -61.073299,
+              14.603665
+            ],
+            [
+              -61.073292,
+              14.603151
+            ],
+            [
+              -61.073434,
+              14.602856
+            ],
+            [
+              -61.073381,
+              14.602593
+            ],
+            [
+              -61.073062,
+              14.60244
+            ],
+            [
+              -61.072653,
+              14.602646
+            ],
+            [
+              -61.072023,
+              14.602511
+            ],
+            [
+              -61.071554,
+              14.60261
+            ],
+            [
+              -61.070952,
+              14.602379
+            ],
+            [
+              -61.070416,
+              14.602541
+            ],
+            [
+              -61.069814,
+              14.60231
+            ],
+            [
+              -61.069319,
+              14.602164
+            ],
+            [
+              -61.069015,
+              14.602796
+            ],
+            [
+              -61.069052,
+              14.603298
+            ],
+            [
+              -61.068765,
+              14.603804
+            ],
+            [
+              -61.068606,
+              14.604453
+            ],
+            [
+              -61.068456,
+              14.605146
+            ],
+            [
+              -61.069189,
+              14.605052
+            ],
+            [
+              -61.070219,
+              14.605164
+            ],
+            [
+              -61.071165,
+              14.605124
+            ],
+            [
+              -61.071349,
+              14.604734
+            ],
+            [
+              -61.071769,
+              14.604786
+            ],
+            [
+              -61.072668,
+              14.604654
+            ],
+            [
+              -61.073108,
+              14.604552
+            ],
+            [
+              -61.073266,
+              14.604358
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "mapping_method": "LoC 2010593374, town core hand-traced from the main map; similarity fit from Rivière Madame outlet and peninsula head, checked against LoC 2010593375 and the modern street grid. Later phases retain the historic core.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.loc.gov/item/2010593374/",
+        "https://www.loc.gov/item/2010593375/",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-fort-royal-1762-fort-de-france-martinique-14deg3632n-61deg0424w",
+        "https://cwfjdrlsc.omeka.net/items/show/14",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-11958",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml",
+        "https://www.napoleonica.org/document/53538",
+        "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "kind": "wartime_occupation",
+          "title": "罗亚尔港 · 英军进入港城",
+          "note": "英军攻下周边高地后，罗亚尔港要塞于2月4日投降。蒙克顿和罗德尼随后继续接收各区。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1793,
+          "kind": "foreign_occupation",
+          "title": "罗亚尔港 · 法军与殖民政府回驻",
+          "note": "马提尼克交回法国以后，罗亚尔港恢复法方港务与防务。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "kind": "wartime_occupation",
+          "title": "罗亚尔港 · 英军占领港城",
+          "note": "格雷和杰维斯于3月12日要求交出港城与两堡。3月20日英军攻取圣路易堡，法方同日提出议降。英方3月30日发布公告恢复路易十六时期的民事法庭。"
+        }
+      ],
+      "cross_century_feature_id": "martinique-fort-royal-town-1800",
+      "bbox": [
+        -61.073434,
+        14.602164,
+        -61.068456,
+        14.605164
+      ],
+      "position_uncertainty_m": 200
+    },
+    {
+      "id": "MARTINIQUE_ST_PIERRE_TOWN",
+      "stable_id": "martinique-saint-pierre-town",
+      "title": "圣皮埃尔 · 旧城与滨海街区",
+      "kind": "wartime_occupation",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.181685,
+                14.754042
+              ],
+              [
+                -61.181261,
+                14.753546
+              ],
+              [
+                -61.180606,
+                14.752701
+              ],
+              [
+                -61.179952,
+                14.751856
+              ],
+              [
+                -61.179399,
+                14.750929
+              ],
+              [
+                -61.179297,
+                14.750226
+              ],
+              [
+                -61.179041,
+                14.749362
+              ],
+              [
+                -61.178656,
+                14.748852
+              ],
+              [
+                -61.178258,
+                14.74887
+              ],
+              [
+                -61.177878,
+                14.749275
+              ],
+              [
+                -61.177296,
+                14.749624
+              ],
+              [
+                -61.1773,
+                14.749971
+              ],
+              [
+                -61.177899,
+                14.750227
+              ],
+              [
+                -61.178269,
+                14.750699
+              ],
+              [
+                -61.178328,
+                14.751069
+              ],
+              [
+                -61.177824,
+                14.751389
+              ],
+              [
+                -61.177436,
+                14.751884
+              ],
+              [
+                -61.178044,
+                14.752048
+              ],
+              [
+                -61.178725,
+                14.751836
+              ],
+              [
+                -61.179043,
+                14.752066
+              ],
+              [
+                -61.179359,
+                14.752515
+              ],
+              [
+                -61.179868,
+                14.753109
+              ],
+              [
+                -61.180471,
+                14.753712
+              ],
+              [
+                -61.180982,
+                14.754087
+              ],
+              [
+                -61.181685,
+                14.754042
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.178443,
+                14.748321
+              ],
+              [
+                -61.178119,
+                14.747963
+              ],
+              [
+                -61.177734,
+                14.747453
+              ],
+              [
+                -61.17707,
+                14.746698
+              ],
+              [
+                -61.176688,
+                14.745969
+              ],
+              [
+                -61.176458,
+                14.744834
+              ],
+              [
+                -61.176324,
+                14.743488
+              ],
+              [
+                -61.176275,
+                14.742241
+              ],
+              [
+                -61.176265,
+                14.740979
+              ],
+              [
+                -61.176331,
+                14.739907
+              ],
+              [
+                -61.176563,
+                14.738686
+              ],
+              [
+                -61.176671,
+                14.73738
+              ],
+              [
+                -61.17634,
+                14.736894
+              ],
+              [
+                -61.175861,
+                14.737161
+              ],
+              [
+                -61.175627,
+                14.737815
+              ],
+              [
+                -61.175028,
+                14.738346
+              ],
+              [
+                -61.174122,
+                14.738337
+              ],
+              [
+                -61.173958,
+                14.739053
+              ],
+              [
+                -61.174232,
+                14.739735
+              ],
+              [
+                -61.17385,
+                14.740358
+              ],
+              [
+                -61.173837,
+                14.740887
+              ],
+              [
+                -61.173969,
+                14.741666
+              ],
+              [
+                -61.173515,
+                14.742447
+              ],
+              [
+                -61.173541,
+                14.742961
+              ],
+              [
+                -61.174022,
+                14.743261
+              ],
+              [
+                -61.173771,
+                14.744097
+              ],
+              [
+                -61.173727,
+                14.744549
+              ],
+              [
+                -61.174208,
+                14.744849
+              ],
+              [
+                -61.17439,
+                14.745304
+              ],
+              [
+                -61.175004,
+                14.745597
+              ],
+              [
+                -61.17532,
+                14.746046
+              ],
+              [
+                -61.175206,
+                14.746438
+              ],
+              [
+                -61.175757,
+                14.746798
+              ],
+              [
+                -61.176105,
+                14.747104
+              ],
+              [
+                -61.175887,
+                14.747797
+              ],
+              [
+                -61.176039,
+                14.748176
+              ],
+              [
+                -61.17677,
+                14.748425
+              ],
+              [
+                -61.177365,
+                14.748333
+              ],
+              [
+                -61.177973,
+                14.748497
+              ],
+              [
+                -61.178443,
+                14.748321
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "mapping_method": "LoC 74691322, north and south historic built blocks on either side of Roxelane, similarity fit to the Fort and Mouillage church sites. Roxelane outlet cross-check about 60 m. Later phases retain the mapped historic core.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.loc.gov/item/74691322/",
+        "https://www.geoportail-urbanisme.gouv.fr/api/document/565cbdb6924d269cab7a124a1d79b5f0/download-file/97225_rapport_20230923.pdf",
+        "https://cwfjdrlsc.omeka.net/items/show/14",
+        "https://loyalist.lib.unb.ca/sites/default/files/WO%2034%20Volume%2055_Document%20List.pdf",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml",
+        "https://www.napoleonica.org/document/53538",
+        "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "kind": "wartime_occupation",
+          "title": "圣皮埃尔 · 英军接收港城",
+          "note": "2月16日蒙克顿由圣皮埃尔接收港城和马提尼克殖民地。投降条款涉及解除居民武装、宣誓以及财产与糖业。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1793,
+          "kind": "foreign_occupation",
+          "title": "圣皮埃尔 · 法属糖业商港",
+          "note": "港城重归法国。圣皮埃尔沿岸商港继续依赖糖业和奴隶贸易。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "kind": "wartime_occupation",
+          "title": "圣皮埃尔 · 英军夺港与战利品",
+          "note": "1794年2月英军逼近圣皮埃尔。2月17日邓达斯仍在劝降，随后汇报取城。英方函件分别记载拟扣财物、战利品代理、港口物资与战利品。"
+        }
+      ],
+      "cross_century_feature_id": "martinique-saint-pierre-town-1800",
+      "bbox": [
+        -61.181685,
+        14.736894,
+        -61.173515,
+        14.754087
+      ],
+      "position_uncertainty_m": 150
+    },
+    {
+      "id": "MARTINIQUE_FORT_SAINT_LOUIS",
+      "stable_id": "martinique-fort-saint-louis",
+      "title": "圣路易堡 · 港湾岬角",
+      "kind": "wartime_occupation",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.067148,
+              14.601616
+            ],
+            [
+              -61.067241,
+              14.601428
+            ],
+            [
+              -61.067221,
+              14.601226
+            ],
+            [
+              -61.066935,
+              14.601107
+            ],
+            [
+              -61.066818,
+              14.600886
+            ],
+            [
+              -61.066693,
+              14.600494
+            ],
+            [
+              -61.066778,
+              14.600187
+            ],
+            [
+              -61.066702,
+              14.599857
+            ],
+            [
+              -61.066678,
+              14.599448
+            ],
+            [
+              -61.066773,
+              14.599094
+            ],
+            [
+              -61.066782,
+              14.5987
+            ],
+            [
+              -61.066715,
+              14.598297
+            ],
+            [
+              -61.066627,
+              14.597884
+            ],
+            [
+              -61.066413,
+              14.597618
+            ],
+            [
+              -61.06609,
+              14.59752
+            ],
+            [
+              -61.065867,
+              14.597622
+            ],
+            [
+              -61.065894,
+              14.597891
+            ],
+            [
+              -61.06599,
+              14.59818
+            ],
+            [
+              -61.065855,
+              14.5984
+            ],
+            [
+              -61.065894,
+              14.598778
+            ],
+            [
+              -61.065837,
+              14.599162
+            ],
+            [
+              -61.065696,
+              14.599341
+            ],
+            [
+              -61.06548,
+              14.599537
+            ],
+            [
+              -61.065648,
+              14.599896
+            ],
+            [
+              -61.065859,
+              14.600302
+            ],
+            [
+              -61.065948,
+              14.600767
+            ],
+            [
+              -61.065935,
+              14.601197
+            ],
+            [
+              -61.065987,
+              14.601684
+            ],
+            [
+              -61.066105,
+              14.601956
+            ],
+            [
+              -61.066355,
+              14.601853
+            ],
+            [
+              -61.066592,
+              14.601937
+            ],
+            [
+              -61.066851,
+              14.601736
+            ],
+            [
+              -61.067148,
+              14.601616
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "mapping_method": "LoC 2010593374 historical citadel outer trace, separate similarity fit at the surviving fort entrance and south bastion; cross-checked against the inset and extant wall alignment.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.loc.gov/item/2010593374/",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-fort-royal-1762-fort-de-france-martinique-14deg3632n-61deg0424w",
+        "https://cwfjdrlsc.omeka.net/items/show/14",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-11960",
+        "https://collection.nam.ac.uk/detail.php?acc=1971-02-33-250-1",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml",
+        "https://www.napoleonica.org/document/53538",
+        "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "kind": "wartime_occupation",
+          "title": "罗亚尔堡 · 2月4日守军投降",
+          "note": "守军在蒙克顿和罗德尼的围攻下于2月4日投降。全岛交接另在圣皮埃尔举行。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1793,
+          "kind": "foreign_occupation",
+          "title": "圣路易堡 · 法方港防",
+          "note": "1763年殖民地交还法国，岬角要塞继续守卫港口。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "kind": "wartime_occupation",
+          "title": "圣路易堡 · 3月20日英军攻取",
+          "note": "1794年3月20日，英舰斑马号指挥官福克纳率部夺取圣路易堡。波旁堡守军随后另行议降。"
+        }
+      ],
+      "cross_century_feature_id": "martinique-fort-saint-louis-1800",
+      "bbox": [
+        -61.067241,
+        14.59752,
+        -61.06548,
+        14.601956
+      ],
+      "position_uncertainty_m": 100
     }
   ],
   "regional_lines": [

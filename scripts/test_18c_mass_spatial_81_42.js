@@ -436,6 +436,39 @@ for(const [file,ids] of oldSaintDomingue){
  const {zones,sites}=JSON.parse(read('data/'+file));
  for(const id of ids) a(atlantic([...zones,...sites].find(row=>row.id===id)?.superseded_by),id);
 }
+const martiniqueAreas=[
+ ['MARTINIQUE_MAIN_ISLAND_18C','martinique-occupation-1800','Polygon'],
+ ['MARTINIQUE_FORT_ROYAL_TOWN','martinique-fort-royal-town-1800','Polygon'],
+ ['MARTINIQUE_ST_PIERRE_TOWN','martinique-saint-pierre-town-1800','MultiPolygon'],
+ ['MARTINIQUE_FORT_SAINT_LOUIS','martinique-fort-saint-louis-1800','Polygon'],
+];
+for(const [id, successor, type] of martiniqueAreas){
+ const item=atlantic(id);
+ a.equal(item.geometry.type,type,id);
+ a.equal(item.uncertain_line_dashed,true,id);
+ a.equal(stageAt(id,1761),undefined,id);
+ a.equal(stageAt(id,1762).kind,'wartime_occupation',id);
+ a.equal(stageAt(id,1763).kind,'foreign_occupation',id);
+ a.equal(stageAt(id,1793).kind,'foreign_occupation',id);
+ a.equal(stageAt(id,1794).kind,'wartime_occupation',id);
+ a.equal(stageAt(id,1799).kind,'wartime_occupation',id);
+ a.deepEqual(item.geometry,late(successor).geometry,id);
+ a.equal(item.stable_id,late(successor).properties.stable_id,id);
+ a.equal(late(successor).properties.end_year,1801,id);
+}
+const bourbon=atlantic('MARTINIQUE_FORT_BOURBON');
+a.equal(stageAt(bourbon.id,1793),undefined);
+a.match(stageAt(bourbon.id,1794).title,/21–22日/);
+a.deepEqual(bourbon.geometry,late(bourbon.cross_century_feature_id).geometry);
+for(const [file, ids] of [
+ ['eighteenth-century-mass-schematic-zones-1700-1799.json',['MARTINIQUE_1762','MARTINIQUE_1794','FORT_DE_FRANCE']],
+ ['eighteenth-century-b37-caribbean.json',['B37-C-Z013','B37-C-Z014','B37-C-P013','B37-C-P014']],
+ ['eighteenth-century-b39-caribbean-1759-1763.json',
+  ['B39-C-Z013','B39-C-Z014','B39-C-Z015','B39-C-Z017','B39-C-P013','B39-C-P014','B39-C-P015']],
+]){
+ const {zones,sites}=JSON.parse(read('data/'+file));
+ for(const id of ids) a(atlantic([...zones,...sites].find(row=>row.id===id)?.superseded_by),id);
+}
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));
 a(html.includes('js/eighteenth-mass-spatial.js?v='));
