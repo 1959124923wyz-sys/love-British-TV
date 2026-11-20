@@ -16,19 +16,19 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 676,
-    "linked_to_1800_public_geometry": 547,
+    "1799_prior_records_reviewed": 684,
+    "linked_to_1800_public_geometry": 556,
     "by_disposition": {
-      "anchor": 307,
+      "anchor": 305,
       "claim_evidence": 7,
-      "continued": 197,
+      "continued": 210,
       "event_history": 11,
       "fiscal_evidence": 35,
-      "needs_boundary_or_site_review": 15,
+      "needs_boundary_or_site_review": 14,
       "network_evidence": 58,
       "occupation": 16,
       "political_relation_evidence": 11,
-      "renewed_scope": 19
+      "renewed_scope": 17
     },
     "continue_in_original_public_layer": 1
   },
@@ -382,8 +382,11 @@
       "source_dataset": "data/eighteenth-century-b37-caribbean.json",
       "name_zh": "18世纪Bermuda St George英方殖民港",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bermuda-st-george-historic-port-1800"
+      ],
+      "notes": "旧框由 BERMUDA_ST_GEORGE_HISTORIC_PORT 接替，1800年沿用相同地理和稳定ID。"
     },
     {
       "prior_id": "B37-C-Z031",
@@ -445,10 +448,11 @@
       "source_dataset": "data/eighteenth-century-b37-caribbean.json",
       "name_zh": "18世纪Bahamas Nassau英国殖民港镇",
       "prior_record_kind": "administration",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
         "nassau-port-1800"
-      ]
+      ],
+      "notes": "旧框由 NASSAU_HISTORIC_PORT_TOWN 接替，1800年沿用相同地理和稳定ID。"
     },
     {
       "prior_id": "B37-I-Z001",
@@ -934,11 +938,11 @@
       "source_dataset": "data/eighteenth-century-b39-caribbean-1759-1763.json",
       "name_zh": "1763 Grenadines岛链英方声索并存地方权属",
       "prior_record_kind": "paper_claim",
-      "resolution": "renewed_scope",
+      "resolution": "continued",
       "features_at_1800": [
         "grenadines-continuity-1800"
       ],
-      "notes": "按主要陆地岛屿承接，保存岛链中各行政关系。"
+      "notes": "旧框由 GRENADINES_LAND_ISLANDS_18C 接替，1800年沿用相同地理和稳定ID。"
     },
     {
       "prior_id": "B39-C-Z036",
@@ -1990,11 +1994,11 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "格林纳丁斯群岛1763后英方声索",
       "prior_record_kind": "paper_claim",
-      "resolution": "renewed_scope",
+      "resolution": "continued",
       "features_at_1800": [
         "grenadines-continuity-1800"
       ],
-      "notes": "按主要陆地岛屿承接，保存岛链中各行政关系。"
+      "notes": "旧框由 GRENADINES_LAND_ISLANDS_18C 接替，1800年沿用相同地理和稳定ID。"
     },
     {
       "prior_id": "ST_VINCENT",
@@ -2004,7 +2008,8 @@
       "resolution": "continued",
       "features_at_1800": [
         "st-vincent-continuity-1800"
-      ]
+      ],
+      "notes": "旧框由 ST_VINCENT_MAIN_ISLAND_18C 接替，1800年沿用相同地理和稳定ID。"
     },
     {
       "prior_id": "TOBAGO",
@@ -2098,10 +2103,11 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "拿骚1783年归英后的岛港行政参考",
       "prior_record_kind": "administration",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
         "nassau-port-1800"
-      ]
+      ],
+      "notes": "旧框由 NASSAU_HISTORIC_PORT_TOWN 接替，1800年沿用相同地理和稳定ID。"
     },
     {
       "prior_id": "BELIZE_LOGGING",
@@ -3575,20 +3581,22 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "圣乔治 · 卡里纳日港",
       "prior_record_kind": "administration",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
         "grenada-st-georges-port-1800"
-      ]
+      ],
+      "notes": "原站址升格为史图所见港城街廓或主堡围墙，1800年沿用原形与稳定ID。"
     },
     {
       "prior_id": "GRENADA_FORT_GEORGE",
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "圣乔治 · 皇家堡／乔治堡",
       "prior_record_kind": "administration",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
         "grenada-fort-george-1800"
-      ]
+      ],
+      "notes": "原站址升格为史图所见港城街廓或主堡围墙，1800年沿用原形与稳定ID。"
     },
     {
       "prior_id": "GRENADA_FORT_FREDERICK",
@@ -6797,6 +6805,86 @@
       "resolution": "anchor",
       "features_at_1800": [
         "plymouth-montserrat-port-1800"
+      ]
+    },
+    {
+      "prior_id": "ST_VINCENT_MAIN_ISLAND_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "圣文森特本岛",
+      "prior_record_kind": "administration",
+      "resolution": "continued",
+      "features_at_1800": [
+        "st-vincent-continuity-1800"
+      ]
+    },
+    {
+      "prior_id": "GRENADINES_LAND_ISLANDS_18C",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "格林纳丁斯 · 主要岛屿",
+      "prior_record_kind": "paper_claim",
+      "resolution": "continued",
+      "features_at_1800": [
+        "grenadines-continuity-1800"
+      ]
+    },
+    {
+      "prior_id": "NASSAU_HISTORIC_PORT_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "拿骚 · 港城旧街区",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "nassau-port-1800"
+      ]
+    },
+    {
+      "prior_id": "NASSAU_OLD_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "拿骚旧堡 · 西侧港防",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "nassau-old-fort-1800"
+      ]
+    },
+    {
+      "prior_id": "NASSAU_FORT_MONTAGU",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "拿骚东港 · 蒙塔古堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "nassau-fort-montagu-1800"
+      ]
+    },
+    {
+      "prior_id": "NASSAU_FORT_FINCASTLE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "拿骚 · 芬卡斯尔堡",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "nassau-fort-fincastle-1800"
+      ]
+    },
+    {
+      "prior_id": "KINGSTOWN_HISTORIC_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "金斯敦 · 港城旧街区",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "kingstown-historic-port-1800"
+      ]
+    },
+    {
+      "prior_id": "BERMUDA_ST_GEORGE_HISTORIC_PORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "百慕大 · 圣乔治旧港",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "bermuda-st-george-historic-port-1800"
       ]
     }
   ]
