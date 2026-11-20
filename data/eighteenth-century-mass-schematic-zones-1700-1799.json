@@ -12859,31 +12859,43 @@
           "start_year": 1717,
           "end_year": 1717,
           "title": "丘吉尔河上游商站 · 公司重建木站",
-          "note": "詹姆斯·奈特率哈德孙湾公司人员在西岸旧站地段重建木堡。"
+          "note": "詹姆斯·奈特率哈德孙湾公司人员在西岸旧站地段重建木堡。河口在此之前已有原住民狩猎和捕鱼活动。",
+          "kind": "company_post"
         },
         {
           "start_year": 1718,
           "end_year": 1730,
-          "title": "丘吉尔河上游商站 · 木堡贸易",
-          "note": "公司以木堡为贸易点，向克里、德内和因纽特交易者购取皮毛及其他物资。"
+          "title": "丘吉尔河上游商站 · 克里与德内贸易和供应",
+          "note": "克里交易者到访旧木站。一些德内家庭为商站供给肉、鱼和其他物资。公司在1718至1722年派小船向北沿岸接触因纽特交易者，早期接触多在沿岸发生。",
+          "kind": "company_post"
         },
         {
           "start_year": 1731,
           "end_year": 1739,
           "title": "丘吉尔河上游商站 · 石堡筹建期间",
-          "note": "公司在上游维持商站，同时在河口另建石堡。石堡于1740年开始入驻。"
+          "note": "公司在上游维持商站，同时在河口另建石堡。河口地区的德内与克里家庭经营季节性狩猎、捕鱼和供给活动。",
+          "kind": "company_post"
         },
         {
           "start_year": 1783,
           "end_year": 1783,
           "title": "丘吉尔河上游商站 · 赫恩恢复驻站",
-          "note": "法军破坏河口石堡后，塞缪尔·赫恩率公司人员在上游旧址复建商站。"
+          "note": "法军破坏河口石堡后，塞缪尔·赫恩率公司人员在上游旧址复建商站。",
+          "kind": "company_post"
         },
         {
           "start_year": 1784,
+          "end_year": 1789,
+          "title": "丘吉尔河上游商站 · 恢复皮毛贸易",
+          "note": "哈德孙湾公司继续经营。当地德内和克里家庭提供食物、衣物及运输劳务。公司通过海岸航行和不同群体进行贸易。",
+          "kind": "company_post"
+        },
+        {
+          "start_year": 1790,
           "end_year": 1799,
-          "title": "丘吉尔河上游商站 · 哈德孙湾公司贸易",
-          "note": "商站继续经营皮毛贸易。当地交易者提供货物、物资和劳务。"
+          "title": "丘吉尔河上游商站 · 哈德孙湾公司贸易与原住民供给",
+          "note": "德内和克里家庭提供食物、衣物、引路和运输。公司自1790年前后停止例行的北向贸易小船后，部分卡里布因纽特人长途来到丘吉尔自主交易，带来包括白狐皮在内的货物。",
+          "kind": "company_post"
         }
       ],
       "source_urls": [
@@ -12892,7 +12904,13 @@
         "https://www.parcs.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover1",
         "https://www.mhs.mb.ca/docs/sites/capeMerry.shtml",
         "https://mhs.mb.ca/docs/mb_history/20/fortchurchill.shtml",
-        "https://manitoba.ca/chc/archives/hbca/post_maps/manitoba.html"
+        "https://manitoba.ca/chc/archives/hbca/post_maps/manitoba.html",
+        "https://parks.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover1",
+        "https://sdfntrust.ca/history/",
+        "https://www.inuitcontact.ca/index_/vignettes_en/early_trade_hbc/",
+        "https://www.collectionscanada.gc.ca/obj/thesescanada/vol2/002/MR38067.PDF",
+        "https://files.eric.ed.gov/fulltext/ED365505.pdf",
+        "https://pam.minisisinc.com/DIGITALOBJECTS/Access/HBCA%20Microfilm/1M33/B42-A-125.pdf"
       ],
       "geometry_method": "Locality of the Old Fort & Churchill Site marker on the Parks Canada 2022 Churchill regional map. Similarity registration in NAD83 / UTM 15N using Prince of Wales Fort, Cape Merry and Sloop Cove. The recreational map symbol marks the site area; the building and stockade remain untraced.",
       "geometry": {
@@ -27607,6 +27625,20 @@
       "kind": "military",
       "periods": [
         {
+          "start_year": 1700,
+          "end_year": 1703,
+          "kind": "diplomacy",
+          "title": "塞康第 · 阿汉塔各派与英格兰公司交涉",
+          "note": "1694年和1698年的本地武装行动先后迫使英国公司撤离。1700至1701年英格兰公司数次试图重设商站。阿汉塔内部各派与阿多姆、英荷商团的关系并不一致。"
+        },
+        {
+          "start_year": 1704,
+          "end_year": 1726,
+          "kind": "company_post",
+          "title": "塞康第 · 皇家非洲公司重设商站",
+          "note": "皇家非洲公司自1704年起重新经营塞康第商站。塞康第一带的商人同英方驻点、荷兰橙堡以及内地客商交涉。"
+        },
+        {
           "start_year": 1727,
           "end_year": 1749,
           "title": "塞康第 · 英方堡垒",
@@ -27624,13 +27656,24 @@
           "title": "塞康第 · 荷方摧毁英堡",
           "note": "荷方在1782年拿下英堡并将其摧毁。",
           "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799,
+          "kind": "historic_ruins",
+          "title": "塞康第 · 英方旧堡遗址",
+          "note": "荷方1782年攻占并拆毁英国堡，旧堡所在地位于仍由荷方驻守的橙堡以北。"
         }
       ],
       "source_urls": [
         "https://www.slaveryimages.org/database/image-result.php?objectid=92",
         "https://www.rmg.co.uk/collections/archive/rmgc-object-486977",
         "https://upload.wikimedia.org/wikipedia/commons/d/d8/A_history_of_the_Gold_Coast_and_Ashanti_from_the_earliest_times_to_the_commencement_of_the_twentieth_century_%28IA_historyofgoldcoa00clarrich%29.pdf",
-        "https://en.wikipedia.org/wiki/Fort_Sekondi"
+        "https://fonteshistoriaeafricanae.co.uk/wp-content/uploads/2024/02/The-English-in-West-Africa-1691-1699-Part-3.pdf",
+        "https://gmmb.gov.gh/fort-orange-sekondi-1670s/",
+        "https://www.atlasofmutualheritage.nl/page/6179/sekondi",
+        "https://journals.openedition.org/etudesafricaines/pdf/17982",
+        "https://press-files.anu.edu.au/downloads/press/n5284/html/05_blakley.xhtml"
       ],
       "geometry_method": "Approximate English Fort George site on the separately named northern hill. The Smith view and Pye file distinguish it from Dutch Orange; the centre is a secondary location reference.",
       "geometry_precision": "named_place_anchor",
@@ -27646,7 +27689,8 @@
           -1.7095,
           4.9415
         ]
-      }
+      },
+      "cross_century_feature_id": "sekondi-english-fort-ruins-1800"
     },
     {
       "id": "GOLD_COAST_ENGLISH_KOMENDA_FORT",
@@ -33993,6 +34037,817 @@
         "https://rarebooksocietyofindia.org/book_archive/196174216674_10151324018256675.pdf",
         "https://www.openstreetmap.org/way/367827492",
         "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_precision": "named_place_anchor",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "GREAT_DISMAL_TOWN_LABOR_CAMP",
+      "stable_id": "great-dismal-town-labor-camp",
+      "title": "大迪斯默尔沼泽 · 迪斯默尔镇劳动营",
+      "kind": "company_post",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5527,
+          36.6472
+        ]
+      },
+      "geometry_method": "1781年罗尚博手稿标Dismall town。联邦保护区规划第69页确认旧劳动营在华盛顿排水渠西端标识附近，以具名渠口为位置参照。",
+      "position_uncertainty_m": 350,
+      "periods": [
+        {
+          "start_year": 1764,
+          "end_year": 1781,
+          "kind": "company_post",
+          "title": "迪斯默尔镇 · 被奴役的土地公司工人",
+          "note": "土地公司购入54名被奴役的男女和儿童。工人居住在沼泽西侧的迪斯默尔镇营地，挖渠、伐木和搬运木料。1781年罗尚博馆藏手稿标出了劳动营。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/gm71002173/",
+        "https://www.fws.gov/apps/rivers/carp/carp/sites/default/files/documents/Comprehensive%20Conservation%20Plan%20-%20Great%20Dismal%20Swamp%20-%202006.pdf",
+        "https://encyclopediavirginia.org/entries/the-great-dismal-swamp/",
+        "https://www.ncpedia.org/great-dismal-swamp",
+        "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/dismal-swamp-company"
+      ],
+      "geometry_precision": "named_place_anchor",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SAVI_HUEDA_PALACE_1727",
+      "stable_id": "savi-hueda-palace-site",
+      "title": "萨维 · 韦达王宫旧址",
+      "kind": "conflict_damage",
+      "periods": [
+        {
+          "start_year": 1727,
+          "end_year": 1727,
+          "title": "萨维 · 达荷美军攻毁韦达王都",
+          "note": "1727年3月9日，达荷美军渡过托霍湖，攻下萨维并焚毁韦达王宫，数天后又烧毁城内欧洲商馆。居民逃离，一些俘虏被押往阿波美。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1728,
+          "end_year": 1728,
+          "title": "萨维 · 韦达人尝试重建",
+          "note": "韦达人一度回到萨维重建。达荷美军重返后毁去新建房屋。",
+          "kind": "resistance"
+        },
+        {
+          "start_year": 1733,
+          "end_year": 1733,
+          "title": "萨维 · 韦达王族获准返回",
+          "note": "达荷美阿加贾准许韦达王族阿卡穆返回旧都萨维，条件是承认达荷美的宗主权。",
+          "kind": "diplomacy"
+        }
+      ],
+      "source_urls": [
+        "https://doi.org/10.1080/00438243.1997.9980353",
+        "https://www.academia.edu/figures/51881379/figure-2-excavated-areas-in-central-savi-inset-at-top-left",
+        "https://static1.squarespace.com/static/5bd0e66f8d97400eb0099556/t/5bdaf37a562fa73fc15829e5/1541075834811/Nyame%2BAkuma%2BIssue%2B046-Article%2B02.pdf",
+        "https://library.au.int/hueda-whydah-country-and-town-3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B",
+        "https://dokumen.pub/ouidah-the-social-history-of-a-west-african-slaving-port-1727-1892-paperbacknbsped-0852554974-9780852554975-0821415727.html",
+        "https://www.openstreetmap.org/node/4613910881",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Kelly Fig. 2 detailed palace diagram placed in the inset survey detail rectangle, tied to the modern road fork rather than to the modern Savi village marker. Site anchor at palace vicinity.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 400,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.107267,
+          6.417613
+        ]
+      }
+    },
+    {
+      "id": "OUIDAH_GLEHOUE_TRANSITION",
+      "stable_id": "ouidah-glehoue-town-site",
+      "title": "维达 · 格莱韦镇",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1726,
+          "title": "格莱韦 · 韦达沿海商镇",
+          "note": "格莱韦属韦达王国。当地托韦居民区与欧洲各自商馆并存，大量交易仍在王都萨维交涉。",
+          "kind": "settlement"
+        },
+        {
+          "start_year": 1727,
+          "end_year": 1727,
+          "title": "维达 · 达荷美军进入格莱韦",
+          "note": "达荷美军攻陷萨维后追至维达，攻毁葡堡并包围英法两堡。达荷美军撤回后在萨维留驻部队，维达日常事务暂由各商堡长官处理。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1728,
+          "end_year": 1728,
+          "title": "维达 · 韦达人与达荷美军争夺",
+          "note": "韦达武装一度控制镇和海岸。达荷美军反攻，阿加贾任命三名官员分别负责与英、法、葡堡交涉并征税。",
+          "kind": "resistance"
+        },
+        {
+          "start_year": 1729,
+          "end_year": 1729,
+          "title": "维达 · 韦达武装短暂回占",
+          "note": "韦达国王胡丰与大波波盟友于5月进入维达，达荷美军于7月返回。",
+          "kind": "resistance"
+        },
+        {
+          "start_year": 1730,
+          "end_year": 1732,
+          "title": "维达 · 征税与海岸冲突",
+          "note": "达荷美官员与欧洲堡交涉，流亡韦达人仍袭击海岸并争夺船货与税收。",
+          "kind": "settlement"
+        }
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B",
+        "https://dokumen.pub/ouidah-the-social-history-of-a-west-african-slaving-port-1727-1892-paperbacknbsped-0852554974-9780852554975-0821415727.html",
+        "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_7/carton06/35121.pdf",
+        "https://ouidah.mairie.bj/histoire-de-ouidah"
+      ],
+      "geometry_method": "Named Tove town-quarter reference north of the surviving Portuguese fort, identified from Law’s town layout and 1776 map. The 1727–1732 sequences affect Ouidah town, with separate Savi actions.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 350,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0901,
+          6.3614
+        ]
+      }
+    },
+    {
+      "id": "OUIDAH_DAHOMEY_GOVERNOR",
+      "stable_id": "ouidah-dahomey-governor",
+      "title": "维达 · 达荷美驻地总督",
+      "kind": "diplomacy",
+      "periods": [
+        {
+          "start_year": 1733,
+          "end_year": 1742,
+          "title": "维达 · 达荷美设总督",
+          "note": "1733年阿加贾改派一名特甘总督统一交涉、征税及统率驻军，维达成为达荷美沿海行政中心。",
+          "kind": "diplomacy"
+        },
+        {
+          "start_year": 1743,
+          "end_year": 1743,
+          "title": "维达 · 韦达流亡武装再度回占",
+          "note": "流亡韦达人与波波盟军趁达荷美应对奥约进攻，打败留守驻军并封锁欧洲堡。双方争夺数月后，达荷美恢复控制。",
+          "kind": "resistance"
+        },
+        {
+          "start_year": 1744,
+          "end_year": 1745,
+          "title": "维达 · 达荷美特甘总督",
+          "note": "达荷美恢复在维达的总督与驻军。1745年王室与特甘总督发生冲突，特甘在试图进入英堡时死亡。",
+          "kind": "diplomacy"
+        },
+        {
+          "start_year": 1746,
+          "end_year": 1799,
+          "title": "维达 · 达荷美总督驻地",
+          "note": "到1746年初档案已称总督约沃甘，此后成为常用头衔。总督在城中管理税收、裁决纠纷并与欧洲商堡交涉。",
+          "kind": "diplomacy"
+        }
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B",
+        "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/1A11DD5E9BC49F93E9B2D721A0052292/9781782049760c3_p71-122_CBO.pdf/dahomian_ouidah.pdf",
+        "https://www.cambridge.org/core/books/abs/ouidah/operation-of-the-atlantic-slave-trade/8C586FD8A07B0E31C6AFF7BBFE8BE677",
+        "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_7/carton06/35121.pdf",
+        "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers17-09/010009109.pdf",
+        "https://ouidah.mairie.bj/histoire-de-ouidah",
+        "https://www.openstreetmap.org/way/402951938",
+        "https://www.openstreetmap.org/copyright",
+        "https://dokumen.pub/ouidah-the-social-history-of-a-west-african-slaving-port-1727-1892-paperbacknbsped-0852554974-9780852554975-0821415727.html"
+      ],
+      "geometry_method": "Site of later Yovogan residence at today’s Catholic basilica, identified independently by Law and Sinou. The 1733 administrative location is at town-core scale; exact succession of the earlier quarters is unresolved.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 120,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.084813,
+          6.360732
+        ]
+      },
+      "cross_century_feature_id": "ouidah-dahomey-governor-1800"
+    },
+    {
+      "id": "OUIDAH_WILLIAM_FORT",
+      "stable_id": "ouidah-william-fort",
+      "title": "维达 · 英方威廉堡",
+      "kind": "company_post",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1726,
+          "title": "维达 · 皇家非洲公司威廉堡",
+          "note": "英方于1692年给商馆加筑土防御工事，1694年开挖壕沟。皇家非洲公司在韦达王国沿海经营商堡，关押并转运被奴役者。",
+          "kind": "company_post"
+        },
+        {
+          "start_year": 1727,
+          "end_year": 1728,
+          "title": "威廉堡 · 达荷美征服期间",
+          "note": "达荷美攻陷韦达王都后，英方仍驻维达城内商堡。1728年英堡炮火一度支援被达荷美军围攻的法堡。",
+          "kind": "company_post"
+        },
+        {
+          "start_year": 1729,
+          "end_year": 1729,
+          "title": "威廉堡 · 英方支持韦达暂返",
+          "note": "英堡长官特斯特福尔支持韦达方面暂返维达。达荷美反攻时，韦达国王胡丰曾入英堡避难。",
+          "kind": "company_post"
+        },
+        {
+          "start_year": 1730,
+          "end_year": 1751,
+          "title": "维达 · 皇家非洲公司商堡",
+          "note": "皇家非洲公司在达荷美统治下继续经营威廉堡，参与贩运被奴役者。",
+          "kind": "company_post"
+        },
+        {
+          "start_year": 1752,
+          "end_year": 1799,
+          "title": "维达 · 非洲贸易商人公司威廉堡",
+          "note": "1752年非洲贸易商人公司接手英方堡。达荷美约沃甘主管维达行政及对欧贸易，英堡记录延续至19世纪。",
+          "kind": "company_post"
+        }
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B",
+        "https://dokumen.pub/ouidah-the-social-history-of-a-west-african-slaving-port-1727-1892-paperbacknbsped-0852554974-9780852554975-0821415727.html",
+        "https://fonteshistoriaeafricanae.co.uk/wp-content/uploads/2024/02/Dahomey-and-the-Ending-of-the-Trans-Atlantic-Slave-Trade.pdf",
+        "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_7/carton06/35121.pdf",
+        "https://commons.wikimedia.org/wiki/File:Ouidah_map_(1926).png",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Place of the former English Fort located from 1926 colonial urban survey, fitted against six present sites: French Fort square, Portuguese fort, basilica, Zobè market, station and Place Chacha. Surviving plots cannot recover the original fort masonry.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 100,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0862,
+          6.35853
+        ]
+      },
+      "cross_century_feature_id": "ouidah-fort-william-1800"
+    },
+    {
+      "id": "OUIDAH_ZOBE_MARKET",
+      "stable_id": "ouidah-zobe-market",
+      "title": "维达 · 市场（今佐贝市场）",
+      "kind": "trade_influence",
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1799,
+          "title": "维达 · 市场（今佐贝市场）",
+          "note": "1776年城图绘出维达市集。该市场汇集当地食品和欧洲商品，是维达的日常商品交易场所。",
+          "kind": "trade_influence"
+        }
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/1A11DD5E9BC49F93E9B2D721A0052292/9781782049760c3_p71-122_CBO.pdf/dahomian_ouidah.pdf",
+        "https://www.cambridge.org/core/books/abs/ouidah/operation-of-the-atlantic-slave-trade/8C586FD8A07B0E31C6AFF7BBFE8BE677",
+        "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_7/carton06/35121.pdf",
+        "https://commons.wikimedia.org/wiki/File:Ouidah_map_(1926).png",
+        "https://ouidah.mairie.bj/histoire-de-ouidah",
+        "https://www.openstreetmap.org/way/847520111",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Named central piazza and market position checked between 1776 and 1926 maps and the modern Marché de Zobè. No market footprint claimed.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 100,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.087612,
+          6.359608
+        ]
+      },
+      "cross_century_feature_id": "ouidah-zobe-market-1800"
+    },
+    {
+      "id": "OUIDAH_ZOUNGBODJI_LAGOON_POST",
+      "stable_id": "ouidah-zoungbodji-lagoon-post",
+      "title": "维达 · 宗博吉泻湖关站",
+      "kind": "administration",
+      "periods": [
+        {
+          "start_year": 1733,
+          "end_year": 1746,
+          "title": "维达 · 城南临海驻防",
+          "note": "1733年达荷美军在维达南面通往海岸的地带扎营。地方传统把这一部署与两泻湖之间的宗博吉相联系。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1747,
+          "end_year": 1790,
+          "title": "宗博吉 · 达荷美泻湖关站",
+          "note": "档案于1747年记载负责海岸驻军的卡卡纳库。宗博吉军营监控维达与海岸之间的人员、货物与被奴役者转运，并代总督征收通行费。",
+          "kind": "administration"
+        },
+        {
+          "start_year": 1791,
+          "end_year": 1799,
+          "kind": "administration",
+          "title": "宗博吉 · 泻湖通行与被奴役者转运",
+          "note": "达荷美官员在泻湖通道征收通行费用。1791年有委任专管官员的记录。被押往海岸装船的人经过泻湖一带。"
+        }
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B",
+        "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/1A11DD5E9BC49F93E9B2D721A0052292/9781782049760c3_p71-122_CBO.pdf/dahomian_ouidah.pdf",
+        "https://dokumen.pub/ouidah-the-social-history-of-a-west-african-slaving-port-1727-1892-paperbacknbsped-0852554974-9780852554975-0821415727.html",
+        "https://ouidah.mairie.bj/histoire-de-ouidah",
+        "https://whc.unesco.org/en/tentativelists/6512/"
+      ],
+      "geometry_method": "UNESCO tentative nomination places the named village. Law and Ouidah municipality describe the historical lagoon military and customs post. Only the village position is used. The exact garrison perimeter is absent.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 350,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.088889,
+          6.337222
+        ]
+      }
+    },
+    {
+      "id": "OUIDAH_FRENCH_FORT",
+      "stable_id": "ouidah-french-fort",
+      "title": "维达 · 法方圣路易堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1704,
+          "end_year": 1727,
+          "title": "维达 · 法方圣路易堡",
+          "note": "法国商人在韦达国王准许下于1704年重设沿海商站并筑堡。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1728,
+          "end_year": 1728,
+          "title": "圣路易堡 · 达荷美军攻堡",
+          "note": "达荷美军于1728年数次攻堡。12月堡内火药库爆炸，许多避难的韦达人死亡，法方稍后重返。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1729,
+          "end_year": 1766,
+          "title": "维达 · 法方圣路易商堡",
+          "note": "法国贸易公司驻堡，与达荷美方面交涉并经营跨大西洋贩运。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1767,
+          "end_year": 1796,
+          "title": "维达 · 法国王室接管圣路易堡",
+          "note": "1767年堡垒转由法国王室管理。1794年法国革命政府宣布废除殖民地奴隶制。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1797,
+          "title": "维达 · 法方弃用圣路易堡",
+          "note": "法国经营者于1797年撤离，直到19世纪才有法国私人商人重返堡址。",
+          "kind": "historic_ruins"
+        }
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B",
+        "https://dokumen.pub/ouidah-the-social-history-of-a-west-african-slaving-port-1727-1892-paperbacknbsped-0852554974-9780852554975-0821415727.html",
+        "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_7/carton06/35121.pdf",
+        "https://commons.wikimedia.org/wiki/File:Ouidah_map_(1926).png",
+        "https://www.openstreetmap.org/node/2436724543",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Place of former Saint-Louis de Grégoy marked by named square and 1926 survey. Earlier 1671/1692 lodge not assigned a guaranteed same exact footprint.",
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 100,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0821238,
+          6.3595471
+        ]
+      }
+    },
+    {
+      "id": "SLOOP_COVE_HISTORIC_ANCHORAGE",
+      "stable_id": "sloop-cove-historic-anchorage",
+      "title": "丘吉尔河 · 斯卢普湾停泊地",
+      "kind": "trade_influence",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.2298,
+          58.773
+        ]
+      },
+      "geometry_method": "Manitoba Historical Society site coordinates for the historic Sloop Cove, cross-checked with Parks Canada official site map; nineteenth-century changing cove water levels do not reproduce the historic shoreline.",
+      "position_uncertainty_m": 120,
+      "periods": [
+        {
+          "start_year": 1740,
+          "end_year": 1782,
+          "title": "丘吉尔河 · 斯卢普湾停泊地",
+          "note": "威尔士亲王堡经营时期，公司船员在西岸避风湾停船、越冬或检修小船。湾岸保存了系船铁环与船员刻铭。",
+          "kind": "trade_influence"
+        }
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover3",
+        "https://mhs.mb.ca/docs/sites/sloopcove.shtml",
+        "https://parks.canada.ca/-/media/lhn-nhs/mb/prince/wet4/visit/pwf-carte-map-churchill-en-2-pdf.pdf"
+      ],
+      "geometry_precision": "named_place_anchor",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "BRANDON_HOUSE_NAKODA_TRADE",
+      "stable_id": "brandon-house-nakoda-trade",
+      "title": "布兰登一号商站 · 纳科达贸易",
+      "kind": "trade_influence",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.62733,
+          49.67531
+        ]
+      },
+      "geometry_method": "Approximate north-bank trading locality. The Manitoba Historical Society lists the large clearing as Brandon House No. 1, following Alice E. Brown’s documented reassessment of an older identification as Assiniboine House by Stewart. Brown considered the attribution probable and the first North West Company site possibly nearby. GeoManitoba confirms the marker lies within the NE quarter of section 19-8-16W1 cited by Stewart. The historical attribution and precise house location remain approximate. Exact year captions come from HBCA journals and public transcription.",
+      "position_uncertainty_m": 1000,
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "布兰登一号商站 · 纳科达交换物资",
+          "note": "1795年10月3至5日，公司日记记载纳科达交易者到多家商馆。布兰登站旁，多名首领议价，克里人协助口译，纳科达妇女也以肉类等物换取弹药等货品。",
+          "kind": "trade_influence"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1798,
+          "title": "布兰登一号商站 · 狼皮、狐皮与食物交易",
+          "note": "1798年11月28日，首领塔斯库塔纳斯（古德温记为Tas,cut,ta,nace）一行到站，带来狼皮和狐皮。次日公司记录了皮毛、肉与脂肪等货物。",
+          "kind": "trade_influence"
+        },
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "title": "布兰登一号商站 · 纳科达与克里来站交易",
+          "note": "1799年3月，古德温记录了纳科达与克里交易者来站。竞争商馆也争取交易者。纳科达群体既以皮毛贸易，也以肉脂补给向各方议价。",
+          "kind": "trade_influence"
+        }
+      ],
+      "source_urls": [
+        "https://mhs.mb.ca/docs/sites/brandonhouse.shtml",
+        "https://mhs.mb.ca/docs/transactions/3/sourisfurtrade.shtml",
+        "https://www.mhs.mb.ca/docs/transactions/2/tradingposts.shtml",
+        "https://services7.arcgis.com/hFo7GO2CrHDM1QVm/ArcGIS/rest/services/Manitoba_Corrected/FeatureServer/0",
+        "https://somecanadianhistory.ca/bran179596.html",
+        "https://somecanadianhistory.ca/bran179899.html",
+        "https://pam.minisisinc.com/DIGITALOBJECTS/Access/HBCA%20Microfilm/1M17/B22-A-6.pdf",
+        "https://pam.minisisinc.com/DIGITALOBJECTS/Access/HBCA%20Microfilm/1M17/B22-A-7.pdf",
+        "https://somecanadianhistory.ca/bran180001.html",
+        "https://pam.minisisinc.com/DIGITALOBJECTS/Access/HBCA%20Microfilm/1M17/B22-A-8.pdf#page=4",
+        "https://iportal.usask.ca/docs/ICC/CarrythekettleEng.pdf"
+      ],
+      "geometry_precision": "named_place_anchor",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "cross_century_feature_id": "brandon-house-nakoda-trade-1800"
+    },
+    {
+      "id": "PINE_FORT_NAKODA_PROVISION_1793",
+      "stable_id": "pine-fort-nakoda-provision-1793",
+      "title": "松堡 · 纳科达家庭提供食物",
+      "kind": "trade_influence",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.2405,
+          49.705
+        ]
+      },
+      "geometry_method": "1929年泰瑞尔公布的实地测记把遗迹定位于NE¼ 36-8-14W1的河流北岸，结合GeoManitoba现今地籍河岸取近似点。古河道冲刷已损失部分遗迹，文物牌位于另处。",
+      "position_uncertainty_m": 550,
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1793,
+          "kind": "trade_influence",
+          "title": "松堡 · 纳科达家庭提供食物",
+          "note": "1793年9月26日，西北公司商人麦克唐奈尔记录有九个纳科达家庭带着肉来到松堡。松堡这一期西北公司商站于1794年停用。"
+        }
+      ],
+      "source_urls": [
+        "https://www.mhs.mb.ca/docs/transactions/3/sourisfurtrade.shtml",
+        "https://payment.manitoba.ca/chc/hrb/plaques/plaq0401.html",
+        "https://www.mhs.mb.ca/docs/transactions/2/tradingposts.shtml",
+        "https://services7.arcgis.com/hFo7GO2CrHDM1QVm/ArcGIS/rest/services/Manitoba_Corrected/FeatureServer/0"
+      ],
+      "geometry_precision": "named_place_anchor",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CALABAR_OLD_TOWN_OBUTONG",
+      "stable_id": "calabar-obutong",
+      "title": "奥布通旧镇 · 罗宾约翰家族与埃菲克商贸",
+      "kind": "trade_influence",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.325,
+          4.979
+        ]
+      },
+      "geometry_method": "Goldie 1885年具名图和牛津《安泰拉·杜克日记》图1.1将Old Town置于卡拉巴尔河东岸的同一弯，位于克里克镇与杜克镇之间。伊巴丹大学研究图3.2及当地旧镇Anansa—Hope Waddell资料核定为今日同名岸段。点取现东岸陆地，代表数百米尺度的历史街区，精确十八世纪宅地、地方政治边界及岸线均未复原。",
+      "position_uncertainty_m": 700,
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1766,
+          "kind": "trade_influence",
+          "title": "奥布通旧镇 · 罗宾约翰家族与埃菲克商贸",
+          "note": "奥布通是埃菲克人的旧镇。当地罗宾约翰等家族长期经营登船贸易和锚泊收费，并与杜克镇围绕贩奴贸易和埃克佩结社权力竞争。"
+        },
+        {
+          "start_year": 1767,
+          "end_year": 1767,
+          "kind": "settlement",
+          "title": "奥布通旧镇 · 伏击后社群受重创",
+          "note": "旧镇的商人和其他居民在卡拉巴尔河上遇袭。商贸和政治组织受到重创，仍有居民在奥布通继续生活。"
+        },
+        {
+          "start_year": 1768,
+          "end_year": 1799,
+          "kind": "settlement",
+          "title": "奥布通旧镇 · 罗宾约翰家族继续活动",
+          "note": "罗宾约翰家族在1770年代仍与英国商人通信、追讨亲人并继续交易。1776年有商船在旧镇外锚泊，1785至1788年日记仍记录旧镇贸易者。"
+        }
+      ],
+      "source_urls": [
+        "https://digital.library.illinois.edu/items/2b8dd770-e946-0133-1d3d-0050569601ca-e",
+        "https://api.pageplace.de/preview/DT0400.9780199704446_A23607797/preview-9780199704446_A23607797.pdf",
+        "https://www.scribd.com/document/1052710835/The-Diary-of-Antera-Duke-An-Eighteenth-Century-African-Behrendt-Stephen-D-Duke-Antera-Latham-A-J-H-Paperback-Edition-New-York-2012",
+        "https://academic.oup.com/ahr/article-abstract/104/2/332/11067",
+        "https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/details.aspx?df=&di=y&dt=&k=&ko=a&r=AC9%2F1042&reference=AC9%2F1042&ro=s&st=1&tc=y&tl=n&tn=n&tp=n",
+        "https://www.cambridge.org/core/journals/history-in-africa/article/abs/african-merchants-notables-and-the-slave-trade-at-old-calabar-1720-evidence-from-the-national-archives-of-scotland/4260269CC4899A46AC1E0DA57BA6F7A0",
+        "https://divinity.duke.edu/sites/default/files/documents/CW%20In-letters%201771-75.pdf",
+        "https://www.cambridge.org/core/books/abs/twentynine-years-in-the-west-indies-and-central-africa/1855/DC6EC4A0EC149B541D1616437DCE4906",
+        "https://repository.ui.edu.ng/server/api/core/bitstreams/c86900f2-5f00-431f-849a-0aba62125127/content",
+        "https://www.vanguardngr.com/2026/08/residents-count-losses-as-river-ravages-criver-community/",
+        "https://www.efikeburutu.org/ndem%20efik%20iboku.html"
+      ],
+      "geometry_precision": "named_place_anchor",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "cross_century_feature_id": "calabar-obutong-1800"
+    },
+    {
+      "id": "CALABAR_DUKE_TOWN_ATAKPA",
+      "stable_id": "calabar-duke-town",
+      "title": "杜克镇（阿塔克帕） · 埃菲克河岸商贸",
+      "kind": "trade_influence",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3161667,
+          4.9611389
+        ]
+      },
+      "geometry_method": "Cross River州2024年统计年鉴把Eyamba/Boco Street的Ekpe传承会所 Efe Ekpe Iboku Utan 记录于北纬4°57′40.1″、东经8°18′58.2″，以该陆地点代表杜克镇历史街区。Eyamba是镇内家族支系及后来的街区名。现代会所建筑不作为十八世纪建筑位置；OSM的Duke Town名义点在现代河水中，已排除。",
+      "position_uncertainty_m": 400,
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1766,
+          "kind": "trade_influence",
+          "title": "杜克镇（阿塔克帕） · 埃菲克河岸商贸",
+          "note": "阿塔克帕由埃菲克商人经营。杜克、埃扬巴等家族在这一带活动，来自英国和其他港口的商船在当地交易。"
+        },
+        {
+          "start_year": 1767,
+          "end_year": 1799,
+          "kind": "trade_influence",
+          "title": "杜克镇 · 埃菲克商团的扩张",
+          "note": "1767年部分杜克镇商人与克里克镇的威利·奥内斯蒂及英国船长合作，参与伏击奥布通旧镇。安泰拉·杜克1785至1788年的日记记下了锚泊、收费、交易与纠纷。"
+        }
+      ],
+      "source_urls": [
+        "https://digital.library.illinois.edu/items/2b8dd770-e946-0133-1d3d-0050569601ca-e",
+        "https://api.pageplace.de/preview/DT0400.9780199704446_A23607797/preview-9780199704446_A23607797.pdf",
+        "https://www.scribd.com/document/1052710835/The-Diary-of-Antera-Duke-An-Eighteenth-Century-African-Behrendt-Stephen-D-Duke-Antera-Latham-A-J-H-Paperback-Edition-New-York-2012",
+        "https://academic.oup.com/ahr/article-abstract/104/2/332/11067",
+        "https://www.historians.org/presidential-address/james-h-sweet/",
+        "https://www.crossriverstate.gov.ng/download/Bureau%20of%20Statistics/STATISTICAL%20YEAR%20BOOK%202024%20EDITION.pdf",
+        "https://www.crs-motac.org/tourists.php",
+        "https://duketownpresbyterian.org/contact"
+      ],
+      "geometry_precision": "named_place_anchor",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "cross_century_feature_id": "calabar-duke-town-1800"
+    },
+    {
+      "id": "CALABAR_CREEK_TOWN_EFIK",
+      "stable_id": "calabar-creek-town",
+      "title": "克里克镇 · 埃菲克商贸与威利·奥内斯蒂",
+      "kind": "diplomacy",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.275414,
+          4.9899199
+        ]
+      },
+      "geometry_method": "历史地图、1720年苏格兰贸易档和地方史料均识别Ikot Etunko。以现代OpenStreetMap具名镇点作为聚落尺度参照。此镇邻近 Creek Town Creek，和东岸的Old Town以及Anansa溪不同。",
+      "position_uncertainty_m": 450,
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1766,
+          "kind": "diplomacy",
+          "title": "克里克镇 · 埃菲克首领与商船交涉",
+          "note": "克里克镇是埃菲克人的较早聚落。1720年英国商船的账簿已记载向当地首领支付锚泊费用。"
+        },
+        {
+          "start_year": 1767,
+          "end_year": 1799,
+          "kind": "trade_influence",
+          "title": "克里克镇 · 威利·奥内斯蒂与贸易组织",
+          "note": "威利·奥内斯蒂在1767年组织地方联盟对付奥布通旧镇，并参与处置被俘者。1769至1770年的利物浦多布森号账簿记载其后续贩奴活动和埃克佩地位。"
+        }
+      ],
+      "source_urls": [
+        "https://digital.library.illinois.edu/items/2b8dd770-e946-0133-1d3d-0050569601ca-e",
+        "https://api.pageplace.de/preview/DT0400.9780199704446_A23607797/preview-9780199704446_A23607797.pdf",
+        "https://www.scribd.com/document/1052710835/The-Diary-of-Antera-Duke-An-Eighteenth-Century-African-Behrendt-Stephen-D-Duke-Antera-Latham-A-J-H-Paperback-Edition-New-York-2012",
+        "https://academic.oup.com/ahr/article-abstract/104/2/332/11067",
+        "https://catalogue.nrscotland.gov.uk/nrsonlinecatalogue/details.aspx?df=&di=y&dt=&k=&ko=a&r=AC9%2F1042&reference=AC9%2F1042&ro=s&st=1&tc=y&tl=n&tn=n&tp=n",
+        "https://www.cambridge.org/core/journals/history-in-africa/article/abs/african-merchants-notables-and-the-slave-trade-at-old-calabar-1720-evidence-from-the-national-archives-of-scotland/4260269CC4899A46AC1E0DA57BA6F7A0",
+        "https://www.historians.org/presidential-address/james-h-sweet/",
+        "https://www.openstreetmap.org/node/501478375",
+        "https://www.crs-motac.org/tourists.php"
+      ],
+      "geometry_precision": "named_place_anchor",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "cross_century_feature_id": "calabar-creek-town-1800"
+    },
+    {
+      "id": "CALABAR_RIVER_1767_MASSACRE",
+      "stable_id": "calabar-river-1767-massacre",
+      "title": "卡拉巴尔河 · 1767年英国船长合谋诱捕和屠杀",
+      "kind": "conflict_damage",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3226,
+          4.9792
+        ]
+      },
+      "geometry_method": "Clarkson及1791年议会证言将攻击置于老卡拉巴尔河上的数艘船和附近河面。采用紧邻奥布通历史东岸聚落的现代河心，表现可证的相关河段；时间和责任有较强史料，单船停泊坐标、河中伤亡分布以及抓捕路径没有实测凭据。旧镇地名和船舶事件共用地域背景，分别落在陆地与河面。",
+      "position_uncertainty_m": 1400,
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1767,
+          "kind": "conflict_damage",
+          "title": "卡拉巴尔河 · 1767年英国船长合谋诱捕和屠杀",
+          "note": "1767年8月12至17日间，安布罗斯·莱斯等英国贩奴船长借调停之名诱旧镇代表登船。克里克镇威利·奥内斯蒂协调地方盟友，杜克镇部分商人参与袭击。数百人遭杀害或被掳，小以法莲与安科纳·罗宾约翰被劫走。"
+        }
+      ],
+      "source_urls": [
+        "https://www.historians.org/presidential-address/james-h-sweet/",
+        "https://academic.oup.com/book/58166/chapter-abstract/485239549",
+        "https://en.wikisource.org/wiki/Abstract_of_the_evidence_for_the_abolition_of_the_slave-trade_(1791)/Chapter_2",
+        "https://www.gutenberg.org/cache/epub/12428/pg12428.html",
+        "https://divinity.duke.edu/sites/default/files/documents/CW%20In-letters%201771-75.pdf",
+        "https://escholarship.org/uc/item/06j8f6r4",
+        "https://www.openstreetmap.org/way/79681750",
+        "https://api.pageplace.de/preview/DT0400.9780199704446_A23607797/preview-9780199704446_A23607797.pdf"
+      ],
+      "geometry_precision": "named_place_anchor",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "related_event_ids": [
+        "E18C-R33-CAL-1767-MEDIATION-LURE",
+        "E18C-R33-CAL-1767-GUESTS-TRAPPED",
+        "E18C-R33-CAL-1767-OLD-CALABAR-MASSACRE",
+        "E18C-R33-CAL-1767-ROBIN-JOHNS-ENSLAVED"
+      ]
+    },
+    {
+      "id": "CALABAR_OLD_TOWN_ROADSTEAD_1776",
+      "stable_id": "calabar-old-town-roadstead",
+      "title": "奥布通镇外河面 · 1776年商船锚泊记录",
+      "kind": "trade_influence",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3226,
+          4.9792
+        ]
+      },
+      "geometry_method": "英国船长的1776年书信和参与航次船员描述锚地在Old Town外。现代河心点只作河段位置参照，未复原实际船位、船队航线或各镇控制范围。",
+      "position_uncertainty_m": 1000,
+      "periods": [
+        {
+          "start_year": 1776,
+          "end_year": 1776,
+          "kind": "trade_influence",
+          "title": "奥布通镇外河面 · 1776年商船锚泊",
+          "note": "1776年，利物浦船长威廉·布里格豪斯记录有布里斯托、伦敦和法国的贩奴船在奥布通旧镇外锚泊。"
+        }
+      ],
+      "source_urls": [
+        "https://www.scribd.com/document/1052710835/The-Diary-of-Antera-Duke-An-Eighteenth-Century-African-Behrendt-Stephen-D-Duke-Antera-Latham-A-J-H-Paperback-Edition-New-York-2012",
+        "https://academic.oup.com/ahr/article-abstract/104/2/332/11067",
+        "https://digital.library.illinois.edu/items/2b8dd770-e946-0133-1d3d-0050569601ca-e",
+        "https://www.openstreetmap.org/way/79681750"
       ],
       "geometry_precision": "named_place_anchor",
       "historical_boundary_confirmed": false,
@@ -106413,6 +107268,2906 @@
           ]
         }
       }
+    },
+    {
+      "id": "GREAT_DISMAL_SWAMP_MAROON_REGION",
+      "stable_id": "great-dismal-swamp-maroon-region",
+      "title": "大迪斯默尔沼泽 · 马龙社群",
+      "kind": "resistance",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.5466,
+              36.6953
+            ],
+            [
+              -76.5044,
+              36.7146
+            ],
+            [
+              -76.4258,
+              36.7235
+            ],
+            [
+              -76.3961,
+              36.7084
+            ],
+            [
+              -76.3573,
+              36.6877
+            ],
+            [
+              -76.3161,
+              36.6671
+            ],
+            [
+              -76.3087,
+              36.6438
+            ],
+            [
+              -76.2944,
+              36.6148
+            ],
+            [
+              -76.2937,
+              36.5898
+            ],
+            [
+              -76.2995,
+              36.5586
+            ],
+            [
+              -76.3075,
+              36.5229
+            ],
+            [
+              -76.2798,
+              36.4989
+            ],
+            [
+              -76.3154,
+              36.4828
+            ],
+            [
+              -76.335,
+              36.4599
+            ],
+            [
+              -76.3753,
+              36.451
+            ],
+            [
+              -76.3835,
+              36.4241
+            ],
+            [
+              -76.378,
+              36.3889
+            ],
+            [
+              -76.3929,
+              36.3604
+            ],
+            [
+              -76.4515,
+              36.3596
+            ],
+            [
+              -76.5168,
+              36.3616
+            ],
+            [
+              -76.5889,
+              36.3633
+            ],
+            [
+              -76.6098,
+              36.3832
+            ],
+            [
+              -76.608,
+              36.4009
+            ],
+            [
+              -76.602,
+              36.4277
+            ],
+            [
+              -76.5937,
+              36.4516
+            ],
+            [
+              -76.5831,
+              36.4727
+            ],
+            [
+              -76.566,
+              36.5058
+            ],
+            [
+              -76.5488,
+              36.5359
+            ],
+            [
+              -76.5453,
+              36.57
+            ],
+            [
+              -76.5576,
+              36.6064
+            ],
+            [
+              -76.5764,
+              36.6337
+            ],
+            [
+              -76.5885,
+              36.6642
+            ],
+            [
+              -76.5734,
+              36.6855
+            ],
+            [
+              -76.5466,
+              36.6953
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "约翰·科莱1770年制图中大迪斯默尔沼泽主体的植物符号外缘，以萨福克、德拉蒙德湖、大桥及两点殖民地界线配准。参考1781年罗尚博手稿北段。表示历史沼泽主体，未复原湿地细缘与隐蔽居址。",
+      "position_uncertainty_m": 6500,
+      "periods": [
+        {
+          "start_year": 1728,
+          "end_year": 1762,
+          "kind": "resistance",
+          "title": "大迪斯默尔沼泽 · 逃离奴役者的落脚地",
+          "note": "伯德1728年的测界记载见到在沼泽中栖身的家庭，也提到逃离奴役者到这里避难。考古发现表明一些社群曾在湿地深处长期生活。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1782,
+          "kind": "resistance",
+          "title": "大迪斯默尔沼泽 · 逃亡者与马龙社群",
+          "note": "木材公司雇用或役使工人深入沼泽。逃离奴役的人在湿地较干的岛状高地建立居所，也有人与附近被奴役的家人及工人保持往来。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1799,
+          "kind": "resistance",
+          "title": "大迪斯默尔沼泽 · 自建住屋与农作",
+          "note": "舍普夫1783年记载逃离奴役者在沼泽较干处建屋、种植玉米及饲养牲畜。马龙家庭与聚落延续到十九世纪。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/resource/g3900.ar150001/",
+        "https://www.loc.gov/item/gm71002173/",
+        "https://www.fws.gov/apps/rivers/carp/carp/sites/default/files/documents/Comprehensive%20Conservation%20Plan%20-%20Great%20Dismal%20Swamp%20-%202006.pdf",
+        "https://home.nps.gov/articles/000/tom-copper-and-great-dismal.htm",
+        "https://www.neh.gov/news/the-great-dismal-swamp",
+        "https://academic.oup.com/north-carolina-scholarship-online/book/46363",
+        "https://academic.oup.com/florida-scholarship-online/book/13471/chapter-abstract/166958484",
+        "https://academic.oup.com/edited-volume/61800/chapter/546418124"
+      ],
+      "bbox": [
+        -76.6098,
+        36.3596,
+        -76.2798,
+        36.7235
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "cross_century_feature_id": "great-dismal-swamp-maroon-region-1800"
+    },
+    {
+      "id": "BALAMBANGAN_ISLAND_GRANT",
+      "stable_id": "balambangan-island-grant",
+      "title": "巴兰班岸岛 · 苏禄授地文书",
+      "kind": "paper_claim",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.9604412,
+              7.3114327
+            ],
+            [
+              116.9528878,
+              7.3032044
+            ],
+            [
+              116.9505888,
+              7.3018949
+            ],
+            [
+              116.9475614,
+              7.3010708
+            ],
+            [
+              116.9438512,
+              7.3007434
+            ],
+            [
+              116.9422351,
+              7.3001112
+            ],
+            [
+              116.9400084,
+              7.2973776
+            ],
+            [
+              116.9398676,
+              7.2962601
+            ],
+            [
+              116.9377068,
+              7.2957213
+            ],
+            [
+              116.9378638,
+              7.2959368
+            ],
+            [
+              116.9342303,
+              7.2932068
+            ],
+            [
+              116.9315504,
+              7.2922968
+            ],
+            [
+              116.9306652,
+              7.2916342
+            ],
+            [
+              116.9319568,
+              7.291746
+            ],
+            [
+              116.9312567,
+              7.2909917
+            ],
+            [
+              116.9305766,
+              7.2910914
+            ],
+            [
+              116.9300696,
+              7.2918578
+            ],
+            [
+              116.9265166,
+              7.2913469
+            ],
+            [
+              116.9239333,
+              7.2914985
+            ],
+            [
+              116.9202556,
+              7.2929075
+            ],
+            [
+              116.9189961,
+              7.2939891
+            ],
+            [
+              116.9185656,
+              7.294943
+            ],
+            [
+              116.9180787,
+              7.2984034
+            ],
+            [
+              116.9184569,
+              7.2984193
+            ],
+            [
+              116.9188002,
+              7.2992258
+            ],
+            [
+              116.9187211,
+              7.300097
+            ],
+            [
+              116.9181707,
+              7.3007589
+            ],
+            [
+              116.9153584,
+              7.3010131
+            ],
+            [
+              116.9119166,
+              7.2999661
+            ],
+            [
+              116.910229,
+              7.3010562
+            ],
+            [
+              116.9098747,
+              7.3001439
+            ],
+            [
+              116.9086306,
+              7.2988202
+            ],
+            [
+              116.9076656,
+              7.2956118
+            ],
+            [
+              116.905639,
+              7.2923274
+            ],
+            [
+              116.9003537,
+              7.2881356
+            ],
+            [
+              116.8989362,
+              7.2875336
+            ],
+            [
+              116.8965348,
+              7.2871933
+            ],
+            [
+              116.8951099,
+              7.2874139
+            ],
+            [
+              116.8934021,
+              7.2882964
+            ],
+            [
+              116.892339,
+              7.2876383
+            ],
+            [
+              116.8914456,
+              7.2881282
+            ],
+            [
+              116.8910271,
+              7.2875373
+            ],
+            [
+              116.8900432,
+              7.2873242
+            ],
+            [
+              116.8895871,
+              7.2874476
+            ],
+            [
+              116.8890781,
+              7.2883787
+            ],
+            [
+              116.887965,
+              7.2875391
+            ],
+            [
+              116.887588,
+              7.2880654
+            ],
+            [
+              116.8878029,
+              7.2888273
+            ],
+            [
+              116.8874382,
+              7.2889563
+            ],
+            [
+              116.8873769,
+              7.2868538
+            ],
+            [
+              116.8850076,
+              7.2845158
+            ],
+            [
+              116.8840518,
+              7.2817183
+            ],
+            [
+              116.8833121,
+              7.2805853
+            ],
+            [
+              116.8833054,
+              7.2787198
+            ],
+            [
+              116.8827136,
+              7.2771994
+            ],
+            [
+              116.8817993,
+              7.2759765
+            ],
+            [
+              116.8810183,
+              7.2760452
+            ],
+            [
+              116.8806478,
+              7.2753035
+            ],
+            [
+              116.8799,
+              7.2754159
+            ],
+            [
+              116.8789484,
+              7.2744997
+            ],
+            [
+              116.880753,
+              7.2746134
+            ],
+            [
+              116.8812475,
+              7.2740687
+            ],
+            [
+              116.8812755,
+              7.2724279
+            ],
+            [
+              116.8808184,
+              7.2723988
+            ],
+            [
+              116.8807211,
+              7.2718541
+            ],
+            [
+              116.8814075,
+              7.2708877
+            ],
+            [
+              116.8814115,
+              7.2691359
+            ],
+            [
+              116.880857,
+              7.2670733
+            ],
+            [
+              116.8764862,
+              7.2620305
+            ],
+            [
+              116.877374,
+              7.2627018
+            ],
+            [
+              116.8772967,
+              7.2620043
+            ],
+            [
+              116.8754853,
+              7.2610283
+            ],
+            [
+              116.8740019,
+              7.2592744
+            ],
+            [
+              116.8725467,
+              7.2560228
+            ],
+            [
+              116.8711293,
+              7.2504358
+            ],
+            [
+              116.8675988,
+              7.2447945
+            ],
+            [
+              116.8652974,
+              7.2434444
+            ],
+            [
+              116.8668939,
+              7.2399347
+            ],
+            [
+              116.8665696,
+              7.2307669
+            ],
+            [
+              116.8654939,
+              7.2273896
+            ],
+            [
+              116.8644534,
+              7.225486
+            ],
+            [
+              116.862659,
+              7.2155565
+            ],
+            [
+              116.862167,
+              7.2148216
+            ],
+            [
+              116.8618221,
+              7.2150535
+            ],
+            [
+              116.8609833,
+              7.214341
+            ],
+            [
+              116.8611096,
+              7.2138529
+            ],
+            [
+              116.8616015,
+              7.214025
+            ],
+            [
+              116.8617787,
+              7.2134696
+            ],
+            [
+              116.8610794,
+              7.2115154
+            ],
+            [
+              116.8598618,
+              7.2094379
+            ],
+            [
+              116.8589495,
+              7.2092359
+            ],
+            [
+              116.8595036,
+              7.208946
+            ],
+            [
+              116.8593547,
+              7.2084486
+            ],
+            [
+              116.8586988,
+              7.208228
+            ],
+            [
+              116.8584236,
+              7.2088656
+            ],
+            [
+              116.8577299,
+              7.2089442
+            ],
+            [
+              116.8558243,
+              7.2069676
+            ],
+            [
+              116.8545067,
+              7.2061597
+            ],
+            [
+              116.8545633,
+              7.2056193
+            ],
+            [
+              116.8539865,
+              7.205034
+            ],
+            [
+              116.8539809,
+              7.2037997
+            ],
+            [
+              116.8535693,
+              7.2030736
+            ],
+            [
+              116.8538772,
+              7.2020488
+            ],
+            [
+              116.8531495,
+              7.2006973
+            ],
+            [
+              116.853512,
+              7.2003866
+            ],
+            [
+              116.8530482,
+              7.200138
+            ],
+            [
+              116.853428,
+              7.2000137
+            ],
+            [
+              116.8530255,
+              7.199822
+            ],
+            [
+              116.8533094,
+              7.19974
+            ],
+            [
+              116.8530655,
+              7.1996091
+            ],
+            [
+              116.8536,
+              7.1979456
+            ],
+            [
+              116.8539172,
+              7.1979548
+            ],
+            [
+              116.854489,
+              7.1969763
+            ],
+            [
+              116.8557458,
+              7.1965611
+            ],
+            [
+              116.8571613,
+              7.1971443
+            ],
+            [
+              116.8582262,
+              7.1964831
+            ],
+            [
+              116.8590313,
+              7.1968097
+            ],
+            [
+              116.8593391,
+              7.1963971
+            ],
+            [
+              116.8591379,
+              7.1960441
+            ],
+            [
+              116.8597923,
+              7.1962001
+            ],
+            [
+              116.8602841,
+              7.1952189
+            ],
+            [
+              116.8601029,
+              7.1928309
+            ],
+            [
+              116.8610925,
+              7.1930366
+            ],
+            [
+              116.8614864,
+              7.1926776
+            ],
+            [
+              116.8623686,
+              7.1926869
+            ],
+            [
+              116.8630471,
+              7.1933134
+            ],
+            [
+              116.8639481,
+              7.1934349
+            ],
+            [
+              116.864785,
+              7.1953181
+            ],
+            [
+              116.8671544,
+              7.1971769
+            ],
+            [
+              116.8698837,
+              7.1987141
+            ],
+            [
+              116.8716329,
+              7.1992733
+            ],
+            [
+              116.8713464,
+              7.1993929
+            ],
+            [
+              116.8716456,
+              7.1999117
+            ],
+            [
+              116.8708924,
+              7.2008286
+            ],
+            [
+              116.8693536,
+              7.1999392
+            ],
+            [
+              116.8688038,
+              7.2001685
+            ],
+            [
+              116.8688823,
+              7.2006452
+            ],
+            [
+              116.8702085,
+              7.2013604
+            ],
+            [
+              116.8709524,
+              7.2012779
+            ],
+            [
+              116.8719967,
+              7.2002372
+            ],
+            [
+              116.8719963,
+              7.1995793
+            ],
+            [
+              116.8716863,
+              7.1994567
+            ],
+            [
+              116.8733708,
+              7.1990432
+            ],
+            [
+              116.874317,
+              7.2008422
+            ],
+            [
+              116.8744866,
+              7.2023083
+            ],
+            [
+              116.8765026,
+              7.2038423
+            ],
+            [
+              116.87646,
+              7.204883
+            ],
+            [
+              116.8749047,
+              7.205674
+            ],
+            [
+              116.873931,
+              7.2048571
+            ],
+            [
+              116.8734474,
+              7.2035021
+            ],
+            [
+              116.8714674,
+              7.2032946
+            ],
+            [
+              116.8712779,
+              7.2027176
+            ],
+            [
+              116.8708401,
+              7.2031844
+            ],
+            [
+              116.8682457,
+              7.2026139
+            ],
+            [
+              116.8655991,
+              7.2015052
+            ],
+            [
+              116.8642595,
+              7.2004031
+            ],
+            [
+              116.8639393,
+              7.2005392
+            ],
+            [
+              116.8640242,
+              7.2012524
+            ],
+            [
+              116.8630701,
+              7.2002734
+            ],
+            [
+              116.8616586,
+              7.2007402
+            ],
+            [
+              116.8608744,
+              7.2007467
+            ],
+            [
+              116.8605673,
+              7.2002994
+            ],
+            [
+              116.8589663,
+              7.201019
+            ],
+            [
+              116.8582017,
+              7.2007078
+            ],
+            [
+              116.8574175,
+              7.2013497
+            ],
+            [
+              116.8563327,
+              7.2009996
+            ],
+            [
+              116.8560452,
+              7.2013561
+            ],
+            [
+              116.8563523,
+              7.2031196
+            ],
+            [
+              116.8557446,
+              7.2034762
+            ],
+            [
+              116.8573195,
+              7.2071586
+            ],
+            [
+              116.8594041,
+              7.2076838
+            ],
+            [
+              116.8602275,
+              7.2088054
+            ],
+            [
+              116.8612665,
+              7.2077162
+            ],
+            [
+              116.8655926,
+              7.2071522
+            ],
+            [
+              116.868017,
+              7.2077551
+            ],
+            [
+              116.8690756,
+              7.2085979
+            ],
+            [
+              116.869886,
+              7.2084553
+            ],
+            [
+              116.871304,
+              7.2106012
+            ],
+            [
+              116.8725587,
+              7.2112236
+            ],
+            [
+              116.8733625,
+              7.2110615
+            ],
+            [
+              116.874212,
+              7.2116061
+            ],
+            [
+              116.8747675,
+              7.2114764
+            ],
+            [
+              116.8751008,
+              7.2100242
+            ],
+            [
+              116.873833,
+              7.2092203
+            ],
+            [
+              116.8741009,
+              7.2074958
+            ],
+            [
+              116.8750158,
+              7.207405
+            ],
+            [
+              116.8756235,
+              7.2082737
+            ],
+            [
+              116.8766561,
+              7.2088832
+            ],
+            [
+              116.8774729,
+              7.2079172
+            ],
+            [
+              116.8774664,
+              7.2075865
+            ],
+            [
+              116.8769436,
+              7.2076384
+            ],
+            [
+              116.8776297,
+              7.2050905
+            ],
+            [
+              116.8774664,
+              7.2045459
+            ],
+            [
+              116.8768708,
+              7.2042514
+            ],
+            [
+              116.877461,
+              7.2027721
+            ],
+            [
+              116.8787013,
+              7.2023831
+            ],
+            [
+              116.883811,
+              7.2031429
+            ],
+            [
+              116.8861839,
+              7.2021072
+            ],
+            [
+              116.8876553,
+              7.2018903
+            ],
+            [
+              116.8894893,
+              7.2007293
+            ],
+            [
+              116.8881298,
+              7.2027842
+            ],
+            [
+              116.8874367,
+              7.2025515
+            ],
+            [
+              116.8862532,
+              7.2038341
+            ],
+            [
+              116.8853522,
+              7.2041885
+            ],
+            [
+              116.8852907,
+              7.2048404
+            ],
+            [
+              116.8849349,
+              7.2041619
+            ],
+            [
+              116.8831328,
+              7.2038365
+            ],
+            [
+              116.8806792,
+              7.2039786
+            ],
+            [
+              116.8781562,
+              7.204955
+            ],
+            [
+              116.8784843,
+              7.205386
+            ],
+            [
+              116.8782486,
+              7.2062799
+            ],
+            [
+              116.8791358,
+              7.2064495
+            ],
+            [
+              116.8798474,
+              7.2059544
+            ],
+            [
+              116.880462,
+              7.2061882
+            ],
+            [
+              116.8802956,
+              7.2055968
+            ],
+            [
+              116.8797273,
+              7.2054135
+            ],
+            [
+              116.8799676,
+              7.2052209
+            ],
+            [
+              116.881229,
+              7.2053814
+            ],
+            [
+              116.8814739,
+              7.2057115
+            ],
+            [
+              116.8823149,
+              7.2054777
+            ],
+            [
+              116.8849722,
+              7.2072027
+            ],
+            [
+              116.8871509,
+              7.2071775
+            ],
+            [
+              116.8870215,
+              7.2065448
+            ],
+            [
+              116.8876339,
+              7.2071475
+            ],
+            [
+              116.8890467,
+              7.2073802
+            ],
+            [
+              116.8918623,
+              7.2086097
+            ],
+            [
+              116.893403,
+              7.2086943
+            ],
+            [
+              116.8949864,
+              7.2098738
+            ],
+            [
+              116.8955142,
+              7.210884
+            ],
+            [
+              116.8954982,
+              7.2120106
+            ],
+            [
+              116.8947892,
+              7.2133012
+            ],
+            [
+              116.8930672,
+              7.2137931
+            ],
+            [
+              116.8914731,
+              7.2152053
+            ],
+            [
+              116.889016,
+              7.2156981
+            ],
+            [
+              116.8877267,
+              7.2168855
+            ],
+            [
+              116.8866447,
+              7.2171567
+            ],
+            [
+              116.8875061,
+              7.2179458
+            ],
+            [
+              116.8867805,
+              7.217684
+            ],
+            [
+              116.8863092,
+              7.2181908
+            ],
+            [
+              116.8871958,
+              7.2216126
+            ],
+            [
+              116.8864079,
+              7.2226449
+            ],
+            [
+              116.8852468,
+              7.2232881
+            ],
+            [
+              116.884523,
+              7.223131
+            ],
+            [
+              116.8831169,
+              7.2215902
+            ],
+            [
+              116.8817673,
+              7.2212835
+            ],
+            [
+              116.881903,
+              7.2209582
+            ],
+            [
+              116.8827022,
+              7.2208198
+            ],
+            [
+              116.8815185,
+              7.2196006
+            ],
+            [
+              116.8814937,
+              7.2176577
+            ],
+            [
+              116.881107,
+              7.2170555
+            ],
+            [
+              116.8768041,
+              7.2150593
+            ],
+            [
+              116.8762013,
+              7.2139993
+            ],
+            [
+              116.8749249,
+              7.2132115
+            ],
+            [
+              116.8743554,
+              7.213162
+            ],
+            [
+              116.8728462,
+              7.2145313
+            ],
+            [
+              116.8699693,
+              7.2135043
+            ],
+            [
+              116.8684851,
+              7.2143334
+            ],
+            [
+              116.8678407,
+              7.2131868
+            ],
+            [
+              116.8670716,
+              7.2133229
+            ],
+            [
+              116.8662775,
+              7.2129475
+            ],
+            [
+              116.8643609,
+              7.2136569
+            ],
+            [
+              116.8629225,
+              7.2135497
+            ],
+            [
+              116.8623695,
+              7.2143911
+            ],
+            [
+              116.8629432,
+              7.2146922
+            ],
+            [
+              116.8635294,
+              7.2143045
+            ],
+            [
+              116.8632426,
+              7.2152078
+            ],
+            [
+              116.8645231,
+              7.2158677
+            ],
+            [
+              116.8656705,
+              7.218462
+            ],
+            [
+              116.8651966,
+              7.2187919
+            ],
+            [
+              116.8652548,
+              7.2191549
+            ],
+            [
+              116.8690463,
+              7.2225452
+            ],
+            [
+              116.8697157,
+              7.2252219
+            ],
+            [
+              116.8693789,
+              7.2266201
+            ],
+            [
+              116.8703351,
+              7.2273006
+            ],
+            [
+              116.871545,
+              7.2274739
+            ],
+            [
+              116.8709754,
+              7.2283029
+            ],
+            [
+              116.8710918,
+              7.2287029
+            ],
+            [
+              116.8733742,
+              7.2295608
+            ],
+            [
+              116.8748459,
+              7.2288638
+            ],
+            [
+              116.8755569,
+              7.2295072
+            ],
+            [
+              116.8755652,
+              7.2304311
+            ],
+            [
+              116.8759809,
+              7.2305094
+            ],
+            [
+              116.8763676,
+              7.2300351
+            ],
+            [
+              116.8777104,
+              7.2305465
+            ],
+            [
+              116.8780056,
+              7.2313054
+            ],
+            [
+              116.8775898,
+              7.2318127
+            ],
+            [
+              116.8778351,
+              7.2337264
+            ],
+            [
+              116.8774527,
+              7.234411
+            ],
+            [
+              116.8783673,
+              7.2364897
+            ],
+            [
+              116.8790075,
+              7.2361928
+            ],
+            [
+              116.8780596,
+              7.2352772
+            ],
+            [
+              116.8780181,
+              7.2346585
+            ],
+            [
+              116.8794676,
+              7.2331899
+            ],
+            [
+              116.8808551,
+              7.2330675
+            ],
+            [
+              116.8853118,
+              7.2314168
+            ],
+            [
+              116.885741,
+              7.230816
+            ],
+            [
+              116.8871462,
+              7.2310493
+            ],
+            [
+              116.8882104,
+              7.2298886
+            ],
+            [
+              116.8891217,
+              7.2300753
+            ],
+            [
+              116.8903211,
+              7.229562
+            ],
+            [
+              116.8909385,
+              7.2297778
+            ],
+            [
+              116.8929257,
+              7.2288679
+            ],
+            [
+              116.8957008,
+              7.2291187
+            ],
+            [
+              116.8966416,
+              7.2283663
+            ],
+            [
+              116.8965651,
+              7.2272289
+            ],
+            [
+              116.89613,
+              7.2278822
+            ],
+            [
+              116.8951482,
+              7.2268789
+            ],
+            [
+              116.8947131,
+              7.2255024
+            ],
+            [
+              116.8951305,
+              7.2244583
+            ],
+            [
+              116.8962829,
+              7.2248608
+            ],
+            [
+              116.8967062,
+              7.2263423
+            ],
+            [
+              116.8979644,
+              7.2274972
+            ],
+            [
+              116.8988405,
+              7.2277247
+            ],
+            [
+              116.900281,
+              7.2296903
+            ],
+            [
+              116.9007513,
+              7.2323384
+            ],
+            [
+              116.9000752,
+              7.2342457
+            ],
+            [
+              116.8992638,
+              7.2346714
+            ],
+            [
+              116.9004103,
+              7.2332424
+            ],
+            [
+              116.9004221,
+              7.232735
+            ],
+            [
+              116.899987,
+              7.2325367
+            ],
+            [
+              116.9001399,
+              7.2315918
+            ],
+            [
+              116.8991697,
+              7.2301744
+            ],
+            [
+              116.8970884,
+              7.2291654
+            ],
+            [
+              116.8966239,
+              7.2316384
+            ],
+            [
+              116.8975646,
+              7.2317551
+            ],
+            [
+              116.8978351,
+              7.2311368
+            ],
+            [
+              116.8983172,
+              7.2317784
+            ],
+            [
+              116.8964649,
+              7.2330653
+            ],
+            [
+              116.8960701,
+              7.2344721
+            ],
+            [
+              116.8968197,
+              7.2345654
+            ],
+            [
+              116.8977545,
+              7.2355832
+            ],
+            [
+              116.8968168,
+              7.2362715
+            ],
+            [
+              116.8974282,
+              7.2379017
+            ],
+            [
+              116.8995037,
+              7.237753
+            ],
+            [
+              116.8975723,
+              7.2382167
+            ],
+            [
+              116.8966834,
+              7.2408852
+            ],
+            [
+              116.8980276,
+              7.2438267
+            ],
+            [
+              116.8969098,
+              7.2459198
+            ],
+            [
+              116.8980752,
+              7.2452493
+            ],
+            [
+              116.8985128,
+              7.2455501
+            ],
+            [
+              116.897655,
+              7.2472435
+            ],
+            [
+              116.8968535,
+              7.2476389
+            ],
+            [
+              116.8971871,
+              7.2485544
+            ],
+            [
+              116.8987554,
+              7.2479742
+            ],
+            [
+              116.8991064,
+              7.2485415
+            ],
+            [
+              116.9005144,
+              7.2483094
+            ],
+            [
+              116.9008307,
+              7.2479484
+            ],
+            [
+              116.9000829,
+              7.246836
+            ],
+            [
+              116.9005158,
+              7.2462003
+            ],
+            [
+              116.9018315,
+              7.2466002
+            ],
+            [
+              116.9027227,
+              7.2461413
+            ],
+            [
+              116.9030495,
+              7.2453246
+            ],
+            [
+              116.9024002,
+              7.2450888
+            ],
+            [
+              116.9020988,
+              7.2442931
+            ],
+            [
+              116.9029774,
+              7.2442047
+            ],
+            [
+              116.9032108,
+              7.2431563
+            ],
+            [
+              116.9018187,
+              7.2428153
+            ],
+            [
+              116.9027736,
+              7.2419901
+            ],
+            [
+              116.9049211,
+              7.2422343
+            ],
+            [
+              116.905231,
+              7.2429248
+            ],
+            [
+              116.9059779,
+              7.2431732
+            ],
+            [
+              116.907544,
+              7.2431479
+            ],
+            [
+              116.908049,
+              7.2425037
+            ],
+            [
+              116.9088214,
+              7.24271
+            ],
+            [
+              116.9087366,
+              7.2435521
+            ],
+            [
+              116.907493,
+              7.2440868
+            ],
+            [
+              116.9069795,
+              7.2450888
+            ],
+            [
+              116.9050145,
+              7.2470297
+            ],
+            [
+              116.9074336,
+              7.2473833
+            ],
+            [
+              116.9078326,
+              7.2462129
+            ],
+            [
+              116.9092246,
+              7.2452951
+            ],
+            [
+              116.9092925,
+              7.2458677
+            ],
+            [
+              116.9084692,
+              7.246996
+            ],
+            [
+              116.9094199,
+              7.247678
+            ],
+            [
+              116.911075,
+              7.2474675
+            ],
+            [
+              116.9117997,
+              7.2452549
+            ],
+            [
+              116.9138535,
+              7.2433495
+            ],
+            [
+              116.9149843,
+              7.2439269
+            ],
+            [
+              116.9165392,
+              7.2440259
+            ],
+            [
+              116.9172875,
+              7.2430608
+            ],
+            [
+              116.9185846,
+              7.2429206
+            ],
+            [
+              116.9185181,
+              7.2421864
+            ],
+            [
+              116.9179361,
+              7.2415761
+            ],
+            [
+              116.9150009,
+              7.2411059
+            ],
+            [
+              116.9140364,
+              7.2416173
+            ],
+            [
+              116.9121656,
+              7.2407265
+            ],
+            [
+              116.9103862,
+              7.2412956
+            ],
+            [
+              116.9101866,
+              7.2418565
+            ],
+            [
+              116.910486,
+              7.2426401
+            ],
+            [
+              116.9081231,
+              7.2410344
+            ],
+            [
+              116.9061983,
+              7.2415746
+            ],
+            [
+              116.9037163,
+              7.2412777
+            ],
+            [
+              116.9033795,
+              7.2408983
+            ],
+            [
+              116.9043357,
+              7.2407457
+            ],
+            [
+              116.9048905,
+              7.2396865
+            ],
+            [
+              116.9058695,
+              7.239427
+            ],
+            [
+              116.9063869,
+              7.2380622
+            ],
+            [
+              116.9093505,
+              7.2372652
+            ],
+            [
+              116.911515,
+              7.23904
+            ],
+            [
+              116.9129929,
+              7.2394897
+            ],
+            [
+              116.9166863,
+              7.2397025
+            ],
+            [
+              116.9205675,
+              7.2382923
+            ],
+            [
+              116.9216564,
+              7.2369991
+            ],
+            [
+              116.9243601,
+              7.2357485
+            ],
+            [
+              116.925036,
+              7.2348651
+            ],
+            [
+              116.9264013,
+              7.234301
+            ],
+            [
+              116.9274178,
+              7.2344926
+            ],
+            [
+              116.9294992,
+              7.233258
+            ],
+            [
+              116.9314545,
+              7.2335294
+            ],
+            [
+              116.9354135,
+              7.2349184
+            ],
+            [
+              116.9372588,
+              7.2369725
+            ],
+            [
+              116.9395387,
+              7.2385797
+            ],
+            [
+              116.9395173,
+              7.2397292
+            ],
+            [
+              116.9401503,
+              7.2413682
+            ],
+            [
+              116.9407296,
+              7.2418738
+            ],
+            [
+              116.9414163,
+              7.2418099
+            ],
+            [
+              116.9421458,
+              7.2407243
+            ],
+            [
+              116.9429827,
+              7.2403624
+            ],
+            [
+              116.944356,
+              7.2404742
+            ],
+            [
+              116.9465017,
+              7.2412724
+            ],
+            [
+              116.9480789,
+              7.2437896
+            ],
+            [
+              116.9502783,
+              7.2451891
+            ],
+            [
+              116.9525528,
+              7.2487706
+            ],
+            [
+              116.9550043,
+              7.2496486
+            ],
+            [
+              116.9568765,
+              7.2497178
+            ],
+            [
+              116.9611144,
+              7.2488663
+            ],
+            [
+              116.9690859,
+              7.2465249
+            ],
+            [
+              116.9765317,
+              7.2424804
+            ],
+            [
+              116.9794071,
+              7.2417248
+            ],
+            [
+              116.983645,
+              7.2419855
+            ],
+            [
+              116.9871801,
+              7.2441009
+            ],
+            [
+              116.9853455,
+              7.2494145
+            ],
+            [
+              116.9847178,
+              7.2528255
+            ],
+            [
+              116.9836262,
+              7.255473
+            ],
+            [
+              116.9792944,
+              7.2633274
+            ],
+            [
+              116.9775429,
+              7.2653202
+            ],
+            [
+              116.9743779,
+              7.2675153
+            ],
+            [
+              116.9738629,
+              7.2675579
+            ],
+            [
+              116.9719291,
+              7.2665388
+            ],
+            [
+              116.9708146,
+              7.2667131
+            ],
+            [
+              116.96749,
+              7.2696172
+            ],
+            [
+              116.9668677,
+              7.2708544
+            ],
+            [
+              116.9657171,
+              7.2715621
+            ],
+            [
+              116.9660202,
+              7.2730867
+            ],
+            [
+              116.965135,
+              7.2745527
+            ],
+            [
+              116.9650948,
+              7.277506
+            ],
+            [
+              116.9645986,
+              7.2785197
+            ],
+            [
+              116.9663984,
+              7.2825185
+            ],
+            [
+              116.9664413,
+              7.2837317
+            ],
+            [
+              116.9658995,
+              7.2847427
+            ],
+            [
+              116.9663259,
+              7.2874805
+            ],
+            [
+              116.9668892,
+              7.2879141
+            ],
+            [
+              116.9672486,
+              7.2917506
+            ],
+            [
+              116.969904,
+              7.2951028
+            ],
+            [
+              116.9736564,
+              7.2976569
+            ],
+            [
+              116.9739917,
+              7.2991202
+            ],
+            [
+              116.9767866,
+              7.3018631
+            ],
+            [
+              116.9771326,
+              7.3059735
+            ],
+            [
+              116.9795412,
+              7.3080965
+            ],
+            [
+              116.9819391,
+              7.3083945
+            ],
+            [
+              116.9848332,
+              7.306737
+            ],
+            [
+              116.9859543,
+              7.306777
+            ],
+            [
+              116.9885105,
+              7.3045821
+            ],
+            [
+              116.9915789,
+              7.3043666
+            ],
+            [
+              116.9928583,
+              7.3032173
+            ],
+            [
+              116.994583,
+              7.303486
+            ],
+            [
+              116.996305,
+              7.3031481
+            ],
+            [
+              116.996769,
+              7.3026719
+            ],
+            [
+              116.9977775,
+              7.3028076
+            ],
+            [
+              116.9985071,
+              7.3012432
+            ],
+            [
+              116.9992447,
+              7.300618
+            ],
+            [
+              116.997972,
+              7.2984936
+            ],
+            [
+              116.995562,
+              7.2973882
+            ],
+            [
+              116.9939607,
+              7.2959914
+            ],
+            [
+              116.9943805,
+              7.2956416
+            ],
+            [
+              116.9936335,
+              7.2950257
+            ],
+            [
+              116.9936469,
+              7.2942222
+            ],
+            [
+              116.9929764,
+              7.2935145
+            ],
+            [
+              116.992735,
+              7.2926206
+            ],
+            [
+              116.9939205,
+              7.2901889
+            ],
+            [
+              116.9929415,
+              7.289545
+            ],
+            [
+              116.9929039,
+              7.2889171
+            ],
+            [
+              116.9932955,
+              7.288707
+            ],
+            [
+              116.9930515,
+              7.2882094
+            ],
+            [
+              116.9933706,
+              7.2874272
+            ],
+            [
+              116.9940975,
+              7.2871106
+            ],
+            [
+              116.9946367,
+              7.2872862
+            ],
+            [
+              116.9948325,
+              7.2861289
+            ],
+            [
+              116.9956559,
+              7.2862672
+            ],
+            [
+              116.9954172,
+              7.2856314
+            ],
+            [
+              116.9956559,
+              7.285086
+            ],
+            [
+              116.9965249,
+              7.2846895
+            ],
+            [
+              116.9978043,
+              7.2851897
+            ],
+            [
+              116.9985366,
+              7.2847321
+            ],
+            [
+              116.999588,
+              7.2823642
+            ],
+            [
+              117.0019054,
+              7.2801612
+            ],
+            [
+              117.0040834,
+              7.2787831
+            ],
+            [
+              117.0071787,
+              7.2783201
+            ],
+            [
+              117.0093566,
+              7.2764683
+            ],
+            [
+              117.0141792,
+              7.2742494
+            ],
+            [
+              117.0185646,
+              7.272488
+            ],
+            [
+              117.0202517,
+              7.272214
+            ],
+            [
+              117.0211449,
+              7.2727142
+            ],
+            [
+              117.0220381,
+              7.2756356
+            ],
+            [
+              117.0241919,
+              7.2778811
+            ],
+            [
+              117.0224109,
+              7.2805523
+            ],
+            [
+              117.022199,
+              7.282867
+            ],
+            [
+              117.0184386,
+              7.2885127
+            ],
+            [
+              117.0177412,
+              7.2912717
+            ],
+            [
+              117.0165905,
+              7.2935198
+            ],
+            [
+              117.0172396,
+              7.297186
+            ],
+            [
+              117.017135,
+              7.3013842
+            ],
+            [
+              117.0189723,
+              7.3051488
+            ],
+            [
+              117.0200238,
+              7.3082575
+            ],
+            [
+              117.0202705,
+              7.3108208
+            ],
+            [
+              117.0197636,
+              7.3118504
+            ],
+            [
+              117.0197958,
+              7.3124862
+            ],
+            [
+              117.020229,
+              7.3128906
+            ],
+            [
+              117.0199648,
+              7.3119275
+            ],
+            [
+              117.0207828,
+              7.312981
+            ],
+            [
+              117.0216063,
+              7.317932
+            ],
+            [
+              117.0225611,
+              7.3207121
+            ],
+            [
+              117.0199004,
+              7.325514
+            ],
+            [
+              117.0177975,
+              7.3309888
+            ],
+            [
+              117.0176259,
+              7.3358625
+            ],
+            [
+              117.0158368,
+              7.3416352
+            ],
+            [
+              117.0137098,
+              7.3454712
+            ],
+            [
+              117.013274,
+              7.3480742
+            ],
+            [
+              117.0096356,
+              7.3542604
+            ],
+            [
+              117.0075515,
+              7.3555479
+            ],
+            [
+              117.006551,
+              7.35712
+            ],
+            [
+              117.0029059,
+              7.3570988
+            ],
+            [
+              117.0007387,
+              7.3578622
+            ],
+            [
+              116.9989362,
+              7.353747
+            ],
+            [
+              116.9962084,
+              7.3503633
+            ],
+            [
+              116.9947413,
+              7.3491795
+            ],
+            [
+              116.9919142,
+              7.3454925
+            ],
+            [
+              116.9899964,
+              7.340486
+            ],
+            [
+              116.9899106,
+              7.3329149
+            ],
+            [
+              116.9892615,
+              7.3289165
+            ],
+            [
+              116.9870031,
+              7.3241492
+            ],
+            [
+              116.9851685,
+              7.3219039
+            ],
+            [
+              116.981762,
+              7.3193021
+            ],
+            [
+              116.9776368,
+              7.3172589
+            ],
+            [
+              116.9738066,
+              7.3162666
+            ],
+            [
+              116.9712934,
+              7.3166151
+            ],
+            [
+              116.9698799,
+              7.3153714
+            ],
+            [
+              116.9687158,
+              7.3157292
+            ],
+            [
+              116.9673264,
+              7.315237
+            ],
+            [
+              116.9655159,
+              7.3139042
+            ],
+            [
+              116.9604412,
+              7.3114327
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "根据1762年授地所指的具名岛屿，与达尔林普尔旧图辨认本岛及邦吉岛。拼接开放街图34段本岛海岸后化简，只画文书指名对象的物理本岛。",
+      "position_uncertainty_m": 250,
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1763,
+          "kind": "paper_claim",
+          "title": "巴兰班岸岛 · 苏禄授地约文与升旗",
+          "note": "1761年，苏禄苏丹先允诺给东印度公司一处商站地点。1762年9月12日，苏丹班蒂兰同意授予巴兰班岸岛供贸易、修船和设防。达尔林普尔翌年在岛上升旗。"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1767,
+          "kind": "paper_claim",
+          "title": "巴兰班岸岛 · 苏禄王室重申授地",
+          "note": "1764年6月，重返王位的阿齐姆·乌德丁一世重申向公司授予巴兰班岸岛。公司筹划在岛上设置港口。"
+        },
+        {
+          "start_year": 1768,
+          "end_year": 1772,
+          "kind": "paper_claim",
+          "title": "巴兰班岸岛 · 公司筹划设站",
+          "note": "公司董事在1768年同意筹建商站，货物、船只和人员仍在调集。赫伯特于1773年抵达北港经营商站。"
+        }
+      ],
+      "source_urls": [
+        "https://www.sabrizain.org/malaya/library/earlyrels.pdf",
+        "https://searcharchives.bl.uk/catalog/040-000173311",
+        "https://nuspress.nus.edu.sg/collections/philippines/products/the-sulu-zone",
+        "https://commons.wikimedia.org/wiki/File:Dalrymple_1788_Plans_of_Balambangan_a9841015.jpg",
+        "https://www.openstreetmap.org/way/320047288",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "bbox": [
+        116.8530255,
+        7.1926776,
+        117.0241919,
+        7.3578622
+      ],
+      "outline_only": true,
+      "geometry_precision": "source_backed_historical_outline",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SAVI_HUEDA_CAPITAL",
+      "stable_id": "savi-hueda-capital",
+      "title": "萨维 · 韦达王国王都",
+      "kind": "settlement",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1726,
+          "title": "萨维 · 韦达王国王都",
+          "note": "韦达国王在萨维议政并接见商人。欧洲商团在萨维向韦达方面购入被奴役者，随后把人押往海岸转运。",
+          "kind": "settlement"
+        }
+      ],
+      "source_urls": [
+        "https://doi.org/10.1080/00438243.1997.9980353",
+        "https://www.academia.edu/figures/51881379/figure-2-excavated-areas-in-central-savi-inset-at-top-left",
+        "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/american-archaeology-in-the-republic-of-benin-recent-achievements-and-future-prospects/16760BD1695536717F9AC47E61436684",
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://scholarworks.umass.edu/adan/vol10/iss2/4",
+        "https://www.openstreetmap.org/node/4613910881",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Traced outer archaeological survey contour from north-up Kelly Fig. 2 inset at its printed 2 km scale. Inset tie at present-day Savi RN1/east road fork, with directions of both roads and village location checked. A settlement survey extent, separate from the inner palace and from a political frontier.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 450,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2.103618,
+              6.432968
+            ],
+            [
+              2.100301,
+              6.431482
+            ],
+            [
+              2.097149,
+              6.429335
+            ],
+            [
+              2.093168,
+              6.426363
+            ],
+            [
+              2.087363,
+              6.422071
+            ],
+            [
+              2.084709,
+              6.42141
+            ],
+            [
+              2.081724,
+              6.419759
+            ],
+            [
+              2.080397,
+              6.415631
+            ],
+            [
+              2.080728,
+              6.41299
+            ],
+            [
+              2.081724,
+              6.409853
+            ],
+            [
+              2.084046,
+              6.407706
+            ],
+            [
+              2.088358,
+              6.4049
+            ],
+            [
+              2.092505,
+              6.400111
+            ],
+            [
+              2.096652,
+              6.395654
+            ],
+            [
+              2.100301,
+              6.392021
+            ],
+            [
+              2.104613,
+              6.389214
+            ],
+            [
+              2.108428,
+              6.387894
+            ],
+            [
+              2.111912,
+              6.38971
+            ],
+            [
+              2.114731,
+              6.392682
+            ],
+            [
+              2.116058,
+              6.397305
+            ],
+            [
+              2.117054,
+              6.402258
+            ],
+            [
+              2.118381,
+              6.408037
+            ],
+            [
+              2.120537,
+              6.412825
+            ],
+            [
+              2.121864,
+              6.418273
+            ],
+            [
+              2.121532,
+              6.42075
+            ],
+            [
+              2.117717,
+              6.423557
+            ],
+            [
+              2.114068,
+              6.426694
+            ],
+            [
+              2.110585,
+              6.429005
+            ],
+            [
+              2.106106,
+              6.432307
+            ],
+            [
+              2.103618,
+              6.432968
+            ]
+          ]
+        ]
+      },
+      "outline_only": true,
+      "bbox": [
+        2.080397,
+        6.387894,
+        2.121864,
+        6.432968
+      ]
+    },
+    {
+      "id": "OUIDAH_PORTUGUESE_FORT",
+      "stable_id": "ouidah-portuguese-fort",
+      "title": "维达 · 葡方圣若昂堡",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1721,
+          "end_year": 1726,
+          "title": "维达 · 葡方圣若昂堡",
+          "note": "葡萄牙于1721年兴建圣若昂·巴蒂斯塔堡。为腾出堡地，当局拆除了托韦区一片既有居民区。堡垒交巴伊亚方面管理。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1727,
+          "end_year": 1727,
+          "title": "维达 · 达荷美军攻毁葡方圣若昂堡",
+          "note": "达荷美军攻入葡方圣若昂堡，摧毁工事并将大炮运往内陆。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1729,
+          "end_year": 1742,
+          "title": "维达 · 葡方重新经营圣若昂堡",
+          "note": "1729年已有葡方堡员活动记载。葡萄牙官员经营对巴西的奴役贸易，并参与本地交涉。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1743,
+          "end_year": 1743,
+          "title": "维达 · 葡方圣若昂堡再遭攻毁",
+          "note": "1743年7月21日，达荷美军进攻葡方堡，火药库爆炸。军队攻入后杀害包括避难韦达人在内的堡内居民。",
+          "kind": "conflict_damage"
+        },
+        {
+          "start_year": 1776,
+          "end_year": 1799,
+          "title": "维达 · 达荷美时期的葡方圣若昂堡",
+          "note": "1776年镇图绘出已恢复的葡方圣若昂堡。葡方在达荷美辖治下继续经营对巴西的奴役贸易。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B",
+        "https://dokumen.pub/ouidah-the-social-history-of-a-west-african-slaving-port-1727-1892-paperbacknbsped-0852554974-9780852554975-0821415727.html",
+        "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_7/carton06/35121.pdf",
+        "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers17-09/010009109.pdf",
+        "https://www.bpifrance.fr/sites/default/files/2022-03/Rapport%20EIE%20Ouidah%20-%20Route%20de%20l%27esclave%2024%2002%202019%20%20FINAL.pdf",
+        "https://analuciaaraujo.org/wp-content/uploads/2026/01/Dahomey_Portugal_and_Bahia_King_Adandoz.pdf",
+        "https://www.openstreetmap.org/way/402954433",
+        "https://www.openstreetmap.org/copyright",
+        "https://www.cambridge.org/core/books/abs/ouidah/de-souzas-ouidah-the-era-of-the-illegal-slave-trade-1815-39/AF92A8EC0C0171A99CD914DA16BF84B6",
+        "https://www.revistatopoi.org/numeros_anteriores/Topoi02/topoi2a1.pdf",
+        "https://analuciaaraujo.org/wp-content/uploads/2010/08/Araujo-Pierre-Verger-Connections-between-Brazil-and-Benin.pdf",
+        "https://www.redalyc.org/journal/770/77073701003/77073701003.pdf"
+      ],
+      "geometry_method": "Current external ground enclosure checked against the 1926 survey and Sinou’s comparison of historic ground plans, which records a stable site footprint. Interior layout dates mostly to later reoccupation and restoration.",
+      "geometry_precision": "source_backed_historical_outline",
+      "position_uncertainty_m": 45,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2.089756,
+              6.3593053
+            ],
+            [
+              2.0897356,
+              6.3593086
+            ],
+            [
+              2.0897153,
+              6.3593052
+            ],
+            [
+              2.0896972,
+              6.3592952
+            ],
+            [
+              2.0896836,
+              6.3592798
+            ],
+            [
+              2.0896757,
+              6.3592608
+            ],
+            [
+              2.0896748,
+              6.3592399
+            ],
+            [
+              2.089681,
+              6.3592198
+            ],
+            [
+              2.0896937,
+              6.359203
+            ],
+            [
+              2.0897113,
+              6.3591915
+            ],
+            [
+              2.0897318,
+              6.3591866
+            ],
+            [
+              2.0898738,
+              6.3589501
+            ],
+            [
+              2.0899423,
+              6.3588354
+            ],
+            [
+              2.0901222,
+              6.358533
+            ],
+            [
+              2.0901221,
+              6.3585133
+            ],
+            [
+              2.0901285,
+              6.3584948
+            ],
+            [
+              2.0901408,
+              6.3584793
+            ],
+            [
+              2.0901574,
+              6.3584688
+            ],
+            [
+              2.0901767,
+              6.3584643
+            ],
+            [
+              2.0901992,
+              6.3584672
+            ],
+            [
+              2.090219,
+              6.3584784
+            ],
+            [
+              2.0902331,
+              6.3584961
+            ],
+            [
+              2.0902394,
+              6.3585178
+            ],
+            [
+              2.090237,
+              6.3585403
+            ],
+            [
+              2.0907303,
+              6.358894
+            ],
+            [
+              2.0907472,
+              6.3588902
+            ],
+            [
+              2.0907643,
+              6.3588927
+            ],
+            [
+              2.0907793,
+              6.3589012
+            ],
+            [
+              2.0907901,
+              6.3589146
+            ],
+            [
+              2.0907953,
+              6.358931
+            ],
+            [
+              2.0907938,
+              6.3589494
+            ],
+            [
+              2.0907852,
+              6.3589658
+            ],
+            [
+              2.0907709,
+              6.3589775
+            ],
+            [
+              2.0907531,
+              6.3589827
+            ],
+            [
+              2.0907347,
+              6.3589807
+            ],
+            [
+              2.0904421,
+              6.359549
+            ],
+            [
+              2.0904549,
+              6.359562
+            ],
+            [
+              2.0904627,
+              6.3595785
+            ],
+            [
+              2.0904647,
+              6.3595967
+            ],
+            [
+              2.0904607,
+              6.3596145
+            ],
+            [
+              2.0904511,
+              6.35963
+            ],
+            [
+              2.0904369,
+              6.3596416
+            ],
+            [
+              2.0904184,
+              6.3596482
+            ],
+            [
+              2.0903988,
+              6.3596481
+            ],
+            [
+              2.0903804,
+              6.3596411
+            ],
+            [
+              2.0903655,
+              6.3596283
+            ],
+            [
+              2.0903561,
+              6.3596111
+            ],
+            [
+              2.089756,
+              6.3593053
+            ]
+          ]
+        ]
+      },
+      "outline_only": true,
+      "cross_century_feature_id": "ouidah-sao-joao-baptista-1800",
+      "bbox": [
+        2.0896748,
+        6.3584643,
+        2.0907953,
+        6.3596482
+      ]
     }
   ],
   "regional_lines": [
@@ -113614,6 +117369,134 @@
       "area_sqkm": null,
       "exclude_from_territorial_area_totals": true,
       "cross_century_feature_id": "naf-arakan-chittagong-frontier-1800"
+    },
+    {
+      "id": "GREAT_DISMAL_WASHINGTON_DITCH",
+      "stable_id": "great-dismal-washington-ditch",
+      "title": "大迪斯默尔沼泽 · 华盛顿排水渠",
+      "kind": "company_post",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -76.552701,
+            36.647169
+          ],
+          [
+            -76.54681,
+            36.644113
+          ],
+          [
+            -76.544083,
+            36.643443
+          ],
+          [
+            -76.538465,
+            36.642101
+          ],
+          [
+            -76.527837,
+            36.639626
+          ],
+          [
+            -76.5278002,
+            36.6396172
+          ],
+          [
+            -76.514394,
+            36.636424
+          ],
+          [
+            -76.499667,
+            36.632898
+          ],
+          [
+            -76.499061,
+            36.63275
+          ],
+          [
+            -76.478647,
+            36.628067
+          ],
+          [
+            -76.478327,
+            36.627957
+          ],
+          [
+            -76.47804,
+            36.627814
+          ],
+          [
+            -76.4767336,
+            36.6270725
+          ],
+          [
+            -76.4758349,
+            36.626528
+          ],
+          [
+            -76.4753362,
+            36.6262276
+          ],
+          [
+            -76.4748599,
+            36.6259614
+          ],
+          [
+            -76.473796,
+            36.625151
+          ],
+          [
+            -76.47297,
+            36.624574
+          ],
+          [
+            -76.472704,
+            36.623871
+          ],
+          [
+            -76.472581,
+            36.623376
+          ]
+        ]
+      },
+      "geometry_method": "开放街图 Washington Ditch 水道 41619972、41631623、41624678 首尾衔接。鱼类与野生动物管理局确认现渠为1760年代修建的历史线路。",
+      "position_uncertainty_m": 100,
+      "periods": [
+        {
+          "start_year": 1764,
+          "end_year": 1769,
+          "kind": "company_post",
+          "title": "大迪斯默尔沼泽 · 强迫劳动开挖排水渠",
+          "note": "土地公司在1760年代强迫被奴役者挖掘排水渠。公司计划利用水道运出木材，希望排水后开垦农业用地。"
+        },
+        {
+          "start_year": 1770,
+          "end_year": 1799,
+          "kind": "company_post",
+          "title": "华盛顿排水渠 · 土地公司木材运输",
+          "note": "运河连通德拉蒙德湖西部和湿地边缘。公司通过排水渠运出木料、木瓦和桶板，伐木与排水劳动主要由被奴役者承担。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/resource/g3900.ar150001/",
+        "https://www.loc.gov/item/gm71002173/",
+        "https://www.fws.gov/apps/rivers/carp/carp/sites/default/files/documents/Comprehensive%20Conservation%20Plan%20-%20Great%20Dismal%20Swamp%20-%202006.pdf",
+        "https://www.fws.gov/refuge/great-dismal-swamp/visit-us/trails",
+        "https://encyclopediavirginia.org/entries/the-great-dismal-swamp/",
+        "https://www.ncpedia.org/great-dismal-swamp",
+        "https://www.neh.gov/news/the-great-dismal-swamp",
+        "https://www.openstreetmap.org/way/41624678",
+        "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/dismal-swamp-company",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_precision": "source_backed_historical_line",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "cross_century_feature_id": "great-dismal-washington-ditch-1800"
     }
   ]
 }
