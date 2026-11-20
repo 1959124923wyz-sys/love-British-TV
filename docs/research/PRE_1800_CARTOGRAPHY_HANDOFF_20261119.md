@@ -1,6 +1,6 @@
 # 1497—1799 年制图进展与待办｜主编 35 交接
 
-2026 年 11 月 20 日复核。此表统计截至第 5Q 批。第 5P 批圣多明各已发布。打开 [1799 年地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1799) 可以用「下一年」查看 1800 年的接续。
+2026 年 11 月 20 日复核。此表统计截至第 5R 批。打开 [1799 年地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1799) 可以用「下一年」查看 1800 年的接续。
 
 ## 当前盘点
 
@@ -8,10 +8,10 @@
 | --- | ---: | --- |
 | 1497—1599 | 原盘点识别为 0 条 | 补清点只有点位或概略范围的加来、图尔奈、帕莱，以及莱伊什／奥法利和芒斯特没收地。 |
 | 1600—1699 | 26 条 | 商站查万丹、苏拉特、胡格利，港堡查海岸角、丹吉尔，另查北美早期聚落。7 条默认隐藏的最大纸面特许范围另有档案。 |
-| 1700—1799 | 281 条，其中 137 条在 1799 年显示 | 先查下方 45 条重点旧框，再处理其余 236 条。 |
-| 合计 | **307 条** | [第 5D 批原始盘点 #457](https://github.com/1959124923wyz-sys/love-British-TV/pull/457) 共 403 条，至第 5Q 批累计替换 96 条。 |
+| 1700—1799 | 277 条，其中 135 条在 1799 年显示 | 先查下方 42 条重点旧框，再处理其余 235 条。 |
+| 合计 | **303 条** | [第 5D 批原始盘点 #457](https://github.com/1959124923wyz-sys/love-British-TV/pull/457) 共 403 条，至第 5R 批累计替换 100 条。 |
 
-计数单位是地图记录。同一地点可有多个时段或多条旧记录。1497—1699 的矩形数沿用 #457 的桌面盘点，十八世纪使用第 5Q 批数据重新计算。只有点位或尚未入库的范围仍待建立完整名录。
+计数单位是地图记录。同一地点可有多个时段或多条旧记录。1497—1699 的矩形数沿用 #457 的桌面盘点，十八世纪使用第 5R 批数据重新计算。只有点位或尚未入库的范围仍待建立完整名录。
 
 ## 补绘批次
 
@@ -30,7 +30,8 @@
 | 5N | [波士顿围城与东、西佛罗里达](18C_BOSTON_AND_FLORIDA_PROVINCES_HANDOFF.md) | 4 | 306 | 140 | 16 |
 | 5O | [北美四殖民地与圣尤斯特歇斯](18C_ATLANTIC_PROVINCES_AND_STATIA_HANDOFF.md) | 8 | 298 | 140 | 16 |
 | 5P | [圣多明各三港与英军撤离](18C_SAINT_DOMINGUE_PORTS_HANDOFF.md) · [#472](https://github.com/1959124923wyz-sys/love-British-TV/pull/472) | 9 | 289 | 140 | 16 |
-| 5Q | [马提尼克两轮英占与两港接续](18C_MARTINIQUE_1762_1802_SOURCE_NOTES.md) | 8 | **281** | **137** | **16** |
+| 5Q | [马提尼克两轮英占与两港接续](18C_MARTINIQUE_1762_1802_SOURCE_NOTES.md) | 8 | 281 | 137 | 16 |
+| 5R | [多巴哥与圣卢西亚港堡](18C_TOBAGO_SAINT_LUCIA_SOURCE_NOTES.md) | 4 | **277** | **135** | **16** |
 
 更早批次见 [十八世纪制图路线图](18C_CARTOGRAPHY_ROADMAP.md)。第 5J 批发布后，正式站桌面实点了拉茹瓦港 1758 年驱逐、马德堡 1774 年受降，并从 1799 年原位打开新不伦瑞克和爱德华王子岛的 1800 年档案。
 
@@ -43,27 +44,26 @@
 - [x] **第 5O 批清理北美四殖民地和圣尤斯特歇斯。** 四地按殖民县、教区和司法区分期。圣尤斯特歇斯用主堡、仓储带和锚地接替重复旧框。[第 5O 批交接](18C_ATLANTIC_PROVINCES_AND_STATIA_HANDOFF.md)
 - [x] **第 5P 批补绘圣多明各三港。** 对照港镇、奥尔良炮台和西岸两处撤离地，退出 9 条旧框。[第 5P 批交接](18C_SAINT_DOMINGUE_PORTS_HANDOFF.md)
 - [x] **第 5Q 批补绘马提尼克。** 本岛、罗亚尔港、圣皮埃尔、圣路易堡分别落图，波旁堡单列具名点。五处逐项接续到 1800 年。[第 5Q 批交接](18C_MARTINIQUE_1762_1802_SOURCE_NOTES.md)
-- [ ] **加勒比及中南美余 26 条重点旧框。** 继续核查同一地区的驻防、行政和短期军事行动。多巴哥斯卡伯勒的法占、英军重占和 1802 年交接可与圣卢西亚各港堡分组处理。
+- [x] **第 5R 批补绘多巴哥与圣卢西亚港堡。** 本岛海岸、两座港城、三处堡址与鸽子岛分别落图。两港、两个港防驻地与多巴哥本岛接续至 1800 年。[第 5R 批交接](18C_TOBAGO_SAINT_LUCIA_SOURCE_NOTES.md)
+- [ ] **加勒比及中南美余 23 条重点旧框。** 可连做圣文森特、格林纳达和加勒比沿岸港堡，核对旧框所指的驻防、行政、原住民土地及军事行动。
 - [ ] **西非 12 条重点旧框按堡和治理主体核查。** 复用已完成的黄金海岸驻堡。将堡址、港口交易和当地政权分别追到可证期限。与下方跨年表中的奥图阿姆、普兰普兰、温内巴、阿达等一并对照。
 - [ ] **亚洲／印度洋 6 条、欧洲／地中海 1 条重点旧框。** 单列短占、驻防和行政。对照已完成的安汶—班达、马六甲、孟买等较细专题及各自档案。
 - [ ] **把 16 条跨年待核逐条清账。** 有接续证据时更新稳定 ID、去向与首期状态。只有贸易、政治关系或原住民活动证据的条目保留对应语义。对旧矩形与跨年待核重叠的条目，同时更新两处状态。
 - [ ] **补建 16、17 世纪点位及缺绘名录。** 记录时间、主体、地点和证据，分别查清可配准史图、定界条款及地方驻点。18 世纪其余旧框也按证据分别保留事件、点、线或面。
 - [ ] **接续十九世纪研究归档。** [研究草稿 PR #463](https://github.com/1959124923wyz-sys/love-British-TV/pull/463) 为并行资料入库，待审内容含 59 个专题、150 个章节、1,980 条分章年表和 1,520 条史料索引。历史专题先核源档和候选地图 ID，地图发布状态查 [正式章节](../../data/chapters.json) 和 [专题索引](../../data/stories/index.json)。
 
-## 45 条重点旧框逐条清单
+## 42 条重点旧框逐条清单
 
 逐条对照原盘点的 113 条驻防、行政及占领记录。下列 ID 在本次基线上仍使用旧矩形。同一地点的档案可能已经有较细的图形，后续须核验分期覆盖再登记替代。
 
 <details>
-<summary>加勒比／中南美（26 条）</summary>
+<summary>加勒比／中南美（23 条）</summary>
 
 | 记录 ID | 原档案名称 | 1799 年显示 | 数据文件 |
 | --- | --- | --- | --- |
 | `ANTIGUA` | 安提瓜英国殖民行政参考 | 是 | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
 | `B36-Z113` | 1795—1796英殖民政府被迫缩守圣乔治港 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
 | `B36-Z125` | 1782年巴哈马拿骚被西班牙军占领 | — | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
-| `B37-C-Z009` | 1781—1792 Tobago法军控制Scarborough | — | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
-| `B37-C-Z010` | 1793后Tobago Scarborough英军夺岛 | 是 | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
 | `B37-C-Z030` | 18世纪Bermuda St George英方殖民港 | 是 | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
 | `B37-C-Z031` | 18世纪St Kitts Basseterre英殖民港 | 是 | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
 | `B37-C-Z032` | 18世纪Nevis Charlestown英殖民港 | 是 | [eighteenth-century-b37-caribbean.json](../../data/eighteenth-century-b37-caribbean.json) |
@@ -84,7 +84,6 @@
 | `PORT_EGMONT` | 福克兰群岛Port Egmont英军短期据点范围 | — | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
 | `ST_KITTS` | 圣基茨英国殖民岛屿参考 | 是 | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
 | `ST_VINCENT` | 圣文森特1763后英属殖民争夺 | 是 | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
-| `TOBAGO` | 多巴哥1763及1793后英国控制 | 是 | [eighteenth-century-mass-schematic-zones-1700-1799.json](../../data/eighteenth-century-mass-schematic-zones-1700-1799.json) |
 
 </details>
 

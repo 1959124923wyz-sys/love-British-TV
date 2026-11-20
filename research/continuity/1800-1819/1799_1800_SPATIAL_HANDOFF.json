@@ -16,17 +16,17 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 661,
-    "linked_to_1800_public_geometry": 530,
+    "1799_prior_records_reviewed": 664,
+    "linked_to_1800_public_geometry": 533,
     "by_disposition": {
-      "anchor": 308,
+      "anchor": 306,
       "claim_evidence": 7,
-      "continued": 182,
+      "continued": 184,
       "event_history": 11,
       "fiscal_evidence": 35,
       "needs_boundary_or_site_review": 16,
       "network_evidence": 59,
-      "occupation": 13,
+      "occupation": 16,
       "political_relation_evidence": 11,
       "renewed_scope": 19
     },
@@ -350,9 +350,10 @@
       "prior_record_kind": "military",
       "resolution": "occupation",
       "features_at_1800": [
-        "tobago-occupation-1800"
+        "tobago-scarborough-town-1800",
+        "tobago-scarborough-fort-1800"
       ],
-      "notes": "1802年归法国，1803年重新占领，1814年正式割让。"
+      "notes": "旧矩形由港城和山堡接替。1802年交回法国，1803年英军再占。"
     },
     {
       "prior_id": "B37-C-Z013",
@@ -2005,7 +2006,7 @@
       "features_at_1800": [
         "tobago-occupation-1800"
       ],
-      "notes": "1802年归法国，1803年重新占领，1814年正式割让。"
+      "notes": "旧矩形由多巴哥本岛海岸轮廓接替。1802年交回法国，1803年重新占领，1814年正式割让。"
     },
     {
       "prior_id": "MARTINIQUE_1794",
@@ -3291,7 +3292,7 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "圣卢西亚 · 卡斯特里旧港",
       "prior_record_kind": "settlement",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
         "saint-lucia-castries-port-1800"
       ]
@@ -3301,7 +3302,7 @@
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
       "name_zh": "卡斯特里 · 莫尔讷福蒂内／夏洛特堡",
       "prior_record_kind": "military",
-      "resolution": "anchor",
+      "resolution": "occupation",
       "features_at_1800": [
         "saint-lucia-morne-fortune-1800"
       ]
@@ -6634,6 +6635,36 @@
         "martinique-fort-bourbon-1800"
       ],
       "notes": "以同一几何和稳定ID接入1800年。1802年9月14日法方接收。"
+    },
+    {
+      "prior_id": "TOBAGO_MAIN_ISLAND",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "多巴哥本岛",
+      "prior_record_kind": "administration",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "tobago-occupation-1800"
+      ]
+    },
+    {
+      "prior_id": "TOBAGO_SCARBOROUGH_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "斯卡伯勒 · 港城旧街区",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "tobago-scarborough-town-1800"
+      ]
+    },
+    {
+      "prior_id": "TOBAGO_SCARBOROUGH_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "斯卡伯勒山堡 · 后称乔治国王堡",
+      "prior_record_kind": "military",
+      "resolution": "occupation",
+      "features_at_1800": [
+        "tobago-scarborough-fort-1800"
+      ]
     }
   ]
 }
