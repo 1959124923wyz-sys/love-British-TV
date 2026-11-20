@@ -18,7 +18,7 @@
 
 - [1762 年罗亚尔港围城图 RCIN 733041](https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-fort-royal-1762-fort-de-france-martinique-14deg3632n-61deg0424w) · [堡城图 RCIN 733042](https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-fort-royal-1762-fort-de-france-martinique-14deg3632n-61deg0424w) · [1762 年殖民地交接的同期报道](https://cwfjdrlsc.omeka.net/items/show/14) · [英国陆军部档案清单 WO 34/55](https://loyalist.lib.unb.ca/sites/default/files/WO%2034%20Volume%2055_Document%20List.pdf)。
 - [格雷文书档案索引](https://reed.dur.ac.uk/xtf/view?docId=ark/32150_s1gq67jr17b.xml) · [法国国防历史档案机构马提尼克卷](https://www.servicehistorique.sga.defense.gouv.fr/ark/489232) · [格林尼治馆藏 1794 年罗亚尔堡](https://www.rmg.co.uk/collections/objects/rmgc-object-11958) · [1794 年圣路易堡](https://www.rmg.co.uk/collections/objects/rmgc-object-11960)。
-- [破除奴役记忆基金会法令资料](https://memoire-esclavage.org/napoleon-et-le-retablissement-de-lesclavage/lessentiel-dossier-napoleon-et-le-retablissement-de) · [1802 年 7 月 5 日委任原文](https://www.napoleonica.org/document/53538) · [交接笔录档号与日期](https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11)。
+- [法国奴隶制记忆基金会法令资料](https://memoire-esclavage.org/napoleon-et-le-retablissement-de-lesclavage/lessentiel-dossier-napoleon-et-le-retablissement-de) · [1802 年 7 月 5 日委任原文](https://www.napoleonica.org/document/53538) · [交接笔录档号与日期](https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11)。
 
 ## 制图接续
 
