@@ -637,6 +637,42 @@ for(const [file,ids] of [
  const {zones,sites}=JSON.parse(read('data/'+file));
  for(const id of ids) a(atlantic([...zones,...sites].find(row=>row.id===id)?.superseded_by),id);
 }
+for(const [oldId,newId] of [
+ ['CAYMAN','CAYMAN_ISLANDS_18C'],['MARIE_GALANTE','MARIE_GALANTE_MAIN_ISLAND'],
+ ['PORT_EGMONT','PORT_EGMONT_SETTLEMENT_18C'],['ELBA_1796','ELBA_PORTOFERRAIO_WALLED_PORT'],
+ ['SENEGAL_STLOUIS','SENEGAL_NDAR_SAINT_LOUIS_FORT'],
+]) a.equal(z(oldId).superseded_by,newId);
+a.equal(s('PORT_EGMONT_CORE').superseded_by,'PORT_EGMONT_SETTLEMENT_18C');
+a.equal(s('PORTOFERRAIO').superseded_by,'ELBA_PORTOFERRAIO_WALLED_PORT');
+a.match(islandPhase('GRAND_CAYMAN_EARLY_SETTLEMENT',1734).note,/1734.*普罗斯佩克特.*被奴役者/);
+a.equal(islandPhase('CAYMAN_ISLANDS_18C',1797),undefined);
+a.match(islandPhase('CAYMAN_ISLANDS_18C',1798).note,/1月13日.*威廉·博登/);
+a.equal(atlantic('CAYMAN_ISLANDS_18C').geometry.coordinates.length,3);
+a.equal(islandPhase('CAYMAN_EAST_END_TEN_SAIL',1793),undefined);
+a.match(islandPhase('CAYMAN_EAST_END_TEN_SAIL',1794).note,/2月8日.*救援/);
+a.match(islandPhase('MARIE_GALANTE_MAIN_ISLAND',1759).title,/5月26日/);
+a.equal(islandPhase('MARIE_GALANTE_MAIN_ISLAND',1763).kind,'foreign_occupation');
+a.match(islandPhase('MARIE_GALANTE_MAIN_ISLAND',1794).note,/4月.*收复/);
+a.match(islandPhase('PORT_EGMONT_SETTLEMENT_18C',1770).note,/6月10日.*14日离开/);
+a.match(islandPhase('PORT_EGMONT_SETTLEMENT_18C',1771).note,/1月22日.*9月16日/);
+a.match(islandPhase('PORT_EGMONT_SETTLEMENT_18C',1774).note,/21日驶离/);
+a.equal(islandPhase('PORT_EGMONT_SETTLEMENT_18C',1775),undefined);
+a(atlantic('PORT_EGMONT_SETTLEMENT_18C').bbox[0]>-60.07);
+a.match(islandPhase('ELBA_PORTOFERRAIO_WALLED_PORT',1797).note,/1月.*4月.*21日/);
+a.equal(islandPhase('ELBA_PORTOFERRAIO_WALLED_PORT',1798),undefined);
+a.equal(islandPhase('SENEGAL_NDAR_SAINT_LOUIS_FORT',1779).kind,'foreign_occupation');
+a.match(islandPhase('SENEGAL_NDAR_SAINT_LOUIS_FORT',1783).note,/凡尔赛和约》第九条/);
+for(const id of ['CAYMAN_ISLANDS_18C','CAYMAN_HOGSTY_BAY','CAYMAN_FORT_GEORGE',
+ 'CAYMAN_PEDRO_ST_JAMES','CAYMAN_BODDEN_TOWN','MARIE_GALANTE_MAIN_ISLAND',
+ 'MARIE_GALANTE_GRAND_BOURG','SENEGAL_NDAR_SAINT_LOUIS_FORT']) {
+ const record=atlantic(id);
+ const next=successors.find(f=>f.id===record.cross_century_feature_id);
+ a.equal(record.periods.at(-1).end_year,1799);
+ a.equal(next.properties.start_year,1800);
+ a.equal(next.properties.stable_id,record.stable_id);
+ a.deepEqual(next.geometry,record.geometry);
+}
+a.equal(successors.find(f=>f.id==='senegal-ndar-saint-louis-fort-1800').properties.year_stages[1].start_year,1809);
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));
 a(html.includes('js/eighteenth-mass-spatial.js?v='));

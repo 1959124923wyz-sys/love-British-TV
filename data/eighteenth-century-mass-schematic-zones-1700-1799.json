@@ -6321,7 +6321,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "MARIE_GALANTE_MAIN_ISLAND"
     },
     {
       "id": "MARTINIQUE_1762",
@@ -6564,7 +6565,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "CAYMAN_ISLANDS_18C"
     },
     {
       "id": "HAVANA_HARBOR",
@@ -7319,7 +7321,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "SENEGAL_NDAR_SAINT_LOUIS_FORT"
     },
     {
       "id": "GAMBIA_JAMES",
@@ -7609,7 +7612,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "PORT_EGMONT_SETTLEMENT_18C"
     },
     {
       "id": "FALKLAND_PAPER",
@@ -8463,7 +8467,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "ELBA_PORTOFERRAIO_WALLED_PORT"
     }
   ],
   "sites": [
@@ -9416,7 +9421,8 @@
       "category": "dated_city_or_port_core",
       "historical_city_wall_survey": false,
       "area_sqkm": null,
-      "screen_radius_not_ground_area": true
+      "screen_radius_not_ground_area": true,
+      "superseded_by": "PORT_EGMONT_SETTLEMENT_18C"
     },
     {
       "id": "BASTIA_CORSICA",
@@ -9460,7 +9466,8 @@
       "category": "dated_city_or_port_core",
       "historical_city_wall_survey": false,
       "area_sqkm": null,
-      "screen_radius_not_ground_area": true
+      "screen_radius_not_ground_area": true,
+      "superseded_by": "ELBA_PORTOFERRAIO_WALLED_PORT"
     }
   ],
   "coastal_rights": [
@@ -32311,6 +32318,420 @@
       "area_sqkm": null,
       "exclude_from_territorial_area_totals": true,
       "position_uncertainty_m": 170
+    },
+    {
+      "id": "CAYMAN_HOGSTY_BAY",
+      "stable_id": "cayman-hogsty-bay",
+      "title": "大开曼 · 猪圈湾旧港",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3829,
+          19.29411
+        ]
+      },
+      "geometry_method": "乔治·高尔德1773年海图所记锚地在乔治敦西岸；采用国家博物馆旁的历史岸线定位。",
+      "geometry_precision": "named_place_anchor",
+      "source_urls": [
+        "https://museum.ky/trail_sites/historic-hog-sty-bay/",
+        "https://catalogue.bnf.fr/ark:/12148/cb42198346v",
+        "https://www.cigouk.ky/wp-content/uploads/2018/05/Cayman-Islands-e-book-draft-2.pdf",
+        "https://cigarchives.gov.ky/history"
+      ],
+      "periods": [
+        {
+          "start_year": 1773,
+          "end_year": 1799,
+          "kind": "trade_influence",
+          "title": "猪圈湾 · 大开曼西岸锚地",
+          "note": "高尔德在1773年测绘中记录该湾的锚泊和补给条件。18世纪末档案仍见猪圈湾旧称。"
+        }
+      ],
+      "position_uncertainty_m": 130,
+      "cross_century_feature_id": "cayman-hogsty-bay-1800",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CAYMAN_FORT_GEORGE",
+      "stable_id": "cayman-fort-george",
+      "title": "大开曼 · 乔治堡",
+      "kind": "military_vicinity",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3830162,
+          19.2966248
+        ]
+      },
+      "geometry_method": "乔治敦Fort Street与Seafarers Way交口的现存堡址；原墙部分拆除。",
+      "geometry_precision": "named_place_anchor",
+      "source_urls": [
+        "https://museum.ky/trail_sites/fort-george/",
+        "https://nationaltrust.org.ky/on-this-day-in-history-fort-george/",
+        "https://museum.ky/trail_sites/historic-hog-sty-bay/",
+        "https://www.cigouk.ky/wp-content/uploads/2018/05/Cayman-Islands-e-book-draft-2.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1790,
+          "end_year": 1799,
+          "kind": "military_vicinity",
+          "title": "乔治堡 · 民兵守港",
+          "note": "18世纪末，岛上民兵在猪圈湾附近的乔治堡布设火炮，保护港湾。"
+        }
+      ],
+      "position_uncertainty_m": 24,
+      "cross_century_feature_id": "cayman-fort-george-1800",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CAYMAN_PEDRO_ST_JAMES",
+      "stable_id": "cayman-pedro-st-james",
+      "title": "大开曼 · 佩德罗圣詹姆斯宅",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2919209,
+          19.267059
+        ]
+      },
+      "geometry_method": "佩德罗圣詹姆斯遗址1780年主屋，以现存建筑中心作具名定位。",
+      "geometry_precision": "named_place_anchor",
+      "source_urls": [
+        "https://pedrostjames.ky/our-history/",
+        "https://museum.ky/trail_sites/pedro-st-james/",
+        "https://cigarchives.gov.ky/history",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1799,
+          "kind": "settlement",
+          "title": "佩德罗圣詹姆斯宅 · 被奴役者兴建伊登宅",
+          "note": "威廉·伊登役使被奴役者建造主屋。建筑落在大开曼南岸佩德罗一带，周边土地由伊登家族经营。"
+        }
+      ],
+      "position_uncertainty_m": 18,
+      "cross_century_feature_id": "cayman-pedro-st-james-1800",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CAYMAN_BODDEN_TOWN",
+      "stable_id": "cayman-bodden-town",
+      "title": "大开曼 · 博登镇",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.2539814,
+          19.2748256
+        ]
+      },
+      "geometry_method": "高尔德开曼海图中的南岸定居点，以博登镇旧中心具名定位。",
+      "geometry_precision": "named_place_anchor",
+      "source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb42198346v",
+        "https://nationaltrust.org.ky/our-heritage-sites/mission-house/",
+        "https://www.cigouk.ky/wp-content/uploads/2018/05/Cayman-Islands-e-book-draft-2.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1773,
+          "end_year": 1799,
+          "kind": "settlement",
+          "title": "博登镇 · 大开曼南岸聚落",
+          "note": "高尔德海图记录该聚落。18世纪后期博登镇是大开曼早期的施政与定居中心之一。"
+        }
+      ],
+      "position_uncertainty_m": 350,
+      "cross_century_feature_id": "cayman-bodden-town-1800",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CAYMAN_EAST_END_TEN_SAIL",
+      "stable_id": "cayman-east-end-ten-sail",
+      "title": "大开曼 · 东端十船触礁",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.0905157,
+          19.3094591
+        ]
+      },
+      "geometry_method": "采用Gun Bay的十船沉船海岸纪念处，以具名岸段标记当地救援，未分船定位。",
+      "geometry_precision": "named_place_anchor",
+      "source_urls": [
+        "https://museum.ky/trail_sites/wreckofthetensail/",
+        "https://cigarchives.gov.ky/history",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "kind": "settlement",
+          "title": "东端岸礁 · 十船触礁与救援",
+          "note": "2月8日，护航军舰与九艘同队商船在大开曼东端触礁。附近居民划船救援乘员。"
+        }
+      ],
+      "position_uncertainty_m": 250,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "ELBA_FORTE_INGLESE",
+      "stable_id": "elba-forte-inglese",
+      "title": "费拉约港西侧 · 英国堡旧址",
+      "kind": "military_vicinity",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.3180061,
+          42.8168704
+        ]
+      },
+      "geometry_method": "采用港城西侧现存英国堡路径255690156中心；1814年改建形态未回推。",
+      "geometry_precision": "named_place_anchor",
+      "source_urls": [
+        "https://www.museiarcipelago.it/en/edifici/il-forte-inglese/",
+        "https://www.openstreetmap.org/way/255690156",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-156001",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Dispatches_and_Letters_of_Vice_Admiral_Lord_Viscount_Nelson%2C_Vol._II_%28IA_dli.granth.53081%29.pdf",
+        "https://catalogo.museidigenova.it/oggetti/196476-evacuazione-degli-inglesi-da-porto-ferraio?i=50"
+      ],
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1796,
+          "kind": "military_vicinity",
+          "title": "英国堡 · 英方重新启用旧工事",
+          "note": "港西旧堡在英军1796年接管费拉约港后重新投入使用。"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1797,
+          "kind": "battle",
+          "title": "英国堡 · 英军撤出费拉约港",
+          "note": "英军于4月撤离费拉约港；旧工事此后在拿破仑时期另有改建。"
+        }
+      ],
+      "position_uncertainty_m": 35,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "SENEGAL_NDAR_SAINT_LOUIS_FORT",
+      "stable_id": "senegal-ndar-saint-louis-fort",
+      "title": "恩达尔岛 · 圣路易斯堡旧址",
+      "kind": "wartime_occupation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -16.5044071,
+          16.0255104
+        ]
+      },
+      "geometry_method": "杰弗里斯1758年堡图、1782年驻堡图和圣路易斯城市形态报告对照后世Gouvernance原址；定位于堡址而非后建建筑平面。",
+      "geometry_precision": "named_place_anchor",
+      "source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b53153473t",
+        "https://whc.unesco.org/document/135045",
+        "https://www.persee.fr/doc/outre_0300-9513_1964_num_51_184_1388",
+        "https://doi.org/10.1017/hia.2024.2",
+        "https://teacherresources.colonialwilliamsburg.org/API/Download/v1_0/GetOriginalLimited?Identifier=CW117MVH&SourceAction=API_VIEW_DETAILS_TRX&UsePreviewPdf=False",
+        "https://avalon.law.yale.edu/18th_century/paris763.asp",
+        "https://www.openstreetmap.org/node/2108120493"
+      ],
+      "periods": [
+        {
+          "start_year": 1758,
+          "end_year": 1758,
+          "kind": "wartime_occupation",
+          "title": "圣路易斯堡 · 英军夺取法方堡垒",
+          "note": "1758年春，马什率英国舰队进入塞内加尔河口，堡内法国驻军投降。杰弗里斯同年绘出堡墙、军械库和储存树胶的仓库。"
+        },
+        {
+          "start_year": 1759,
+          "end_year": 1762,
+          "kind": "wartime_occupation",
+          "title": "圣路易斯堡 · 英军驻堡",
+          "note": "英国接管河口堡垒。堡内仓库储存阿拉伯树胶，殖民商贸也涉及贩运被奴役者。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1778,
+          "kind": "administration",
+          "title": "圣路易斯堡 · 英方驻堡与条约管辖",
+          "note": "1763年《巴黎和约》第十条将圣路易斯、波多尔、加拉姆的堡垒与商站列为法方割让给英国的据点。"
+        },
+        {
+          "start_year": 1779,
+          "end_year": 1779,
+          "kind": "foreign_occupation",
+          "title": "圣路易斯堡 · 法军夺回",
+          "note": "1779年1月下旬，沃德勒伊舰队抵达河口，洛赞公爵的部队接收英国驻堡。"
+        },
+        {
+          "start_year": 1780,
+          "end_year": 1782,
+          "kind": "foreign_occupation",
+          "title": "圣路易斯堡 · 法方驻地",
+          "note": "法国重新以圣路易斯为行政和贸易据点，驻堡管治在1783年和约前已经恢复。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "kind": "foreign_occupation",
+          "title": "圣路易斯堡 · 和约确认归法国",
+          "note": "9月3日《凡尔赛和约》第九条确认英国将塞内加尔河及圣路易斯等列名据点交给法国。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "kind": "foreign_occupation",
+          "title": "圣路易斯堡 · 法国殖民驻地和树胶贸易",
+          "note": "法方继续从圣路易斯经营塞内加尔河贸易，树胶采购须同当地非洲政权及商人交涉。"
+        }
+      ],
+      "position_uncertainty_m": 85,
+      "cross_century_feature_id": "senegal-ndar-saint-louis-fort-1800",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "MARIE_GALANTE_GRAND_BOURG",
+      "stable_id": "marie-galante-grand-bourg",
+      "cross_century_feature_id": "marie-galante-grand-bourg-1800",
+      "title": "玛丽加朗特 · 格朗堡旧港",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.316056,
+          15.882216
+        ]
+      },
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 250,
+      "geometry_method": "Point between the pre-existing Grand-Bourg settlement center and the modern port, corroborated by the named town symbols on the 1764 Bellin and 1775 Coullonges maps and Guadeloupe regional atlas. The historical maps depict conventional buildings without surveyable parcel lines.",
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1762,
+          "title": "格朗堡 · 英占时期的旧港",
+          "note": "格朗堡是该岛西南岸的殖民港镇。鲍恩1759年地图在西南岸画有英方工事，题为皇家营地。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1791,
+          "title": "格朗堡 · 法国殖民港镇",
+          "note": "1764年的贝兰岛图把港镇记作巴斯泰尔聚落与堂区。1775年法国史图以格朗堡标示临岸屋舍与教堂。"
+        },
+        {
+          "start_year": 1792,
+          "end_year": 1793,
+          "title": "格朗堡 · 岛上共和派活动",
+          "note": "1792年末，玛丽加朗特共和派与瓜德罗普保王派行政分开。格朗堡是岛上旧港镇。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "格朗堡 · 岛上英法先后接管",
+          "note": "4月英方控制玛丽加朗特。同年法国共和派恢复管辖。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "格朗堡 · 法国共和派辖下港镇",
+          "note": "法方收复玛丽加朗特后，格朗堡延续为岛上的行政与港务中心。"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74691009/",
+        "https://catalogue.bnf.fr/ark:/12148/cb43859888x",
+        "https://commons.wikimedia.org/wiki/File:Plan_de_l%27isle_Marie_Galande_avec_son_memoire_local_-_Begorrat_de_Coullonges_-_btv1b531360154.jpg",
+        "https://www.regionguadeloupe.fr/fileadmin/Site_Region_Guadeloupe/Mediatheque/Brochures_et_publications/AdP-971-T4.pdf",
+        "https://avalon.law.yale.edu/18th_century/paris763.asp",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml",
+        "https://www.persee.fr/doc/ahrf_0003-4436_1993_num_293_1_1581?pageId=T1_374",
+        "https://www.marie-galante-terredhistoire.com/reacutepublique-des-douze.html",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Examiner_1808-05-08-_Iss_19_%28IA_sim_examiner-a-weekly-paper-on-politics-literature-music_1808-05-08_19%29.pdf",
+        "https://www.openstreetmap.org/copyright",
+        "https://jcb.lunaimaging.com/luna/servlet/s/uq0u0g"
+      ],
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "PORT_EGMONT_INITIAL_LANDING",
+      "stable_id": "port-egmont-saunders-initial-landing",
+      "title": "埃格蒙特港 · 拜伦考察驻地",
+      "kind": "military_vicinity",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.064583,
+          -51.353723
+        ]
+      },
+      "geometry_precision": "named_place_anchor",
+      "geometry_method": "后续埃格蒙特港驻地遗址中心作为1765年同址考察的具名定位。",
+      "position_uncertainty_m": 150,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.tandfonline.com/doi/abs/10.1179/pma.1996.001",
+        "https://www.falklandislands.com/things-to-do/port-egmont-first-settlement-p674181",
+        "https://falklandsbiographies.org/biographies/315",
+        "https://www.loc.gov/item/90683622/",
+        "https://www.openstreetmap.org/way/440681889"
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1765,
+          "title": "埃格蒙特港 · 拜伦命名并设立英方据点",
+          "note": "1765年，约翰·拜伦率舰队到桑德斯岛海湾，将其命名为埃格蒙特港，并代表英国提出权利主张。次年英方扩大驻地并修建木堡。",
+          "kind": "military_vicinity"
+        }
+      ]
     }
   ],
   "regional_zones": [
@@ -100463,6 +100884,1905 @@
         -61.7533558,
         12.0499799
       ]
+    },
+    {
+      "id": "GRAND_CAYMAN_EARLY_SETTLEMENT",
+      "stable_id": "grand-cayman-early-settlement",
+      "title": "大开曼 · 殖民定居与授地",
+      "kind": "trade_influence",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -81.136098,
+              19.354885
+            ],
+            [
+              -81.157786,
+              19.355048
+            ],
+            [
+              -81.211822,
+              19.348049
+            ],
+            [
+              -81.231557,
+              19.351549
+            ],
+            [
+              -81.268137,
+              19.366278
+            ],
+            [
+              -81.286285,
+              19.368476
+            ],
+            [
+              -81.280751,
+              19.356269
+            ],
+            [
+              -81.273305,
+              19.348049
+            ],
+            [
+              -81.277984,
+              19.344062
+            ],
+            [
+              -81.273305,
+              19.334377
+            ],
+            [
+              -81.27953,
+              19.341783
+            ],
+            [
+              -81.273427,
+              19.332099
+            ],
+            [
+              -81.273305,
+              19.327582
+            ],
+            [
+              -81.288075,
+              19.331366
+            ],
+            [
+              -81.293813,
+              19.334377
+            ],
+            [
+              -81.301259,
+              19.320624
+            ],
+            [
+              -81.303498,
+              19.309055
+            ],
+            [
+              -81.322438,
+              19.302251
+            ],
+            [
+              -81.349718,
+              19.302114
+            ],
+            [
+              -81.364045,
+              19.319946
+            ],
+            [
+              -81.36059,
+              19.340104
+            ],
+            [
+              -81.368999,
+              19.359083
+            ],
+            [
+              -81.378585,
+              19.375817
+            ],
+            [
+              -81.375722,
+              19.388983
+            ],
+            [
+              -81.394124,
+              19.394761
+            ],
+            [
+              -81.408346,
+              19.390212
+            ],
+            [
+              -81.414238,
+              19.382349
+            ],
+            [
+              -81.416542,
+              19.370028
+            ],
+            [
+              -81.390326,
+              19.35226
+            ],
+            [
+              -81.385503,
+              19.338858
+            ],
+            [
+              -81.385426,
+              19.324311
+            ],
+            [
+              -81.388899,
+              19.307506
+            ],
+            [
+              -81.395925,
+              19.289562
+            ],
+            [
+              -81.397939,
+              19.274156
+            ],
+            [
+              -81.387486,
+              19.263864
+            ],
+            [
+              -81.375722,
+              19.272284
+            ],
+            [
+              -81.357882,
+              19.274094
+            ],
+            [
+              -81.276357,
+              19.264838
+            ],
+            [
+              -81.266469,
+              19.266059
+            ],
+            [
+              -81.233458,
+              19.289234
+            ],
+            [
+              -81.169504,
+              19.299563
+            ],
+            [
+              -81.1351,
+              19.290742
+            ],
+            [
+              -81.106677,
+              19.295317
+            ],
+            [
+              -81.086586,
+              19.309927
+            ],
+            [
+              -81.089508,
+              19.335395
+            ],
+            [
+              -81.099517,
+              19.347317
+            ],
+            [
+              -81.117543,
+              19.352769
+            ],
+            [
+              -81.136098,
+              19.354885
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "沿用十九世纪制图中依据Natural Earth物理岛岸整理的陆地轮廓，岛间水域不纳入。",
+      "geometry_precision": "source_backed_historical_outline",
+      "source_urls": [
+        "https://cigarchives.gov.ky/history",
+        "https://www.cigouk.ky/wp-content/uploads/2018/05/Cayman-Islands-e-book-draft-2.pdf",
+        "https://catalogue.bnf.fr/ark:/12148/cb42198346v",
+        "https://nationalhumanitiescenter.org/pds/amerbegin/power/text1/SpanishEnglishRivalry.pdf",
+        "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1733,
+          "kind": "trade_influence",
+          "title": "大开曼 · 早期定居与航海补给",
+          "note": "开曼国家档案馆记载，约1700年前后大开曼已有定居、捕龟与船只补给活动。英国把1670年《马德里条约》视为其权利的依据，条约条文没有逐岛列名。"
+        },
+        {
+          "start_year": 1734,
+          "end_year": 1742,
+          "kind": "trade_influence",
+          "title": "大开曼 · 殖民授地依靠奴役劳力",
+          "note": "1734年，档案所见第一份大开曼授地位于普罗斯佩克特与北湾之间。至1742年还有其他授地，定居者役使被奴役者清理土地、从事农作。"
+        },
+        {
+          "start_year": 1743,
+          "end_year": 1772,
+          "kind": "trade_influence",
+          "title": "大开曼 · 定居者、奴役劳动和航海补给",
+          "note": "定居与授地主要集中在大开曼，航船在岛上补给。"
+        },
+        {
+          "start_year": 1773,
+          "end_year": 1773,
+          "kind": "trade_influence",
+          "title": "大开曼 · 高尔德测绘岛岸",
+          "note": "乔治·高尔德测绘开曼三岛与近岸航道，并标出大开曼的沿岸聚落。"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1797,
+          "kind": "trade_influence",
+          "title": "大开曼 · 地方议事与自治",
+          "note": "岛上至迟在1774年已有选举地方治安官的做法。牙买加总督1798年首次正式委任治安官。"
+        }
+      ],
+      "bbox": [
+        -81.416542,
+        19.263864,
+        -81.086586,
+        19.394761
+      ],
+      "outline_only": true,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "CAYMAN_ISLANDS_18C",
+      "stable_id": "cayman-19c-islands",
+      "title": "开曼三岛 · 地方议事与牙买加联系",
+      "kind": "administration",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -81.136098,
+                19.354885
+              ],
+              [
+                -81.157786,
+                19.355048
+              ],
+              [
+                -81.211822,
+                19.348049
+              ],
+              [
+                -81.231557,
+                19.351549
+              ],
+              [
+                -81.268137,
+                19.366278
+              ],
+              [
+                -81.286285,
+                19.368476
+              ],
+              [
+                -81.280751,
+                19.356269
+              ],
+              [
+                -81.273305,
+                19.348049
+              ],
+              [
+                -81.277984,
+                19.344062
+              ],
+              [
+                -81.273305,
+                19.334377
+              ],
+              [
+                -81.27953,
+                19.341783
+              ],
+              [
+                -81.273427,
+                19.332099
+              ],
+              [
+                -81.273305,
+                19.327582
+              ],
+              [
+                -81.288075,
+                19.331366
+              ],
+              [
+                -81.293813,
+                19.334377
+              ],
+              [
+                -81.301259,
+                19.320624
+              ],
+              [
+                -81.303498,
+                19.309055
+              ],
+              [
+                -81.322438,
+                19.302251
+              ],
+              [
+                -81.349718,
+                19.302114
+              ],
+              [
+                -81.364045,
+                19.319946
+              ],
+              [
+                -81.36059,
+                19.340104
+              ],
+              [
+                -81.368999,
+                19.359083
+              ],
+              [
+                -81.378585,
+                19.375817
+              ],
+              [
+                -81.375722,
+                19.388983
+              ],
+              [
+                -81.394124,
+                19.394761
+              ],
+              [
+                -81.408346,
+                19.390212
+              ],
+              [
+                -81.414238,
+                19.382349
+              ],
+              [
+                -81.416542,
+                19.370028
+              ],
+              [
+                -81.390326,
+                19.35226
+              ],
+              [
+                -81.385503,
+                19.338858
+              ],
+              [
+                -81.385426,
+                19.324311
+              ],
+              [
+                -81.388899,
+                19.307506
+              ],
+              [
+                -81.395925,
+                19.289562
+              ],
+              [
+                -81.397939,
+                19.274156
+              ],
+              [
+                -81.387486,
+                19.263864
+              ],
+              [
+                -81.375722,
+                19.272284
+              ],
+              [
+                -81.357882,
+                19.274094
+              ],
+              [
+                -81.276357,
+                19.264838
+              ],
+              [
+                -81.266469,
+                19.266059
+              ],
+              [
+                -81.233458,
+                19.289234
+              ],
+              [
+                -81.169504,
+                19.299563
+              ],
+              [
+                -81.1351,
+                19.290742
+              ],
+              [
+                -81.106677,
+                19.295317
+              ],
+              [
+                -81.086586,
+                19.309927
+              ],
+              [
+                -81.089508,
+                19.335395
+              ],
+              [
+                -81.099517,
+                19.347317
+              ],
+              [
+                -81.117543,
+                19.352769
+              ],
+              [
+                -81.136098,
+                19.354885
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -80.03783,
+                19.704035
+              ],
+              [
+                -80.062088,
+                19.700682
+              ],
+              [
+                -80.081543,
+                19.685929
+              ],
+              [
+                -80.098553,
+                19.676857
+              ],
+              [
+                -80.113155,
+                19.65866
+              ],
+              [
+                -80.077968,
+                19.65402
+              ],
+              [
+                -80.003918,
+                19.69027
+              ],
+              [
+                -79.977935,
+                19.697455
+              ],
+              [
+                -79.964263,
+                19.704901
+              ],
+              [
+                -79.981028,
+                19.714301
+              ],
+              [
+                -80.008736,
+                19.703951
+              ],
+              [
+                -80.03783,
+                19.704035
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -79.871889,
+                19.704636
+              ],
+              [
+                -79.893754,
+                19.679673
+              ],
+              [
+                -79.773893,
+                19.713364
+              ],
+              [
+                -79.726643,
+                19.737063
+              ],
+              [
+                -79.731516,
+                19.752102
+              ],
+              [
+                -79.7459,
+                19.757631
+              ],
+              [
+                -79.768899,
+                19.752036
+              ],
+              [
+                -79.802837,
+                19.732827
+              ],
+              [
+                -79.871889,
+                19.704636
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "沿用十九世纪制图中依据Natural Earth物理岛岸整理的陆地轮廓，岛间水域不纳入。",
+      "geometry_precision": "source_backed_historical_outline",
+      "source_urls": [
+        "https://cigarchives.gov.ky/history",
+        "https://www.cigouk.ky/wp-content/uploads/2018/05/Cayman-Islands-e-book-draft-2.pdf",
+        "https://catalogue.bnf.fr/ark:/12148/cb42198346v",
+        "https://nationalhumanitiescenter.org/pds/amerbegin/power/text1/SpanishEnglishRivalry.pdf",
+        "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/"
+      ],
+      "periods": [
+        {
+          "start_year": 1798,
+          "end_year": 1799,
+          "kind": "administration",
+          "title": "开曼三岛 · 牙买加任命治安官",
+          "note": "1798年1月13日，牙买加总督正式委任威廉·博登为首席治安官，另任命四名治安官。大开曼的地方会议继续处理岛务。开曼布拉克与小开曼的再定居主要在19世纪。"
+        }
+      ],
+      "bbox": [
+        -81.416542,
+        19.263864,
+        -79.726643,
+        19.757631
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "cayman-local-1800",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "ELBA_PORTOFERRAIO_WALLED_PORT",
+      "stable_id": "elba-portoferraio-walled-port",
+      "title": "厄尔巴岛 · 费拉约港旧城",
+      "kind": "wartime_occupation",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.3249873,
+              42.8143297
+            ],
+            [
+              10.3255543,
+              42.8144218
+            ],
+            [
+              10.326014,
+              42.8144205
+            ],
+            [
+              10.3263283,
+              42.8140993
+            ],
+            [
+              10.3264737,
+              42.8136652
+            ],
+            [
+              10.3268054,
+              42.8133127
+            ],
+            [
+              10.3272642,
+              42.8131743
+            ],
+            [
+              10.3280692,
+              42.8131168
+            ],
+            [
+              10.3284671,
+              42.8134691
+            ],
+            [
+              10.3289557,
+              42.8138319
+            ],
+            [
+              10.3294127,
+              42.8141735
+            ],
+            [
+              10.3300078,
+              42.8144926
+            ],
+            [
+              10.3303821,
+              42.8145491
+            ],
+            [
+              10.330888,
+              42.8144997
+            ],
+            [
+              10.330948,
+              42.8143747
+            ],
+            [
+              10.3312143,
+              42.8143303
+            ],
+            [
+              10.3314393,
+              42.8141433
+            ],
+            [
+              10.3316888,
+              42.8138865
+            ],
+            [
+              10.3318628,
+              42.8136869
+            ],
+            [
+              10.3317744,
+              42.8134555
+            ],
+            [
+              10.3314586,
+              42.8131293
+            ],
+            [
+              10.3309301,
+              42.8127686
+            ],
+            [
+              10.330344,
+              42.8123119
+            ],
+            [
+              10.3299025,
+              42.8120381
+            ],
+            [
+              10.3300508,
+              42.8118932
+            ],
+            [
+              10.3303006,
+              42.8120172
+            ],
+            [
+              10.3305431,
+              42.8117988
+            ],
+            [
+              10.3307398,
+              42.8120094
+            ],
+            [
+              10.3305615,
+              42.8121558
+            ],
+            [
+              10.3308999,
+              42.8123894
+            ],
+            [
+              10.3316003,
+              42.812901
+            ],
+            [
+              10.3320404,
+              42.8130302
+            ],
+            [
+              10.3324648,
+              42.8132136
+            ],
+            [
+              10.3326021,
+              42.8135567
+            ],
+            [
+              10.33305,
+              42.8140359
+            ],
+            [
+              10.3333745,
+              42.814095
+            ],
+            [
+              10.3337977,
+              42.8142632
+            ],
+            [
+              10.3339802,
+              42.8146725
+            ],
+            [
+              10.3337453,
+              42.8151113
+            ],
+            [
+              10.3338563,
+              42.8155015
+            ],
+            [
+              10.3339872,
+              42.8161421
+            ],
+            [
+              10.3337432,
+              42.8164671
+            ],
+            [
+              10.333241,
+              42.816562
+            ],
+            [
+              10.3326052,
+              42.8171133
+            ],
+            [
+              10.3323287,
+              42.8175315
+            ],
+            [
+              10.3314452,
+              42.8171057
+            ],
+            [
+              10.330664,
+              42.8168344
+            ],
+            [
+              10.3294231,
+              42.8168158
+            ],
+            [
+              10.328815,
+              42.8172133
+            ],
+            [
+              10.3284582,
+              42.8173767
+            ],
+            [
+              10.327439,
+              42.8177577
+            ],
+            [
+              10.3268886,
+              42.8179999
+            ],
+            [
+              10.3260467,
+              42.8175947
+            ],
+            [
+              10.3257067,
+              42.8162112
+            ],
+            [
+              10.325416,
+              42.8160741
+            ],
+            [
+              10.3253064,
+              42.8145719
+            ],
+            [
+              10.3249873,
+              42.8143297
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "佛罗伦萨国家档案馆Castore 15885。按旧港入口、海门、林圭拉塔、斯泰拉堡等六处在史图与现代图上的同名构筑物进行仿射配准，采用当年城防临岸与旧城海堤闭合轮廓。平面拟合均方根误差约13米，线位取75米保守区间。",
+      "geometry_precision": "source_backed_historical_outline",
+      "source_urls": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-156001",
+        "https://www502.regione.toscana.it/searcherlite/cartografia_storica_regionale_scheda_dettaglio.jsp?imgid=15885",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Dispatches_and_Letters_of_Vice_Admiral_Lord_Viscount_Nelson%2C_Vol._II_%28IA_dli.granth.53081%29.pdf",
+        "https://catalogo.museidigenova.it/oggetti/196476-evacuazione-degli-inglesi-da-porto-ferraio?i=50",
+        "https://www.museiarcipelago.it/en/edifici/il-forte-inglese/",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1796,
+          "end_year": 1796,
+          "kind": "wartime_occupation",
+          "title": "费拉约港 · 7月10日英军进港",
+          "note": "7月10日英军登岸、进入费拉约港，随后利用旧城和港湾驻军与补给。"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1797,
+          "kind": "battle",
+          "title": "费拉约港 · 4月守军撤离",
+          "note": "1月，纳尔逊已撤走海军机构和部分物资，陆军仍留驻城港。4月英军守备队登船撤离，纳尔逊于21日在科西嘉以西与运兵船队会合。"
+        }
+      ],
+      "bbox": [
+        10.3249873,
+        42.8117988,
+        10.3339872,
+        42.8179999
+      ],
+      "outline_only": true,
+      "position_uncertainty_m": 75,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "MARIE_GALANTE_MAIN_ISLAND",
+      "stable_id": "marie-galante-main-island",
+      "cross_century_feature_id": "marie-galante-main-island-1800",
+      "title": "玛丽加朗特 · 本岛",
+      "kind": "wartime_occupation",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.3233873,
+              15.9495577
+            ],
+            [
+              -61.337189,
+              15.9419224
+            ],
+            [
+              -61.3336942,
+              15.9198851
+            ],
+            [
+              -61.3293956,
+              15.904678
+            ],
+            [
+              -61.3299127,
+              15.9028169
+            ],
+            [
+              -61.3317102,
+              15.9003923
+            ],
+            [
+              -61.3307822,
+              15.8978297
+            ],
+            [
+              -61.3271897,
+              15.8953125
+            ],
+            [
+              -61.324784,
+              15.8890745
+            ],
+            [
+              -61.3224927,
+              15.8861502
+            ],
+            [
+              -61.3216276,
+              15.886206
+            ],
+            [
+              -61.321535,
+              15.8854337
+            ],
+            [
+              -61.317744,
+              15.882588
+            ],
+            [
+              -61.3182753,
+              15.8816257
+            ],
+            [
+              -61.317723,
+              15.880483
+            ],
+            [
+              -61.3178521,
+              15.8820258
+            ],
+            [
+              -61.314955,
+              15.880318
+            ],
+            [
+              -61.315649,
+              15.8792589
+            ],
+            [
+              -61.3178971,
+              15.8797759
+            ],
+            [
+              -61.31562,
+              15.879079
+            ],
+            [
+              -61.3147616,
+              15.8801749
+            ],
+            [
+              -61.3092484,
+              15.8793747
+            ],
+            [
+              -61.3061169,
+              15.8778126
+            ],
+            [
+              -61.3024391,
+              15.8746805
+            ],
+            [
+              -61.2990678,
+              15.8744199
+            ],
+            [
+              -61.2964245,
+              15.8737526
+            ],
+            [
+              -61.2957697,
+              15.8729998
+            ],
+            [
+              -61.2923203,
+              15.8727691
+            ],
+            [
+              -61.2912879,
+              15.8722393
+            ],
+            [
+              -61.2912126,
+              15.8712386
+            ],
+            [
+              -61.2890476,
+              15.8710311
+            ],
+            [
+              -61.2879574,
+              15.8700367
+            ],
+            [
+              -61.2857449,
+              15.8704768
+            ],
+            [
+              -61.2826022,
+              15.8699065
+            ],
+            [
+              -61.2811611,
+              15.8673864
+            ],
+            [
+              -61.2798834,
+              15.8665019
+            ],
+            [
+              -61.2773445,
+              15.8675331
+            ],
+            [
+              -61.2761899,
+              15.8669449
+            ],
+            [
+              -61.274491,
+              15.8675726
+            ],
+            [
+              -61.273655,
+              15.867115
+            ],
+            [
+              -61.2733564,
+              15.867811
+            ],
+            [
+              -61.2711306,
+              15.8673763
+            ],
+            [
+              -61.2704731,
+              15.868102
+            ],
+            [
+              -61.2688696,
+              15.867355
+            ],
+            [
+              -61.2673116,
+              15.8686655
+            ],
+            [
+              -61.2665227,
+              15.8682369
+            ],
+            [
+              -61.2649034,
+              15.868842
+            ],
+            [
+              -61.2635028,
+              15.8709193
+            ],
+            [
+              -61.2592801,
+              15.8714576
+            ],
+            [
+              -61.2587312,
+              15.8707802
+            ],
+            [
+              -61.2575643,
+              15.871545
+            ],
+            [
+              -61.2548976,
+              15.8714081
+            ],
+            [
+              -61.2539019,
+              15.8719987
+            ],
+            [
+              -61.2505103,
+              15.8717759
+            ],
+            [
+              -61.244777,
+              15.8744821
+            ],
+            [
+              -61.2425411,
+              15.8743751
+            ],
+            [
+              -61.2390308,
+              15.8768389
+            ],
+            [
+              -61.2388156,
+              15.877901
+            ],
+            [
+              -61.2378973,
+              15.8776354
+            ],
+            [
+              -61.2333265,
+              15.8800395
+            ],
+            [
+              -61.2318482,
+              15.8823944
+            ],
+            [
+              -61.228207,
+              15.8838858
+            ],
+            [
+              -61.2238924,
+              15.8877346
+            ],
+            [
+              -61.2215455,
+              15.8882692
+            ],
+            [
+              -61.2210788,
+              15.8906108
+            ],
+            [
+              -61.2206727,
+              15.8896992
+            ],
+            [
+              -61.220367,
+              15.8922658
+            ],
+            [
+              -61.2177528,
+              15.8952377
+            ],
+            [
+              -61.2144992,
+              15.8959629
+            ],
+            [
+              -61.2104049,
+              15.8993586
+            ],
+            [
+              -61.2057958,
+              15.9003849
+            ],
+            [
+              -61.2033506,
+              15.9023271
+            ],
+            [
+              -61.2026535,
+              15.9033391
+            ],
+            [
+              -61.2031251,
+              15.9040202
+            ],
+            [
+              -61.1976992,
+              15.915596
+            ],
+            [
+              -61.1971891,
+              15.9192692
+            ],
+            [
+              -61.1960593,
+              15.9216944
+            ],
+            [
+              -61.1970549,
+              15.9265121
+            ],
+            [
+              -61.1949317,
+              15.9302416
+            ],
+            [
+              -61.1960935,
+              15.9310159
+            ],
+            [
+              -61.1960633,
+              15.9326012
+            ],
+            [
+              -61.2006219,
+              15.9451642
+            ],
+            [
+              -61.203748,
+              15.9477956
+            ],
+            [
+              -61.2056531,
+              15.9511344
+            ],
+            [
+              -61.209556,
+              15.954285
+            ],
+            [
+              -61.2154649,
+              15.9565582
+            ],
+            [
+              -61.2149325,
+              15.9567207
+            ],
+            [
+              -61.2175182,
+              15.9565956
+            ],
+            [
+              -61.2181168,
+              15.9574443
+            ],
+            [
+              -61.2179165,
+              15.9599456
+            ],
+            [
+              -61.2192214,
+              15.9622033
+            ],
+            [
+              -61.2211291,
+              15.9633515
+            ],
+            [
+              -61.2222603,
+              15.9628254
+            ],
+            [
+              -61.2245831,
+              15.9645255
+            ],
+            [
+              -61.2245683,
+              15.9657607
+            ],
+            [
+              -61.223297,
+              15.9670643
+            ],
+            [
+              -61.223537,
+              15.9683975
+            ],
+            [
+              -61.2265719,
+              15.9676883
+            ],
+            [
+              -61.2276918,
+              15.9684864
+            ],
+            [
+              -61.2275054,
+              15.9696933
+            ],
+            [
+              -61.229222,
+              15.9702812
+            ],
+            [
+              -61.2311847,
+              15.9736126
+            ],
+            [
+              -61.2303934,
+              15.9743775
+            ],
+            [
+              -61.2301175,
+              15.9761474
+            ],
+            [
+              -61.2290152,
+              15.9770499
+            ],
+            [
+              -61.2308538,
+              15.9765939
+            ],
+            [
+              -61.2318825,
+              15.9773165
+            ],
+            [
+              -61.2316387,
+              15.9787804
+            ],
+            [
+              -61.2302927,
+              15.9804857
+            ],
+            [
+              -61.2330154,
+              15.9824899
+            ],
+            [
+              -61.232884,
+              15.9835032
+            ],
+            [
+              -61.2318052,
+              15.9842162
+            ],
+            [
+              -61.2330446,
+              15.9855635
+            ],
+            [
+              -61.2353155,
+              15.9852168
+            ],
+            [
+              -61.2359842,
+              15.9860779
+            ],
+            [
+              -61.237985,
+              15.9864056
+            ],
+            [
+              -61.239664,
+              15.9855972
+            ],
+            [
+              -61.2396638,
+              15.9887244
+            ],
+            [
+              -61.2406039,
+              15.988201
+            ],
+            [
+              -61.2412705,
+              15.9886393
+            ],
+            [
+              -61.2428503,
+              15.9873901
+            ],
+            [
+              -61.2434363,
+              15.9876569
+            ],
+            [
+              -61.241786,
+              15.991451
+            ],
+            [
+              -61.2475739,
+              15.9911605
+            ],
+            [
+              -61.2478556,
+              15.9926748
+            ],
+            [
+              -61.2471597,
+              15.9931985
+            ],
+            [
+              -61.2476709,
+              15.993373
+            ],
+            [
+              -61.2491676,
+              15.9916258
+            ],
+            [
+              -61.2503063,
+              15.9921081
+            ],
+            [
+              -61.250452,
+              15.992803
+            ],
+            [
+              -61.2526735,
+              15.9926378
+            ],
+            [
+              -61.2534092,
+              15.9943407
+            ],
+            [
+              -61.2557064,
+              15.9944845
+            ],
+            [
+              -61.2559962,
+              15.9955792
+            ],
+            [
+              -61.2568167,
+              15.995436
+            ],
+            [
+              -61.2573167,
+              15.9965019
+            ],
+            [
+              -61.258643,
+              15.9964261
+            ],
+            [
+              -61.2584102,
+              15.9976183
+            ],
+            [
+              -61.2591131,
+              15.9984997
+            ],
+            [
+              -61.2607893,
+              15.9988302
+            ],
+            [
+              -61.2607964,
+              15.9996925
+            ],
+            [
+              -61.2620812,
+              16.0003865
+            ],
+            [
+              -61.263253,
+              16.0001003
+            ],
+            [
+              -61.2633864,
+              16.0013183
+            ],
+            [
+              -61.2663558,
+              16.001846
+            ],
+            [
+              -61.2669605,
+              16.0027096
+            ],
+            [
+              -61.2672244,
+              16.0021047
+            ],
+            [
+              -61.2672445,
+              16.0027735
+            ],
+            [
+              -61.2683916,
+              16.0032315
+            ],
+            [
+              -61.2702692,
+              16.0033063
+            ],
+            [
+              -61.2711134,
+              16.0025528
+            ],
+            [
+              -61.2712126,
+              16.0039515
+            ],
+            [
+              -61.2721661,
+              16.00454
+            ],
+            [
+              -61.2737051,
+              16.0039883
+            ],
+            [
+              -61.2737761,
+              16.0051549
+            ],
+            [
+              -61.2745714,
+              16.0050731
+            ],
+            [
+              -61.2742871,
+              16.0057582
+            ],
+            [
+              -61.2758837,
+              16.0049293
+            ],
+            [
+              -61.2754123,
+              16.0064182
+            ],
+            [
+              -61.2761424,
+              16.007413
+            ],
+            [
+              -61.2778316,
+              16.0048816
+            ],
+            [
+              -61.2806372,
+              16.0045735
+            ],
+            [
+              -61.2819944,
+              16.0031452
+            ],
+            [
+              -61.2832256,
+              16.0042306
+            ],
+            [
+              -61.2855705,
+              16.0042822
+            ],
+            [
+              -61.2868614,
+              16.0036792
+            ],
+            [
+              -61.2880415,
+              16.0040424
+            ],
+            [
+              -61.288716,
+              16.0034346
+            ],
+            [
+              -61.2896414,
+              16.0040978
+            ],
+            [
+              -61.2912031,
+              16.0032238
+            ],
+            [
+              -61.2910556,
+              16.0026105
+            ],
+            [
+              -61.2962331,
+              15.9980494
+            ],
+            [
+              -61.2989647,
+              15.9933257
+            ],
+            [
+              -61.2986086,
+              15.992411
+            ],
+            [
+              -61.3003153,
+              15.9906655
+            ],
+            [
+              -61.3003385,
+              15.9887862
+            ],
+            [
+              -61.3028537,
+              15.9873625
+            ],
+            [
+              -61.3058203,
+              15.9871679
+            ],
+            [
+              -61.3061602,
+              15.986182
+            ],
+            [
+              -61.3052854,
+              15.9823839
+            ],
+            [
+              -61.3067128,
+              15.9806602
+            ],
+            [
+              -61.3060536,
+              15.9798789
+            ],
+            [
+              -61.3064114,
+              15.9790317
+            ],
+            [
+              -61.3099842,
+              15.9772564
+            ],
+            [
+              -61.3191202,
+              15.9758446
+            ],
+            [
+              -61.3181579,
+              15.9745847
+            ],
+            [
+              -61.318033,
+              15.9729705
+            ],
+            [
+              -61.3187536,
+              15.9685349
+            ],
+            [
+              -61.3180319,
+              15.9660783
+            ],
+            [
+              -61.3189368,
+              15.9559943
+            ],
+            [
+              -61.3195923,
+              15.954117
+            ],
+            [
+              -61.320652,
+              15.9540196
+            ],
+            [
+              -61.3193539,
+              15.9540449
+            ],
+            [
+              -61.3201804,
+              15.9523453
+            ],
+            [
+              -61.3233873,
+              15.9495577
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "outline_only": true,
+      "geometry_method": "Physical main-island outline assembled by connecting nine modern OpenStreetMap natural=coastline ways and simplified at 45 m, compared with the 1764 Bellin and 1775 Coullonges historical island charts. Shoreline positions are modern, and the dated history is independently sourced.",
+      "geometry_osm_ways": [
+        1040450118,
+        1040479155,
+        41936190,
+        41981578,
+        568422960,
+        568422963,
+        568422966,
+        568422974,
+        85256499
+      ],
+      "periods": [
+        {
+          "start_year": 1759,
+          "end_year": 1759,
+          "title": "玛丽加朗特 · 5月26日向英军投降",
+          "note": "瓜德罗普于5月1日投降。玛丽加朗特当局起初拒绝英方的招降要求，5月26日另签投降条款。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1760,
+          "end_year": 1762,
+          "title": "玛丽加朗特 · 英军占岛",
+          "note": "七年战争期间，英方接管岛屿。英治时期的殖民统计仍记录岛上糖业与被奴役人口。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1763,
+          "title": "玛丽加朗特 · 和约归还法国",
+          "note": "2月10日《巴黎和约》第八条明确把玛丽加朗特列入归还法国的岛屿。法方于同年7月初恢复殖民行政。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1764,
+          "end_year": 1791,
+          "title": "玛丽加朗特 · 法属种植园殖民地",
+          "note": "当地依靠被奴役者种植甘蔗等作物。1775年随地图呈报的地方纪要记录约7,800名被奴役者从事耕作。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1792,
+          "end_year": 1793,
+          "title": "玛丽加朗特 · 自行组织共和派行政",
+          "note": "1792年末，岛上共和派同瓜德罗普保王派行政分开，自组机构，并表明效忠法国国民议会。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "玛丽加朗特 · 英军接管与共和派收复",
+          "note": "英军于4月接管玛丽加朗特。同年，维克多·于格派部收复本岛，法国推行废除奴隶制。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799,
+          "title": "玛丽加朗特 · 法国共和派辖下",
+          "note": "本岛重新处于法国共和政权统治下。当局接收部分逃亡或被处决的种植园主产业。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/92/The_annual_register%2C_or%2C_a_view_of_the_history%2C_politicks%2C_and_literature_for_the_year._Volume_2_%28The_eighth_edition%29%2C_1759_%28IA_s25id13210430%29.pdf",
+        "https://www.boe.es/gazeta/dias/1759/09/04/pdfs/GMD-1759-36.pdf",
+        "https://www.marie-galante-terredhistoire.com/histoire-sucriegravere.html",
+        "https://www.cyberlibrary.org/en/books/a-history-of-the-british-army-vol-2-first-part-to-the-close-of-a89298b1/chapters/40/",
+        "https://avalon.law.yale.edu/18th_century/paris763.asp",
+        "https://www.erudit.org/fr/revues/bshg/2009-n153-bshg02576/1036864ar.pdf",
+        "https://www.loc.gov/item/74691009/",
+        "https://catalogue.bnf.fr/ark:/12148/cb43859888x",
+        "https://commons.wikimedia.org/wiki/File:Plan_de_l%27isle_Marie_Galande_avec_son_memoire_local_-_Begorrat_de_Coullonges_-_btv1b531360154.jpg",
+        "https://www.erudit.org/fr/revues/bshg/1981-n48-49-50-bshg03501/1043892ar.pdf",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml",
+        "https://www.persee.fr/doc/ahrf_0003-4436_1993_num_293_1_1581?pageId=T1_374",
+        "https://www.marie-galante-terredhistoire.com/reacutepublique-des-douze.html",
+        "https://www.ot-mariegalante.com/en/history",
+        "https://archives-nationales-outre-mer.culture.gouv.fr/faire-une-recherche/antilles-francaises",
+        "https://www.openstreetmap.org/copyright",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Examiner_1808-05-08-_Iss_19_%28IA_sim_examiner-a-weekly-paper-on-politics-literature-music_1808-05-08_19%29.pdf"
+      ],
+      "bbox": [
+        -61.337189,
+        15.8665019,
+        -61.1949317,
+        16.007413
+      ],
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true
+    },
+    {
+      "id": "PORT_EGMONT_SETTLEMENT_18C",
+      "stable_id": "port-egmont-saunders-18c",
+      "title": "埃格蒙特港／克鲁萨达港 · 桑德斯岛驻地",
+      "kind": "military_vicinity",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.0643842,
+              -51.3532468
+            ],
+            [
+              -60.0646471,
+              -51.353354
+            ],
+            [
+              -60.0649153,
+              -51.3535215
+            ],
+            [
+              -60.0649099,
+              -51.353823
+            ],
+            [
+              -60.064749,
+              -51.3541815
+            ],
+            [
+              -60.0646042,
+              -51.3542987
+            ],
+            [
+              -60.0642287,
+              -51.3543289
+            ],
+            [
+              -60.0639175,
+              -51.3542585
+            ],
+            [
+              -60.0636156,
+              -51.3541764
+            ],
+            [
+              -60.0638102,
+              -51.3539168
+            ],
+            [
+              -60.0639309,
+              -51.3537996
+            ],
+            [
+              -60.0640509,
+              -51.3536566
+            ],
+            [
+              -60.0641804,
+              -51.3534914
+            ],
+            [
+              -60.0643842,
+              -51.3532468
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        -60.0649153,
+        -51.3543289,
+        -60.0636156,
+        -51.3532468
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry_method": "以桑德斯岛东南岸现存遗址的OpenStreetMap路径440681889为底，核对1770年西班牙港图、1771年实测驻地平图和1992年考古调查，只描现存建筑遗迹集中区。1771图另见房屋、仓库、军营、木塔、花园和码头，分期完整范围未核。",
+      "position_uncertainty_m": 55,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.tandfonline.com/doi/abs/10.1179/pma.1996.001",
+        "https://digitales.bcn.gob.ar/files/textos/Malvinas-Completo.pdf#page=43",
+        "https://www.loc.gov/item/90683622/",
+        "https://publicaciones.banrepcultural.org/index.php/boletin_cultural/article/download/7588/7968/15505",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/16915",
+        "https://nationalarchives.gov.fk/jdownloads/Colonial%20Annual%20Reports/1966%20to%201975.pdf",
+        "https://falklandsbiographies.org/biographies/315",
+        "https://wellcomecollection.org/works/bef4yed3/items?canvas=60&page=10&shouldScrollToCanvas=true",
+        "https://nationalarchives.gov.fk/jdownloads/Mail%20Stamps%20and%20Telecommunications/Mail/MAI-STA-10-1.%20Early%20settlements%20issue%20late%201980.pdf",
+        "https://falklandstimeline.wordpress.com/wp-content/uploads/2018/05/london-gazette-1771.pdf",
+        "https://www.argentina.gob.ar/malvinas-nos-une/documentos-historicos-sobre-la-cuestion-malvinas/los-origenes-del-establecimiento",
+        "https://darwin-online.org.uk/content/contentblock?basepage=1&hitpage=20&itemID=A73&viewtype=text",
+        "https://www.openstreetmap.org/way/440681889",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1769,
+          "title": "埃格蒙特港 · 英国海军驻地",
+          "note": "1766年1月8日，麦克布赖德率舰队抵达桑德斯岛。英方搭建在英国预制的木堡，并陆续兴建住所、仓房等设施。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1770,
+          "end_year": 1770,
+          "title": "克鲁萨达港 · 西军迫使英方驻地投降",
+          "note": "1770年6月10日，马达里亚加率舰队对驻地采取军事行动，英方投降并于14日离开。西班牙文献称该处为克鲁萨达港。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1771,
+          "end_year": 1771,
+          "title": "埃格蒙特港 · 外交议定后英方重返",
+          "note": "1771年1月22日西英交换外交声明，议定交还埃格蒙特港的驻地和物资。英方于9月16日重新接管驻地。声明仍保留对群岛权利的分歧。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1772,
+          "end_year": 1773,
+          "title": "埃格蒙特港 · 英方再次驻守",
+          "note": "英方维持小型驻地及补给设施，原木堡在驻地后期用作仓库。",
+          "kind": "military_vicinity"
+        },
+        {
+          "start_year": 1774,
+          "end_year": 1774,
+          "title": "埃格蒙特港 · 英军撤离驻地",
+          "note": "1774年5月，克莱顿率领驻军撤离。英方在木堡留下刻有权利声明的铅牌，舰船于21日驶离。",
+          "kind": "battle"
+        }
+      ],
+      "outline_only": true
     }
   ],
   "regional_lines": [

@@ -1,0 +1,20 @@
+# 第 5U 批｜开曼群岛、玛丽加朗特、埃格蒙特港、费拉约港与圣路易斯堡
+
+2026 年 11 月 20 日。替换 5 条旧矩形和 2 个代理点。8 处十八世纪地理对象用同一稳定 ID、同一组坐标连接到 1800 年。当期资料中所称驻地、聚落、军事接管及条约日期分别登记。
+
+| 地区 | 绘制与年代 | 1800 年接续 |
+| --- | --- | --- |
+| 开曼群岛 | 大开曼早期另画陆地轮廓，记 1734 年授地与奴役劳力、1773 年高尔德测量和 1774 年地方治安官。1798 年牙买加总督正式委任后沿用三岛岸线。猪圈湾、乔治堡、佩德罗圣詹姆斯宅、博登镇及 1794 年十船触礁在五处单列。 | 三岛岸线、猪圈湾锚地、乔治堡、佩德罗圣詹姆斯宅及博登镇，共 5 处。 |
+| 玛丽加朗特 | 1759 年 5 月 26 日独立受降，1763 年 2 月和约议归、7 月初法方恢复管辖，1794 年 4 月英军再占、法国共和派同年夺回。岛岸与格朗堡港镇分列。1775 年法方地方纪要记有约 7,800 人被奴役从事耕作，按该年原文口径。 | 岛岸与格朗堡，共 2 处。1800 年法属时期与 1802 年恢复奴隶制分期，1808 年 3 月 2 日英军再占前一阶段结束。 |
+| 埃格蒙特港 | 1765 年拜伦考察单列。1766 年驻地在桑德斯岛东南岸，英方旧代理点在遗址以西约 77 公里。1770 年 6 月 10 日投降和 14 日撤离，1771 年 1 月议定交还和 9 月实际重返，1774 年 5 月 21 日驶离，各按史料落入年份。 | 驻军记录于 1774 年结束。 |
+| 厄尔巴岛费拉约港 | 以佛罗伦萨国家档案馆图纸描旧城外廓，港西英国堡单列。1796 年 7 月 10 日英军进港。1797 年 1 月纳尔逊撤出海军机构，陆上守备队于 4 月撤离。 | 英军驻地记录于 1797 年结束。 |
+| 塞内加尔圣路易斯堡 | 恩达尔岛上的旧堡址按杰弗里斯 1758 年实图及城市形态报告定位，保存 1758 年英占、1763 年割让、1779 年法国夺回与 1783 年确认归法。堡内的树胶仓储与当地非洲政权、商人之间的交易关系分别记述。 | 堡址原位接续。19 世纪初为法国驻地，1809 年英国再占，1814 年议定交还，1817 年法方实际恢复管治。 |
+
+## 来源与定位
+
+- 开曼三岛沿用 `cayman-local-1800` 中的物理岸线，复用其 `stable_id`。条约第七条统称原有英国占地，群岛历史和实际定居以国家档案馆与政府史为据。乔治堡的建造纪年存在约 1780 和约 1790 两种说法，发布档案采用「18 世纪末」。东端十船触礁记录采用纪念处定位岸上救援，首次授地和佩德罗地契范围尚无可用定界图。见 [1670 年条约摘录](https://nationalhumanitiescenter.org/pds/amerbegin/power/text1/SpanishEnglishRivalry.pdf)、[开曼国家档案馆](https://cigarchives.gov.ky/history)、[开曼群岛政府史第 22–24 页](https://www.cigouk.ky/wp-content/uploads/2018/05/Cayman-Islands-e-book-draft-2.pdf)、[高尔德实测图](https://catalogue.bnf.fr/ark:/12148/cb42198346v)、[国家博物馆猪圈湾](https://museum.ky/trail_sites/historic-hog-sty-bay/)与[乔治堡](https://museum.ky/trail_sites/fort-george/)、[开曼国家信托](https://nationaltrust.org.ky/on-this-day-in-history-fort-george/)及[佩德罗遗址](https://pedrostjames.ky/our-history/)。
+- 玛丽加朗特以十八世纪贝兰及德库隆日岛图核对本岛，发布线使用 9 条相接的 OpenStreetMap 物理岸线，并以 45 米容差简化。格朗堡为同名历史港镇，保存现代参考点。地方档案所引茹贝尔回顾称 1763 年 7 月 7 日复归，地区研究把三岛交割归在 7 月 4–6 日，地图用「7 月初」。1794 年的接收日与末次交战月份各有不同记法，保留英方于 4 月接管及共和派同年收复。见 [1759 年 9 月《马德里公报》](https://www.boe.es/gazeta/dias/1759/09/04/pdfs/GMD-1759-36.pdf)、[1763 年和约第八条](https://avalon.law.yale.edu/18th_century/paris763.asp)、[贝兰 1764 年图](https://www.loc.gov/item/74691009/)、[德库隆日 1775 年图及附记](https://catalogue.bnf.fr/ark:/12148/cb43859888x)、[1794 年格雷档案 GRE/A277](https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml)及[地方史](https://www.ot-mariegalante.com/en/history)。
+- 埃格蒙特港采用现存遗迹集中区。1771 年西班牙实测图所绘房屋、木塔、仓房和码头用于核对位置，未将岛岸以外的港湾收入围线。考古论文、遗址图和两方文书分别佐证地理与交接。见 [阿根廷国会图书馆所收西班牙印度总档案馆图纸](https://digitales.bcn.gob.ar/files/textos/Malvinas-Completo.pdf#page=43)、[美国国会图书馆 1770 年西班牙海图](https://www.loc.gov/item/90683622/)、[菲尔波特考古调查](https://www.tandfonline.com/doi/abs/10.1179/pma.1996.001)及[福克兰国家档案馆殖民年度报告](https://nationalarchives.gov.fk/jdownloads/Colonial%20Annual%20Reports/1966%20to%201975.pdf)。
+- 费拉约港依据佛罗伦萨档案 Castore 15885 裁取史图，按西北城防接岸、东北城防突角、林圭拉塔、海门、旧内港西侧折点和斯泰拉堡六处特征作仿射定位。拟合均方根误差约 13 米，受原始城墙和海岸变动影响，绘制保留 75 米位置不确定性。港西英国堡只定位址，保留 1814 年改造证据。见 [佛罗伦萨国家档案馆 15885](https://www502.regione.toscana.it/searcherlite/cartografia_storica_regionale_scheda_dettaglio.jsp?imgid=15885)、[格林尼治 1796 年登陆版画](https://www.rmg.co.uk/collections/objects/rmgc-object-156001)、[纳尔逊书信第 2 卷，第 328–329、381–384 页](https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Dispatches_and_Letters_of_Vice_Admiral_Lord_Viscount_Nelson%2C_Vol._II_%28IA_dli.granth.53081%29.pdf)及[旧堡馆方说明](https://www.museiarcipelago.it/en/edifici/il-forte-inglese/)。
+- 圣路易斯堡以 1758 年堡图结合 1782 年驻堡图及 1830 年改建方案定位。旧堡正面朝河，现费代尔布广场在旧堡背面、昔日附属院落一侧。缺少能锚定 1758 年每道堡墙的独立控制点，地图先发布原址点，东岸驻堡、树胶仓储和当地交易地理注明在档案。见 [杰弗里斯原图](https://gallica.bnf.fr/ark:/12148/btv1b53153473t)、[联合国教科文组织城市研究第 25 页](https://whc.unesco.org/document/135045)、[若尔 1758—1809 年研究](https://www.persee.fr/doc/outre_0300-9513_1964_num_51_184_1388)、[剑桥出版的塞内冈比亚条约研究](https://doi.org/10.1017/hia.2024.2)及[西非国家中央银行历史](https://www.bceao.int/sites/default/files/inline-files/Vol.-I_History_of_WAMU.pdf)。
+- 现存岸线与定位要素地图数据 © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright)。开曼陆地轮廓沿用既有数据所载 [Natural Earth](https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/)。
