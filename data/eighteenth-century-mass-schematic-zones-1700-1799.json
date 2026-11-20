@@ -6224,7 +6224,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "TOBAGO_MAIN_ISLAND"
     },
     {
       "id": "ST_LUCIA",
@@ -8788,7 +8789,8 @@
       "category": "dated_city_or_port_core",
       "historical_city_wall_survey": false,
       "area_sqkm": null,
-      "screen_radius_not_ground_area": true
+      "screen_radius_not_ground_area": true,
+      "superseded_by": "TOBAGO_SCARBOROUGH_TOWN"
     },
     {
       "id": "CASTRIES",
@@ -19729,185 +19731,6 @@
       "stable_id": "delaware-billingsport-fort",
       "position_uncertainty_m": 100,
       "geometry_precision": "named_place_anchor"
-    },
-    {
-      "id": "ST_LUCIA_CASTRIES_PORT",
-      "stable_id": "saint-lucia-castries-port",
-      "title": "圣卢西亚 · 卡斯特里旧港",
-      "kind": "settlement",
-      "periods": [
-        {
-          "start_year": 1762,
-          "end_year": 1762,
-          "title": "卡雷纳日 · 圣卢西亚旧港",
-          "note": "卡雷纳日是圣卢西亚西北岸的港口，英军于1762年占据该岛。"
-        },
-        {
-          "start_year": 1763,
-          "end_year": 1767,
-          "title": "卡雷纳日 · 法方水道测绘",
-          "note": "法国海军测绘在图上标出卡雷纳日港、内港及周围高地。"
-        },
-        {
-          "start_year": 1768,
-          "end_year": 1777,
-          "title": "卡雷纳日 · 法方主聚落迁入",
-          "note": "法国殖民当局将主要聚落从维吉高地移至今日卡斯特里的位置。"
-        },
-        {
-          "start_year": 1778,
-          "end_year": 1782,
-          "title": "卡雷纳日 · 英军占岛期间",
-          "note": "英军占据全岛，港区与南侧莫尔讷福蒂内构成相邻的海陆驻地。",
-          "kind": "wartime_occupation"
-        },
-        {
-          "start_year": 1783,
-          "end_year": 1793,
-          "title": "卡斯特里 · 法国治理时期",
-          "note": "1783年归还法国以后，港口继续作为本岛主要聚落。"
-        },
-        {
-          "start_year": 1794,
-          "end_year": 1795,
-          "title": "卡斯特里 · 两次换旗之间",
-          "note": "1794年英军攻占，1795年法国共和派和当地抵抗者夺回。"
-        },
-        {
-          "start_year": 1796,
-          "end_year": 1799,
-          "title": "卡斯特里 · 英军重新占岛",
-          "note": "1796年英军占据圣卢西亚，卡斯特里港与高地驻军延续到十九世纪。"
-        }
-      ],
-      "source_urls": [
-        "https://catalogue.bnf.fr/ark:/12148/cb438715339",
-        "https://www.govt.lc/media.govt.lc/www/resources/publications/FINAL%20REPORT%2030-03-2011.pdf",
-        "https://saintlucianationaltrust.com/trust-sites/morne-fortune/",
-        "https://digitalarchive.tpl.ca/objects/386285/plan-of-morne-fortune-and-environs-from-choc-bay-to-morne-pe"
-      ],
-      "geometry_method": "Historic Carénage port as shown on Bellin’s 1763 chart and the Castries shore settlement, modern town-centre point.",
-      "historical_boundary_confirmed": false,
-      "territorial_control_verified": false,
-      "uncertain_line_dashed": true,
-      "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true,
-      "position_uncertainty_m": 250,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -60.9902,
-          14.0096
-        ]
-      },
-      "cross_century_feature_id": "saint-lucia-castries-port-1800"
-    },
-    {
-      "id": "ST_LUCIA_MORNE_FORTUNE",
-      "stable_id": "saint-lucia-morne-fortune",
-      "title": "卡斯特里 · 莫尔讷福蒂内／夏洛特堡",
-      "kind": "military",
-      "periods": [
-        {
-          "start_year": 1768,
-          "end_year": 1777,
-          "title": "莫尔讷福蒂内 · 法方构筑港防",
-          "note": "法国殖民当局自1768年起加强卡斯特里港南侧高地的工事。",
-          "kind": "foreign_occupation"
-        },
-        {
-          "start_year": 1778,
-          "end_year": 1782,
-          "title": "莫尔讷福蒂内 · 英军驻岛期间",
-          "note": "英军占岛并占用卡斯特里港南高地的军事设施。"
-        },
-        {
-          "start_year": 1783,
-          "end_year": 1793,
-          "title": "莫尔讷福蒂内 · 法方港防驻地",
-          "note": "圣卢西亚归还法国。高地工事俯瞰卡斯特里港。",
-          "kind": "foreign_occupation"
-        },
-        {
-          "start_year": 1794,
-          "end_year": 1794,
-          "title": "夏洛特堡 · 英军接管与改名",
-          "note": "1794年英军夺取高地，改称夏洛特堡。格雷文件记载英军向法方高地守军发出投降要求。"
-        },
-        {
-          "start_year": 1795,
-          "end_year": 1795,
-          "title": "莫尔讷福蒂内 · 法国共和派与地方抵抗者收复",
-          "note": "1795年六月，英军撤离高地与圣卢西亚，法国共和派重新驻守。",
-          "kind": "foreign_occupation"
-        },
-        {
-          "start_year": 1796,
-          "end_year": 1796,
-          "title": "莫尔讷福蒂内 · 5月26日受降和拘押",
-          "note": "英军于五月进攻高地。5月26日守军投降，一批法国共和军战俘后来被押往英国，其中包括黑人士兵。"
-        },
-        {
-          "start_year": 1797,
-          "end_year": 1799,
-          "title": "夏洛特堡 · 英军继续驻守",
-          "note": "英军自1796年起继续驻守卡斯特里南侧高地，工事与港口相连。"
-        }
-      ],
-      "source_urls": [
-        "https://saintlucianationaltrust.com/trust-sites/morne-fortune/",
-        "https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml",
-        "https://digitalarchive.tpl.ca/objects/386285/plan-of-morne-fortune-and-environs-from-choc-bay-to-morne-pe",
-        "https://manioc.univ-antilles.fr/omeka-s/files/original/16/guadeloupe_p.pdf",
-        "https://www.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/"
-      ],
-      "geometry_method": "Fortified hill anchor from Saint Lucia National Trust site and Faden RCIN 735042. The hill includes separately named redoubts and later structures.",
-      "historical_boundary_confirmed": false,
-      "territorial_control_verified": false,
-      "uncertain_line_dashed": true,
-      "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true,
-      "position_uncertainty_m": 260,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -60.99872,
-          13.99484
-        ]
-      },
-      "cross_century_feature_id": "saint-lucia-morne-fortune-1800"
-    },
-    {
-      "id": "ST_LUCIA_FORT_RODNEY",
-      "stable_id": "saint-lucia-fort-rodney",
-      "title": "鸽子岛 · 罗德尼堡",
-      "kind": "military",
-      "periods": [
-        {
-          "start_year": 1778,
-          "end_year": 1782,
-          "title": "鸽子岛 · 英国海军基地与罗德尼堡",
-          "note": "1778年占领后，英方在大岛湾设立海军基地、沿鸽子岛增建工事，用以监视马提尼克方向。"
-        }
-      ],
-      "source_urls": [
-        "https://saintlucianationaltrust.com/trust-sites/protected-areas/pigeon-island-national-landmark/",
-        "https://searcharchives.bl.uk/catalog/032-001998047"
-      ],
-      "geometry_method": "National Trust Fort Rodney ruins and OSM mapped site way 106468196; historic island remained detached from the main island before its 1973 causeway.",
-      "historical_boundary_confirmed": false,
-      "territorial_control_verified": false,
-      "uncertain_line_dashed": true,
-      "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true,
-      "position_uncertainty_m": 60,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -60.96658,
-          14.09127
-        ]
-      }
     },
     {
       "id": "ST_LUCIA_SOUFRIERE_BAY",
@@ -31837,6 +31660,136 @@
         }
       ],
       "cross_century_feature_id": "martinique-fort-bourbon-1800"
+    },
+    {
+      "id": "ST_LUCIA_CARENAGE_HARBOUR_EARLY",
+      "stable_id": "saint-lucia-carenage-harbour-early",
+      "title": "卡雷纳日 · 圣卢西亚旧港",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762,
+          "title": "卡雷纳日 · 圣卢西亚旧港",
+          "note": "卡雷纳日是圣卢西亚西北岸的港口，英军于1762年占据该岛。"
+        },
+        {
+          "start_year": 1763,
+          "end_year": 1767,
+          "title": "卡雷纳日 · 法方水道测绘",
+          "note": "法国海军测绘在图上标出卡雷纳日港、内港及周围高地。"
+        }
+      ],
+      "source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb438715339",
+        "https://www.govt.lc/media.govt.lc/www/resources/publications/FINAL%20REPORT%2030-03-2011.pdf",
+        "https://saintlucianationaltrust.com/trust-sites/morne-fortune/",
+        "https://digitalarchive.tpl.ca/objects/386285/plan-of-morne-fortune-and-environs-from-choc-bay-to-morne-pe"
+      ],
+      "geometry_method": "Named port anchor for Bellin chart period before the 1768 relocation.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 250,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.9902,
+          14.0096
+        ]
+      }
+    },
+    {
+      "id": "ST_LUCIA_MORNE_FORTUNE_EARLY",
+      "stable_id": "saint-lucia-morne-fortune-early",
+      "title": "莫尔讷福蒂内 · 早期港防据点",
+      "kind": "foreign_occupation",
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1777,
+          "title": "莫尔讷福蒂内 · 法方构筑港防",
+          "note": "法国殖民当局自1768年起加强卡斯特里港南侧高地的工事。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1782,
+          "title": "莫尔讷福蒂内 · 英军驻岛期间",
+          "note": "英军占岛并占用卡斯特里港南高地的军事设施。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1793,
+          "title": "莫尔讷福蒂内 · 法方港防驻地",
+          "note": "圣卢西亚归还法国。高地工事俯瞰卡斯特里港。",
+          "kind": "foreign_occupation"
+        }
+      ],
+      "source_urls": [
+        "https://saintlucianationaltrust.com/trust-sites/morne-fortune/",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml",
+        "https://digitalarchive.tpl.ca/objects/386285/plan-of-morne-fortune-and-environs-from-choc-bay-to-morne-pe",
+        "https://manioc.univ-antilles.fr/omeka-s/files/original/16/guadeloupe_p.pdf",
+        "https://www.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/"
+      ],
+      "geometry_method": "Named hill for the early works described by the National Trust, before the mapped late-century fort.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 260,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.99872,
+          13.99484
+        ]
+      }
+    },
+    {
+      "id": "TOBAGO_SCARBOROUGH_HILL_BARRACKS",
+      "stable_id": "tobago-scarborough-hill-barracks",
+      "title": "斯卡伯勒山 · 英军兵营旧址",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1779,
+          "end_year": 1780,
+          "kind": "military",
+          "title": "斯卡伯勒山 · 英军兵营",
+          "note": "英属格林纳达与多巴哥总督于1777年批准在斯卡伯勒山建兵营，1779年工程接近完成。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1783,
+          "kind": "foreign_occupation",
+          "title": "斯卡伯勒山 · 法军接管原英军兵营地",
+          "note": "1781年法军夺岛，接管斯卡伯勒。法国当局后来在这处高地另筑堡垒。"
+        }
+      ],
+      "source_urls": [
+        "https://nationaltrust.tt/location/fort-king-george-tobago/",
+        "https://citizensforconservationtt.org/home/sites/fort-king-george-scarborough-tobago/",
+        "https://www.loc.gov/item/2006627324/"
+      ],
+      "geometry_method": "Named hill on the handover plan. No measured limits of the earlier British barracks.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 150,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.72682,
+          11.17774
+        ]
+      }
     }
   ],
   "regional_zones": [
@@ -92494,6 +92447,1772 @@
         14.601956
       ],
       "position_uncertainty_m": 100
+    },
+    {
+      "id": "TOBAGO_MAIN_ISLAND",
+      "stable_id": "tobago-main-island",
+      "title": "多巴哥本岛",
+      "kind": "administration",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.522084,
+              11.318834
+            ],
+            [
+              -60.53303,
+              11.266506
+            ],
+            [
+              -60.585113,
+              11.25552
+            ],
+            [
+              -60.647125,
+              11.204169
+            ],
+            [
+              -60.681304,
+              11.207099
+            ],
+            [
+              -60.803334,
+              11.143256
+            ],
+            [
+              -60.810414,
+              11.159247
+            ],
+            [
+              -60.825429,
+              11.151801
+            ],
+            [
+              -60.847524,
+              11.163967
+            ],
+            [
+              -60.845204,
+              11.179145
+            ],
+            [
+              -60.809926,
+              11.19066
+            ],
+            [
+              -60.794342,
+              11.21662
+            ],
+            [
+              -60.681304,
+              11.296454
+            ],
+            [
+              -60.595815,
+              11.327297
+            ],
+            [
+              -60.560374,
+              11.321194
+            ],
+            [
+              -60.530507,
+              11.35106
+            ],
+            [
+              -60.522084,
+              11.318834
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry_method": "Natural Earth coast as in tobago-occupation-1800. Treaty cession, military capture and restitution were dated separately.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://avalon.law.yale.edu/18th_century/paris763.asp",
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties",
+        "https://nationaltrust.tt/location/fort-king-george-tobago/",
+        "https://collection.nam.ac.uk/detail.php?acc=1978-11-87-1",
+        "https://www.nalis.gov.tt/resources/tt-content-guide/towns-and-villages/towns-and-villages-s-z/",
+        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/"
+      ],
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1780,
+          "kind": "administration",
+          "title": "多巴哥本岛 · 巴黎和约割让英国",
+          "note": "1763年《巴黎和约》将多巴哥割让英国。英国殖民当局在岛上测量、拍卖土地，发展种植园。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1782,
+          "kind": "foreign_occupation",
+          "title": "多巴哥本岛 · 法军夺岛",
+          "note": "1781年6月法军攻占多巴哥，夺取斯卡伯勒。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1792,
+          "kind": "foreign_occupation",
+          "title": "多巴哥本岛 · 法国殖民治理",
+          "note": "1783年英法和约确认多巴哥归法国。斯卡伯勒于法国统治期间称波尔路易。"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799,
+          "kind": "wartime_occupation",
+          "title": "多巴哥本岛 · 英军重新占领",
+          "note": "1793年4月15日英军攻占多巴哥，英方驻军延续到十九世纪。"
+        }
+      ],
+      "bbox": [
+        -60.847524,
+        11.143256,
+        -60.522084,
+        11.35106
+      ],
+      "cross_century_feature_id": "tobago-occupation-1800",
+      "outline_only": true
+    },
+    {
+      "id": "TOBAGO_SCARBOROUGH_TOWN",
+      "stable_id": "tobago-scarborough-old-town",
+      "title": "斯卡伯勒 · 港城旧街区",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.7351556,
+              11.1813819
+            ],
+            [
+              -60.7351998,
+              11.1809354
+            ],
+            [
+              -60.7350166,
+              11.1805342
+            ],
+            [
+              -60.7350604,
+              11.1799537
+            ],
+            [
+              -60.7348313,
+              11.1794187
+            ],
+            [
+              -60.7342394,
+              11.1792865
+            ],
+            [
+              -60.7334217,
+              11.1797352
+            ],
+            [
+              -60.732559,
+              11.1803625
+            ],
+            [
+              -60.7318328,
+              11.1809895
+            ],
+            [
+              -60.7310604,
+              11.1813935
+            ],
+            [
+              -60.7304247,
+              11.1818417
+            ],
+            [
+              -60.7305167,
+              11.1821985
+            ],
+            [
+              -60.731018,
+              11.1824649
+            ],
+            [
+              -60.7319274,
+              11.1822392
+            ],
+            [
+              -60.7327915,
+              11.1820582
+            ],
+            [
+              -60.733519,
+              11.1818776
+            ],
+            [
+              -60.7343826,
+              11.1815627
+            ],
+            [
+              -60.7351556,
+              11.1813819
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry_method": "BnF btv1b531222601, traced the built street cluster by the bay. Similarity fit from the stream outlet and fort hill, then checked against the modern street pattern. Earlier and later phases follow the same geographic core rather than actual built limits.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b531222601",
+        "https://www.nalis.gov.tt/resources/tt-content-guide/towns-and-villages/towns-and-villages-s-z/",
+        "https://collection.nam.ac.uk/detail.php?acc=1978-11-87-1",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1769,
+          "end_year": 1780,
+          "kind": "settlement",
+          "title": "斯卡伯勒 · 英属殖民地首府",
+          "note": "1769年，英属多巴哥的首府迁到斯卡伯勒。港城位于罗克利湾一侧。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1792,
+          "kind": "foreign_occupation",
+          "title": "波尔路易 · 法属时期的斯卡伯勒",
+          "note": "法国占领期间，这座港城称波尔路易。法国测绘图标出港城街道和上方高地的工事。"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799,
+          "kind": "wartime_occupation",
+          "title": "斯卡伯勒 · 英军夺回港城",
+          "note": "1793年英军夺回多巴哥。斯卡伯勒仍是港口和殖民行政据点。"
+        }
+      ],
+      "bbox": [
+        -60.7351998,
+        11.1792865,
+        -60.7304247,
+        11.1824649
+      ],
+      "position_uncertainty_m": 220,
+      "cross_century_feature_id": "tobago-scarborough-town-1800"
+    },
+    {
+      "id": "TOBAGO_SCARBOROUGH_FORT",
+      "stable_id": "tobago-scarborough-hill-fort",
+      "title": "斯卡伯勒山堡 · 后称乔治国王堡",
+      "kind": "military",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.7271209,
+              11.1775016
+            ],
+            [
+              -60.7271684,
+              11.1774943
+            ],
+            [
+              -60.7272695,
+              11.1775002
+            ],
+            [
+              -60.7273913,
+              11.1775818
+            ],
+            [
+              -60.7273987,
+              11.1775133
+            ],
+            [
+              -60.7273185,
+              11.1774098
+            ],
+            [
+              -60.7271669,
+              11.1772203
+            ],
+            [
+              -60.7269886,
+              11.1771518
+            ],
+            [
+              -60.7267523,
+              11.1771999
+            ],
+            [
+              -60.7265755,
+              11.1773719
+            ],
+            [
+              -60.7265101,
+              11.1774914
+            ],
+            [
+              -60.7265859,
+              11.1775745
+            ],
+            [
+              -60.726629,
+              11.1775993
+            ],
+            [
+              -60.7267375,
+              11.1775862
+            ],
+            [
+              -60.7268549,
+              11.1775702
+            ],
+            [
+              -60.7269262,
+              11.1775497
+            ],
+            [
+              -60.7270347,
+              11.177525
+            ],
+            [
+              -60.7271209,
+              11.1775016
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry_method": "Surviving enclosure (OSM way 231050731) at the fort core identified by BnF btv1b531222601 and LoC 2006627324. Not the complete historical outworks or the exact perimeter of any earlier construction phase.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.loc.gov/item/2006627324/",
+        "https://gallica.bnf.fr/ark:/12148/btv1b531222601",
+        "https://nationaltrust.tt/location/fort-king-george-tobago/",
+        "https://citizensforconservationtt.org/home/sites/fort-king-george-scarborough-tobago/",
+        "https://collection.nam.ac.uk/detail.php?acc=1978-11-87-1",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1784,
+          "end_year": 1788,
+          "kind": "foreign_occupation",
+          "title": "斯卡伯勒山堡 · 法军修建堡垒",
+          "note": "法国当局于1784年开始修建山堡，1785年暂停，1786年恢复施工。"
+        },
+        {
+          "start_year": 1789,
+          "end_year": 1792,
+          "kind": "foreign_occupation",
+          "title": "斯卡伯勒山堡 · 法军驻守与兵变",
+          "note": "法国驻军继续驻守。保育机构记载，驻军在1790年发动兵变，堡垒改称自由堡。"
+        },
+        {
+          "start_year": 1793,
+          "end_year": 1799,
+          "kind": "wartime_occupation",
+          "title": "斯卡伯勒山堡 · 英军再次驻守",
+          "note": "1793年4月英军夺岛并控制斯卡伯勒山堡。1802年交接图记载法方接回这座堡垒。"
+        }
+      ],
+      "bbox": [
+        -60.7273987,
+        11.1771518,
+        -60.7265101,
+        11.1775993
+      ],
+      "position_uncertainty_m": 160,
+      "cross_century_feature_id": "tobago-scarborough-fort-1800"
+    },
+    {
+      "id": "ST_LUCIA_CASTRIES_PORT",
+      "stable_id": "saint-lucia-castries-port",
+      "title": "圣卢西亚 · 卡斯特里旧港",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.9909196,
+              14.0106321
+            ],
+            [
+              -60.991425,
+              14.0108971
+            ],
+            [
+              -60.9917348,
+              14.0107589
+            ],
+            [
+              -60.9920923,
+              14.010563
+            ],
+            [
+              -60.9923568,
+              14.0103058
+            ],
+            [
+              -60.9927412,
+              14.0099244
+            ],
+            [
+              -60.992999,
+              14.0094667
+            ],
+            [
+              -60.9932725,
+              14.0092333
+            ],
+            [
+              -60.9933444,
+              14.0089099
+            ],
+            [
+              -60.9931593,
+              14.0085705
+            ],
+            [
+              -60.9926348,
+              14.0084746
+            ],
+            [
+              -60.9922278,
+              14.0084312
+            ],
+            [
+              -60.9917342,
+              14.0082702
+            ],
+            [
+              -60.9913555,
+              14.0080814
+            ],
+            [
+              -60.9907819,
+              14.0080032
+            ],
+            [
+              -60.9902237,
+              14.0078923
+            ],
+            [
+              -60.9899966,
+              14.0080279
+            ],
+            [
+              -60.9899183,
+              14.0084077
+            ],
+            [
+              -60.9902553,
+              14.0083409
+            ],
+            [
+              -60.9906108,
+              14.0085786
+            ],
+            [
+              -60.9906888,
+              14.0089293
+            ],
+            [
+              -60.9905043,
+              14.0091037
+            ],
+            [
+              -60.9902462,
+              14.0093046
+            ],
+            [
+              -60.990806,
+              14.0097124
+            ],
+            [
+              -60.990968,
+              14.0101007
+            ],
+            [
+              -60.9909196,
+              14.0106321
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry_method": "Built-up blocks traced from Faden’s chart of Saint Lucia held by the Huntington. Rat Island and Vigie/D’Estrées cape fit, then locally aligned to the town square and river outlet. Other stages retain the old town core.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb438715339",
+        "https://www.govt.lc/media.govt.lc/www/resources/publications/FINAL%20REPORT%2030-03-2011.pdf",
+        "https://saintlucianationaltrust.com/trust-sites/morne-fortune/",
+        "https://digitalarchive.tpl.ca/objects/386285/plan-of-morne-fortune-and-environs-from-choc-bay-to-morne-pe",
+        "https://www.huntington.org/collections/lib-p15150coll4-10169",
+        "https://stlucia.org/en_uk/blog/castries-the-city-that-rose-from-the-ashes-2/",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1768,
+          "end_year": 1777,
+          "kind": "settlement",
+          "title": "卡雷纳日 · 法方主聚落迁入",
+          "note": "法国殖民当局将主要聚落从维吉高地迁到今日卡斯特里的位置。"
+        },
+        {
+          "start_year": 1778,
+          "end_year": 1782,
+          "title": "卡雷纳日 · 英军占岛期间",
+          "note": "英军占据全岛，港区与南侧莫尔讷福蒂内构成相邻的海陆驻地。",
+          "kind": "wartime_occupation"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1784,
+          "kind": "foreign_occupation",
+          "title": "卡雷纳日 · 交回法国后的港城",
+          "note": "圣卢西亚于1783年交回法国，卡雷纳日仍是岛上的主要聚落。"
+        },
+        {
+          "start_year": 1785,
+          "end_year": 1793,
+          "kind": "foreign_occupation",
+          "title": "卡斯特里 · 港城改名",
+          "note": "港城于1785年改称卡斯特里，以法国海军大臣卡斯特里侯爵命名。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "kind": "wartime_occupation",
+          "title": "卡斯特里 · 英军进入港城",
+          "note": "1794年，英军夺取卡斯特里与南侧港防高地。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "kind": "foreign_occupation",
+          "title": "卡斯特里 · 共和派与岛上抵抗者夺回",
+          "note": "英军撤离。法国共和派和岛上抵抗者重新掌握圣卢西亚。"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1799,
+          "kind": "wartime_occupation",
+          "title": "卡斯特里 · 英军再次占港",
+          "note": "1796年，英军重新占据圣卢西亚，卡斯特里港与高地驻军延续到十九世纪。"
+        }
+      ],
+      "bbox": [
+        -60.9933444,
+        14.0078923,
+        -60.9899183,
+        14.0108971
+      ],
+      "position_uncertainty_m": 200,
+      "cross_century_feature_id": "saint-lucia-castries-port-1800"
+    },
+    {
+      "id": "ST_LUCIA_MORNE_FORTUNE",
+      "stable_id": "saint-lucia-morne-fortune",
+      "title": "卡斯特里 · 莫尔讷福蒂内／夏洛特堡",
+      "kind": "military",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.9961646,
+              13.9971586
+            ],
+            [
+              -60.9963064,
+              13.9969454
+            ],
+            [
+              -60.9965581,
+              13.996801
+            ],
+            [
+              -60.9968045,
+              13.9964962
+            ],
+            [
+              -60.9967833,
+              13.9961115
+            ],
+            [
+              -60.9967763,
+              13.9956541
+            ],
+            [
+              -60.9966388,
+              13.995257
+            ],
+            [
+              -60.9964964,
+              13.9949564
+            ],
+            [
+              -60.995951,
+              13.9947328
+            ],
+            [
+              -60.9956862,
+              13.9947331
+            ],
+            [
+              -60.9953566,
+              13.9945267
+            ],
+            [
+              -60.9951176,
+              13.9945583
+            ],
+            [
+              -60.9950934,
+              13.994824
+            ],
+            [
+              -60.9953663,
+              13.9950643
+            ],
+            [
+              -60.9953485,
+              13.9952736
+            ],
+            [
+              -60.9954392,
+              13.9955116
+            ],
+            [
+              -60.9957806,
+              13.995822
+            ],
+            [
+              -60.9957903,
+              13.9963595
+            ],
+            [
+              -60.9958955,
+              13.9967817
+            ],
+            [
+              -60.9961646,
+              13.9971586
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry_method": "Main upper defensive cluster traced from Faden’s 1796 depiction, fitted from Rat Island and Vigie/D’Estrées cape and checked against the modern ridge. Excludes outlying batteries and later British structures; first documented fort phase represented by the named hill point.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://saintlucianationaltrust.com/trust-sites/morne-fortune/",
+        "https://reed.dur.ac.uk/xtf/view?docId=ark%2F32150_s1gq67jr17b.xml",
+        "https://digitalarchive.tpl.ca/objects/386285/plan-of-morne-fortune-and-environs-from-choc-bay-to-morne-pe",
+        "https://manioc.univ-antilles.fr/omeka-s/files/original/16/guadeloupe_p.pdf",
+        "https://www.english-heritage.org.uk/visit/places/portchester-castle/history-and-stories/black-prisoners-at-portchester/",
+        "https://www.huntington.org/collections/lib-p15150coll4-10169",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "夏洛特堡 · 英军接管与改名",
+          "note": "1794年英军夺取高地，改称夏洛特堡。格雷文件记载英军向法方高地守军发出投降要求。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1795,
+          "title": "莫尔讷福蒂内 · 法国共和派与地方抵抗者收复",
+          "note": "1795年六月，英军撤离高地与圣卢西亚，法国共和派重新驻守。",
+          "kind": "foreign_occupation"
+        },
+        {
+          "start_year": 1796,
+          "end_year": 1796,
+          "title": "莫尔讷福蒂内 · 5月26日受降和拘押",
+          "note": "英军于五月进攻高地。5月26日守军投降，一批法国共和军战俘后来被押往英国，其中包括黑人士兵。"
+        },
+        {
+          "start_year": 1797,
+          "end_year": 1799,
+          "title": "夏洛特堡 · 英军继续驻守",
+          "note": "英军自1796年起继续驻守卡斯特里南侧高地，工事与港口相连。"
+        }
+      ],
+      "bbox": [
+        -60.9968045,
+        13.9945267,
+        -60.9950934,
+        13.9971586
+      ],
+      "position_uncertainty_m": 300,
+      "cross_century_feature_id": "saint-lucia-morne-fortune-1800"
+    },
+    {
+      "id": "ST_LUCIA_PIGEON_ISLAND",
+      "stable_id": "saint-lucia-pigeon-island",
+      "title": "鸽子岛 · 大岛湾海军基地",
+      "kind": "military",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.9614584,
+              14.0932834
+            ],
+            [
+              -60.9614638,
+              14.0933692
+            ],
+            [
+              -60.9614638,
+              14.0934577
+            ],
+            [
+              -60.9614664,
+              14.0935487
+            ],
+            [
+              -60.9614664,
+              14.0936346
+            ],
+            [
+              -60.9614879,
+              14.0937178
+            ],
+            [
+              -60.9615147,
+              14.0937985
+            ],
+            [
+              -60.961563,
+              14.0938687
+            ],
+            [
+              -60.9616193,
+              14.0939338
+            ],
+            [
+              -60.9616971,
+              14.093978
+            ],
+            [
+              -60.9617749,
+              14.094017
+            ],
+            [
+              -60.961858,
+              14.0940534
+            ],
+            [
+              -60.9619331,
+              14.0940951
+            ],
+            [
+              -60.9620136,
+              14.0941419
+            ],
+            [
+              -60.9621021,
+              14.0941783
+            ],
+            [
+              -60.9621853,
+              14.0942147
+            ],
+            [
+              -60.9622684,
+              14.0942485
+            ],
+            [
+              -60.962432,
+              14.094311
+            ],
+            [
+              -60.9625152,
+              14.09435
+            ],
+            [
+              -60.962601,
+              14.094376
+            ],
+            [
+              -60.9626895,
+              14.0943864
+            ],
+            [
+              -60.962778,
+              14.0943942
+            ],
+            [
+              -60.9628692,
+              14.094389
+            ],
+            [
+              -60.9629604,
+              14.0943942
+            ],
+            [
+              -60.9630489,
+              14.0944072
+            ],
+            [
+              -60.9631375,
+              14.0944254
+            ],
+            [
+              -60.963234,
+              14.0944306
+            ],
+            [
+              -60.9633225,
+              14.0944124
+            ],
+            [
+              -60.9634084,
+              14.0943864
+            ],
+            [
+              -60.9634915,
+              14.094363
+            ],
+            [
+              -60.9635747,
+              14.0943318
+            ],
+            [
+              -60.9636632,
+              14.0943084
+            ],
+            [
+              -60.9637597,
+              14.0943058
+            ],
+            [
+              -60.9638509,
+              14.094324
+            ],
+            [
+              -60.9639341,
+              14.0943604
+            ],
+            [
+              -60.9639663,
+              14.0944411
+            ],
+            [
+              -60.9640279,
+              14.0945061
+            ],
+            [
+              -60.9641191,
+              14.0944853
+            ],
+            [
+              -60.964205,
+              14.0944515
+            ],
+            [
+              -60.9642935,
+              14.0944801
+            ],
+            [
+              -60.9643713,
+              14.0945243
+            ],
+            [
+              -60.9644745,
+              14.0945672
+            ],
+            [
+              -60.9645483,
+              14.0946023
+            ],
+            [
+              -60.964618,
+              14.0946258
+            ],
+            [
+              -60.9647092,
+              14.0946258
+            ],
+            [
+              -60.9647924,
+              14.0945893
+            ],
+            [
+              -60.9648675,
+              14.0945399
+            ],
+            [
+              -60.9649533,
+              14.0945243
+            ],
+            [
+              -60.9650445,
+              14.0945295
+            ],
+            [
+              -60.9651116,
+              14.0945919
+            ],
+            [
+              -60.9651437,
+              14.09467
+            ],
+            [
+              -60.9652135,
+              14.094722
+            ],
+            [
+              -60.9652886,
+              14.0946752
+            ],
+            [
+              -60.9653798,
+              14.0946596
+            ],
+            [
+              -60.9654763,
+              14.0946518
+            ],
+            [
+              -60.9655997,
+              14.0947818
+            ],
+            [
+              -60.9656641,
+              14.094722
+            ],
+            [
+              -60.9657472,
+              14.0946986
+            ],
+            [
+              -60.9658009,
+              14.0947662
+            ],
+            [
+              -60.9658733,
+              14.0948183
+            ],
+            [
+              -60.9659591,
+              14.0948417
+            ],
+            [
+              -60.9660423,
+              14.0948105
+            ],
+            [
+              -60.9661281,
+              14.0947818
+            ],
+            [
+              -60.9661925,
+              14.0947116
+            ],
+            [
+              -60.9662327,
+              14.094644
+            ],
+            [
+              -60.9662434,
+              14.0945581
+            ],
+            [
+              -60.9662139,
+              14.0944775
+            ],
+            [
+              -60.9661657,
+              14.0944046
+            ],
+            [
+              -60.9661496,
+              14.0943188
+            ],
+            [
+              -60.9661469,
+              14.0942329
+            ],
+            [
+              -60.9661523,
+              14.0941471
+            ],
+            [
+              -60.9661415,
+              14.0940638
+            ],
+            [
+              -60.966104,
+              14.0939884
+            ],
+            [
+              -60.9660316,
+              14.0939442
+            ],
+            [
+              -60.966002,
+              14.0938661
+            ],
+            [
+              -60.9660289,
+              14.0937855
+            ],
+            [
+              -60.9660208,
+              14.0936996
+            ],
+            [
+              -60.9659752,
+              14.0936294
+            ],
+            [
+              -60.9659028,
+              14.09358
+            ],
+            [
+              -60.9658545,
+              14.0935097
+            ],
+            [
+              -60.9657848,
+              14.0934525
+            ],
+            [
+              -60.9657392,
+              14.0933823
+            ],
+            [
+              -60.9657848,
+              14.0933068
+            ],
+            [
+              -60.9658572,
+              14.0932548
+            ],
+            [
+              -60.9659457,
+              14.0932392
+            ],
+            [
+              -60.9660396,
+              14.0932158
+            ],
+            [
+              -60.9661362,
+              14.0931819
+            ],
+            [
+              -60.9662193,
+              14.0931559
+            ],
+            [
+              -60.9663051,
+              14.0931403
+            ],
+            [
+              -60.9663078,
+              14.0930545
+            ],
+            [
+              -60.9662917,
+              14.0929686
+            ],
+            [
+              -60.9662649,
+              14.092888
+            ],
+            [
+              -60.9662542,
+              14.0928021
+            ],
+            [
+              -60.9663212,
+              14.0927423
+            ],
+            [
+              -60.9664097,
+              14.0927241
+            ],
+            [
+              -60.9664419,
+              14.0926382
+            ],
+            [
+              -60.9664419,
+              14.0925524
+            ],
+            [
+              -60.9664553,
+              14.0924665
+            ],
+            [
+              -60.9665117,
+              14.0923989
+            ],
+            [
+              -60.9665787,
+              14.0923339
+            ],
+            [
+              -60.9666404,
+              14.0922714
+            ],
+            [
+              -60.9666753,
+              14.0921934
+            ],
+            [
+              -60.9666646,
+              14.0921127
+            ],
+            [
+              -60.9666592,
+              14.0920243
+            ],
+            [
+              -60.9666941,
+              14.0919384
+            ],
+            [
+              -60.9667289,
+              14.0918552
+            ],
+            [
+              -60.9667718,
+              14.0917797
+            ],
+            [
+              -60.9668496,
+              14.0918266
+            ],
+            [
+              -60.966914,
+              14.0918864
+            ],
+            [
+              -60.9669971,
+              14.091928
+            ],
+            [
+              -60.9670883,
+              14.0919254
+            ],
+            [
+              -60.9671795,
+              14.0919098
+            ],
+            [
+              -60.9672573,
+              14.0919488
+            ],
+            [
+              -60.9673512,
+              14.0919488
+            ],
+            [
+              -60.9673914,
+              14.0918708
+            ],
+            [
+              -60.9673834,
+              14.0917875
+            ],
+            [
+              -60.9674558,
+              14.0917407
+            ],
+            [
+              -60.967547,
+              14.0917433
+            ],
+            [
+              -60.9676248,
+              14.0917823
+            ],
+            [
+              -60.9677133,
+              14.0917953
+            ],
+            [
+              -60.9677964,
+              14.0917615
+            ],
+            [
+              -60.967783,
+              14.0916809
+            ],
+            [
+              -60.967724,
+              14.091621
+            ],
+            [
+              -60.9676838,
+              14.0915456
+            ],
+            [
+              -60.9676731,
+              14.0914624
+            ],
+            [
+              -60.9677133,
+              14.0913817
+            ],
+            [
+              -60.9677294,
+              14.0912959
+            ],
+            [
+              -60.9677187,
+              14.091119
+            ],
+            [
+              -60.9676972,
+              14.0910331
+            ],
+            [
+              -60.9676677,
+              14.0909525
+            ],
+            [
+              -60.9676355,
+              14.0908718
+            ],
+            [
+              -60.9675926,
+              14.090799
+            ],
+            [
+              -60.9675416,
+              14.0907287
+            ],
+            [
+              -60.9674665,
+              14.0906897
+            ],
+            [
+              -60.9673807,
+              14.0906793
+            ],
+            [
+              -60.9672976,
+              14.0907001
+            ],
+            [
+              -60.9672654,
+              14.0906767
+            ],
+            [
+              -60.9672707,
+              14.0906351
+            ],
+            [
+              -60.9672949,
+              14.0906091
+            ],
+            [
+              -60.9672654,
+              14.0905674
+            ],
+            [
+              -60.9672144,
+              14.0905622
+            ],
+            [
+              -60.9671742,
+              14.0905674
+            ],
+            [
+              -60.9671393,
+              14.090544
+            ],
+            [
+              -60.9671447,
+              14.0904868
+            ],
+            [
+              -60.9671903,
+              14.090427
+            ],
+            [
+              -60.9671903,
+              14.0903879
+            ],
+            [
+              -60.9671634,
+              14.0903489
+            ],
+            [
+              -60.9671071,
+              14.0903151
+            ],
+            [
+              -60.9669247,
+              14.0903151
+            ],
+            [
+              -60.9668362,
+              14.0903229
+            ],
+            [
+              -60.9667477,
+              14.0903333
+            ],
+            [
+              -60.9666646,
+              14.0903671
+            ],
+            [
+              -60.9665921,
+              14.0904192
+            ],
+            [
+              -60.9665224,
+              14.0904712
+            ],
+            [
+              -60.9664419,
+              14.0904478
+            ],
+            [
+              -60.9663481,
+              14.0904426
+            ],
+            [
+              -60.9662676,
+              14.0904738
+            ],
+            [
+              -60.9661818,
+              14.0904998
+            ],
+            [
+              -60.9660906,
+              14.0905206
+            ],
+            [
+              -60.9660289,
+              14.0905778
+            ],
+            [
+              -60.9659511,
+              14.0906195
+            ],
+            [
+              -60.9658626,
+              14.0906169
+            ],
+            [
+              -60.9657767,
+              14.0905909
+            ],
+            [
+              -60.9656909,
+              14.0906169
+            ],
+            [
+              -60.9656024,
+              14.0906663
+            ],
+            [
+              -60.9655219,
+              14.0907053
+            ],
+            [
+              -60.9654388,
+              14.0907495
+            ],
+            [
+              -60.9653664,
+              14.0907964
+            ],
+            [
+              -60.9652832,
+              14.0908276
+            ],
+            [
+              -60.9652135,
+              14.0908796
+            ],
+            [
+              -60.9651786,
+              14.0909603
+            ],
+            [
+              -60.9651464,
+              14.0910409
+            ],
+            [
+              -60.965125,
+              14.0911242
+            ],
+            [
+              -60.9650955,
+              14.0912126
+            ],
+            [
+              -60.965074,
+              14.0912959
+            ],
+            [
+              -60.9650338,
+              14.0913713
+            ],
+            [
+              -60.9649855,
+              14.0914467
+            ],
+            [
+              -60.9649318,
+              14.0915144
+            ],
+            [
+              -60.9648755,
+              14.091582
+            ],
+            [
+              -60.9648058,
+              14.0916289
+            ],
+            [
+              -60.9647119,
+              14.0916471
+            ],
+            [
+              -60.9646314,
+              14.0916887
+            ],
+            [
+              -60.9646019,
+              14.0917719
+            ],
+            [
+              -60.9645617,
+              14.0918474
+            ],
+            [
+              -60.9644839,
+              14.0918942
+            ],
+            [
+              -60.9644061,
+              14.0919384
+            ],
+            [
+              -60.9643839,
+              14.0919555
+            ],
+            [
+              -60.9643612,
+              14.0919723
+            ],
+            [
+              -60.9643364,
+              14.0919905
+            ],
+            [
+              -60.9642747,
+              14.0920503
+            ],
+            [
+              -60.9641889,
+              14.0920711
+            ],
+            [
+              -60.9641044,
+              14.0920828
+            ],
+            [
+              -60.9640266,
+              14.0920802
+            ],
+            [
+              -60.9639421,
+              14.0920867
+            ],
+            [
+              -60.9638563,
+              14.0920893
+            ],
+            [
+              -60.9637664,
+              14.0920841
+            ],
+            [
+              -60.963692,
+              14.0920503
+            ],
+            [
+              -60.9636531,
+              14.0919963
+            ],
+            [
+              -60.963641,
+              14.0919339
+            ],
+            [
+              -60.9636256,
+              14.0918818
+            ],
+            [
+              -60.9635995,
+              14.0918734
+            ],
+            [
+              -60.9635746,
+              14.0918942
+            ],
+            [
+              -60.9635706,
+              14.0919456
+            ],
+            [
+              -60.9635679,
+              14.0919924
+            ],
+            [
+              -60.9635572,
+              14.0920399
+            ],
+            [
+              -60.9635264,
+              14.0920828
+            ],
+            [
+              -60.9634593,
+              14.0921466
+            ],
+            [
+              -60.9633788,
+              14.0921804
+            ],
+            [
+              -60.963293,
+              14.0922038
+            ],
+            [
+              -60.9632179,
+              14.092248
+            ],
+            [
+              -60.9631428,
+              14.0922974
+            ],
+            [
+              -60.963065,
+              14.0923365
+            ],
+            [
+              -60.9629792,
+              14.0923235
+            ],
+            [
+              -60.9628934,
+              14.0923
+            ],
+            [
+              -60.9628209,
+              14.0922584
+            ],
+            [
+              -60.9627378,
+              14.0922194
+            ],
+            [
+              -60.9626707,
+              14.0921674
+            ],
+            [
+              -60.9626117,
+              14.0920997
+            ],
+            [
+              -60.9625487,
+              14.0920867
+            ],
+            [
+              -60.9625125,
+              14.0921153
+            ],
+            [
+              -60.9624843,
+              14.0921492
+            ],
+            [
+              -60.9624575,
+              14.0921856
+            ],
+            [
+              -60.9624334,
+              14.0922207
+            ],
+            [
+              -60.9624092,
+              14.0922571
+            ],
+            [
+              -60.9623784,
+              14.092287
+            ],
+            [
+              -60.9623462,
+              14.0923156
+            ],
+            [
+              -60.962314,
+              14.0923456
+            ],
+            [
+              -60.9622791,
+              14.0923716
+            ],
+            [
+              -60.9614584,
+              14.0932834
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry_method": "Physical island shoreline from OSM coastline ways 826033503 and 202403202. The twentieth-century causeway and its reclaimed margins are cut out; a short inferred shore closes the former water gap.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://saintlucianationaltrust.com/trust-sites/protected-areas/pigeon-island-national-landmark/",
+        "https://searcharchives.bl.uk/catalog/032-001998047",
+        "https://www.huntington.org/collections/lib-p15150coll4-10169",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1782,
+          "kind": "military",
+          "title": "鸽子岛 · 英国海军驻地",
+          "note": "1778年英军占据圣卢西亚后，在大岛湾设立海军基地。罗德尼利用鸽子岛监视马提尼克方向的法国舰队。"
+        }
+      ],
+      "bbox": [
+        -60.9677964,
+        14.0903151,
+        -60.9614584,
+        14.0948417
+      ],
+      "position_uncertainty_m": 120,
+      "outline_only": true
+    },
+    {
+      "id": "ST_LUCIA_FORT_RODNEY",
+      "stable_id": "saint-lucia-fort-rodney",
+      "title": "鸽子岛 · 罗德尼堡",
+      "kind": "military",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.9665705,
+              14.091356
+            ],
+            [
+              -60.9666331,
+              14.0913734
+            ],
+            [
+              -60.9666824,
+              14.0913629
+            ],
+            [
+              -60.9667111,
+              14.091336
+            ],
+            [
+              -60.966687,
+              14.0912806
+            ],
+            [
+              -60.9665756,
+              14.0911864
+            ],
+            [
+              -60.9664979,
+              14.0912585
+            ],
+            [
+              -60.9664862,
+              14.091294
+            ],
+            [
+              -60.9665705,
+              14.091356
+            ]
+          ]
+        ]
+      },
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry_method": "Surviving masonry enclosure mapped by OSM way 106468196, identified via Saint Lucia National Trust. The ruin footprint does not include other eighteenth-century batteries or the whole naval base.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://saintlucianationaltrust.com/trust-sites/protected-areas/pigeon-island-national-landmark/",
+        "https://searcharchives.bl.uk/catalog/032-001998047",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1778,
+          "end_year": 1782,
+          "kind": "military",
+          "title": "鸽子岛 · 罗德尼堡与港防",
+          "note": "英军占岛后在鸽子岛修筑工事，监视马提尼克方向并守卫大岛湾的锚地。"
+        }
+      ],
+      "bbox": [
+        -60.9667111,
+        14.0911864,
+        -60.9664862,
+        14.0913734
+      ],
+      "position_uncertainty_m": 60
     }
   ],
   "regional_lines": [

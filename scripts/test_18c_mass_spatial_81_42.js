@@ -469,6 +469,61 @@ for(const [file, ids] of [
  const {zones,sites}=JSON.parse(read('data/'+file));
  for(const id of ids) a(atlantic([...zones,...sites].find(row=>row.id===id)?.superseded_by),id);
 }
+const windwardHandoff=[
+ ['TOBAGO_MAIN_ISLAND','tobago-occupation-1800'],
+ ['TOBAGO_SCARBOROUGH_TOWN','tobago-scarborough-town-1800'],
+ ['TOBAGO_SCARBOROUGH_FORT','tobago-scarborough-fort-1800'],
+ ['ST_LUCIA_CASTRIES_PORT','saint-lucia-castries-port-1800'],
+ ['ST_LUCIA_MORNE_FORTUNE','saint-lucia-morne-fortune-1800'],
+];
+for(const [id, successor] of windwardHandoff){
+ const item=atlantic(id),next=late(successor);
+ a.equal(item.geometry.type,'Polygon',id);
+ a.equal(item.uncertain_line_dashed,true,id);
+ a.equal(item.exclude_from_territorial_area_totals,true,id);
+ a.equal(item.cross_century_feature_id,successor,id);
+ a(stageAt(id,1799),id);
+ a.deepEqual(item.geometry,next.geometry,id);
+ a.equal(item.stable_id,next.properties.stable_id,id);
+ a.equal(next.properties.start_year,1800,id);
+ a.equal(next.properties.dash_only,true,id);
+}
+for(const [id,year,pattern] of [
+ ['TOBAGO_MAIN_ISLAND',1763,/巴黎和约/],
+ ['TOBAGO_MAIN_ISLAND',1781,/法军夺岛/],
+ ['TOBAGO_MAIN_ISLAND',1783,/法国殖民治理/],
+ ['TOBAGO_MAIN_ISLAND',1793,/英军重新占领/],
+ ['TOBAGO_SCARBOROUGH_HILL_BARRACKS',1779,/英军兵营/],
+ ['TOBAGO_SCARBOROUGH_FORT',1784,/法军修建/],
+ ['ST_LUCIA_CASTRIES_PORT',1784,/卡雷纳日/],
+ ['ST_LUCIA_CASTRIES_PORT',1785,/卡斯特里/],
+ ['ST_LUCIA_CASTRIES_PORT',1795,/抵抗者夺回/],
+ ['ST_LUCIA_MORNE_FORTUNE',1796,/5月26日/],
+]){
+ a.match(stageAt(id,year).title,pattern,id);
+}
+for(const id of ['ST_LUCIA_PIGEON_ISLAND','ST_LUCIA_FORT_RODNEY']){
+ const item=atlantic(id);
+ a.equal(item.geometry.type,'Polygon',id);
+ a.equal(item.uncertain_line_dashed,true,id);
+ a.equal(stageAt(id,1777),undefined,id);
+ a(stageAt(id,1782),id);
+ a.equal(stageAt(id,1783),undefined,id);
+ a.equal(item.cross_century_feature_id,undefined,id);
+}
+a.equal(stageAt('TOBAGO_SCARBOROUGH_FORT',1783),undefined);
+const scarboroughFort=late('tobago-scarborough-fort-1800').properties;
+a.match(scarboroughFort.year_stages.find(p=>p.start_year===1802).title,/10月7日/);
+a.equal(scarboroughFort.end_year,1853);
+a.match(late('tobago-scarborough-town-1800').properties.year_stages.find(p=>p.start_year===1889).summary_zh,/行政及立法两院被撤销/);
+for(const [file,ids] of [
+ ['eighteenth-century-mass-schematic-zones-1700-1799.json',['TOBAGO','SCARBOROUGH_TOBAGO']],
+ ['eighteenth-century-b37-caribbean.json',['B37-C-Z009','B37-C-Z010','B37-C-P009','B37-C-P010']],
+ ['eighteenth-century-b39-caribbean-1759-1763.json',['B39-C-Z031']],
+]){
+ const {zones,sites}=JSON.parse(read('data/'+file));
+ for(const id of ids) a(atlantic([...zones,...sites].find(row=>row.id===id)?.superseded_by),id);
+}
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));
 a(html.includes('js/eighteenth-mass-spatial.js?v='));
