@@ -524,6 +524,63 @@ for(const [file,ids] of [
  const {zones,sites}=JSON.parse(read('data/'+file));
  for(const id of ids) a(atlantic([...zones,...sites].find(row=>row.id===id)?.superseded_by),id);
 }
+const leewardHandoff=[
+ ['ST_KITTS_MAIN_ISLAND_18C','st-kitts-colonial-1800','Polygon'],
+ ['NEVIS_MAIN_ISLAND_18C','nevis-colonial-1800','Polygon'],
+ ['ANTIGUA_MAIN_ISLAND_18C','antigua-colonial-1800','Polygon'],
+ ['BARBUDA_CODRINGTON_LEASE_18C','barbuda-lease-1800','Polygon'],
+ ['BASSETERRE_HISTORIC_TOWN','basseterre-port-1800','Polygon'],
+ ['ST_JOHNS_ANTIGUA_HISTORIC_TOWN','st-johns-antigua-port-1800','Polygon'],
+ ['ANTIGUA_ENGLISH_HARBOUR_DOCKYARD','antigua-naval-dockyard-1800','Polygon'],
+ ['BRIMSTONE_FORT_GEORGE_LATE','brimstone-fort-george-1800','Polygon'],
+ ['NEVIS_FORT_CHARLES_CORE','nevis-fort-charles-1800','Polygon'],
+ ['CHARLESTOWN_WATERFRONT_STOREYARD','charlestown-waterfront-storeyard-1800','Polygon'],
+ ['CHARLESTOWN_NEVIS_PORT','charlestown-nevis-port-1800','Point'],
+ ['PLYMOUTH_MONTSERRAT_HISTORIC_PORT','plymouth-montserrat-port-1800','Point'],
+];
+for(const [id,successor,type] of leewardHandoff){
+ const item=atlantic(id),next=late(successor);
+ a.equal(item.geometry.type,type,id);
+ a.equal(item.uncertain_line_dashed,true,id);
+ a.equal(item.exclude_from_territorial_area_totals,true,id);
+ a.equal(item.cross_century_feature_id,successor,id);
+ a(stageAt(id,1799),id);
+ a.deepEqual(item.geometry,next.geometry,id);
+ a.equal(item.stable_id,next.properties.stable_id,id);
+ a.equal(next.properties.start_year,1800,id);
+ a.equal(next.properties.dash_only,true,id);
+}
+for(const [id,year,pattern] of [
+ ['ST_KITTS_MAIN_ISLAND_18C',1700,/英法分区/],
+ ['ST_KITTS_MAIN_ISLAND_18C',1702,/占领法属区/],
+ ['ST_KITTS_MAIN_ISLAND_18C',1713,/乌得勒支条约/],
+ ['NEVIS_MAIN_ISLAND_18C',1706,/法军袭岛与劫掠/],
+ ['NEVIS_MAIN_ISLAND_18C',1782,/法军占岛/],
+ ['NEVIS_MAIN_ISLAND_18C',1783,/和约约定归还/],
+ ['NEVIS_MAIN_ISLAND_18C',1784,/英方恢复/],
+ ['BARBUDA_CODRINGTON_LEASE_18C',1705,/续租/],
+ ['ANTIGUA_ST_HELENA_DOCKYARD',1725,/首座/],
+ ['ANTIGUA_ENGLISH_HARBOUR_DOCKYARD',1781,/被奴役工人/],
+ ['BRIMSTONE_HILL_1782_FORT',1782,/2月12日/],
+ ['BRIMSTONE_HILL_EARLY_GARRISON',1789,/施工/],
+ ['MONTSERRAT_ISLAND_18C',1783,/仍由法方占领/],
+]){
+ a.match(stageAt(id,year).title,pattern,id);
+}
+a.match(stageAt('PLYMOUTH_MONTSERRAT_HISTORIC_PORT',1782).note,/2月22日/);
+a.equal(stageAt('BRIMSTONE_HILL_1782_FORT',1783),undefined);
+a.notDeepEqual(atlantic('BRIMSTONE_HILL_1782_FORT').geometry,atlantic('BRIMSTONE_FORT_GEORGE_LATE').geometry);
+a.deepEqual(late('charlestown-nevis-port-1800').geometry.coordinates,[-62.62960,17.14105]);
+a.deepEqual(late('plymouth-montserrat-port-1800').geometry.coordinates,[-62.22304,16.70486]);
+for(const [file,ids] of [
+ ['eighteenth-century-mass-schematic-zones-1700-1799.json',
+  ['ST_KITTS','NEVIS','ANTIGUA','BARBUDA','BASSETERRE','ST_JOHNS_ANTIGUA']],
+ ['eighteenth-century-b37-caribbean.json',[31,32,33,34,35].flatMap(n=>['Z','P'].map(kind=>'B37-C-'+kind+'0'+n))],
+ ['eighteenth-century-b39-caribbean-1759-1763.json',[39,40,41].flatMap(n=>['Z','P'].map(kind=>'B39-C-'+kind+'0'+n))],
+]){
+ const {zones,sites}=JSON.parse(read('data/'+file));
+ for(const id of ids) a(atlantic([...zones,...sites].find(row=>row.id===id)?.superseded_by),id);
+}
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));
 a(html.includes('js/eighteenth-mass-spatial.js?v='));

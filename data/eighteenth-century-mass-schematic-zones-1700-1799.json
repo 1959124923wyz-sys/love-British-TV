@@ -6409,7 +6409,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "ST_KITTS_MAIN_ISLAND_18C"
     },
     {
       "id": "NEVIS",
@@ -6441,7 +6442,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "NEVIS_MAIN_ISLAND_18C"
     },
     {
       "id": "ANTIGUA",
@@ -6469,7 +6471,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "ANTIGUA_MAIN_ISLAND_18C"
     },
     {
       "id": "MONTSERRAT",
@@ -6530,7 +6533,8 @@
       "territorial_control_verified": false,
       "uncertain_line_dashed": true,
       "area_sqkm": null,
-      "exclude_from_territorial_area_totals": true
+      "exclude_from_territorial_area_totals": true,
+      "superseded_by": "BARBUDA_CODRINGTON_LEASE_18C"
     },
     {
       "id": "CAYMAN",
@@ -8847,7 +8851,8 @@
       "category": "dated_city_or_port_core",
       "historical_city_wall_survey": false,
       "area_sqkm": null,
-      "screen_radius_not_ground_area": true
+      "screen_radius_not_ground_area": true,
+      "superseded_by": "BASSETERRE_HISTORIC_TOWN"
     },
     {
       "id": "ST_JOHNS_ANTIGUA",
@@ -8869,7 +8874,8 @@
       "category": "dated_city_or_port_core",
       "historical_city_wall_survey": false,
       "area_sqkm": null,
-      "screen_radius_not_ground_area": true
+      "screen_radius_not_ground_area": true,
+      "superseded_by": "ST_JOHNS_ANTIGUA_HISTORIC_TOWN"
     },
     {
       "id": "POINTE_A_PITRE",
@@ -31790,6 +31796,358 @@
           11.17774
         ]
       }
+    },
+    {
+      "id": "BASSETERRE_HISTORIC_PORT_EARLY",
+      "stable_id": "basseterre-colonial-core-early",
+      "title": "巴斯特尔 · 早期港城",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.72243,
+          17.294
+        ]
+      },
+      "geometry_method": "Historic lower town anchor near the documented colonial fort on Bay Road.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.historicstkitts.kn/places/basseterre",
+        "https://www.historicstkitts.kn/timeline-history-of-st-kitts",
+        "https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/01107/31_Pendery.pdf",
+        "https://www.cambridge.org/core/journals/itinerario/article/human-plunder-slaving-raids-economic-warfare-and-mercantilism-in-the-french-caribbean-16651713/E04B5E1449BA2207661E50DFAAFECD7F"
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1701,
+          "kind": "foreign_occupation",
+          "title": "巴斯特尔 · 法属殖民区港城",
+          "note": "英法分区时期，巴斯特尔是法国殖民港。"
+        },
+        {
+          "start_year": 1702,
+          "end_year": 1712,
+          "kind": "wartime_occupation",
+          "title": "巴斯特尔 · 英方接管法国港城",
+          "note": "1702年英方民兵占据法属区，巴斯特尔随之易手。"
+        },
+        {
+          "start_year": 1713,
+          "end_year": 1726,
+          "kind": "settlement",
+          "title": "巴斯特尔 · 条约后的港城",
+          "note": "1713年《乌得勒支和约》后，巴斯特尔归英国殖民当局。"
+        },
+        {
+          "start_year": 1727,
+          "end_year": 1752,
+          "kind": "administration",
+          "title": "巴斯特尔 · 殖民首府迁入",
+          "note": "殖民地首府于1727年从老路镇迁到巴斯特尔。"
+        }
+      ],
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 170
+    },
+    {
+      "id": "CHARLESTOWN_NEVIS_PORT",
+      "stable_id": "charlestown-nevis-colonial-port",
+      "title": "查尔斯敦 · 旧港",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.6296,
+          17.14105
+        ]
+      },
+      "geometry_method": "Historic port anchor at the documented waterfront storehouse plot at Main Street and Low Street. It follows deed reconstruction, not a town perimeter.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/1117/",
+        "https://seis.bristol.ac.uk/~emceee/hamiltonhouse.pdf",
+        "https://eprints.soton.ac.uk/465224/1/930221_v.1.pdf",
+        "https://fcap.gonzaleztennant.net/history/",
+        "https://www.cambridge.org/core/journals/itinerario/article/human-plunder-slaving-raids-economic-warfare-and-mercantilism-in-the-french-caribbean-16651713/E04B5E1449BA2207661E50DFAAFECD7F",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1705,
+          "kind": "administration",
+          "title": "查尔斯敦 · 尼维斯殖民港",
+          "note": "查尔斯敦是尼维斯的贸易港和殖民行政中心。"
+        },
+        {
+          "start_year": 1706,
+          "end_year": 1706,
+          "kind": "conflict_damage",
+          "title": "查尔斯敦 · 法军袭掠尼维斯",
+          "note": "1706年法军袭掠尼维斯的殖民聚落和种植园，并掳走居民和被奴役者。"
+        },
+        {
+          "start_year": 1707,
+          "end_year": 1781,
+          "kind": "administration",
+          "title": "查尔斯敦 · 港口与殖民行政延续",
+          "note": "法军撤离后，港城沿海发展。商人利用滨海仓库储运糖等种植园产物。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "kind": "foreign_occupation",
+          "title": "查尔斯敦 · 法方控制尼维斯",
+          "note": "法军在1782年1月进攻尼维斯。殖民港随岛被接管。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "kind": "foreign_occupation",
+          "title": "查尔斯敦 · 英法和约议定归还",
+          "note": "和约约定将尼维斯交回英国，驻堡考古记载法军占领延续至1784年。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "kind": "administration",
+          "title": "查尔斯敦 · 英方恢复港务与行政",
+          "note": "英方恢复殖民行政。查尔斯敦继续承担港务。"
+        }
+      ],
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 75,
+      "cross_century_feature_id": "charlestown-nevis-port-1800"
+    },
+    {
+      "id": "ST_JOHNS_ANTIGUA_PORT_EARLY",
+      "stable_id": "st-johns-antigua-port-early",
+      "title": "圣约翰 · 殖民港城",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.8448,
+          17.1215
+        ]
+      },
+      "geometry_method": "Historic lower town street grid is used as the port anchor before the 1787–88 survey.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.antiguanationalarchives.org/digital-resources/",
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579443264",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2024/10/Colonial-and-Indian-Exhibition-1886-handbook.pdf",
+        "https://www.atlasofmutualheritage.nl/page/10512/map-of-antiqua-sheet-2"
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1786,
+          "kind": "administration",
+          "title": "圣约翰 · 安提瓜港口与首府",
+          "note": "圣约翰是安提瓜西北岸的港城与殖民行政中心，港口参与岛上糖业贸易。"
+        }
+      ],
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 140
+    },
+    {
+      "id": "ANTIGUA_ST_HELENA_DOCKYARD",
+      "stable_id": "antigua-st-helena-old-dockyard",
+      "title": "英吉利港 · 圣赫勒拿旧船坞",
+      "kind": "military",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.76265,
+          17.00735
+        ]
+      },
+      "geometry_method": "Martel chart F, eastern careening yard, positioned at the site of the Antigua Slipway identified in the UNESCO nomination dossier.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.loc.gov/item/73691522/",
+        "https://whc.unesco.org/uploads/nominations/1499.pdf",
+        "https://whc.unesco.org/document/152804",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1725,
+          "end_year": 1742,
+          "kind": "military",
+          "title": "英吉利港 · 1725年首座海军船坞",
+          "note": "1725年英国海军在英吉利港东侧圣赫勒拿设立修船据点，建有绞盘房、仓库和木棚。"
+        },
+        {
+          "start_year": 1743,
+          "end_year": 1745,
+          "kind": "military",
+          "title": "圣赫勒拿 · 旧船坞与主船坞并用",
+          "note": "主船坞扩建期间，圣赫勒拿也增设绞盘房、仓库等设施，1745年港图仍记有修船码头。"
+        }
+      ],
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 70
+    },
+    {
+      "id": "PLYMOUTH_MONTSERRAT_HISTORIC_PORT",
+      "stable_id": "plymouth-montserrat-historic-port",
+      "title": "蒙特塞拉特 · 普利茅斯旧港",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.22304,
+          16.70486
+        ]
+      },
+      "geometry_method": "Historic port-town anchor based on built-core landward of the wharf, south of the court-house area, read from the graticule of 1962 Directorate of Overseas Surveys Montserrat D.O.S. 999 1:50,000. Historic site identity cross-checked with the 1766 de Charnières manuscript A labels and 1775–76 Thomas Hearne panorama. No perimeter inferred from the chart's sparse building marks or separately labelled battery B.2.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb40655743z",
+        "https://gallica.bnf.fr/ark:/12148/btv1b53103771h",
+        "https://archive.org/details/capitulationdeli00mons",
+        "https://www.british-history.ac.uk/cal-state-papers/colonial/america-west-indies/vol27/pp1-20",
+        "https://thebhc.org/sites/default/files/beh/BEHprint/v023n2/p0061-p0084.pdf",
+        "https://sites.brown.edu/archaeology/fieldwork/montserrat/montserrats-archaeological-resources/",
+        "https://doi.org/10.1007/s10761-015-0292-7",
+        "https://www.cambridge.org/core/journals/itinerario/article/human-plunder-slaving-raids-economic-warfare-and-mercantilism-in-the-french-caribbean-16651713/E04B5E1449BA2207661E50DFAAFECD7F",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2024/10/Colonial-and-Indian-Exhibition-1886-handbook.pdf",
+        "https://www.openstreetmap.org/copyright",
+        "https://gallica.bnf.fr/ark:/12148/btv1b84941145",
+        "https://maps.lib.utexas.edu/maps/americas/txu-pclmaps-oclc-9185121-montserrat-1962.jpg",
+        "https://artfl-permalink.uchicago.edu/brown-french-ia/aUcTogo6k5JTT_ga",
+        "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1711,
+          "kind": "administration",
+          "title": "普利茅斯 · 蒙特塞拉特殖民港",
+          "note": "岛上英方殖民政府设在普利茅斯。港口与糖业种植园相连。"
+        },
+        {
+          "start_year": 1712,
+          "end_year": 1712,
+          "kind": "conflict_damage",
+          "title": "普利茅斯 · 法军袭岛期间",
+          "note": "法国舰队在普利茅斯和卡尔湾登陆并劫掠蒙特塞拉特。研究估计，该次劫掠中全岛约1,160名非洲裔居民被掳往马提尼克和瓜德罗普。"
+        },
+        {
+          "start_year": 1713,
+          "end_year": 1781,
+          "kind": "administration",
+          "title": "普利茅斯 · 蒙特塞拉特殖民港",
+          "note": "港城继续承担殖民行政和港务。1766年法国水道图记录了海湾沿岸的港镇。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "kind": "foreign_occupation",
+          "title": "普利茅斯 · 法军占据蒙特塞拉特",
+          "note": "2月22日，副总督迈克尔·怀特与法方签署投降条款。法方当天接收驻防，英王所有的火炮、军需和建筑按条款移交。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "kind": "foreign_occupation",
+          "title": "普利茅斯 · 和约约定归还",
+          "note": "英法和约约定将蒙特塞拉特交还英国，法方占领延续至1784年。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "kind": "administration",
+          "title": "普利茅斯 · 英方恢复殖民行政",
+          "note": "1784年英方恢复殖民行政，普利茅斯继续承担港务。"
+        }
+      ],
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 250,
+      "cross_century_feature_id": "plymouth-montserrat-port-1800"
+    },
+    {
+      "id": "BRIMSTONE_HILL_EARLY_GARRISON",
+      "stable_id": "brimstone-hill-garrison-early",
+      "title": "布里姆斯通山 · 驻防据点",
+      "kind": "military",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.83604,
+          17.34775
+        ]
+      },
+      "geometry_method": "Historic hilltop anchor. Built fort geometries are staged separately.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://whc.unesco.org/en/list/910/",
+        "https://www.historicstkitts.kn/timeline-history-of-st-kitts",
+        "https://www.essexarchivesonline.co.uk/Result_Details.aspx?DocID=320597",
+        "https://whc.unesco.org/uploads/nominations/910.pdf#page=19",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf"
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1781,
+          "kind": "military",
+          "title": "布里姆斯通山 · 英方炮台与驻堡",
+          "note": "英方始于1690年在山上部署火炮。十八世纪逐步增建工事与驻军设施。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "kind": "diplomacy",
+          "title": "布里姆斯通山 · 和约前后的拆防",
+          "note": "1783年7月的书信记载法军已拆除自己在山上修筑的防御工事。英法条约随后议定交还圣基茨。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1788,
+          "kind": "military",
+          "title": "布里姆斯通山 · 英方恢复驻防",
+          "note": "英国恢复圣基茨的殖民行政，山堡后来逐步重建。"
+        },
+        {
+          "start_year": 1789,
+          "end_year": 1798,
+          "kind": "military",
+          "title": "布里姆斯通山 · 乔治堡施工",
+          "note": "1789年，英方开始修建乔治堡主堡。山堡的营造使用了被奴役的非洲人劳工。"
+        }
+      ],
+      "geometry_precision": "named_place_anchor",
+      "position_uncertainty_m": 80
     }
   ],
   "regional_zones": [
@@ -33678,7 +34036,7 @@
           "start_year": 1712,
           "end_year": 1712,
           "title": "蒙特塞拉特 · 法军袭岛",
-          "note": "法军于1712年袭岛。岛上发生战事。",
+          "note": "法国舰队于1712年在普利茅斯及卡尔湾登陆劫掠。研究估计，全岛约1,160名非洲裔居民被掳往马提尼克和瓜德罗普。",
           "kind": "conflict_damage"
         },
         {
@@ -33703,7 +34061,7 @@
           "start_year": 1782,
           "end_year": 1782,
           "title": "蒙特塞拉特 · 法军占岛",
-          "note": "法国军队于1782年占据蒙特塞拉特。",
+          "note": "1782年2月22日，法方与殖民当局签署投降条款并接管驻防。英王所属的火炮、军需和建筑按条款交付。",
           "kind": "foreign_occupation"
         },
         {
@@ -33717,7 +34075,7 @@
           "start_year": 1784,
           "end_year": 1784,
           "title": "蒙特塞拉特 · 英方恢复行政",
-          "note": "法国占领至1784年结束。实际交接日仍待核。"
+          "note": "法国占领于1784年结束，英国恢复殖民行政。"
         },
         {
           "start_year": 1785,
@@ -33730,7 +34088,10 @@
         "https://sites.brown.edu/archaeology/fieldwork/montserrat/montserrats-archaeological-resources/",
         "https://doi.org/10.1007/s10761-015-0292-7",
         "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
-        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/"
+        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+        "https://archive.org/details/capitulationdeli00mons",
+        "https://www.british-history.ac.uk/cal-state-papers/colonial/america-west-indies/vol27/pp1-20",
+        "https://www.cambridge.org/core/journals/itinerario/article/human-plunder-slaving-raids-economic-warfare-and-mercantilism-in-the-french-caribbean-16651713/E04B5E1449BA2207661E50DFAAFECD7F"
       ],
       "geometry_method": "Same generalized Natural Earth land-only geographic outline used in 1800. It is a location reference for the documented administration at island scale, not a surveyed border, parcel or sea claim.",
       "geometry_precision": "source_backed_historical_outline",
@@ -94213,6 +94574,2061 @@
         14.0913734
       ],
       "position_uncertainty_m": 60
+    },
+    {
+      "id": "ST_KITTS_MAIN_ISLAND_18C",
+      "stable_id": "st-kitts-19c-islands",
+      "title": "圣基茨本岛",
+      "kind": "administration",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.63683,
+              17.258205
+            ],
+            [
+              -62.66686,
+              17.273505
+            ],
+            [
+              -62.678131,
+              17.292222
+            ],
+            [
+              -62.695465,
+              17.333238
+            ],
+            [
+              -62.71996,
+              17.358547
+            ],
+            [
+              -62.819569,
+              17.415839
+            ],
+            [
+              -62.822336,
+              17.410102
+            ],
+            [
+              -62.82665,
+              17.407172
+            ],
+            [
+              -62.846547,
+              17.39997
+            ],
+            [
+              -62.853139,
+              17.394721
+            ],
+            [
+              -62.861073,
+              17.362291
+            ],
+            [
+              -62.831614,
+              17.330146
+            ],
+            [
+              -62.788726,
+              17.304674
+            ],
+            [
+              -62.756947,
+              17.292304
+            ],
+            [
+              -62.744049,
+              17.290595
+            ],
+            [
+              -62.712554,
+              17.292304
+            ],
+            [
+              -62.703359,
+              17.28913
+            ],
+            [
+              -62.690297,
+              17.27497
+            ],
+            [
+              -62.670481,
+              17.26317
+            ],
+            [
+              -62.659739,
+              17.225491
+            ],
+            [
+              -62.647043,
+              17.21719
+            ],
+            [
+              -62.624745,
+              17.225287
+            ],
+            [
+              -62.624827,
+              17.241848
+            ],
+            [
+              -62.63683,
+              17.258205
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "Natural Earth physical shoreline identical to the 1800 land footprint. Chronology comes from separately named political events and archival sources.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.historicstkitts.kn/timeline-history-of-st-kitts",
+        "https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/01107/31_Pendery.pdf",
+        "https://www.cambridge.org/core/journals/itinerario/article/human-plunder-slaving-raids-economic-warfare-and-mercantilism-in-the-french-caribbean-16651713/E04B5E1449BA2207661E50DFAAFECD7F",
+        "https://msa.maryland.gov/megafile/msa/speccol/sc4800/sc4872/001283/pdf/m1283-0385.pdf",
+        "https://axl-cefan.cstip.ulaval.ca/europe/Utrecht-1713-FR-GB.htm",
+        "https://www.essexarchivesonline.co.uk/Result_Details.aspx?DocID=320597",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2021/12/The-French-Invasions-of-St.-Kitts-Nevis.pdf",
+        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1701,
+          "kind": "diplomacy",
+          "title": "圣基茨 · 英法分区",
+          "note": "英法两方各自占有岛上一部分。巴斯特尔在法国殖民区内。"
+        },
+        {
+          "start_year": 1702,
+          "end_year": 1702,
+          "kind": "wartime_occupation",
+          "title": "圣基茨 · 英方民兵占领法属区",
+          "note": "西班牙王位继承战争期间，英属殖民地民兵进占岛上的法国殖民区。"
+        },
+        {
+          "start_year": 1703,
+          "end_year": 1705,
+          "kind": "administration",
+          "title": "圣基茨 · 英方管理岛上殖民地",
+          "note": "英方占据原法属区，岛上糖业依靠被奴役者劳动。"
+        },
+        {
+          "start_year": 1706,
+          "end_year": 1706,
+          "kind": "conflict_damage",
+          "title": "圣基茨 · 法军袭扰与掠夺",
+          "note": "法方于1706年袭击圣基茨，掠夺种植区并掳走被奴役者。"
+        },
+        {
+          "start_year": 1707,
+          "end_year": 1712,
+          "kind": "administration",
+          "title": "圣基茨 · 英方管理岛上殖民地",
+          "note": "英方继续管理岛上殖民地，战后条约条款随后确定。"
+        },
+        {
+          "start_year": 1713,
+          "end_year": 1726,
+          "kind": "administration",
+          "title": "圣基茨 · 乌得勒支条约割让法属区",
+          "note": "法国在1713年《乌得勒支和约》中将岛上原法属区割让英国。"
+        },
+        {
+          "start_year": 1727,
+          "end_year": 1781,
+          "kind": "administration",
+          "title": "圣基茨 · 巴斯特尔为殖民地首府",
+          "note": "1727年，英国殖民行政中心由老路镇迁至巴斯特尔。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "kind": "foreign_occupation",
+          "title": "圣基茨 · 法军占岛",
+          "note": "法国舰队1月抵达巴斯特尔。2月12日，布里姆斯通山守军签署投降条款。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "kind": "diplomacy",
+          "title": "圣基茨 · 和约议定交还英国",
+          "note": "1783年英法和约约定法国交还圣基茨。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "kind": "administration",
+          "title": "圣基茨 · 英国殖民行政恢复",
+          "note": "法国撤出后，英方恢复岛上殖民行政，巴斯特尔仍是主要港城。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -62.861073,
+        17.21719,
+        -62.624745,
+        17.415839
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "st-kitts-colonial-1800"
+    },
+    {
+      "id": "NEVIS_MAIN_ISLAND_18C",
+      "stable_id": "nevis-19c-islands",
+      "title": "尼维斯本岛",
+      "kind": "administration",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.599233,
+              17.202948
+            ],
+            [
+              -62.618642,
+              17.182807
+            ],
+            [
+              -62.626373,
+              17.140692
+            ],
+            [
+              -62.612172,
+              17.104153
+            ],
+            [
+              -62.565745,
+              17.100531
+            ],
+            [
+              -62.547597,
+              17.104641
+            ],
+            [
+              -62.543568,
+              17.108873
+            ],
+            [
+              -62.538442,
+              17.120998
+            ],
+            [
+              -62.536773,
+              17.129706
+            ],
+            [
+              -62.538442,
+              17.161933
+            ],
+            [
+              -62.546498,
+              17.183783
+            ],
+            [
+              -62.560374,
+              17.196723
+            ],
+            [
+              -62.57844,
+              17.202541
+            ],
+            [
+              -62.599233,
+              17.202948
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "Natural Earth physical shoreline identical to the 1800 land footprint. Chronology comes from separately named political events and archival sources.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/1117/",
+        "https://eprints.soton.ac.uk/465224/1/930221_v.1.pdf",
+        "https://fcap.gonzaleztennant.net/history/",
+        "https://www.cambridge.org/core/journals/itinerario/article/human-plunder-slaving-raids-economic-warfare-and-mercantilism-in-the-french-caribbean-16651713/E04B5E1449BA2207661E50DFAAFECD7F",
+        "https://msa.maryland.gov/megafile/msa/speccol/sc4800/sc4872/001283/pdf/m1283-0385.pdf",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1705,
+          "kind": "administration",
+          "title": "尼维斯 · 英属糖业殖民地",
+          "note": "查尔斯敦是岛上的行政和贸易中心，糖业种植园依靠被奴役者劳动。"
+        },
+        {
+          "start_year": 1706,
+          "end_year": 1706,
+          "kind": "conflict_damage",
+          "title": "尼维斯 · 法军袭岛与劫掠",
+          "note": "迪贝维尔所率法方部队袭击岛上种植园，掳走居民和被奴役者。也有人乘乱逃往山地。"
+        },
+        {
+          "start_year": 1707,
+          "end_year": 1781,
+          "kind": "administration",
+          "title": "尼维斯 · 殖民行政与种植园延续",
+          "note": "法国军队撤离后，英方殖民行政和糖业种植园延续。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "kind": "foreign_occupation",
+          "title": "尼维斯 · 法军占岛",
+          "note": "1782年1月，法国在进攻圣基茨期间也攻占尼维斯。查尔斯堡是岛上守军的主要据点。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "kind": "foreign_occupation",
+          "title": "尼维斯 · 和约约定归还",
+          "note": "1783年英法和约约定将尼维斯交回英国。当地驻堡的考古研究将法国占领记至1784年。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "kind": "administration",
+          "title": "尼维斯 · 英方恢复殖民行政",
+          "note": "法国撤离后，殖民行政在查尔斯敦延续。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -62.626373,
+        17.100531,
+        -62.536773,
+        17.202948
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "nevis-colonial-1800"
+    },
+    {
+      "id": "ANTIGUA_MAIN_ISLAND_18C",
+      "stable_id": "antigua-19c-islands",
+      "title": "安提瓜本岛",
+      "kind": "administration",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.879221,
+              17.060452
+            ],
+            [
+              -61.89037,
+              17.035386
+            ],
+            [
+              -61.883656,
+              17.026272
+            ],
+            [
+              -61.851715,
+              17.007636
+            ],
+            [
+              -61.838694,
+              17.004828
+            ],
+            [
+              -61.81786,
+              17.00495
+            ],
+            [
+              -61.804067,
+              17.00731
+            ],
+            [
+              -61.783599,
+              17.016913
+            ],
+            [
+              -61.776845,
+              17.018541
+            ],
+            [
+              -61.753529,
+              16.996812
+            ],
+            [
+              -61.737131,
+              16.989244
+            ],
+            [
+              -61.729644,
+              17.001166
+            ],
+            [
+              -61.734364,
+              17.025784
+            ],
+            [
+              -61.733998,
+              17.034857
+            ],
+            [
+              -61.726226,
+              17.038479
+            ],
+            [
+              -61.70995,
+              17.034166
+            ],
+            [
+              -61.697011,
+              17.027818
+            ],
+            [
+              -61.685699,
+              17.028551
+            ],
+            [
+              -61.674428,
+              17.045885
+            ],
+            [
+              -61.67219,
+              17.057563
+            ],
+            [
+              -61.677073,
+              17.062934
+            ],
+            [
+              -61.685658,
+              17.068264
+            ],
+            [
+              -61.694936,
+              17.079413
+            ],
+            [
+              -61.667592,
+              17.079413
+            ],
+            [
+              -61.672109,
+              17.090644
+            ],
+            [
+              -61.680653,
+              17.100531
+            ],
+            [
+              -61.6881,
+              17.100531
+            ],
+            [
+              -61.70165,
+              17.093451
+            ],
+            [
+              -61.714833,
+              17.093085
+            ],
+            [
+              -61.725087,
+              17.09984
+            ],
+            [
+              -61.729644,
+              17.114163
+            ],
+            [
+              -61.72053,
+              17.116116
+            ],
+            [
+              -61.716298,
+              17.118801
+            ],
+            [
+              -61.708608,
+              17.127834
+            ],
+            [
+              -61.720082,
+              17.12637
+            ],
+            [
+              -61.729848,
+              17.127997
+            ],
+            [
+              -61.73762,
+              17.132961
+            ],
+            [
+              -61.743316,
+              17.141506
+            ],
+            [
+              -61.752756,
+              17.128892
+            ],
+            [
+              -61.755442,
+              17.123033
+            ],
+            [
+              -61.756418,
+              17.114163
+            ],
+            [
+              -61.77302,
+              17.126532
+            ],
+            [
+              -61.78067,
+              17.147162
+            ],
+            [
+              -61.793365,
+              17.164944
+            ],
+            [
+              -61.825266,
+              17.168769
+            ],
+            [
+              -61.83967,
+              17.159857
+            ],
+            [
+              -61.848785,
+              17.149482
+            ],
+            [
+              -61.850453,
+              17.137641
+            ],
+            [
+              -61.842356,
+              17.124416
+            ],
+            [
+              -61.865387,
+              17.117825
+            ],
+            [
+              -61.883127,
+              17.1105
+            ],
+            [
+              -61.894154,
+              17.100531
+            ],
+            [
+              -61.8662,
+              17.086859
+            ],
+            [
+              -61.882436,
+              17.078803
+            ],
+            [
+              -61.882802,
+              17.070217
+            ],
+            [
+              -61.879221,
+              17.060452
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "Natural Earth physical shoreline identical to the 1800 land footprint. Chronology comes from separately named political events and archival sources.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579443264",
+        "https://www.antiguanationalarchives.org/digital-resources/",
+        "https://whc.unesco.org/en/list/1499",
+        "https://whc.unesco.org/document/152804",
+        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1724,
+          "kind": "administration",
+          "title": "安提瓜 · 英属糖业殖民地",
+          "note": "圣约翰是岛上港城和行政中心，种植园的糖业依靠被奴役者劳动。"
+        },
+        {
+          "start_year": 1725,
+          "end_year": 1742,
+          "kind": "administration",
+          "title": "安提瓜 · 英国设立海军船坞",
+          "note": "1725年，英国海军在英吉利港的圣赫勒拿建立修船据点。"
+        },
+        {
+          "start_year": 1743,
+          "end_year": 1799,
+          "kind": "administration",
+          "title": "安提瓜 · 糖业殖民地与海军船坞",
+          "note": "英国海军从1743年起在英吉利港扩建主船坞。被奴役的非洲人参与建造和运转，船坞为英军在加勒比的舰队服务。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -61.894154,
+        16.989244,
+        -61.667592,
+        17.168769
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "antigua-colonial-1800"
+    },
+    {
+      "id": "BARBUDA_CODRINGTON_LEASE_18C",
+      "stable_id": "barbuda-19c-islands",
+      "title": "巴布达 · 科德林顿家族承租地",
+      "kind": "administration",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.838938,
+              17.593329
+            ],
+            [
+              -61.794749,
+              17.576117
+            ],
+            [
+              -61.776967,
+              17.563422
+            ],
+            [
+              -61.77066,
+              17.545559
+            ],
+            [
+              -61.75357,
+              17.5515
+            ],
+            [
+              -61.743276,
+              17.550605
+            ],
+            [
+              -61.736399,
+              17.554023
+            ],
+            [
+              -61.729644,
+              17.572821
+            ],
+            [
+              -61.727773,
+              17.588446
+            ],
+            [
+              -61.728749,
+              17.604967
+            ],
+            [
+              -61.735911,
+              17.634914
+            ],
+            [
+              -61.743276,
+              17.651353
+            ],
+            [
+              -61.754262,
+              17.668769
+            ],
+            [
+              -61.768178,
+              17.684638
+            ],
+            [
+              -61.784291,
+              17.696357
+            ],
+            [
+              -61.797271,
+              17.698798
+            ],
+            [
+              -61.818227,
+              17.69184
+            ],
+            [
+              -61.831451,
+              17.696357
+            ],
+            [
+              -61.81786,
+              17.703192
+            ],
+            [
+              -61.837799,
+              17.727688
+            ],
+            [
+              -61.851674,
+              17.720282
+            ],
+            [
+              -61.856435,
+              17.701077
+            ],
+            [
+              -61.849192,
+              17.690131
+            ],
+            [
+              -61.831207,
+              17.680487
+            ],
+            [
+              -61.825022,
+              17.657945
+            ],
+            [
+              -61.826487,
+              17.632473
+            ],
+            [
+              -61.831451,
+              17.613837
+            ],
+            [
+              -61.84317,
+              17.620185
+            ],
+            [
+              -61.84317,
+              17.629584
+            ],
+            [
+              -61.839223,
+              17.641425
+            ],
+            [
+              -61.838938,
+              17.655422
+            ],
+            [
+              -61.844228,
+              17.665961
+            ],
+            [
+              -61.860097,
+              17.684231
+            ],
+            [
+              -61.8662,
+              17.696357
+            ],
+            [
+              -61.869374,
+              17.707343
+            ],
+            [
+              -61.873036,
+              17.710639
+            ],
+            [
+              -61.87385,
+              17.691148
+            ],
+            [
+              -61.859364,
+              17.641791
+            ],
+            [
+              -61.857289,
+              17.600979
+            ],
+            [
+              -61.851796,
+              17.586575
+            ],
+            [
+              -61.838938,
+              17.593329
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "Natural Earth physical shoreline identical to the 1800 land footprint. Chronology comes from separately named political events and archival sources.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.bailii.org/uk/cases/UKPC/2022/25.html",
+        "https://theses.gla.ac.uk/653/1/2001murrayphd.pdf",
+        "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1704,
+          "kind": "administration",
+          "title": "巴布达 · 英国王室租地",
+          "note": "英国王室在1685年把巴布达租给科德林顿家族。家族强制将被奴役者带到岛上劳作，饲养牲畜供应其种植园。"
+        },
+        {
+          "start_year": 1705,
+          "end_year": 1799,
+          "kind": "administration",
+          "title": "巴布达 · 1705年续租",
+          "note": "安妮女王于1705年续发租约，科德林顿家族继续经营岛上牧场和役使被奴役者。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -61.87385,
+        17.545559,
+        -61.727773,
+        17.727688
+      ],
+      "outline_only": true,
+      "cross_century_feature_id": "barbuda-lease-1800"
+    },
+    {
+      "id": "BASSETERRE_HISTORIC_TOWN",
+      "stable_id": "basseterre-colonial-port",
+      "title": "巴斯特尔 · 港城旧街区",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.7248186,
+              17.2954434
+            ],
+            [
+              -62.7248987,
+              17.2952665
+            ],
+            [
+              -62.7248761,
+              17.2949836
+            ],
+            [
+              -62.7249725,
+              17.2947215
+            ],
+            [
+              -62.7250203,
+              17.2943922
+            ],
+            [
+              -62.7248552,
+              17.2944514
+            ],
+            [
+              -62.7246372,
+              17.2945454
+            ],
+            [
+              -62.7243437,
+              17.2945528
+            ],
+            [
+              -62.7240161,
+              17.294657
+            ],
+            [
+              -62.7236482,
+              17.2946513
+            ],
+            [
+              -62.7236264,
+              17.294765
+            ],
+            [
+              -62.7236422,
+              17.2950027
+            ],
+            [
+              -62.7236053,
+              17.2952752
+            ],
+            [
+              -62.7234725,
+              17.2954868
+            ],
+            [
+              -62.7237172,
+              17.2955737
+            ],
+            [
+              -62.7240229,
+              17.2955831
+            ],
+            [
+              -62.7243787,
+              17.295572
+            ],
+            [
+              -62.7246966,
+              17.2955982
+            ],
+            [
+              -62.7248186,
+              17.2954434
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "Manually traced the contiguous central urban blocks east of College Ghaut on Samuel Baker’s 1753 survey as reproduced in Pendery Fig. 4c. Similarity fit from College Street’s waterfront end and the approximate mapped Fort Londonderry site between Fort and Brownhill streets. Cross-checked against 1714 Buor depiction and 1766 Charnières roadstead, which only marks the town schematically. This is the depicted old built core; excludes Irish Town and mapped outlying coastal forts.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.loc.gov/item/74691676/",
+        "https://www.historicstkitts.kn/places/basseterre",
+        "https://www.historicstkitts.kn/timeline-history-of-st-kitts",
+        "https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/01107/31_Pendery.pdf",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://www.openstreetmap.org/copyright",
+        "https://www.historicstkitts.kn/items-of-interest?start=5",
+        "https://gallica.bnf.fr/ark:/12148/btv1b52503113h"
+      ],
+      "periods": [
+        {
+          "start_year": 1753,
+          "end_year": 1781,
+          "kind": "settlement",
+          "title": "巴斯特尔 · 圣基茨殖民港城",
+          "note": "港城沿湾内海岸发展，是圣基茨殖民行政与糖业贸易的中心。1768年城镇往西扩展。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "kind": "foreign_occupation",
+          "title": "巴斯特尔 · 法军进入港城",
+          "note": "法国舰队1月抵达，英军从港城撤向布里姆斯通山。山堡守军于2月12日签署投降条款。"
+        },
+        {
+          "start_year": 1783,
+          "end_year": 1783,
+          "kind": "diplomacy",
+          "title": "巴斯特尔 · 和约议定交还圣基茨",
+          "note": "英法和约议定将圣基茨返还英国。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "kind": "administration",
+          "title": "巴斯特尔 · 殖民港城恢复英方行政",
+          "note": "英国恢复殖民行政后，巴斯特尔继续承担港务与岛上行政。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -62.7250203,
+        17.2943922,
+        -62.7234725,
+        17.2955982
+      ],
+      "position_uncertainty_m": 170,
+      "cross_century_feature_id": "basseterre-port-1800"
+    },
+    {
+      "id": "ST_JOHNS_ANTIGUA_HISTORIC_TOWN",
+      "stable_id": "st-johns-antigua-colonial-port",
+      "title": "圣约翰 · 港城旧街区",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.8499613,
+              17.1262522
+            ],
+            [
+              -61.8498715,
+              17.1259235
+            ],
+            [
+              -61.8498618,
+              17.1257345
+            ],
+            [
+              -61.8498813,
+              17.1253908
+            ],
+            [
+              -61.8500818,
+              17.1252732
+            ],
+            [
+              -61.850253,
+              17.1251063
+            ],
+            [
+              -61.8503557,
+              17.1248633
+            ],
+            [
+              -61.8506241,
+              17.1247275
+            ],
+            [
+              -61.8506073,
+              17.1244202
+            ],
+            [
+              -61.8504937,
+              17.1243877
+            ],
+            [
+              -61.8505208,
+              17.1241545
+            ],
+            [
+              -61.8502561,
+              17.1241415
+            ],
+            [
+              -61.8502471,
+              17.1240467
+            ],
+            [
+              -61.8500649,
+              17.1240402
+            ],
+            [
+              -61.849882,
+              17.1239395
+            ],
+            [
+              -61.8494687,
+              17.1239148
+            ],
+            [
+              -61.8492776,
+              17.1238135
+            ],
+            [
+              -61.8492819,
+              17.1236569
+            ],
+            [
+              -61.8489619,
+              17.1236082
+            ],
+            [
+              -61.8488834,
+              17.1237589
+            ],
+            [
+              -61.8485462,
+              17.1237167
+            ],
+            [
+              -61.8482352,
+              17.1237628
+            ],
+            [
+              -61.847994,
+              17.1237674
+            ],
+            [
+              -61.8478314,
+              17.1236212
+            ],
+            [
+              -61.8477627,
+              17.1234432
+            ],
+            [
+              -61.8477842,
+              17.1232801
+            ],
+            [
+              -61.8475994,
+              17.1232028
+            ],
+            [
+              -61.8474761,
+              17.1230833
+            ],
+            [
+              -61.8472464,
+              17.1231515
+            ],
+            [
+              -61.8470883,
+              17.1230528
+            ],
+            [
+              -61.8469834,
+              17.1229112
+            ],
+            [
+              -61.8469649,
+              17.1227293
+            ],
+            [
+              -61.8467376,
+              17.1226643
+            ],
+            [
+              -61.8467273,
+              17.122483
+            ],
+            [
+              -61.8464454,
+              17.1224765
+            ],
+            [
+              -61.8463459,
+              17.1226805
+            ],
+            [
+              -61.8461174,
+              17.1227332
+            ],
+            [
+              -61.8459225,
+              17.1226786
+            ],
+            [
+              -61.8457321,
+              17.1227735
+            ],
+            [
+              -61.8456807,
+              17.1226909
+            ],
+            [
+              -61.8457887,
+              17.1212481
+            ],
+            [
+              -61.8457679,
+              17.1206816
+            ],
+            [
+              -61.8457454,
+              17.1202405
+            ],
+            [
+              -61.8454121,
+              17.1202535
+            ],
+            [
+              -61.8454094,
+              17.1199787
+            ],
+            [
+              -61.8452626,
+              17.1198416
+            ],
+            [
+              -61.845256,
+              17.1195116
+            ],
+            [
+              -61.8448434,
+              17.1194791
+            ],
+            [
+              -61.8448477,
+              17.1193225
+            ],
+            [
+              -61.8445188,
+              17.119281
+            ],
+            [
+              -61.8443886,
+              17.1191452
+            ],
+            [
+              -61.8443732,
+              17.1189243
+            ],
+            [
+              -61.8401529,
+              17.1186314
+            ],
+            [
+              -61.840115,
+              17.1187932
+            ],
+            [
+              -61.8401138,
+              17.1189107
+            ],
+            [
+              -61.839931,
+              17.118912
+            ],
+            [
+              -61.8399657,
+              17.119409
+            ],
+            [
+              -61.840134,
+              17.119587
+            ],
+            [
+              -61.8398738,
+              17.1228145
+            ],
+            [
+              -61.8408292,
+              17.1229132
+            ],
+            [
+              -61.8408452,
+              17.1230243
+            ],
+            [
+              -61.8411016,
+              17.1230367
+            ],
+            [
+              -61.8411567,
+              17.1228684
+            ],
+            [
+              -61.8419572,
+              17.1229314
+            ],
+            [
+              -61.8422138,
+              17.1230457
+            ],
+            [
+              -61.8423635,
+              17.1229398
+            ],
+            [
+              -61.8423398,
+              17.1234401
+            ],
+            [
+              -61.8429924,
+              17.1234836
+            ],
+            [
+              -61.842904,
+              17.1257125
+            ],
+            [
+              -61.8454483,
+              17.1258814
+            ],
+            [
+              -61.8499613,
+              17.1262522
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "Built town blocks, courthouse and cathedral precinct traced from the St John inset on Dutch National Archives VEL569A/B. Affine fitted to Market, Thames and Cross Streets at High, Redcliffe, Nevis and Tanner; original sheet seam aligned by the parallel street courses. The eighteenth-century waterfront is retained before later reclamation.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.antiguanationalarchives.org/digital-resources/",
+        "https://www.oldmapsonline.org/en/maps/f5e88982-f447-548c-bdca-bd403a9d7f29",
+        "https://www.atlasofmutualheritage.nl/page/10510/map-of-antiqua-sheet-1",
+        "https://www.atlasofmutualheritage.nl/page/10512/map-of-antiqua-sheet-2",
+        "https://research-information.bris.ac.uk/files/371869799/JCCH_KSchecked_AK_KSedited_Updated_Curtin_020623_clean_copy.pdf",
+        "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2024/10/Colonial-and-Indian-Exhibition-1886-handbook.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1787,
+          "end_year": 1789,
+          "kind": "settlement",
+          "title": "圣约翰 · 殖民港城与测绘街区",
+          "note": "拉夫曼和基利安的测绘记录港边街区和行政中心。街区包括教堂、商铺及住宅。"
+        },
+        {
+          "start_year": 1790,
+          "end_year": 1799,
+          "kind": "administration",
+          "title": "圣约翰 · 十八世纪末的殖民首府",
+          "note": "圣约翰仍是安提瓜港务和殖民行政中心。城内的商人、官员和传教士也占有和役使被奴役者。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -61.8506241,
+        17.1186314,
+        -61.8398738,
+        17.1262522
+      ],
+      "position_uncertainty_m": 110,
+      "cross_century_feature_id": "st-johns-antigua-port-1800"
+    },
+    {
+      "id": "ANTIGUA_ENGLISH_HARBOUR_DOCKYARD",
+      "stable_id": "antigua-english-harbour-dockyard",
+      "title": "英吉利港 · 皇家海军主船坞",
+      "kind": "military",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.7662876,
+              17.0084586
+            ],
+            [
+              -61.766161,
+              17.0082495
+            ],
+            [
+              -61.7659948,
+              17.0080642
+            ],
+            [
+              -61.7658535,
+              17.0079167
+            ],
+            [
+              -61.7655331,
+              17.0078666
+            ],
+            [
+              -61.7653772,
+              17.0077808
+            ],
+            [
+              -61.7652444,
+              17.007512
+            ],
+            [
+              -61.7650509,
+              17.0074699
+            ],
+            [
+              -61.7650029,
+              17.0076151
+            ],
+            [
+              -61.7647863,
+              17.0077561
+            ],
+            [
+              -61.7645717,
+              17.007917
+            ],
+            [
+              -61.7642906,
+              17.008044
+            ],
+            [
+              -61.7640344,
+              17.0082088
+            ],
+            [
+              -61.7639406,
+              17.0083181
+            ],
+            [
+              -61.7640423,
+              17.0084894
+            ],
+            [
+              -61.7642024,
+              17.008615
+            ],
+            [
+              -61.7643856,
+              17.0085575
+            ],
+            [
+              -61.7645435,
+              17.0086632
+            ],
+            [
+              -61.764737,
+              17.0087052
+            ],
+            [
+              -61.7649847,
+              17.0086618
+            ],
+            [
+              -61.7651928,
+              17.0086422
+            ],
+            [
+              -61.7655176,
+              17.0085312
+            ],
+            [
+              -61.7659297,
+              17.0084521
+            ],
+            [
+              -61.7662876,
+              17.0084586
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "1745 Martel chart, main King’s Yard (E) grounds traced and fitted to the dock peninsula head and Fort Berkeley point. Excludes the other shore and harbour water. Later phases share the historical core without the entire later expanded naval estate.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.loc.gov/item/73691522/",
+        "https://whc.unesco.org/en/list/1499",
+        "https://whc.unesco.org/uploads/nominations/1499.pdf",
+        "https://whc.unesco.org/document/152804",
+        "https://www.tandfonline.com/doi/full/10.1080/0144039X.2021.1910470",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1743,
+          "end_year": 1780,
+          "kind": "military",
+          "title": "英吉利港 · 英国海军扩建主船坞",
+          "note": "英国海军于1743年启动主船坞工程。1745年测绘图记载了船坞、仓库及修船设施。"
+        },
+        {
+          "start_year": 1781,
+          "end_year": 1799,
+          "kind": "military",
+          "title": "英吉利港 · 扩建期与被奴役工人",
+          "note": "英国海军自1781年继续扩建船坞和港防。被奴役的非洲人在船坞从事建造、维修和其他工种。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -61.7662876,
+        17.0074699,
+        -61.7639406,
+        17.0087052
+      ],
+      "position_uncertainty_m": 80,
+      "cross_century_feature_id": "antigua-naval-dockyard-1800"
+    },
+    {
+      "id": "BRIMSTONE_HILL_1782_FORT",
+      "stable_id": "brimstone-hill-1782-fort",
+      "title": "布里姆斯通山 · 1782 年山堡",
+      "kind": "military",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.8394342,
+              17.3473765
+            ],
+            [
+              -62.8392119,
+              17.3470668
+            ],
+            [
+              -62.8387583,
+              17.3468838
+            ],
+            [
+              -62.8385378,
+              17.3464869
+            ],
+            [
+              -62.8387278,
+              17.3461412
+            ],
+            [
+              -62.8385987,
+              17.3457459
+            ],
+            [
+              -62.8384229,
+              17.3453935
+            ],
+            [
+              -62.8380985,
+              17.3456057
+            ],
+            [
+              -62.8378619,
+              17.3459941
+            ],
+            [
+              -62.8376719,
+              17.3463398
+            ],
+            [
+              -62.8373959,
+              17.3464219
+            ],
+            [
+              -62.8372632,
+              17.3462012
+            ],
+            [
+              -62.8370839,
+              17.3460233
+            ],
+            [
+              -62.8368096,
+              17.3460182
+            ],
+            [
+              -62.8365855,
+              17.3457958
+            ],
+            [
+              -62.8362664,
+              17.3457462
+            ],
+            [
+              -62.83608,
+              17.3459173
+            ],
+            [
+              -62.8357591,
+              17.345955
+            ],
+            [
+              -62.8354347,
+              17.3461672
+            ],
+            [
+              -62.8354311,
+              17.3463417
+            ],
+            [
+              -62.8357036,
+              17.3464341
+            ],
+            [
+              -62.8356534,
+              17.3466514
+            ],
+            [
+              -62.8359708,
+              17.3467882
+            ],
+            [
+              -62.8361483,
+              17.3470534
+            ],
+            [
+              -62.8357324,
+              17.347264
+            ],
+            [
+              -62.8352699,
+              17.3475172
+            ],
+            [
+              -62.8354026,
+              17.347738
+            ],
+            [
+              -62.835632,
+              17.3476986
+            ],
+            [
+              -62.8356733,
+              17.3479176
+            ],
+            [
+              -62.8354851,
+              17.348176
+            ],
+            [
+              -62.8355712,
+              17.3484395
+            ],
+            [
+              -62.8361197,
+              17.3484497
+            ],
+            [
+              -62.8363456,
+              17.3485849
+            ],
+            [
+              -62.8368099,
+              17.3482443
+            ],
+            [
+              -62.8373172,
+              17.3480355
+            ],
+            [
+              -62.8379643,
+              17.3476984
+            ],
+            [
+              -62.8383801,
+              17.3474879
+            ],
+            [
+              -62.8390596,
+              17.347806
+            ],
+            [
+              -62.839384,
+              17.3475938
+            ],
+            [
+              -62.8394342,
+              17.3473765
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "Traced the contiguous light-filled hilltop enclosure and attached bastions shown within the dark Brimstone slopes of the 1782 French manuscript. Similarity fit from Fort Charles on the coast and Brimstone Hill summit. Separate from the French camps, works, battery positions, and artillery lines in the siege manuscript, and from the later park/World Heritage boundary.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://www.loc.gov/item/gm71000697/",
+        "https://www.historicstkitts.kn/timeline-history-of-st-kitts",
+        "https://msa.maryland.gov/megafile/msa/speccol/sc4800/sc4872/001283/pdf/m1283-0385.pdf",
+        "https://whc.unesco.org/en/list/910/",
+        "https://www.openstreetmap.org/copyright",
+        "https://www.historicstkitts.kn/places/charles-fort",
+        "https://www.openstreetmap.org/way/683564478"
+      ],
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782,
+          "kind": "foreign_occupation",
+          "title": "布里姆斯通山 · 2月12日签署投降条款",
+          "note": "英军从巴斯特尔撤向山堡。法国陆军围攻后，山堡守军于2月12日签署投降条款。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -62.8394342,
+        17.3453935,
+        -62.8352699,
+        17.3485849
+      ],
+      "position_uncertainty_m": 120
+    },
+    {
+      "id": "BRIMSTONE_FORT_GEORGE_LATE",
+      "stable_id": "brimstone-fort-george-late",
+      "title": "布里姆斯通山 · 乔治堡",
+      "kind": "military",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.8363362,
+              17.3477217
+            ],
+            [
+              -62.8362885,
+              17.3476913
+            ],
+            [
+              -62.8362409,
+              17.3476152
+            ],
+            [
+              -62.8361853,
+              17.3475544
+            ],
+            [
+              -62.8360898,
+              17.3475618
+            ],
+            [
+              -62.8359864,
+              17.3475768
+            ],
+            [
+              -62.8358909,
+              17.3475843
+            ],
+            [
+              -62.835859,
+              17.3476146
+            ],
+            [
+              -62.8357794,
+              17.3476297
+            ],
+            [
+              -62.8358112,
+              17.3476601
+            ],
+            [
+              -62.8358032,
+              17.347698
+            ],
+            [
+              -62.8357872,
+              17.3477436
+            ],
+            [
+              -62.8357871,
+              17.3477891
+            ],
+            [
+              -62.8358427,
+              17.34785
+            ],
+            [
+              -62.8358824,
+              17.3478956
+            ],
+            [
+              -62.835938,
+              17.3479033
+            ],
+            [
+              -62.8360256,
+              17.3478883
+            ],
+            [
+              -62.8360255,
+              17.3479111
+            ],
+            [
+              -62.8360573,
+              17.3479339
+            ],
+            [
+              -62.8360971,
+              17.3479188
+            ],
+            [
+              -62.8360972,
+              17.3478732
+            ],
+            [
+              -62.8361291,
+              17.3478581
+            ],
+            [
+              -62.8363201,
+              17.3478052
+            ],
+            [
+              -62.8363838,
+              17.3477674
+            ],
+            [
+              -62.8363362,
+              17.3477217
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "Manually traced the masonry enceinte labelled Fort George in the site plan submitted for the UNESCO nomination (PDF page 19), leaving out both adjacent Places of Arms, the other bastions, and the modern property boundary. Similarity fit from two distinct bends of the access road, with the inner hairpin independent check about 17 m, and the natural hill summit and mapped walls as location checks. The fort was begun in 1789 and completed near the end of the eighteenth century. The core shares the same hilltop site as the 1782 refuge-fort polygon but has a different footprint.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://whc.unesco.org/en/list/910/",
+        "https://whc.unesco.org/uploads/nominations/910.pdf#page=19",
+        "https://www.openstreetmap.org/copyright",
+        "https://www.tandfonline.com/doi/abs/10.1179/pma.1994.003",
+        "https://www.openstreetmap.org/way/386408000"
+      ],
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799,
+          "kind": "military",
+          "title": "布里姆斯通山 · 十八世纪末的乔治堡",
+          "note": "乔治堡主堡在十八世纪末建成，山堡继续驻军。工程由英军工程师设计，并使用了被奴役的非洲人劳工。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -62.8363838,
+        17.3475544,
+        -62.8357794,
+        17.3479339
+      ],
+      "position_uncertainty_m": 50,
+      "cross_century_feature_id": "brimstone-fort-george-1800"
+    },
+    {
+      "id": "NEVIS_FORT_CHARLES_CORE",
+      "stable_id": "nevis-fort-charles-core",
+      "title": "尼维斯 · 查尔斯堡",
+      "kind": "military",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.6334594,
+              17.1329898
+            ],
+            [
+              -62.6333323,
+              17.1327477
+            ],
+            [
+              -62.6332541,
+              17.1326276
+            ],
+            [
+              -62.6331827,
+              17.1326529
+            ],
+            [
+              -62.6329664,
+              17.1322599
+            ],
+            [
+              -62.632849,
+              17.1324253
+            ],
+            [
+              -62.6328721,
+              17.1324712
+            ],
+            [
+              -62.6327203,
+              17.132609
+            ],
+            [
+              -62.6326926,
+              17.1326365
+            ],
+            [
+              -62.6325475,
+              17.1328294
+            ],
+            [
+              -62.632484,
+              17.132814
+            ],
+            [
+              -62.6323764,
+              17.1329358
+            ],
+            [
+              -62.632508,
+              17.1329938
+            ],
+            [
+              -62.6325021,
+              17.1331525
+            ],
+            [
+              -62.632581,
+              17.1331048
+            ],
+            [
+              -62.6327307,
+              17.133019
+            ],
+            [
+              -62.6330326,
+              17.1332389
+            ],
+            [
+              -62.6331064,
+              17.1331924
+            ],
+            [
+              -62.6334594,
+              17.1329898
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "Extant main enceinte traced from the 2013–2015 archaeological survey, excluding the detached ravelin. Similarity fit using three masonry turns, cistern, guardhouse and gate; maximum local residual 2.6 m. Earlier surveys attest the fort; this core does not date each wall section.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://fcap.gonzaleztennant.net/fieldwork/",
+        "https://fcap.gonzaleztennant.net/history/",
+        "https://eprints.soton.ac.uk/465224/1/930221_v.1.pdf",
+        "https://msa.maryland.gov/megafile/msa/speccol/sc4800/sc4872/001283/pdf/m1283-0385.pdf",
+        "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1771,
+          "end_year": 1781,
+          "kind": "military",
+          "title": "尼维斯查尔斯堡 · 征税修堡",
+          "note": "1771年，为修缮工事而对被奴役人口计征人头税。1773年巡查记录查尔斯堡墙体残破。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1783,
+          "kind": "foreign_occupation",
+          "title": "尼维斯查尔斯堡 · 法方占领期间",
+          "note": "法国于1782年占岛，查尔斯堡落入法方手中。1783年英法和约约定交还尼维斯。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1793,
+          "kind": "military",
+          "title": "尼维斯查尔斯堡 · 恢复英方管辖",
+          "note": "1784年英方接回尼维斯。其后陆续修缮旧堡。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1799,
+          "kind": "military",
+          "title": "尼维斯查尔斯堡 · 军备缩减",
+          "note": "1794年报告记载堡内仅余两门炮。进入十九世纪后，查尔斯堡也曾用于海关和检疫。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -62.6334594,
+        17.1322599,
+        -62.6323764,
+        17.1332389
+      ],
+      "position_uncertainty_m": 20,
+      "cross_century_feature_id": "nevis-fort-charles-1800"
+    },
+    {
+      "id": "CHARLESTOWN_WATERFRONT_STOREYARD",
+      "stable_id": "charlestown-waterfront-storeyard",
+      "title": "查尔斯敦 · 滨海仓地",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.6297104,
+              17.1412224
+            ],
+            [
+              -62.6297669,
+              17.1409934
+            ],
+            [
+              -62.6296964,
+              17.1407092
+            ],
+            [
+              -62.629413,
+              17.1407184
+            ],
+            [
+              -62.6294273,
+              17.1409836
+            ],
+            [
+              -62.6294918,
+              17.1412206
+            ],
+            [
+              -62.6297104,
+              17.1412224
+            ]
+          ]
+        ]
+      },
+      "geometry_method": "1940 cadastral perimeter reproduced by Small and Eickelmann, supported by the 1807 deed, late eighteenth-century documents and the extant walled yard. Registered at Main and Low Street; maximum local residual about 4 m.",
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "source_urls": [
+        "https://seis.bristol.ac.uk/~emceee/hamiltonhouse.pdf",
+        "https://whc.unesco.org/en/tentativelists/1117/",
+        "https://fcap.gonzaleztennant.net/history/",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1771,
+          "kind": "settlement",
+          "title": "查尔斯敦 · 海滨仓地与商铺",
+          "note": "1763年的继承记录标明，临海街一侧有仓库和堆存货物的院地。"
+        },
+        {
+          "start_year": 1772,
+          "end_year": 1781,
+          "kind": "settlement",
+          "title": "查尔斯敦 · 仓地转让",
+          "note": "1772年，安德鲁·汉密尔顿买下这处仓地。殖民地产交易也把被奴役者列为财产。"
+        },
+        {
+          "start_year": 1782,
+          "end_year": 1783,
+          "kind": "foreign_occupation",
+          "title": "查尔斯敦 · 法占期间的滨海仓地",
+          "note": "法国占据尼维斯期间，查尔斯敦仍是岛上的港城。"
+        },
+        {
+          "start_year": 1784,
+          "end_year": 1799,
+          "kind": "settlement",
+          "title": "查尔斯敦 · 港边仓地续用",
+          "note": "英国恢复殖民行政后，1784年的抵押文书继续记载这处滨海仓地。"
+        }
+      ],
+      "geometry_precision": "source_backed_historical_outline",
+      "bbox": [
+        -62.6297669,
+        17.1407092,
+        -62.629413,
+        17.1412224
+      ],
+      "position_uncertainty_m": 20,
+      "cross_century_feature_id": "charlestown-waterfront-storeyard-1800"
     }
   ],
   "regional_lines": [

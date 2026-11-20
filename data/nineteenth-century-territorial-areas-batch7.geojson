@@ -8,6 +8,106 @@
   },
   "sources": [
     {
+      "id": "19CT7-5S-PLY-1766",
+      "label": "法国国家图书馆，1766年普利茅斯海图",
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb40655743z"
+    },
+    {
+      "id": "19CT7-5S-PLY-PORT",
+      "label": "殖民经济研究，普利茅斯港城",
+      "url": "https://thebhc.org/sites/default/files/beh/BEHprint/v023n2/p0061-p0084.pdf"
+    },
+    {
+      "id": "19CT7-5S-PLY-DEED",
+      "label": "美国国会图书馆，1886年普利茅斯街道与店铺契据",
+      "url": "https://www.loc.gov/item/2016586628/"
+    },
+    {
+      "id": "19CT7-5S-DOCK-1745",
+      "label": "美国国会图书馆，1745年英国海军船坞图",
+      "url": "https://www.loc.gov/item/73691522/"
+    },
+    {
+      "id": "19CT7-5S-DOCK-WH",
+      "label": "联合国教科文组织，安提瓜海军船坞",
+      "url": "https://whc.unesco.org/en/list/1499"
+    },
+    {
+      "id": "19CT7-5S-DOCK-ICOM",
+      "label": "国际古迹遗址理事会，安提瓜海军船坞评估",
+      "url": "https://whc.unesco.org/document/152804"
+    },
+    {
+      "id": "19CT7-5S-DOCK-LABOUR",
+      "label": "安提瓜皇家海军船坞奴役劳动档案研究",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/0144039X.2021.1910470"
+    },
+    {
+      "id": "19CT7-5S-DOCK-NPA",
+      "label": "安提瓜国家公园管理局，船坞沿革",
+      "url": "https://www.nationalparksantigua.com/tours/nelsons-dockyard-national-park/"
+    },
+    {
+      "id": "19CT7-5S-BRIM",
+      "label": "联合国教科文组织，布里姆斯通山堡垒",
+      "url": "https://whc.unesco.org/en/list/910/"
+    },
+    {
+      "id": "19CT7-5S-BRIMPLAN",
+      "label": "世界遗产申报档案，乔治堡主堡图",
+      "url": "https://whc.unesco.org/uploads/nominations/910.pdf#page=19"
+    },
+    {
+      "id": "19CT7-5S-NEVISFORT",
+      "label": "南安普顿大学，尼维斯堡防档案研究",
+      "url": "https://eprints.soton.ac.uk/465224/1/930221_v.1.pdf"
+    },
+    {
+      "id": "19CT7-5S-CHARLES",
+      "label": "查尔斯堡考古调查，主堡实测图",
+      "url": "https://fcap.gonzaleztennant.net/fieldwork/"
+    },
+    {
+      "id": "19CT7-5S-HAMILTON",
+      "label": "布里斯托尔大学，查尔斯敦临海仓地契据与地籍图",
+      "url": "https://seis.bristol.ac.uk/~emceee/hamiltonhouse.pdf"
+    },
+    {
+      "id": "19CT7-5S-BASSE",
+      "label": "美国国会图书馆，贝克1753年圣基茨图",
+      "url": "https://www.loc.gov/item/74691676/"
+    },
+    {
+      "id": "19CT7-5S-KITTSTOWN",
+      "label": "圣基茨国家信托，巴斯特尔港城史",
+      "url": "https://www.historicstkitts.kn/places/basseterre"
+    },
+    {
+      "id": "19CT7-5S-PENDERY",
+      "label": "历史考古学研究，巴斯特尔早期城镇",
+      "url": "https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/01107/31_Pendery.pdf"
+    },
+    {
+      "id": "19CT7-5S-LUFFMAN-A",
+      "label": "荷兰国家档案馆，拉夫曼安提瓜图第一幅",
+      "url": "https://www.atlasofmutualheritage.nl/page/10510/map-of-antiqua-sheet-1"
+    },
+    {
+      "id": "19CT7-5S-LUFFMAN-B",
+      "label": "荷兰国家档案馆，拉夫曼安提瓜图第二幅",
+      "url": "https://www.atlasofmutualheritage.nl/page/10512/map-of-antiqua-sheet-2"
+    },
+    {
+      "id": "19CT7-5S-KILLIAN",
+      "label": "大英图书馆，基利安圣约翰地图",
+      "url": "https://www.oldmapsonline.org/en/maps/f5e88982-f447-548c-bdca-bd403a9d7f29"
+    },
+    {
+      "id": "19CT7-5S-CURTIN",
+      "label": "布里斯托尔大学档案研究，圣约翰城市奴役",
+      "url": "https://research-information.bris.ac.uk/files/371869799/JCCH_KSchecked_AK_KSedited_Updated_Curtin_020623_clean_copy.pdf"
+    },
+    {
       "id": "19CT7-5R-TOBAGO-UNION",
       "label": "特立尼达和多巴哥法例，1888年枢密令",
       "url": "https://laws.gov.tt/pdf/A2.pdf"
@@ -8707,7 +8807,7 @@
       "type": "Feature",
       "id": "basseterre-port-1800",
       "properties": {
-        "name": "巴斯特尔 · 加勒比港口驻地",
+        "name": "巴斯特尔 · 港城旧街区",
         "stable_id": "basseterre-colonial-port",
         "start_year": 1800,
         "end_year": 1899,
@@ -8716,14 +8816,22 @@
         "summary_zh": "巴斯特尔继续为圣基茨的主要港口。19世纪贸易文件列其为英属西印度港口。",
         "source_ids": [
           "19CT7-CARIB-GEOPORT",
-          "19CT7-CARIB-PORTS"
+          "19CT7-CARIB-PORTS",
+          "19CT7-5S-BASSE",
+          "19CT7-5S-KITTSTOWN",
+          "19CT7-5S-PENDERY",
+          "19CT7-MART-OSM"
         ],
         "source_urls": [
           "https://open.unep.org/docs/gef/CEO/10856_CEO%20Request.pdf",
-          "https://www.govinfo.gov/content/pkg/SERIALSET-00150_00_00-012-0045-0000/pdf/SERIALSET-00150_00_00-012-0045-0000.pdf"
+          "https://www.govinfo.gov/content/pkg/SERIALSET-00150_00_00-012-0045-0000/pdf/SERIALSET-00150_00_00-012-0045-0000.pdf",
+          "https://www.loc.gov/item/74691676/",
+          "https://www.historicstkitts.kn/places/basseterre",
+          "https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/01107/31_Pendery.pdf",
+          "https://www.openstreetmap.org/copyright"
         ],
         "related_event_ids": [],
-        "mapping_method": "Named historic town or port anchor; independent of the island administrative outline",
+        "mapping_method": "Manually traced the contiguous central urban blocks east of College Ghaut on Samuel Baker’s 1753 survey as reproduced in Pendery Fig. 4c. Similarity fit from College Street’s waterfront end and the approximate mapped Fort Londonderry site between Fort and Brownhill streets. Cross-checked against 1714 Buor depiction and 1766 Charnières roadstead, which only marks the town schematically. This is the depicted old built core; excludes Irish Town and mapped outlying coastal forts.",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "dash_only": true,
@@ -8731,20 +8839,101 @@
         "area_sqkm": null,
         "territorial_claim": false,
         "prior_record_ids": [
-          "B37-C-Z031"
+          "B37-C-Z031",
+          "BASSETERRE_HISTORIC_TOWN"
         ],
-        "geometry_precision": "named_place_anchor"
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 170
       },
       "geometry": {
-        "type": "Point",
-        "coordinates": [-62.7261,17.2948]
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.7248186,
+              17.2954434
+            ],
+            [
+              -62.7248987,
+              17.2952665
+            ],
+            [
+              -62.7248761,
+              17.2949836
+            ],
+            [
+              -62.7249725,
+              17.2947215
+            ],
+            [
+              -62.7250203,
+              17.2943922
+            ],
+            [
+              -62.7248552,
+              17.2944514
+            ],
+            [
+              -62.7246372,
+              17.2945454
+            ],
+            [
+              -62.7243437,
+              17.2945528
+            ],
+            [
+              -62.7240161,
+              17.294657
+            ],
+            [
+              -62.7236482,
+              17.2946513
+            ],
+            [
+              -62.7236264,
+              17.294765
+            ],
+            [
+              -62.7236422,
+              17.2950027
+            ],
+            [
+              -62.7236053,
+              17.2952752
+            ],
+            [
+              -62.7234725,
+              17.2954868
+            ],
+            [
+              -62.7237172,
+              17.2955737
+            ],
+            [
+              -62.7240229,
+              17.2955831
+            ],
+            [
+              -62.7243787,
+              17.295572
+            ],
+            [
+              -62.7246966,
+              17.2955982
+            ],
+            [
+              -62.7248186,
+              17.2954434
+            ]
+          ]
+        ]
       }
     },
     {
       "type": "Feature",
       "id": "charlestown-nevis-port-1800",
       "properties": {
-        "name": "查尔斯敦 · 加勒比港口驻地",
+        "name": "查尔斯敦 · 旧港",
         "stable_id": "charlestown-nevis-colonial-port",
         "start_year": 1800,
         "end_year": 1899,
@@ -8754,15 +8943,19 @@
         "source_ids": [
           "19CT7-CARIB-GEOPORT",
           "19CT7-NEVIS-UNESCO",
-          "19CT7-CARIB-PORTS"
+          "19CT7-CARIB-PORTS",
+          "19CT7-5S-HAMILTON",
+          "19CT7-MART-OSM"
         ],
         "source_urls": [
           "https://open.unep.org/docs/gef/CEO/10856_CEO%20Request.pdf",
           "https://whc.unesco.org/en/tentativelists/1117/",
-          "https://www.govinfo.gov/content/pkg/SERIALSET-00150_00_00-012-0045-0000/pdf/SERIALSET-00150_00_00-012-0045-0000.pdf"
+          "https://www.govinfo.gov/content/pkg/SERIALSET-00150_00_00-012-0045-0000/pdf/SERIALSET-00150_00_00-012-0045-0000.pdf",
+          "https://seis.bristol.ac.uk/~emceee/hamiltonhouse.pdf",
+          "https://www.openstreetmap.org/copyright"
         ],
         "related_event_ids": [],
-        "mapping_method": "Named historic town or port anchor; independent of the island administrative outline",
+        "mapping_method": "Historic port anchor at the documented waterfront storehouse plot at Main Street and Low Street. It follows deed reconstruction, not a town perimeter.",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "dash_only": true,
@@ -8770,20 +8963,25 @@
         "area_sqkm": null,
         "territorial_claim": false,
         "prior_record_ids": [
-          "B37-C-Z032"
+          "B37-C-Z032",
+          "CHARLESTOWN_NEVIS_PORT"
         ],
-        "geometry_precision": "named_place_anchor"
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 75
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-62.6228,17.1392]
+        "coordinates": [
+          -62.6296,
+          17.14105
+        ]
       }
     },
     {
       "type": "Feature",
       "id": "st-johns-antigua-port-1800",
       "properties": {
-        "name": "圣约翰港 · 加勒比港口驻地",
+        "name": "圣约翰 · 港城旧街区",
         "stable_id": "st-johns-antigua-colonial-port",
         "start_year": 1800,
         "end_year": 1899,
@@ -8792,14 +8990,24 @@
         "summary_zh": "圣约翰继续为安提瓜的殖民行政与港口城镇。19世纪贸易文件列其为英属西印度港口。",
         "source_ids": [
           "19CT7-STJOHN-UN",
-          "19CT7-CARIB-PORTS"
+          "19CT7-CARIB-PORTS",
+          "19CT7-5S-LUFFMAN-A",
+          "19CT7-5S-LUFFMAN-B",
+          "19CT7-5S-KILLIAN",
+          "19CT7-5S-CURTIN",
+          "19CT7-MART-OSM"
         ],
         "source_urls": [
           "https://ungegn.un.org/dashboard/cities/details?crM49=28&id=221",
-          "https://www.govinfo.gov/content/pkg/SERIALSET-00150_00_00-012-0045-0000/pdf/SERIALSET-00150_00_00-012-0045-0000.pdf"
+          "https://www.govinfo.gov/content/pkg/SERIALSET-00150_00_00-012-0045-0000/pdf/SERIALSET-00150_00_00-012-0045-0000.pdf",
+          "https://www.atlasofmutualheritage.nl/page/10510/map-of-antiqua-sheet-1",
+          "https://www.atlasofmutualheritage.nl/page/10512/map-of-antiqua-sheet-2",
+          "https://www.oldmapsonline.org/en/maps/f5e88982-f447-548c-bdca-bd403a9d7f29",
+          "https://research-information.bris.ac.uk/files/371869799/JCCH_KSchecked_AK_KSedited_Updated_Curtin_020623_clean_copy.pdf",
+          "https://www.openstreetmap.org/copyright"
         ],
         "related_event_ids": [],
-        "mapping_method": "Named historic town or port anchor; independent of the island administrative outline",
+        "mapping_method": "Built town blocks, courthouse and cathedral precinct traced from the St John inset on Dutch National Archives VEL569A/B. Affine fitted to Market, Thames and Cross Streets at High, Redcliffe, Nevis and Tanner; original sheet seam aligned by the parallel street courses. The eighteenth-century waterfront is retained before later reclamation.",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "dash_only": true,
@@ -8807,13 +9015,302 @@
         "area_sqkm": null,
         "territorial_claim": false,
         "prior_record_ids": [
-          "B37-C-Z033"
+          "B37-C-Z033",
+          "ST_JOHNS_ANTIGUA_HISTORIC_TOWN"
         ],
-        "geometry_precision": "named_place_anchor"
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 110
       },
       "geometry": {
-        "type": "Point",
-        "coordinates": [-61.804977,17.12274]
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.8499613,
+              17.1262522
+            ],
+            [
+              -61.8498715,
+              17.1259235
+            ],
+            [
+              -61.8498618,
+              17.1257345
+            ],
+            [
+              -61.8498813,
+              17.1253908
+            ],
+            [
+              -61.8500818,
+              17.1252732
+            ],
+            [
+              -61.850253,
+              17.1251063
+            ],
+            [
+              -61.8503557,
+              17.1248633
+            ],
+            [
+              -61.8506241,
+              17.1247275
+            ],
+            [
+              -61.8506073,
+              17.1244202
+            ],
+            [
+              -61.8504937,
+              17.1243877
+            ],
+            [
+              -61.8505208,
+              17.1241545
+            ],
+            [
+              -61.8502561,
+              17.1241415
+            ],
+            [
+              -61.8502471,
+              17.1240467
+            ],
+            [
+              -61.8500649,
+              17.1240402
+            ],
+            [
+              -61.849882,
+              17.1239395
+            ],
+            [
+              -61.8494687,
+              17.1239148
+            ],
+            [
+              -61.8492776,
+              17.1238135
+            ],
+            [
+              -61.8492819,
+              17.1236569
+            ],
+            [
+              -61.8489619,
+              17.1236082
+            ],
+            [
+              -61.8488834,
+              17.1237589
+            ],
+            [
+              -61.8485462,
+              17.1237167
+            ],
+            [
+              -61.8482352,
+              17.1237628
+            ],
+            [
+              -61.847994,
+              17.1237674
+            ],
+            [
+              -61.8478314,
+              17.1236212
+            ],
+            [
+              -61.8477627,
+              17.1234432
+            ],
+            [
+              -61.8477842,
+              17.1232801
+            ],
+            [
+              -61.8475994,
+              17.1232028
+            ],
+            [
+              -61.8474761,
+              17.1230833
+            ],
+            [
+              -61.8472464,
+              17.1231515
+            ],
+            [
+              -61.8470883,
+              17.1230528
+            ],
+            [
+              -61.8469834,
+              17.1229112
+            ],
+            [
+              -61.8469649,
+              17.1227293
+            ],
+            [
+              -61.8467376,
+              17.1226643
+            ],
+            [
+              -61.8467273,
+              17.122483
+            ],
+            [
+              -61.8464454,
+              17.1224765
+            ],
+            [
+              -61.8463459,
+              17.1226805
+            ],
+            [
+              -61.8461174,
+              17.1227332
+            ],
+            [
+              -61.8459225,
+              17.1226786
+            ],
+            [
+              -61.8457321,
+              17.1227735
+            ],
+            [
+              -61.8456807,
+              17.1226909
+            ],
+            [
+              -61.8457887,
+              17.1212481
+            ],
+            [
+              -61.8457679,
+              17.1206816
+            ],
+            [
+              -61.8457454,
+              17.1202405
+            ],
+            [
+              -61.8454121,
+              17.1202535
+            ],
+            [
+              -61.8454094,
+              17.1199787
+            ],
+            [
+              -61.8452626,
+              17.1198416
+            ],
+            [
+              -61.845256,
+              17.1195116
+            ],
+            [
+              -61.8448434,
+              17.1194791
+            ],
+            [
+              -61.8448477,
+              17.1193225
+            ],
+            [
+              -61.8445188,
+              17.119281
+            ],
+            [
+              -61.8443886,
+              17.1191452
+            ],
+            [
+              -61.8443732,
+              17.1189243
+            ],
+            [
+              -61.8401529,
+              17.1186314
+            ],
+            [
+              -61.840115,
+              17.1187932
+            ],
+            [
+              -61.8401138,
+              17.1189107
+            ],
+            [
+              -61.839931,
+              17.118912
+            ],
+            [
+              -61.8399657,
+              17.119409
+            ],
+            [
+              -61.840134,
+              17.119587
+            ],
+            [
+              -61.8398738,
+              17.1228145
+            ],
+            [
+              -61.8408292,
+              17.1229132
+            ],
+            [
+              -61.8408452,
+              17.1230243
+            ],
+            [
+              -61.8411016,
+              17.1230367
+            ],
+            [
+              -61.8411567,
+              17.1228684
+            ],
+            [
+              -61.8419572,
+              17.1229314
+            ],
+            [
+              -61.8422138,
+              17.1230457
+            ],
+            [
+              -61.8423635,
+              17.1229398
+            ],
+            [
+              -61.8423398,
+              17.1234401
+            ],
+            [
+              -61.8429924,
+              17.1234836
+            ],
+            [
+              -61.842904,
+              17.1257125
+            ],
+            [
+              -61.8454483,
+              17.1258814
+            ],
+            [
+              -61.8499613,
+              17.1262522
+            ]
+          ]
+        ]
       }
     },
     {
@@ -60468,6 +60965,527 @@
         "territorial_claim": false,
         "prior_record_ids": [
           "TOBAGO_SCARBOROUGH_FORT"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "plymouth-montserrat-port-1800",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.22304,
+          16.70486
+        ]
+      },
+      "properties": {
+        "name": "蒙特塞拉特 · 普利茅斯旧港",
+        "stable_id": "plymouth-montserrat-historic-port",
+        "start_year": 1800,
+        "end_year": 1886,
+        "display_kind": "local_governance",
+        "label_type": "殖民港口",
+        "summary_zh": "普利茅斯继续承担蒙特塞拉特的行政及港务。1886年的地产文书记载港城的议会街和马丁商店。",
+        "source_ids": [
+          "19CT7-5S-PLY-1766",
+          "19CT7-5S-PLY-PORT",
+          "19CT7-5S-PLY-DEED",
+          "19CT7-18C5C-MONTSERRAT"
+        ],
+        "source_urls": [
+          "https://catalogue.bnf.fr/ark:/12148/cb40655743z",
+          "https://thebhc.org/sites/default/files/beh/BEHprint/v023n2/p0061-p0084.pdf",
+          "https://www.loc.gov/item/2016586628/",
+          "https://sites.brown.edu/archaeology/fieldwork/montserrat/montserrats-archaeological-resources/"
+        ],
+        "related_event_ids": [],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "mapping_method": "Historic port-town anchor based on built-core landward of the wharf, south of the court-house area, read from the graticule of 1962 Directorate of Overseas Surveys Montserrat D.O.S. 999 1:50,000. Historic site identity cross-checked with the 1766 de Charnières manuscript A labels and 1775–76 Thomas Hearne panorama. No perimeter inferred from the chart's sparse building marks or separately labelled battery B.2.",
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 250,
+        "prior_record_ids": [
+          "PLYMOUTH_MONTSERRAT_HISTORIC_PORT"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "antigua-naval-dockyard-1800",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -61.7662876,
+              17.0084586
+            ],
+            [
+              -61.766161,
+              17.0082495
+            ],
+            [
+              -61.7659948,
+              17.0080642
+            ],
+            [
+              -61.7658535,
+              17.0079167
+            ],
+            [
+              -61.7655331,
+              17.0078666
+            ],
+            [
+              -61.7653772,
+              17.0077808
+            ],
+            [
+              -61.7652444,
+              17.007512
+            ],
+            [
+              -61.7650509,
+              17.0074699
+            ],
+            [
+              -61.7650029,
+              17.0076151
+            ],
+            [
+              -61.7647863,
+              17.0077561
+            ],
+            [
+              -61.7645717,
+              17.007917
+            ],
+            [
+              -61.7642906,
+              17.008044
+            ],
+            [
+              -61.7640344,
+              17.0082088
+            ],
+            [
+              -61.7639406,
+              17.0083181
+            ],
+            [
+              -61.7640423,
+              17.0084894
+            ],
+            [
+              -61.7642024,
+              17.008615
+            ],
+            [
+              -61.7643856,
+              17.0085575
+            ],
+            [
+              -61.7645435,
+              17.0086632
+            ],
+            [
+              -61.764737,
+              17.0087052
+            ],
+            [
+              -61.7649847,
+              17.0086618
+            ],
+            [
+              -61.7651928,
+              17.0086422
+            ],
+            [
+              -61.7655176,
+              17.0085312
+            ],
+            [
+              -61.7659297,
+              17.0084521
+            ],
+            [
+              -61.7662876,
+              17.0084586
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "英吉利港 · 皇家海军主船坞",
+        "stable_id": "antigua-english-harbour-dockyard",
+        "start_year": 1800,
+        "end_year": 1888,
+        "display_kind": "military_impact",
+        "label_type": "海军船坞",
+        "summary_zh": "英国皇家海军继续在英吉利港维修舰船。被奴役者和自由黑人劳工曾在这里工作。船坞于1889年结束军用。",
+        "source_ids": [
+          "19CT7-5S-DOCK-1745",
+          "19CT7-5S-DOCK-WH",
+          "19CT7-5S-DOCK-ICOM",
+          "19CT7-5S-DOCK-LABOUR",
+          "19CT7-5S-DOCK-NPA",
+          "19CT7-MART-OSM"
+        ],
+        "source_urls": [
+          "https://www.loc.gov/item/73691522/",
+          "https://whc.unesco.org/en/list/1499",
+          "https://whc.unesco.org/document/152804",
+          "https://www.tandfonline.com/doi/full/10.1080/0144039X.2021.1910470",
+          "https://www.nationalparksantigua.com/tours/nelsons-dockyard-national-park/",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "related_event_ids": [],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "mapping_method": "1745 Martel chart, main King’s Yard (E) grounds traced and fitted to the dock peninsula head and Fort Berkeley point. Excludes the other shore and harbour water. Later phases share the historical core without the entire later expanded naval estate.",
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 80,
+        "prior_record_ids": [
+          "ANTIGUA_ENGLISH_HARBOUR_DOCKYARD"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "brimstone-fort-george-1800",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.8363362,
+              17.3477217
+            ],
+            [
+              -62.8362885,
+              17.3476913
+            ],
+            [
+              -62.8362409,
+              17.3476152
+            ],
+            [
+              -62.8361853,
+              17.3475544
+            ],
+            [
+              -62.8360898,
+              17.3475618
+            ],
+            [
+              -62.8359864,
+              17.3475768
+            ],
+            [
+              -62.8358909,
+              17.3475843
+            ],
+            [
+              -62.835859,
+              17.3476146
+            ],
+            [
+              -62.8357794,
+              17.3476297
+            ],
+            [
+              -62.8358112,
+              17.3476601
+            ],
+            [
+              -62.8358032,
+              17.347698
+            ],
+            [
+              -62.8357872,
+              17.3477436
+            ],
+            [
+              -62.8357871,
+              17.3477891
+            ],
+            [
+              -62.8358427,
+              17.34785
+            ],
+            [
+              -62.8358824,
+              17.3478956
+            ],
+            [
+              -62.835938,
+              17.3479033
+            ],
+            [
+              -62.8360256,
+              17.3478883
+            ],
+            [
+              -62.8360255,
+              17.3479111
+            ],
+            [
+              -62.8360573,
+              17.3479339
+            ],
+            [
+              -62.8360971,
+              17.3479188
+            ],
+            [
+              -62.8360972,
+              17.3478732
+            ],
+            [
+              -62.8361291,
+              17.3478581
+            ],
+            [
+              -62.8363201,
+              17.3478052
+            ],
+            [
+              -62.8363838,
+              17.3477674
+            ],
+            [
+              -62.8363362,
+              17.3477217
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "布里姆斯通山 · 乔治堡",
+        "stable_id": "brimstone-fort-george-late",
+        "start_year": 1800,
+        "end_year": 1852,
+        "display_kind": "military_impact",
+        "label_type": "山堡驻地",
+        "summary_zh": "乔治堡是布里姆斯通山的主堡。英方驻军延续到1853年撤离。",
+        "source_ids": [
+          "19CT7-5S-BRIM",
+          "19CT7-5S-BRIMPLAN",
+          "19CT7-MART-OSM"
+        ],
+        "source_urls": [
+          "https://whc.unesco.org/en/list/910/",
+          "https://whc.unesco.org/uploads/nominations/910.pdf#page=19",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "related_event_ids": [],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "mapping_method": "Manually traced the masonry enceinte labelled Fort George in the site plan submitted for the UNESCO nomination (PDF page 19), leaving out both adjacent Places of Arms, the other bastions, and the modern property boundary. Similarity fit from two distinct bends of the access road, with the inner hairpin independent check about 17 m, and the natural hill summit and mapped walls as location checks. The fort was begun in 1789 and completed near the end of the eighteenth century. The core shares the same hilltop site as the 1782 refuge-fort polygon but has a different footprint.",
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 50,
+        "prior_record_ids": [
+          "BRIMSTONE_FORT_GEORGE_LATE"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nevis-fort-charles-1800",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.6334594,
+              17.1329898
+            ],
+            [
+              -62.6333323,
+              17.1327477
+            ],
+            [
+              -62.6332541,
+              17.1326276
+            ],
+            [
+              -62.6331827,
+              17.1326529
+            ],
+            [
+              -62.6329664,
+              17.1322599
+            ],
+            [
+              -62.632849,
+              17.1324253
+            ],
+            [
+              -62.6328721,
+              17.1324712
+            ],
+            [
+              -62.6327203,
+              17.132609
+            ],
+            [
+              -62.6326926,
+              17.1326365
+            ],
+            [
+              -62.6325475,
+              17.1328294
+            ],
+            [
+              -62.632484,
+              17.132814
+            ],
+            [
+              -62.6323764,
+              17.1329358
+            ],
+            [
+              -62.632508,
+              17.1329938
+            ],
+            [
+              -62.6325021,
+              17.1331525
+            ],
+            [
+              -62.632581,
+              17.1331048
+            ],
+            [
+              -62.6327307,
+              17.133019
+            ],
+            [
+              -62.6330326,
+              17.1332389
+            ],
+            [
+              -62.6331064,
+              17.1331924
+            ],
+            [
+              -62.6334594,
+              17.1329898
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "尼维斯 · 查尔斯堡",
+        "stable_id": "nevis-fort-charles-core",
+        "start_year": 1800,
+        "end_year": 1830,
+        "display_kind": "local_governance",
+        "label_type": "海关与港防旧址",
+        "summary_zh": "十九世纪初，尼维斯查尔斯堡曾用作海关与检疫据点。1830年已由公共工程部门管理。",
+        "source_ids": [
+          "19CT7-5S-NEVISFORT",
+          "19CT7-5S-CHARLES",
+          "19CT7-MART-OSM"
+        ],
+        "source_urls": [
+          "https://eprints.soton.ac.uk/465224/1/930221_v.1.pdf",
+          "https://fcap.gonzaleztennant.net/fieldwork/",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "related_event_ids": [],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "mapping_method": "Extant main enceinte traced from the 2013–2015 archaeological survey, excluding the detached ravelin. Similarity fit using three masonry turns, cistern, guardhouse and gate; maximum local residual 2.6 m. Earlier surveys attest the fort; this core does not date each wall section.",
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 20,
+        "prior_record_ids": [
+          "NEVIS_FORT_CHARLES_CORE"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "charlestown-waterfront-storeyard-1800",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -62.6297104,
+              17.1412224
+            ],
+            [
+              -62.6297669,
+              17.1409934
+            ],
+            [
+              -62.6296964,
+              17.1407092
+            ],
+            [
+              -62.629413,
+              17.1407184
+            ],
+            [
+              -62.6294273,
+              17.1409836
+            ],
+            [
+              -62.6294918,
+              17.1412206
+            ],
+            [
+              -62.6297104,
+              17.1412224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "查尔斯敦 · 滨海仓地",
+        "stable_id": "charlestown-waterfront-storeyard",
+        "start_year": 1800,
+        "end_year": 1807,
+        "display_kind": "local_governance",
+        "label_type": "港口仓地",
+        "summary_zh": "1802年港边仓地再次转让。1807年的契据记载院地及三座仓库。",
+        "source_ids": [
+          "19CT7-5S-HAMILTON",
+          "19CT7-MART-OSM"
+        ],
+        "source_urls": [
+          "https://seis.bristol.ac.uk/~emceee/hamiltonhouse.pdf",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "related_event_ids": [],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "dash_only": true,
+        "exclude_from_area_aggregation": true,
+        "area_sqkm": null,
+        "territorial_claim": false,
+        "mapping_method": "1940 cadastral perimeter reproduced by Small and Eickelmann, supported by the 1807 deed, late eighteenth-century documents and the extant walled yard. Registered at Main and Low Street; maximum local residual about 4 m.",
+        "geometry_precision": "source_backed_historical_outline",
+        "position_uncertainty_m": 20,
+        "prior_record_ids": [
+          "CHARLESTOWN_WATERFRONT_STOREYARD"
         ]
       }
     }
