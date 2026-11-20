@@ -11,6 +11,12 @@ const app=rd('app.js'),reader=rd('js/history-stories.js'),html=rd('index.html');
 const cross=rd('research/18c/consolidated/COMPLETE_1126_ARCHIVE_CROSSWALK.csv');
 A(idx.stories.length>=34);A.equal(idx.stories[28].id,story.id);
 A.equal(idx.stories[28].status,'research_preview');
+A.deepEqual(idx.stories[28].related_story_ids,story.related_story_ids);
+for(const relatedId of story.related_story_ids){
+ const target=idx.stories.find(entry=>entry.id===relatedId);
+ A(target,'Missing related article in the preview reader: '+relatedId);
+ A.equal(J(target.file).id,relatedId);
+}
 A.equal(original.groups.length,5);A.equal(d.schema,'atlas-18c-t23-eic-penang-moluccas-indigenous-v1');
 A.equal(d.editorial_status,'research_preview_not_published');A.equal(d.events.length,36);
 A.equal(story.sections.length,36);A.equal(d.sources.length,36);
