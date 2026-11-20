@@ -16,19 +16,18 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 713,
-    "linked_to_1800_public_geometry": 594,
+    "1799_prior_records_reviewed": 725,
+    "linked_to_1800_public_geometry": 617,
     "by_disposition": {
-      "anchor": 324,
+      "anchor": 339,
       "claim_evidence": 7,
-      "continued": 225,
-      "event_history": 11,
-      "fiscal_evidence": 35,
-      "needs_boundary_or_site_review": 7,
-      "network_evidence": 57,
+      "continued": 228,
+      "event_history": 10,
+      "fiscal_evidence": 38,
+      "network_evidence": 54,
       "occupation": 16,
-      "political_relation_evidence": 11,
-      "renewed_scope": 20
+      "political_relation_evidence": 10,
+      "renewed_scope": 23
     },
     "continue_in_original_public_layer": 1
   },
@@ -119,7 +118,7 @@
       "features_at_1800": [
         "churchill-upriver-company-post-1800"
       ],
-      "notes": "1783年复设的公司商站，1799和1800沿用具名站址。"
+      "notes": "同一组坐标和稳定ID接续至1800年。"
     },
     {
       "prior_id": "PRINCE_OF_WALES_STONE_FORT",
@@ -309,48 +308,66 @@
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "Old Calabar Duke Town英国贩奴商接触区",
       "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calabar-duke-town-1800"
+      ],
+      "notes": "阿塔克帕（Duke Town/New Town）政治和贸易活动落为独立陆地点。Eyamba为镇内家族及街区名，勿作英方辖区。"
     },
     {
       "prior_id": "B37-A-Z033",
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "Old Calabar Old Town当地商人政治活动",
       "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calabar-obutong-1800"
+      ],
+      "notes": "以奥布通旧镇东岸近似点取代覆盖其他城镇的旧框与其中心点。镇外河面事件与旧城居住史分别定位。"
     },
     {
       "prior_id": "B37-A-Z034",
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "Old Calabar Creek Town与英奴隶船商交往",
       "prior_record_kind": "diplomacy",
-      "resolution": "political_relation_evidence",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calabar-creek-town-1800"
+      ],
+      "notes": "以克里克镇（Ikot Etunko）镇址点取代旧框。原框偏东，实际聚落在卡拉巴尔河西北侧支汊沿岸。"
     },
     {
       "prior_id": "B37-A-Z038",
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "Ouidah原住王国及1727后Dahomey政治",
       "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "ouidah-dahomey-governor-1800"
+      ],
+      "notes": "以具名总督驻地接续达荷美在维达的行政。1727年攻陷萨维与其后港镇交割另列。"
     },
     {
       "prior_id": "B37-A-Z039",
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "Ouidah英国商馆与奴役交易",
       "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ouidah-fort-william-1800"
+      ],
+      "notes": "英国威廉堡在同一旧址接续。与维达城和达荷美总督分列。"
     },
     {
       "prior_id": "B37-A-Z040",
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "Ouidah奴役押运路线至海岸泻湖",
       "prior_record_kind": "displacement",
-      "resolution": "event_history",
-      "features_at_1800": []
+      "resolution": "fiscal_evidence",
+      "features_at_1800": [
+        "ouidah-dahomey-governor-1800"
+      ],
+      "notes": "旧运输矩形改用史料所见宗博吉泻湖关点。1800年的达荷美贸易管理背景由维达总督驻地说明。"
     },
     {
       "prior_id": "B37-C-Z010",
@@ -757,15 +774,19 @@
       "name_zh": "Churchill Sloop Cove英国船只冬季停泊地",
       "prior_record_kind": "trade_influence",
       "resolution": "network_evidence",
-      "features_at_1800": []
+      "features_at_1800": [],
+      "notes": "18世纪停泊与越冬的具名点已有依据。1799及1800同用途无可核的逐年证据，保留史址记录。"
     },
     {
       "prior_id": "B38-H-Z015",
       "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
       "name_zh": "Cree Dene Inuit在Churchill河岸长期利用区域",
       "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "churchill-upriver-company-post-1800"
+      ],
+      "notes": "旧大框改以已定位丘吉尔上游站的现场交易、供给与旅行记录接续。资料分别辨认克里、德内和部分卡里布因纽特访客。"
     },
     {
       "prior_id": "B38-H-Z017",
@@ -815,8 +836,11 @@
       "source_dataset": "data/eighteenth-century-b38-hudson-company.json",
       "name_zh": "Assiniboin原住民湖湾交易中介政治影响",
       "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "brandon-house-nakoda-trade-1800"
+      ],
+      "notes": "纳科达活动以1799和1800同址日记有据的布兰登一号商站显示。该点是可考交易节点，旧框遗漏了它，保留更广贸易网络的文字背景。"
     },
     {
       "prior_id": "B38-H-Z025",
@@ -1091,8 +1115,9 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "Sekondi附近Ahanta当地反欧洲据点行动背景",
       "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "event_history",
+      "features_at_1800": [],
+      "notes": "原框所引阿汉塔袭击荷方商馆发生于1694年，英方重返和当地交涉另按档案分期。未据单次攻击划定当地产生长期抵抗的地理范围。"
     },
     {
       "prior_id": "B39-A-Z013",
@@ -1241,24 +1266,33 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1750年英方在Whydah/Ouidah的贸易堡登记",
       "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ouidah-fort-william-1800"
+      ],
+      "notes": "英国威廉堡在同一旧址接续。与维达城和达荷美总督分列。"
     },
     {
       "prior_id": "B39-A-Z033",
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1727后Ouidah当地Dahomey王国政治控制",
       "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "ouidah-dahomey-governor-1800"
+      ],
+      "notes": "以具名总督驻地接续达荷美在维达的行政。1727年攻陷萨维与其后港镇交割另列。"
     },
     {
       "prior_id": "B39-A-Z034",
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "Ouidah经内陆到海岸的被奴役者转运",
       "prior_record_kind": "displacement",
-      "resolution": "event_history",
-      "features_at_1800": []
+      "resolution": "fiscal_evidence",
+      "features_at_1800": [
+        "ouidah-dahomey-governor-1800"
+      ],
+      "notes": "旧运输矩形改用史料所见宗博吉泻湖关点。1800年的达荷美贸易管理背景由维达总督驻地说明。"
     },
     {
       "prior_id": "B39-A-Z035",
@@ -1595,8 +1629,11 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "18世纪大阴郁沼泽逃奴与原住民避难社区",
       "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "great-dismal-swamp-maroon-region-1800"
+      ],
+      "notes": "以1770年的历史湿地地形定位马龙社群活动地。另列具名劳动营与排水渠，聚落具体位置未公开。"
     },
     {
       "prior_id": "B36-Z028",
@@ -7243,6 +7280,136 @@
       "resolution": "anchor",
       "features_at_1800": [
         "chandernagore-trading-town-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "GREAT_DISMAL_SWAMP_MAROON_REGION",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大迪斯默尔沼泽 · 马龙社群",
+      "prior_record_kind": "resistance",
+      "resolution": "continued",
+      "features_at_1800": [
+        "great-dismal-swamp-maroon-region-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "GREAT_DISMAL_WASHINGTON_DITCH",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大迪斯默尔沼泽 · 华盛顿排水渠",
+      "prior_record_kind": "company_post",
+      "resolution": "continued",
+      "features_at_1800": [
+        "great-dismal-washington-ditch-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "OUIDAH_DAHOMEY_GOVERNOR",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "维达 · 达荷美驻地总督",
+      "prior_record_kind": "diplomacy",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ouidah-dahomey-governor-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "OUIDAH_WILLIAM_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "维达 · 英方威廉堡",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ouidah-fort-william-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "OUIDAH_ZOBE_MARKET",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "维达 · 市场（今佐贝市场）",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ouidah-zobe-market-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "OUIDAH_ZOUNGBODJI_LAGOON_POST",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "维达 · 宗博吉泻湖关站",
+      "prior_record_kind": "administration",
+      "resolution": "fiscal_evidence",
+      "features_at_1800": [],
+      "notes": "具体关卡官员及活动见1747、1791与1797档案。1800年的达荷美贸易管理由维达总督驻地接续。"
+    },
+    {
+      "prior_id": "OUIDAH_PORTUGUESE_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "维达 · 葡方圣若昂堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ouidah-sao-joao-baptista-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "BRANDON_HOUSE_NAKODA_TRADE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布兰登一号商站 · 纳科达贸易",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "brandon-house-nakoda-trade-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "CALABAR_OLD_TOWN_OBUTONG",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "奥布通旧镇 · 罗宾约翰家族与埃菲克商贸",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calabar-obutong-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "CALABAR_DUKE_TOWN_ATAKPA",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "杜克镇（阿塔克帕） · 埃菲克河岸商贸",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calabar-duke-town-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "CALABAR_CREEK_TOWN_EFIK",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "克里克镇 · 埃菲克商贸与威利·奥内斯蒂",
+      "prior_record_kind": "trade_influence",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "calabar-creek-town-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_SEKONDI_ENGLISH_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "塞康第 · 英方旧堡",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "sekondi-english-fort-ruins-1800"
       ],
       "notes": "同一组坐标和稳定ID接续至1800年。"
     }

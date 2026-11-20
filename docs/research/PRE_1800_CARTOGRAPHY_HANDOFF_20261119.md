@@ -1,6 +1,6 @@
 # 1497—1799 年制图进展与待办｜主编 35 交接
 
-2026 年 11 月 20 日复核。此表统计截至第 5W 批。打开 [1799 年地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1799) 可以用「下一年」查看 1800 年的接续。
+2026 年 11 月 20 日复核。此表统计截至第 5X 批。打开 [1799 年地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1799) 可以用「下一年」查看 1800 年的接续。
 
 ## 当前盘点
 
@@ -8,10 +8,10 @@
 | --- | ---: | --- |
 | 1497—1599 | 原盘点识别为 0 条 | 补清点只有点位或概略范围的加来、图尔奈、帕莱，以及莱伊什／奥法利和芒斯特没收地。 |
 | 1600—1699 | 26 条 | 商站查万丹、苏拉特、胡格利，港堡查海岸角、丹吉尔，另查北美早期聚落。7 条默认隐藏的最大纸面特许范围另有档案。 |
-| 1700—1799 | 215 条，其中 107 条在 1799 年显示 | 优先核实 7 条世纪接续待核记录，再按地区处理其余旧框。 |
-| 合计 | **241 条** | [第 5D 批原始盘点 #457](https://github.com/1959124923wyz-sys/love-British-TV/pull/457) 共 403 条，至第 5W 批累计替换 162 条。 |
+| 1700—1799 | 197 条，其中 93 条在 1799 年显示 | 跨年待核旧记录已完成处置。继续分地区核查旧框与只有点位的历史对象。 |
+| 合计 | **223 条** | [第 5D 批原始盘点 #457](https://github.com/1959124923wyz-sys/love-British-TV/pull/457) 共 403 条，至第 5X 批累计替换 180 条。 |
 
-计数单位是地图记录。同一地点可有多个时段或多条旧记录。1497—1699 的矩形数沿用 #457 的桌面盘点，十八世纪使用第 5W 批数据重新计算。只有点位或尚未入库的范围仍待建立完整名录。
+计数单位是地图记录。同一地点可有多个时段或多条旧记录。1497—1699 的矩形数沿用 #457 的桌面盘点，十八世纪使用第 5X 批数据重新计算。只有点位或尚未入库的范围仍待建立完整名录。
 
 ## 补绘批次
 
@@ -36,7 +36,8 @@
 | 5T | [圣文森特、格林纳达、拿骚与圣乔治旧港](18C_VINCENT_GRENADA_NASSAU_BERMUDA_HANDOFF.md) | 14 | 251 | 120 | 14 |
 | 5U | [开曼、玛丽加朗特、埃格蒙特港、费拉约港与圣路易斯堡](18C_CAYMAN_MARIE_EGMONT_ELBA_SENEGAL_HANDOFF.md) | 5 | 246 | 119 | 14 |
 | 5V | [黄金海岸各堡与冈比亚詹姆斯岛](18C_WEST_AFRICAN_FORTS_AND_GAMBIA_HANDOFF.md) | 19 | 227 | 110 | 9 |
-| 5W | [亚洲港堡、若开边境与大河六族](18C_ASIA_INDIAN_OCEAN_AND_GRAND_RIVER_HANDOFF.md) | 12 | **215** | **107** | **7** |
+| 5W | [亚洲港堡、若开边境与大河六族](18C_ASIA_INDIAN_OCEAN_AND_GRAND_RIVER_HANDOFF.md) | 12 | 215 | 107 | 7 |
+| 5X | [维达、旧卡拉巴尔、哈德孙湾与大迪斯默尔沼泽](18C_ATLANTIC_AND_HUDSON_HANDOFF.md) | 18 | **197** | **93** | **0** |
 
 更早批次见 [十八世纪制图路线图](18C_CARTOGRAPHY_ROADMAP.md)。第 5J 批发布后，正式站桌面实点了拉茹瓦港 1758 年驱逐、马德堡 1774 年受降，并从 1799 年原位打开新不伦瑞克和爱德华王子岛的 1800 年档案。
 
@@ -55,7 +56,7 @@
 - [x] **第 5U 批补绘开曼、玛丽加朗特、埃格蒙特港、费拉约港与圣路易斯堡。** 加勒比及中南美、欧洲及地中海两组重点旧框已全部替换。西非圣路易斯堡原址和开曼、玛丽加朗特七处地理对象接至 1800 年。[第 5U 批交接](18C_CAYMAN_MARIE_EGMONT_ELBA_SENEGAL_HANDOFF.md)
 - [x] **第 5V 批补绘西非沿岸堡址。** 清完 11 条重点旧框，补记阿诺马布新旧两堡、迪克斯科夫、詹姆斯岛、埃尔米纳、阿汉塔驻点、奥图阿姆、普兰普兰、温内巴和阿达。10 处原位接续到 1800 年。[第 5V 批交接](18C_WEST_AFRICAN_FORTS_AND_GAMBIA_HANDOFF.md)
 - [x] **第 5W 批补绘亚洲／印度洋 6 条重点旧框和加拿大大河六族。** 区分港堡短期占领、商馆接管、边境交涉与六族土地文书。11 处接续到 1800 年。[第 5W 批交接](18C_ASIA_INDIAN_OCEAN_AND_GRAND_RIVER_HANDOFF.md)
-- [ ] **把 7 条跨年待核逐条清账。** 有接续证据时更新稳定 ID、去向与首期状态。只有贸易、政治关系或原住民活动证据的条目保留对应语义。对旧矩形与跨年待核重叠的条目，同时更新两处状态。
+- [x] **第 5X 批核完 7 条跨年待核记录。** 分绘维达和旧卡拉巴尔的政治、贸易与转运地理，核对哈德孙湾原住民主导的交易和大迪斯默尔沼泽马龙社群，按年代处置阿汉塔袭击旧框。[第 5X 批交接](18C_ATLANTIC_AND_HUDSON_HANDOFF.md)
 - [ ] **补建 16、17 世纪点位及缺绘名录。** 记录时间、主体、地点和证据，分别查清可配准史图、定界条款及地方驻点。18 世纪其余旧框也按证据分别保留事件、点、线或面。
 - [ ] **接续十九世纪研究归档。** [研究草稿 PR #463](https://github.com/1959124923wyz-sys/love-British-TV/pull/463) 为并行资料入库，待审内容含 59 个专题、150 个章节、1,980 条分章年表和 1,520 条史料索引。历史专题先核源档和候选地图 ID，地图发布状态查 [正式章节](../../data/chapters.json) 和 [专题索引](../../data/stories/index.json)。
 
@@ -63,19 +64,9 @@
 
 亚洲／印度洋最后 6 条已逐项替换，原档 ID、年代和新图见 [第 5W 批交接](18C_ASIA_INDIAN_OCEAN_AND_GRAND_RIVER_HANDOFF.md)。
 
-## 1799 → 1800 年尚待核对的 7 条
+## 1799 → 1800 年期末盘点
 
-[期末台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json) 已查 713 条期末记录，594 条关联到 1800 年公开几何。下表按原 ID 保留 7 条待核记录。原住民政权和活动范围需按其各自证据处理。
-
-| 记录 ID | 原档案名称 | 数据文件 |
-| --- | --- | --- |
-| `B37-A-Z033` | Old Calabar Old Town当地商人政治活动 | [eighteenth-century-b37-africa.json](../../data/eighteenth-century-b37-africa.json) |
-| `B37-A-Z038` | Ouidah原住王国及1727后Dahomey政治 | [eighteenth-century-b37-africa.json](../../data/eighteenth-century-b37-africa.json) |
-| `B38-H-Z015` | Cree Dene Inuit在Churchill河岸长期利用区域 | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
-| `B38-H-Z024` | Assiniboin原住民湖湾交易中介政治影响 | [eighteenth-century-b38-hudson-company.json](../../data/eighteenth-century-b38-hudson-company.json) |
-| `B39-A-Z012` | Sekondi附近Ahanta当地反欧洲据点行动背景 | [eighteenth-century-b39-gold-coast-forts.json](../../data/eighteenth-century-b39-gold-coast-forts.json) |
-| `B39-A-Z033` | 1727后Ouidah当地Dahomey王国政治控制 | [eighteenth-century-b39-gold-coast-forts.json](../../data/eighteenth-century-b39-gold-coast-forts.json) |
-| `B36-Z011` | 18世纪大阴郁沼泽逃奴与原住民避难社区 | [eighteenth-century-expansion-batch36-1700-1799.json](../../data/eighteenth-century-expansion-batch36-1700-1799.json) |
+[期末台账](../../research/continuity/1800-1819/1799_1800_SPATIAL_HANDOFF.json)已查 725 条期末记录，617 条关联到 1800 年公开几何。上一批列的 7 条待核已完成处置。新记录的史料、几何及仍待核的具体位置见 [第 5X 批交接](18C_ATLANTIC_AND_HUDSON_HANDOFF.md)。
 
 跨年工作同时查 [1699 → 1700 面记录](../../research/continuity/1700-1709/1699_1700_PUBLIC_LAYER_HANDOFF.json) 和 [点位对照](../../research/continuity/1700-1709/OLD_1699_SPATIAL_POINTS_CROSSWALK.json)。改动一个跨世纪记录时，按稳定 ID 对照两边的时间、几何与年代归属。
 
