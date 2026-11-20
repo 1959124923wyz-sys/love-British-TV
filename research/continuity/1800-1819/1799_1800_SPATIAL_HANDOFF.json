@@ -16,19 +16,19 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 692,
-    "linked_to_1800_public_geometry": 564,
+    "1799_prior_records_reviewed": 702,
+    "linked_to_1800_public_geometry": 580,
     "by_disposition": {
-      "anchor": 311,
+      "anchor": 317,
       "claim_evidence": 7,
-      "continued": 212,
+      "continued": 221,
       "event_history": 11,
       "fiscal_evidence": 35,
-      "needs_boundary_or_site_review": 14,
-      "network_evidence": 58,
+      "needs_boundary_or_site_review": 9,
+      "network_evidence": 57,
       "occupation": 16,
       "political_relation_evidence": 11,
-      "renewed_scope": 17
+      "renewed_scope": 18
     },
     "continue_in_original_public_layer": 1
   },
@@ -167,10 +167,11 @@
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "1757后阿诺马布Fort William新英堡",
       "prior_record_kind": "military",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
         "anomabu-fort-1800"
-      ]
+      ],
+      "notes": "原旧矩形从具名站址细化为主堡围墙，1800年沿用同一围墙与稳定ID。"
     },
     {
       "prior_id": "B37-A-Z007",
@@ -185,10 +186,11 @@
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "Dixcove Fort Metal Cross英方堡",
       "prior_record_kind": "military",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
         "dixcove-fort-1800"
-      ]
+      ],
+      "notes": "原旧矩形从具名站址细化为主堡围墙，1800年沿用同一围墙与稳定ID。"
     },
     {
       "prior_id": "B37-A-Z010",
@@ -260,8 +262,15 @@
       "source_dataset": "data/eighteenth-century-b37-africa.json",
       "name_zh": "Gold Coast英荷丹葡多国堡垒共存",
       "prior_record_kind": "foreign_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "elmina-saint-george-1800",
+        "elmina-st-jago-1800",
+        "ahanta-hollandia-fort-1800",
+        "accra-christiansborg-castle-1800",
+        "accra-james-fort-1800"
+      ],
+      "notes": "连续海岸旧框由独立堡址承接。葡萄牙创建的埃尔米纳已于1637年易手；荷、英、丹方据点分列，另记阿汉塔科尼实际据守。"
     },
     {
       "prior_id": "B37-A-Z028",
@@ -969,8 +978,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "奥图阿姆坦图姆奎里英商据点",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "gold-coast-tantumquery-fort-1800"
+      ],
+      "notes": "原矩形由具名地点接替，1800年原位接续。"
     },
     {
       "prior_id": "B39-A-Z002",
@@ -993,8 +1005,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1742年Prampram Fort Vernon英方小型贸易堡",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "gold-coast-fort-vernon-site-1800"
+      ],
+      "notes": "原矩形由具名地点接替，1800年原位接续。1800年展示重建前的旧堡原址。"
     },
     {
       "prior_id": "B39-A-Z005",
@@ -1017,8 +1032,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1750前后英国Winneba贸易堡所在沿岸",
       "prior_record_kind": "military",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "gold-coast-winneba-fort-1800"
+      ],
+      "notes": "原矩形由具名地点接替，1800年原位接续。"
     },
     {
       "prior_id": "B39-A-Z008",
@@ -1140,16 +1158,22 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1783年Ada丹麦Fort Kongenstein建堡",
       "prior_record_kind": "foreign_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ada-kongenstein-fort-1800"
+      ],
+      "notes": "丹麦商堡及其贸易史由具名地点承接。依据丹麦档案账簿，1800年原址延续。"
     },
     {
       "prior_id": "B39-A-Z022",
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "Volta河口Ada当地贸易与丹麦小堡关系",
       "prior_record_kind": "trade_influence",
-      "resolution": "network_evidence",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ada-kongenstein-fort-1800"
+      ],
+      "notes": "丹麦商堡及其贸易史由具名地点承接。依据丹麦档案账簿，1800年原址延续。"
     },
     {
       "prior_id": "B39-A-Z023",
@@ -1186,10 +1210,11 @@
       "source_dataset": "data/eighteenth-century-b39-gold-coast-forts.json",
       "name_zh": "1757后Anomabu Fort William英堡完工",
       "prior_record_kind": "military",
-      "resolution": "anchor",
+      "resolution": "continued",
       "features_at_1800": [
         "anomabu-fort-1800"
-      ]
+      ],
+      "notes": "原旧矩形从具名站址细化为主堡围墙，1800年沿用同一围墙与稳定ID。"
     },
     {
       "prior_id": "B39-A-Z031",
@@ -6975,6 +7000,116 @@
         "marie-galante-grand-bourg-1800"
       ],
       "notes": "按同一稳定ID及地理形状进入1800年。"
+    },
+    {
+      "prior_id": "ELMINA_SAINT_GEORGE_MAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "埃尔米纳 · 圣乔治堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "elmina-saint-george-1800"
+      ],
+      "notes": "以同一组坐标和稳定ID延续至1800年。"
+    },
+    {
+      "prior_id": "ELMINA_ST_JAGO_MAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "埃尔米纳 · 圣亚戈山堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "elmina-st-jago-1800"
+      ],
+      "notes": "以同一组坐标和稳定ID延续至1800年。"
+    },
+    {
+      "prior_id": "AHANTA_FREDERICKSBURG_MAIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿汉塔王子镇 · 荷兰堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "continued",
+      "features_at_1800": [
+        "ahanta-hollandia-fort-1800"
+      ],
+      "notes": "以同一组坐标和稳定ID延续至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_ANOMABU_FORT_WILLIAM",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿诺马布 · 英方新堡（后称威廉堡）",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "anomabu-fort-1800"
+      ],
+      "notes": "以同一组坐标和稳定ID延续至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_DIXCOVE_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "迪克斯科夫 · 英方堡垒",
+      "prior_record_kind": "military",
+      "resolution": "continued",
+      "features_at_1800": [
+        "dixcove-fort-1800"
+      ],
+      "notes": "以同一组坐标和稳定ID延续至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_TANTUMQUERY_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "奥图阿姆 · 坦图姆奎里英商堡",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "gold-coast-tantumquery-fort-1800"
+      ],
+      "notes": "以同一组坐标和稳定ID延续至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_PRAMPRAM_FORT_VERNON",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "普兰普兰 · 弗农堡",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "gold-coast-fort-vernon-site-1800"
+      ],
+      "notes": "以同一组坐标和稳定ID延续至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_WINNEBA_FORT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "温内巴 · 英方奴隶贸易堡",
+      "prior_record_kind": "company_post",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "gold-coast-winneba-fort-1800"
+      ],
+      "notes": "以同一组坐标和稳定ID延续至1800年。"
+    },
+    {
+      "prior_id": "GAMBIA_JAMES_FORT_CORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "冈比亚河 · 詹姆斯堡主堡",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "continued",
+      "features_at_1800": [
+        "gambia-james-fort-ruins-1800"
+      ],
+      "notes": "以同一组坐标和稳定ID延续至1800年。"
+    },
+    {
+      "prior_id": "GOLD_COAST_ADA_KONGENSTEIN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿达福阿 · 孔根斯滕堡",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "ada-kongenstein-fort-1800"
+      ],
+      "notes": "以同一组坐标和稳定ID延续至1800年。"
     }
   ]
 }
