@@ -16,15 +16,15 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 649,
-    "linked_to_1800_public_geometry": 515,
+    "1799_prior_records_reviewed": 656,
+    "linked_to_1800_public_geometry": 525,
     "by_disposition": {
-      "anchor": 302,
+      "anchor": 308,
       "claim_evidence": 7,
-      "continued": 178,
+      "continued": 182,
       "event_history": 11,
       "fiscal_evidence": 35,
-      "needs_boundary_or_site_review": 19,
+      "needs_boundary_or_site_review": 16,
       "network_evidence": 59,
       "occupation": 8,
       "political_relation_evidence": 11,
@@ -33,6 +33,83 @@
     "continue_in_original_public_layer": 1
   },
   "records": [
+    {
+      "prior_id": "DARTMOUTH_SECOND_TOWN_PLOT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "达特茅斯 · 1786年重划街廓",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "dartmouth-second-town-plot-1800"
+      ],
+      "notes": "由同一条1800年公开记录接续，稳定ID和地理形状一致。"
+    },
+    {
+      "prior_id": "DARTMOUTH_QUAKER_HOUSE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "达特茅斯 · 贵格会旧宅",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "dartmouth-quaker-house-1800"
+      ],
+      "notes": "由同一条1800年公开记录接续，稳定ID和地理形状一致。"
+    },
+    {
+      "prior_id": "SHELBURNE_WATERFRONT_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "谢尔本 · 罗斯韦港早期街廓",
+      "prior_record_kind": "settlement",
+      "resolution": "continued",
+      "features_at_1800": [
+        "shelburne-waterfront-town-1800"
+      ],
+      "notes": "由同一条1800年公开记录接续，稳定ID和地理形状一致。"
+    },
+    {
+      "prior_id": "SHELBURNE_ROSEWAY_BLACK_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "谢尔本 · 罗斯韦河黑人镇",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "shelburne-roseway-black-town-1800"
+      ],
+      "notes": "由同一条1800年公开记录接续，稳定ID和地理形状一致。"
+    },
+    {
+      "prior_id": "BIRCHTOWN_BLACK_LOYALIST_COMMUNITY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "伯奇敦 · 黑人保皇派社区",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "birchtown-black-loyalist-community-1800"
+      ],
+      "notes": "由同一条1800年公开记录接续，稳定ID和地理形状一致。"
+    },
+    {
+      "prior_id": "DIGBY_LOYALIST_WATERFRONT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "迪格比 · 康韦旧港",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "digby-loyalist-waterfront-1800"
+      ],
+      "notes": "由同一条1800年公开记录接续，稳定ID和地理形状一致。"
+    },
+    {
+      "prior_id": "BRINLEY_TOWN_BLACK_LOYALIST_COMMUNITY",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "布林利镇 · 康韦黑人保皇派社区",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "brinley-town-black-loyalist-community-1800"
+      ],
+      "notes": "由同一条1800年公开记录接续，稳定ID和地理形状一致。"
+    },
     {
       "prior_id": "CHURCHILL_UPRIVER_COMPANY_POST",
       "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
@@ -1459,8 +1536,11 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1750年代达特茅斯殖民港市",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "dartmouth-second-town-plot-1800"
+      ],
+      "notes": "旧矩形由具名港镇档案接替，沿原址接续。"
     },
     {
       "prior_id": "B36-Z011",
@@ -1537,16 +1617,22 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1783后谢尔本保皇派移民定居港",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "continued",
+      "features_at_1800": [
+        "shelburne-waterfront-town-1800"
+      ],
+      "notes": "旧矩形由具名港镇档案接替，沿原址接续。"
     },
     {
       "prior_id": "B36-Z036",
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1783后迪格比保皇派定居港",
       "prior_record_kind": "administration",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "anchor",
+      "features_at_1800": [
+        "digby-loyalist-waterfront-1800"
+      ],
+      "notes": "旧矩形由具名港镇档案接替，沿原址接续。"
     },
     {
       "prior_id": "B36-Z037",
