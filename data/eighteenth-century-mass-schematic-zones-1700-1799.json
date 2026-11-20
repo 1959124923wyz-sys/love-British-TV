@@ -11728,6 +11728,199 @@
   ],
   "regional_sites": [
     {
+      "id": "SAINT_DOMINGUE_PAP_SHIP_SEIZURES",
+      "stable_id": "saint-domingue-pap-ship-seizures",
+      "title": "太子港 · 殖民港锚地",
+      "kind": "conflict_damage",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "太子港锚地 · 英军接管在港船货",
+          "note": "6月英军夺港后，福特呈报港内船只清单。清单分列22艘载货船、16艘压舱船和7艘待修旧船。载货船装有糖、咖啡、棉花和靛蓝。"
+        }
+      ],
+      "source_urls": [
+        "https://www.thegazette.co.uk/London/issue/13684/data.pdf",
+        "https://gallica.bnf.fr/ark:/12148/btv1b8446483p"
+      ],
+      "geometry_method": "Placed on the port marchand roadstead identified by Phelipeau. The naval return covers the harbour as a whole.",
+      "geometry_precision": "named_place_anchor",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.34779,
+          18.54932
+        ]
+      },
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 300
+    },
+    {
+      "id": "SAINT_DOMINGUE_BIZOTON_1794",
+      "stable_id": "saint-domingue-bizoton-1794",
+      "title": "太子港西南 · 比佐通",
+      "kind": "battle",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "比佐通 · 英军夺取共和派岸堡",
+          "note": "6月1日英军舰炮轰击比佐通堡。约翰·怀特部登陆攻入，太子港西南炮位失守。受伤的共和派将领蒙布兰随后与两名法国特派员撤出首府。"
+        }
+      ],
+      "source_urls": [
+        "https://www.thegazette.co.uk/London/issue/13684/data.pdf",
+        "https://archives.bpl.org/repositories/2/archival_objects/75779",
+        "https://www.openstreetmap.org/node/613526386"
+      ],
+      "geometry_method": "Named Bizoton locality. The fort-site manuscript is catalogued for 1803; the precise 1794 wall placement requires separate confirmation.",
+      "geometry_precision": "named_place_anchor",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.380824,
+          18.53039
+        ]
+      },
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 900
+    },
+    {
+      "id": "SAINT_DOMINGUE_MOLE_POWDER_MAGAZINE",
+      "stable_id": "saint-domingue-mole-powder-magazine",
+      "title": "圣尼古拉斯角 · 大火药库",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797,
+          "title": "大火药库 · 英军增建军营",
+          "note": "英军驻扎期间，在法国火药库上加建木层作为士兵营房，并在围墙开窗。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1798,
+          "title": "大火药库 · 英军撤出驻港工事",
+          "note": "10月撤出圣尼古拉斯角后，英方结束在港驻兵。",
+          "kind": "resistance"
+        }
+      ],
+      "source_urls": [
+        "https://static1.squarespace.com/static/53348503e4b09be6564e601a/t/5679bbada128e661e5c47e5c/1450818477864/BULLETIN%2BDE%2BL%27ISPAN%2BNo%2B16%2BWEB.pdf",
+        "https://rasanblaj.ht/ardouin/etudes-3/",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Approximate site from the ISPAN field mission map, tied to Vallière and Vieux-Quartier using p. 8.",
+      "geometry_precision": "named_place_anchor",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.3684,
+          19.81384
+        ]
+      },
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 140
+    },
+    {
+      "id": "SAINT_DOMINGUE_ST_MARC_1790S",
+      "stable_id": "saint-domingue-st-marc-1790s",
+      "title": "圣多明各 · 圣马克",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797,
+          "title": "圣马克 · 英军与保王派据港",
+          "note": "1793年末，英国部队接管圣马克。此后该港成为英国与保王派在阿蒂博尼特沿岸的据点。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1798,
+          "title": "圣马克 · 5月英军撤离",
+          "note": "4月30日撤离约定包括圣马克。英军5月撤出，向圣尼古拉斯角集中。",
+          "kind": "resistance"
+        }
+      ],
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358",
+        "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/96644/dcasslem.pdf?sequence=1",
+        "https://rasanblaj.ht/ardouin/etudes-3/",
+        "https://www.openstreetmap.org/node/613007120"
+      ],
+      "geometry_method": "Named town anchor at Saint-Marc; the exact embarkation site is unresolved.",
+      "geometry_precision": "named_place_anchor",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.6995,
+          19.102
+        ]
+      },
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 1400
+    },
+    {
+      "id": "SAINT_DOMINGUE_ARCAHAIE_1790S",
+      "stable_id": "saint-domingue-arcahaie-1790s",
+      "title": "圣多明各 · 阿尔卡艾",
+      "kind": "military",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797,
+          "title": "阿尔卡艾 · 英军接管沿海驻点",
+          "note": "英国部队于1793年扩大沿海占领，控制阿尔卡艾。1794年，英军在附近锚地集结，准备进攻太子港。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1798,
+          "title": "阿尔卡艾 · 5月7日英军撤离",
+          "note": "托马斯·梅特兰下令于5月7日撤出阿尔卡艾。英军装载军用物资、撤离居民及英国商货后离开。",
+          "kind": "resistance"
+        }
+      ],
+      "source_urls": [
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358",
+        "https://www.thegazette.co.uk/London/issue/13684/data.pdf",
+        "https://rasanblaj.ht/ardouin/etudes-3/",
+        "https://upload.wikimedia.org/wikipedia/commons/8/84/Chronological_History_Of_The_West_Indies_Vol.3_%28IA_in.ernet.dli.2015.47208%29.pdf",
+        "https://mapcarta.com/fr/19807854"
+      ],
+      "geometry_method": "Named coastal town anchor. The anchorage used by the 1794 force is a separate maritime locality.",
+      "geometry_precision": "named_place_anchor",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.5118,
+          18.7702
+        ]
+      },
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 1250
+    },
+    {
       "id": "DARTMOUTH_QUAKER_HOUSE",
       "title": "达特茅斯 · 贵格会旧宅",
       "stable_id": "dartmouth-quaker-house",
@@ -31599,6 +31792,580 @@
     }
   ],
   "regional_zones": [
+    {
+      "id": "SAINT_DOMINGUE_JEREMIE_OLD_TOWN",
+      "stable_id": "saint-domingue-jeremie-old-town",
+      "title": "圣多明各 · 热雷米旧港镇",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1793,
+          "title": "热雷米 · 英军登陆与保王派交港",
+          "note": "9月19日，英国部队在热雷米登陆。当地保王派种植园主要求英方出兵维护奴役制度，热雷米成为英军进入圣多明各的最早据点之一。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1797,
+          "title": "热雷米 · 英军驻港与种植园奴役",
+          "note": "英军与当地保王派维持港口控制。当地种植园主依赖被奴役者生产，英国占领使种植园奴役得以延续。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1798,
+          "title": "热雷米 · 8月英军撤离、里戈部接收",
+          "note": "8月13日订立撤离协定，英军当月撤出热雷米。安德烈·里戈部随后进入港镇。",
+          "kind": "resistance"
+        }
+      ],
+      "source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b8442523h",
+        "https://www.haitidocs.org/doc/ispan-bulletin-2011-07?lang=fr",
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358",
+        "https://www.jstor.org/stable/25612824",
+        "https://rasanblaj.ht/ardouin/etudes-3/",
+        "https://www.marxists.org/history/haiti/haitiherhistory.pdf",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Traced the occupied-era street-block footprint and the Rue de la Marine waterfront from BnF GED-3758, aligned approximately using the Place d’Armes / Trois-Dumas and La Pointe with ISPAN No. 26 and OpenStreetMap.",
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.111065,
+              18.638391
+            ],
+            [
+              -74.111963,
+              18.639957
+            ],
+            [
+              -74.113068,
+              18.641833
+            ],
+            [
+              -74.113177,
+              18.642784
+            ],
+            [
+              -74.115244,
+              18.642949
+            ],
+            [
+              -74.115147,
+              18.644368
+            ],
+            [
+              -74.115047,
+              18.64544
+            ],
+            [
+              -74.115354,
+              18.645872
+            ],
+            [
+              -74.116198,
+              18.647036
+            ],
+            [
+              -74.116299,
+              18.647672
+            ],
+            [
+              -74.116098,
+              18.649293
+            ],
+            [
+              -74.11539,
+              18.649827
+            ],
+            [
+              -74.114711,
+              18.649734
+            ],
+            [
+              -74.114284,
+              18.649293
+            ],
+            [
+              -74.113824,
+              18.648965
+            ],
+            [
+              -74.112989,
+              18.649029
+            ],
+            [
+              -74.112127,
+              18.648084
+            ],
+            [
+              -74.111518,
+              18.647294
+            ],
+            [
+              -74.111045,
+              18.646598
+            ],
+            [
+              -74.110688,
+              18.646236
+            ],
+            [
+              -74.11111,
+              18.645953
+            ],
+            [
+              -74.111811,
+              18.645502
+            ],
+            [
+              -74.112226,
+              18.644768
+            ],
+            [
+              -74.112287,
+              18.644175
+            ],
+            [
+              -74.112087,
+              18.642724
+            ],
+            [
+              -74.111717,
+              18.641459
+            ],
+            [
+              -74.11108,
+              18.640069
+            ],
+            [
+              -74.110324,
+              18.63865
+            ],
+            [
+              -74.111065,
+              18.638391
+            ]
+          ]
+        ]
+      },
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 180,
+      "bbox": [
+        -74.116299,
+        18.638391,
+        -74.110324,
+        18.649827
+      ]
+    },
+    {
+      "id": "SAINT_DOMINGUE_MOLE_OLD_TOWN",
+      "stable_id": "saint-domingue-mole-old-town",
+      "title": "圣多明各 · 圣尼古拉斯角旧镇",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1793,
+          "title": "圣尼古拉斯角 · 英军接收港镇",
+          "note": "9月22日英方接收圣尼古拉斯角。港湾随后成为英国舰队驻泊和对圣多明各西岸调兵的基地。"
+        },
+        {
+          "start_year": 1794,
+          "end_year": 1797,
+          "title": "圣尼古拉斯角 · 英军扩建驻港工事",
+          "note": "驻军在既有法国堡垒之外修建多处土垒和岗哨，并增设营房。英军从这里调兵攻取太子港。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1798,
+          "title": "圣尼古拉斯角 · 10月英军撤离",
+          "note": "8月商定撤军。10月初图桑·卢维杜尔接管圣尼古拉斯角，英军在圣多明各的占领结束。",
+          "kind": "resistance"
+        }
+      ],
+      "source_urls": [
+        "https://www.loc.gov/item/74692186/",
+        "https://static1.squarespace.com/static/53348503e4b09be6564e601a/t/5679bbada128e661e5c47e5c/1450818477864/BULLETIN%2BDE%2BL%27ISPAN%2BNo%2B16%2BWEB.pdf",
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358",
+        "https://www.thegazette.co.uk/London/issue/13684/data.pdf",
+        "https://rasanblaj.ht/ardouin/etudes-3/",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Digitized the street grid from the ANOM town plan reproduced in ISPAN No. 16, p. 3. Registered the town plan approximately using the central town blocks and the headland at Orléans identified by the mission map on p. 8.",
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.372184,
+              19.807757
+            ],
+            [
+              -73.374007,
+              19.806398
+            ],
+            [
+              -73.375289,
+              19.805507
+            ],
+            [
+              -73.37605,
+              19.804322
+            ],
+            [
+              -73.376692,
+              19.803727
+            ],
+            [
+              -73.377642,
+              19.804633
+            ],
+            [
+              -73.378517,
+              19.805696
+            ],
+            [
+              -73.37946,
+              19.806656
+            ],
+            [
+              -73.379971,
+              19.807603
+            ],
+            [
+              -73.378956,
+              19.808437
+            ],
+            [
+              -73.37755,
+              19.809125
+            ],
+            [
+              -73.376691,
+              19.808746
+            ],
+            [
+              -73.3758,
+              19.808391
+            ],
+            [
+              -73.375004,
+              19.807963
+            ],
+            [
+              -73.37428,
+              19.807678
+            ],
+            [
+              -73.373508,
+              19.808125
+            ],
+            [
+              -73.372811,
+              19.808415
+            ],
+            [
+              -73.372184,
+              19.807757
+            ]
+          ]
+        ]
+      },
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 155,
+      "bbox": [
+        -73.379971,
+        19.803727,
+        -73.372184,
+        19.809125
+      ]
+    },
+    {
+      "id": "SAINT_DOMINGUE_MOLE_ORLEANS",
+      "stable_id": "saint-domingue-mole-orleans",
+      "title": "圣尼古拉斯角 · 奥尔良炮台",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1793,
+          "end_year": 1797,
+          "title": "奥尔良炮台 · 英军驻守岬角",
+          "note": "法方在岬角修筑的奥尔良炮台可与瓦利耶尔炮台和旧军营的火炮交叉射击。英军1793年接手港镇后利用原有防线。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1798,
+          "title": "奥尔良炮台 · 圣尼古拉斯角脱离英军控制",
+          "note": "英方撤守圣尼古拉斯角后，图桑·卢维杜尔接管港镇及其防御设施。",
+          "kind": "resistance"
+        }
+      ],
+      "source_urls": [
+        "https://static1.squarespace.com/static/53348503e4b09be6564e601a/t/5679bbada128e661e5c47e5c/1450818477864/BULLETIN%2BDE%2BL%27ISPAN%2BNo%2B16%2BWEB.pdf",
+        "https://www.persee.fr/doc/outre_0300-9513_1962_num_49_176_1358",
+        "https://rasanblaj.ht/ardouin/etudes-3/",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Approximate footprint reconstructed from the 1773 design reproduced in ISPAN No. 16, p. 5. Scale and alignment use the headland and battery location shown by the ISPAN field mission (pp. 3 and 8). The landward entrance retains its recessed trace; present ruins reflect later bombardment.",
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.37993,
+              19.80804
+            ],
+            [
+              -73.37964,
+              19.80848
+            ],
+            [
+              -73.37916,
+              19.80873
+            ],
+            [
+              -73.3788,
+              19.80858
+            ],
+            [
+              -73.3789,
+              19.80803
+            ],
+            [
+              -73.37922,
+              19.80813
+            ],
+            [
+              -73.37934,
+              19.80797
+            ],
+            [
+              -73.37948,
+              19.8081
+            ],
+            [
+              -73.37993,
+              19.80804
+            ]
+          ]
+        ]
+      },
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 90,
+      "bbox": [
+        -73.37993,
+        19.80797,
+        -73.3788,
+        19.80873
+      ]
+    },
+    {
+      "id": "SAINT_DOMINGUE_PORT_AU_PRINCE_OLD_TOWN",
+      "stable_id": "saint-domingue-port-au-prince-old-town",
+      "title": "圣多明各 · 太子港旧城",
+      "kind": "wartime_occupation",
+      "periods": [
+        {
+          "start_year": 1794,
+          "end_year": 1794,
+          "title": "太子港 · 英军攻城并扣取港中船货",
+          "note": "6月4日约翰·怀特部与约翰·福特舰队夺取太子港。英军报告列出从城内军械库和炮台缴获的武器，并另列港中被接管的船只和货载。"
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1797,
+          "title": "太子港 · 英军驻城与奴役经济",
+          "note": "英军和保王派驻守殖民首府。英国占领区继续经营依赖被奴役者劳动的种植园。同一时期，共和派部队继续攻击外围驻点。"
+        },
+        {
+          "start_year": 1798,
+          "end_year": 1798,
+          "title": "太子港 · 5月英军撤离",
+          "note": "托马斯·梅特兰与图桑·卢维杜尔代表4月30日订立撤军约定。英军5月撤出，图桑于5月15日进入太子港。",
+          "kind": "resistance"
+        }
+      ],
+      "source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b8446483p",
+        "https://institutfrancaishaiti.org/RevueConjonction/Conjonction48.pdf",
+        "https://www.thegazette.co.uk/London/issue/13684/data.pdf",
+        "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/96644/dcasslem.pdf?sequence=1",
+        "https://www.jstor.org/stable/25612824",
+        "https://rasanblaj.ht/ardouin/etudes-3/",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "geometry_method": "Digitized built street blocks and the historical waterfront on Phelipeau’s 1785 BnF plan GED-7627. Fitted the surviving Grand’Rue alignment referenced by Devauges using the northern Tiremasse and southern Oswald Durand cross streets. The filled waterfront is mapped as it appears on the historical plan.",
+      "geometry_precision": "source_backed_historical_outline",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -72.335574,
+              18.552922
+            ],
+            [
+              -72.336484,
+              18.549347
+            ],
+            [
+              -72.338709,
+              18.549806
+            ],
+            [
+              -72.339435,
+              18.546846
+            ],
+            [
+              -72.338175,
+              18.546349
+            ],
+            [
+              -72.338598,
+              18.544758
+            ],
+            [
+              -72.339706,
+              18.544939
+            ],
+            [
+              -72.339982,
+              18.543815
+            ],
+            [
+              -72.340527,
+              18.543872
+            ],
+            [
+              -72.341028,
+              18.54183
+            ],
+            [
+              -72.340697,
+              18.54157
+            ],
+            [
+              -72.342177,
+              18.535405
+            ],
+            [
+              -72.346424,
+              18.536342
+            ],
+            [
+              -72.346838,
+              18.534655
+            ],
+            [
+              -72.34832,
+              18.534919
+            ],
+            [
+              -72.347926,
+              18.536392
+            ],
+            [
+              -72.349491,
+              18.536987
+            ],
+            [
+              -72.348957,
+              18.538898
+            ],
+            [
+              -72.348728,
+              18.540501
+            ],
+            [
+              -72.348155,
+              18.542029
+            ],
+            [
+              -72.347727,
+              18.54337
+            ],
+            [
+              -72.347244,
+              18.544668
+            ],
+            [
+              -72.347141,
+              18.545893
+            ],
+            [
+              -72.346728,
+              18.547175
+            ],
+            [
+              -72.346255,
+              18.548163
+            ],
+            [
+              -72.345875,
+              18.549577
+            ],
+            [
+              -72.345185,
+              18.550642
+            ],
+            [
+              -72.344827,
+              18.551967
+            ],
+            [
+              -72.344304,
+              18.553162
+            ],
+            [
+              -72.344455,
+              18.554288
+            ],
+            [
+              -72.344029,
+              18.554818
+            ],
+            [
+              -72.342006,
+              18.554341
+            ],
+            [
+              -72.335574,
+              18.552922
+            ]
+          ]
+        ]
+      },
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "area_sqkm": null,
+      "exclude_from_territorial_area_totals": true,
+      "position_uncertainty_m": 190,
+      "bbox": [
+        -72.349491,
+        18.534655,
+        -72.335574,
+        18.554818
+      ]
+    },
     {
       "id": "DARTMOUTH_ORIGINAL_TOWN_PLOT",
       "title": "达特茅斯 · 初期街廓",

@@ -406,6 +406,36 @@ for(const id of [22,23,24,25,26,27,28,30,31]){
  a(atlantic(batch37Africa.zones.find(x=>x.id==='B37-A-Z'+ref).superseded_by));
  a(atlantic(batch37Africa.sites.find(x=>x.id==='B37-A-P'+ref).superseded_by));
 }
+const saintDominguePorts=[
+ ['SAINT_DOMINGUE_JEREMIE_OLD_TOWN',1793,/8月英军撤离/],
+ ['SAINT_DOMINGUE_MOLE_OLD_TOWN',1793,/10月英军撤离/],
+ ['SAINT_DOMINGUE_PORT_AU_PRINCE_OLD_TOWN',1794,/5月英军撤离/],
+];
+for(const [id,arrival,withdrawal] of saintDominguePorts){
+ const harbor=atlantic(id);
+ a.equal(harbor.geometry.type,'Polygon',id);
+ a.equal(stageAt(id,arrival-1),undefined,id);
+ a.equal(stageAt(id,arrival).kind || harbor.kind,'wartime_occupation',id);
+ a.match(stageAt(id,1798).title,withdrawal,id);
+ a.equal(stageAt(id,1798).kind,'resistance',id);
+ a.equal(stageAt(id,1799),undefined,id);
+}
+const orleans=atlantic('SAINT_DOMINGUE_MOLE_ORLEANS');
+a.equal(orleans.geometry.type,'Polygon');
+a.equal(stageAt(orleans.id,1798).kind,'resistance');
+a.match(stageAt('SAINT_DOMINGUE_PAP_SHIP_SEIZURES',1794).note,/22艘载货船、16艘压舱船和7艘/);
+a.equal(stageAt('SAINT_DOMINGUE_PAP_SHIP_SEIZURES',1795),undefined);
+const oldSaintDomingue=[
+ ['eighteenth-century-expansion-batch36-1700-1799.json',
+  ['B36-Z115','B36-Z116','B36-Z117','B36-Z118','B36-P115','B36-P116','B36-P117']],
+ ['eighteenth-century-b37-caribbean.json',
+  ['B37-C-Z024','B37-C-Z025','B37-C-Z026','B37-C-Z027','B37-C-P024','B37-C-P025','B37-C-P026']],
+ ['eighteenth-century-b39-caribbean-1759-1763.json',['B39-C-Z045']],
+];
+for(const [file,ids] of oldSaintDomingue){
+ const {zones,sites}=JSON.parse(read('data/'+file));
+ for(const id of ids) a(atlantic([...zones,...sites].find(row=>row.id===id)?.superseded_by),id);
+}
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));
 a(html.includes('js/eighteenth-mass-spatial.js?v='));
