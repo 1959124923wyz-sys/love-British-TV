@@ -1065,8 +1065,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          102.26,
-          -3.79
+          102.262071,
+          -3.7769334
         ]
       },
       "properties": {
@@ -1075,18 +1075,20 @@
         "display_through_year": 1699,
         "display_kind": "local_governance",
         "label_type": "公司地方据点/治理核心 · 非现代城界",
-        "description": "Fort York据点由公司经营，并非苏门答腊西岸全部成为英国领土",
-        "summary_zh": "Fort York据点由公司经营，并非苏门答腊西岸全部成为英国领土",
+        "description": "英格兰东印度公司经营本古鲁河口附近的约克堡，从驻地安排胡椒收购和装运。",
+        "summary_zh": "英格兰东印度公司经营本古鲁河口附近的约克堡，从驻地安排胡椒收购和装运。",
         "scope_zh": "公司有据商馆、军事及治理活动的具名地理锚点",
         "actor_zh": "英格兰东印度公司及活动所在亚洲或其他地方政权",
         "source_urls": [
-          "https://searcharchives.bl.uk/catalog/032-000173250"
+          "https://searcharchives.bl.uk/catalog/032-000173250",
+          "https://budaya.data.kemdikbud.go.id/cagarbudaya/objek/KB004087",
+          "https://ejournal.brin.go.id/berkalaarkeologi/article/download/5195/3818/15078"
         ],
         "related_event_ids": [
           "1680S-E033"
         ],
         "map_layer": "territory_reference_not_political_control",
-        "mapping_method": "event-registered named modern place coordinates; fixed screen-pixel dashed halo; NOT historical extent, impact buffer, georeferenced territory or voyage track",
+        "mapping_method": "Named York Fort site coordinates from Indonesian heritage register KB004087, matched to archaeological identification of building fragments",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
         "territorial_claim": false,
@@ -1097,7 +1099,10 @@
         "episode_basis": "specific_related_event_id_and_historical_institutional_register",
         "related_story_ids": [
           "E6-T12"
-        ]
+        ],
+        "geometry_precision": "named_place_anchor",
+        "position_uncertainty_m": 35,
+        "stable_id": "bencoolen-york-fort"
       }
     },
     {

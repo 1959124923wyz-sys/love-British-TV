@@ -4,8 +4,8 @@
   "scope": "逐项对照1699年旧区域记录和1700年实际启用的同形参考、岛屿外廓和具名地点。地域、法律声索类别及挂接的地方地点均保留独立身份。",
   "counts": {
     "legacy_geometry_retained": 16,
-    "legacy_replacement_envelope": 2,
-    "named_sites": 3,
+    "legacy_replacement_envelope": 1,
+    "named_sites": 4,
     "no_area_inherited": 1,
     "redrawn_land": 5
   },
@@ -325,18 +325,14 @@
     },
     {
       "previous_id": "claim-eic-bencoolen-1685",
-      "display_at_1700": "legacy_replacement_envelope",
+      "display_at_1700": "named_sites",
       "records_at_1700": [
         {
-          "source_dataset": "data/eighteenth-century-b37-india-ocean.json",
-          "id": "B37-I-Z037"
-        },
-        {
-          "source_dataset": "research/continuity/1700-1709/REFERENCE_CONTROL_CORES_1700_1709.geojson",
-          "id": "C1700-ENGLISH-BENCOOLEN"
+          "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+          "id": "BENCOOLEN_YORK_FORT_18C"
         }
       ],
-      "notes": "港口商站通用旧框已退出。旧约克堡仍需历史地图与考古确认原地；马尔伯勒堡是后建站址。"
+      "notes": "约克堡遗址由印尼国家文化遗产登记定位，1700年接续17世纪据点。马尔伯勒堡是1714年另址兴建的新堡。"
     }
   ]
 }

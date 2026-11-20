@@ -16,19 +16,19 @@
     "needs_boundary_or_site_review": "有旧区记录；当前尚待核1800年的线、点或退出日期"
   },
   "counts": {
-    "1799_prior_records_reviewed": 702,
-    "linked_to_1800_public_geometry": 580,
+    "1799_prior_records_reviewed": 713,
+    "linked_to_1800_public_geometry": 594,
     "by_disposition": {
-      "anchor": 317,
+      "anchor": 324,
       "claim_evidence": 7,
-      "continued": 221,
+      "continued": 225,
       "event_history": 11,
       "fiscal_evidence": 35,
-      "needs_boundary_or_site_review": 9,
+      "needs_boundary_or_site_review": 7,
       "network_evidence": 57,
       "occupation": 16,
       "political_relation_evidence": 11,
-      "renewed_scope": 18
+      "renewed_scope": 20
     },
     "continue_in_original_public_layer": 1
   },
@@ -931,8 +931,13 @@
       "source_dataset": "data/eighteenth-century-b38-india-mysore.json",
       "name_zh": "1784年Burma征服Arakan与英属Chittagong边境",
       "prior_record_kind": "foreign_occupation",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "mrauk-u-konbaung-seat-1800",
+        "naf-arakan-chittagong-frontier-1800",
+        "cox-bazar-arakanese-resettlement-1800"
+      ],
+      "notes": "妙乌驻治、纳夫河接触地带与吉大港南部难民安置分列。"
     },
     {
       "prior_id": "B38-I-Z046",
@@ -940,7 +945,11 @@
       "name_zh": "1784后Chittagong与Arakan边界英国公司警戒",
       "prior_record_kind": "trade_influence",
       "resolution": "network_evidence",
-      "features_at_1800": []
+      "features_at_1800": [
+        "naf-arakan-chittagong-frontier-1800",
+        "chittagong-revenue-seat-1800"
+      ],
+      "notes": "记载1786年加强拉穆哨防。当时防务交涉跨河发生；旧框接续到纳夫河和吉大港征收驻地。"
     },
     {
       "prior_id": "B39-C-Z029",
@@ -1688,8 +1697,13 @@
       "source_dataset": "data/eighteenth-century-expansion-batch36-1700-1799.json",
       "name_zh": "1784后莫霍克社群迁往加拿大大河流域",
       "prior_record_kind": "resistance",
-      "resolution": "needs_boundary_or_site_review",
-      "features_at_1800": []
+      "resolution": "renewed_scope",
+      "features_at_1800": [
+        "grand-river-haldimand-headwaters-1800",
+        "grand-river-simcoe-patent-1800",
+        "grand-river-mohawk-village-1800"
+      ],
+      "notes": "源头地带权利争议、1793年专利状和莫霍克村分列，在1800年分别原位接续。"
     },
     {
       "prior_id": "B36-Z048",
@@ -7110,6 +7124,127 @@
         "ada-kongenstein-fort-1800"
       ],
       "notes": "以同一组坐标和稳定ID延续至1800年。"
+    },
+    {
+      "prior_id": "ARAKAN_MRAUK_U_KONBAUNG_SEAT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "妙乌 · 贡榜王朝在阿拉干驻治",
+      "prior_record_kind": "foreign_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "mrauk-u-konbaung-seat-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "ARAKAN_AMARAPURA_MAHAMUNI_INSTALLATION",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿马拉普拉北侧 · 安置被掠马哈穆尼像",
+      "prior_record_kind": "conflict_damage",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "amarapura-mahamuni-installation-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "ARAKAN_NAF_FRONTIER_REFERENCE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "纳夫河 · 若开与英属吉大港的接触地带",
+      "prior_record_kind": "diplomacy",
+      "resolution": "continued",
+      "features_at_1800": [
+        "naf-arakan-chittagong-frontier-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "ARAKAN_COX_BAZAR_REFUGEE_SETTLEMENT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "吉大港南部 · 今科克斯巴扎尔一带安置阿拉干难民",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "cox-bazar-arakanese-resettlement-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "GRAND_RIVER_HALDIMAND_HEADWATERS",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大河六族 · 源头土地范围争议",
+      "prior_record_kind": "paper_claim",
+      "resolution": "continued",
+      "features_at_1800": [
+        "grand-river-haldimand-headwaters-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "GRAND_RIVER_SIMCOE_PATENT",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大河六族 · 西姆科土地专利状",
+      "prior_record_kind": "diplomacy",
+      "resolution": "continued",
+      "features_at_1800": [
+        "grand-river-simcoe-patent-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "GRAND_RIVER_MOHAWK_VILLAGE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "大河 · 莫霍克村与礼拜堂",
+      "prior_record_kind": "settlement",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "grand-river-mohawk-village-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "ARCOT_FORT_CORE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿尔果德 · 旧主堡",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "continued",
+      "features_at_1800": [
+        "arcot-fort-ruins-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "ARCOT_DELHI_GATE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "阿尔果德 · 德里门旧防地点",
+      "prior_record_kind": "military",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "arcot-delhi-gate-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "CHANDERNAGORE_FORT_ORLEANS_SITE",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "昌德纳戈尔 · 奥尔良堡旧址",
+      "prior_record_kind": "historic_ruins",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "chandernagore-fort-orleans-ruins-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
+    },
+    {
+      "prior_id": "CHANDERNAGORE_TRADING_TOWN",
+      "source_dataset": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "name_zh": "昌德纳戈尔 · 胡格利河畔商馆城镇",
+      "prior_record_kind": "wartime_occupation",
+      "resolution": "anchor",
+      "features_at_1800": [
+        "chandernagore-trading-town-1800"
+      ],
+      "notes": "同一组坐标和稳定ID接续至1800年。"
     }
   ]
 }
