@@ -673,6 +673,58 @@ for(const id of ['CAYMAN_ISLANDS_18C','CAYMAN_HOGSTY_BAY','CAYMAN_FORT_GEORGE',
  a.deepEqual(next.geometry,record.geometry);
 }
 a.equal(successors.find(f=>f.id==='senegal-ndar-saint-louis-fort-1800').properties.year_stages[1].start_year,1809);
+const westAfricanReplacements = {
+ 'eighteenth-century-b37-africa.json': {
+  'B37-A-Z003':'GOLD_COAST_ANOMABU_FORT_CHARLES', 'B37-A-Z006':'GOLD_COAST_ANOMABU_FORT_WILLIAM',
+  'B37-A-Z008':'GOLD_COAST_DIXCOVE_FORT', 'B37-A-Z018':'ELMINA_SAINT_GEORGE_MAIN',
+  'B37-A-Z019':'GAMBIA_JAMES_FORT_CORE', 'B37-A-Z020':'GAMBIA_JAMES_FORT_CORE',
+ },
+ 'eighteenth-century-b39-gold-coast-forts.json': {
+  'B39-A-Z001':'GOLD_COAST_TANTUMQUERY_FORT', 'B39-A-Z004':'GOLD_COAST_PRAMPRAM_FORT_VERNON',
+  'B39-A-Z007':'GOLD_COAST_WINNEBA_FORT', 'B39-A-Z021':'GOLD_COAST_ADA_KONGENSTEIN',
+  'B39-A-Z026':'GOLD_COAST_ANOMABU_FORT_CHARLES', 'B39-A-Z029':'GOLD_COAST_ANOMABU_FORT_WILLIAM',
+ },
+};
+for(const [filename,aliases] of Object.entries(westAfricanReplacements)) {
+ const {zones,sites}=JSON.parse(read('data/'+filename));
+ for(const [legacy,current] of Object.entries(aliases)) {
+  a.equal(zones.find(x=>x.id===legacy).superseded_by,current);
+  a(atlantic(current),current);
+  for(const marker of sites.filter(x=>x.linked_zone_id===legacy))a(atlantic(marker.superseded_by),marker.id);
+ }
+}
+a.equal(z('GAMBIA_JAMES').superseded_by,'GAMBIA_JAMES_FORT_CORE');
+a.equal(islandPhase('GAMBIA_JAMES_FORT_SITE',1710).kind,'historic_ruins');
+a.equal(islandPhase('GAMBIA_JAMES_FORT_SITE',1727),undefined);
+a.match(islandPhase('GAMBIA_JAMES_FORT_CORE',1765).note,/纽米.*1768年/);
+a.match(islandPhase('GAMBIA_JAMES_FORT_CORE',1779).note,/2月11日.*摧毁/);
+a.equal(islandPhase('GAMBIA_JAMES_FORT_CORE',1783).kind,'historic_ruins');
+a(atlantic('GAMBIA_JAMES_FORT_CORE').bbox.every((c,i)=>i%2===1 || c>-16.37));
+a.match(islandPhase('GOLD_COAST_ANOMABU_FORT_CHARLES',1701).note,/焚毁.*房屋/);
+a.equal(islandPhase('GOLD_COAST_ANOMABU_FORT_CHARLES',1731).kind,'historic_ruins');
+a.equal(islandPhase('GOLD_COAST_ANOMABU_FORT_WILLIAM',1756),undefined);
+a.match(islandPhase('GOLD_COAST_ANOMABU_NEW_FORT_CONSTRUCTION',1755).note,/被奴役者/);
+a.match(islandPhase('GOLD_COAST_DIXCOVE_FORT',1756).note,/沃森.*关押/);
+a.equal(islandPhase('GOLD_COAST_DIXCOVE_FORT',1755),undefined);
+a.equal(islandPhase('AHANTA_FREDERICKSBURG_EARLY',1717).kind,'resistance');
+a.match(islandPhase('AHANTA_FREDERICKSBURG_MAIN',1799).note,/禁闭被奴役者/);
+a.equal(islandPhase('GOLD_COAST_ADA_KONGENSTEIN',1782),undefined);
+a.match(islandPhase('GOLD_COAST_ADA_KONGENSTEIN',1799).note,/1803年起生效/);
+a.equal(islandPhase('GOLD_COAST_PRAMPRAM_FORT_VERNON',1799).kind,'historic_ruins');
+const westAfricanSeams = ['ELMINA_SAINT_GEORGE_MAIN','ELMINA_ST_JAGO_MAIN','AHANTA_FREDERICKSBURG_MAIN',
+ 'GOLD_COAST_ANOMABU_FORT_WILLIAM','GOLD_COAST_DIXCOVE_FORT','GOLD_COAST_TANTUMQUERY_FORT',
+ 'GOLD_COAST_PRAMPRAM_FORT_VERNON','GOLD_COAST_WINNEBA_FORT','GAMBIA_JAMES_FORT_CORE','GOLD_COAST_ADA_KONGENSTEIN'];
+for(const id of westAfricanSeams) {
+ const early=atlantic(id),late=successors.find(f=>f.id===early.cross_century_feature_id);
+ a.equal(early.periods.at(-1).end_year,1799);
+ a.equal(late.properties.start_year,1800);
+ a.equal(late.properties.stable_id,early.stable_id);
+ a.equal(late.properties.dash_only,true);
+ a.deepEqual(early.geometry,late.geometry);
+}
+a.match(successors.find(f=>f.id==='gambia-james-fort-ruins-1800').properties.year_stages[0].title,/遗迹/);
+a.match(successors.find(f=>f.id==='gold-coast-fort-vernon-site-1800').properties.year_stages[0].title,/重建前/);
+a.match(successors.find(f=>f.id==='gold-coast-winneba-fort-1800').properties.year_stages[1].summary_zh,/炸毁.*炮击/);
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));
 a(html.includes('js/eighteenth-mass-spatial.js?v='));
