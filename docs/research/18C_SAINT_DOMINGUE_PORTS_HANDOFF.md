@@ -25,6 +25,12 @@
 
 1798 年图层展示当年撤军和英国失去据点。太子港、圣马克、阿尔卡艾在 5 月撤军，热雷米在 8 月，圣尼古拉斯角在 10 月。热雷米的接收与完全撤出日期在不同叙事有差异，读者档案使用月份。三个港镇的英占阶段均截至 1797 年底，1798 年图形使用抵抗接收阶段颜色。九处新增记录均在 1799 年前结束本专题分期。跨 1799→1800 年台账仍有 16 条待核。 [阿尔杜安第三卷第十五、十六章](https://rasanblaj.ht/ardouin/etudes-3/) · [莱热，第 93 页](https://www.marxists.org/history/haiti/haitiherhistory.pdf)
 
+## 桌面验收
+
+在含 PR #471 的 `bf27fba` 主分支上试合并 `52bb9d6`，无冲突。以 1440 × 900 Chrome 实际点开三港进驻和 1798 年撤离、奥尔良炮台与火药库、比佐通、圣马克、阿尔卡艾及太子港扣船，共 12 次，核对档案标题和史料入口。扣船档案可打开《伦敦公报》第 13684 号，1799 年无本批占领、撤离或扣船记录续留。
+
+严格空间审计、1699→1700 与 1799→1800 接续、十八世纪图层、公共文案静态核查、9 个桌面样本和 1497—1799 年全部 303 个年份的读者文案与无障碍属性扫描通过。桌面测试使用本地缓存的同版 Leaflet 和 TopoJSON 依赖。
+
 ## 接续
 
 马提尼克先核 1762 年两份总投降与堡垒日期，之后核 1794 年圣路易堡、波旁堡与港城的各自交接。英国皇家收藏 RCIN 733041、733042 与法国海外档案馆 CP 1PL 2227 是可用图源。先复核已有的 1800 年沿岸几何，再处理 1799→1800 年同形接续。 [1762 年围城图](https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-fort-royal-1762-fort-de-france-martinique-14deg3632n-61deg0424w) · [1762 年堡城图](https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-fort-royal-1762-fort-de-france-martinique-14deg3632n-61deg0424w) · [1794 年图档索引](https://recherche-anom.culture.gouv.fr/data/files/anom.diffusion/images/PDF/FRANOM_18001_IR.pdf) · [全世纪交接](PRE_1800_CARTOGRAPHY_HANDOFF_20261119.md)
