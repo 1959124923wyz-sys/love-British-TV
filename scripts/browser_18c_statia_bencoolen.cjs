@@ -246,21 +246,24 @@ const topics = [
     await page.waitForFunction(() => window.eighteenthBatch37Spatial?.getAudit().loaded &&
       window.eighteenthBatch39Spatial?.getAudit().loaded &&
       window.eighteenthMassSpatial?.getAudit().loaded);
-    for (const [year, earlySite, rebuiltOutline] of [
-      [1718, true, false], [1719, true, false], [1720, false, false],
-      [1721, true, false], [1722, true, false], [1723, false, true]
+    for (const [year, yorkSite, earlySite, rebuiltOutline] of [
+      [1700, true, false, false], [1714, true, true, false], [1718, true, true, false],
+      [1719, false, true, false], [1720, false, false, false],
+      [1721, false, true, false], [1722, false, true, false], [1723, false, false, true]
     ]) {
       await page.evaluate(year => window.atlasStoryBridge.setYear(year), year);
       await yearIs(year);
       const state = await page.evaluate(() => {
         const mass = window.eighteenthMassSpatial.getAudit();
         const legacy = window.eighteenthBatch37Spatial.getAudit();
-        return [mass.activeRegionalSites.includes('BENCOOLEN_MARLBOROUGH_EARLY'),
+        return [mass.activeRegionalSites.includes('BENCOOLEN_YORK_FORT_18C'),
+          mass.activeRegionalSites.includes('BENCOOLEN_MARLBOROUGH_EARLY'),
           mass.activeRegionalZones.includes('BENCOOLEN_MARLBOROUGH_18C'),
+          legacy.activeZoneIds.includes('B37-I-Z037'), legacy.activeSiteIds.includes('B37-I-P037'),
           legacy.activeZoneIds.includes('B37-I-Z038'), legacy.activeSiteIds.includes('B37-I-P038'),
           window.eighteenthSpatial.getAudit().activeAreas.includes('BENCOOLEN')];
       });
-      assert.deepEqual(state, [earlySite, rebuiltOutline, false, false, false], 'Bencoolen in ' + year);
+      assert.deepEqual(state, [yorkSite, earlySite, rebuiltOutline, false, false, false, false, false], 'Bencoolen in ' + year);
     }
     for (const [year, present] of [[1721, false], [1722, true]]) {
       await page.evaluate(year => window.atlasStoryBridge.setYear(year), year);
@@ -268,10 +271,15 @@ const topics = [
       const state = await page.evaluate(() => {
         const africa = window.eighteenthBatch37Spatial.getAudit();
         const coast = window.eighteenthBatch39Spatial.getAudit();
-        return [africa.activeZoneIds.includes('B37-A-Z009'), africa.activeSiteIds.includes('B37-A-P008'),
-          coast.activeZoneIds.includes('B39-A-Z001'), coast.activeSiteIds.includes('B39-A-P001')];
+        const mass = window.eighteenthMassSpatial.getAudit();
+        return {
+          dixcove: mass.activeRegionalSites.includes('GOLD_COAST_DIXCOVE_FORT_EARLY'),
+          tantumquery: mass.activeRegionalSites.includes('GOLD_COAST_TANTUMQUERY_FORT'),
+          legacy: africa.activeZoneIds.includes('B37-A-Z009') || africa.activeSiteIds.includes('B37-A-P008') ||
+            coast.activeZoneIds.includes('B39-A-Z001') || coast.activeSiteIds.includes('B39-A-P001')
+        };
       });
-      assert.deepEqual(state, [false, true, present, present], 'Gold Coast records in ' + year);
+      assert.deepEqual(state, { dixcove: true, tantumquery: present, legacy: false }, 'Gold Coast records in ' + year);
     }
     await visit('?year=1781');
     assert(await page.evaluate(() => window.atlasStoryBridge.eventById('E18C-STATIA-1781-PETITION') === null));
