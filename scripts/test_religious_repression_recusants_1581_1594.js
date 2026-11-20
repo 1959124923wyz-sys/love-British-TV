@@ -15,7 +15,7 @@ assert(story.id===sid&&story.sections.length>=10&&body.length>=4200);
 assert(story.sources.length>=13&&story.sources.every(x=>x.url.startsWith('https://')&&x.access));
 const keys=new Set(story.sources.map(s=>s.id));assert(story.sections.every(s=>s.paragraphs.length>=2&&s.source_keys.length>=2&&s.source_keys.every(id=>keys.has(id))));
 assert.deepEqual(meta.event_ids,ids);assert.deepEqual(story.related_event_ids,ids);
-const inline=[...body.matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]\n]+\]\]/g)].map(x=>x[1]);
+const inline=[...body.matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]\n]{1,90}\]\]/g)].map(x=>x[1]);
 assert.deepEqual(inline,ids,'All nine legal / judicial events must have a clickable story link in correct order');
 const docs=new Map([...a.events,...b.events].map(e=>[e.id,e]));
 for(const id of ids){
