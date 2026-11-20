@@ -581,6 +581,62 @@ for(const [file,ids] of [
  const {zones,sites}=JSON.parse(read('data/'+file));
  for(const id of ids) a(atlantic([...zones,...sites].find(row=>row.id===id)?.superseded_by),id);
 }
+const lateCaribbeanAndNassau=[
+ ['ST_VINCENT_MAIN_ISLAND_18C','st-vincent-continuity-1800','Polygon'],
+ ['GRENADINES_LAND_ISLANDS_18C','grenadines-continuity-1800','MultiPolygon'],
+ ['KINGSTOWN_HISTORIC_TOWN','kingstown-historic-port-1800','Polygon'],
+ ['GRENADA_ST_GEORGES_PORT','grenada-st-georges-port-1800','Polygon'],
+ ['GRENADA_FORT_GEORGE','grenada-fort-george-1800','Polygon'],
+ ['NASSAU_HISTORIC_PORT_TOWN','nassau-port-1800','Polygon'],
+ ['NASSAU_OLD_FORT','nassau-old-fort-1800','Polygon'],
+ ['NASSAU_FORT_MONTAGU','nassau-fort-montagu-1800','Polygon'],
+ ['NASSAU_FORT_FINCASTLE','nassau-fort-fincastle-1800','Polygon'],
+ ['BERMUDA_ST_GEORGE_HISTORIC_PORT','bermuda-st-george-historic-port-1800','Point'],
+];
+for(const [id,target,type] of lateCaribbeanAndNassau){
+ const item=atlantic(id),next=late(target);
+ a.equal(item.geometry.type,type,id);
+ a.equal(item.uncertain_line_dashed,true,id);
+ a.equal(item.exclude_from_territorial_area_totals,true,id);
+ a.equal(item.cross_century_feature_id,target,id);
+ a(stageAt(id,1799),id);
+ a.deepEqual(item.geometry,next.geometry,id);
+ a.equal(item.stable_id,next.properties.stable_id,id);
+ a.equal(next.properties.start_year,1800,id);
+ a.equal(next.properties.dash_only,true,id);
+}
+for(const [id,year,pattern] of [
+ ['NASSAU_HISTORIC_PORT_TOWN',1782,/5月8日/],
+ ['NASSAU_HISTORIC_PORT_TOWN',1783,/4月18日/],
+ ['KINGSTOWN_HISTORIC_TOWN',1783,/和约约定交还/],
+ ['KINGSTOWN_HISTORIC_TOWN',1784,/英属殖民政府恢复/],
+ ['GRENADA_ST_GEORGES_PORT',1795,/费东起义期间/],
+ ['GRENADA_ST_GEORGES_PORT',1796,/增援到达/],
+ ['BALICEAUX_GARIFUNA_DETENTION_ISLAND',1796,/强制拘留/],
+ ['BALICEAUX_GARIFUNA_DETENTION_ISLAND',1797,/押送幸存者/],
+ ['BERMUDA_ST_GEORGE_HISTORIC_PORT',1797,/设立市政机构/],
+]){
+ a.match(stageAt(id,year).title,pattern,id);
+}
+const vincentTreaty=atlantic('ST_VINCENT_CARIB_TREATY_DIVIDE');
+a.equal(vincentTreaty.geometry.type,'LineString');
+a.equal(vincentTreaty.territorial_control_verified,false);
+a.equal(vincentTreaty.uncertain_line_dashed,true);
+a(stageAt(vincentTreaty.id,1773));
+a.equal(stageAt(vincentTreaty.id,1772),undefined);
+a.equal(stageAt(vincentTreaty.id,1779),undefined);
+a.equal(stageAt('BALICEAUX_GARIFUNA_DETENTION_ISLAND',1798),undefined);
+a.match(stageAt('NASSAU_HISTORIC_PORT_TOWN',1783).note,/9月3日/);
+for(const [file,ids] of [
+ ['eighteenth-century-mass-schematic-zones-1700-1799.json',['ST_VINCENT','GRENADINES','NASSAU_PORT','KINGSTOWN']],
+ ['eighteenth-century-expansion-batch36-1700-1799.json',['B36-Z113','B36-P113','B36-Z125','B36-P125']],
+ ['eighteenth-century-b37-caribbean.json',[18,19,30,36,37].flatMap(n=>['Z','P'].map(kind=>'B37-C-'+kind+'0'+n))],
+ ['eighteenth-century-b39-caribbean-1759-1763.json',
+  ['B39-C-Z026','B39-C-P026','B39-C-Z027','B39-C-P027','B39-C-Z028','B39-C-Z029']],
+]){
+ const {zones,sites}=JSON.parse(read('data/'+file));
+ for(const id of ids) a(atlantic([...zones,...sites].find(row=>row.id===id)?.superseded_by),id);
+}
 a.equal((app.match(/window\.eighteenthMassSpatial\?\.render\?\.\(\);/g)||[]).length,4);
 a(read('js/eighteenth-overlap-right-dossier.js').includes("'.atlas-18c-mass-zone','.atlas-18c-mass-core'"));
 a(html.includes('js/eighteenth-mass-spatial.js?v='));
