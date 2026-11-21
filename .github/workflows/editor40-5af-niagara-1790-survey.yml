@@ -1,0 +1,43 @@
+name: Editor40 5AF Niagara 1790 source-map desktop QA
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'js/eighteenth-editor40-5af-niagara-survey.js'
+      - 'data/eighteenth-century-editor40-5af-niagara-1790-survey.json'
+      - 'scripts/test_editor40_5af_niagara_survey.js'
+      - 'scripts/browser_editor40_5af_niagara_survey.cjs'
+      - '.github/workflows/editor40-5af-niagara-1790-survey.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'js/eighteenth-editor40-5af-niagara-survey.js'
+      - 'data/eighteenth-century-editor40-5af-niagara-1790-survey.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  dated-archival-map:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript syntax
+        run: node --check js/eighteenth-editor40-5af-niagara-survey.js
+      - name: 1790 archival GIS source and strictly non-territorial map metadata
+        run: node scripts/test_editor40_5af_niagara_survey.js
+      - name: 5AE polygon and historic point promotion compatibility
+        run: |
+          node scripts/test_editor39_5ae_source_areas.js
+          node scripts/test_editor39_5ae_point_area_promotions.js
+      - name: Political spatial semantics
+        run: python3 scripts/audit_spatial_semantics.py --strict
+      - run: npm install --no-save --package-lock=false playwright@1.58.2
+      - run: npx playwright install --with-deps chromium
+      - name: Real Chromium 1790 source overlay and year rollovers
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-5af-http.log 2>&1 &
+          node scripts/browser_editor40_5af_niagara_survey.cjs
