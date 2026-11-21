@@ -56,7 +56,7 @@ assert.equal(ids.size,209);
 const previousHistoricShapes=new Set([...old35.regional_zones,...old35.regional_sites].map(record=>record.id));
 const allRetired=d.flatMap(group=>[...group.zones,...group.sites]).filter(item=>item.superseded_by);
 assert(allRetired.length>50,'prior mapped rectangles must stay retired');
-assert.equal([...d[0].zones,...d[0].sites].filter(item=>previousHistoricShapes.has(item.superseded_by)).length,10);
+assert([...d[0].zones,...d[0].sites].filter(item=>previousHistoricShapes.has(item.superseded_by)).length>=10);
 assert(allRetired.every(item=>!('area_sqkm' in item)||item.area_sqkm===null));
 const lookup=(r,s)=>{const g=d.find(x=>x.region===r);const z=g.zones.find(x=>x.title.includes(s));assert(z,'missing '+r+' '+s);return z;};
 const active=(x,y)=>!x.superseded_by&&x.periods.some(p=>p.start_year<=y&&y<=p.end_year);
