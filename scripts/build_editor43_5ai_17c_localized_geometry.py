@@ -53,7 +53,7 @@ CLAIM_POINTS={
  "claim-eic-surat-factory-1612":("1610S-E026","苏拉特商馆｜莫卧儿治下英商据点"),
  "claim-eic-hugli-bengal-1651":("1650S-E033","胡格利英商馆｜1651后莫卧儿治下"),
  "claim-eic-calcutta-sutanati-1690":("1690S-E135","苏塔努蒂三村｜1690年代商站"),
- "claim-eic-bencoolen-1685":("1680S-E033","明古伦约克堡｜1687年建堡"),
+ "claim-eic-bencoolen-1685":("1680S-E033","明古伦公司商站｜1685年起，1687年兴建约克堡"),
  "claim-eic-bantam-1602":("1620S-E024","万丹商馆｜英荷商馆竞争")
 }
 assert len(COASTS)==4 and len(CLAIM_POINTS)==11 and len(STUDY_IDS)==12
