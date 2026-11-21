@@ -1,0 +1,52 @@
+name: Editor42 5AH archival geometry and annual desktop QA
+on:
+  push:
+    branches:
+      - cartography/editor42-5ah-carolina-17c-rectangles
+  pull_request:
+    paths:
+      - 'data/eighteenth-century-mass-schematic-zones-1700-1799.json'
+      - 'data/eighteenth-century-editor42-5ah-carolina-localized-sites.json'
+      - 'docs/research/17C_5AH_EXACT_26_RECTANGLE_SOURCE_INVENTORY.json'
+      - 'docs/research/18C_5AH_*'
+      - 'scripts/test_editor42_5ah_carolina_17c_inventory.js'
+      - 'scripts/browser_editor42_5ah_carolina.py'
+      - 'scripts/test_editor41_5ag_localized_areas.js'
+      - '.github/workflows/editor42-5ah-validation.yml'
+permissions:
+  contents: read
+jobs:
+  source-and-timeline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Source identity, archival continuity, data geometry and all 165 candidates
+        run: |
+          node scripts/test_18c_mass_spatial_81_42.js
+          node scripts/test_editor23_expansive_17c_claims.js
+          node scripts/test_editor41_5ag_localized_areas.js
+          node scripts/test_editor42_5ah_carolina_17c_inventory.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m py_compile scripts/browser_editor42_5ah_carolina.py
+      - name: Check 1799 to 1800 century continuity
+        run: python3 scripts/test_century_seam_handoffs.py
+  real-desktop-years:
+    needs: source-and-timeline
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Verify 1700-1712 real Chrome rendering and 5AG/1799 regression
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas42-5ah-server.log 2>&1 &
+          python3 scripts/browser_editor42_5ah_carolina.py
