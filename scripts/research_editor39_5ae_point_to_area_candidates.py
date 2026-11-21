@@ -61,8 +61,22 @@ for p in sites:
    "bbox_km":[round(width,2),round(height,2)],"source_urls":f.get("source_urls",[])[:2]})
  nearby.sort(key=lambda z:z["nearest_bbox_km"])
  if nearby:all_matches.append({**p,"candidate_polygons":nearby[:4]})
+# Derive verified promotions from the authoritative crosswalk rather than resetting
+# manually reviewed candidates to zero whenever this research utility is run.
+promotions=J("data/eighteenth-century-editor39-5ae-point-area-promotions.json")
+verified_ids={r["id"] for r in promotions["point_markers_replaced_by_existing_polygons"]}
+listed_ids={x["id"] for x in all_matches}
+assert verified_ids<=listed_ids,("promoted source sites missing",verified_ids-listed_ids)
+for item in all_matches:
+ item["promotion_status"]=(
+  "promoted_existing_surveyed_polygon" if item["id"] in verified_ids
+  else "requires_further_historical_scope_review"
+ )
 payload={"schema":"editor39_5ae_site_point_to_area_candidates_v1",
- "site_count":len(sites),"confirmed_upgrades":0,
+ "site_count":len(sites),
+ "confirmed_upgrades":len(verified_ids),
+ "confirmed_upgrade_ids":sorted(verified_ids),
+ "pending_upgrades":len(all_matches)-len(verified_ids),
  "manual_verification_required":True,
  "candidate_site_count":len(all_matches),"candidates":all_matches}
 out=root/"docs/research/18C_5AE_POINT_AREA_CANDIDATES.json"

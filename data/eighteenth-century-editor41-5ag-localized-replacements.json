@@ -1,0 +1,147 @@
+{
+  "schema": "atlas-18c-5ag-localized-archival-source-replacements-v1",
+  "batch": "5AG",
+  "based_on": "5AE's 3 unresolved historic legal/military envelopes",
+  "area_aggregation_forbidden": true,
+  "all_original_records_preserved": true,
+  "not_claimed_as_full_historic_control_boundary": true,
+  "retired_legacy_rectangles": [
+    {
+      "id": "GREAT_LAKES_POSTS",
+      "original_years": [
+        1783,
+        1795
+      ],
+      "primary_cross_reference": "FORT_NIAGARA_MAIN",
+      "status": "retired_broad_vicinity_envelope",
+      "spatial_interpretation": "Only the separately sourced individual fort footprints represent occupied garrisons. The 1783 US legal transfer and continued British military occupation must remain separate.",
+      "mapped_footprints": [
+        {
+          "id": "FORT_NIAGARA_MAIN",
+          "start_year": 1783,
+          "end_year": 1795,
+          "kind": "British_garrison_post",
+          "source": "https://npgallery.nps.gov/GetAsset/a177b303-6c93-45ef-9412-2bb19b34ec6d"
+        },
+        {
+          "id": "DETROIT_FORT_LERNOULT",
+          "start_year": 1783,
+          "end_year": 1795,
+          "kind": "British_garrison_post",
+          "source": "https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/fort-lernoult"
+        },
+        {
+          "id": "MACKINAC_ISLAND_FORT",
+          "start_year": 1783,
+          "end_year": 1795,
+          "kind": "British_garrison_post",
+          "source": "https://www.mackinacparks.com/explore/history/fort-mackinac-history/"
+        }
+      ],
+      "additional_historically_attested_posts_needing_individual_footprints": [
+        {
+          "name": "Fort Miamis (Maumee River)",
+          "historical_years": [
+            1794,
+            1795
+          ],
+          "site_role": "post_occupied",
+          "source": "https://www.nps.gov/articles/000/historical-overview-of-fallen-timbers-battlefield-and-fort-miamis.htm"
+        },
+        {
+          "name": "Fort Ontario / Oswego",
+          "historical_years": [
+            1783,
+            1795
+          ],
+          "site_role": "needs_garrison_and_wall_chronology_check",
+          "source": "https://www.govinfo.gov/content/pkg/GOVPUB-I29-PURL-gpo124132/pdf/GOVPUB-I29-PURL-gpo124132.pdf"
+        },
+        {
+          "name": "Fort Oswegatchie",
+          "historical_years": [
+            1783,
+            1795
+          ],
+          "site_role": "needs_exact_fortification_and_garrison_survey",
+          "source": "https://www.govinfo.gov/content/pkg/GOVPUB-I29-PURL-gpo124132/pdf/GOVPUB-I29-PURL-gpo124132.pdf"
+        }
+      ],
+      "all_years_have_existing_source_footprints": true
+    },
+    {
+      "id": "NSW_CROWN_CLAIM",
+      "original_years": [
+        1788,
+        1799
+      ],
+      "primary_cross_reference": "WARRANE_SYDNEY_COVE",
+      "status": "retired_continent_scaled_paper_claim_rectangle",
+      "spatial_interpretation": "Preserve original Crown legal statement, but show individual dated surveyed camp or farm lots and continuous named settlement site. Do not shade the colony-wide paper claim as a 1788-1799 land occupation.",
+      "continuous_named_site": {
+        "id": "WARRANE_SYDNEY_COVE",
+        "start_year": 1788,
+        "end_year": 1799,
+        "source": "https://www.nma.gov.au/defining-moments/resources/first-fleet"
+      },
+      "mapped_local_footprints": [
+        {
+          "id": "SYDNEY_MARINE_CAMP_1788",
+          "start_year": 1788,
+          "end_year": 1788,
+          "source": "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08",
+          "kind": "marines_camp"
+        },
+        {
+          "id": "SYDNEY_CONVICT_CAMPS_1788",
+          "start_year": 1788,
+          "end_year": 1788,
+          "source": "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08",
+          "kind": "convict_encampment"
+        },
+        {
+          "id": "SYDNEY_GOVERNOR_GARDEN_1788",
+          "start_year": 1788,
+          "end_year": 1788,
+          "source": "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08",
+          "kind": "governor_camp"
+        },
+        {
+          "id": "PARRAMATTA_CONVICT_HUT_ROWS",
+          "start_year": 1790,
+          "end_year": 1799,
+          "source": "https://www.cambridge.org/core/journals/antiquaries-journal/article/commemoration-and-improvement-parramatta-st-johns-cemetery-new-south-wales-in-its-context-1788c-1840/0620D3DABFF886C60D0A976898CF3292",
+          "kind": "settlement_hut_rows"
+        },
+        {
+          "id": "PARRAMATTA_GOVERNMENT_FARM_1792",
+          "start_year": 1792,
+          "end_year": 1799,
+          "source": "https://www.cambridge.org/core/journals/antiquaries-journal/article/commemoration-and-improvement-parramatta-st-johns-cemetery-new-south-wales-in-its-context-1788c-1840/0620D3DABFF886C60D0A976898CF3292",
+          "kind": "government_farm"
+        }
+      ],
+      "evidence_grant_parcels_1794_only": [
+        "HAWKESBURY_1794_GRANT_39",
+        "HAWKESBURY_1794_GRANT_50",
+        "HAWKESBURY_1794_GRANT_68"
+      ],
+      "additional_land_record_source": "https://mhnsw.au/guides/land-grants-guide-1788-1856/",
+      "australian_indigenous_sovereignty_not_assigned_to_britain": true,
+      "has_years_with_site_only_no_surveyed_polygon": true
+    }
+  ],
+  "still_unresolved": [
+    {
+      "id": "CAROLINA_PROPRIETORS",
+      "start_year": 1700,
+      "end_year": 1711,
+      "why": "1712-and-later North Carolina geographic polygon series is not a contemporaneous 1700-1711 landed/proprietary grant boundary; do not move later administrative polygons back in time.",
+      "source": "https://archives.ncdcr.gov/researchers/collections/maps",
+      "pending": "same-period colonial land survey and actual coastal local settlements, as separate layers"
+    }
+  ],
+  "remaining_old_reference_count": 1,
+  "remaining_old_1799_count": 0,
+  "release_guard": "Validate every ID, all source years, original fields, and not use source polygons as area totals before publishing"
+}

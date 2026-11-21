@@ -1,0 +1,31 @@
+name: Editor41 5AG apply two verified localized-source replacements
+on:
+  push:
+    branches:
+      - cartography/editor41-5ag-audited-fort-and-settlement-areas
+    paths:
+      - 'scripts/apply_editor41_5ag_replacements.py'
+permissions:
+  contents: write
+jobs:
+  source-preserving-rectangle-removal:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Carefully replace the two oversized legal or military geographic envelopes
+        run: python3 -u scripts/apply_editor41_5ag_replacements.py
+      - name: Preserve all raw histories and commit only source map changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/eighteenth-century-mass-schematic-zones-1700-1799.json
+          if ! git diff --cached --quiet; then
+            git commit -m "feat(18c 5AG): retire Great Lakes and NSW envelope while retaining period-specific histories"
+            git push origin HEAD:cartography/editor41-5ag-audited-fort-and-settlement-areas
+          fi

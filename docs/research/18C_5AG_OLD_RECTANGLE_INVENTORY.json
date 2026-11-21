@@ -1,0 +1,36 @@
+{
+  "schema": "editor41_5ag_current_unresolved_rectangles_v1",
+  "as_of": "2026-11-21",
+  "source_baseline": "docs/research/18C_5AE_OLD_RECTANGLE_INVENTORY.json",
+  "count": 1,
+  "active_1799": 0,
+  "retired_in_5ag": [
+    "GREAT_LAKES_POSTS",
+    "NSW_CROWN_CLAIM"
+  ],
+  "records": [
+    {
+      "file": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "id": "CAROLINA_PROPRIETORS",
+      "title": "1700年代卡罗来纳领主殖民省",
+      "kind": "paper_claim",
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1711
+        }
+      ],
+      "bbox": [
+        -83.8,
+        31.3,
+        -75.5,
+        36.7
+      ],
+      "source_urls": [
+        "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+      ]
+    }
+  ],
+  "source_crosswalk": "data/eighteenth-century-editor41-5ag-localized-replacements.json",
+  "caveat": "Carolina 1700-1711 still lacks same-period precise charter/land/grant plots. Do not transplant later 1712 provincial polygon."
+}
