@@ -14,7 +14,13 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data/eighteenth-century-mass-schematic-zones-1700-1799.json"
 TARGET = ROOT / "docs/research/18C_5AG_479_MASS_POINT_AREA_CANDIDATES.json"
 M = json.loads(SOURCE.read_text(encoding="utf-8"))
-points = [s for s in M["regional_sites"] if s.get("geometry", {}).get("type") == "Point"]
+# Freeze the 5AG 479-point published source inventory. Later 5AH Carolina settlements
+# belong to an independent addendum; they must not retroactively rewrite 165 candidates.
+ADDED_IN_5AH = {"CAROLINA_CHARLESTOWN_1700_1711", "CAROLINA_BATH_TOWN_1705_1711", "CAROLINA_NEW_BERN_1710_1711"}
+all_points = [s for s in M["regional_sites"] if s.get("geometry", {}).get("type") == "Point"]
+points = [s for s in all_points if s["id"] not in ADDED_IN_5AH]
+assert len(all_points) in (479, 482) and len(points) == 479
+assert not (ADDED_IN_5AH & {s["id"] for s in points})
 polygons = [s for s in M["regional_zones"] if s.get("geometry", {}).get("type") in ("Polygon", "MultiPolygon")]
 
 def overlap(first, second):

@@ -1,0 +1,114 @@
+{
+  "schema": "editor42_5ah_carolina_1700_1711_places_v1",
+  "batch": "5AH",
+  "based_on": "main@219e18dabacf6271c8f78d0f2e55ccf666463b3f",
+  "historical_charter_record": "CAROLINA_PROPRIETORS",
+  "supersession_pointer": "CAROLINA_CHARLESTOWN_1700_1711",
+  "historical_boundary_reconstruction_count": 0,
+  "new_localized_record_count": 3,
+  "existing_localized_record_ids": [
+    "CHARLESTON_FORT_JOHNSON"
+  ],
+  "local_sites": [
+    {
+      "id": "CAROLINA_CHARLESTOWN_1700_1711",
+      "title": "查尔斯敦｜1700—1711年领主殖民港镇",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.929,
+          32.776
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1711,
+          "title": "查尔斯敦｜1700—1711年领主殖民港镇",
+          "note": "1680年以后查尔斯敦在牡蛎角发展为领主殖民地的主要港镇。1703—1704年殖民议会组织修筑土墙和壕沟，征用被奴役非洲人的劳动。1711年出版的克里斯普地图收录早期城防。"
+        }
+      ],
+      "source_urls": [
+        "https://home.nps.gov/articles/charleston-community-history.htm",
+        "https://www.loc.gov/item/2004626926/",
+        "https://www.ccpl.org/charleston-time-machine/creating-walled-city-charleston-enceinte-1704"
+      ],
+      "uncertain_line_dashed": true,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null,
+      "territorial_control_verified": false,
+      "historical_boundary_confirmed": false,
+      "geometry_precision": "modern_named_place_reference_point_only",
+      "geolocation_limit_zh": "继承仓库已核1680年牡蛎角现代参考点坐标；不含1704年城墙实测边线。"
+    },
+    {
+      "id": "CAROLINA_BATH_TOWN_1705_1711",
+      "title": "巴斯｜1705年北卡首批建制港镇",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.81425,
+          35.476944
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1705,
+          "end_year": 1711,
+          "title": "巴斯｜1705年北卡首批建制港镇",
+          "note": "帕姆利科河畔的巴斯在1705年设立，是北卡罗来纳最早的建制城镇。约翰·劳森于1709年出版对卡罗来纳海岸、河道及当地社群的记述。"
+        }
+      ],
+      "source_urls": [
+        "https://historicsites.nc.gov/all-sites/historic-bath/history",
+        "https://townofbathnc.com/wp-content/uploads/2020/11/Bath_CAMA_Land_Use_Plan_4-8-24.pdf",
+        "https://www.loc.gov/item/02018519/"
+      ],
+      "uncertain_line_dashed": true,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null,
+      "territorial_control_verified": false,
+      "historical_boundary_confirmed": false,
+      "geometry_precision": "modern_named_place_reference_point_only",
+      "geolocation_limit_zh": "坐标为巴斯镇政府规划文件公布的现代城镇地理基准点；1705原始镇界不得以现代镇界替代。"
+    },
+    {
+      "id": "CAROLINA_NEW_BERN_1710_1711",
+      "title": "新伯尔尼｜1710年瑞士移民聚落",
+      "kind": "settlement",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.049444,
+          35.115556
+        ]
+      },
+      "periods": [
+        {
+          "start_year": 1710,
+          "end_year": 1711,
+          "title": "新伯尔尼｜1710年瑞士移民聚落",
+          "note": "1710年克里斯托夫·冯·格拉芬里德带领瑞士及普法尔茨移民在纽斯河与特伦特河附近建立新伯尔尼。1711年图斯卡罗拉战争开始，殖民聚落与当地原住民族之间的冲突加剧。"
+        }
+      ],
+      "source_urls": [
+        "https://www.dncr.nc.gov/blog/2023/12/06/baron-christoph-von-graffenried-c-10",
+        "https://npgallery.nps.gov/AssetDetail/NRIS/73001325",
+        "https://kellenberger.mycprl.org/digital/items/show/613"
+      ],
+      "uncertain_line_dashed": true,
+      "exclude_from_territorial_area_totals": true,
+      "area_sqkm": null,
+      "territorial_control_verified": false,
+      "historical_boundary_confirmed": false,
+      "geometry_precision": "modern_named_place_reference_point_only",
+      "geolocation_limit_zh": "现代新伯尔尼国家历史街区参考坐标，仅表示历史城镇位置；不得推定1710年街区或原住民族土地边界。"
+    }
+  ],
+  "caveat": "Only named historic settlement point references and an existing 1708 fort marker; do not infer historic polygon, cadastral lot, legal border, Indigenous cession or total colonial area.",
+  "primary_1709_source": "https://www.loc.gov/item/02018519/",
+  "primary_1711_map": "https://www.loc.gov/item/2004626926/",
+  "unresolved": "1704 Crisp enceinte historic fortification trace, Bath historic original parcels, New Bern 1710 founding plat and Carolina charter text require map rectification before historical polygons may be published."
+}

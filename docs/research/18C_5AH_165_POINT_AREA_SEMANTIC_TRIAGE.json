@@ -1,0 +1,4239 @@
+{
+  "schema": "editor42_5ah_165_proximity_candidates_semantic_triage_v1",
+  "original_source": "docs/research/18C_5AG_479_MASS_POINT_AREA_CANDIDATES.json",
+  "baseline_count": 165,
+  "semantically_blocked_count": 30,
+  "still_pending_count": 135,
+  "additional_historical_polygons_this_review": 0,
+  "method": "Original 5AG spatial shortlist reconciled by source IDs and basic distinct physical object/time/operator scope. Rejections mean nearby candidate is not interchangeable; future independent source-backed true footprint remains possible. No polygon modified.",
+  "records": [
+    {
+      "point_id": "SAINT_DOMINGUE_PAP_SHIP_SEIZURES",
+      "years": [
+        1794,
+        1794
+      ],
+      "kind": "conflict_damage",
+      "candidate_polygon_ids": [
+        "SAINT_DOMINGUE_PORT_AU_PRINCE_OLD_TOWN"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "maritime_vs_walled_town",
+      "reason_zh": "太子港锚地船舶扣押是海上活动，城墙内旧城多边形不能当作被扣船只的地理面积。",
+      "source_urls": [
+        "https://www.thegazette.co.uk/London/issue/13684/data.pdf",
+        "https://gallica.bnf.fr/ark:/12148/btv1b8446483p"
+      ],
+      "polygon_source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b8446483p",
+        "https://institutfrancaishaiti.org/RevueConjonction/Conjonction48.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SAINT_DOMINGUE_MOLE_POWDER_MAGAZINE",
+      "years": [
+        1793,
+        1798
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "SAINT_DOMINGUE_MOLE_OLD_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://static1.squarespace.com/static/53348503e4b09be6564e601a/t/5679bbada128e661e5c47e5c/1450818477864/BULLETIN%2BDE%2BL%27ISPAN%2BNo%2B16%2BWEB.pdf",
+        "https://rasanblaj.ht/ardouin/etudes-3/"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/74692186/",
+        "https://static1.squarespace.com/static/53348503e4b09be6564e601a/t/5679bbada128e661e5c47e5c/1450818477864/BULLETIN%2BDE%2BL%27ISPAN%2BNo%2B16%2BWEB.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "DARTMOUTH_QUAKER_HOUSE",
+      "years": [
+        1786,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "DARTMOUTH_SECOND_TOWN_PLOT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=2577&pid=0",
+        "https://cdn.halifax.ca/sites/default/files/documents/city-hall/boards-committees-commissions/250423hac911.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://cdn.halifax.ca/sites/default/files/documents/city-hall/boards-committees-commissions/250423hac911.pdf",
+        "https://buildns.ca/wp-content/uploads/2022/01/Appendix-E-WDC-1-Archaeology.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PONDICHERRY_FORT_LOUIS",
+      "years": [
+        1716,
+        1761
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "PONDICHERRY_BOULEVARD_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b55005623v",
+        "https://ppa.py.gov.in/sites/default/files/draft-proposal-report-draft-cdp-puducherry.pdf#page=292"
+      ],
+      "polygon_source_urls": [
+        "https://heritage.bnf.fr/france-southasia/en/pondicherry",
+        "https://ppa.py.gov.in/sites/default/files/draft-proposal-report-draft-cdp-puducherry.pdf#page=292"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CAPE_ALGOA_KHOE_DISARMAMENT",
+      "years": [
+        1799,
+        1799
+      ],
+      "kind": "military_vicinity",
+      "candidate_polygon_ids": [
+        "CAPE_ALGOA_FORT_FREDERICK"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://scientiamilitaria.journals.ac.za/pub/article/view/1094",
+        "https://samilitaryhistory.org/vol035jd.html"
+      ],
+      "polygon_source_urls": [
+        "https://sahistory.org.za/place/fort-frederick-port-elizabeth",
+        "https://scientiamilitaria.journals.ac.za/pub/article/view/1094"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SIERRA_FREETOWN_COMPANY_OFFICE",
+      "years": [
+        1792,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "SIERRA_FREETOWN_EARLY_GRID"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://loyalist.lib.unb.ca/record/sessional-papers-sierra-leone-co-270-1792-1801",
+        "https://etheses.dur.ac.uk/9968/1/9968_6762.PDF#page=40"
+      ],
+      "polygon_source_urls": [
+        "https://etheses.dur.ac.uk/9968/1/9968_6762.PDF#page=40",
+        "https://www.wmf.org/sites/default/files/article/pdfs/freetown_report-r.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SIERRA_FORT_THORNTON",
+      "years": [
+        1793,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "SIERRA_FREETOWN_EARLY_GRID"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "town_grid_vs_fort",
+      "reason_zh": "托顿堡的具体围防不能用整个弗里敦早期街区范围替代。",
+      "source_urls": [
+        "https://sierraleoneheritage.org/sites/monuments/fortthornton",
+        "https://www.sierra-leone.org/Books/Two%20Voyages%20to%20Sierra%20Leone%20during%20the%20years%201791-2-3.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://etheses.dur.ac.uk/9968/1/9968_6762.PDF#page=40",
+        "https://www.wmf.org/sites/default/files/article/pdfs/freetown_report-r.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SIERRA_BUNCE_SLAVE_YARD",
+      "years": [
+        1792,
+        1799
+      ],
+      "kind": "company_post",
+      "candidate_polygon_ids": [
+        "SIERRA_BUNCE_SLAVE_FORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://static1.squarespace.com/static/5bd0e66f8d97400eb0099556/t/5c252a0521c67c9c84aab1b1/1545939499037/Paper%2B2%2B-%2BDeCorse.pdf",
+        "https://www.academia.edu/43169001/Bunce_Island_Sierra_Leone_National_Historic_Site_GENERAL_MANAGEMENT_PLAN"
+      ],
+      "polygon_source_urls": [
+        "https://static1.squarespace.com/static/5bd0e66f8d97400eb0099556/t/5c252a0521c67c9c84aab1b1/1545939499037/Paper%2B2%2B-%2BDeCorse.pdf",
+        "https://www.academia.edu/43169001/Bunce_Island_Sierra_Leone_National_Historic_Site_GENERAL_MANAGEMENT_PLAN"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SIERRA_BUNCE_ADAMS_TOWN",
+      "years": [
+        1791,
+        1791
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "SIERRA_BUNCE_SLAVE_FORT"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "distinct_settlement_vs_fort",
+      "reason_zh": "亚当斯镇与邦斯岛奴隶堡是不同历史对象，不能借堡垒围墙替换镇址。",
+      "source_urls": [
+        "https://www.sierra-leone.org/Books/Two%20Voyages%20to%20Sierra%20Leone%20during%20the%20years%201791-2-3.pdf",
+        "https://static1.squarespace.com/static/5bd0e66f8d97400eb0099556/t/5c252a0521c67c9c84aab1b1/1545939499037/Paper%2B2%2B-%2BDeCorse.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://static1.squarespace.com/static/5bd0e66f8d97400eb0099556/t/5c252a0521c67c9c84aab1b1/1545939499037/Paper%2B2%2B-%2BDeCorse.pdf",
+        "https://www.academia.edu/43169001/Bunce_Island_Sierra_Leone_National_Historic_Site_GENERAL_MANAGEMENT_PLAN"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BEAUBASSIN_VILLAGE",
+      "years": [
+        1700,
+        1750
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "FORT_LAWRENCE"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "time_and_feature_mismatch",
+      "reason_zh": "博巴桑村与劳伦斯堡不是同一设施；村庄1700—1750的跨度不能用后建堡墙覆盖。",
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/ns/beaubassin/culture/village",
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=10810"
+      ],
+      "polygon_source_urls": [
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=265",
+        "https://geonames.nrcan.gc.ca/search-place-names/unique?id=CBVRM"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PORTOBELO_SAN_JERONIMO_OLD_SITE",
+      "years": [
+        1739,
+        1739
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "PORTOBELO_SANTIAGO_OLD"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://ipc.org.pa/ojs/index.php/ipc/article/download/71/69/226",
+        "https://www.loc.gov/item/2002622163/"
+      ],
+      "polygon_source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/22097",
+        "https://www.loc.gov/item/2002622163/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "OSWEGO_FORT_GEORGE_SITE",
+      "years": [
+        1755,
+        1756
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "OSWEGO_WEST_EARTHWORKS"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.hmdb.org/m.asp?m=75348",
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=57"
+      ],
+      "polygon_source_urls": [
+        "https://www.esf.edu/cclp/documents/Hetzler_Fort_Ontario.pdf#page=50",
+        "https://www.hmdb.org/m.asp?m=75339"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "TROIS_RIVIERES_GOVERNORS_HOUSE",
+      "years": [
+        1723,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "TROIS_RIVIERES_RECOLLETS_COMPOUND"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.patrimoine-culturel.gouv.qc.ca/rpcq/detail.do?id=96382&methode=consulter&type=bien",
+        "https://www.v3r.net/culture/histoire-et-patrimoine/toponymie/toponyme/casernes"
+      ],
+      "polygon_source_urls": [
+        "https://cpcq.gouv.qc.ca/app/uploads/2020/05/troisrivieres.pdf#page=27",
+        "https://www.patrimoine-culturel.gouv.qc.ca/rpcq/detail.do?id=93285&methode=consulter&type=bien"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "HAVANA_CABANA_HEIGHTS",
+      "years": [
+        1762,
+        1773
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "HAVANA_WALLED_TOWN",
+        "HAVANA_CASTILLO_REAL_FUERZA",
+        "HAVANA_CASTILLO_DEL_MORRO",
+        "HAVANA_SAN_SALVADOR_LA_PUNTA"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "opposite_harbor_bank",
+      "reason_zh": "卡瓦尼亚高地与哈瓦那旧城、莫罗堡等同湾相邻但为不同岸坡／工事，候选多边形均不能直接取代高地点。",
+      "source_urls": [
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-havana-and-fort-morro-1762-havana-ciudad-de-la-habana-cuba-23deg0758n-82deg2258w-castillo",
+        "https://gdocu.upv.es/alfresco/service/api/node/content/workspace/SpacesStore/c68f8931-1578-4ef3-8f89-3115782ef3e9/6858.pdf?guest=true"
+      ],
+      "polygon_source_urls": [
+        "https://iuaca.ua.es/es/documentos/documentos/tallerhabana/victoria-zardoya.pdf#page=15",
+        "https://www.loc.gov/item/2010593342/",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/22992",
+        "https://idus.us.es/server/api/core/bitstreams/305d06db-9c4d-42e9-b68e-39a870c5a35a/content",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-havana-and-fort-morro-1762-havana-ciudad-de-la-habana-cuba-23deg0758n-82deg2258w-castillo-1",
+        "https://bibliotecavirtual.defensa.gob.es/BVMDefensa/cartocuba/es/consulta/registro.do?control=BMDB20180109218",
+        "https://dialnet.unirioja.es/descarga/articulo/5612872.pdf",
+        "https://www.loc.gov/item/2006636740/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "HAVANA_ATARES_WORKSITE",
+      "years": [
+        1762,
+        1766
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "HAVANA_WALLED_TOWN"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "distinct_construction_site",
+      "reason_zh": "阿塔雷斯工事施工区与哈瓦那城墙内旧城范围不是同一史料几何。",
+      "source_urls": [
+        "https://www.ipscuba.net/cultura/antigua-fortaleza-colonial-de-la-habana-sera-un-museo-moderno/",
+        "https://publicaciones.defensa.gob.es/media/downloadable/files/links/r/h/rhm_099.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://iuaca.ua.es/es/documentos/documentos/tallerhabana/victoria-zardoya.pdf#page=15",
+        "https://www.loc.gov/item/2010593342/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "HAVANA_REAL_ARSENAL_TENAZA",
+      "years": [
+        1736,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "HAVANA_WALLED_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.cultura.gob.es/fragatamercedes/dam/jcr%3A52738513-095c-4ab1-bf67-f5dbcf3cddb9/arsenal-habana.pdf",
+        "https://portal.amelica.org/ameli/journal/784/7843892006/html/"
+      ],
+      "polygon_source_urls": [
+        "https://iuaca.ua.es/es/documentos/documentos/tallerhabana/victoria-zardoya.pdf#page=15",
+        "https://www.loc.gov/item/2010593342/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MANILA_SAN_AGUSTIN",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "MANILA_INTRAMUROS",
+        "MANILA_BALUARTE_SAN_DIEGO",
+        "MANILA_BALUARTE_SAN_ANDRES",
+        "MANILA_FORT_SANTIAGO"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "religious_site_vs_walled_city",
+      "reason_zh": "圣奥古斯丁教堂虽位于城墙内，教堂自身建筑占地不能等同于整个因特拉穆罗斯旧城。",
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-san-agustin-2/",
+        "https://whc.unesco.org/document/185204"
+      ],
+      "polygon_source_urls": [
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832",
+        "https://intramuros.gov.ph/bsd/",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e",
+        "https://intramuros.gov.ph/2022/09/30/baluarte-de-san-andres/",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18789",
+        "https://intramuros.gov.ph/fs/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MANILA_BINONDO_CHURCH",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "MANILA_INTRAMUROS",
+        "MANILA_FORT_SANTIAGO"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "outside_intramuros",
+      "reason_zh": "岷伦洛教堂位于马尼拉城墙外的岷伦洛区，不能转成王城内的因特拉穆罗斯面。",
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/simbahan-ng-binondo/",
+        "https://journals.upd.edu.ph/index.php/pssr/article/download/4046/7733/"
+      ],
+      "polygon_source_urls": [
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18789",
+        "https://intramuros.gov.ph/fs/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MANILA_SANTA_CRUZ_PLAZA",
+      "years": [
+        1762,
+        1764
+      ],
+      "kind": "diplomacy",
+      "candidate_polygon_ids": [
+        "MANILA_INTRAMUROS"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "outside_intramuros",
+      "reason_zh": "圣克鲁斯广场与因特拉穆罗斯城墙内旧城是不同街区，距离近不构成同一地理范围。",
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/church-of-santa-cruz-2/",
+        "https://journals.upd.edu.ph/index.php/pssr/article/download/4046/7733/"
+      ],
+      "polygon_source_urls": [
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MANILA_SAN_DIEGO_BREACH",
+      "years": [
+        1762,
+        1762
+      ],
+      "kind": "conflict_damage",
+      "candidate_polygon_ids": [
+        "MANILA_BALUARTE_SAN_DIEGO",
+        "MANILA_INTRAMUROS",
+        "MANILA_BALUARTE_SAN_ANDRES"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e"
+      ],
+      "polygon_source_urls": [
+        "https://intramuros.gov.ph/bsd/",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832",
+        "https://intramuros.gov.ph/2022/09/30/baluarte-de-san-andres/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MANILA_PUERTA_REAL_OLD",
+      "years": [
+        1700,
+        1762
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "MANILA_INTRAMUROS",
+        "MANILA_BALUARTE_SAN_ANDRES",
+        "MANILA_BALUARTE_SAN_DIEGO"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://intramuros.gov.ph/2022/07/18/puerta-real-de-bagumbayan-1985/",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0"
+      ],
+      "polygon_source_urls": [
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832",
+        "https://intramuros.gov.ph/2022/09/30/baluarte-de-san-andres/",
+        "https://intramuros.gov.ph/bsd/",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MANILA_PUERTA_REAL_1780",
+      "years": [
+        1780,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "MANILA_INTRAMUROS",
+        "MANILA_BALUARTE_SAN_DIEGO",
+        "MANILA_BALUARTE_SAN_ANDRES"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/pintong-real/",
+        "https://intramuros.gov.ph/2022/07/18/puerta-real-de-bagumbayan-1985/"
+      ],
+      "polygon_source_urls": [
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832",
+        "https://intramuros.gov.ph/bsd/",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e",
+        "https://intramuros.gov.ph/2022/09/30/baluarte-de-san-andres/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MANILA_ERMITA_CHURCH",
+      "years": [
+        1762,
+        1762
+      ],
+      "kind": "military_vicinity",
+      "candidate_polygon_ids": [
+        "MANILA_INTRAMUROS",
+        "MANILA_BALUARTE_SAN_DIEGO",
+        "MANILA_BALUARTE_SAN_ANDRES"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "outside_intramuros",
+      "reason_zh": "埃尔米塔教堂位于马尼拉城墙外，不可用城墙内王城及棱堡代画。",
+      "source_urls": [
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/simbahan-ng-nuestra-senora-de-guia/",
+        "https://philippinediaryproject.com/diarists/william-draper/1762-09-25/"
+      ],
+      "polygon_source_urls": [
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e-0",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18832",
+        "https://intramuros.gov.ph/bsd/",
+        "https://col-militarymaps-frontend.rct.uk/other-18th/19th-century-conflicts/plan-of-manila-1762-manila-national-capital-region-phillipines-14deg3615n-120deg5855e",
+        "https://intramuros.gov.ph/2022/09/30/baluarte-de-san-andres/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CAVITE_PUERTA_VAGA",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "CAVITE_PUERTO",
+        "CAVITE_FORT_SAN_FELIPE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18977",
+        "https://www.flickr.com/photos/britishlibrary/50264965328"
+      ],
+      "polygon_source_urls": [
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/fort-san-felipe/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CAVITE_NAVAL_YARD",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "CAVITE_PUERTO",
+        "CAVITE_FORT_SAN_FELIPE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20"
+      ],
+      "polygon_source_urls": [
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/fort-san-felipe/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CAVITE_CAREENING_WHARF",
+      "years": [
+        1730,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "CAVITE_PUERTO",
+        "CAVITE_FORT_SAN_FELIPE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20"
+      ],
+      "polygon_source_urls": [
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/fort-san-felipe/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CAVITE_GALERAS_FORZADOS",
+      "years": [
+        1730,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "CAVITE_PUERTO",
+        "CAVITE_FORT_SAN_FELIPE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://www.jstage.jst.go.jp/article/aija/82/741/82_2837/_pdf/-char/en"
+      ],
+      "polygon_source_urls": [
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/fort-san-felipe/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CAVITE_SANTA_CATALINA_BATTERY",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "CAVITE_PUERTO",
+        "CAVITE_FORT_SAN_FELIPE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18977",
+        "https://www.flickr.com/photos/britishlibrary/50264965328"
+      ],
+      "polygon_source_urls": [
+        "https://www.imcos.org/wp-content/uploads/2021/12/IMC0S167_December2021_web.pdf#page=20",
+        "https://www.flickr.com/photos/britishlibrary/50264965328",
+        "https://philhistoricsites.nhcp.gov.ph/registry_database/fort-san-felipe/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CALCUTTA_COMPANY_REVENUE_SEAT",
+      "years": [
+        1765,
+        1799
+      ],
+      "kind": "revenue",
+      "candidate_polygon_ids": [
+        "CALCUTTA_OLD_FORT_WILLIAM"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://sadte.wb.gov.in/assets/upload/office_brochure.pdf",
+        "https://tile.loc.gov/storage-services/service/gdc/gdclccn/23/00/48/26/23004826/23004826.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:Old_Fort_William_plate32.jpg",
+        "https://ignca.gov.in/Asi_data/17544.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CALCUTTA_ST_ANNE",
+      "years": [
+        1709,
+        1756
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "CALCUTTA_OLD_FORT_WILLIAM"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://ignca.gov.in/Asi_data/8530.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:Old_Fort_William_plate32.jpg",
+        "https://ignca.gov.in/Asi_data/17544.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CALCUTTA_LAL_DIGHI",
+      "years": [
+        1753,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "CALCUTTA_OLD_FORT_WILLIAM"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "waterbody_vs_fort",
+      "reason_zh": "拉尔迪吉水池及其周边公共空间与威廉堡的建筑围墙不是一个对象。",
+      "source_urls": [
+        "https://ignca.gov.in/Asi_data/30993.pdf",
+        "https://censusindia.gov.in/nada/index.php/catalog/32357/download/35538/20180_1901_CAL.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:Old_Fort_William_plate32.jpg",
+        "https://ignca.gov.in/Asi_data/17544.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MADRAS_OLD_BLACK_TOWN_CLEARANCE",
+      "years": [
+        1746,
+        1758
+      ],
+      "kind": "conflict_damage",
+      "candidate_polygon_ids": [
+        "MADRAS_ST_GEORGE_SIEGE",
+        "MADRAS_ST_GEORGE_EARLY"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://chennaicorporation.gov.in/gcc/about-GCC/about-chennai/origin-and-growth/",
+        "https://militarymaps.rct.uk/war-of-the-austrian-succession-1740-8/map-of-the-bay-of-madras-1746-chennai-tamil-nadu-india-13deg0516n-80deg1642e"
+      ],
+      "polygon_source_urls": [
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-madras-1758-chennai-tamil-nadu-india-13deg0516n-80deg1642e",
+        "https://gallica.bnf.fr/ark:/12148/btv1b6903954f",
+        "https://commons.wikimedia.org/wiki/File:Madras_1733-1862.jpg",
+        "https://militarymaps.rct.uk/war-of-the-austrian-succession-1740-8/map-of-the-bay-of-madras-1746-chennai-tamil-nadu-india-13deg0516n-80deg1642e"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MADRAS_ARMENIAN_CHURCH_SITE",
+      "years": [
+        1755,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "MADRAS_NEW_BLACK_TOWN",
+        "MADRAS_ST_GEORGE_SIEGE",
+        "MADRAS_ST_GEORGE_LATE",
+        "MADRAS_ST_GEORGE_EARLY"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://modernarmenianhistory.history.ucla.edu/2020/02/11/chairs-blog-2/",
+        "https://upload.wikimedia.org/wikipedia/commons/7/77/Vestiges_of_old_Madras%2C_1640-1800%3B_traced_from_the_East_India_company%27s_records_preserved_at_Fort_St._George_and_the_India_office%2C_and_from_other_sources_%28IA_vestigesofoldmad04love%29.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b530986164",
+        "https://chennaicorporation.gov.in/gcc/about-GCC/about-chennai/origin-and-growth/",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-madras-1758-chennai-tamil-nadu-india-13deg0516n-80deg1642e",
+        "https://gallica.bnf.fr/ark:/12148/btv1b6903954f",
+        "https://commons.wikimedia.org/wiki/File:Madras_1733-1862.jpg",
+        "https://archive.org/details/vestigesofoldmad03loveuoft",
+        "https://militarymaps.rct.uk/war-of-the-austrian-succession-1740-8/map-of-the-bay-of-madras-1746-chennai-tamil-nadu-india-13deg0516n-80deg1642e"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MADRAS_ST_MARY_CHURCH",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "MADRAS_ST_GEORGE_EARLY",
+        "MADRAS_ST_GEORGE_SIEGE",
+        "MADRAS_ST_GEORGE_LATE",
+        "MADRAS_OLD_BLACK_TOWN",
+        "MADRAS_NEW_BLACK_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://govtmuseumchennai.org/uploads/topics/16529639911706.pdf",
+        "https://commons.wikimedia.org/wiki/File:Madras_1733-1862.jpg"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:Madras_1733-1862.jpg",
+        "https://militarymaps.rct.uk/war-of-the-austrian-succession-1740-8/map-of-the-bay-of-madras-1746-chennai-tamil-nadu-india-13deg0516n-80deg1642e",
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-madras-1758-chennai-tamil-nadu-india-13deg0516n-80deg1642e",
+        "https://gallica.bnf.fr/ark:/12148/btv1b6903954f",
+        "https://archive.org/details/vestigesofoldmad03loveuoft",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Fort_St_George_and_the_City_of_Madras_1726.jpg",
+        "https://gallica.bnf.fr/ark:/12148/btv1b530986164",
+        "https://chennaicorporation.gov.in/gcc/about-GCC/about-chennai/origin-and-growth/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NIAGARA_1764_COUNCIL",
+      "years": [
+        1764,
+        1764
+      ],
+      "kind": "diplomacy",
+      "candidate_polygon_ids": [
+        "FORT_NIAGARA_MAIN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.archives.gov.on.ca/en/e_records/ipperwash/report/vol_1/pdf/E_Vol_1_CH02.pdf",
+        "https://www.archives.gov.on.ca/en/e_records/ipperwash/policy_part/research/pdf/Coyle.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://nysarchaeology.org/download/nysaa/bulletin/number_114.pdf#page=55",
+        "https://npgallery.nps.gov/GetAsset/a177b303-6c93-45ef-9412-2bb19b34ec6d"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PITT_FORT_MAIN",
+      "years": [
+        1759,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "PITT_BOUQUET_BLOCKHOUSE"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "later_subfeature_vs_full_fort",
+      "reason_zh": "匹兹堡整座主堡与1764年所建布凯碉堡范围不同，后者仅为后期残存局部，不能回填1759年主堡。",
+      "source_urls": [
+        "https://www.flickr.com/photos/britishlibrary/50265691327",
+        "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/point-state-park/sightseeing"
+      ],
+      "polygon_source_urls": [
+        "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/point-state-park/sightseeing",
+        "https://www.fortpittblockhouse.com/timeline/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "DETROIT_OLD_PALISADED_TOWN",
+      "years": [
+        1779,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "DETROIT_FORT_LERNOULT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.detroithistorical.org/learn/online-research/collection/archive/map-town-and-fortifications-detroit-ad-1796-city-detroit",
+        "https://tile.loc.gov/storage-services/service/ll/llscd/llsp028/llsp028.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.detroithistorical.org/learn/online-research/collection/archive/map-town-and-fortifications-detroit-ad-1796-city-detroit",
+        "https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/fort-lernoult"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NYC_BOWLING_GREEN",
+      "years": [
+        1776,
+        1783
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "NYC_LOWER_MANHATTAN_1767",
+        "NYC_FORT_GEORGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nps.gov/places/bowling-green.htm",
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99"
+      ],
+      "polygon_source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NYC_OLD_CITY_HALL",
+      "years": [
+        1703,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "NYC_LOWER_MANHATTAN_1767",
+        "NYC_FORT_GEORGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nps.gov/feha/learn/hc.htm",
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99"
+      ],
+      "polygon_source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NYC_FRAUNCES_TAVERN",
+      "years": [
+        1762,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "NYC_LOWER_MANHATTAN_1767",
+        "NYC_FORT_GEORGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nps.gov/places/000/fraunces-tavern.htm",
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99"
+      ],
+      "polygon_source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NYC_TRINITY_CHURCH",
+      "years": [
+        1767,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "NYC_LOWER_MANHATTAN_1767",
+        "NYC_FORT_GEORGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://trinitychurchnyc.org/sites/default/files/inline-files/200520_Cemetery%20Walking%20tour_v7_PDF%20only_0.pdf",
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99"
+      ],
+      "polygon_source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NYC_SUGAR_HOUSE_LIBERTY",
+      "years": [
+        1776,
+        1782
+      ],
+      "kind": "military_vicinity",
+      "candidate_polygon_ids": [
+        "NYC_LOWER_MANHATTAN_1767",
+        "NYC_FORT_GEORGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nps.gov/articles/000/prison-ship-martyrs.htm",
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99"
+      ],
+      "polygon_source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NYC_BROOKLYN_FERRY",
+      "years": [
+        1776,
+        1782
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "NYC_LOWER_MANHATTAN_1767"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "opposite_river_banks",
+      "reason_zh": "布鲁克林渡口位于东河对岸，曼哈顿旧城区面不能代替布鲁克林渡口。",
+      "source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities"
+      ],
+      "polygon_source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NYC_BLACK_EVACUATION_PORT",
+      "years": [
+        1783,
+        1783
+      ],
+      "kind": "diplomacy",
+      "candidate_polygon_ids": [
+        "NYC_FORT_GEORGE"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "port_embarkation_vs_fort",
+      "reason_zh": "1783年黑人撤离登船港口与曼哈顿乔治堡是不同地理活动范围。",
+      "source_urls": [
+        "https://www.canada.ca/en/library-archives/collection/research-help/genealogy-family-history/loyalists/book-of-negroes.html",
+        "https://www.nationalarchives.gov.uk/explore-the-collection/stories/the-book-of-negroes/"
+      ],
+      "polygon_source_urls": [
+        "https://old-digitalcollections.nypl.org/items/510d47df-f437-a3d9-e040-e00a18064a99",
+        "https://mapwarper.net/maps/wms/71257?SERVICE=WMS&REQUEST=GetCapabilities"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NEWPORT_COLONY_HOUSE",
+      "years": [
+        1739,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "NEWPORT_TOWN_1777",
+        "NEWPORT_NORTH_BATTERY_1777",
+        "NEWPORT_GOAT_ISLAND_1777"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://newporthistoricalsociety.org/properties/colony-house/"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NEWPORT_GREAT_FRIENDS",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "NEWPORT_TOWN_1777",
+        "NEWPORT_NORTH_BATTERY_1777",
+        "NEWPORT_GOAT_ISLAND_1777"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "later_town_survey_vs_early_landmark",
+      "reason_zh": "1700年已记载聚会所，但当前候选为1777年的全镇战争地形；不应把较晚的城镇整体用作聚会所原址。",
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://newporthistory.org/john-g-wanton/"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NEWPORT_REDWOOD_LIBRARY",
+      "years": [
+        1750,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "NEWPORT_TOWN_1777"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www.battlefields.org/visit/heritage-sites/redwood-library-newport-ri"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NEWPORT_BATTERY_POINT",
+      "years": [
+        1778,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "NEWPORT_TOWN_1777",
+        "NEWPORT_GOAT_ISLAND_1777"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://battleofrhodeisland.org/fortifications/",
+        "https://www.northamericanforts.com/East/ri2.html"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NEWPORT_ADAMS_BRENTON",
+      "years": [
+        1776,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "NEWPORT_GOAT_ISLAND_1777"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://riparks.ri.gov/History-HistoryFortAdams",
+        "https://planning.ri.gov/sites/g/files/xkgbur826/files/documents/comp/2017/NewportCompPlan2017.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NEWPORT_FORT_WOLCOTT",
+      "years": [
+        1794,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "NEWPORT_TOWN_1777"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NEWPORT_LONG_WHARF_REBUILD",
+      "years": [
+        1779,
+        1799
+      ],
+      "kind": "conflict_damage",
+      "candidate_polygon_ids": [
+        "NEWPORT_TOWN_1777",
+        "NEWPORT_GOAT_ISLAND_1777",
+        "NEWPORT_FORT_GEORGE_1777"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/74692105/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_44005_edges.zip"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PHILADELPHIA_STATE_HOUSE",
+      "years": [
+        1753,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "PHILADELPHIA_TOWN_1777"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nps.gov/teachers/classrooms/upload/TwHP-Lessons_132independence.pdf",
+        "https://www.nps.gov/inde/learn/historyculture/places-independencehall-architecture-changeovertime.htm"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/gm71005415/",
+        "https://www.argomaps.org/maps/commonwealth:cj82m2470/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PHILADELPHIA_WALNUT_STREET_GAOL",
+      "years": [
+        1775,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "PHILADELPHIA_TOWN_1777"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nps.gov/parkhistory/online_books/inde/washington_square_clr.pdf",
+        "https://irma.nps.gov/DataStore/FileSource/Get/2302283?filename=INDE_Washington+Square_CLI+Park+Report_2023rev.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/gm71005415/",
+        "https://www.argomaps.org/maps/commonwealth:cj82m2470/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PHILADELPHIA_SOUTHEAST_SQUARE",
+      "years": [
+        1706,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "PHILADELPHIA_TOWN_1777"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nps.gov/inde/learn/historyculture/places-washingtonsquare.htm",
+        "https://irma.nps.gov/DataStore/FileSource/Get/2302283?filename=INDE_Washington+Square_CLI+Park+Report_2023rev.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/gm71005415/",
+        "https://www.argomaps.org/maps/commonwealth:cj82m2470/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PHILADELPHIA_CARPENTERS_HALL",
+      "years": [
+        1774,
+        1779
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "PHILADELPHIA_TOWN_1777"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://irma.nps.gov/DataStore/FileSource/Get/2280011?filename=Folder01_NotesCarpentersHall_1948.pdf",
+        "https://www.nps.gov/inde/learn/historyculture/places-carpentershall.htm"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/gm71005415/",
+        "https://www.argomaps.org/maps/commonwealth:cj82m2470/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SAVANNAH_SPRING_HILL_REDOUBT",
+      "years": [
+        1779,
+        1779
+      ],
+      "kind": "military_vicinity",
+      "candidate_polygon_ids": [
+        "SAVANNAH_TOWN_1778"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://archaeology.uga.edu/gasf/report/13453",
+        "https://archaeology.uga.edu/gasf/report/4610"
+      ],
+      "polygon_source_urls": [
+        "https://dlg.usg.edu/record/guan_hmap_hmap1779w5",
+        "https://dlg.usg.edu/record/guan_hmap_hmap1779p4"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SAVANNAH_EAST_DEFENSE_1778",
+      "years": [
+        1778,
+        1778
+      ],
+      "kind": "conflict_damage",
+      "candidate_polygon_ids": [
+        "SAVANNAH_TOWN_1778"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.loc.gov/item/gm71000888/",
+        "https://www.georgiahistory.com/ghmi_marker_updated/capture-of-savannah/"
+      ],
+      "polygon_source_urls": [
+        "https://dlg.usg.edu/record/guan_hmap_hmap1779w5",
+        "https://dlg.usg.edu/record/guan_hmap_hmap1779p4"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SAVANNAH_FORT_PREVOST_WAYNE",
+      "years": [
+        1776,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "SAVANNAH_TOWN_1778"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://sah-archipedia.org/buildings/GA-02-15.1",
+        "https://dlg.usg.edu/record/dlg_ggpd_s-ga-bs700-ps9-bm1-b1981-bm3"
+      ],
+      "polygon_source_urls": [
+        "https://dlg.usg.edu/record/guan_hmap_hmap1779w5",
+        "https://dlg.usg.edu/record/guan_hmap_hmap1779p4"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SAVANNAH_COLONIAL_CEMETERY",
+      "years": [
+        1750,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "SAVANNAH_TOWN_1778"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://dlg.usg.edu/record/dlg_ghm_colonial-park",
+        "https://archaeology.uga.edu/gasf/report/4610"
+      ],
+      "polygon_source_urls": [
+        "https://dlg.usg.edu/record/guan_hmap_hmap1779w5",
+        "https://dlg.usg.edu/record/guan_hmap_hmap1779p4"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SAVANNAH_BRYAN_STREET_CHURCH",
+      "years": [
+        1793,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "SAVANNAH_TOWN_1778"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://archives.nypl.org/scm/20852",
+        "https://tile.loc.gov/storage-services/master/pnp/habshaer/ga/ga0000/ga0018/data/ga0018data.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://dlg.usg.edu/record/guan_hmap_hmap1779w5",
+        "https://dlg.usg.edu/record/guan_hmap_hmap1779p4"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CHARLESTON_HORN_REMAINS",
+      "years": [
+        1784,
+        1799
+      ],
+      "kind": "historic_ruins",
+      "candidate_polygon_ids": [
+        "CHARLESTON_OLD_TOWN_1780"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.ccpl.org/charleston-time-machine/horn-work-marion-squares-tabby-fortress",
+        "https://www.ccpl.org/uncovering-history-locating-horn-work-under-marion-square"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/gm71002163/",
+        "https://www.loc.gov/item/gm71000887/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CHARLESTON_OLD_EXCHANGE",
+      "years": [
+        1771,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "CHARLESTON_OLD_TOWN_1780"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nationalregister.sc.gov/charleston/S10817710010/index.htm",
+        "https://npgallery.nps.gov/NRHP/GetAsset/NHLS/69000160_text"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/gm71002163/",
+        "https://www.loc.gov/item/gm71000887/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CHARLESTON_GADSDEN_WHARF",
+      "years": [
+        1767,
+        1799
+      ],
+      "kind": "trade_influence",
+      "candidate_polygon_ids": [
+        "CHARLESTON_OLD_TOWN_1780",
+        "CHARLESTON_HORN_WORK"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.loc.gov/item/gm71002163/",
+        "https://www.ccpl.org/charleston-time-machine/story-gadsdens-wharf"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/gm71002163/",
+        "https://www.loc.gov/item/gm71000887/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_45019_edges.zip"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CHARLESTON_ST_MICHAEL",
+      "years": [
+        1761,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "CHARLESTON_OLD_TOWN_1780"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.scencyclopedia.org/sce/entries/st-michaels-church/",
+        "https://citeseerx.ist.psu.edu/document?doi=575c801c1a696951c9e1e48b8ef92c5576a341ce&repid=rep1&type=pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/gm71002163/",
+        "https://www.loc.gov/item/gm71000887/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CHARLESTON_OLD_STATE_HOUSE",
+      "years": [
+        1753,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "CHARLESTON_OLD_TOWN_1780",
+        "CHARLESTON_HORN_WORK"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.studentconnection.scstatehouse.gov/state-house-history",
+        "https://home.nps.gov/places/charleston-county-courthouse.htm"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/gm71002163/",
+        "https://www.loc.gov/item/gm71000887/",
+        "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_45019_edges.zip"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "GRENADA_HOSPITAL_HILL",
+      "years": [
+        1763,
+        1779
+      ],
+      "kind": "military_vicinity",
+      "candidate_polygon_ids": [
+        "GRENADA_ST_GEORGES_PORT",
+        "GRENADA_FORT_GEORGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.oas.org/en/sedi/dsd/Biodiversity/Sustainable_Cities/Sustainable_Communities/Proposals/T%26T-Caribbean%20Network%20for%20Urban%20Land%20Mngmnt%20%28Transport%29/Technical%20Cooperation%20Mission%20Report%20prepared%20by%20David%20Lesterhuis%20in%20August%202004%5B1%5D%5B1%5D.pdf",
+        "https://clements.umich.edu/recent-acquisition-map-of-grenada/"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/2010593380/",
+        "https://www.loc.gov/item/90683958/",
+        "https://www.oas.org/en/sedi/dsd/Biodiversity/Sustainable_Cities/Sustainable_Communities/Proposals/T%26T-Caribbean%20Network%20for%20Urban%20Land%20Mngmnt%20%28Transport%29/Technical%20Cooperation%20Mission%20Report%20prepared%20by%20David%20Lesterhuis%20in%20August%202004%5B1%5D%5B1%5D.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "TRINIDAD_FORT_SAN_ANDRES",
+      "years": [
+        1787,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "TRINIDAD_PORT_OF_SPAIN_CORE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://nationaltrust.tt/location/fort-san-andres/",
+        "https://citizensforconservationtt.org/home/sites/fort-san-andres-port-of-spain/"
+      ],
+      "polygon_source_urls": [
+        "https://journals.sta.uwi.edu/ojs/index.php/hia/article/download/1329/1207/2520",
+        "https://www.openstreetmap.org/node/1085675381"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "JAMAICA_SPANISH_TOWN_PARADE",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "JAMAICA_SPANISH_TOWN_OLD_CORE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.jamaicanfamilysearch.com/Members/sptnmap.htm",
+        "https://nljdigital.nlj.gov.jm/items/show/5208"
+      ],
+      "polygon_source_urls": [
+        "https://www.jamaicanfamilysearch.com/Members/sptnmap.htm",
+        "https://nljdigital.nlj.gov.jm/items/show/5208"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "KINGSTON_COLONIAL_PORT",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "trade_influence",
+      "candidate_polygon_ids": [
+        "KINGSTON_HAY_TOWN_1745",
+        "KINGSTON_BLACK_BURIAL_GROUND",
+        "KINGSTON_PARADE_GROUND"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.loc.gov/item/2006629864/",
+        "https://www.argomaps.org/maps/commonwealth%3A7h149x87x/"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/2006629864/",
+        "https://www.argomaps.org/maps/commonwealth%3A7h149x87x/",
+        "https://oireader.wm.edu/open_wmq/hidden-in-plain-sight/hidden-in-plain-sight-escaped-slaves-in-late-eighteenth-and-early-nineteenth-century-jamaica/",
+        "https://www.openstreetmap.org/#map=16/17.9710/-76.7919"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "KINGSTON_HIBBERT_HOUSE",
+      "years": [
+        1755,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "KINGSTON_HAY_TOWN_1745",
+        "KINGSTON_PARADE_GROUND"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.openstreetmap.org/#map=16/17.9710/-76.7919",
+        "https://www.jnht.gov.jm/headquarters_house.php"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/2006629864/",
+        "https://www.argomaps.org/maps/commonwealth%3A7h149x87x/",
+        "https://www.openstreetmap.org/#map=16/17.9710/-76.7919"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "KINGSTON_PARISH_CHURCH",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "KINGSTON_HAY_TOWN_1745",
+        "KINGSTON_PARADE_GROUND",
+        "KINGSTON_BLACK_BURIAL_GROUND"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.loc.gov/item/2006629864/",
+        "https://www.openstreetmap.org/#map=16/17.9710/-76.7919"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/2006629864/",
+        "https://www.argomaps.org/maps/commonwealth%3A7h149x87x/",
+        "https://www.openstreetmap.org/#map=16/17.9710/-76.7919",
+        "https://oireader.wm.edu/open_wmq/hidden-in-plain-sight/hidden-in-plain-sight-escaped-slaves-in-late-eighteenth-and-early-nineteenth-century-jamaica/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "KINGSTON_PUBLIC_HOSPITAL",
+      "years": [
+        1776,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "KINGSTON_HAY_TOWN_1745",
+        "KINGSTON_PARADE_GROUND"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.moh.gov.jm/tenders/terms-of-reference-project-officer/",
+        "https://jis.gov.jm/kph-celebrates-240-years-this-year/"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/2006629864/",
+        "https://www.argomaps.org/maps/commonwealth%3A7h149x87x/",
+        "https://www.openstreetmap.org/#map=16/17.9710/-76.7919"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "KINGSTON_COKE_CHAPEL",
+      "years": [
+        1790,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "KINGSTON_HAY_TOWN_1745",
+        "KINGSTON_PARADE_GROUND"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.openstreetmap.org/#map=16/17.9710/-76.7919",
+        "https://jis.gov.jm/information/jamaica-heritage-sites/kingston-heritage-sites/"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/2006629864/",
+        "https://www.argomaps.org/maps/commonwealth%3A7h149x87x/",
+        "https://www.openstreetmap.org/#map=16/17.9710/-76.7919"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "KINGSTON_WINDWARD_CHAPEL",
+      "years": [
+        1791,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "KINGSTON_HAY_TOWN_1745"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://nlj.gov.jm/project/george-lisle-liele-1750-1826/",
+        "https://past.jamaica-gleaner.com/article/news/20240225/origin-baptist-church-jamaica"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/2006629864/",
+        "https://www.argomaps.org/maps/commonwealth%3A7h149x87x/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "JAMAICA_PORT_ROYAL_VICTUALLING_EAST",
+      "years": [
+        1799,
+        1799
+      ],
+      "kind": "military_vicinity",
+      "candidate_polygon_ids": [
+        "JAMAICA_PORT_ROYAL_DOCKYARD",
+        "JAMAICA_PORT_ROYAL_TOWN",
+        "JAMAICA_FORT_CHARLES"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://websitearchive2020.nepa.gov.jm/new/services_products/applications/eias/docs/kingston/port_royal/eia-port_royal_cruise_pier_development_project.pdf",
+        "https://whc.unesco.org/document/209701"
+      ],
+      "polygon_source_urls": [
+        "https://hdl.huntington.org/digital/collection/p15150coll4/id/10150/",
+        "https://www.argomaps.org/maps/commonwealth-oai%3Arj434391f"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "JAMAICA_PORT_ROYAL_NAVAL_HOSPITAL",
+      "years": [
+        1743,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "JAMAICA_PORT_ROYAL_TOWN",
+        "JAMAICA_PORT_ROYAL_DOCKYARD",
+        "JAMAICA_FORT_CHARLES"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.jnht.gov.jm/site_port_royal.php",
+        "https://whc.unesco.org/document/209701"
+      ],
+      "polygon_source_urls": [
+        "https://hdl.huntington.org/digital/collection/p15150coll4/id/10150/",
+        "https://www.argomaps.org/maps/commonwealth-oai%3Arj434391f"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "JAMAICA_PORT_ROYAL_ST_PETERS",
+      "years": [
+        1725,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "JAMAICA_PORT_ROYAL_TOWN",
+        "JAMAICA_PORT_ROYAL_DOCKYARD",
+        "JAMAICA_FORT_CHARLES"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.jnht.gov.jm/site_port_royal.php",
+        "https://whc.unesco.org/document/209701"
+      ],
+      "polygon_source_urls": [
+        "https://hdl.huntington.org/digital/collection/p15150coll4/id/10150/",
+        "https://www.argomaps.org/maps/commonwealth-oai%3Arj434391f"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BARBADOS_BRIDGETOWN_CAREENAGE",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "trade_influence",
+      "candidate_polygon_ids": [
+        "BARBADOS_BRIDGETOWN_1766",
+        "BARBADOS_BRIDGETOWN_FIRE_BLOCKS_1766"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "harbor_vs_city_blocks",
+      "reason_zh": "布里奇敦修船港池属于水岸设施，不应用1766年街区面代替。",
+      "source_urls": [
+        "https://texashistory.unt.edu/ark:/67531/metapth231584/",
+        "https://whc.unesco.org/en/list/1376"
+      ],
+      "polygon_source_urls": [
+        "https://texashistory.unt.edu/ark:/67531/metapth231584/",
+        "https://colenda.library.upenn.edu/catalog/81431-p3057d05r"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BARBADOS_BRIDGETOWN_ST_MICHAEL",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "BARBADOS_BRIDGETOWN_1766",
+        "BARBADOS_BRIDGETOWN_FIRE_BLOCKS_1766"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://texashistory.unt.edu/ark:/67531/metapth231584/",
+        "https://whc.unesco.org/uploads/nominations/1376.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://texashistory.unt.edu/ark:/67531/metapth231584/",
+        "https://colenda.library.upenn.edu/catalog/81431-p3057d05r"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BARBADOS_CHARLES_FORT_EARLY",
+      "years": [
+        1700,
+        1747
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "BARBADOS_ST_ANNS_CASTLE"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "different_fort_structures",
+      "reason_zh": "查尔斯堡早期驻点与圣安堡是不同设施，且圣安堡不能说明1700年前期查尔斯堡原有墙体。",
+      "source_urls": [
+        "https://whc.unesco.org/uploads/nominations/1376.pdf",
+        "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/"
+      ],
+      "polygon_source_urls": [
+        "https://whc.unesco.org/uploads/nominations/1376.pdf",
+        "https://whc.unesco.org/en/list/1376"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BARBADOS_CHARLES_FASCINE_NORTH",
+      "years": [
+        1748,
+        1748
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "BARBADOS_CHARLES_FORT_1748",
+        "BARBADOS_ST_ANNS_CASTLE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/",
+        "https://bajanthings.com/wp-content/uploads/2025/02/RC7523968-86363250-0c06-4dbd-998a-95137197a75a_7523968_MPH_1_597_001_2xZoom_HiRes4096.webp"
+      ],
+      "polygon_source_urls": [
+        "https://whc.unesco.org/uploads/nominations/1376.pdf",
+        "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/",
+        "https://whc.unesco.org/en/list/1376"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BARBADOS_CHARLES_FASCINE_SOUTH",
+      "years": [
+        1748,
+        1748
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "BARBADOS_CHARLES_FORT_1748",
+        "BARBADOS_ST_ANNS_CASTLE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/",
+        "https://bajanthings.com/wp-content/uploads/2025/02/RC7523968-86363250-0c06-4dbd-998a-95137197a75a_7523968_MPH_1_597_001_2xZoom_HiRes4096.webp"
+      ],
+      "polygon_source_urls": [
+        "https://whc.unesco.org/uploads/nominations/1376.pdf",
+        "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/",
+        "https://whc.unesco.org/en/list/1376"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BARBADOS_GARRISON_OLD_PARADE",
+      "years": [
+        1789,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "BARBADOS_GARRISON_STONE_BARRACKS",
+        "BARBADOS_ST_ANNS_CASTLE",
+        "BARBADOS_GARRISON_DRILL_HALL",
+        "BARBADOS_CHARLES_FORT_1748"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://whc.unesco.org/uploads/nominations/1376.pdf",
+        "https://whc.unesco.org/en/list/1376"
+      ],
+      "polygon_source_urls": [
+        "https://whc.unesco.org/uploads/nominations/1376.pdf",
+        "https://whc.unesco.org/document/152514",
+        "https://whc.unesco.org/en/list/1376",
+        "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BARBADOS_GARRISON_WEST_INDIA_BARRACKS",
+      "years": [
+        1791,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "BARBADOS_GARRISON_STONE_BARRACKS",
+        "BARBADOS_ST_ANNS_CASTLE",
+        "BARBADOS_GARRISON_DRILL_HALL",
+        "BARBADOS_CHARLES_FORT_1748"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://whc.unesco.org/uploads/nominations/1376.pdf",
+        "https://whc.unesco.org/document/152514"
+      ],
+      "polygon_source_urls": [
+        "https://whc.unesco.org/uploads/nominations/1376.pdf",
+        "https://whc.unesco.org/document/152514",
+        "https://whc.unesco.org/en/list/1376",
+        "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CEYLON_COLOMBO_DELFT_GATE",
+      "years": [
+        1733,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "CEYLON_COLOMBO_DUTCH_FORT",
+        "CEYLON_COLOMBO_DUTCH_HOSPITAL"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/696/city-and-castle-at-colombo",
+        "https://fssh.rjt.ac.lk/wp-content/uploads/2024/01/JAHS-10I-20-28-pp-1.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/696/city-and-castle-at-colombo",
+        "https://www.atlasofmutualheritage.nl/page/720/map-of-the-fort-and-city-of-colombo",
+        "https://fssh.rjt.ac.lk/wp-content/uploads/2024/01/JAHS-10I-20-28-pp-1.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CEYLON_COLOMBO_GALLE_GATE",
+      "years": [
+        1733,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "CEYLON_COLOMBO_DUTCH_FORT",
+        "CEYLON_COLOMBO_DUTCH_HOSPITAL"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/696/city-and-castle-at-colombo",
+        "https://fssh.rjt.ac.lk/wp-content/uploads/2024/01/JAHS-10I-20-28-pp-1.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/696/city-and-castle-at-colombo",
+        "https://www.atlasofmutualheritage.nl/page/720/map-of-the-fort-and-city-of-colombo",
+        "https://fssh.rjt.ac.lk/wp-content/uploads/2024/01/JAHS-10I-20-28-pp-1.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CEYLON_COLOMBO_WATER_GATE",
+      "years": [
+        1733,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "CEYLON_COLOMBO_DUTCH_FORT",
+        "CEYLON_COLOMBO_DUTCH_HOSPITAL"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/696/city-and-castle-at-colombo",
+        "https://fssh.rjt.ac.lk/wp-content/uploads/2024/01/JAHS-10I-20-28-pp-1.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/696/city-and-castle-at-colombo",
+        "https://www.atlasofmutualheritage.nl/page/720/map-of-the-fort-and-city-of-colombo",
+        "https://fssh.rjt.ac.lk/wp-content/uploads/2024/01/JAHS-10I-20-28-pp-1.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CEYLON_COLOMBO_DEN_BRIEL",
+      "years": [
+        1733,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "CEYLON_COLOMBO_DUTCH_FORT",
+        "CEYLON_COLOMBO_DUTCH_HOSPITAL"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/696/city-and-castle-at-colombo",
+        "https://fssh.rjt.ac.lk/wp-content/uploads/2024/01/JAHS-10I-20-28-pp-1.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/696/city-and-castle-at-colombo",
+        "https://www.atlasofmutualheritage.nl/page/720/map-of-the-fort-and-city-of-colombo",
+        "https://fssh.rjt.ac.lk/wp-content/uploads/2024/01/JAHS-10I-20-28-pp-1.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CEYLON_GALLE_OLD_GATE",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "CEYLON_GALLE_FORTIFIED_TOWN",
+        "CEYLON_GALLE_DUTCH_WAREHOUSE",
+        "CEYLON_GALLE_REFORMED_CHURCH"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3137/map-of-the-fort-at-galle",
+        "https://ccf.gov.lk/museums/galle-museum/"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3137/map-of-the-fort-at-galle",
+        "https://www.atlasofmutualheritage.nl/page/3107/map-of-the-fortifications-at-galle",
+        "https://ccf.gov.lk/museums/galle-museum/",
+        "https://whc.unesco.org/archive/advisory_body_evaluation/451.pdf",
+        "https://ccf.gov.lk/heritage-sites/galle-fort/",
+        "https://whc.unesco.org/en/list/451/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CEYLON_GALLE_STAR_BASTION",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "CEYLON_GALLE_FORTIFIED_TOWN",
+        "CEYLON_GALLE_REFORMED_CHURCH",
+        "CEYLON_GALLE_DUTCH_WAREHOUSE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3137/map-of-the-fort-at-galle",
+        "https://mass.cultureelerfgoed.nl/documents/00000041.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3137/map-of-the-fort-at-galle",
+        "https://www.atlasofmutualheritage.nl/page/3107/map-of-the-fortifications-at-galle",
+        "https://ccf.gov.lk/heritage-sites/galle-fort/",
+        "https://whc.unesco.org/en/list/451/",
+        "https://ccf.gov.lk/museums/galle-museum/",
+        "https://whc.unesco.org/archive/advisory_body_evaluation/451.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CEYLON_GALLE_BLACK_FORT",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "CEYLON_GALLE_FORTIFIED_TOWN",
+        "CEYLON_GALLE_DUTCH_WAREHOUSE",
+        "CEYLON_GALLE_REFORMED_CHURCH"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "subfort_vs_town",
+      "reason_zh": "加勒黑堡只是旧城堡体系的一处独立设施，不能把整座加勒城镇面冒充黑堡自身围墙。",
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3137/map-of-the-fort-at-galle",
+        "https://mass.cultureelerfgoed.nl/documents/00000041.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3137/map-of-the-fort-at-galle",
+        "https://www.atlasofmutualheritage.nl/page/3107/map-of-the-fortifications-at-galle",
+        "https://ccf.gov.lk/museums/galle-museum/",
+        "https://whc.unesco.org/archive/advisory_body_evaluation/451.pdf",
+        "https://ccf.gov.lk/heritage-sites/galle-fort/",
+        "https://whc.unesco.org/en/list/451/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CEYLON_MATARA_MAIN_FORT",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "CEYLON_MATARA_REFORMED_CHURCH",
+        "CEYLON_MATARA_STAR_FORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://cahcmatara.gov.lk/web/index.php?Itemid=27&id=121&lang=en&option=com_content&task=priview&tmpl=component",
+        "https://www.atlasofmutualheritage.nl/page/3817/matara"
+      ],
+      "polygon_source_urls": [
+        "https://www.icomos.org/public/risk/2005/6-part1.pdf",
+        "https://thenationaltrust.lk/wp-content/uploads/2018/06/National-Trust-Tours-Matara.pdf",
+        "https://www.hindudept.gov.lk/web/index.php?Itemid=27&id=122&lang=en&option=com_content&task=priview&tmpl=component",
+        "https://www.atlasofmutualheritage.nl/page/908/map-of-starfort-van-eck-redoubt-at-matara"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "JAFFNA_FORT_ADMIN_CORE",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "JAFFNA_FORT_1792"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/antiquity/article/antiquity-of-jaffna-fort-new-evidence-from-postdisaster-archaeological-investigations-in-northern-sri-lanka/C55CDA3934CC5C18EE40B903734C7215",
+        "https://www.nara.accu.or.jp/img/dissemination/30th.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3173/map-of-the-fort-at-jaffnapatnam",
+        "https://www.cambridge.org/core/journals/antiquity/article/antiquity-of-jaffna-fort-new-evidence-from-postdisaster-archaeological-investigations-in-northern-sri-lanka/C55CDA3934CC5C18EE40B903734C7215"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "JAFFNA_TOWN_TRADE_AND_TAX",
+      "years": [
+        1745,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "JAFFNA_FORT_1792"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://stichtingnederlandsrilanka.nl/wp-content/uploads/2022/07/2022-july-Jaffna-2.pdf",
+        "https://www.atlasofmutualheritage.nl/page/3173/map-of-the-fort-at-jaffnapatnam"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3173/map-of-the-fort-at-jaffnapatnam",
+        "https://www.cambridge.org/core/journals/antiquity/article/antiquity-of-jaffna-fort-new-evidence-from-postdisaster-archaeological-investigations-in-northern-sri-lanka/C55CDA3934CC5C18EE40B903734C7215"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CEYLON_BATTICALOA_VOC_WERF",
+      "years": [
+        1770,
+        1770
+      ],
+      "kind": "military_vicinity",
+      "candidate_polygon_ids": [
+        "CEYLON_BATTICALOA_FORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/5279/map-of-baticaloa",
+        "https://www.atlasofmutualheritage.nl/page/5281/map-of-the-fort-at-baticaloa"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/5281/map-of-the-fort-at-baticaloa",
+        "https://internationalheritage.dutchculture.nl/en/conservation-dutch-fort-batticaloa"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CEYLON_BATTICALOA_PULIYANTIVU",
+      "years": [
+        1770,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "CEYLON_BATTICALOA_FORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/5279/map-of-baticaloa",
+        "https://noolaham.net/project/1025/102411/102411.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/5281/map-of-the-fort-at-baticaloa",
+        "https://internationalheritage.dutchculture.nl/en/conservation-dutch-fort-batticaloa"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MYSORE_MANGALORE_BUNDER",
+      "years": [
+        1777,
+        1799
+      ],
+      "kind": "trade_influence",
+      "candidate_polygon_ids": [
+        "MYSORE_MANGALORE_FORT"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "harbor_vs_fort",
+      "reason_zh": "芒格洛尔商埠海港与主堡围墙不是同一空间对象。",
+      "source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18903",
+        "https://pure.eur.nl/files/82530593/on_Heritage_and.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18903",
+        "https://www.exteriores.gob.es/es/ServiciosAlCiudadano/PublicacionesOficiales/Historias%20del%20Mundo%20La%20gran%20aventura%20de%20la%20diplomacia%20espa%C3%B1ola.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MYSORE_MANGALORE_MILAGRES",
+      "years": [
+        1756,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "MYSORE_MANGALORE_FORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://milagres.church/history/",
+        "https://www.openstreetmap.org/way/26564565"
+      ],
+      "polygon_source_urls": [
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/18903",
+        "https://www.exteriores.gob.es/es/ServiciosAlCiudadano/PublicacionesOficiales/Historias%20del%20Mundo%20La%20gran%20aventura%20de%20la%20diplomacia%20espa%C3%B1ola.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MYSORE_BANGALORE_PETTAH_NORTH_GATE",
+      "years": [
+        1791,
+        1791
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "MYSORE_BANGALORE_PETTAH"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts-7",
+        "https://gallica.bnf.fr/ark:/12148/btv1b84422541"
+      ],
+      "polygon_source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts-7",
+        "https://gallica.bnf.fr/ark:/12148/btv1b84422541"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MYSORE_BANGALORE_DELHI_GATE",
+      "years": [
+        1782,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "MYSORE_BANGALORE_OVAL_FORT",
+        "MYSORE_BANGALORE_PETTAH",
+        "MYSORE_BANGALORE_TIPU_PALACE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts-7",
+        "https://gallica.bnf.fr/ark:/12148/btv1b84422541"
+      ],
+      "polygon_source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts-7",
+        "https://gallica.bnf.fr/ark:/12148/btv1b84422541"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MYSORE_BANGALORE_MYSORE_GATE",
+      "years": [
+        1791,
+        1791
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "MYSORE_BANGALORE_OVAL_FORT",
+        "MYSORE_BANGALORE_TIPU_PALACE",
+        "MYSORE_BANGALORE_PETTAH"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts-7",
+        "https://gallica.bnf.fr/ark:/12148/btv1b84422541"
+      ],
+      "polygon_source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts-7",
+        "https://gallica.bnf.fr/ark:/12148/btv1b84422541"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MYSORE_BANGALORE_KOTE_TEMPLE",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "MYSORE_BANGALORE_OVAL_FORT",
+        "MYSORE_BANGALORE_TIPU_PALACE",
+        "MYSORE_BANGALORE_PETTAH"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://censusindia.gov.in/nada/index.php/catalog/45465/download/49669/08_42406_1991_BAN.pdf",
+        "https://gallica.bnf.fr/ark:/12148/btv1b84422541"
+      ],
+      "polygon_source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts-7",
+        "https://gallica.bnf.fr/ark:/12148/btv1b84422541"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SERINGAPATAM_LAL_MAHAL",
+      "years": [
+        1782,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "SERINGAPATAM_WALLED_CITY_1792",
+        "SERINGAPATAM_WALLED_CITY_1799",
+        "SERINGAPATAM_ISLAND",
+        "SERINGAPATAM_RANGANATHASWAMY_TEMPLE",
+        "SERINGAPATAM_MASJID_E_ALA"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/5895/",
+        "https://nmma.nic.in/nmma/NAS1/nmma_doc/IAR/Indian%20Archaeology%201999-2000%20A%20Review.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002247408",
+        "https://commons.wikimedia.org/wiki/File:VII._Plan_of_the_siege_of_Seringapatam_-_Narrative_of_the_campaign_in_India_which_terminated_the_war_with_Tippoo_Sultan_in_1792_(IA_dli.venugopal.389)_(page_200_crop).jpg",
+        "https://commons.wikimedia.org/wiki/File:1781_-_1800_-_09_Seringapatam_Fort.jpg",
+        "https://searcharchives.bl.uk/catalog/040-002036294",
+        "https://commons.wikimedia.org/wiki/File:A_plan_of_Seringapatam,_1790.jpg",
+        "https://whc.unesco.org/en/tentativelists/5895/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SERINGAPATAM_BANGALORE_GATE",
+      "years": [
+        1791,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "SERINGAPATAM_WALLED_CITY_1792",
+        "SERINGAPATAM_WALLED_CITY_1799",
+        "SERINGAPATAM_ISLAND",
+        "SERINGAPATAM_MASJID_E_ALA",
+        "SERINGAPATAM_DARIA_DAULAT_BAGH"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/5895/",
+        "https://www.mq.edu.au/macquarie-archive/seringapatam/placenames.html"
+      ],
+      "polygon_source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002247408",
+        "https://commons.wikimedia.org/wiki/File:VII._Plan_of_the_siege_of_Seringapatam_-_Narrative_of_the_campaign_in_India_which_terminated_the_war_with_Tippoo_Sultan_in_1792_(IA_dli.venugopal.389)_(page_200_crop).jpg",
+        "https://commons.wikimedia.org/wiki/File:1781_-_1800_-_09_Seringapatam_Fort.jpg",
+        "https://searcharchives.bl.uk/catalog/040-002036294",
+        "https://whc.unesco.org/en/tentativelists/5895/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SERINGAPATAM_MYSORE_GATE",
+      "years": [
+        1791,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "SERINGAPATAM_WALLED_CITY_1792",
+        "SERINGAPATAM_ISLAND",
+        "SERINGAPATAM_WALLED_CITY_1799",
+        "SERINGAPATAM_RANGANATHASWAMY_TEMPLE",
+        "SERINGAPATAM_MASJID_E_ALA"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/5895/",
+        "https://www.mq.edu.au/macquarie-archive/seringapatam/placenames.html"
+      ],
+      "polygon_source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002247408",
+        "https://commons.wikimedia.org/wiki/File:VII._Plan_of_the_siege_of_Seringapatam_-_Narrative_of_the_campaign_in_India_which_terminated_the_war_with_Tippoo_Sultan_in_1792_(IA_dli.venugopal.389)_(page_200_crop).jpg",
+        "https://commons.wikimedia.org/wiki/File:1781_-_1800_-_09_Seringapatam_Fort.jpg",
+        "https://searcharchives.bl.uk/catalog/040-002036294",
+        "https://commons.wikimedia.org/wiki/File:A_plan_of_Seringapatam,_1790.jpg",
+        "https://whc.unesco.org/en/tentativelists/5895/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SERINGAPATAM_WATER_GATE",
+      "years": [
+        1792,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "SERINGAPATAM_WALLED_CITY_1792",
+        "SERINGAPATAM_WALLED_CITY_1799",
+        "SERINGAPATAM_ISLAND",
+        "SERINGAPATAM_MASJID_E_ALA",
+        "SERINGAPATAM_RANGANATHASWAMY_TEMPLE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:1781_-_1800_-_09_Seringapatam_Fort.jpg",
+        "https://www.mq.edu.au/macquarie-archive/seringapatam/placenames.html"
+      ],
+      "polygon_source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002247408",
+        "https://commons.wikimedia.org/wiki/File:VII._Plan_of_the_siege_of_Seringapatam_-_Narrative_of_the_campaign_in_India_which_terminated_the_war_with_Tippoo_Sultan_in_1792_(IA_dli.venugopal.389)_(page_200_crop).jpg",
+        "https://commons.wikimedia.org/wiki/File:1781_-_1800_-_09_Seringapatam_Fort.jpg",
+        "https://searcharchives.bl.uk/catalog/040-002036294",
+        "https://whc.unesco.org/en/tentativelists/5895/",
+        "https://commons.wikimedia.org/wiki/File:A_plan_of_Seringapatam,_1790.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SERINGAPATAM_HOALLY_GATE_BODY",
+      "years": [
+        1799,
+        1799
+      ],
+      "kind": "conflict_damage",
+      "candidate_polygon_ids": [
+        "SERINGAPATAM_WALLED_CITY_1799",
+        "SERINGAPATAM_ISLAND",
+        "SERINGAPATAM_MASJID_E_ALA",
+        "SERINGAPATAM_RANGANATHASWAMY_TEMPLE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:1781_-_1800_-_09_Seringapatam_Fort.jpg",
+        "https://www.nma.gov.in/showfile.php?lang=1&level=1&lid=1276&ls_id=965"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:1781_-_1800_-_09_Seringapatam_Fort.jpg",
+        "https://searcharchives.bl.uk/catalog/040-002036294",
+        "https://searcharchives.bl.uk/catalog/040-002247408",
+        "https://commons.wikimedia.org/wiki/File:VII._Plan_of_the_siege_of_Seringapatam_-_Narrative_of_the_campaign_in_India_which_terminated_the_war_with_Tippoo_Sultan_in_1792_(IA_dli.venugopal.389)_(page_200_crop).jpg",
+        "https://whc.unesco.org/en/tentativelists/5895/",
+        "https://commons.wikimedia.org/wiki/File:A_plan_of_Seringapatam,_1790.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SERINGAPATAM_SULTAN_BATERI",
+      "years": [
+        1780,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "SERINGAPATAM_WALLED_CITY_1799",
+        "SERINGAPATAM_ISLAND",
+        "SERINGAPATAM_WALLED_CITY_1792",
+        "SERINGAPATAM_RANGANATHASWAMY_TEMPLE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/5895/",
+        "https://www.mq.edu.au/macquarie-archive/seringapatam/placenames.html"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:1781_-_1800_-_09_Seringapatam_Fort.jpg",
+        "https://searcharchives.bl.uk/catalog/040-002036294",
+        "https://searcharchives.bl.uk/catalog/040-002247408",
+        "https://commons.wikimedia.org/wiki/File:VII._Plan_of_the_siege_of_Seringapatam_-_Narrative_of_the_campaign_in_India_which_terminated_the_war_with_Tippoo_Sultan_in_1792_(IA_dli.venugopal.389)_(page_200_crop).jpg",
+        "https://commons.wikimedia.org/wiki/File:A_plan_of_Seringapatam,_1790.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SERINGAPATAM_INMAN_DUNGEON",
+      "years": [
+        1792,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "SERINGAPATAM_WALLED_CITY_1792",
+        "SERINGAPATAM_WALLED_CITY_1799",
+        "SERINGAPATAM_ISLAND",
+        "SERINGAPATAM_MASJID_E_ALA",
+        "SERINGAPATAM_DARIA_DAULAT_BAGH"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/5895/",
+        "https://www.nma.gov.in/showfile.php?lang=1&level=1&lid=1276&ls_id=965"
+      ],
+      "polygon_source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002247408",
+        "https://commons.wikimedia.org/wiki/File:VII._Plan_of_the_siege_of_Seringapatam_-_Narrative_of_the_campaign_in_India_which_terminated_the_war_with_Tippoo_Sultan_in_1792_(IA_dli.venugopal.389)_(page_200_crop).jpg",
+        "https://commons.wikimedia.org/wiki/File:1781_-_1800_-_09_Seringapatam_Fort.jpg",
+        "https://searcharchives.bl.uk/catalog/040-002036294",
+        "https://whc.unesco.org/en/tentativelists/5895/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SERINGAPATAM_GANJAM_TOWN",
+      "years": [
+        1792,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "SERINGAPATAM_ISLAND",
+        "SERINGAPATAM_GUMBAZ"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002247408",
+        "https://commons.wikimedia.org/wiki/File:VII._Plan_of_the_siege_of_Seringapatam_-_Narrative_of_the_campaign_in_India_which_terminated_the_war_with_Tippoo_Sultan_in_1792_(IA_dli.venugopal.389)_(page_200_crop).jpg"
+      ],
+      "polygon_source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002247408",
+        "https://commons.wikimedia.org/wiki/File:VII._Plan_of_the_siege_of_Seringapatam_-_Narrative_of_the_campaign_in_India_which_terminated_the_war_with_Tippoo_Sultan_in_1792_(IA_dli.venugopal.389)_(page_200_crop).jpg",
+        "https://whc.unesco.org/en/tentativelists/5895/",
+        "https://www.nma.gov.in/showfile.php?lang=1&level=1&lid=1276&ls_id=965"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PENANG_MALAY_OLD_MOSQUE",
+      "years": [
+        1798,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "PENANG_MALAY_OLD_TOWN",
+        "PENANG_GEORGE_TOWN_GRID",
+        "PENANG_CORNWALLIS_OLD_STOCKADE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://gtwhi.com.my/ms/wp-content/uploads/2024/09/Special-Area-Plan_WHSGT_20160109.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PENANG_LIGHT_OLD_GOVERNMENT_HOUSE",
+      "years": [
+        1789,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "PENANG_GEORGE_TOWN_GRID",
+        "PENANG_CORNWALLIS_OLD_STOCKADE",
+        "PENANG_MALAY_OLD_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://gtwhi.com.my/wp-content/uploads/2019/05/A-Guide-to-George-Town_s-Historic-Commercial-and-Civic-Precincts.pdf",
+        "https://whc.unesco.org/document/105988"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://gtwhi.com.my/ms/wp-content/uploads/2024/09/Special-Area-Plan_WHSGT_20160109.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PENANG_PROTESTANT_BURYING_GROUND",
+      "years": [
+        1787,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "PENANG_GEORGE_TOWN_GRID",
+        "PENANG_MALAY_OLD_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://gtwhi.com.my/wp-content/uploads/2019/05/George-Town_s-Northam-Road-Protestant-Cemetery-English.pdf",
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PENANG_EARLY_PORTUGUESE_CHURCH",
+      "years": [
+        1786,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "PENANG_GEORGE_TOWN_GRID",
+        "PENANG_MALAY_OLD_TOWN",
+        "PENANG_CORNWALLIS_OLD_STOCKADE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://gtwhi.com.my/ms/wp-content/uploads/2024/09/Special-Area-Plan_WHSGT_20160109.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PENANG_EARLY_HOSPITAL",
+      "years": [
+        1798,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "PENANG_GEORGE_TOWN_GRID",
+        "PENANG_CORNWALLIS_OLD_STOCKADE",
+        "PENANG_MALAY_OLD_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://gtwhi.com.my/ms/wp-content/uploads/2024/09/Special-Area-Plan_WHSGT_20160109.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PENANG_EARLY_CUSTOM_HOUSE",
+      "years": [
+        1798,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "PENANG_GEORGE_TOWN_GRID",
+        "PENANG_CORNWALLIS_OLD_STOCKADE",
+        "PENANG_MALAY_OLD_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7"
+      ],
+      "polygon_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:The_Map_of_Early_Penang_Showing_the_Malay_Town_on_the_South_of_the_Town_Center_by_Popham_1799.jpg",
+        "https://myartseducationarchive.com/wp-content/uploads/2019/12/Resource-Kit_George-Town-Heritage-Walking-Trail-1.pdf#page=7",
+        "https://gtwhi.com.my/ms/wp-content/uploads/2024/09/Special-Area-Plan_WHSGT_20160109.pdf"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "WARRANE_SYDNEY_COVE",
+      "years": [
+        1788,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "SYDNEY_CONVICT_CAMPS_1788",
+        "SYDNEY_GOVERNOR_GARDEN_1788",
+        "SYDNEY_MARINE_CAMP_1788"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nma.gov.au/defining-moments/resources/first-fleet",
+        "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08"
+      ],
+      "polygon_source_urls": [
+        "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08",
+        "https://walshbayhistory.net/stories/mapping-walsh-bay"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SYDNEY_FIRST_GOVERNMENT_HOUSE",
+      "years": [
+        1788,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "SYDNEY_CONVICT_CAMPS_1788",
+        "SYDNEY_GOVERNOR_GARDEN_1788",
+        "SYDNEY_MARINE_CAMP_1788"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://mhnsw.au/the-first-government-house/",
+        "https://mhnsw.au/stories/general/on-firm-foundations/"
+      ],
+      "polygon_source_urls": [
+        "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08",
+        "https://walshbayhistory.net/stories/mapping-walsh-bay"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SYDNEY_FIRST_HOSPITAL",
+      "years": [
+        1788,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "SYDNEY_CONVICT_CAMPS_1788",
+        "SYDNEY_MARINE_CAMP_1788",
+        "SYDNEY_GOVERNOR_GARDEN_1788"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://majorprojects.planningportal.nsw.gov.au/prweb/PRRestService/mp/01/getContent?AttachRef=SSD-8307%2120190228T022639.604+GMT",
+        "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08"
+      ],
+      "polygon_source_urls": [
+        "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08",
+        "https://walshbayhistory.net/stories/mapping-walsh-bay"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SYDNEY_DAWES_OBSERVATORY",
+      "years": [
+        1788,
+        1791
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "SYDNEY_CONVICT_CAMPS_1788"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://researchers.mq.edu.au/en/publications/sydneys-scientific-beginnings-william-dawes-observatories-in-cont/",
+        "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08"
+      ],
+      "polygon_source_urls": [
+        "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08",
+        "https://walshbayhistory.net/stories/mapping-walsh-bay"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "SYDNEY_FARM_COVE_GARDEN",
+      "years": [
+        1788,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "SYDNEY_CONVICT_CAMPS_1788",
+        "SYDNEY_GOVERNOR_GARDEN_1788",
+        "SYDNEY_MARINE_CAMP_1788"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://mhnsw.au/stories/convict-sydney/the-governors-domain/",
+        "https://mhnsw.au/the-first-government-house/"
+      ],
+      "polygon_source_urls": [
+        "https://collection.sl.nsw.gov.au/digital/rxrGjbJ3ZNR08",
+        "https://walshbayhistory.net/stories/mapping-walsh-bay"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PARRAMATTA_ROSE_HILL_REDOUBT",
+      "years": [
+        1788,
+        1790
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "PARRAMATTA_CONVICT_HUT_ROWS"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.greatersydneyparklands.nsw.gov.au/sites/default/files/2025-03/PP_WalkingTour_ColonialRoseHill_A4DL_web.pdf",
+        "https://majorprojects.planningportal.nsw.gov.au/prweb/PRRestService/mp/01/getContent?AttachRef=SSD-7534-MOD-1%2120190228T021911.942+GMT"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/journals/antiquaries-journal/article/commemoration-and-improvement-parramatta-st-johns-cemetery-new-south-wales-in-its-context-1788c-1840/0620D3DABFF886C60D0A976898CF3292",
+        "https://majorprojects.planningportal.nsw.gov.au/prweb/PRRestService/mp/01/getContent?AttachRef=SSD-7534-MOD-1%2120190228T021911.942+GMT"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PARRAMATTA_GOVERNMENT_HOUSE",
+      "years": [
+        1790,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "PARRAMATTA_CONVICT_HUT_ROWS",
+        "PARRAMATTA_GOVERNMENT_FARM_1792"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://mhnsw.au/stories/general/old-government-house-parramatta/",
+        "https://www.greatersydneyparklands.nsw.gov.au/sites/default/files/2025-03/PP_WalkingTour_ColonialRoseHill_A4DL_web.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/journals/antiquaries-journal/article/commemoration-and-improvement-parramatta-st-johns-cemetery-new-south-wales-in-its-context-1788c-1840/0620D3DABFF886C60D0A976898CF3292",
+        "https://majorprojects.planningportal.nsw.gov.au/prweb/PRRestService/mp/01/getContent?AttachRef=SSD-7534-MOD-1%2120190228T021911.942+GMT"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PARRAMATTA_COLONIAL_HOSPITAL",
+      "years": [
+        1792,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "PARRAMATTA_CONVICT_HUT_ROWS",
+        "PARRAMATTA_GOVERNMENT_FARM_1792"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/antiquaries-journal/article/commemoration-and-improvement-parramatta-st-johns-cemetery-new-south-wales-in-its-context-1788c-1840/0620D3DABFF886C60D0A976898CF3292",
+        "https://historyandheritage.cityofparramatta.nsw.gov.au/blog/2015/05/26/parramatta-timeline-1788-present"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/journals/antiquaries-journal/article/commemoration-and-improvement-parramatta-st-johns-cemetery-new-south-wales-in-its-context-1788c-1840/0620D3DABFF886C60D0A976898CF3292",
+        "https://majorprojects.planningportal.nsw.gov.au/prweb/PRRestService/mp/01/getContent?AttachRef=SSD-7534-MOD-1%2120190228T021911.942+GMT"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PARRAMATTA_EAST_BARRACKS",
+      "years": [
+        1791,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "PARRAMATTA_CONVICT_HUT_ROWS"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/antiquaries-journal/article/commemoration-and-improvement-parramatta-st-johns-cemetery-new-south-wales-in-its-context-1788c-1840/0620D3DABFF886C60D0A976898CF3292",
+        "https://www.sydneymetro.info/sites/default/files/2023-02/Consistency_Assessment_High_Risk_Boreholes_and_Monitoring_Wells_outside_construction_boundary.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/journals/antiquaries-journal/article/commemoration-and-improvement-parramatta-st-johns-cemetery-new-south-wales-in-its-context-1788c-1840/0620D3DABFF886C60D0A976898CF3292",
+        "https://majorprojects.planningportal.nsw.gov.au/prweb/PRRestService/mp/01/getContent?AttachRef=SSD-7534-MOD-1%2120190228T021911.942+GMT"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PARRAMATTA_EXPERIMENT_FARM",
+      "years": [
+        1789,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "PARRAMATTA_CONVICT_HUT_ROWS"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://archival.sl.nsw.gov.au/Details/archive/110363516",
+        "https://historyandheritage.cityofparramatta.nsw.gov.au/blog/2015/05/26/parramatta-timeline-1788-present"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/journals/antiquaries-journal/article/commemoration-and-improvement-parramatta-st-johns-cemetery-new-south-wales-in-its-context-1788c-1840/0620D3DABFF886C60D0A976898CF3292",
+        "https://majorprojects.planningportal.nsw.gov.au/prweb/PRRestService/mp/01/getContent?AttachRef=SSD-7534-MOD-1%2120190228T021911.942+GMT"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "PARRAMATTA_ELIZABETH_FARM",
+      "years": [
+        1793,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "PARRAMATTA_CONVICT_HUT_ROWS"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://mhnsw.au/stories/museum-stories/a-turbulent-past/",
+        "https://mhnsw.au/stories/general/sarah-pettit-macarthurs-first-servant/"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/journals/antiquaries-journal/article/commemoration-and-improvement-parramatta-st-johns-cemetery-new-south-wales-in-its-context-1788c-1840/0620D3DABFF886C60D0A976898CF3292",
+        "https://majorprojects.planningportal.nsw.gov.au/prweb/PRRestService/mp/01/getContent?AttachRef=SSD-7534-MOD-1%2120190228T021911.942+GMT"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "HAWKESBURY_GREEN_HILLS",
+      "years": [
+        1794,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "HAWKESBURY_1794_GRANT_39",
+        "HAWKESBURY_1794_GRANT_68"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.transport.nsw.gov.au/sites/default/files/media/documents/rww/projects/01documents/windsor-bridge-replacement/windsor-bridge-digital-photographic-archival-recording-2018-02.pdf",
+        "https://files.parliament.nsw.gov.au/fileapi/ParlFiles/GetArtifact/0316%20Heritage%20Council%20of%20New%20South%20Wales.pdf?serverRelativeUrl=%2Flcdocs%2Fsubmissions%2F59770%2F0316+Heritage+Council+of+New+South+Wales.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.hawkesbury.nsw.gov.au/__data/assets/pdf_file/0008/64808/SLAB-BARN-STUDY-All.pdf#page=6",
+        "https://www.towardstruth.org.au/themes/country/dispossession/120-frontier-wars/sub0533-hawkesbury-river"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "GOLD_COAST_SEKONDI_ENGLISH_FORT",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "GOLD_COAST_ORANGE_FORT"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "rival_operators_adjacent_forts",
+      "reason_zh": "塞康第英国堡与荷兰橙堡属于相邻但政权主体不同的驻地，不可误将荷兰城堡转为英方堡垒。",
+      "source_urls": [
+        "https://www.slaveryimages.org/database/image-result.php?objectid=92",
+        "https://www.rmg.co.uk/collections/archive/rmgc-object-486977"
+      ],
+      "polygon_source_urls": [
+        "https://gmmb.gov.gh/fort-orange-sekondi-1670s/",
+        "https://www.atlasofmutualheritage.nl/page/1320/floor-plan-of-the-oranje-fort-at-sekondi"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MALUKU_BANDA_NEIRA_PORT",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "trade_influence",
+      "candidate_polygon_ids": [
+        "MALUKU_BANDA_BELGICA"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nationaalarchief.nl/onderzoeken/archief/1.10.59/invnr/407",
+        "https://searcharchives.bl.uk/catalog/040-000004502"
+      ],
+      "polygon_source_urls": [
+        "https://www.nationaalarchief.nl/onderzoeken/archief/1.10.59/invnr/407",
+        "https://searcharchives.bl.uk/catalog/040-000004502"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MALUKU_BANDA_NASSAU",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "MALUKU_BANDA_BELGICA"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "different_fort_structures",
+      "reason_zh": "班达奈拉的拿骚堡与贝尔吉卡堡为两座不同荷兰要塞，不能借贝尔吉卡堡绘制拿骚堡。",
+      "source_urls": [
+        "https://www.nationaalarchief.nl/onderzoeken/archief/1.10.59/invnr/407",
+        "https://searcharchives.bl.uk/catalog/040-000004502"
+      ],
+      "polygon_source_urls": [
+        "https://www.nationaalarchief.nl/onderzoeken/archief/1.10.59/invnr/407",
+        "https://searcharchives.bl.uk/catalog/040-000004502"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MALACCA_STADTHUYS",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "MALACCA_MAIN_FORT",
+        "MALACCA_WEST_BANK_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://whc.unesco.org/document/152086",
+        "https://www.atlasofmutualheritage.nl/page/3906/map-of-malakka"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3900/map-of-malacca-and-environs",
+        "https://stax.strath.ac.uk/downloads/4x51hj22k",
+        "https://www.atlasofmutualheritage.nl/page/3864/map-of-the-city-and-fort-at-malakka"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MALACCA_TRANQUERA_GATE",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "MALACCA_WEST_BANK_TOWN",
+        "MALACCA_MAIN_FORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3872/the-fort-of-tranquera-at-melaka",
+        "https://www.atlasofmutualheritage.nl/page/3864/map-of-the-city-and-fort-at-malakka"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3900/map-of-malacca-and-environs",
+        "https://www.atlasofmutualheritage.nl/page/3864/map-of-the-city-and-fort-at-malakka",
+        "https://stax.strath.ac.uk/downloads/4x51hj22k"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MALACCA_CHENG_HOON_TENG",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "MALACCA_WEST_BANK_TOWN",
+        "MALACCA_MAIN_FORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://schina-publication.hkust.edu.hk/en/node/2854",
+        "https://dao.jic.io/en/sites/malacca-cheng-hoon-teng"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3900/map-of-malacca-and-environs",
+        "https://www.atlasofmutualheritage.nl/page/3864/map-of-the-city-and-fort-at-malakka",
+        "https://stax.strath.ac.uk/downloads/4x51hj22k"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MALACCA_KAMPUNG_KLING_MOSQUE",
+      "years": [
+        1748,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "MALACCA_WEST_BANK_TOWN",
+        "MALACCA_MAIN_FORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.archnet.org/sites/4010?media_content_id=7286",
+        "https://commons.wikimedia.org/wiki/Category:Kampung_Kling_Mosque"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3900/map-of-malacca-and-environs",
+        "https://www.atlasofmutualheritage.nl/page/3864/map-of-the-city-and-fort-at-malakka",
+        "https://stax.strath.ac.uk/downloads/4x51hj22k"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MALACCA_CHETTI_TEMPLE",
+      "years": [
+        1781,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "MALACCA_WEST_BANK_TOWN",
+        "MALACCA_MAIN_FORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nhb.gov.sg/-/media/nhb/files/media/releases/new-releases/media-release--discover-the-captivating-story-of-the-chetti-melaka-in-s.pdf",
+        "https://www.atlasofmutualheritage.nl/page/3864/map-of-the-city-and-fort-at-malakka"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3900/map-of-malacca-and-environs",
+        "https://www.atlasofmutualheritage.nl/page/3864/map-of-the-city-and-fort-at-malakka",
+        "https://stax.strath.ac.uk/downloads/4x51hj22k"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "MALACCA_VOC_LATE_ENSLAVED_QUARTERS",
+      "years": [
+        1790,
+        1795
+      ],
+      "kind": "company_post",
+      "candidate_polygon_ids": [
+        "MALACCA_MAIN_FORT",
+        "MALACCA_WEST_BANK_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3864/map-of-the-city-and-fort-at-malakka",
+        "https://uplopen.com/books/10008/files/497685a8-568b-48b1-8d00-18d103ecc788.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.atlasofmutualheritage.nl/page/3900/map-of-malacca-and-environs",
+        "https://stax.strath.ac.uk/downloads/4x51hj22k",
+        "https://www.atlasofmutualheritage.nl/page/3864/map-of-the-city-and-fort-at-malakka"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BOMBAY_EARLY_COMPANY_PORT",
+      "years": [
+        1700,
+        1783
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "BOMBAY_CASTLE_GROSE_CORE",
+        "BOMBAY_FORT_ST_GEORGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf",
+        "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/greater_bombay/general.html"
+      ],
+      "polygon_source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BOMBAY_CASTLE",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "administration",
+      "candidate_polygon_ids": [
+        "BOMBAY_CASTLE_GROSE_CORE",
+        "BOMBAY_FORT_ST_GEORGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://mumbaiport.gov.in/WriteReadData/RTF1984/1676444268.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BOMBAY_DONGRI_OLD_FORT_CLEARANCE",
+      "years": [
+        1750,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "BOMBAY_FORT_ST_GEORGE",
+        "BOMBAY_CASTLE_GROSE_CORE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "polygon_source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BOMBAY_OLD_DOCKYARD",
+      "years": [
+        1750,
+        1799
+      ],
+      "kind": "trade_influence",
+      "candidate_polygon_ids": [
+        "BOMBAY_CASTLE_GROSE_CORE",
+        "BOMBAY_FORT_ST_GEORGE"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "dockyard_vs_fort",
+      "reason_zh": "孟买早期船坞与孟买城堡／城防堡的设施边线不相同。",
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "polygon_source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BOMBAY_GATE_APOLLO",
+      "years": [
+        1750,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "BOMBAY_CASTLE_GROSE_CORE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "polygon_source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BOMBAY_GATE_CHURCH",
+      "years": [
+        1750,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "BOMBAY_CASTLE_GROSE_CORE",
+        "BOMBAY_FORT_ST_GEORGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "polygon_source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BOMBAY_GATE_BAZAAR",
+      "years": [
+        1750,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "BOMBAY_FORT_ST_GEORGE",
+        "BOMBAY_CASTLE_GROSE_CORE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "polygon_source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BOMBAY_BANIAN_BASTION_CLEARANCE",
+      "years": [
+        1757,
+        1758
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "BOMBAY_CASTLE_GROSE_CORE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "polygon_source_urls": [
+        "https://artsandculture.google.com/asset/grose-s-plan-of-bombay/lAFrDpUcer0zcQ?hl=en",
+        "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BOSTON_CHARLESTOWN_BURNING",
+      "years": [
+        1775,
+        1775
+      ],
+      "kind": "conflict_damage",
+      "candidate_polygon_ids": [
+        "BOSTON_SHAWMUT_SIEGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nps.gov/articles/000/the-burning-of-charlestown.htm",
+        "https://www.nps.gov/articles/000/siege-of-boston-overview.htm"
+      ],
+      "polygon_source_urls": [
+        "https://www.nps.gov/articles/000/siege-of-boston-map.htm",
+        "https://www.loc.gov/item/gm71000619/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "BOSTON_BREEDS_HILL_REDOUBT",
+      "years": [
+        1775,
+        1775
+      ],
+      "kind": "battle",
+      "candidate_polygon_ids": [
+        "BOSTON_SHAWMUT_SIEGE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.nps.gov/places/bunker-hill.htm",
+        "https://www.nps.gov/articles/000/siege-of-boston-overview.htm"
+      ],
+      "polygon_source_urls": [
+        "https://www.nps.gov/articles/000/siege-of-boston-map.htm",
+        "https://www.loc.gov/item/gm71000619/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "STATIA_ROADSTEAD_SHIP_SEIZURES",
+      "years": [
+        1781,
+        1781
+      ],
+      "kind": "conflict_damage",
+      "candidate_polygon_ids": [
+        "STATIA_LOWER_TOWN_SEIZURES",
+        "STATIA_FORT_ORANJE"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "maritime_vs_fort",
+      "reason_zh": "圣尤斯特歇斯锚地扣船发生于水面，旧城和奥兰治堡是陆上范围。",
+      "source_urls": [
+        "https://english.cultureelerfgoed.nl/binaries/cultureelerfgoed-en/documenten/publications/2024/01/01/ram-282-flotsam-jetsam-and-lost-anchors-at-statias-roads/RCE_RAM%2B282_St%2BEustatius.pdf",
+        "https://www.dcbd.nl/resource/3398"
+      ],
+      "polygon_source_urls": [
+        "https://www.dcbd.nl/resource/3398",
+        "https://english.cultureelerfgoed.nl/site/binaries/site-content/collections/documents/2026/01/01/landscape-biographies-saba-st-eustatius/en-the-historical-gem-landschap-en-erfgoed-van-sint-eustatius.pdf",
+        "https://www.atlasofmutualheritage.nl/page/2151/plan-of-fort-oranje-on-saint-eustatius"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "STATIA_HONEN_DALIM",
+      "years": [
+        1781,
+        1781
+      ],
+      "kind": "conflict_damage",
+      "candidate_polygon_ids": [
+        "STATIA_LOWER_TOWN_SEIZURES",
+        "STATIA_FORT_ORANJE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://english.cultureelerfgoed.nl/site/binaries/site-content/collections/documents/2026/01/01/landscape-biographies-saba-st-eustatius/en-the-historical-gem-landschap-en-erfgoed-van-sint-eustatius.pdf",
+        "https://oajournals.fupress.net/index.php/cromohs/article/download/16454/14912?inline=1"
+      ],
+      "polygon_source_urls": [
+        "https://www.dcbd.nl/resource/3398",
+        "https://english.cultureelerfgoed.nl/site/binaries/site-content/collections/documents/2026/01/01/landscape-biographies-saba-st-eustatius/en-the-historical-gem-landschap-en-erfgoed-van-sint-eustatius.pdf",
+        "https://www.atlasofmutualheritage.nl/page/2151/plan-of-fort-oranje-on-saint-eustatius"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "STATIA_FORT_AMSTERDAM_SITE",
+      "years": [
+        1781,
+        1781
+      ],
+      "kind": "historic_ruins",
+      "candidate_polygon_ids": [
+        "STATIA_LOWER_TOWN_SEIZURES",
+        "STATIA_FORT_ORANJE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.dcbd.nl/resource/3398",
+        "https://peercommunityjournal.org/item/10.24072/pcjournal.643.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.dcbd.nl/resource/3398",
+        "https://english.cultureelerfgoed.nl/site/binaries/site-content/collections/documents/2026/01/01/landscape-biographies-saba-st-eustatius/en-the-historical-gem-landschap-en-erfgoed-van-sint-eustatius.pdf",
+        "https://www.atlasofmutualheritage.nl/page/2151/plan-of-fort-oranje-on-saint-eustatius"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "TOBAGO_SCARBOROUGH_HILL_BARRACKS",
+      "years": [
+        1779,
+        1783
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "TOBAGO_SCARBOROUGH_TOWN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://nationaltrust.tt/location/fort-king-george-tobago/",
+        "https://citizensforconservationtt.org/home/sites/fort-king-george-scarborough-tobago/"
+      ],
+      "polygon_source_urls": [
+        "https://gallica.bnf.fr/ark:/12148/btv1b531222601",
+        "https://www.nalis.gov.tt/resources/tt-content-guide/towns-and-villages/towns-and-villages-s-z/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CHARLESTOWN_NEVIS_PORT",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "CHARLESTOWN_WATERFRONT_STOREYARD",
+        "NEVIS_FORT_CHARLES_CORE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://whc.unesco.org/en/tentativelists/1117/",
+        "https://seis.bristol.ac.uk/~emceee/hamiltonhouse.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://seis.bristol.ac.uk/~emceee/hamiltonhouse.pdf",
+        "https://whc.unesco.org/en/tentativelists/1117/",
+        "https://fcap.gonzaleztennant.net/fieldwork/",
+        "https://fcap.gonzaleztennant.net/history/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "ANTIGUA_ST_HELENA_DOCKYARD",
+      "years": [
+        1725,
+        1745
+      ],
+      "kind": "military",
+      "candidate_polygon_ids": [
+        "ANTIGUA_ENGLISH_HARBOUR_DOCKYARD"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.loc.gov/item/73691522/",
+        "https://whc.unesco.org/uploads/nominations/1499.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.loc.gov/item/73691522/",
+        "https://whc.unesco.org/en/list/1499"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "NASSAU_COLONIAL_PORT_EARLY",
+      "years": [
+        1700,
+        1781
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "NASSAU_OLD_FORT"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "town_port_vs_fort",
+      "reason_zh": "拿骚殖民港镇活动范围不能用拿骚旧堡墙体代替。",
+      "source_urls": [
+        "https://cdn.bahamas.gov.bs/tenant/tenantbahamasnationalarchives/documents/All%20Documents/woodes-rogers-20240612150828.pdf",
+        "https://www.cambridge.org/core/books/abs/suppressing-piracy-in-the-early-eighteenth-century/woodes-rogers-and-private-enterprise-in-new-providence/261417D327F28381E829F4387C645E32"
+      ],
+      "polygon_source_urls": [
+        "https://discovery.nationalarchives.gov.uk/details/r/C3476070",
+        "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/24915/imprimir"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "DORSETSHIRE_HILL_GARIFUNA_1795",
+      "years": [
+        1795,
+        1795
+      ],
+      "kind": "resistance",
+      "candidate_polygon_ids": [
+        "KINGSTOWN_HISTORIC_TOWN"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "different_battle_hill_vs_town",
+      "reason_zh": "1795年加里富纳人战事的多塞特山与金斯敦旧城范围不同。",
+      "source_urls": [
+        "https://tourism.gov.vc/tourism/index.php/44-culture-department/culture-administration/181-svg-national-hero",
+        "https://journals.sagepub.com/doi/full/10.1177/08438714231219455"
+      ],
+      "polygon_source_urls": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/582086475",
+        "https://www.loc.gov/item/74691678/"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "ELBA_FORTE_INGLESE",
+      "years": [
+        1796,
+        1797
+      ],
+      "kind": "military_vicinity",
+      "candidate_polygon_ids": [
+        "ELBA_PORTOFERRAIO_WALLED_PORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.museiarcipelago.it/en/edifici/il-forte-inglese/",
+        "https://www.openstreetmap.org/way/255690156"
+      ],
+      "polygon_source_urls": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-156001",
+        "https://www502.regione.toscana.it/searcherlite/cartografia_storica_regionale_scheda_dettaglio.jsp?imgid=15885"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "ELMINA_SAINT_GEORGE_EARLY",
+      "years": [
+        1700,
+        1782
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "ELMINA_ST_JAGO_MAIN"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://gmmb.gov.gh/st-georges-castle-elmina-castle-elmina-1482/",
+        "https://www.atlasofmutualheritage.nl/page/1121/map-of-elmina-showing-the-forts-of-st.-george-and-coenraadsburg"
+      ],
+      "polygon_source_urls": [
+        "https://gmmb.gov.gh/fort-st-jago-elmina-1660s/",
+        "https://www.atlasofmutualheritage.nl/page/1120/floor-plan-of-the-coenraadsburg-fort-at-elmina"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "ARCOT_DELHI_GATE",
+      "years": [
+        1751,
+        1799
+      ],
+      "kind": "historic_ruins",
+      "candidate_polygon_ids": [
+        "ARCOT_FORT_CORE"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.asichennai.gov.in/downloads/MTS_EXTENT.pdf",
+        "https://ranipet.nic.in/archaeological-survey-of-india-asi-protected-monuments/"
+      ],
+      "polygon_source_urls": [
+        "https://searcharchives.bl.uk/catalog/040-003677762",
+        "https://www.nam.ac.uk/explore/robert-clive"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CHANDERNAGORE_TRADING_TOWN",
+      "years": [
+        1757,
+        1799
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "CHANDERNAGORE_FORT_ORLEANS"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "town_vs_fort",
+      "reason_zh": "钱德讷戈尔商贸城市街区与奥尔良堡范围不同，现有候选只对应堡垒。",
+      "source_urls": [
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-chandannagar-1757-chandannagar-bengal-india-22deg5209n-88deg2238e",
+        "https://commons.wikimedia.org/wiki/File:Chandannagar,_1757_RCIN_732007.jpg"
+      ],
+      "polygon_source_urls": [
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-chandannagar-1757-chandannagar-bengal-india-22deg5209n-88deg2238e",
+        "https://commons.wikimedia.org/wiki/File:Chandannagar,_1757_RCIN_732007.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "CHANDERNAGORE_FRENCH_CEMETERY",
+      "years": [
+        1757,
+        1757
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "CHANDERNAGORE_FORT_ORLEANS"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.chandernagoremunicipalcorporation.org.in/tourist_places.htm",
+        "https://rarebooksocietyofindia.org/book_archive/196174216674_10151324018256675.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://militarymaps.rct.uk/the-seven-years-war-1756-63/plan-of-chandannagar-1757-chandannagar-bengal-india-22deg5209n-88deg2238e",
+        "https://commons.wikimedia.org/wiki/File:Chandannagar,_1757_RCIN_732007.jpg"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "OUIDAH_GLEHOUE_TRANSITION",
+      "years": [
+        1700,
+        1732
+      ],
+      "kind": "settlement",
+      "candidate_polygon_ids": [
+        "OUIDAH_PORTUGUESE_FORT"
+      ],
+      "disposition": "pending_feature_identity_and_date_review",
+      "issue_code": null,
+      "reason_zh": null,
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "OUIDAH_DAHOMEY_GOVERNOR",
+      "years": [
+        1733,
+        1799
+      ],
+      "kind": "diplomacy",
+      "candidate_polygon_ids": [
+        "OUIDAH_PORTUGUESE_FORT"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "indigenous_authority_vs_foreign_fort",
+      "reason_zh": "达荷美国王派驻维达的地方长官机构不能用葡萄牙商堡轮廓表示。",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B",
+        "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/1A11DD5E9BC49F93E9B2D721A0052292/9781782049760c3_p71-122_CBO.pdf/dahomian_ouidah.pdf"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "OUIDAH_WILLIAM_FORT",
+      "years": [
+        1700,
+        1799
+      ],
+      "kind": "company_post",
+      "candidate_polygon_ids": [
+        "OUIDAH_PORTUGUESE_FORT"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "rival_operators_adjacent_forts",
+      "reason_zh": "维达英国威廉堡与葡萄牙堡为两处不同国家的城堡，后者不能替代英堡。",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "OUIDAH_ZOBE_MARKET",
+      "years": [
+        1776,
+        1799
+      ],
+      "kind": "trade_influence",
+      "candidate_polygon_ids": [
+        "OUIDAH_PORTUGUESE_FORT"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "market_vs_foreign_fort",
+      "reason_zh": "佐贝市场的商业活动范围与葡萄牙堡墙围地不同。",
+      "source_urls": [
+        "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/1A11DD5E9BC49F93E9B2D721A0052292/9781782049760c3_p71-122_CBO.pdf/dahomian_ouidah.pdf",
+        "https://www.cambridge.org/core/books/abs/ouidah/operation-of-the-atlantic-slave-trade/8C586FD8A07B0E31C6AFF7BBFE8BE677"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    },
+    {
+      "point_id": "OUIDAH_FRENCH_FORT",
+      "years": [
+        1704,
+        1797
+      ],
+      "kind": "foreign_occupation",
+      "candidate_polygon_ids": [
+        "OUIDAH_PORTUGUESE_FORT"
+      ],
+      "disposition": "do_not_promote_to_nearest_polygons_without_new_same_feature_evidence",
+      "issue_code": "rival_operators_adjacent_forts",
+      "reason_zh": "维达法国堡与葡萄牙堡为两处不同国家的城堡，不能相互替代。",
+      "source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B"
+      ],
+      "polygon_source_urls": [
+        "https://www.cambridge.org/core/books/abs/ouidah/origins-ouidah-before-the-dahomian-conquest/624BDE6460DEF758A1B204C3AE80EEA3",
+        "https://www.cambridge.org/core/books/abs/ouidah/dahomian-conquest-of-ouidah/56386651A8A853276C32FFDE9920427B"
+      ],
+      "original_point_preserved": true,
+      "historical_polygon_promoted": false
+    }
+  ]
+}

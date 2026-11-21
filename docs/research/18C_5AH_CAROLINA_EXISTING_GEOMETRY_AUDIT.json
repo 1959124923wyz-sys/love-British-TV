@@ -1,0 +1,1453 @@
+{
+  "schema": "editor42_5ah_1700_1711_existing_carolina_footprint_audit_v1",
+  "read_only": true,
+  "years": [
+    1700,
+    1711
+  ],
+  "candidate_window_bbox": [
+    -84,
+    31,
+    -75,
+    37
+  ],
+  "candidate_window_caveat": "Research selection rectangle only. This is not the charter, historic land boundary, British military control, indigenous border, or area statistic.",
+  "chronology_base_original_zone": {
+    "id": "CAROLINA_PROPRIETORS",
+    "title": "1700年代卡罗来纳领主殖民省",
+    "kind": "paper_claim",
+    "layer": "zones",
+    "geometry_type": "rectangle_reference",
+    "bbox": [
+      -83.8,
+      31.3,
+      -75.5,
+      36.7
+    ],
+    "periods": [
+      {
+        "start_year": 1700,
+        "end_year": 1711
+      }
+    ],
+    "source_urls": [
+      "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+    ],
+    "uncertain_line_dashed": true,
+    "territorial_control_verified": false,
+    "superseded_by": null,
+    "area_sqkm": null
+  },
+  "year_overlapping_local_records_count": {
+    "zones": 1,
+    "regional_zones": 0,
+    "regional_sites": 1,
+    "sites": 0
+  },
+  "year_overlapping_local_records": {
+    "zones": [
+      {
+        "id": "CAROLINA_PROPRIETORS",
+        "title": "1700年代卡罗来纳领主殖民省",
+        "kind": "paper_claim",
+        "layer": "zones",
+        "geometry_type": "rectangle_reference",
+        "bbox": [
+          -83.8,
+          31.3,
+          -75.5,
+          36.7
+        ],
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1711
+          }
+        ],
+        "source_urls": [
+          "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      }
+    ],
+    "regional_zones": [],
+    "regional_sites": [
+      {
+        "id": "CHARLESTON_FORT_JOHNSON",
+        "title": "詹姆斯岛约翰逊堡",
+        "kind": "military",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -79.89936,
+          32.75255,
+          -79.89936,
+          32.75255
+        ],
+        "periods": [
+          {
+            "start_year": 1708,
+            "end_year": 1758,
+            "title": "约翰逊堡 · 殖民港防",
+            "note": "英属南卡罗来纳在詹姆斯岛风车角一带设堡，防守查尔斯敦港。"
+          },
+          {
+            "start_year": 1759,
+            "end_year": 1779,
+            "title": "约翰逊堡 · 防地整修和革命驻防",
+            "note": "1759年修第二座堡，1775年南卡罗来纳驻军占用。"
+          },
+          {
+            "start_year": 1780,
+            "end_year": 1780,
+            "title": "约翰逊堡 · 英军占据弃堡一带",
+            "note": "英军向查尔斯敦推进时发现约翰逊堡已被弃置，并控制附近的岸防驻地。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1793,
+            "end_year": 1799,
+            "title": "约翰逊堡第三期 · 港防重筑",
+            "note": "1793年同一地段重筑第三期约翰逊堡。"
+          }
+        ],
+        "source_urls": [
+          "https://dnr.sc.gov/marine/mrri/ftjohnson.html",
+          "https://ocean.floridamarine.org/acp/chacp/maps/GRS_Maps_2022/SC-30.pdf",
+          "https://www.armyupress.army.mil/Portals/7/Research%20and%20Books/2023/Charleston%20SRHB%20Skinner%20interactive%2012Oct2023.pdf",
+          "https://www.nps.gov/articles/siege-of-charleston-1780.htm"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      }
+    ],
+    "sites": []
+  },
+  "toponym_hits_count": {
+    "zones": 2,
+    "regional_zones": 7,
+    "regional_sites": 18,
+    "sites": 1
+  },
+  "toponym_hits": {
+    "zones": [
+      {
+        "id": "CAROLINA_PROPRIETORS",
+        "title": "1700年代卡罗来纳领主殖民省",
+        "kind": "paper_claim",
+        "layer": "zones",
+        "geometry_type": "rectangle_reference",
+        "bbox": [
+          -83.8,
+          31.3,
+          -75.5,
+          36.7
+        ],
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1711
+          }
+        ],
+        "source_urls": [
+          "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/american-and-west-indian-colonies-before-1782"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_GARRISON",
+        "title": "查尔斯顿英军占城与海港",
+        "kind": "wartime_occupation",
+        "layer": "zones",
+        "geometry_type": "rectangle_reference",
+        "bbox": [
+          -80.1,
+          32.66,
+          -79.82,
+          32.88
+        ],
+        "periods": [
+          {
+            "start_year": 1780,
+            "end_year": 1781
+          }
+        ],
+        "source_urls": [
+          "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": "CHARLESTON_OLD_TOWN_1780",
+        "area_sqkm": null
+      }
+    ],
+    "regional_zones": [
+      {
+        "id": "BARBADOS_CHARLES_FORT_1748",
+        "title": "尼达姆角 · 查尔斯堡主堡",
+        "kind": "military",
+        "layer": "regional_zones",
+        "geometry_type": "Polygon",
+        "bbox": [
+          -59.6128082,
+          13.0783941,
+          -59.611965,
+          13.0790261
+        ],
+        "periods": [
+          {
+            "start_year": 1748,
+            "end_year": 1751,
+            "title": "查尔斯堡 · 1748年实测主堡",
+            "note": "英国工程图画出主堡及两侧的束枝炮台。乔治·华盛顿于1751年到巴巴多斯，日记也提到这一堡垒。"
+          },
+          {
+            "start_year": 1752,
+            "end_year": 1788,
+            "title": "查尔斯堡 · 卡莱尔湾岸防",
+            "note": "主堡守在卡莱尔湾南端的尼达姆角。圣安堡在它内侧，另有独立防御设施。"
+          },
+          {
+            "start_year": 1789,
+            "end_year": 1799,
+            "title": "查尔斯堡 · 纳入常设驻军体系",
+            "note": "英方在相邻地区购地建永久军营。查尔斯堡仍属殖民地，纳入驻军计划。"
+          }
+        ],
+        "source_urls": [
+          "https://whc.unesco.org/uploads/nominations/1376.pdf",
+          "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/",
+          "https://bajanthings.com/wp-content/uploads/2025/02/RC7523968-86363250-0c06-4dbd-998a-95137197a75a_7523968_MPH_1_597_001_2xZoom_HiRes4096.webp",
+          "https://www.openstreetmap.org/"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_HORN_WORK",
+        "title": "马里恩广场角堡",
+        "kind": "military",
+        "layer": "regional_zones",
+        "geometry_type": "Polygon",
+        "bbox": [
+          -79.937176,
+          32.784908,
+          -79.934605,
+          32.786561
+        ],
+        "periods": [
+          {
+            "start_year": 1779,
+            "end_year": 1779,
+            "title": "马里恩广场角堡 · 城北加固",
+            "note": "南卡罗来纳军队在原城北角堡周围增修防御。"
+          },
+          {
+            "start_year": 1780,
+            "end_year": 1780,
+            "title": "马里恩广场角堡 · 正门交降",
+            "note": "围城期间守军补筑南侧防御，5月12日本杰明·林肯与莫尔特里在角堡门下向英军交降。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1781,
+            "end_year": 1781,
+            "title": "马里恩广场角堡 · 英军驻守",
+            "note": "占城英军维修并调整部分城防设施。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1782,
+            "end_year": 1782,
+            "title": "马里恩广场角堡 · 美军接收",
+            "note": "1782年12月14日英军撤离后，大陆军经角堡进入查尔斯敦。"
+          },
+          {
+            "start_year": 1783,
+            "end_year": 1783,
+            "title": "马里恩广场角堡 · 移交市政府",
+            "note": "南卡罗来纳州将角堡和邻近土地移交新设市政府管理。",
+            "kind": "administration"
+          }
+        ],
+        "source_urls": [
+          "https://www.loc.gov/item/gm71002163/",
+          "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_45019_edges.zip",
+          "https://www.ccpl.org/charleston-time-machine/horn-work-marion-squares-tabby-fortress",
+          "https://www.ccpl.org/uncovering-history-locating-horn-work-under-marion-square"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_OLD_TOWN_1780",
+        "title": "查尔斯敦旧城与商港",
+        "kind": "settlement",
+        "layer": "regional_zones",
+        "geometry_type": "Polygon",
+        "bbox": [
+          -79.937353,
+          32.769607,
+          -79.926728,
+          32.78174
+        ],
+        "periods": [
+          {
+            "start_year": 1776,
+            "end_year": 1778,
+            "title": "查尔斯敦旧城 · 南卡罗来纳革命政府",
+            "note": "1776年南卡罗来纳建立革命政府。6月驻军守住港口入口。1778年城内发生大火。"
+          },
+          {
+            "start_year": 1779,
+            "end_year": 1779,
+            "title": "查尔斯敦旧城 · 守军扩充城防",
+            "note": "英军在1779年5月逼近，南卡罗来纳守军加固半岛防线，并守住城镇。"
+          },
+          {
+            "start_year": 1780,
+            "end_year": 1780,
+            "title": "查尔斯敦旧城 · 5月12日英军占城",
+            "note": "英军由陆地围城并封锁港口。5月12日本杰明·林肯投降，英军接管城镇，并在6月要求原获假释者改向王室宣誓。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1781,
+            "end_year": 1781,
+            "title": "查尔斯敦旧城 · 英军驻城",
+            "note": "英军继续驻城，将交易所用作兵营和军警羁押地。格林指挥的大陆军向低地推进。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1782,
+            "end_year": 1782,
+            "title": "查尔斯敦旧城 · 12月14日英军撤离",
+            "note": "英军后卫经加兹登码头登船，大陆军安东尼·韦恩所部同时进入城镇。迁离者既有随军效忠派和争取自由者，也有被效忠派强行带走的人。"
+          },
+          {
+            "start_year": 1783,
+            "end_year": 1799,
+            "title": "查尔斯敦旧城 · 设立市政府",
+            "note": "1783年南卡罗来纳州依建市法授权市政机关接管市场、街道和城防事务，沿袭旧城街网并修复港口。"
+          }
+        ],
+        "source_urls": [
+          "https://www.loc.gov/item/gm71002163/",
+          "https://www.loc.gov/item/gm71000887/",
+          "https://www.argomaps.org/maps/commonwealth-oai%3A4x51nj007/",
+          "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_45019_edges.zip"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTOWN_WATERFRONT_STOREYARD",
+        "title": "查尔斯敦 · 滨海仓地",
+        "kind": "settlement",
+        "layer": "regional_zones",
+        "geometry_type": "Polygon",
+        "bbox": [
+          -62.6297669,
+          17.1407092,
+          -62.629413,
+          17.1412224
+        ],
+        "periods": [
+          {
+            "start_year": 1763,
+            "end_year": 1771,
+            "kind": "settlement",
+            "title": "查尔斯敦 · 海滨仓地与商铺",
+            "note": "1763年的继承记录标明，临海街一侧有仓库和堆存货物的院地。"
+          },
+          {
+            "start_year": 1772,
+            "end_year": 1781,
+            "kind": "settlement",
+            "title": "查尔斯敦 · 仓地转让",
+            "note": "1772年，安德鲁·汉密尔顿买下这处仓地。殖民地产交易也把被奴役者列为财产。"
+          },
+          {
+            "start_year": 1782,
+            "end_year": 1783,
+            "kind": "foreign_occupation",
+            "title": "查尔斯敦 · 法占期间的滨海仓地",
+            "note": "法国占据尼维斯期间，查尔斯敦仍是岛上的港城。"
+          },
+          {
+            "start_year": 1784,
+            "end_year": 1799,
+            "kind": "settlement",
+            "title": "查尔斯敦 · 港边仓地续用",
+            "note": "英国恢复殖民行政后，1784年的抵押文书继续记载这处滨海仓地。"
+          }
+        ],
+        "source_urls": [
+          "https://seis.bristol.ac.uk/~emceee/hamiltonhouse.pdf",
+          "https://whc.unesco.org/en/tentativelists/1117/",
+          "https://fcap.gonzaleztennant.net/history/",
+          "https://www.openstreetmap.org/copyright"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "GUADELOUPE_SAINT_CHARLES_FORT",
+        "title": "巴斯特尔 · 圣夏尔堡后期主堡",
+        "kind": "foreign_occupation",
+        "layer": "regional_zones",
+        "geometry_type": "Polygon",
+        "bbox": [
+          -61.72421,
+          15.986965,
+          -61.72145,
+          15.98974
+        ],
+        "periods": [
+          {
+            "start_year": 1794,
+            "end_year": 1794,
+            "title": "圣夏尔堡 · 英军驻守至12月",
+            "note": "4月20日科洛签署降约后，英方接管堡垒，称为马蒂尔达堡。贝尔维尔英军在10月投降后，堡内英军仍驻防至12月，随后撤离。"
+          },
+          {
+            "start_year": 1795,
+            "end_year": 1799,
+            "title": "圣夏尔堡 · 法国共和军驻堡",
+            "note": "法国共和军重新保有巴斯特尔城防和圣夏尔堡。"
+          }
+        ],
+        "source_urls": [
+          "https://pop.culture.gouv.fr/notice/merimee/IA97100904",
+          "https://www.culture.gouv.fr/mc/content/download/157808/file/BSR%202011%20-%202013.pdf?inLanguage=fre-FR&version=3",
+          "https://pop.culture.gouv.fr/notice/merimee/PA00105850",
+          "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "JAMAICA_FORT_CHARLES",
+        "title": "罗亚尔港 · 查尔斯堡",
+        "kind": "military_vicinity",
+        "layer": "regional_zones",
+        "geometry_type": "Polygon",
+        "bbox": [
+          -76.8431308,
+          17.9347425,
+          -76.842234,
+          17.9353631
+        ],
+        "periods": [
+          {
+            "start_year": 1772,
+            "end_year": 1772,
+            "title": "查尔斯堡 · 1772年港口测绘及风灾",
+            "note": "高尔德1772年图记出堡垣核心。该年飓风破坏城防，其后工程连接查尔斯堡与海侧城防线。",
+            "kind": "military_vicinity"
+          },
+          {
+            "start_year": 1773,
+            "end_year": 1778,
+            "title": "查尔斯堡 · 飓风后修复",
+            "note": "英方修复并扩展港防，把临海镇线工事同堡垒连接。",
+            "kind": "military_vicinity"
+          },
+          {
+            "start_year": 1779,
+            "end_year": 1782,
+            "title": "查尔斯堡 · 战时防备",
+            "note": "1779年8月12日纳尔逊自罗亚尔港致信，称将受派指挥查尔斯堡。1782年港图仍把查尔斯堡列作港口工事。",
+            "kind": "military_vicinity"
+          },
+          {
+            "start_year": 1783,
+            "end_year": 1799,
+            "title": "查尔斯堡 · 英国港防驻地",
+            "note": "《牙买加年鉴》1799年卷列出查尔斯堡总督、副总督、军官及炮手职务。",
+            "kind": "military_vicinity"
+          }
+        ],
+        "source_urls": [
+          "https://hdl.huntington.org/digital/collection/p15150coll4/id/10150/",
+          "https://www.argomaps.org/maps/commonwealth-oai%3Arj434391f",
+          "https://www.jnht.gov.jm/site_fort_charles.php",
+          "https://whc.unesco.org/document/209701"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "NEVIS_FORT_CHARLES_CORE",
+        "title": "尼维斯 · 查尔斯堡",
+        "kind": "military",
+        "layer": "regional_zones",
+        "geometry_type": "Polygon",
+        "bbox": [
+          -62.6334594,
+          17.1322599,
+          -62.6323764,
+          17.1332389
+        ],
+        "periods": [
+          {
+            "start_year": 1771,
+            "end_year": 1781,
+            "kind": "military",
+            "title": "尼维斯查尔斯堡 · 征税修堡",
+            "note": "1771年，为修缮工事而对被奴役人口计征人头税。1773年巡查记录查尔斯堡墙体残破。"
+          },
+          {
+            "start_year": 1782,
+            "end_year": 1783,
+            "kind": "foreign_occupation",
+            "title": "尼维斯查尔斯堡 · 法方占领期间",
+            "note": "法国于1782年占岛，查尔斯堡落入法方手中。1783年英法和约约定交还尼维斯。"
+          },
+          {
+            "start_year": 1784,
+            "end_year": 1793,
+            "kind": "military",
+            "title": "尼维斯查尔斯堡 · 恢复英方管辖",
+            "note": "1784年英方接回尼维斯。其后陆续修缮旧堡。"
+          },
+          {
+            "start_year": 1794,
+            "end_year": 1799,
+            "kind": "military",
+            "title": "尼维斯查尔斯堡 · 军备缩减",
+            "note": "1794年报告记载堡内仅余两门炮。进入十九世纪后，查尔斯堡也曾用于海关和检疫。"
+          }
+        ],
+        "source_urls": [
+          "https://fcap.gonzaleztennant.net/fieldwork/",
+          "https://fcap.gonzaleztennant.net/history/",
+          "https://eprints.soton.ac.uk/465224/1/930221_v.1.pdf",
+          "https://msa.maryland.gov/megafile/msa/speccol/sc4800/sc4872/001283/pdf/m1283-0385.pdf"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      }
+    ],
+    "regional_sites": [
+      {
+        "id": "BARBADOS_CHARLES_FASCINE_NORTH",
+        "title": "尼达姆角 · 查尔斯堡北侧束枝炮台",
+        "kind": "military",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -59.6120086,
+          13.0798861,
+          -59.6120086,
+          13.0798861
+        ],
+        "periods": [
+          {
+            "start_year": 1748,
+            "end_year": 1748,
+            "title": "查尔斯堡 · 北侧束枝炮台",
+            "note": "1748年实测图把这一束枝炮台与主堡区分。图档证实当年位置，具体废止时间留待查证。"
+          }
+        ],
+        "source_urls": [
+          "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/",
+          "https://bajanthings.com/wp-content/uploads/2025/02/RC7523968-86363250-0c06-4dbd-998a-95137197a75a_7523968_MPH_1_597_001_2xZoom_HiRes4096.webp",
+          "https://whc.unesco.org/uploads/nominations/1376.pdf"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "BARBADOS_CHARLES_FASCINE_SOUTH",
+        "title": "尼达姆角 · 查尔斯堡南侧束枝炮台",
+        "kind": "military",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -59.6119338,
+          13.0782447,
+          -59.6119338,
+          13.0782447
+        ],
+        "periods": [
+          {
+            "start_year": 1748,
+            "end_year": 1748,
+            "title": "查尔斯堡 · 南侧束枝炮台",
+            "note": "1748年实测图把这一束枝炮台与主堡区分。图档证实当年位置，具体废止时间留待查证。"
+          }
+        ],
+        "source_urls": [
+          "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/",
+          "https://bajanthings.com/wp-content/uploads/2025/02/RC7523968-86363250-0c06-4dbd-998a-95137197a75a_7523968_MPH_1_597_001_2xZoom_HiRes4096.webp",
+          "https://whc.unesco.org/uploads/nominations/1376.pdf"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "BARBADOS_CHARLES_FORT_EARLY",
+        "title": "尼达姆角 · 查尔斯堡早期砦址",
+        "kind": "military",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -59.61241,
+          13.078715,
+          -59.61241,
+          13.078715
+        ],
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1739,
+            "title": "查尔斯堡 · 尼达姆角砦址",
+            "note": "1650年在尼达姆角筑早期堡垒，1660年前后改称查尔斯堡。十八世纪前期的确切改建年份待核。"
+          },
+          {
+            "start_year": 1740,
+            "end_year": 1747,
+            "title": "查尔斯堡 · 增建炮台",
+            "note": "1740年代英方在堡垒两侧增筑束枝炮台。现有实测轮廓始自1748年图。"
+          }
+        ],
+        "source_urls": [
+          "https://whc.unesco.org/uploads/nominations/1376.pdf",
+          "https://bajanthings.com/the-printed-maps-of-barbados-1700-1800/",
+          "https://bajanthings.com/wp-content/uploads/2025/02/RC7523968-86363250-0c06-4dbd-998a-95137197a75a_7523968_MPH_1_597_001_2xZoom_HiRes4096.webp"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "BOSTON_CHARLESTOWN_BURNING",
+        "title": "查尔斯敦 · 旧镇焚毁",
+        "kind": "conflict_damage",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -71.061587,
+          42.371544,
+          -71.061587,
+          42.371544
+        ],
+        "periods": [
+          {
+            "start_year": 1775,
+            "end_year": 1775,
+            "title": "查尔斯敦旧镇 · 6月17日英军焚镇",
+            "note": "邦克山战斗期间，威廉·豪下令纵火，英军烧毁查尔斯敦镇。大陆军的主要土垒在镇上方的布里德山。"
+          }
+        ],
+        "source_urls": [
+          "https://www.nps.gov/articles/000/the-burning-of-charlestown.htm",
+          "https://www.nps.gov/articles/000/siege-of-boston-overview.htm",
+          "https://www.loc.gov/item/gm71000619/"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_FORT_JOHNSON",
+        "title": "詹姆斯岛约翰逊堡",
+        "kind": "military",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -79.89936,
+          32.75255,
+          -79.89936,
+          32.75255
+        ],
+        "periods": [
+          {
+            "start_year": 1708,
+            "end_year": 1758,
+            "title": "约翰逊堡 · 殖民港防",
+            "note": "英属南卡罗来纳在詹姆斯岛风车角一带设堡，防守查尔斯敦港。"
+          },
+          {
+            "start_year": 1759,
+            "end_year": 1779,
+            "title": "约翰逊堡 · 防地整修和革命驻防",
+            "note": "1759年修第二座堡，1775年南卡罗来纳驻军占用。"
+          },
+          {
+            "start_year": 1780,
+            "end_year": 1780,
+            "title": "约翰逊堡 · 英军占据弃堡一带",
+            "note": "英军向查尔斯敦推进时发现约翰逊堡已被弃置，并控制附近的岸防驻地。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1793,
+            "end_year": 1799,
+            "title": "约翰逊堡第三期 · 港防重筑",
+            "note": "1793年同一地段重筑第三期约翰逊堡。"
+          }
+        ],
+        "source_urls": [
+          "https://dnr.sc.gov/marine/mrri/ftjohnson.html",
+          "https://ocean.floridamarine.org/acp/chacp/maps/GRS_Maps_2022/SC-30.pdf",
+          "https://www.armyupress.army.mil/Portals/7/Research%20and%20Books/2023/Charleston%20SRHB%20Skinner%20interactive%2012Oct2023.pdf",
+          "https://www.nps.gov/articles/siege-of-charleston-1780.htm"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_FORT_MOULTRIE",
+        "title": "沙利文岛莫尔特里堡",
+        "kind": "military",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -79.857844,
+          32.759289,
+          -79.857844,
+          32.759289
+        ],
+        "periods": [
+          {
+            "start_year": 1776,
+            "end_year": 1776,
+            "title": "沙利文岛第一堡 · 抵御英舰",
+            "note": "1776年以棕榈木和沙修堡，6月28日守军挡住皇家海军的攻击。"
+          },
+          {
+            "start_year": 1777,
+            "end_year": 1779,
+            "title": "第一座莫尔特里堡 · 港口防御",
+            "note": "原沙利文岛堡改以守将莫尔特里命名，继续防御查尔斯敦港入口。"
+          },
+          {
+            "start_year": 1780,
+            "end_year": 1780,
+            "title": "莫尔特里堡 · 5月7日英军接收",
+            "note": "4月8日英舰驶过炮台进入港内，5月7日威廉·斯科特将堡交给英方。英方改称阿巴思诺特堡。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1781,
+            "end_year": 1781,
+            "title": "阿巴思诺特堡 · 英军控制",
+            "note": "英国占领期间，堡垒继续处于英国手中。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1782,
+            "end_year": 1782,
+            "title": "莫尔特里堡 · 英军撤出港口",
+            "note": "12月英军撤出查尔斯敦，战时占领结束。"
+          },
+          {
+            "start_year": 1794,
+            "end_year": 1797,
+            "title": "第二座莫尔特里堡 · 首期联邦岸防工程",
+            "note": "联邦启动新的港口防务体系，在沙利文岛原防地建设第二座堡。"
+          },
+          {
+            "start_year": 1798,
+            "end_year": 1799,
+            "title": "第二座莫尔特里堡 · 联邦堡完工",
+            "note": "第二堡于1798年完工。堡体为五边形，使用木土结构。"
+          }
+        ],
+        "source_urls": [
+          "https://home.nps.gov/fosu/learn/historyculture/fort_moultrie.htm",
+          "https://irma.nps.gov/DataStore/FileSource/Get/2195304?filename=Bearss1968_FortMoultries.pdf",
+          "https://www.nps.gov/planyourvisit/event-details.htm?id=446734DF-EEE4-D19C-BB36EC9C21368D4A",
+          "https://www.nps.gov/fosu/learn/publications.htm"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_FORT_PINCKNEY",
+        "title": "舒茨福利岛平克尼堡",
+        "kind": "military",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -79.9109,
+          32.7737,
+          -79.9109,
+          32.7737
+        ],
+        "periods": [
+          {
+            "start_year": 1798,
+            "end_year": 1799,
+            "title": "舒茨福利岛第一座平克尼堡",
+            "note": "联邦1798年在舒茨福利岛以木材和沙完工一座单层防御工事，承担内港防务。"
+          }
+        ],
+        "source_urls": [
+          "https://www.nps.gov/fosu/learn/historyculture/castle-pinckney-construction.htm",
+          "https://www.loc.gov/item/sc0114/",
+          "https://charlestoninthewar.com/forts/castle-pinckney/",
+          "https://www.nps.gov/fosu/learn/historyculture/castle-pinckney-use.htm"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_GADSDEN_WHARF",
+        "title": "查尔斯敦加兹登码头",
+        "kind": "trade_influence",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -79.92584,
+          32.78761,
+          -79.92584,
+          32.78761
+        ],
+        "periods": [
+          {
+            "start_year": 1767,
+            "end_year": 1773,
+            "title": "加兹登码头 · 征购木桩和填筑材料",
+            "note": "加兹登自1767年在报纸征购松木桩、木材和牡蛎壳，在城北库珀河岸填筑新码头。"
+          },
+          {
+            "start_year": 1774,
+            "end_year": 1779,
+            "title": "加兹登码头 · 城北商埠工程",
+            "note": "查尔斯敦商人继续扩建仓储和临水码头设施。"
+          },
+          {
+            "start_year": 1780,
+            "end_year": 1781,
+            "title": "加兹登码头 · 战时受损",
+            "note": "围城和占领期间码头及相邻建筑受损。",
+            "kind": "conflict_damage"
+          },
+          {
+            "start_year": 1782,
+            "end_year": 1782,
+            "title": "加兹登码头 · 英军自此撤出",
+            "note": "12月14日英军后卫自码头登船。美国国家公园管理局记载，随撤离船队离开的非洲裔逾五千人，多数为效忠派持有并强制转运的被奴役者。另有部分人逃离奴役并取得自由。",
+            "kind": "military"
+          },
+          {
+            "start_year": 1783,
+            "end_year": 1784,
+            "title": "加兹登码头 · 库房火灾与修缮",
+            "note": "加兹登于1783年征购修复围城造成损毁所需材料，同年9月火灾烧毁码头库房。1784年筹款修理仍有困难。",
+            "kind": "conflict_damage"
+          },
+          {
+            "start_year": 1795,
+            "end_year": 1799,
+            "title": "加兹登码头 · 码头产业地契",
+            "note": "1790年代的地契与出售公告记载加兹登家族的码头和临港物业。"
+          }
+        ],
+        "source_urls": [
+          "https://www.loc.gov/item/gm71002163/",
+          "https://www.ccpl.org/charleston-time-machine/story-gadsdens-wharf",
+          "https://www.ccpl.org/charleston-time-machine/ansons-landing-to-gadsdens-wharf-a-brief-history",
+          "https://charlestoninthewar.com/history/places/gadsdens-wharf/"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_HADDRELL_PRISON",
+        "title": "哈德雷尔角拘押驻地",
+        "kind": "military",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -79.8832,
+          32.789217,
+          -79.8832,
+          32.789217
+        ],
+        "periods": [
+          {
+            "start_year": 1780,
+            "end_year": 1780,
+            "title": "哈德雷尔角 · 地面驻军与俘虏拘押",
+            "note": "英国军队围城期间占据哈德雷尔角。查尔斯敦陷落后，莫尔特里等大陆军军官曾在此受拘押。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1781,
+            "end_year": 1781,
+            "title": "哈德雷尔角 · 被俘军官交涉",
+            "note": "莫尔特里在英国拘留期间向英方司令交涉，要求改善其战友待遇。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1791,
+            "end_year": 1791,
+            "title": "哈德雷尔角 · 港口渡航",
+            "note": "华盛顿南方巡访时，从哈德雷尔角乘船前往查尔斯敦。",
+            "kind": "settlement"
+          }
+        ],
+        "source_urls": [
+          "https://www.armyupress.army.mil/Portals/7/Research%20and%20Books/2023/Charleston%20SRHB%20Skinner%20interactive%2012Oct2023.pdf",
+          "https://www.nps.gov/people/william-moultrie.htm",
+          "https://www.hmdb.org/m.asp?m=36686"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_HORN_REMAINS",
+        "title": "马里恩广场角堡旧址",
+        "kind": "historic_ruins",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -79.936333,
+          32.78675,
+          -79.936333,
+          32.78675
+        ],
+        "periods": [
+          {
+            "start_year": 1784,
+            "end_year": 1784,
+            "title": "马里恩广场角堡旧址 · 城防拆平",
+            "note": "1784年市政府付费平整旧角堡，早年拆除的具体工程分段仍见零散档案。"
+          },
+          {
+            "start_year": 1785,
+            "end_year": 1799,
+            "title": "马里恩广场角堡旧址 · 保留墙体",
+            "note": "角堡拆平后，部分东北外墙作为地块分隔墙存留。"
+          }
+        ],
+        "source_urls": [
+          "https://www.ccpl.org/charleston-time-machine/horn-work-marion-squares-tabby-fortress",
+          "https://www.ccpl.org/uncovering-history-locating-horn-work-under-marion-square",
+          "https://www.hmdb.org/m.asp?m=67437"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_OLD_EXCHANGE",
+        "title": "查尔斯敦旧交易所与军警监所",
+        "kind": "administration",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -79.92684,
+          32.77686,
+          -79.92684,
+          32.77686
+        ],
+        "periods": [
+          {
+            "start_year": 1771,
+            "end_year": 1779,
+            "title": "查尔斯敦旧交易所 · 市场、海关与政务",
+            "note": "旧交易所兼作公共市场与海关，1774年殖民地代表在此推举大陆会议代表。"
+          },
+          {
+            "start_year": 1780,
+            "end_year": 1781,
+            "title": "查尔斯敦旧交易所 · 英军监所与营房",
+            "note": "英方占城后将旧交易所用作营房及军警监所。城内还以港中囚船羁押大批俘虏。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1782,
+            "end_year": 1782,
+            "title": "查尔斯敦旧交易所 · 英军撤退后恢复使用",
+            "note": "英军占用交易所至1782年12月撤离。美方重新接收建筑。"
+          },
+          {
+            "start_year": 1783,
+            "end_year": 1787,
+            "title": "查尔斯敦旧交易所 · 港口与人口贩卖",
+            "note": "战后跨大西洋贩运短期恢复，近交易所的东湾街有多批被奴役者被出售。",
+            "kind": "trade_influence"
+          },
+          {
+            "start_year": 1788,
+            "end_year": 1788,
+            "title": "查尔斯敦旧交易所 · 批准联邦宪法",
+            "note": "南卡罗来纳州批准联邦宪法的会议在旧交易所举行。"
+          },
+          {
+            "start_year": 1789,
+            "end_year": 1799,
+            "title": "查尔斯敦旧交易所 · 联邦时期港口建筑",
+            "note": "交易所延续公共与贸易用途。1791年华盛顿访问查尔斯敦，在建筑台阶上受到欢迎。"
+          }
+        ],
+        "source_urls": [
+          "https://www.nationalregister.sc.gov/charleston/S10817710010/index.htm",
+          "https://npgallery.nps.gov/NRHP/GetAsset/NHLS/69000160_text",
+          "https://mapcarta.com/W491702219",
+          "https://www.battlefields.org/learn/articles/old-exchange-and-provost-dungeon"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_OLD_STATE_HOUSE",
+        "title": "查尔斯敦旧议会楼与县法院",
+        "kind": "administration",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -79.93122,
+          32.77663,
+          -79.93122,
+          32.77663
+        ],
+        "periods": [
+          {
+            "start_year": 1753,
+            "end_year": 1779,
+            "title": "查尔斯敦旧议会楼 · 南卡罗来纳政务中心",
+            "note": "查尔斯敦长期为南卡罗来纳州前身的行政中心，市政广场西北角为首座议会楼。"
+          },
+          {
+            "start_year": 1780,
+            "end_year": 1781,
+            "title": "查尔斯敦旧议会楼 · 城市处于英军占领",
+            "note": "城镇与旧议会楼所在的中心街区均在英军占领范围之内。",
+            "kind": "wartime_occupation"
+          },
+          {
+            "start_year": 1782,
+            "end_year": 1787,
+            "title": "查尔斯敦旧议会楼 · 战后州务恢复",
+            "note": "英军撤出后，南卡罗来纳州政府于1783年1月在查尔斯敦恢复议事。"
+          },
+          {
+            "start_year": 1788,
+            "end_year": 1788,
+            "title": "查尔斯敦旧议会楼 · 2月5日失火",
+            "note": "1788年2月5日火灾毁坏旧议会楼，市政当局随后决定重建。",
+            "kind": "conflict_damage"
+          },
+          {
+            "start_year": 1789,
+            "end_year": 1791,
+            "title": "查尔斯敦旧议会楼 · 原址火灾后重建",
+            "note": "首府已迁哥伦比亚，查尔斯敦当局重建旧址。"
+          },
+          {
+            "start_year": 1792,
+            "end_year": 1799,
+            "title": "查尔斯敦县法院 · 原议会楼重建",
+            "note": "1792年查尔斯敦县法院在旧议会楼原址重建。"
+          }
+        ],
+        "source_urls": [
+          "https://www.studentconnection.scstatehouse.gov/state-house-history",
+          "https://home.nps.gov/places/charleston-county-courthouse.htm",
+          "https://www.ccpl.org/charleston-time-machine/charles-towns-growing-pains",
+          "https://www.loc.gov/item/gm71002163/"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTON_ST_MICHAEL",
+        "title": "查尔斯敦圣迈克尔教堂",
+        "kind": "settlement",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -79.93067,
+          32.7763,
+          -79.93067,
+          32.7763
+        ],
+        "periods": [
+          {
+            "start_year": 1761,
+            "end_year": 1779,
+            "title": "圣迈克尔教堂 · 教堂开放与钟具运入",
+            "note": "教堂1761年开放。八口钟由英格兰铸造，1764年抵达查尔斯敦。"
+          },
+          {
+            "start_year": 1780,
+            "end_year": 1781,
+            "title": "圣迈克尔教堂 · 英军占城期间",
+            "note": "圣迈克尔教堂位于查尔斯敦旧城的市政广场一侧，继续留在原址。"
+          },
+          {
+            "start_year": 1782,
+            "end_year": 1782,
+            "title": "圣迈克尔教堂 · 英军运走八口钟",
+            "note": "英军拆走八口钟，由弗洛拉号运往伦敦。",
+            "kind": "conflict_damage"
+          },
+          {
+            "start_year": 1783,
+            "end_year": 1783,
+            "title": "圣迈克尔教堂 · 购回的钟运抵旧港",
+            "note": "查尔斯敦商人伊曼纽尔·里尼耶和英国商人保罗·勒梅叙里耶分头购回八口钟，1783年11月21日钟具送回查尔斯敦。"
+          },
+          {
+            "start_year": 1784,
+            "end_year": 1799,
+            "title": "圣迈克尔教堂 · 原址继续使用",
+            "note": "钟具回到原教堂，礼拜继续在原址举行。"
+          }
+        ],
+        "source_urls": [
+          "https://www.scencyclopedia.org/sce/entries/st-michaels-church/",
+          "https://citeseerx.ist.psu.edu/document?doi=575c801c1a696951c9e1e48b8ef92c5576a341ce&repid=rep1&type=pdf",
+          "https://www.scencyclopedia.org/sce/entries/charleston/",
+          "https://www.loc.gov/item/gm71002163/"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "CHARLESTOWN_NEVIS_PORT",
+        "title": "查尔斯敦 · 旧港",
+        "kind": "settlement",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -62.6296,
+          17.14105,
+          -62.6296,
+          17.14105
+        ],
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1705,
+            "kind": "administration",
+            "title": "查尔斯敦 · 尼维斯殖民港",
+            "note": "查尔斯敦是尼维斯的贸易港和殖民行政中心。"
+          },
+          {
+            "start_year": 1706,
+            "end_year": 1706,
+            "kind": "conflict_damage",
+            "title": "查尔斯敦 · 法军袭掠尼维斯",
+            "note": "1706年法军袭掠尼维斯的殖民聚落和种植园，并掳走居民和被奴役者。"
+          },
+          {
+            "start_year": 1707,
+            "end_year": 1781,
+            "kind": "administration",
+            "title": "查尔斯敦 · 港口与殖民行政延续",
+            "note": "法军撤离后，港城沿海发展。商人利用滨海仓库储运糖等种植园产物。"
+          },
+          {
+            "start_year": 1782,
+            "end_year": 1782,
+            "kind": "foreign_occupation",
+            "title": "查尔斯敦 · 法方控制尼维斯",
+            "note": "法军在1782年1月进攻尼维斯。殖民港随岛被接管。"
+          },
+          {
+            "start_year": 1783,
+            "end_year": 1783,
+            "kind": "foreign_occupation",
+            "title": "查尔斯敦 · 英法和约议定归还",
+            "note": "和约约定将尼维斯交回英国，驻堡考古记载法军占领延续至1784年。"
+          },
+          {
+            "start_year": 1784,
+            "end_year": 1799,
+            "kind": "administration",
+            "title": "查尔斯敦 · 英方恢复港务与行政",
+            "note": "英方恢复殖民行政。查尔斯敦继续承担港务。"
+          }
+        ],
+        "source_urls": [
+          "https://whc.unesco.org/en/tentativelists/1117/",
+          "https://seis.bristol.ac.uk/~emceee/hamiltonhouse.pdf",
+          "https://eprints.soton.ac.uk/465224/1/930221_v.1.pdf",
+          "https://fcap.gonzaleztennant.net/history/"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "GOLD_COAST_ANOMABU_FORT_CHARLES",
+        "title": "阿诺马布 · 查尔斯旧堡",
+        "kind": "military",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -1.119103,
+          5.174119,
+          -1.119103,
+          5.174119
+        ],
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1700,
+            "title": "阿诺马布 · 查尔斯旧堡",
+            "note": "英方皇家非洲公司在芳蒂海岸的阿诺马布驻堡。旧堡依海边岩地而建，位于渔镇与另一处居民区之间。"
+          },
+          {
+            "start_year": 1701,
+            "end_year": 1701,
+            "title": "查尔斯旧堡 · 芳蒂地方冲突",
+            "note": "地方武装袭击英堡，英方反击时焚毁了镇内多处房屋，冲突随后经调解中止。"
+          },
+          {
+            "start_year": 1702,
+            "end_year": 1730,
+            "title": "阿诺马布 · 查尔斯旧堡",
+            "note": "英方皇家非洲公司在此进行海岸贸易，包括贩运被奴役者，1730年弃用旧堡。"
+          },
+          {
+            "start_year": 1731,
+            "end_year": 1731,
+            "title": "阿诺马布 · 查尔斯旧堡拆除",
+            "note": "英方1731年拆除已停用的旧堡，1750年仍有人见到残墙。",
+            "kind": "historic_ruins"
+          },
+          {
+            "start_year": 1732,
+            "end_year": 1752,
+            "kind": "historic_ruins",
+            "title": "阿诺马布 · 查尔斯堡拆除后的旧址",
+            "note": "英方于1731年拆除旧堡。1750年回访记载旧址仍能见到残墙。"
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/fort-william-anomabu-1753/",
+          "https://africa.si.edu/collection/object/nmafa_2014-14-1",
+          "https://api.pageplace.de/preview/DT0400.9781136960703_A23876854/preview-9781136960703_A23876854.pdf#page=40",
+          "https://ufdcimages.uflib.ufl.edu/UF/E0/04/13/66/00001/micots_c.pdf"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "GUADELOUPE_SAINT_CHARLES_REBUILD",
+        "title": "巴斯特尔 · 圣夏尔堡重建驻地",
+        "kind": "foreign_occupation",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -61.72317,
+          15.9887,
+          -61.72317,
+          15.9887
+        ],
+        "periods": [
+          {
+            "start_year": 1764,
+            "end_year": 1784,
+            "title": "圣夏尔堡 · 法方修复和扩建",
+            "note": "法方扩建堡墙和外工事，增设营房、工场、仓库、监狱与供水设施。"
+          },
+          {
+            "start_year": 1785,
+            "end_year": 1793,
+            "title": "圣夏尔堡 · 新棱堡和外壕施工",
+            "note": "法方继续加筑向城市和海岸伸展的防御设施。"
+          }
+        ],
+        "source_urls": [
+          "https://pop.culture.gouv.fr/notice/merimee/IA97100904",
+          "https://www.culture.gouv.fr/mc/content/download/157808/file/BSR%202011%20-%202013.pdf?inLanguage=fre-FR&version=3",
+          "https://pop.culture.gouv.fr/notice/merimee/PA00105850",
+          "https://www.erudit.org/fr/revues/bshg/1971-n15-16-bshg03540/1044152ar.pdf"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "JAMAICA_FORT_CHARLES_EARLY",
+        "title": "罗亚尔港 · 查尔斯堡早期驻地",
+        "kind": "military_vicinity",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -76.842383,
+          17.9350348,
+          -76.842383,
+          17.9350348
+        ],
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1733,
+            "title": "查尔斯堡 · 震后修复的港口要塞",
+            "note": "查尔斯堡在1692年地震中受损但未沉没。牙买加遗产机构记载莉利于1699年主持修复，堡垒继续守卫港口。",
+            "kind": "military_vicinity"
+          },
+          {
+            "start_year": 1734,
+            "end_year": 1753,
+            "title": "查尔斯堡 · 莉利改建",
+            "note": "1734年工程师克里斯蒂安·莉利再次改建查尔斯堡。",
+            "kind": "military_vicinity"
+          },
+          {
+            "start_year": 1754,
+            "end_year": 1771,
+            "title": "查尔斯堡 · 炮位扩充及工程争议",
+            "note": "殖民总督1754年报告质疑堡防状况，随后驻地仍扩充炮位与人员。",
+            "kind": "military_vicinity"
+          }
+        ],
+        "source_urls": [
+          "https://www.jnht.gov.jm/site_fort_charles.php",
+          "https://www.jnht.gov.jm/site_port_royal.php",
+          "https://whc.unesco.org/document/209701",
+          "https://discovery.ucl.ac.uk/id/eprint/10148480/"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      },
+      {
+        "id": "JAMAICA_MAROON_CHARLES_TOWN",
+        "title": "波特兰 · 查尔斯镇马龙社群",
+        "kind": "diplomacy",
+        "layer": "regional_sites",
+        "geometry_type": "Point",
+        "bbox": [
+          -76.6639,
+          18.20526,
+          -76.6639,
+          18.20526
+        ],
+        "periods": [
+          {
+            "start_year": 1754,
+            "end_year": 1769,
+            "title": "新克劳福德镇 · 东部马龙人重组聚落",
+            "note": "旧克劳福德镇发生冲突后，部分马龙人在巴夫湾内陆建立新聚落。此地后来称查尔斯镇。"
+          },
+          {
+            "start_year": 1770,
+            "end_year": 1799,
+            "title": "新克劳福德镇 · 社群延续",
+            "note": "1770年前后的资料已记新聚落人口。社群继续运作，同殖民当局维持条约与监督关系。"
+          }
+        ],
+        "source_urls": [
+          "https://www.jnht.gov.jm/CharlesTown.php",
+          "https://www.geonames.org/advanced-search.html?q=Portland%2F&startRow=100",
+          "https://eprints.soton.ac.uk/423482/1/LIBRARY_COPY_After_The_Treaties_Final.pdf",
+          "https://www.jnht.gov.jm/special_communities.php"
+        ],
+        "uncertain_line_dashed": true,
+        "territorial_control_verified": false,
+        "superseded_by": null,
+        "area_sqkm": null
+      }
+    ],
+    "sites": [
+      {
+        "id": "CHARLESTON_OCCUPIED",
+        "title": "独立战争查尔斯顿英军驻城",
+        "kind": null,
+        "layer": "sites",
+        "geometry_type": "rectangle_reference",
+        "bbox": null,
+        "periods": [
+          {
+            "start_year": 1780,
+            "end_year": 1781
+          }
+        ],
+        "source_urls": [
+          "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm"
+        ],
+        "uncertain_line_dashed": null,
+        "territorial_control_verified": null,
+        "superseded_by": "CHARLESTON_OLD_TOWN_1780",
+        "area_sqkm": null
+      }
+    ]
+  },
+  "primary_same_period_map_sources": [
+    {
+      "year": 1709,
+      "author": "John Lawson",
+      "record": "A New Voyage to Carolina (map and contemporary description)",
+      "url": "https://www.loc.gov/item/02018519/",
+      "use": "coast/rivers/known towns, not proprietary or exact land parcel geometry"
+    },
+    {
+      "year": 1711,
+      "author": "Thomas Nairne; Maurice Mathews; John Love",
+      "record": "A compleat description of the province of Carolina",
+      "url": "https://www.loc.gov/item/2004626926/",
+      "use": "improved part and coast separately, not a polygon of British command"
+    },
+    {
+      "year": 1700,
+      "author": "State Archives of North Carolina",
+      "record": "Colonial Court Records (1665-1787), Land Office and pre-1800 grants",
+      "url": "https://appx.archives.ncdcr.gov/findingaids/SR_401_Colonial_Court_Records_G_.html",
+      "use": "specific grants require matched dated recorded plats before geometries"
+    }
+  ],
+  "do_not_substitute_1712_north_carolina_administration": true,
+  "no_new_polygon_claimed": true,
+  "no_automatic_supersession": true
+}

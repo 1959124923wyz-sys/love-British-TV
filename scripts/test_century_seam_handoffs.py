@@ -55,7 +55,18 @@ def check_early_seam():
         for link in row['records_at_1700']:
             path, key = link['source_dataset'], link['id']
             if path in lookup:
-                assert active(lookup[path][key], 1700), key
+                if path == MASS and key == 'CAROLINA_PROPRIETORS':
+                    # The original 1699->1700 crosswalk remains a historical archive:
+                    # 5AH retains the old charter and source, but its imprecise giant
+                    # rectangle is now retired in favour of a year-1700 named port.
+                    old_claim = lookup[path][key]
+                    assert old_claim['superseded_by'] == 'CAROLINA_CHARLESTOWN_1700_1711'
+                    assert old_claim['periods'] == [{'start_year': 1700, 'end_year': 1711}]
+                    assert old_claim['bbox'] == [-83.8, 31.3, -75.5, 36.7]
+                    assert old_claim['source_urls']
+                    assert active(lookup[MASS][old_claim['superseded_by']], 1700)
+                else:
+                    assert active(lookup[path][key], 1700), key
                 if row['display_at_1700'] == 'legacy_geometry_retained' and path == DYNAMIC:
                     assert lookup[path][key]['geometry_key'] == claims[row['previous_id']]['properties']['name']
             else:
