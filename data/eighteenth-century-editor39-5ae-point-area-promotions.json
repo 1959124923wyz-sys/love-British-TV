@@ -1,0 +1,64 @@
+{
+  "schema": "atlas_editor39_5ae_verified_point_to_area_promotions_v1",
+  "batch": "5AE",
+  "source_policy": "Only polygons previously mapped from survey/history maps; never buffer a point as a historical territorial footprint",
+  "source_polygon_already_live": true,
+  "area_totals_forbidden": true,
+  "point_markers_replaced_by_existing_polygons": [
+    {
+      "id": "EDITOR38_5AD_TELLICHERRY_FORT",
+      "source_layer": "mass",
+      "polygon_id": "MYSORE_TELLICHERRY_FORT",
+      "start_year": 1708,
+      "end_year": 1799,
+      "source_footprint_vertices": 15,
+      "evidence": "Existing registered coastal fort wall, 1708 English Company factory and administrative post"
+    },
+    {
+      "id": "EDITOR38_5AD_MADRAS_TREATY_1769",
+      "source_layer": "mass",
+      "polygon_id": "MADRAS_ST_GEORGE_SIEGE",
+      "start_year": 1769,
+      "end_year": 1769,
+      "evidence": "Treaty of Madras signed at Fort St George; registered fort footprint operative 1760-1782"
+    },
+    {
+      "id": "EDITOR38_5AD_ARCOT_1780",
+      "source_layer": "mass",
+      "polygon_id": "ARCOT_FORT_CORE",
+      "start_year": 1780,
+      "end_year": 1780,
+      "evidence": "Arcot fort occupied by Haidar Ali forces in 1780, verified 1780-1782 fort-occupation polygon"
+    },
+    {
+      "id": "EDITOR37_5AC_ANNAPOLIS_FORT_ANNE",
+      "source_layer": "mass",
+      "polygon_id": "FORT_ANNE_ROYAL_PORT",
+      "start_year": 1755,
+      "end_year": 1755,
+      "evidence": "Documented Fort Anne garrison and 1755 Acadian deportation site, existing historic fort rampart polygon"
+    },
+    {
+      "id": "EDITOR37_5AB_BEYIN",
+      "source_layer": "5ab",
+      "polygon_id": "EDITOR37_5AB_BEYIN_FORT_AFTER_1773",
+      "start_year": 1773,
+      "end_year": 1799,
+      "evidence": "Fort Apollonia extant recorded from 1773; prior 1766-1772 site retained as point"
+    }
+  ],
+  "denied_examples": [
+    {
+      "id": "EDITOR38_5AD_FORT_PITT_1763",
+      "reason": "Surviving Bouquet blockhouse constructed 1764, cannot represent 1763 fort footprint"
+    },
+    {
+      "id": "EDITOR36_5Y_BOMBAY",
+      "reason": "Harbour trade and war operations extend beyond any single castle polygon"
+    },
+    {
+      "id": "EDITOR36_5Y_CALCUTTA",
+      "reason": "Tax and river network not limited to old Fort William"
+    }
+  ]
+}
