@@ -116,4 +116,4 @@ for(const row of expanded.candidate_sites){
  }
 }
 a.equal(expanded.high_risk_examples.length,5);
-console.log('PASS 5AG: two superseded broad areas, 3 dated Great Lakes fort walls, 5 local NSW surveyed footprints, 3 1794 grants; one legacy rectangle remains, none in 1799.');
+console.log('PASS 5AG: two superseded broad areas, 3 dated Great Lakes fort walls, 5 local NSW surveyed footprints, 3 1794 grants; the 5AG baseline preserved, plus 5AH last Carolina reference retired; zero 18C legacy rectangles.');
