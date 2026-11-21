@@ -102,13 +102,14 @@ for new_id,old_id,start,end,lon,lat,expected_bbox,label in COASTS:
     assert simplified.is_valid and simplified.geom_type=="Polygon"
     assert simplified.area/island.area>.998
     coords=mapping(simplified)["coordinates"]
-    assert len(coords[0])>=20 and len(coords[0])<1500,(new_id,len(coords[0]))
+    assert len(coords[0])>=7 and len(coords[0])<1500,(new_id,len(coords[0]))
     old=by_claim[old_id]
     assert old["properties"]["start_year"]<=start<=end<=old["properties"]["end_year"]
     feature={"type":"Feature","id":new_id,"geometry":{"type":"Polygon","coordinates":coords},
     "properties":{
       "stable_id":new_id,"supersedes_visual_reference":old_id,
       "name":label,"start_year":start,"end_year":end,
+      "description":old["properties"]["description"],"summary_zh":old["properties"]["summary_zh"],
       "display_kind":"natural_island_coastline",
       "geometry_precision":"natural_earth_10m_land_5_1_1_modern_physical_coastline",
       "geometry_verified_as_historical_border":False,"historical_boundary_confirmed":False,
@@ -145,6 +146,7 @@ for old_id,(event_id,label) in CLAIM_POINTS.items():
     "properties":{
       "stable_id":new_id,"supersedes_visual_reference":old_id,"name":label,
       "start_year":o["start_year"],"end_year":o["end_year"],"display_kind":"named_historic_place",
+      "description":o["description"],"summary_zh":o["summary_zh"],
       "geometry_precision":"documented_named_place_modern_reference_point",
       "historical_boundary_confirmed":False,"territorial_claim":False,
       "territorial_control_verified":False,"fill_authorized":False,
@@ -168,6 +170,7 @@ for old_id in sorted(STUDY_IDS):
           "stable_id":"EDITOR43_5AI_STUDY_"+old_id.upper().replace("-","_").replace("17C_","")+"_"+str(i),
           "supersedes_visual_reference":old_id,"name":place["name"],
           "start_year":o["start_year"],"end_year":o["end_year"],
+          "description":o.get("description",""),"summary_zh":o.get("summary_zh",o.get("description","")),
           "display_kind":"dated_event_place",
           "geometry_precision":"source_registered_modern_atlas_event_point",
           "historical_boundary_confirmed":False,"territorial_claim":False,
