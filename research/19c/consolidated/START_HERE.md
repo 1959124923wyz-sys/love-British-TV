@@ -4,6 +4,8 @@
 
 **目标：** 让任何新的主编、史学调查员、专题作者、历史 GIS 制图人员和 QA 人员都能仅凭 GitHub 仓库继续完成十九世纪英国殖民扩张、掠夺、强制迁移、战争、财政转移、土地剥夺及当地抵抗的**可追溯史料专题＋逐年动态地图**。工作必须写回 GitHub，聊天只是工作指令，不是进度数据库。
 
+**统一协作Issue：** [十九世纪59专题/150章总任务 #499](https://github.com/1959124923wyz-sys/love-British-TV/issues/499)。认领前核对该Issue和当前工作板，以免不同对话重复修改同一章节。
+
 ## 0. 新对话的六步接棒（不要要求用户上传或重新解释资料）
 
 1. **从当前 `main` 开始**，阅读根目录 `AGENTS.md`、本文件、[研究目录](README.md)、[进度](PROGRESS.md)；确认 [研究主卷 `manifest.json`](manifest.json) 与 `python3 research/19c/consolidated/verify.py` 可通过。若仍是草稿 PR，先参照 [PR #463](https://github.com/1959124923wyz-sys/love-British-TV/pull/463) 的研究分支，**不得误以为 `main` 已有这批文件**。
