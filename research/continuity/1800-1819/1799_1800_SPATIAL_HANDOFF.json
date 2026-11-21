@@ -7413,5 +7413,15 @@
       ],
       "notes": "同一组坐标和稳定ID接续至1800年。"
     }
-  ]
+  ],
+  "additional_physical_hydrography_5z": {
+    "source_dataset": "data/eighteenth-century-editor36-5z-waterways.geojson",
+    "feature_count": 18,
+    "polygon_lake_count": 10,
+    "river_course_count": 8,
+    "scope": "physical features continue from the 1799 map to the 1800 map; this is a geographic, not political or fiscal continuity layer",
+    "not_added_to_baseline_record_counts": true,
+    "geometry_identity_condition": "each feature has a single stable_id and identical geometry on both years",
+    "status": "cartography_review"
+  }
 }

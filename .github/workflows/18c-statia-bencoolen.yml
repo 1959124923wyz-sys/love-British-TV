@@ -3,6 +3,12 @@ on:
   pull_request:
     paths:
       - 'app.js'
+      - 'data/eighteenth-century-editor36-5z-waterways.geojson'
+      - 'data/eighteenth-century-expansion-batch36-1700-1799.json'
+      - 'data/eighteenth-century-b38-hudson-company.json'
+      - 'js/eighteenth-editor36-5z-waterways.js'
+      - 'scripts/test_editor36_5z_source_waterways.js'
+      - 'scripts/browser_editor36_5z_waterways.cjs'
       - 'js/history-stories.js'
       - 'data/stories/serial/**'
       - 'data/eighteenth-century-b37-india-ocean.json'
@@ -32,6 +38,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - run: node --check js/eighteenth-editor36-5z-waterways.js
+      - run: node scripts/test_editor36_5z_source_waterways.js
       - run: node scripts/test_editor36_5y_named_sites.js
       - run: node scripts/test_18c_batch39_126_83.js
       - run: node scripts/test_18c_statia_bencoolen.js
@@ -52,3 +60,4 @@ jobs:
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-topics-http.log 2>&1 &
           node scripts/browser_18c_statia_bencoolen.cjs
           node scripts/browser_editor36_5y_named_sites.cjs
+          node scripts/browser_editor36_5z_waterways.cjs
