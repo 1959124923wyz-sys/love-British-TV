@@ -1,0 +1,2214 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "schema": "atlas-editor38-5ad-source-nodes-hydro-treaty-v1",
+    "batch": "5AD",
+    "historical_area_sqkm": null,
+    "area_aggregation_forbidden": true,
+    "source_waterways": "Existing published Natural Earth 1:10m literal river centerlines, not reconstructed ship routes",
+    "historical_treaty_map": "https://www.loc.gov/resource/g4820.ct008427/",
+    "note": "Points are historically named places or modern reference locations; physical lines are measured current rivers. No artificial political polygon or treaty boundary is inferred; treaty limits require historical georeferencing.",
+    "retired_legacy_zone_ids": [
+      "B36-Z020",
+      "B36-Z021",
+      "B36-Z022",
+      "B36-Z029",
+      "B36-Z033",
+      "B36-Z080",
+      "B36-Z081",
+      "B36-Z094",
+      "B36-Z096",
+      "B36-Z097",
+      "B36-Z107",
+      "B36-Z108",
+      "B36-Z109",
+      "B36-Z114",
+      "B38-H-Z005",
+      "B38-H-Z019",
+      "B38-H-Z020",
+      "B38-H-Z026",
+      "B38-I-Z023",
+      "B38-I-Z024",
+      "B38-I-Z025",
+      "B38-I-Z029",
+      "B38-S-Z024",
+      "B38-S-Z026",
+      "B38-S-Z044"
+    ],
+    "reused_5z_ids": [
+      "EDITOR36_5Z_HAYES_LOWER",
+      "EDITOR36_5Z_LAKE_HURON"
+    ],
+    "deferred_1763_proclamation_line": [
+      "B36-Z023",
+      "B36-Z024"
+    ],
+    "deferred_1783_1786_concession_polygon": true,
+    "feature_count": 27,
+    "point_count": 26,
+    "hydro_line_count": 1,
+    "retired_1799": 10,
+    "source_legacy_file_names": [
+      "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "data/eighteenth-century-b38-hudson-company.json",
+      "data/eighteenth-century-b38-india-mysore.json",
+      "data/eighteenth-century-b38-south-campaign.json"
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_FORT_PITT_1763",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.9959,
+          40.4419
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_FORT_PITT_1763",
+        "title": "匹兹堡匹特堡｜1763年俄亥俄河谷围攻",
+        "kind": "indigenous_resistance",
+        "periods": [
+          {
+            "start_year": 1763,
+            "end_year": 1766
+          }
+        ],
+        "historical_context": "1763年俄亥俄河谷原住民联盟攻击英方边境堡垒；匹特堡遭围攻，不能以英方驻堡推定河谷归属。",
+        "source_urls": [
+          "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z020"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_FORT_MIAMIS_1763",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.138,
+          41.082
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_FORT_MIAMIS_1763",
+        "title": "迈阿密堡旧址｜1763年原住民夺堡",
+        "kind": "indigenous_resistance",
+        "periods": [
+          {
+            "start_year": 1763,
+            "end_year": 1766
+          }
+        ],
+        "historical_context": "1763年在现今印第安纳州韦恩堡附近，原住民战士夺取英方控制的迈阿密堡；当地河谷原有原住民社群。",
+        "source_urls": [
+          "https://dam.assets.ohio.gov/image/upload/transportation.ohio.gov/environmental-services/cultural-resources/ohiobyways/MVS_CMP_2020_Update.pdf",
+          "https://www.nps.gov/articles/000/a-timeline-history-of-the-oneida-carry.htm",
+          "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+        ],
+        "geometry_precision": "Fort_Wayne_Maumee_fort_vicinity_not_1763_structure_polygon",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z021"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_PRESQUE_ISLE_1763",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.085,
+          42.129
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_PRESQUE_ISLE_1763",
+        "title": "普雷斯克岛旧堡｜1763年被夺取",
+        "kind": "indigenous_resistance",
+        "periods": [
+          {
+            "start_year": 1763,
+            "end_year": 1766
+          }
+        ],
+        "historical_context": "1763年原住民联盟攻下伊利湖畔英方普雷斯克岛堡，英方控制因此中断。",
+        "source_urls": [
+          "https://colonialwarspa.org/brief-history-fort-presque-isle-may-1753/",
+          "https://history.state.gov/milestones/1750-1775/proclamation-line-1763"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z022"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_PRAIRIE_DU_CHIEN",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.142,
+          43.051
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_PRAIRIE_DU_CHIEN",
+        "title": "草原之犬｜密西西比河沿岸贸易交汇地",
+        "kind": "fur_trade_site",
+        "periods": [
+          {
+            "start_year": 1767,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "草原之犬位于密西西比河—威斯康星河附近的原住民与欧洲毛皮贸易交汇地。各社群的贸易活动不得折算为整片河谷的英国管辖。",
+        "source_urls": [
+          "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z029"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_LACHINE_TRADING",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.682,
+          45.433
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_LACHINE_TRADING",
+        "title": "拉欣｜圣劳伦斯河内陆毛皮贸易转运地",
+        "kind": "fur_trade_site",
+        "periods": [
+          {
+            "start_year": 1763,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "拉欣是圣劳伦斯河与西部内陆商路之间的毛皮贸易转运地点，商人、航行者与原住民贸易网络共同构成其历史。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/qc/lachine/visit",
+          "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z033"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_BENARES_REVENUE",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.9739,
+          25.3176
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_BENARES_REVENUE",
+        "title": "贝拿勒斯｜1775年后公司地税政治介入",
+        "kind": "fiscal_administration",
+        "periods": [
+          {
+            "start_year": 1775,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "1775年后东印度公司与贝拿勒斯地方统治者的地税、宗主权和征收关系发生变化。",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/armies-east-india-company",
+          "https://searcharchives.bl.uk/catalog/040-000004729",
+          "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z080",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1775年后东印度公司与贝拿勒斯地方统治者的地税、宗主权和征收关系发生变化。古代财政辖境无法从现代城市中心外推出边界。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_FAIZABAD_BEGUMS",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.1418,
+          26.7778
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_FAIZABAD_BEGUMS",
+        "title": "法扎巴德｜1781—1782年阿瓦德王室财产案",
+        "kind": "fiscal_coercion",
+        "periods": [
+          {
+            "start_year": 1781,
+            "end_year": 1782
+          }
+        ],
+        "historical_context": "1781—1782年沃伦·黑斯廷斯时期，阿瓦德贝古姆财产遭强制追索，法扎巴德是案件重要地点。财物与责任细节见原案历史研究。",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/armies-east-india-company",
+          "https://www.britishmuseum.org/collection/term/x27093"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z081"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_TANJORE_1799",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1378,
+          10.7867
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_TANJORE_1799",
+        "title": "坦贾武尔｜1799年公司接管税收司法",
+        "kind": "fiscal_administration",
+        "periods": [
+          {
+            "start_year": 1799,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "1799年10月25日瑟福吉二世与东印度公司订约，公司取得坦贾武尔地区的税收与司法管理；君主保留坦贾武尔堡及其附近有限权利。",
+        "source_urls": [
+          "https://dl.tufts.edu/downloads/1r66jc42j?filename=4x51hw26r.pdf",
+          "https://thanjavur.nic.in/british-history/",
+          "https://searcharchives.bl.uk/catalog/040-000004729",
+          "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z094",
+        "primary_treaty_date": "1799-10-25",
+        "primary_treaty_text": "Madras Presidency Tanjore Treaty No XVI 1799, original articles 2-5, government revenue & justice transfer"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_TELLICHERRY_FORT",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.4902,
+          11.7489
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_TELLICHERRY_FORT",
+        "title": "特利切里｜英东印度公司马拉巴尔商馆",
+        "kind": "coastal_factory",
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "特利切里（现塔拉塞里）是英东印度公司在马拉巴尔海岸的商馆、仓储和防务节点。",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/armies-east-india-company",
+          "https://keralatourism.org/destination/tellicherry-fort-kannur/94"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z096",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 特利切里（现塔拉塞里）是英东印度公司在马拉巴尔海岸的商馆、仓储和防务节点，实际控制应按具体堡址核查。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_ANJENGO_FORT",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.7617,
+          8.6744
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_ANJENGO_FORT",
+        "title": "安詹戈｜英公司沿海堡垒与商馆",
+        "kind": "coastal_factory",
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "安詹戈（现Anchuthengu）是英国东印度公司在特拉凡哥尔海岸的堡垒和商馆，周围地方政治关系与此据点分开。",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/armies-east-india-company",
+          "https://www.keralatourism.org/destination/anchuthengu-fort/274"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z097"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_JAMAICA_ST_MARY",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.889,
+          18.37
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_JAMAICA_ST_MARY",
+        "title": "圣玛丽教区波特马里亚｜1765年反奴役行动",
+        "kind": "enslaved_resistance",
+        "periods": [
+          {
+            "start_year": 1765,
+            "end_year": 1765
+          }
+        ],
+        "historical_context": "牙买加圣玛丽教区1765年有被奴役者反抗记录。",
+        "source_urls": [
+          "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+        ],
+        "geometry_precision": "modern_parish_seat_not_rebellion_site",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z107",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 牙买加圣玛丽教区1765年有被奴役者反抗记录。波特马里亚用于教区地理定位，行动的精确发生地未通过独立档案配准。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_JAMAICA_WESTMORELAND",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.131,
+          18.22
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_JAMAICA_WESTMORELAND",
+        "title": "西摩兰教区萨凡纳拉马尔｜1766年反奴役行动",
+        "kind": "enslaved_resistance",
+        "periods": [
+          {
+            "start_year": 1766,
+            "end_year": 1766
+          }
+        ],
+        "historical_context": "牙买加西摩兰教区1766年有被奴役者反抗记录。",
+        "source_urls": [
+          "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+        ],
+        "geometry_precision": "modern_parish_seat_not_rebellion_site",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z108",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 牙买加西摩兰教区1766年有被奴役者反抗记录。萨凡纳拉马尔是教区定位，不将现今城镇误认为起义现场。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_JAMAICA_HANOVER",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.169,
+          18.451
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_JAMAICA_HANOVER",
+        "title": "汉诺威教区卢西｜1776年反奴役行动",
+        "kind": "enslaved_resistance",
+        "periods": [
+          {
+            "start_year": 1776,
+            "end_year": 1776
+          }
+        ],
+        "historical_context": "1776年牙买加汉诺威教区有被奴役者反抗记录。",
+        "source_urls": [
+          "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+        ],
+        "geometry_precision": "modern_parish_seat_not_rebellion_site",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z109",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1776年牙买加汉诺威教区有被奴役者反抗记录。卢西仅用于教区地理定位，保留行动现场待查。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_GRENADA_ST_JOHN",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.727,
+          12.162
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_GRENADA_ST_JOHN",
+        "title": "格林纳达圣约翰教区｜1795—1796年费东起义",
+        "kind": "anti_colonial_resistance",
+        "periods": [
+          {
+            "start_year": 1795,
+            "end_year": 1796
+          }
+        ],
+        "historical_context": "1795—1796年费东起义波及格林纳达内陆高地，圣约翰教区及Belvedere庄园相关。",
+        "source_urls": [
+          "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+        ],
+        "geometry_precision": "modern_gouyave_parish_reference_not_belvedere_estate_exact_site",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B36-Z114",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1795—1796年费东起义波及格林纳达内陆高地，圣约翰教区及Belvedere庄园相关。此处为沿海古亚韦地理参考点，未把起义根据地画成无据矩形。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_CUMBERLAND_HOUSE_CREE",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.27,
+          53.957
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_CUMBERLAND_HOUSE_CREE",
+        "title": "坎伯兰豪斯｜1774年英公司深入克里贸易区",
+        "kind": "fur_trade_site",
+        "periods": [
+          {
+            "start_year": 1774,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "1774年哈德孙湾公司在克里及其他原住民贸易网络中建立坎伯兰豪斯内陆商站。克里人保持当地政治和经济主体性。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history",
+          "https://parks.canada.ca/lhn-nhs/mb/prince/culture/decouvrir-discover3",
+          "https://parks.canada.ca/lhn-nhs/mb/forks/culture/histoire-history/contact"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B38-H-Z019"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_TIRUVANNAMALAI_1767",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.074,
+          12.231
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_TIRUVANNAMALAI_1767",
+        "title": "蒂鲁瓦纳马莱｜1767年英迈第一次战争",
+        "kind": "south_india_war_site",
+        "periods": [
+          {
+            "start_year": 1767,
+            "end_year": 1769
+          }
+        ],
+        "historical_context": "1767年第一次英迈战争期间，迈索尔海德尔·阿里与英公司部队在蒂鲁瓦纳马莱一带交战。",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/armies-east-india-company",
+          "https://www.tamildigitallibrary.in/admin/assets/book/TVA_BOK_0048704/TVA_BOK_0048704_Rulers_of_India_Haidar_ali_and_Tipu_sultan_1893.pdf"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B38-I-Z023",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1767年第一次英迈战争期间，迈索尔海德尔·阿里与英公司部队在蒂鲁瓦纳马莱一带交战；仅标城镇方位。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_MADRAS_TREATY_1769",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.285,
+          13.079
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_MADRAS_TREATY_1769",
+        "title": "马德拉斯｜1769年海德尔·阿里与公司和约",
+        "kind": "south_india_diplomacy",
+        "periods": [
+          {
+            "start_year": 1769,
+            "end_year": 1769
+          }
+        ],
+        "historical_context": "1769年第一次英迈战争以马德拉斯和约告终，缔约地按圣乔治堡所在的马德拉斯城定位。",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/armies-east-india-company",
+          "https://www.britannica.com/event/Mysore-Wars"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B38-I-Z024",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1769年第一次英迈战争以马德拉斯和约告终，缔约地按圣乔治堡所在的马德拉斯城定位；原有各方实际控制仍须分别判断。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_ARCOT_1780",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.322,
+          12.906
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_ARCOT_1780",
+        "title": "阿尔科特｜1780年海德尔·阿里进入卡纳提克",
+        "kind": "south_india_war_site",
+        "periods": [
+          {
+            "start_year": 1780,
+            "end_year": 1781
+          }
+        ],
+        "historical_context": "1780年海德尔·阿里率迈索尔军进入卡纳提克，并攻取阿尔科特。",
+        "source_urls": [
+          "https://censusindia.gov.in/nada/index.php/catalog/31243/download/34424/21573_1961_GEN.pdf",
+          "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B38-I-Z025",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1780年海德尔·阿里率迈索尔军进入卡纳提克，并攻取阿尔科特。此处标城市，历史进军走向与占领县界分别保留待考。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_SADRAS_1782",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2,
+          12.524
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_SADRAS_1782",
+        "title": "萨德拉斯港｜1782年英法舰队海战岸上参照",
+        "kind": "south_india_naval_site",
+        "periods": [
+          {
+            "start_year": 1782,
+            "end_year": 1782
+          }
+        ],
+        "historical_context": "1782年英法舰队在萨德拉斯近海交战。",
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot",
+          "https://www.britannica.com/event/Battle-of-Sadras"
+        ],
+        "geometry_precision": "Sadras_historic_harbour_modern_reference_not_naval_battle_gps",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B38-I-Z029",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1782年英法舰队在萨德拉斯近海交战，标记历史海港以指明战事海域；战舰实际航线和海上交火坐标尚待核。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_ROCKY_MOUNT_1780",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.887517,
+          34.531583
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_ROCKY_MOUNT_1780",
+        "title": "罗基芒特｜1780年英军据点遭攻击",
+        "kind": "american_revolution_battle",
+        "periods": [
+          {
+            "start_year": 1780,
+            "end_year": 1780
+          }
+        ],
+        "historical_context": "1780年萨姆特部队向英军罗基芒特据点发动进攻。",
+        "source_urls": [
+          "https://home.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm",
+          "https://www.battlefields.org/visit/battlefields/rocky-mount",
+          "https://www.hmdb.org/m.asp?m=228191",
+          "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+        ],
+        "geometry_precision": "historic_marker_not_1780_fort_enclosure",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B38-S-Z024",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1780年萨姆特部队向英军罗基芒特据点发动进攻。所绘坐标是南卡罗来纳州纪念碑方位，旧堡围墙和战斗范围未被擅绘。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_FISHING_CREEK_1780",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.901367,
+          34.62345
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_FISHING_CREEK_1780",
+        "title": "菲兴溪｜1780年塔尔顿突袭",
+        "kind": "american_revolution_battle",
+        "periods": [
+          {
+            "start_year": 1780,
+            "end_year": 1780
+          }
+        ],
+        "historical_context": "1780年8月18日塔尔顿率英军突袭托马斯·萨姆特的美军，在菲兴溪附近击败其部。",
+        "source_urls": [
+          "https://home.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm",
+          "https://www.hmdb.org/m.asp?m=253482",
+          "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+        ],
+        "geometry_precision": "historic_marker_not_full_1780_battlefield",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B38-S-Z026",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1780年8月18日塔尔顿率英军突袭托马斯·萨姆特的美军，在菲兴溪附近击败其部。坐标为现代纪念碑点，行动面积仍待地籍研究。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_RICHMOND_JAMES_1781",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.436,
+          37.541
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_RICHMOND_JAMES_1781",
+        "title": "里士满｜1781年英军沿詹姆斯河行动",
+        "kind": "american_revolution_river_site",
+        "periods": [
+          {
+            "start_year": 1781,
+            "end_year": 1781
+          }
+        ],
+        "historical_context": "1781年英军在弗吉尼亚沿詹姆斯河进入河港和聚落，里士满为当年英军行动的具名中心之一。",
+        "source_urls": [
+          "https://home.nps.gov/people/charles-cornwallis.htm",
+          "https://www.nps.gov/articles/000/british-raid-on-richmond.htm"
+        ],
+        "geometry_precision": "modern_named_place_reference_not_surveyed_historic_extent",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B38-S-Z044",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1781年英军在弗吉尼亚沿詹姆斯河进入河港和聚落，里士满为当年英军行动的具名中心之一；河道航迹未被重建。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_BELIZE_HONDO_1783",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.318254,
+          18.487631
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_BELIZE_HONDO_1783",
+        "title": "洪多河口｜1783年采木许可北侧河界",
+        "kind": "belize_treaty_reference",
+        "periods": [
+          {
+            "start_year": 1783,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "1783年英西条约以洪多河和伯利兹河等河道规定英人采染料木的有限许可；西班牙保有法理主权，玛雅社群生活在当地。",
+        "source_urls": [
+          "https://blogs.loc.gov/maps/2026/03/founded-in-the-forest-mapping-the-history-of-belize/",
+          "https://history.state.gov/historicaldocuments/frus1939v05/d265",
+          "https://www.loc.gov/resource/g4820.ct008427/",
+          "https://www.geonames.org/advanced-search.html?country=BZ&featureClass=H&q=&startRow=50"
+        ],
+        "geometry_precision": "modern_river_mouth_reference_not_full_treaty_demarcation",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "coordinate_source": "GeoNames Rio Hondo river feature 18.487631 -88.318254 (modern mouth)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_BELIZE_RIVER_1783",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.191,
+          17.497
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_BELIZE_RIVER_1783",
+        "title": "伯利兹河口｜1783年采木许可南侧河界",
+        "kind": "belize_treaty_reference",
+        "periods": [
+          {
+            "start_year": 1783,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "1783年英西和约容许英国臣民于洪多河、伯利兹河等限界内采伐染料木，条款限定采伐活动及定居权利。",
+        "source_urls": [
+          "https://blogs.loc.gov/maps/2026/03/founded-in-the-forest-mapping-the-history-of-belize/",
+          "https://history.state.gov/historicaldocuments/frus1939v05/d265"
+        ],
+        "geometry_precision": "modern_river_mouth_reference_not_full_treaty_demarcation",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_BELIZE_SIBUN_1786",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.25,
+          17.417
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_BELIZE_SIBUN_1786",
+        "title": "锡本河口｜1786年伦敦条约扩大采木许可",
+        "kind": "belize_treaty_reference",
+        "periods": [
+          {
+            "start_year": 1786,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "1786年7月14日伦敦协定把英国人的采木权许可地区从伯利兹河向南扩展至锡本河，英方同意撤离蚊子海岸；原西班牙主权条款仍在。",
+        "source_urls": [
+          "https://blogs.loc.gov/maps/2026/03/founded-in-the-forest-mapping-the-history-of-belize/",
+          "https://history.state.gov/historicaldocuments/frus1939v05/d265"
+        ],
+        "geometry_precision": "modern_river_mouth_reference_not_full_treaty_demarcation",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_BELIZE_SETTLEMENT_1784",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.19,
+          17.499
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_BELIZE_SETTLEMENT_1784",
+        "title": "伯利兹河口聚落｜英人采木与被奴役劳工",
+        "kind": "belize_logwood_settlement",
+        "periods": [
+          {
+            "start_year": 1784,
+            "end_year": 1799
+          }
+        ],
+        "historical_context": "1783年后获准在有限范围采木的英国人重新聚集伯利兹河口；木材采伐严重依赖被奴役非洲人的劳动，1784年建立英方监督官制度。",
+        "source_urls": [
+          "https://blogs.loc.gov/maps/2026/03/founded-in-the-forest-mapping-the-history-of-belize/",
+          "https://read.upcolorado.com/read/maya-british-conflict-at-the-edge-of-the-yucatecan-caste-war/section/7c56fc26-98fe-448a-8bd1-825b00e0e71d"
+        ],
+        "geometry_precision": "modern_belize_city_reference_not_1784_settlement_boundary",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR38_5AD_HAYES_SASKATCHEWAN_WATERWAYS",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -92.8536677725204,
+              56.34849681197319
+            ],
+            [
+              -92.85570227772872,
+              56.36054108280653
+            ],
+            [
+              -92.81305904856207,
+              56.40806712447319
+            ],
+            [
+              -92.7894587881454,
+              56.44537994999403
+            ],
+            [
+              -92.77245032460372,
+              56.46649811405653
+            ],
+            [
+              -92.75475012929122,
+              56.47569407759819
+            ],
+            [
+              -92.73253333241622,
+              56.48371002811903
+            ],
+            [
+              -92.71239173085372,
+              56.50263092655653
+            ],
+            [
+              -92.67491614491622,
+              56.55451080936903
+            ],
+            [
+              -92.66100012929122,
+              56.56919993697319
+            ],
+            [
+              -92.65538489491622,
+              56.57880280155653
+            ],
+            [
+              -92.6529841787704,
+              56.59035879113986
+            ],
+            [
+              -92.65306555897872,
+              56.60199616093153
+            ],
+            [
+              -92.65172278554122,
+              56.61322662968153
+            ],
+            [
+              -92.6451716787704,
+              56.62348053593153
+            ],
+            [
+              -92.63597571522872,
+              56.64264557499403
+            ],
+            [
+              -92.64386959543707,
+              56.66050853072319
+            ],
+            [
+              -92.66905676991622,
+              56.68866608280653
+            ],
+            [
+              -92.66926022043707,
+              56.69513580936903
+            ],
+            [
+              -92.66539466054122,
+              56.70014069218153
+            ],
+            [
+              -92.66258704335372,
+              56.70526764530653
+            ],
+            [
+              -92.66563880116622,
+              56.71222565311903
+            ],
+            [
+              -92.67308509022872,
+              56.71666087447319
+            ],
+            [
+              -92.69098873606207,
+              56.72024160363986
+            ],
+            [
+              -92.69579016835372,
+              56.72219472863986
+            ],
+            [
+              -92.69920813710372,
+              56.73236725468153
+            ],
+            [
+              -92.6991267568954,
+              56.74603912968153
+            ],
+            [
+              -92.6959529287704,
+              56.76007721561903
+            ],
+            [
+              -92.69017493397872,
+              56.77118561405653
+            ],
+            [
+              -92.65160071522872,
+              56.80390045780653
+            ],
+            [
+              -92.63731848866622,
+              56.82611725468153
+            ],
+            [
+              -92.6451716787704,
+              56.84967682499403
+            ],
+            [
+              -92.64061438710372,
+              56.86517975468153
+            ],
+            [
+              -92.62047278554122,
+              56.88951243697319
+            ],
+            [
+              -92.59740149647872,
+              56.91205475468153
+            ],
+            [
+              -92.58372962147872,
+              56.92198314009819
+            ],
+            [
+              -92.52562415272872,
+              56.92727285363986
+            ],
+            [
+              -92.47044837147872,
+              56.94192129113986
+            ]
+          ],
+          [
+            [
+              -102.43712317616622,
+              53.98155345259819
+            ],
+            [
+              -102.43439693918707,
+              53.98179759322319
+            ],
+            [
+              -102.42198645741622,
+              53.98423899947319
+            ],
+            [
+              -102.40538489491622,
+              53.98244863488986
+            ],
+            [
+              -102.3902888662704,
+              53.97349681197319
+            ],
+            [
+              -102.38060462147872,
+              53.96637604374403
+            ]
+          ],
+          [
+            [
+              -103.42125403554122,
+              53.65204498905653
+            ],
+            [
+              -103.43455969960372,
+              53.63544342655653
+            ],
+            [
+              -103.45734615793707,
+              53.61835358280653
+            ],
+            [
+              -103.48664303293707,
+              53.62022532759819
+            ],
+            [
+              -103.51817786366622,
+              53.62877024947319
+            ],
+            [
+              -103.54454505116622,
+              53.63357168176486
+            ],
+            [
+              -103.57310950429122,
+              53.63169993697319
+            ],
+            [
+              -103.60277259022872,
+              53.62763092655653
+            ],
+            [
+              -103.6324763662704,
+              53.62136465051486
+            ],
+            [
+              -103.65807044179122,
+              53.60818105676486
+            ],
+            [
+              -103.67699134022872,
+              53.58718496301486
+            ],
+            [
+              -103.68757076731207,
+              53.56252675988986
+            ],
+            [
+              -103.70368404856207,
+              53.55011627811903
+            ],
+            [
+              -103.73078365793707,
+              53.54470449426486
+            ],
+            [
+              -103.75121009022872,
+              53.53375885624403
+            ],
+            [
+              -103.76903235585372,
+              53.52322011926486
+            ],
+            [
+              -103.78685462147872,
+              53.51593659061903
+            ],
+            [
+              -103.80817623606207,
+              53.51044342655653
+            ],
+            [
+              -103.83283443918707,
+              53.50254954634819
+            ],
+            [
+              -103.8502498037704,
+              53.49298737186903
+            ],
+            [
+              -103.8565974600204,
+              53.48773834843153
+            ],
+            [
+              -103.89093990793707,
+              53.48078034061903
+            ]
+          ],
+          [
+            [
+              -100.32249915272872,
+              53.59255605676486
+            ],
+            [
+              -100.32335364491622,
+              53.59076569218153
+            ],
+            [
+              -100.31794186106207,
+              53.58059316613986
+            ],
+            [
+              -100.27892005116622,
+              53.54795970259819
+            ],
+            [
+              -100.1888728506454,
+              53.51255931197319
+            ],
+            [
+              -100.1100154287704,
+              53.47345612186903
+            ],
+            [
+              -100.06354732981207,
+              53.41889069218153
+            ],
+            [
+              -100.0355525381454,
+              53.37909577030653
+            ],
+            [
+              -100.02318274647872,
+              53.31708405155653
+            ],
+            [
+              -99.99583899647872,
+              53.24009837447319
+            ],
+            [
+              -99.93195553293707,
+              53.19977448124403
+            ],
+            [
+              -99.8568416006454,
+              53.18549225468153
+            ],
+            [
+              -99.78669186106207,
+              53.19102610884819
+            ],
+            [
+              -99.7276912100204,
+              53.21527741093153
+            ],
+            [
+              -99.6761775381454,
+              53.24384186405653
+            ],
+            [
+              -99.61351477772872,
+              53.25006744999403
+            ],
+            [
+              -99.54893958241622,
+              53.24445221561903
+            ],
+            [
+              -99.49933834543707,
+              53.22024160363986
+            ],
+            [
+              -99.46580969960372,
+              53.18488190311903
+            ],
+            [
+              -99.42487545481207,
+              53.17556386926486
+            ],
+            [
+              -99.3663630850204,
+              53.16937897343153
+            ],
+            [
+              -99.33031165272872,
+              53.15945058801486
+            ]
+          ],
+          [
+            [
+              -99.24714107981207,
+              53.18939850468153
+            ],
+            [
+              -99.21605384022872,
+              53.21202220259819
+            ],
+            [
+              -99.03563391835372,
+              53.24815501509819
+            ],
+            [
+              -98.9779353506454,
+              53.26988353072319
+            ],
+            [
+              -98.54596920481207,
+              53.34133535363986
+            ],
+            [
+              -98.39696204335372,
+              53.37413157759819
+            ],
+            [
+              -98.27904212147872,
+              53.39533112186903
+            ],
+            [
+              -98.13878333241622,
+              53.40896230676486
+            ],
+            [
+              -98.00157630116622,
+              53.45925527551486
+            ],
+            [
+              -97.91364498606207,
+              53.51862213749403
+            ]
+          ],
+          [
+            [
+              -102.3805232412704,
+              53.96633535363986
+            ],
+            [
+              -102.32994544179122,
+              53.94196198124403
+            ],
+            [
+              -102.3077693350204,
+              53.93610260624403
+            ],
+            [
+              -102.2508845693954,
+              53.93069082238986
+            ],
+            [
+              -102.2267146475204,
+              53.92214590051486
+            ],
+            [
+              -102.18053137929122,
+              53.89927806197319
+            ],
+            [
+              -102.12437903554122,
+              53.88308340051486
+            ],
+            [
+              -102.06529700429122,
+              53.87828196822319
+            ],
+            [
+              -101.78795325429122,
+              53.88528066613986
+            ],
+            [
+              -101.69733639231207,
+              53.90082428593153
+            ],
+            [
+              -101.68708248606207,
+              53.90611399947319
+            ],
+            [
+              -101.68024654856207,
+              53.91474030155653
+            ],
+            [
+              -101.67634029856207,
+              53.92385488488986
+            ],
+            [
+              -101.67015540272872,
+              53.93109772343153
+            ],
+            [
+              -101.64781653554122,
+              53.93585846561903
+            ],
+            [
+              -101.62315833241622,
+              53.94550202030653
+            ],
+            [
+              -101.60350501210372,
+              53.95779043176486
+            ],
+            [
+              -101.59105384022872,
+              53.95917389530653
+            ],
+            [
+              -101.57799231679122,
+              53.95892975468153
+            ],
+            [
+              -101.5641169912704,
+              53.96137116093153
+            ],
+            [
+              -101.54771887929122,
+              53.97223541874403
+            ],
+            [
+              -101.53917395741622,
+              53.98741282759819
+            ],
+            [
+              -101.5328669912704,
+              54.00495026249403
+            ],
+            [
+              -101.52318274647872,
+              54.02277252811903
+            ],
+            [
+              -101.50007076731207,
+              54.04035065311903
+            ],
+            [
+              -101.48375403554122,
+              54.03103261926486
+            ],
+            [
+              -101.46910559804122,
+              54.01239655155653
+            ],
+            [
+              -101.45055091054122,
+              54.00230540572319
+            ],
+            [
+              -101.43968665272872,
+              53.99164459843153
+            ],
+            [
+              -101.43390865793707,
+              53.96820709843153
+            ],
+            [
+              -101.43309485585372,
+              53.94468821822319
+            ],
+            [
+              -101.43724524647872,
+              53.93402741093153
+            ],
+            [
+              -101.43614661366622,
+              53.92658112186903
+            ],
+            [
+              -101.38536536366622,
+              53.87942129113986
+            ],
+            [
+              -101.3419490225204,
+              53.85679759322319
+            ],
+            [
+              -101.29869544179122,
+              53.84922923384819
+            ],
+            [
+              -101.20417232981207,
+              53.85150787968153
+            ],
+            [
+              -101.07530676991622,
+              53.88593170780653
+            ],
+            [
+              -101.03595943918707,
+              53.87942129113986
+            ],
+            [
+              -101.05964107981207,
+              53.84320709843153
+            ],
+            [
+              -101.06798255116622,
+              53.82013580936903
+            ],
+            [
+              -101.06330318918707,
+              53.79625071822319
+            ],
+            [
+              -101.0465388662704,
+              53.78375885624403
+            ],
+            [
+              -100.99364173085372,
+              53.76642487186903
+            ],
+            [
+              -100.97447669179122,
+              53.75523509322319
+            ],
+            [
+              -100.98131262929122,
+              53.74909088749403
+            ],
+            [
+              -100.97337805897872,
+              53.74298737186903
+            ],
+            [
+              -100.96837317616622,
+              53.73489004113986
+            ],
+            [
+              -100.96080481679122,
+              53.71430084843153
+            ],
+            [
+              -100.96129309804122,
+              53.70368073124403
+            ],
+            [
+              -100.96080481679122,
+              53.70062897343153
+            ],
+            [
+              -100.95763098866622,
+              53.69684479374403
+            ],
+            [
+              -100.95311438710372,
+              53.69314199426486
+            ],
+            [
+              -100.94896399647872,
+              53.68899160363986
+            ],
+            [
+              -100.9471736318954,
+              53.68362050988986
+            ],
+            [
+              -100.93809973866622,
+              53.66807689009819
+            ],
+            [
+              -100.9159236318954,
+              53.65485260624403
+            ],
+            [
+              -100.8888240225204,
+              53.64659251509819
+            ],
+            [
+              -100.86461341054122,
+              53.64606354374403
+            ],
+            [
+              -100.81749426991622,
+              53.66828034061903
+            ],
+            [
+              -100.79027259022872,
+              53.67450592655653
+            ],
+            [
+              -100.74413001210372,
+              53.65412018436903
+            ],
+            [
+              -100.7113337881454,
+              53.65265534061903
+            ],
+            [
+              -100.67926998606207,
+              53.65558502811903
+            ],
+            [
+              -100.65916907460372,
+              53.65969472863986
+            ],
+            [
+              -100.6192927725204,
+              53.67377350468153
+            ],
+            [
+              -100.59740149647872,
+              53.67841217655653
+            ],
+            [
+              -100.5560603506454,
+              53.68126048384819
+            ],
+            [
+              -100.53184973866622,
+              53.68589915572319
+            ],
+            [
+              -100.51862545481207,
+              53.68703847863986
+            ],
+            [
+              -100.5082087881454,
+              53.68508535363986
+            ],
+            [
+              -100.48607337147872,
+              53.67584869999403
+            ],
+            [
+              -100.47484290272872,
+              53.67271556197319
+            ],
+            [
+              -100.38048255116622,
+              53.67475006718153
+            ],
+            [
+              -100.33604895741622,
+              53.66535065311903
+            ],
+            [
+              -100.31037350168707,
+              53.63178131718153
+            ],
+            [
+              -100.3102107412704,
+              53.62140534061903
+            ],
+            [
+              -100.31346594960372,
+              53.61021556197319
+            ],
+            [
+              -100.32335364491622,
+              53.59076569218153
+            ]
+          ],
+          [
+            [
+              -103.42064368397872,
+              53.65285879113986
+            ],
+            [
+              -103.40754147043707,
+              53.67255280155653
+            ],
+            [
+              -103.38451087147872,
+              53.68537018436903
+            ],
+            [
+              -103.35822506418707,
+              53.69232819218153
+            ],
+            [
+              -103.33495032460372,
+              53.69444407759819
+            ],
+            [
+              -103.31102454335372,
+              53.69924550988986
+            ],
+            [
+              -103.26301022043707,
+              53.72125885624403
+            ],
+            [
+              -103.2362361318954,
+              53.72797272343153
+            ],
+            [
+              -103.1356501943954,
+              53.73969147343153
+            ],
+            [
+              -103.0921931631454,
+              53.75287506718153
+            ],
+            [
+              -103.0394587881454,
+              53.78257884322319
+            ],
+            [
+              -103.0311580068954,
+              53.78534577030653
+            ],
+            [
+              -103.02757727772872,
+              53.79055410363986
+            ],
+            [
+              -103.02961178293707,
+              53.80365631718153
+            ],
+            [
+              -103.03673255116622,
+              53.81277090051486
+            ],
+            [
+              -103.05992591054122,
+              53.82709381718153
+            ],
+            [
+              -103.06501217356207,
+              53.83441803593153
+            ],
+            [
+              -103.07005774647872,
+              53.85240306197319
+            ],
+            [
+              -103.07966061106207,
+              53.86477285363986
+            ],
+            [
+              -103.0851130850204,
+              53.87824127811903
+            ],
+            [
+              -103.07799231679122,
+              53.89927806197319
+            ],
+            [
+              -103.07066809804122,
+              53.90717194218153
+            ],
+            [
+              -103.05101477772872,
+              53.92027415572319
+            ],
+            [
+              -103.0438533193954,
+              53.92658112186903
+            ],
+            [
+              -103.03624426991622,
+              53.93939850468153
+            ],
+            [
+              -103.0345759756454,
+              53.94859446822319
+            ],
+            [
+              -103.0370173818954,
+              53.96442291874403
+            ],
+            [
+              -103.03380286366622,
+              53.98643626509819
+            ],
+            [
+              -103.02440344960372,
+              54.00352610884819
+            ],
+            [
+              -103.00938880116622,
+              54.01744212447319
+            ],
+            [
+              -102.97533118397872,
+              54.03790924686903
+            ],
+            [
+              -102.94286048085372,
+              54.05259837447319
+            ],
+            [
+              -102.92780514231207,
+              54.05695221561903
+            ],
+            [
+              -102.90660559804122,
+              54.05731842655653
+            ],
+            [
+              -102.86461341054122,
+              54.04983144738986
+            ],
+            [
+              -102.84528561106207,
+              54.05011627811903
+            ],
+            [
+              -102.82603919179122,
+              54.05695221561903
+            ],
+            [
+              -102.7914119131454,
+              54.07453034061903
+            ],
+            [
+              -102.76952063710372,
+              54.07746002811903
+            ],
+            [
+              -102.74937903554122,
+              54.07408274947319
+            ],
+            [
+              -102.70921790272872,
+              54.06110260624403
+            ],
+            [
+              -102.68761145741622,
+              54.05695221561903
+            ],
+            [
+              -102.6493220693954,
+              54.05426666874403
+            ],
+            [
+              -102.63377844960372,
+              54.05105215051486
+            ],
+            [
+              -102.61872311106207,
+              54.04389069218153
+            ],
+            [
+              -102.6156306631454,
+              54.03843821822319
+            ],
+            [
+              -102.6153865225204,
+              54.03143952030653
+            ],
+            [
+              -102.61359615793707,
+              54.02541738488986
+            ],
+            [
+              -102.60570227772872,
+              54.02277252811903
+            ],
+            [
+              -102.59434973866622,
+              54.02130768436903
+            ],
+            [
+              -102.58531653554122,
+              54.01760488488986
+            ],
+            [
+              -102.57152259022872,
+              54.00849030155653
+            ],
+            [
+              -102.54478919179122,
+              53.98639557499403
+            ],
+            [
+              -102.53050696522872,
+              53.97846100468153
+            ],
+            [
+              -102.5094294912704,
+              53.97496165572319
+            ],
+            [
+              -102.43439693918707,
+              53.98179759322319
+            ]
+          ],
+          [
+            [
+              -105.06505286366622,
+              53.24042389530653
+            ],
+            [
+              -105.03734290272872,
+              53.23798248905653
+            ],
+            [
+              -104.99250240793707,
+              53.22003815311903
+            ],
+            [
+              -104.96983801991622,
+              53.21466705936903
+            ],
+            [
+              -104.96312415272872,
+              53.22471751509819
+            ],
+            [
+              -104.95518958241622,
+              53.22772858280653
+            ],
+            [
+              -104.9425349600204,
+              53.22089264530653
+            ],
+            [
+              -104.93712317616622,
+              53.21405670780653
+            ],
+            [
+              -104.93480384022872,
+              53.20608144738986
+            ],
+            [
+              -104.9364314443954,
+              53.19688548384819
+            ],
+            [
+              -104.9425349600204,
+              53.18671295780653
+            ],
+            [
+              -104.84577389231207,
+              53.13829173384819
+            ],
+            [
+              -104.84406490793707,
+              53.14406972863986
+            ],
+            [
+              -104.84190833241622,
+              53.14752838749403
+            ],
+            [
+              -104.84007727772872,
+              53.15163808801486
+            ],
+            [
+              -104.8395076162704,
+              53.15945058801486
+            ],
+            [
+              -104.8214412100204,
+              53.15534088749403
+            ],
+            [
+              -104.80138098866622,
+              53.16071198124403
+            ],
+            [
+              -104.78307044179122,
+              53.17230866093153
+            ],
+            [
+              -104.77061926991622,
+              53.18671295780653
+            ],
+            [
+              -104.75865637929122,
+              53.20364004113986
+            ],
+            [
+              -104.73766028554122,
+              53.21177806197319
+            ],
+            [
+              -104.66563880116622,
+              53.21609121301486
+            ],
+            [
+              -104.52306067616622,
+              53.24050527551486
+            ],
+            [
+              -104.49998938710372,
+              53.24197011926486
+            ],
+            [
+              -104.47667395741622,
+              53.23562246301486
+            ],
+            [
+              -104.46369381418707,
+              53.23383209843153
+            ],
+            [
+              -104.45221920481207,
+              53.23859284061903
+            ],
+            [
+              -104.43565833241622,
+              53.25214264530653
+            ],
+            [
+              -104.4149470693954,
+              53.26178619999403
+            ],
+            [
+              -104.33869381418707,
+              53.28404368697319
+            ],
+            [
+              -104.3221736318954,
+              53.29283274947319
+            ],
+            [
+              -104.31159420481207,
+              53.29694244999403
+            ],
+            [
+              -104.29914303293707,
+              53.29283274947319
+            ],
+            [
+              -104.28612219960372,
+              53.28632233280653
+            ],
+            [
+              -104.27403723866622,
+              53.28298574426486
+            ],
+            [
+              -104.25951087147872,
+              53.28485748905653
+            ],
+            [
+              -104.23436438710372,
+              53.29389069218153
+            ],
+            [
+              -104.22321529856207,
+              53.29657623905653
+            ],
+            [
+              -104.1236873037704,
+              53.29389069218153
+            ],
+            [
+              -104.07103430897872,
+              53.29804108280653
+            ],
+            [
+              -104.0314021475204,
+              53.31708405155653
+            ],
+            [
+              -104.02342688710372,
+              53.32648346561903
+            ],
+            [
+              -104.02061926991622,
+              53.33482493697319
+            ],
+            [
+              -104.02330481679122,
+              53.34459056197319
+            ],
+            [
+              -104.0314021475204,
+              53.35801829634819
+            ],
+            [
+              -103.99632727772872,
+              53.39382558801486
+            ],
+            [
+              -103.98668372304122,
+              53.39899323124403
+            ],
+            [
+              -103.96760006418707,
+              53.40269603072319
+            ],
+            [
+              -103.96296139231207,
+              53.41181061405653
+            ],
+            [
+              -103.96410071522872,
+              53.42316315311903
+            ],
+            [
+              -103.96251380116622,
+              53.43370189009819
+            ],
+            [
+              -103.9496150381454,
+              53.45050690311903
+            ],
+            [
+              -103.93248450429122,
+              53.46584707238986
+            ],
+            [
+              -103.91144772043707,
+              53.47707754113986
+            ],
+            [
+              -103.88678951731207,
+              53.48151276249403
+            ],
+            [
+              -103.89362545481207,
+              53.48151276249403
+            ]
+          ],
+          [
+            [
+              -99.33031165272872,
+              53.15945058801486
+            ],
+            [
+              -99.31891842356207,
+              53.15338776249403
+            ],
+            [
+              -99.3060603506454,
+              53.15139394738986
+            ],
+            [
+              -99.27843176991622,
+              53.15192291874403
+            ],
+            [
+              -99.26707923085372,
+              53.15570709843153
+            ],
+            [
+              -99.26085364491622,
+              53.16465892134819
+            ],
+            [
+              -99.25584876210372,
+              53.17605215051486
+            ],
+            [
+              -99.24730384022872,
+              53.18923574426486
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR38_5AD_HAYES_SASKATCHEWAN_WATERWAYS",
+        "title": "约克工厂—坎伯兰豪斯｜海斯河与萨斯喀彻温河自然水系",
+        "kind": "physical_trade_waterways",
+        "periods": [
+          {
+            "start_year": 1774,
+            "end_year": 1800
+          }
+        ],
+        "historical_context": "1774年后哈德孙湾公司扩展内陆据点，原住民水路体系连接海湾与河湖内陆。",
+        "source_urls": [
+          "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history",
+          "https://chrs.ca/en/rivers/hayes-kisipikamawi-river",
+          "https://github.com/martynafford/natural-earth-geojson/blob/master/10m/physical/ne_10m_rivers_lake_centerlines.json",
+          "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/info/gestion-management",
+          "https://chrs.ca/en/rivers/hayes-kisipikamawi-river",
+          "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=736",
+          "https://www.biographi.ca/en/bio.php?BioId=36065"
+        ],
+        "geometry_precision": "reused_Natural_Earth_10m_real_disconnected_river_centerlines_not_historic_sailing_track",
+        "geometry_source_ids": [
+          "EDITOR36_5Z_HAYES_LOWER",
+          "EDITOR36_5Z_SASKATCHEWAN_RIVER"
+        ],
+        "source_vertices": 298,
+        "source_parts": 9,
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "source_legacy_zone_id": "B38-H-Z020",
+        "cartographic_review_note": "Front-end factual narrative omits GIS positioning notes; original context: 1774年后哈德孙湾公司扩展内陆据点，原住民水路体系连接海湾与河湖内陆。这里分别描画真实海斯河下游、萨斯喀彻温河可核GIS河段，断开缺少同源测绘的区间。"
+      }
+    }
+  ]
+}

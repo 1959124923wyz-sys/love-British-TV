@@ -1,0 +1,44 @@
+name: Editor38 5AD treaty history and sourced waterways
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson'
+      - 'data/eighteenth-century-expansion-batch36-1700-1799.json'
+      - 'data/eighteenth-century-b38-hudson-company.json'
+      - 'data/eighteenth-century-b38-india-mysore.json'
+      - 'data/eighteenth-century-b38-south-campaign.json'
+      - 'js/eighteenth-editor38-5ad-geography.js'
+      - 'scripts/test_editor38_5ad_treaties_waterways.js'
+      - 'scripts/browser_editor38_5ad_treaties_waterways.cjs'
+      - '.github/workflows/editor38-5ad-treaties-waterways.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sourced-shapes-dated-nodes-and-desktop:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check js/eighteenth-editor38-5ad-geography.js
+      - run: node scripts/test_editor38_5ad_treaties_waterways.js
+      - run: node scripts/test_editor37_5ac_source_battlefields.js
+      - run: python3 scripts/audit_spatial_semantics.py --strict
+      - run: python3 scripts/test_century_seam_handoffs.py
+      - run: node scripts/test_atlas_47_public_copy_guard.js
+      - run: node scripts/lint_atlas_47_frontend_copy.js
+      - run: npm install --no-save --package-lock=false playwright@1.58.2
+      - run: npx playwright install --with-deps chromium
+      - name: Desktop river, Belize treaty, colonial resistance, fiscal and nineteenth-century continuity
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-5ad-http.log 2>&1 &
+          node scripts/browser_editor38_5ad_treaties_waterways.cjs
