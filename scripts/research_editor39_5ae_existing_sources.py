@@ -55,3 +55,21 @@ p.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n")
 print("WROTE",p,"matching",sum(len(f["matches"]) for f in output["files"]))
 for file in output["files"]:
  print(file["path"],file["counts"],[(x["id"],x["type"],x["vertices"],x["bbox"]) for x in file["matches"][:24]])
+
+# All known 18C JSON source records with unresolved legacy bounding boxes,
+# including the large 4MB bulk dataset (read locally, never truncated).
+old=[]
+for p in sorted((ROOT/"data").glob("eighteenth-century-*.json")):
+ try:d=json.loads(p.read_text())
+ except Exception as e:raise RuntimeError("Unreadable JSON "+str(p)) from e
+ for z in d.get("zones",[]):
+  if isinstance(z.get("bbox"),list) and not z.get("geometry") and not z.get("superseded_by"):
+   old.append({"file":str(p.relative_to(ROOT)),"id":z.get("id"),"title":z.get("title"),
+    "kind":z.get("kind"),"periods":z.get("periods"),"bbox":z.get("bbox"),
+    "source_urls":z.get("source_urls",[])})
+p=ROOT/"docs/research/18C_5AE_OLD_RECTANGLE_INVENTORY.json"
+p.write_text(json.dumps({"schema":"editor39_5ae_unresolved_rectangles_v1","count":len(old),
+ "active_1799":sum(any(q["start_year"]<=1799<=q["end_year"] for q in z.get("periods",[])) for z in old),
+ "records":old},ensure_ascii=False,indent=2)+"\n")
+print("UNRESOLVED legacy boxes",len(old),"active1799",
+ sum(any(q["start_year"]<=1799<=q["end_year"] for q in z.get("periods",[])) for z in old))
