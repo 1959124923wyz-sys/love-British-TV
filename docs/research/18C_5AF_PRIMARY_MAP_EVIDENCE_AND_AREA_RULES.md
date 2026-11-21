@@ -27,6 +27,20 @@
 
 **发布门槛：**原堡墙图与当前卫星／考古控制点配准；精确到堡址而非水系包围框；每个驻堡独立时段，不混用法国时期或19世纪重建墙体。
 
+
+### 2026-11-21 新增：布洛克大学1790年原图配准GIS，可优先直接复用
+
+**两张已配准且年份一致的馆藏原图**（不是GIS绘成的英国实控疆域，原图仍需逐堡数字化）：
+
+| 原图与正式编号 | 史图细节 | ArcGIS ImageServer 与GIS元数据 |
+|---|---|---|
+| 加拿大图书档案馆 NMC **17879**，1790年尼亚加拉河口军事设施图，标称比例尺约1:2,400 | 美岸尼亚加拉堡及建筑、英岸Navy Hall和Rangers' Barracks、Mississauga Point工事方案、800码政府预留带、乔治堡未来预定地点 | [Brock University配准影像原件](https://terra.library.brocku.ca/arcgis/rest/services/EarlyNiagara/NiagaraontheLake1790NMC17879/ImageServer)；地图坐标 EPSG:26917；原始范围 `[655208.7034025617,4789731.817320335,658636.5762775617,4792623.343160335]`（米） |
+| 安大略省档案馆 **C295-1-102-0-1**，约1790年尼亚加拉河口城镇及军事保留地规划图；研究目录 *Mapping Upper Canada* 编号1668 | 军堡、海军厅、河口、政府保留地／殖民聚落分界，含计划中的乔治堡位置 | [Brock University配准影像原件](https://terra.library.brocku.ca/arcgis/rest/services/EarlyNiagara/NiagaraontheLake1790/ImageServer)；坐标 EPSG:26917；原始范围 `[650675.2388695217,4788157.560972746,658850.1279029312,4792482.148716513]`（米） |
+
+GIS提取方法：在原始 `ImageServer/exportImage` 请求中给出与源服务一致的 `bboxSR=26917`；如需映入网页WGS84图层，先明确 `imageSR=4326` 并记录实际返回范围，再对堡墙逐点矢量化。史图中的预留带可单独描绘为**规划／法律限制范围虚线**，不得当作直接控制；1790年乔治堡尚未按后来成堡形态建成。原图存在地理配准，并不自动提供可直接使用的堡墙矢量边界。将经配准图中的堡墙、兵营、道路、规划地块分别做图层，不沿整张矩形影像的外接框填色。
+
+补充年代来源：[美国国家公园署关于1794年Fort Miamis及1796年撤军的说明](https://www.nps.gov/articles/000/historical-overview-of-fallen-timbers-battlefield-and-fort-miamis.htm)；[加拿大公园局乔治堡历史](https://parks.canada.ca/lhn-nhs/on/fortgeorge/culture/fort-george)。1790年规划、1794年新筑与1796年撤军分别对应不同的事件／控制图层。
+
 ## 3. 新南威尔士纸面王室声索 `NSW_CROWN_CLAIM`（1788—1799）
 
 **已定位同期原图：**
