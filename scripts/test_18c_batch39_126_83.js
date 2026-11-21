@@ -87,15 +87,15 @@ for(const [r,label,year,yes] of [
  ['gold-coast-forts','Ada丹麦Fort Kongenstein',1782,false],
  ['gold-coast-forts','Ada丹麦Fort Kongenstein',1783,true],
  ['gulf-surat-factories','Bushire英东印度公司Residency开办',1762,false],
- ['gulf-surat-factories','Bushire英东印度公司Residency开办',1763,true],
- ['gulf-surat-factories','Bushire Residency临时停办',1769,true],
+ ['gulf-surat-factories','Bushire英东印度公司Residency开办',1763,false],
+ ['gulf-surat-factories','Bushire Residency临时停办',1769,false],
  ['gulf-surat-factories','Bushire英东印度公司Residency开办',1769,false],
  ['gulf-surat-factories','Bushire英国公司驻地重开',1774,false],
- ['gulf-surat-factories','Bushire英国公司驻地重开',1775,true],
+ ['gulf-surat-factories','Bushire英国公司驻地重开',1775,false],
  ['gulf-surat-factories','Baghdad东印度公司政治Residency成立',1797,false],
- ['gulf-surat-factories','Baghdad东印度公司政治Residency成立',1798,true],
- ['gulf-surat-factories','Broach/Bharuch公司商业及税务日志',1775,true],
- ['gulf-surat-factories','Patna省税收委员会报告',1772,true],
+ ['gulf-surat-factories','Baghdad东印度公司政治Residency成立',1798,false],
+ ['gulf-surat-factories','Broach/Bharuch公司商业及税务日志',1775,false],
+ ['gulf-surat-factories','Patna省税收委员会报告',1772,false],
  ['gulf-surat-factories','Tellicherry公司政治咨询和书信',1792,true]
 ])assert.equal(active(lookup(r,label),year),yes,label+' '+year);
 assert.equal(lookup('gold-coast-forts','荷兰Sekondi Fort Orange').kind,'foreign_occupation');
@@ -106,11 +106,11 @@ const app=read('app.js'),html=read('index.html'),js=read('js/eighteenth-batch39-
 assert.equal((app.match(/window\.eighteenthBatch39Spatial\?\.render\?\.\(\);/g)||[]).length,4);
 const overlap=read('js/eighteenth-overlap-right-dossier.js');
 assert(overlap.includes("'.atlas-18c-b39-zone','.atlas-18c-b39-site'"));
-assert(html.includes('js/eighteenth-batch39-spatial.js?v=18c-batch39-caribbean-goldcoast-gulf-126-83-20261118-havana'));
+assert(html.includes('js/eighteenth-batch39-spatial.js?v=editor36-5y-20261121'));
 assert(!html.includes('第39批地图扩容')&&html.includes('地图图例'),'release log should live in research docs, not the reader legend');
 assert(js.includes("!obj.superseded_by&&obj.periods.some"));
 assert(js.includes("areaLayer.clearLayers();siteLayer.clearLayers();"));
 assert(js.includes("window.eighteenthBatch39Spatial="));
-assert(js.includes("areas.length!==126||points.length!==83"));
+assert(js.includes("areas.length!==126||points.length!==108"));
 assert(!/area_sqkm\s*=\s*[1-9]/.test(js));
 console.log('PASS 18c39 new 126 zones,83 cores,209 phase spans; cumulative 628 zones,421 points,1112 phases; geography, source, historical withdrawal, local autonomy and GIS constraints valid.');

@@ -3,7 +3,7 @@
   "period": "1700-1799",
   "area_aggregation_forbidden": true,
   "area_sqkm_totals": null,
-  "method": "archivally documented named place; no invented port walls or shipping tracks",
+  "method": "Locality-level anchor only; historic factory/fort boundaries are not surveyed. No area or specific trade route is inferred.",
   "retired_zone_ids": [
     "B39-G-Z001",
     "B39-G-Z002",
@@ -76,6 +76,10 @@
       "periods": [
         {
           "start_year": 1763,
+          "end_year": 1768
+        },
+        {
+          "start_year": 1775,
           "end_year": 1799
         }
       ],
@@ -176,12 +180,12 @@
         "https://searcharchives.bl.uk/?q=038-000227429&sort=relevance",
         "https://searcharchives.bl.uk/catalog/037-000227428"
       ],
-      "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "note": "1763年4月12日商馆建立；1769—1775年暂时停办，1775年重开。",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_GOMBROON",
@@ -244,11 +248,11 @@
         "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=1&per_page=100&sort=date"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_BASRA",
@@ -262,7 +266,11 @@
       "periods": [
         {
           "start_year": 1703,
-          "end_year": 1795
+          "end_year": 1792
+        },
+        {
+          "start_year": 1795,
+          "end_year": 1799
         }
       ],
       "records": [
@@ -312,12 +320,12 @@
         "https://searcharchives.bl.uk/catalog/041-000177265",
         "https://www.qdl.qa/en/archive/81055/vdc_100000001251.0x000374"
       ],
-      "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "note": "因公司代理人与奥斯曼当局纠纷，商馆于1793年迁往Grain（科威特），1795年回迁。",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_KUWAIT",
@@ -360,12 +368,12 @@
         "https://searcharchives.bl.uk/catalog/041-000177265",
         "https://searcharchives.bl.uk/catalog/040-000544473"
       ],
-      "note": "公司原始来信记载驻地于1793—1795年迁至Grain，后又返回巴士拉。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "note": "1793年4月底商馆从巴士拉迁出；同年7月起有Grain来信，1795年9月返回巴士拉。",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_BAGHDAD",
@@ -419,11 +427,11 @@
         "https://searcharchives.bl.uk/catalog/033-000227426"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_SURAT",
@@ -490,11 +498,11 @@
         "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&page=2&per_page=50&sort=hierarchy"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_BHARUCH",
@@ -548,11 +556,11 @@
         "https://searcharchives.bl.uk/catalog/040-000173377"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_MURSHIDABAD",
@@ -607,11 +615,11 @@
         "https://sadte.wb.gov.in/assets/upload/office_brochure.pdf"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_PATNA",
@@ -690,11 +698,11 @@
         "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_BOMBAY",
@@ -737,11 +745,11 @@
         "https://www.nam.ac.uk/explore/armies-east-india-company"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_CALCUTTA",
@@ -785,11 +793,11 @@
         "https://famineanddearth.exeter.ac.uk/displayhtml.html?id=fp_00353_en_comptrollingcommittee_4thfebruary-10thoctober1772"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_PURNIA",
@@ -822,11 +830,11 @@
         "https://www.nam.ac.uk/explore/armies-east-india-company"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_BHAGALPUR",
@@ -859,11 +867,11 @@
         "https://www.nam.ac.uk/explore/armies-east-india-company"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_DHAKA",
@@ -897,11 +905,11 @@
         "https://searcharchives.bl.uk/catalog/040-000175811"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_PLASSEY",
@@ -934,11 +942,11 @@
         "https://www.nam.ac.uk/explore/armies-east-india-company"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_BUXAR",
@@ -971,11 +979,11 @@
         "https://www.nam.ac.uk/explore/armies-east-india-company"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_TRICHINOPOLY",
@@ -1008,11 +1016,11 @@
         "https://www.nam.ac.uk/explore/armies-east-india-company"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_ARCOT",
@@ -1045,11 +1053,11 @@
         "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_LUCKNOW",
@@ -1082,11 +1090,11 @@
         "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_FAIZABAD",
@@ -1119,11 +1127,11 @@
         "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_BENARES",
@@ -1166,11 +1174,11 @@
         "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_PUNE",
@@ -1203,11 +1211,11 @@
         "https://www.nam.ac.uk/explore/armies-east-india-company"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_BENCOOLEN",
@@ -1251,11 +1259,11 @@
         "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_PADANG",
@@ -1288,11 +1296,11 @@
         "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     },
     {
       "id": "EDITOR36_5Y_AMBON",
@@ -1325,11 +1333,11 @@
         "https://www.cambridge.org/core/books/abs/british-traders-in-the-east-indies-17701820/inadvertent-imperialists-country-traders-and-british-officials/0418632561D0570B5052414E591A41B6"
       ],
       "note": "原始史料分别记载此地的相关行动和往来。",
-      "location_uncertainty_km": 16,
-      "coordinate_basis": "historic_named_locality_not_original_building",
+      "coordinate_basis": "modern_named_locality_anchor_not_historical_building_survey",
       "historical_locality_anchor": true,
       "territorial_control_verified": false,
-      "area_sqkm": null
+      "area_sqkm": null,
+      "geo_uncertainty": "historic_factory_site_unverified"
     }
   ]
 }
