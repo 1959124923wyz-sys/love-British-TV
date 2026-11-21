@@ -75,7 +75,7 @@ for z in data["zones"]:
     if z["id"] in REPLACEMENTS:
         extra = now.get("superseded_by")
         assert extra == REPLACEMENTS[z["id"]]["primary"]
-        assert z == {k: v for k, v in now.items() if k != "superseded_by"}, z["id"]
+        assert {k: v for k, v in z.items() if k != "superseded_by"} == {k: v for k, v in now.items() if k != "superseded_by"}, z["id"]
     else:
         assert z == now, z["id"]
 assert new["regional_zones"] == data["regional_zones"]
