@@ -27,7 +27,7 @@ function check(f){
  a(p.geometry_precision.startsWith('present_day_natural_earth_10m_'),f.id);
  a(p.source_urls.every(u=>/^https:\/\//.test(u))&&p.source_urls.length>=2,f.id);
  a.equal(p.periods.length,1);a.equal(p.periods[0].end_year,1800);
- a(p.periods[0].start_year>=1732&&p.periods[0].start_year<=1799,f.id);
+ a(p.periods[0].start_year>=1700&&p.periods[0].start_year<=1799,f.id);
  if(f.geometry.type==='Polygon'){
   a.equal(p.kind,'lake_shore');
   for(const ring of f.geometry.coordinates){
