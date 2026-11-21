@@ -7,6 +7,7 @@ const cross=J('data/eighteenth-century-editor41-5ag-localized-replacements.json'
 const original=J('docs/research/18C_5AE_BASELINE_26_RECTANGLES.json');
 const promotions=J('data/eighteenth-century-editor39-5ae-point-area-promotions.json');
 const points=J('docs/research/18C_5AE_POINT_AREA_CANDIDATES.json');
+const expanded=J('docs/research/18C_5AG_479_MASS_POINT_AREA_CANDIDATES.json');
 const zones=new Map(map.zones.map(z=>[z.id,z]));
 const polygons=new Map(map.regional_zones.map(z=>[z.id,z]));
 const sites=new Map(map.regional_sites.map(z=>[z.id,z]));
@@ -75,4 +76,34 @@ a.equal(points.candidate_site_count,9);
 a.equal(points.confirmed_upgrade_ids.length,5);
 a.equal(points.candidates.filter(x=>x.promotion_status==='promoted_existing_surveyed_polygon').length,5);
 a.equal(points.candidates.filter(x=>x.promotion_status==='requires_further_historical_scope_review').length,4);
+a.equal(expanded.schema,'editor41_5ag_extended_historic_point_area_candidate_audit_v1');
+a.equal(expanded.reviewed_mass_point_count,479);
+a.equal(expanded.source_polygon_count,280);
+a.equal(expanded.shortlisted_mass_point_count,165);
+a.equal(expanded.no_near_candidate_mass_point_count,314);
+a.equal(expanded.supplementary_5ae_point_count,77);
+a.equal(expanded.total_distinct_sites_in_two_audits,556);
+a.equal(expanded.area_aggregation_forbidden,true);
+a.equal(expanded.auto_promotions,0);
+a.equal(expanded.candidate_sites.length,165);
+a.equal(new Set(expanded.candidate_sites.map(x=>x.point_id)).size,165);
+a.equal(expanded.candidate_sites.filter(x=>x.shortlisted_polygon_candidates[0].bbox_edge_km===0).length,80);
+const siteIndex=new Map(map.regional_sites.map(x=>[x.id,x]));
+for(const row of expanded.candidate_sites){
+ const site=siteIndex.get(row.point_id);
+ a(site&&site.geometry.type==='Point','unregistered regional point '+row.point_id);
+ a.deepEqual(row.coordinates,site.geometry.coordinates);
+ a.equal(row.upgrade_status,'unverified_spatial_neighbour_only');
+ a.equal(row.must_preserve_original_point,true);
+ a(row.shortlisted_polygon_candidates.length>0&&row.shortlisted_polygon_candidates.length<=5);
+ for(const p of row.shortlisted_polygon_candidates){
+  const shape=polygons.get(p.polygon_id);
+  a(shape&&['Polygon','MultiPolygon'].includes(shape.geometry.type),'unregistered research polygon '+p.polygon_id);
+  a(shape.source_urls.length>0);
+  a(p.bbox_edge_km>=0&&p.bbox_edge_km<1);
+  a(p.bbox_area_upper_bound_sqkm<=25.001);
+  a(site.periods.some(t=>shape.periods.some(q=>t.start_year<=q.end_year&&q.start_year<=t.end_year)));
+ }
+}
+a.equal(expanded.high_risk_examples.length,5);
 console.log('PASS 5AG: two superseded broad areas, 3 dated Great Lakes fort walls, 5 local NSW surveyed footprints, 3 1794 grants; one legacy rectangle remains, none in 1799.');
