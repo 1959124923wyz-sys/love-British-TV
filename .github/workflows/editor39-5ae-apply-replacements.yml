@@ -1,0 +1,32 @@
+name: Editor39 5AE apply audited legacy map replacements
+on:
+  push:
+    branches:
+      - cartography/editor39-5ae-historical-boundaries-real-shores
+    paths:
+      - 'scripts/apply_editor39_5ae_replacements.py'
+      - '.github/workflows/editor39-5ae-apply-replacements.yml'
+permissions:
+  contents: write
+jobs:
+  preserve-source-records-and-retire-rectangles:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Replace 23 rectangles with audited shoreline, forts, treaties and named sites
+        run: python3 -u scripts/apply_editor39_5ae_replacements.py
+      - name: Commit only updated source records, preserve original 4MB GIS JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/eighteenth-century-expansion-batch36-1700-1799.json data/eighteenth-century-b38-hudson-company.json data/eighteenth-century-b38-south-campaign.json data/eighteenth-century-mass-schematic-zones-1700-1799.json
+          if ! git diff --cached --quiet; then
+            git commit -m "feat(18c 5AE): retire 23 schematic boxes and preserve all original historian source records"
+            git push origin HEAD:cartography/editor39-5ae-historical-boundaries-real-shores
+          fi
