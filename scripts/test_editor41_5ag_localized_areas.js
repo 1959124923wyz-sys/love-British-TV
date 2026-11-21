@@ -67,7 +67,17 @@ a(nsw.australian_indigenous_sovereignty_not_assigned_to_britain);
 a(nsw.has_years_with_site_only_no_surveyed_polygon);
 a.equal(cross.still_unresolved[0].id,'CAROLINA_PROPRIETORS');
 const unresolved=map.zones.filter(z=>z.bbox&&!z.geometry&&!z.superseded_by);
-a.deepEqual(unresolved.map(z=>z.id),['CAROLINA_PROPRIETORS']);
+// 5AG crosswalk remains an immutable historical snapshot; 5AH explicitly retires
+// the last deceptive province-size rectangle after source-backed settlement sites exist.
+a.deepEqual(unresolved.map(z=>z.id),[]);
+const carolina=J('data/eighteenth-century-editor42-5ah-carolina-localized-sites.json');
+a.equal(zones.get('CAROLINA_PROPRIETORS').superseded_by,carolina.supersession_pointer);
+a.equal(carolina.new_localized_record_count,3);
+for(const newSite of carolina.local_sites){
+ const live=sites.get(newSite.id);a(live,'new 1700-1711 Carolina named place missing: '+newSite.id);
+ a.deepEqual(live,newSite,'source-backed Carolina site must match crosswalk exactly');
+}
+a.equal(sites.size,482);
 a.equal(unresolved.filter(x=>on(x,1799)).length,0);
 a.equal(promotions.point_markers_replaced_by_existing_polygons.length,5);
 a.equal(points.confirmed_upgrades,5);
