@@ -2,6 +2,33 @@
 (function(){
 'use strict';
 const host=window.__eighteenthSpatialHost;if(!host)return;
+// Promote a historical point to an existing source-backed fort footprint only while
+// that polygon is demonstrably active. The original point and dated record remain in JSON.
+const pointAreaPromotions=Object.freeze({
+ EDITOR38_5AD_TELLICHERRY_FORT:{layer:'mass',polygon:'MYSORE_TELLICHERRY_FORT',start:1708,end:1799},
+ EDITOR38_5AD_MADRAS_TREATY_1769:{layer:'mass',polygon:'MADRAS_ST_GEORGE_SIEGE',start:1769,end:1769},
+ EDITOR38_5AD_ARCOT_1780:{layer:'mass',polygon:'ARCOT_FORT_CORE',start:1780,end:1780},
+ EDITOR37_5AC_ANNAPOLIS_FORT_ANNE:{layer:'mass',polygon:'FORT_ANNE_ROYAL_PORT',start:1755,end:1755},
+ EDITOR37_5AB_BEYIN:{layer:'5ab',polygon:'EDITOR37_5AB_BEYIN_FORT_AFTER_1773',start:1773,end:1799}
+});
+window.AtlasPointToArea5AE={
+ replacesPoint(id,y){
+  const p=pointAreaPromotions[id];
+  if(!p||y<p.start||y>p.end)return false;
+  const upstream=p.layer==='mass'?window.eighteenthMassSpatial:window.eighteenthEditor37FiveAB;
+  const audit=upstream?.getAudit?.();
+  if(!audit?.loaded)return false;
+  return p.layer==='mass'?audit.activeRegionalZones?.includes(p.polygon)===true:
+   audit.activeIds?.includes(p.polygon)===true;
+ },
+ refresh(){
+  window.eighteenthEditor37FiveAB?.render?.();
+  window.eighteenthEditor37FiveAC?.render?.();
+  window.eighteenthEditor38FiveAD?.render?.();
+ },
+ getAudit:()=>({promotions:Object.keys(pointAreaPromotions).length,
+  source_backed_only:true,polygon_ids:Object.values(pointAreaPromotions).map(x=>x.polygon)})
+};
 const map=host.map,$=host.element,esc=host.escapeHTML,reader=window.AtlasReaderCopy;
 const areaPane='editor39FiveAEArea',sitePane='editor39FiveAESite';
 map.createPane(areaPane);map.getPane(areaPane).style.zIndex='419';
@@ -87,6 +114,7 @@ async function load(){
   const r=await fetch('data/eighteenth-century-editor39-5ae-source-areas.geojson',{cache:'no-store'});
   if(!r.ok)throw Error('5AE HTTP '+r.status);const d=await r.json();
   valid(d);records=d.features;layers=new Map(records.map(f=>[f.id,make(f)]));loaded=true;render();
+  window.AtlasPointToArea5AE.refresh();
  }catch(err){error=String(err);console.warn('5AE source GIS withheld:',err)}
 }
 window.eighteenthEditor39FiveAE={render,getAudit:()=>({loaded,error,year,
