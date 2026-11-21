@@ -72,6 +72,7 @@ with urllib.request.urlopen(req,timeout=90) as r:
     content=r.read()
 assert len(content)>100000, "Natural Earth download unexpectedly small"
 digest=hashlib.sha256(content).hexdigest()
+assert digest=="e547d749445eaa0964aba76738090ec88f5e63c4585122170f98c67a7ea922dc", "Natural Earth archive unexpectedly changed: investigate upstream version before redrawing coastlines"
 with zipfile.ZipFile(io.BytesIO(content)) as z:
     shp=next(n for n in z.namelist() if n.lower().endswith(".shp"))
     stem=shp[:-4]
