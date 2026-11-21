@@ -29,6 +29,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Refresh 5AG source-derived 479 point / 165 candidate inventory
+        run: python3 scripts/research_editor41_5ag_mass_point_area_candidates.py
       - name: Verify 5AG two real alternatives for the large historic rectangles
         run: node scripts/test_editor41_5ag_localized_areas.js
       - name: Preserve 5AE original 23 GIS retirements and 5 promoted dated points
