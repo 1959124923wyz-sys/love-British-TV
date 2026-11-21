@@ -10,6 +10,7 @@ const {chromium}=require('playwright');
   await page.goto(root+'?review18c=1&review19c=1&year=1799',{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.eighteenthEditor37FiveAB?.getAudit()?.loaded===true);
   await page.waitForFunction(()=>document.querySelector('#workspace')?.dataset.atlasReady==='true');
+  await page.waitForFunction(()=>window.eighteenthMassSpatial?.getAudit()?.loaded===true);
   const state=()=>page.evaluate(()=>window.eighteenthEditor37FiveAB.getAudit());
   const set=async y=>{
    await page.evaluate(y=>window.atlasStoryBridge.setYear(y),y);
