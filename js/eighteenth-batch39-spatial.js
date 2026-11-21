@@ -77,6 +77,7 @@
    }).bindTooltip('<strong>'+esc(x.title)+'</strong><div class="atlas-hover-summary">'+
     esc(label[x.kind]+' · '+p.start_year+'—'+p.end_year)+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
+    .on('add',ev=>{ev.target.getElement()?.setAttribute('data-site-id',x.id)})
     .on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);dossier(x,true)})
     .addTo(siteLayer);
   }

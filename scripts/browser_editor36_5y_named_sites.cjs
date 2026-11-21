@@ -31,11 +31,12 @@ const {chromium}=require('playwright');
   assert(!a.activeSiteIds.includes('EDITOR36_5Y_KUWAIT'));
   assert(a.activeSiteIds.includes('EDITOR36_5Y_BASRA'));
   await set(1799);
+  await page.evaluate(()=>window.__eighteenthSpatialHost.map.setView([28.923,50.829],10));
+  await page.waitForFunction(()=>!!document.querySelector('.atlas-18c-b39-site[data-site-id="EDITOR36_5Y_BUSHIRE"]'));
   const result=await page.evaluate(()=>{
-   const els=[...document.querySelectorAll('.atlas-18c-b39-site')];
-   if(els.length<20)return {success:false,count:els.length};
-   els[els.length-1].dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}));
-   return {success:document.querySelector('#dossierBody')?.textContent?.includes('第5Y批')||false,count:els.length};
+   const el=document.querySelector('.atlas-18c-b39-site[data-site-id="EDITOR36_5Y_BUSHIRE"]');
+   el.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}));
+   return {success:document.querySelector('#dossierBody')?.textContent?.includes('第5Y批')||false,siteId:el.dataset.siteId};
   });
   assert(result.success,JSON.stringify(result));
   assert.equal(await page.evaluate(()=>window.AtlasPublicCopyGuard.visibleWarnings().length),0);
