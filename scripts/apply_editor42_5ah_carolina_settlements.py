@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""5AH: keep original 1700-1711 Carolina charter bbox as documentary evidence;
+"""5AH: keep original 1700-1711 Carolina charter bbox as documentary evidence;\nAlways preserve source provenance and previous 479 point baseline intact.
 retire only its display and add independent named point references from sources.
 No cadastral border, historical polygon, percentage or area invented.
 """
