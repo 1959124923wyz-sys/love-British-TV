@@ -1,0 +1,59 @@
+name: Editor44 5AJ reference recovery gate
+on:
+  pull_request:
+    paths:
+      - app.js
+      - js/eighteenth-batch37-spatial.js
+      - js/eighteenth-batch39-spatial.js
+      - data/eighteenth-century-editor44-5aj-reference-fallbacks.json
+      - docs/research/17C_5AJ_REFERENCE_RECOVERY_AUDIT.json
+      - scripts/test_editor44_5aj_restored_reference_outlines.js
+      - scripts/test_editor44_5aj_18c_reference_fallbacks.js
+      - scripts/browser_editor44_5aj_reference_restore.py
+      - .github/workflows/editor44-5aj-reference-recovery.yml
+  push:
+    branches:
+      - main
+      - cartography/5aj-restore-source-backed-reference-outlines
+permissions:
+  contents: read
+jobs:
+  static-source-and-chronology:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: syntax, sources, periods, old/new geometry consistency
+        run: |
+          node --check app.js
+          node --check js/eighteenth-batch37-spatial.js
+          node --check js/eighteenth-batch39-spatial.js
+          node scripts/test_editor44_5aj_restored_reference_outlines.js
+          node scripts/test_editor44_5aj_18c_reference_fallbacks.js
+          node scripts/test_editor43_5ai_17c_localized_areas.js
+          node scripts/test_editor36_5y_named_sites.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m py_compile scripts/browser_editor44_5aj_reference_restore.py
+  desktop-chrome:
+    needs: static-source-and-chronology
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: real desktop map: 16C 17C 18C 19C and source reference recovery
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-5aj-http.log 2>&1 &
+          python3 scripts/browser_editor44_5aj_reference_restore.py
+          python3 scripts/browser_editor43_5ai_localized_17c.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor44-5aj-desktop-proof
+          path: browser-smoke-results/editor44-5aj-*.png
+          if-no-files-found: ignore
