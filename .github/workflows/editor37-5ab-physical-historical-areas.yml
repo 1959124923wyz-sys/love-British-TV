@@ -11,6 +11,7 @@ on:
       - 'data/eighteenth-century-expansion-batch36-1700-1799.json'
       - 'js/eighteenth-editor37-5ab-physical-areas.js'
       - 'scripts/test_editor37_5ab_source_geography.js'
+      - 'scripts/browser_editor37_5ab_physical_areas.cjs'
   push:
     branches: [main]
     paths:
@@ -33,3 +34,16 @@ jobs:
       - run: python3 scripts/audit_spatial_semantics.py --strict
       - run: node scripts/test_atlas_47_public_copy_guard.js
       - run: node scripts/lint_atlas_47_frontend_copy.js
+      - run: npm install --no-save --package-lock=false playwright@1.58.2
+      - run: npx playwright install --with-deps chromium
+      - name: Desktop 5AB history, sources, shape clicks and 1799-1800
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-5ab-http.log 2>&1 &
+          node scripts/browser_editor37_5ab_physical_areas.cjs
+      - name: Preserve 5AB desktop proof screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor37-5ab-desktop-geo-source-dossier
+          path: browser-smoke-results/18c-5ab-gold-coast-1799-dossier.png
+          if-no-files-found: ignore
