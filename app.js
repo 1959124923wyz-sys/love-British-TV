@@ -1021,14 +1021,14 @@ function renderSeventeenthColonialClaims(){
  if(sourcePlaces.length){
   L.geoJSON({type:'FeatureCollection',features:sourcePlaces},{
    pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
-   style:()=>({pane:'seventeenthColonialClaimsPane',color:'#9dc8ca',weight:2.1,opacity:.92,
+   style:f=>({pane:'seventeenthColonialClaimsPane',color:'#9dc8ca',weight:2.1,opacity:.92,
     dashArray:'6 6',lineCap:'round',fill:false,fillOpacity:0,
-    bubblingMouseEvents:false,className:'atlas-17c-5ai-physical-island'}),
+    bubblingMouseEvents:false,className:'atlas-17c-5ai-physical-island atlas-17c-5ai-id-'+f.id.toLowerCase()}),
    pointToLayer:(f,latlng)=>L.circleMarker(latlng,{
     pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
     radius:7.3,color:'#bda6e0',weight:1.8,dashArray:'3 4',opacity:.98,
     fill:true,fillColor:'#8e76b8',fillOpacity:.28,bubblingMouseEvents:false,
-    className:'atlas-17c-5ai-localized-point'}),
+    className:'atlas-17c-5ai-localized-point atlas-17c-5ai-id-'+f.id.toLowerCase()}),
    onEachFeature:(f,layer)=>{
     const p=f.properties;
     layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
@@ -1094,7 +1094,7 @@ function renderSeventeenthRegionalStudies(){
   pointToLayer:(f,latlng)=>L.circleMarker(latlng,{pane:'seventeenthStudiesPane',
    renderer:seventeenthStudiesRenderer,radius:7.6,color:'#d6a3a0',weight:1.7,dashArray:'3 4',
    fill:true,fillColor:'#d6a3a0',fillOpacity:.22,bubblingMouseEvents:false,
-   className:'atlas-17c-5ai-referenced-event'}),
+   className:'atlas-17c-5ai-referenced-event atlas-17c-5ai-id-'+f.id.toLowerCase()}),
   onEachFeature:(f,layer)=>{
    const p=f.properties;
    layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
