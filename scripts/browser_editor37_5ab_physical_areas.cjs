@@ -18,7 +18,7 @@ const {chromium}=require('playwright');
   await set(1799);let a=await state();
   assert.equal(a.featureCount,26);assert.equal(a.physicalPolygons,7);
   assert.equal(a.physicalLines,4);assert.equal(a.historicSites,15);
-  assert.equal(a.activeIds.length,22);assert.equal(a.visibleLayers,22);
+  assert.equal(a.activeIds.length,22);assert.equal(a.visibleLayers,21); // Beyin 1773+ original fort polygon replaces the point
   assert(!await page.evaluate(()=>window.eighteenthBatch36Spatial.getAudit().activeZoneIds.includes('B36-Z079')));
   assert(!await page.evaluate(()=>window.eighteenthBatch39Spatial.getAudit().activeZoneIds.includes('B39-A-Z036')));
   await set(1762);a=await state();
