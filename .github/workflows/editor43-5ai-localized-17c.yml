@@ -1,0 +1,68 @@
+name: Editor43 5AI 17C real island coastlines and point replacement QA
+on:
+  pull_request:
+    paths:
+      - app.js
+      - data/seventeenth-century-editor43-5ai-localized-geometries-1600-1699.geojson
+      - scripts/test_editor43_5ai_17c_localized_areas.js
+      - scripts/browser_editor43_5ai_localized_17c.py
+      - scripts/browser_editor23_expansive_17c_claims.py
+      - scripts/browser_editor7_17c_regional.py
+      - .github/workflows/editor43-5ai-localized-17c.yml
+  push:
+    branches:
+      - cartography/editor43-5ai-17c-island-coasts-and-reference-triage
+      - main
+    paths:
+      - app.js
+      - data/seventeenth-century-editor43-5ai-localized-geometries-1600-1699.geojson
+      - scripts/test_editor43_5ai_17c_localized_areas.js
+      - scripts/browser_editor43_5ai_localized_17c.py
+      - .github/workflows/editor43-5ai-localized-17c.yml
+permissions:
+  contents: read
+jobs:
+  atlas-source-year-data:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 26 retired visual rectangles and source-backed natural coast geometry
+        run: |
+          node --check app.js
+          node scripts/test_editor43_5ai_17c_localized_areas.js
+          node scripts/test_editor23_expansive_17c_claims.js
+          node scripts/test_editor7_17c_regional_studies.js
+          node scripts/test_historic_overlap_1497_1699.js
+          node scripts/test_editor42_5ah_carolina_17c_inventory.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m py_compile scripts/browser_editor43_5ai_localized_17c.py
+          python3 -m py_compile scripts/browser_editor23_expansive_17c_claims.py
+          python3 -m py_compile scripts/browser_editor7_17c_regional.py
+  browser-all-localized-geography:
+    needs: atlas-source-year-data
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: Real Chrome 1780 desktop year, original map controls, old-to-new century seams
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas43-5ai-http.log 2>&1 &
+          python3 scripts/browser_editor43_5ai_localized_17c.py
+          python3 scripts/browser_editor7_17c_regional.py
+          python3 scripts/browser_editor23_expansive_17c_claims.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor43-5ai-17c-real-desktop-proof
+          path: browser-smoke-results/editor43-5ai-*.png
+          if-no-files-found: ignore

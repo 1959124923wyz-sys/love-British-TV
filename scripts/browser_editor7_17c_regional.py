@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
 """Desktop test: historical geography envelopes are actually visible and dated."""
 from pathlib import Path
+import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 root=Path(__file__).resolve().parents[1]
 out=root/'browser-smoke-results';out.mkdir(exist_ok=True)
+source=json.loads((root/'data/seventeenth-century-editor43-5ai-localized-geometries-1600-1699.geojson').read_text(encoding='utf-8'))
+regional=json.loads((root/'data/seventeenth-century-regional-studies-1600-1699.geojson').read_text(encoding='utf-8'))
+replaced={id for id in source['metadata']['unique_original_source_ids'] if id.startswith('17c-')}
+def retired_in(y):
+    return sum(f['id'] in replaced and f['properties']['start_year']<=y<=f['properties']['end_year']
+               for f in regional['features'])
+
 opts=Options()
 for arg in ('--headless=new','--disable-gpu','--no-sandbox','--disable-dev-shm-usage','--window-size=1780,1020'):
     opts.add_argument(arg)
@@ -19,9 +27,12 @@ def year(y):
 def count(cls):
     return js("return document.querySelectorAll('#map path.'+arguments[0]).length",cls)
 def assert_shapes(n_area,n_link):
-    wait.until(lambda d:count('atlas-17c-regional-area')==n_area and count('atlas-17c-regional-link')==n_link)
+    y=int(js("return document.getElementById('bigYear').textContent"))
+    source_native_count=n_area-retired_in(y)
+    assert source_native_count>=0,(y,n_area,retired_in(y))
+    wait.until(lambda d:count('atlas-17c-regional-area')==source_native_count and count('atlas-17c-regional-link')==n_link)
     if js("return window.atlasReadViewport().zoom<5"):
-        assert count('atlas-17c-regional-zoom-hint')==n_area,"low-zoom province/battle study must remain visible as fixed screen circle"
+        assert count('atlas-17c-regional-zoom-hint')==source_native_count,"low-zoom original source studies must retain their dated non-metric cues"
     assert js("return [...document.querySelectorAll('#map path.atlas-17c-regional-area')].every(el=>el.getAttribute('stroke-dasharray')!==null||el.style.strokeDasharray!=='')"),'area should be dashed'
 try:
     year(1609)
@@ -34,8 +45,12 @@ try:
     year(1622)
     assert_shapes(1,1)
     browser.save_screenshot(str(out/'editor7-regional-1622-persian-hormuz-qeshm.png'))
+    year(1610)
+    assert_shapes(1,1)
+    assert count('atlas-17c-5ai-referenced-event')>=2
     year(1629)
-    assert_shapes(1,0) # Acadia: two different Port-Royal archaeological sites, NOT sovereignty
+    assert_shapes(1,0) # replaced by two precise modern named Port-Royal site markers
+    assert count('atlas-17c-5ai-referenced-event')>=2
     year(1635)
     assert_shapes(1,0)
     year(1649)
@@ -64,7 +79,8 @@ try:
     year(1692)
     assert_shapes(0,0)
     year(1696)
-    assert_shapes(3,0) # one Acadia Beaubassin plus two Newfoundland named-port reading frames, none imply sovereignty
+    assert_shapes(3,0) # three original research boxes have been replaced by three event site points
+    assert count('atlas-17c-5ai-referenced-event')>=3
     year(1599)
     assert count('atlas-17c-regional-area')==0
     assert js("return document.getElementById('eventCount').textContent!=='0项'")
