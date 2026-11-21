@@ -979,7 +979,7 @@ function renderSeventeenthColonialClaims(){
   .filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year&&!locallyMapped.has(f.id)
    &&(f.properties.map_presentation!=='optional_maximal_paper_claim'||$('showMaximalPaperCharters').checked))
   .sort((a,b)=>displaySpan(b)-displaySpan(a));
- if(!selected.length)return;
+ // Point-only replacements still need their own reference geometry.
  const colors={charter:'#b985e8',company:'#ad7bd2',island:'#c5a6db',conquest:'#b875c5',administrative:'#c6a06c'};
  L.geoJSON({type:'FeatureCollection',features:selected},{
   pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
@@ -1010,6 +1010,30 @@ function renderSeventeenthColonialClaims(){
     if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
     openTerritoryDossier(feature,'seventeenth-claim',event.latlng);
    });
+  }
+ }).addTo(groups.colonialClaims);
+
+
+ // 5AJ: dated, source-linked reference context for point-only replacements.
+ // Original editor envelopes: outline only, never area or measured control.
+ const pointOnlyClaimIds=new Set((seventeenth5aiRealGeometry?.features||[])
+  .filter(f=>f.geometry?.type==='Point'&&
+   f.properties?.supersedes_visual_reference?.startsWith('claim-'))
+  .map(f=>f.properties.supersedes_visual_reference));
+ const contextClaims=seventeenthColonialClaims.features.filter(f=>
+  pointOnlyClaimIds.has(f.id)&&year>=f.properties.start_year&&year<=f.properties.end_year&&
+  f.properties.source_urls?.length);
+ if(contextClaims.length)L.geoJSON({type:'FeatureCollection',features:contextClaims},{
+  pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
+  style:f=>({pane:'seventeenthColonialClaimsPane',color:colors[f.properties.display_class]||'#b985e8',
+   weight:1.5,opacity:.54,dashArray:'2 10',lineCap:'round',
+   fill:false,fillOpacity:0,bubblingMouseEvents:false,
+   className:'atlas-17c-5aj-reference-outline atlas-17c-5aj-claim-outline'}),
+  onEachFeature:(f,layer)=>{
+   layer.bindTooltip('<strong>'+escapeHTML(conciseRegionTitle(f.properties.name))+'</strong>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   layer.on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
+    openTerritoryDossier(f,'seventeenth-claim',ev.latlng)});
   }
  }).addTo(groups.colonialClaims);
 
@@ -1083,6 +1107,35 @@ function renderSeventeenthRegionalStudies(){
   }
  });
  overlay.addTo(groups.seventeenthStudies);
+
+
+ // 5AJ: point-only study upgrades keep a nonmetric, dashed context outline.
+ // Event points remain visible and clickable on top.
+ const pointOnlyStudyIds=new Set((seventeenth5aiRealGeometry?.features||[])
+  .filter(f=>f.geometry?.type==='Point'&&
+   f.properties?.supersedes_visual_reference?.startsWith('17c-'))
+  .map(f=>f.properties.supersedes_visual_reference));
+ const contextStudies=seventeenthRegionalStudies.features.filter(f=>{
+  const p=f.properties||{};
+  if(!pointOnlyStudyIds.has(f.id)||f.geometry?.type!=='Polygon'||
+     year<p.start_year||year>p.end_year||!p.source_urls?.length)return false;
+  return p.display_kind==='economic_network'?
+   $('togglePoliticalRelations').checked:$('toggleControlAreas').checked;
+ });
+ if(contextStudies.length)L.geoJSON({type:'FeatureCollection',features:contextStudies},{
+  pane:'seventeenthStudiesPane',renderer:seventeenthStudiesRenderer,
+  style:f=>({pane:'seventeenthStudiesPane',
+   color:colors[f.properties.display_kind]||'#ac8ad0',
+   weight:1.5,opacity:.55,dashArray:'2 10',lineCap:'round',
+   fill:false,fillOpacity:0,bubblingMouseEvents:false,
+   className:'atlas-17c-5aj-reference-outline atlas-17c-5aj-study-outline'}),
+  onEachFeature:(f,layer)=>{
+   layer.bindTooltip('<strong>'+escapeHTML(f.properties.name)+'</strong>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   layer.on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);
+    openTerritoryDossier(f,'seventeenth-reference')});
+  }
+ }).addTo(groups.seventeenthStudies);
 
  // Dated anchor points replace arbitrary reader-only two-site/battle rectangles.
  // The original event evidence and 12 study polygons remain accessible as archival data.
