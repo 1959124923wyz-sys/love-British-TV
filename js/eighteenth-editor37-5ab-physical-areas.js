@@ -23,18 +23,27 @@
    '<details open><summary>历史来源</summary><ul class="source-list">'+links+'</ul></details>';
   host.openPanel('dossier');
  }
+ const passThroughLegacy=new Set([
+  // Keep the existing 18C source dossiers for these source-rich overlapping sites:
+  'EDITOR37_5AB_APAM','EDITOR37_5AB_CHRISTIANSBORG',
+  'EDITOR37_5AB_KORMANTIN','EDITOR37_5AB_BEYIN',
+  'EDITOR37_5AB_BEYIN_FORT_AFTER_1773'
+ ]);
  function make(f){
+  const clickable=!passThroughLegacy.has(f.id);
   const geom=f.geometry.type,point=geom==='Point',line=geom==='MultiLineString';
   const c=palette[f.properties.kind]||'#c7aedb',pane=point?pointPane:areaPane,renderer=point?siteRenderer:areaRenderer;
   const layer=L.geoJSON(f.geometry,{pane,renderer,color:c,weight:line?2.1:1.7,opacity:.85,
    fill:!line&&!point,fillColor:c,fillOpacity:line?0:.048,
-   dashArray:line?'5 6':'4 6',lineCap:'round',interactive:true,bubblingMouseEvents:false,
+   dashArray:line?'5 6':'4 6',lineCap:'round',interactive:clickable,bubblingMouseEvents:false,
    pointToLayer:(_f,loc)=>L.circleMarker(loc,{pane,renderer,radius:5.2,color:c,weight:1.5,
-    dashArray:'2 3',fillColor:c,fillOpacity:.78,interactive:true,bubblingMouseEvents:false})});
+    dashArray:'2 3',fillColor:c,fillOpacity:.78,interactive:clickable,bubblingMouseEvents:false})});
   layer.eachLayer(el=>el.on('add',()=>el.getElement()?.setAttribute('data-editor37-5ab-id',f.id)));
-  layer.bindTooltip('<strong>'+esc(f.properties.title)+'</strong>',{pane:'eventTooltipPane',
-   className:'atlas-hover',sticky:true,direction:'auto',offset:[12,0]});
-  layer.on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);open(f)});
+  if(clickable){
+   layer.bindTooltip('<strong>'+esc(f.properties.title)+'</strong>',{pane:'eventTooltipPane',
+    className:'atlas-hover',sticky:true,direction:'auto',offset:[12,0]});
+   layer.on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);open(f)});
+  }
   return layer;
  }
  function render(){
