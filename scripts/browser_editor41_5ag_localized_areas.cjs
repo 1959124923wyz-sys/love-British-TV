@@ -54,9 +54,23 @@ const {chromium}=require('playwright');
   assert(!a.activeZones.includes('CAROLINA_PROPRIETORS'));
   assert(a.activeRegionalZones.includes('PARRAMATTA_GOVERNMENT_FARM_1792'));
   assert.equal(await page.evaluate(()=>window.AtlasPublicCopyGuard.visibleWarnings().length),0);
+  await set(1700);
+  a=await audit();
+  assert(!a.activeZones.includes('CAROLINA_PROPRIETORS'));
+  assert(a.activeRegionalSites.includes('CAROLINA_CHARLESTOWN_1700_1711'));
+  assert(!a.activeRegionalSites.includes('CAROLINA_BATH_TOWN_1705_1711'));
   await set(1705);
-  assert((await audit()).activeZones.includes('CAROLINA_PROPRIETORS'),
-   'do not remove the one still unverified Carolina charter envelope');
-  console.log('PASS 5AG desktop: dated 1783-1795 three forts, 1788 Sydney camps, 1790-1799 Parramatta farms, no oversized legal rectangles in 1799; early Carolina retained.');
+  a=await audit();
+  assert(!a.activeZones.includes('CAROLINA_PROPRIETORS'));
+  assert(a.activeRegionalSites.includes('CAROLINA_CHARLESTOWN_1700_1711'));
+  assert(a.activeRegionalSites.includes('CAROLINA_BATH_TOWN_1705_1711'));
+  assert(!a.activeRegionalSites.includes('CAROLINA_NEW_BERN_1710_1711'));
+  await set(1708);
+  assert((await audit()).activeRegionalSites.includes('CHARLESTON_FORT_JOHNSON'));
+  await set(1710);
+  assert((await audit()).activeRegionalSites.includes('CAROLINA_NEW_BERN_1710_1711'));
+  await set(1712);
+  assert(!(await audit()).activeRegionalSites.includes('CAROLINA_NEW_BERN_1710_1711'));
+  console.log('PASS 5AH desktop: 5AG Great Lakes/NSW source areas retained; early Carolina 1700-1711 drawn from local dated settlement markers, giant envelope retired.');
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});
