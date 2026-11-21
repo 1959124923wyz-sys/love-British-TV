@@ -1,0 +1,789 @@
+{
+  "schema": "atlas-editor44-5aj-recovered-reference-context-v1",
+  "as_of": "2026-11-21",
+  "scope": "17C historically named region references superseded only by points in 5AI",
+  "total": 26,
+  "restored": 23,
+  "kept": 3,
+  "source_registries": [
+    "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+    "data/seventeenth-century-regional-studies-1600-1699.geojson",
+    "data/seventeenth-century-editor43-5ai-localized-geometries-1600-1699.geojson"
+  ],
+  "rules": [
+    "Never fill old editor rectangles or compute area",
+    "Only draw reference envelopes if original item has a dated cited source and mapped 5AI replacement has Points only",
+    "Never recreate 3 preexisting true island-coast upgrades",
+    "Maintain historic vs modern point distinction; originals and points both retrievable"
+  ],
+  "records": [
+    {
+      "original_id": "17c-acadia-1629-two-portroyal-sites-distinct",
+      "period": [
+        1629,
+        1629
+      ],
+      "kind": "economic_network",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -65.69,
+        44.678,
+        -65.475,
+        44.776
+      ],
+      "source_urls": [
+        "https://www.parcs.canada.ca/lhn-nhs/ns/portroyal/visit/directions",
+        "https://parks.canada.ca/lhn-nhs/ns/fortanne/visit/directions.aspx",
+        "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/charles-fort/histoire-history"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_ACADIA_1629_TWO_PORTROYAL_SITES_DISTINCT_1",
+        "EDITOR43_5AI_STUDY_ACADIA_1629_TWO_PORTROYAL_SITES_DISTINCT_2"
+      ],
+      "display_replacement_types": [
+        "Point",
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-acadia-1690-phips-portroyal-nonmetric-raid",
+      "period": [
+        1690,
+        1690
+      ],
+      "kind": "military_impact",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -65.55,
+        44.723,
+        -65.49,
+        44.763
+      ],
+      "source_urls": [
+        "https://www.biographi.ca/en/bio/519",
+        "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/histoire-history"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_ACADIA_1690_PHIPS_PORTROYAL_NONMETRIC_RAID_1"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-acadia-1696-beaubassin-nonmetric-raid",
+      "period": [
+        1696,
+        1696
+      ],
+      "kind": "military_impact",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -64.308,
+        45.825,
+        -64.206,
+        45.887
+      ],
+      "source_urls": [
+        "https://www.parks.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history/premier-conflit-first-warfare",
+        "https://www.parks.canada.ca/lhn-nhs/ns/beaubassin/culture/village"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_ACADIA_1696_BEAUBASSIN_NONMETRIC_RAID_1"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-car-1680-charlestown-two-sites-nonmetric-reader",
+      "period": [
+        1680,
+        1680
+      ],
+      "kind": "economic_network",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -80.014,
+        32.754,
+        -79.907,
+        32.826
+      ],
+      "source_urls": [
+        "https://www.ccpl.org/charleston-time-machine/grasping-neck-origins-charlestons-northern-neighbor",
+        "https://southcarolinaparks.com/charles-towne-landing/history-and-interpretation"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_CAR_1680_CHARLESTOWN_TWO_SITES_NONMETRIC_READER_1",
+        "EDITOR43_5AI_STUDY_CAR_1680_CHARLESTOWN_TWO_SITES_NONMETRIC_READER_2"
+      ],
+      "display_replacement_types": [
+        "Point",
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-editor10-newfoundland-1696-ferryland-raid",
+      "period": [
+        1696,
+        1696
+      ],
+      "kind": "military_impact",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -52.918,
+        47.003,
+        -52.85,
+        47.046
+      ],
+      "source_urls": [
+        "https://www.heritage.nf.ca/articles/exploration/winter-of-1696.php",
+        "https://www.heritage.nf.ca/articles/exploration/war-and-settlement.php",
+        "https://www.newfoundlandlabrador.com/plan-and-book/attractions/210739"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_EDITOR10_NEWFOUNDLAND_1696_FERRYLAND_RAID_1"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-editor10-newfoundland-1696-stjohns-raid",
+      "period": [
+        1696,
+        1696
+      ],
+      "kind": "military_impact",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -52.754,
+        47.532,
+        -52.673,
+        47.587
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/nl/signalhill/visit/-/media/b2ea7cc3ea43465186898523b8c900bf.ashx",
+        "https://www.heritage.nf.ca/articles/exploration/war-and-settlement.php"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_EDITOR10_NEWFOUNDLAND_1696_STJOHNS_RAID_1"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-editor11-nav-1667-medway-river-reading-frame",
+      "period": [
+        1667,
+        1667
+      ],
+      "kind": "military_impact",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        0.47,
+        51.35,
+        0.84,
+        51.49
+      ],
+      "source_urls": [
+        "https://heritage.kent.gov.uk/Monument/MKE123206/",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-11787"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_EDITOR11_NAV_1667_MEDWAY_RIVER_READING_FRAME_1"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-hbc-1686-three-james-bay-forts-review-box",
+      "period": [
+        1686,
+        1686
+      ],
+      "kind": "military_impact",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -82,
+        51.03,
+        -78.42,
+        52.52
+      ],
+      "source_urls": [
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1951",
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_HBC_1686_THREE_JAMES_BAY_FORTS_REVIEW_BOX_1",
+        "EDITOR43_5AI_STUDY_HBC_1686_THREE_JAMES_BAY_FORTS_REVIEW_BOX_2",
+        "EDITOR43_5AI_STUDY_HBC_1686_THREE_JAMES_BAY_FORTS_REVIEW_BOX_3"
+      ],
+      "display_replacement_types": [
+        "Point",
+        "Point",
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-jamaica-rio-nuevo-1658-reading-envelope",
+      "period": [
+        1658,
+        1658
+      ],
+      "kind": "military_impact",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -77.055,
+        18.382,
+        -76.975,
+        18.444
+      ],
+      "source_urls": [
+        "https://jis.gov.jm/information/jamaica-heritage-sites/st-mary-heritage-sites/",
+        "https://jnht.gov.jm/st_mary.php"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_JAMAICA_RIO_NUEVO_1658_READING_ENVELOPE_1"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-ne-pequot-war-saybrook-mystic-1637-study",
+      "period": [
+        1637,
+        1637
+      ],
+      "kind": "military_impact",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -72.4,
+        41.25,
+        -71.93,
+        41.41
+      ],
+      "source_urls": [
+        "https://www.mptn-nsn.gov/history/",
+        "https://connecticuthistory.org/connecticut-declares-war-against-the-pequot/",
+        "https://connecticuthistory.org/topics-page/pequot-war/"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_NE_PEQUOT_WAR_SAYBROOK_MYSTIC_1637_STUDY_1",
+        "EDITOR43_5AI_STUDY_NE_PEQUOT_WAR_SAYBROOK_MYSTIC_1637_STUDY_2"
+      ],
+      "display_replacement_types": [
+        "Point",
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-ny-1643-pavonia-corlears-hook-education-only",
+      "period": [
+        1643,
+        1643
+      ],
+      "kind": "military_impact",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -74.077,
+        40.695,
+        -73.964,
+        40.734
+      ],
+      "source_urls": [
+        "https://www.nationaalarchief.nl/en/research/400-years-of-dutch-american-stories/mass-murder-on-manhattan",
+        "https://history.nycourts.gov/about_period/twelve-men/"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_NY_1643_PAVONIA_CORLEARS_HOOK_EDUCATION_ONLY_1",
+        "EDITOR43_5AI_STUDY_NY_1643_PAVONIA_CORLEARS_HOOK_EDUCATION_ONLY_2"
+      ],
+      "display_replacement_types": [
+        "Point",
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "17c-va-first-war-jamestown-kecoughtan-1610-study",
+      "period": [
+        1610,
+        1610
+      ],
+      "kind": "military_impact",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -76.83,
+        36.97,
+        -76.28,
+        37.28
+      ],
+      "source_urls": [
+        "https://encyclopediavirginia.org/entries/first-anglo-powhatan-war-1609-1614/",
+        "https://www.nps.gov/jame/learn/historyculture/a-short-history-of-jamestown.htm"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_STUDY_VA_FIRST_WAR_JAMESTOWN_KECOUGHTAN_1610_STUDY_1",
+        "EDITOR43_5AI_STUDY_VA_FIRST_WAR_JAMESTOWN_KECOUGHTAN_1610_STUDY_2"
+      ],
+      "display_replacement_types": [
+        "Point",
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-bombay-east-india-company-1668",
+      "period": [
+        1668,
+        1699
+      ],
+      "kind": "company",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        72.63,
+        18.78,
+        73.03,
+        19.3
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_BOMBAY_EAST_INDIA_COMPANY_1668"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-cape-coast-castle-1665",
+      "period": [
+        1665,
+        1699
+      ],
+      "kind": "company",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -1.45,
+        5.02,
+        -1.13,
+        5.3
+      ],
+      "source_urls": [
+        "https://gmmb.gov.gh/cape-coast-castle-cape-coast-1653/"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_CAPE_COAST_CASTLE_1665"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-eic-bantam-1602",
+      "period": [
+        1602,
+        1681
+      ],
+      "kind": "company",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        105.61,
+        -6.48,
+        106.68,
+        -5.62
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250",
+        "https://etheses.bham.ac.uk/id/eprint/10007/1/Tran2019PhD.pdf"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_EIC_BANTAM_1602"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-eic-bencoolen-1685",
+      "period": [
+        1685,
+        1699
+      ],
+      "kind": "company",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        101.87,
+        -4.28,
+        102.78,
+        -3.36
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A",
+        "https://searcharchives.bl.uk/catalog/041-000956311"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_EIC_BENCOOLEN_1685"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-eic-calcutta-sutanati-1690",
+      "period": [
+        1690,
+        1699
+      ],
+      "kind": "company",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        87.96,
+        22.23,
+        88.85,
+        22.85
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/036-000173393",
+        "https://searcharchives.bl.uk/catalog/032-000173250"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_EIC_CALCUTTA_SUTANATI_1690"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-eic-hugli-bengal-1651",
+      "period": [
+        1651,
+        1685
+      ],
+      "kind": "company",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        87.97,
+        22.47,
+        88.86,
+        23.27
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250",
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&per_page=50"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_EIC_HUGLI_BENGAL_1651"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-eic-surat-factory-1612",
+      "period": [
+        1612,
+        1685
+      ],
+      "kind": "company",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        72.27,
+        20.84,
+        73.23,
+        21.58
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_EIC_SURAT_FACTORY_1612"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-madras-fort-st-george-1640",
+      "period": [
+        1640,
+        1699
+      ],
+      "kind": "company",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        80.1,
+        12.92,
+        80.48,
+        13.3
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250",
+        "https://tamildigitallibrary.in/assets/docs/uploads/primary_files/book/TVA_BOK_0046310/TVA_BOK_0046310_List_of_Factory_Records.pdf"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_MADRAS_FORT_ST_GEORGE_1640"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-providence-island-1630",
+      "period": [
+        1630,
+        1640
+      ],
+      "kind": "island",
+      "mode": "retain_5ai_true_physical_island_polygon",
+      "original_editor_bbox": [
+        -81.65,
+        13.15,
+        -81.15,
+        13.62
+      ],
+      "source_urls": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581795119",
+        "https://www.cambridge.org/core/books/abs/providence-island-16301641/providence-island-company-and-its-colony-the-program/286208AFED06439921A3752C04DE44B7"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_PROVIDENCIA_ISLAND"
+      ],
+      "display_replacement_types": [
+        "Polygon"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "existing_new_polygon"
+    },
+    {
+      "original_id": "claim-quebec-kirke-1629",
+      "period": [
+        1629,
+        1632
+      ],
+      "kind": "conquest",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -72,
+        46.15,
+        -70.3,
+        47.4
+      ],
+      "source_urls": [
+        "https://www.patrimoine-culturel.gouv.qc.ca/detail.do?id=25855&methode=consulter&type=pge",
+        "https://www.historymuseum.ca/cmc/vmnf/champlain/bat2c_en.html"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_QUEBEC_KIRKE_1629"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-rhode-island-1663",
+      "period": [
+        1663,
+        1699
+      ],
+      "kind": "charter",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -71.95,
+        41.1,
+        -71.05,
+        42.05
+      ],
+      "source_urls": [
+        "https://www.sos.ri.gov/divisions/civics-and-education/for-educators/themed-collections/rhode-island-charter",
+        "https://avalon.law.yale.edu/17th_century/ri04.asp"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_RHODE_ISLAND_1663"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    },
+    {
+      "original_id": "claim-st-helena-1659",
+      "period": [
+        1659,
+        1699
+      ],
+      "kind": "island",
+      "mode": "retain_5ai_true_physical_island_polygon",
+      "original_editor_bbox": [
+        -5.93,
+        -16.15,
+        -5.45,
+        -15.77
+      ],
+      "source_urls": [
+        "https://www.legislation.gov.uk/uksi/2009/1751/schedule/part/PREAMBLE",
+        "https://www.sthelenahistory.com/navContent/02-Studies/Land_and_Property.html"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_ST_HELENA_ISLAND"
+      ],
+      "display_replacement_types": [
+        "Polygon"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "existing_new_polygon"
+    },
+    {
+      "original_id": "claim-st-kitts-nevis-1623",
+      "period": [
+        1623,
+        1631
+      ],
+      "kind": "island",
+      "mode": "retain_5ai_true_physical_island_polygon",
+      "original_editor_bbox": [
+        -63.15,
+        16.91,
+        -62.31,
+        17.58
+      ],
+      "source_urls": [
+        "https://1997-2001.state.gov/background_notes/St_Kitts_Nevis_0497_bgn.html"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_ST_KITTS_ISLAND",
+        "EDITOR43_5AI_NEVIS_ISLAND"
+      ],
+      "display_replacement_types": [
+        "Polygon",
+        "Polygon"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "existing_new_polygon"
+    },
+    {
+      "original_id": "claim-tangier-english-garrison-1662",
+      "period": [
+        1662,
+        1683
+      ],
+      "kind": "conquest",
+      "mode": "restore_hollow_dashed_source_locality_envelope_and_keep_5ai_points",
+      "original_editor_bbox": [
+        -6.05,
+        35.67,
+        -5.65,
+        35.96
+      ],
+      "source_urls": [
+        "https://archives.lib.ku.edu/repositories/3/resources/4365"
+      ],
+      "display_replacement_ids": [
+        "EDITOR43_5AI_CLAIM_PLACE_TANGIER_ENGLISH_GARRISON_1662"
+      ],
+      "display_replacement_types": [
+        "Point"
+      ],
+      "historic_boundary_verified": false,
+      "area_sqkm": null,
+      "precision_class": "original_editor_envelope_not_historic_survey",
+      "draw_style": "dashed_unfilled_low_opacity"
+    }
+  ]
+}
