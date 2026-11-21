@@ -1,0 +1,37 @@
+name: Editor43 5AI Natural Earth 10m source-geometries compiler
+on:
+  push:
+    branches:
+      - cartography/editor43-5ai-17c-island-coasts-and-reference-triage
+    paths:
+      - scripts/build_editor43_5ai_17c_localized_geometry.py
+permissions:
+  contents: write
+jobs:
+  source-geometry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install reproducible polygon parser and geometry validators
+        run: python3 -m pip install --quiet pyshp==2.3.1 shapely==2.0.7
+      - name: Retrieve Natural Earth 5.1.1 public domain source and extract four named islands
+        run: python3 -u scripts/build_editor43_5ai_17c_localized_geometry.py
+      - name: Verify original seventeenth-century source features preserved
+        run: |
+          node scripts/test_editor23_expansive_17c_claims.js
+          node scripts/test_editor7_17c_regional_studies.js
+      - name: Commit generated sources with archive hashes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seventeenth-century-editor43-5ai-localized-geometries-1600-1699.geojson
+          if ! git diff --cached --quiet; then
+            git commit -m "data(5AI): actual 10m coastline geometry and source-anchored history points"
+            git push origin HEAD:cartography/editor43-5ai-17c-island-coasts-and-reference-triage
+          fi
