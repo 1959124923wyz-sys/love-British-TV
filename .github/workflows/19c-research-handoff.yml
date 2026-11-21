@@ -1,0 +1,48 @@
+name: 19C editorial archive and permanent handoff
+on:
+  pull_request:
+    paths:
+      - 'research/19c/consolidated/**'
+      - research/README.md
+      - docs/research/19C_EDITORIAL_GIS_HANDOFF.md
+      - .github/workflows/19c-research-handoff.yml
+  push:
+    branches:
+      - main
+      - research/19c-editorial-dossiers-20261119
+permissions:
+  contents: read
+jobs:
+  archive-and-workboards:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: "Check archive references, case keys, counts and 59/150 workboards"
+        run: |
+          python3 research/19c/consolidated/verify.py
+          python3 research/19c/consolidated/verify_handoff.py
+          python3 -m py_compile research/19c/consolidated/browser_handoff_smoke.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+  desktop-century-navigation:
+    needs: archive-and-workboards
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: "Headless Chrome: 1800, 1857, 1899 and archives excluded from public UI"
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-19c-archive.log 2>&1 &
+          python3 research/19c/consolidated/browser_handoff_smoke.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 19c-research-handoff-desktop-proof
+          path: browser-smoke-results/19c-handoff-*.png
+          if-no-files-found: ignore
