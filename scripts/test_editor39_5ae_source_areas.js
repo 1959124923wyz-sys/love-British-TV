@@ -8,7 +8,7 @@ const small=[
  J('data/eighteenth-century-expansion-batch36-1700-1799.json'),
  J('data/eighteenth-century-b38-hudson-company.json'),
  J('data/eighteenth-century-b38-south-campaign.json')];
-const original=J('docs/research/18C_5AE_OLD_RECTANGLE_INVENTORY.json');
+const original=J('docs/research/18C_5AE_BASELINE_26_RECTANGLES.json');
 const all=small.flatMap(x=>x.zones);
 const oldSites=small.flatMap(x=>x.sites);
 const map=new Map([...all,...mass.zones].map(z=>[z.id,z]));
