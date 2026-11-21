@@ -4,6 +4,10 @@
 
 ## 十九世纪专题资料
 
+**任何新会话的接手入口：** [19世纪接力总入口（写作＋GIS＋QA）](19c/consolidated/START_HERE.md)、[59专题活台账](19c/consolidated/TOPIC_WORKBOARD.csv) 与 [150章节活台账](19c/consolidated/CHAPTER_WORKBOARD.csv)。研究卷与正式站已发表的内容、地图分别记账。
+
+
+
 - [19世纪专题目录、史料与制图交接](19c/consolidated/README.md) 汇集 1800–1899 年 59 个专题，可按原案号和史料编号回查。
 
 ## 17世纪项目正在研究
