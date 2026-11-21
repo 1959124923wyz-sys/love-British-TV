@@ -17,12 +17,16 @@ const yearMatch=(ps,start,end)=>Array.from({length:end-start+1},(_,i)=>start+i).
 for(const r of p.point_markers_replaced_by_existing_polygons){
  const point=points.get(r.id),polygon=sources.get(r.polygon_id);
  assert(point&&polygon,'missing source point or polygon: '+r.id);
+ // mass.regional_zones are native atlas records (top-level periods/source_urls),
+ // whereas the surveyed GeoJSON features place the same fields in properties.
+ const polygonMeta=polygon.properties||polygon;
  assert.equal(point.geometry.type,'Point');
  assert(['Polygon','MultiPolygon'].includes(polygon.geometry.type));
  assert(r.start_year<=r.end_year);
  assert(yearMatch(point.properties.periods,r.start_year,r.end_year),'original point not dated for conversion '+r.id);
- assert(yearMatch(polygon.properties.periods,r.start_year,r.end_year),'original surveyed area not dated for conversion '+r.id);
- assert((polygon.properties.source_urls||[]).length>0);
+ assert(yearMatch(polygonMeta.periods,r.start_year,r.end_year),'original surveyed area not dated for conversion '+r.id);
+ assert((polygonMeta.source_urls||[]).length>0);
+ assert(polygonMeta.area_sqkm===null,'historical fort footprints must never become numeric territorial area');
  assert(r.evidence?.length>20);
 }
 const beyin=p.point_markers_replaced_by_existing_polygons.find(x=>x.id==='EDITOR37_5AB_BEYIN');
