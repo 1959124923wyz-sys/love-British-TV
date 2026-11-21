@@ -1,0 +1,58 @@
+name: Editor45 5AK historically sourced point-context recovery
+on:
+  pull_request:
+    paths:
+      - app.js
+      - index.html
+      - js/eighteenth-editor45-5ak-context-overlays.js
+      - data/eighteenth-century-editor45-5ak-recovered-source-contexts.json
+      - docs/research/18C_5AK_PRE5D_VISIBLE_RECTANGLE_COHORT.json
+      - scripts/test_editor45_5ak_source_context_recovery.js
+      - scripts/browser_editor45_5ak_source_context.py
+      - .github/workflows/editor45-5ak-context-recovery.yml
+  push:
+    branches:
+      - main
+      - cartography/5ak-recover-sourced-point-contexts
+permissions:
+  contents: read
+jobs:
+  historical-source-and-geometry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Source crosswalk, historic date and dashed-only cartography
+        run: |
+          node --check app.js
+          node --check js/eighteenth-editor45-5ak-context-overlays.js
+          node scripts/test_editor45_5ak_source_context_recovery.js
+          node scripts/test_editor44_5aj_restored_reference_outlines.js
+          node scripts/test_editor44_5aj_18c_reference_fallbacks.js
+          node scripts/test_editor43_5ai_17c_localized_areas.js
+          node scripts/test_editor36_5y_named_sites.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+          python3 scripts/audit_spatial_semantics.py --strict
+          python3 -m py_compile scripts/browser_editor45_5ak_source_context.py
+  desktop-1799-and-century-seam:
+    needs: historical-source-and-geometry
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - name: "Real 1780x1020 Chrome: source, dated reference and historic century controls"
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-5ak-http.log 2>&1 &
+          python3 scripts/browser_editor45_5ak_source_context.py
+          python3 scripts/browser_editor44_5aj_reference_restore.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editor45-5ak-desktop-proof
+          path: browser-smoke-results/editor45-5ak-*.png
+          if-no-files-found: ignore
