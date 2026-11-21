@@ -40,6 +40,7 @@ jobs:
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-5ab-http.log 2>&1 &
           node scripts/browser_editor37_5ab_physical_areas.cjs
+          node scripts/browser_19c_territorial_areas.cjs
       - name: Preserve 5AB desktop proof screenshot
         if: always()
         uses: actions/upload-artifact@v4
