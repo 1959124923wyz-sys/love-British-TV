@@ -27,10 +27,7 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     env:
       PAGES_ARTIFACT: github-pages-${{ github.run_attempt }}
@@ -132,6 +129,34 @@ jobs:
         with:
           path: .
           name: ${{ env.PAGES_ARTIFACT }}
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      PAGES_ARTIFACT: github-pages-${{ github.run_attempt }}
+    steps:
+      - name: Wait until uploaded Pages artifact is available in Actions API
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Artifact metadata sometimes takes a few seconds to appear in the
+          # Pages API immediately after upload. Keep validation independent
+          # from deployment, and gate until the uploaded artifact is indexed.
+          for attempt in $(seq 1 18); do
+            if gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts?per_page=100" \
+              --jq '.artifacts[].name' | grep -Fxq "${PAGES_ARTIFACT}"; then
+              echo "Published artifact ${PAGES_ARTIFACT} indexed successfully"
+              sleep 10
+              exit 0
+            fi
+            echo "Artifact indexing still pending (attempt ${attempt})"
+            sleep 5
+          done
+          echo "Uploaded Pages artifact did not appear in the Actions index" >&2
+          exit 1
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
