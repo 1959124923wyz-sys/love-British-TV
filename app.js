@@ -909,7 +909,7 @@ function seventeenthClaimsAtPoint(lng,lat,atYear=year){
  if(!seventeenthColonialClaims||!Number.isFinite(lng)||!Number.isFinite(lat))return [];
  return seventeenthColonialClaims.features.filter(f=>
   atYear>=f.properties.start_year&&atYear<=f.properties.end_year
-  &&!(seventeenth5aiRealGeometry?.metadata?.unique_original_source_ids||[]).includes(f.id)
+  &&!(typeof seventeenth5aiRealGeometry!=='undefined'&&seventeenth5aiRealGeometry?.metadata?.unique_original_source_ids||[]).includes(f.id)
   &&seventeenthClaimContainsPoint(f,lng,lat));
 }
 // The catalogue is a dependable alternative when tiny, crowded, or dashed-only areas
