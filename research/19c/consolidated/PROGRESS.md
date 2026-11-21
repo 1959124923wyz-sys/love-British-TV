@@ -29,3 +29,10 @@
 - 后继优先查英国图书馆 IOR/H/726（Neill指令及村庄名）、詹西Godse原文/英译、Lowe原印和印度地方户籍/财产文书，不补写未证死亡人数或土地外缘。
 
 - PR [#501](https://github.com/1959124923wyz-sys/love-British-TV/pull/501) 已建立。首次GitHub Actions中专题静态链接与坐标测试通过，但研究验证发现T15.md到审计文档的相对路径需上溯四级；本次提交已更正并重启CI。
+
+## 2026-11-21 · T15 首个专题合并、34项CI全绿和Pages部署
+
+- [PR #501](https://github.com/1959124923wyz-sys/love-British-TV/pull/501) 已合并到 `main`，**合并提交 `9be6c54facd485197155edbc80eccf0d36efa967`**。
+- 该PR在合并前共 **34/34 项GitHub Actions成功**，含T15专项静态历史/地理合同、1857→1858詹西桌面Chrome年份和地图中心跳转、19C研究归档/工作板、严格GIS审计与跨世纪回归。
+- [GitHub Pages发布工作流 #44922027446](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44922027446) 的 `build` 和 `deploy` 均成功；主站十九世纪阅读预览入口：<https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1857>。
+- **状态**：T15母篇在 `data/stories/serial/index.json` 中仍为 `editorial_review/not_submitted`，属于可在预览入口打开的专题；其正式发布及行政边界原卷审查仍单独排队。已在T15、T15.1、T15.2任务板写入审稿和桌面CI结果，保留未核事项。

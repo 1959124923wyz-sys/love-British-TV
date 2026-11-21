@@ -50,3 +50,10 @@
 - 发布前执行 `node scripts/test_19c_t15_topic_map.cjs`、`python3 research/19c/consolidated/verify.py`、`verify_handoff.py`、`python3 scripts/audit_spatial_semantics.py --strict` 及公共文案静态/桌面Chrome门禁、Pages线上验收。
 
 首批完成后，其他R1专题为T26鸦片战争、T37马格达拉掠夺、T46澳洲边疆暴力；以GitHub工作板和Issue #499为续作源。
+
+## GitHub主分支合并与桌面验收（2026-11-21）
+
+- [PR #501](https://github.com/1959124923wyz-sys/love-British-TV/pull/501) 已合并：`9be6c54facd485197155edbc80eccf0d36efa967`，合并前34/34项GitHub Actions绿灯。
+- [T15专项桌面Chrome证据](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44921690991)：1857起点事件→8节长文→单击1858詹西攻城，年份1858、地图中心25.45778N 78.57556E、正文保留，截图以workflow artifacts归档。
+- [Pages构建及部署](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44922027446) 成功。入口：<https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1857>。
+- 编审状态保留 `editorial_review/not_submitted`，即新专题可通过19C预览入口阅读，尚未提升为已获最终史料批准的正式文章。地图事件和GIS代码已进入主分支。
