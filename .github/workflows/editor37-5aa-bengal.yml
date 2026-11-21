@@ -1,0 +1,33 @@
+name: Editor37 5AA Bengali historic cartography
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'data/eighteenth-century-editor37-5aa-bengal.geojson'
+      - 'data/eighteenth-century-expansion-batch36-1700-1799.json'
+      - 'data/eighteenth-century-b38-india-mysore.json'
+      - 'js/eighteenth-editor37-5aa-bengal.js'
+      - 'scripts/test_editor37_5aa_bengal.js'
+  push:
+    branches: [main]
+    paths:
+      - 'data/eighteenth-century-editor37-5aa-bengal.geojson'
+      - 'js/eighteenth-editor37-5aa-bengal.js'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-and-geometry-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check js/eighteenth-editor37-5aa-bengal.js
+      - run: node scripts/test_editor37_5aa_bengal.js
+      - run: python3 scripts/audit_spatial_semantics.py --strict
+      - run: node scripts/test_atlas_47_public_copy_guard.js
+      - run: node scripts/lint_atlas_47_frontend_copy.js
