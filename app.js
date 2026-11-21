@@ -238,7 +238,7 @@ function syncMapLayers(){
  if(!events){focusedEventId=null;focusRequestToken++;}
  if(atlas){renderEventList();refreshHistoricalLayers();}
 }
-let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthColonialClaims=null;
+let seventeenthSpatialEvidence=null,seventeenthRegionalStudies=null,seventeenthColonialClaims=null,seventeenth5aiRealGeometry=null;
 let chapterRegistry=null,browsingDecade=1490,lastPublishedYear=1549;let serialPreviewAtlas=null,serialPreviewByDecade=new Map();
 const reviewParams=new URLSearchParams(window.location.search);
 const enableModernPreview=reviewParams.get('review18c')!=='1'||reviewParams.get('review19c')==='1';
@@ -909,6 +909,7 @@ function seventeenthClaimsAtPoint(lng,lat,atYear=year){
  if(!seventeenthColonialClaims||!Number.isFinite(lng)||!Number.isFinite(lat))return [];
  return seventeenthColonialClaims.features.filter(f=>
   atYear>=f.properties.start_year&&atYear<=f.properties.end_year
+  &&!(seventeenth5aiRealGeometry?.metadata?.unique_original_source_ids||[]).includes(f.id)
   &&seventeenthClaimContainsPoint(f,lng,lat));
 }
 // The catalogue is a dependable alternative when tiny, crowded, or dashed-only areas
@@ -973,8 +974,9 @@ function renderSeventeenthColonialClaims(){
   const ring=f.geometry?.coordinates?.[0]||[],xs=ring.map(p=>p[0]),ys=ring.map(p=>p[1]);
   return xs.length?(Math.max(...xs)-Math.min(...xs))*(Math.max(...ys)-Math.min(...ys)):0;
  };
+ const locallyMapped=new Set(seventeenth5aiRealGeometry?.metadata?.unique_original_source_ids||[]);
  const selected=seventeenthColonialClaims.features
-  .filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year
+  .filter(f=>year>=f.properties.start_year&&year<=f.properties.end_year&&!locallyMapped.has(f.id)
    &&(f.properties.map_presentation!=='optional_maximal_paper_claim'||$('showMaximalPaperCharters').checked))
   .sort((a,b)=>displaySpan(b)-displaySpan(a));
  if(!selected.length)return;
@@ -1010,13 +1012,41 @@ function renderSeventeenthColonialClaims(){
    });
   }
  }).addTo(groups.colonialClaims);
+
+ // 5AI: Natural Earth physical coastlines and separately sourced historic place points
+ // replace visual *references* only. All original charter/legal dossiers remain in the archive.
+ const sourcePlaces=(seventeenth5aiRealGeometry?.features||[]).filter(f=>
+  f.properties.supersedes_visual_reference.startsWith('claim-')&&
+  year>=f.properties.start_year&&year<=f.properties.end_year);
+ if(sourcePlaces.length){
+  L.geoJSON({type:'FeatureCollection',features:sourcePlaces},{
+   pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
+   style:()=>({pane:'seventeenthColonialClaimsPane',color:'#9dc8ca',weight:2.1,opacity:.92,
+    dashArray:'6 6',lineCap:'round',fill:false,fillOpacity:0,
+    bubblingMouseEvents:false,className:'atlas-17c-5ai-physical-island'}),
+   pointToLayer:(f,latlng)=>L.circleMarker(latlng,{
+    pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
+    radius:7.3,color:'#bda6e0',weight:1.8,dashArray:'3 4',opacity:.98,
+    fill:true,fillColor:'#8e76b8',fillOpacity:.28,bubblingMouseEvents:false,
+    className:'atlas-17c-5ai-localized-point'}),
+   onEachFeature:(f,layer)=>{
+    const p=f.properties;
+    layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+     escapeHTML(p.start_year+'—'+p.end_year+'年 · '+(f.geometry.type==='Polygon'?'岛屿海岸':'历史地点'))+'</div>',
+     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+    layer.on('click',event=>{if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
+     openTerritoryDossier(f,'seventeenth-claim')});
+   }
+  }).addTo(groups.colonialClaims);
+ }
 }
 function renderSeventeenthRegionalStudies(){
  groups.seventeenthStudies.clearLayers();
  if(year<1600||!seventeenthRegionalStudies||!$('toggleTerritorialFootprints').checked)return;
+ const locallyMapped=new Set(seventeenth5aiRealGeometry?.metadata?.unique_original_source_ids||[]);
  const selected=seventeenthRegionalStudies.features.filter(f=>{
   const p=f.properties||{};
-  if(year<p.start_year||year>p.end_year)return false;
+  if(year<p.start_year||year>p.end_year||locallyMapped.has(f.id))return false;
   if(p.display_kind==='economic_network')return $('togglePoliticalRelations').checked;
   return $('toggleControlAreas').checked;
  });
@@ -1050,6 +1080,29 @@ function renderSeventeenthRegionalStudies(){
   }
  });
  overlay.addTo(groups.seventeenthStudies);
+
+ // Dated anchor points replace arbitrary reader-only two-site/battle rectangles.
+ // The original event evidence and 12 study polygons remain accessible as archival data.
+ const localPlaces=(seventeenth5aiRealGeometry?.features||[]).filter(f=>
+  f.properties.supersedes_visual_reference.startsWith('17c-')&&
+  year>=f.properties.start_year&&year<=f.properties.end_year&&
+  (f.properties.supersedes_visual_reference==='17c-car-1680-charlestown-two-sites-nonmetric-reader'
+   ?$('togglePoliticalRelations').checked:$('toggleControlAreas').checked));
+ if(localPlaces.length)L.geoJSON({type:'FeatureCollection',features:localPlaces},{
+  pane:'seventeenthStudiesPane',renderer:seventeenthStudiesRenderer,
+  pointToLayer:(f,latlng)=>L.circleMarker(latlng,{pane:'seventeenthStudiesPane',
+   renderer:seventeenthStudiesRenderer,radius:7.6,color:'#d6a3a0',weight:1.7,dashArray:'3 4',
+   fill:true,fillColor:'#d6a3a0',fillOpacity:.22,bubblingMouseEvents:false,
+   className:'atlas-17c-5ai-referenced-event'}),
+  onEachFeature:(f,layer)=>{
+   const p=f.properties;
+   layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
+    escapeHTML(p.start_year+'年 · 历史行动地点')+'</div>',
+    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
+   layer.on('click',event=>{if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
+    openTerritoryDossier(f,'seventeenth-reference')});
+  }
+ }).addTo(groups.seventeenthStudies);
  // At world zoom, historically local research areas may be smaller than a
  // pixel: an optional fixed *SCREEN*-pixel cue preserves visibility, NOT an
  // actual ground distance, occupied area, survey polygon or battle radius.
@@ -2794,6 +2847,35 @@ async function boot(){
        !Array.isArray(data.features)||data.features.length<10||data.features.some(f=>!safe(f)))
      throw new Error('reject unlabelled or non-source-backed political boundary');
     seventeenthColonialClaims=data;
+
+    // Preserve all 53 seventeenth-century documentary source records unchanged.
+    // 5AI replaces the on-screen drawing of 26 old padded rectangles only
+    // if all 26 source-linked island / named-site footprints validate.
+    try{
+     const physical=await fetch('data/seventeenth-century-editor43-5ai-localized-geometries-1600-1699.geojson',{cache:'no-store'});
+     if(!physical.ok)throw new Error('5AI source GIS missing '+physical.status);
+     const q=await physical.json(),m=q.metadata||{};
+     const originals=new Set([...data.features.map(f=>f.id),...(seventeenthRegionalStudies?.features||[]).map(f=>f.id)]);
+     const cited=q.features||[],mapped=new Set(cited.map(f=>f.properties?.supersedes_visual_reference));
+     if(q.type!=='FeatureCollection'||m.schema!=='atlas-17c-editor43-5ai-physical-islands-and-located-reference-sites-v1'||
+       m.original_rectangular_source_ids_retired_from_display!==26||
+       m.modern_physical_island_coastline_polygons!==4||
+       cited.length!==m.new_features_count||mapped.size!==26||
+       cited.some(f=>!originals.has(f.properties?.supersedes_visual_reference)||
+        !['Polygon','Point'].includes(f.geometry?.type)||
+        !f.properties?.source_urls?.length||f.properties.area_sqkm!==null||
+        f.properties.historical_boundary_confirmed!==false||
+        f.properties.territorial_claim!==false||
+        f.properties.fill_authorized!==false||
+        f.properties.start_year>f.properties.end_year)||
+       !m.unique_original_source_ids?.every(id=>mapped.has(id))||
+       cited.filter(f=>f.geometry.type==='Polygon').length!==4)
+       throw new Error('5AI source-native coast and point crosswalk failed');
+     seventeenth5aiRealGeometry=q;
+    }catch(geoError){
+     seventeenth5aiRealGeometry=null;
+     console.warn('5AI localized shapes absent: original 17C archive geometry remains accessible',geoError);
+    }
    }catch(err){
     seventeenthColonialClaims=null;
     console.warn('Wide legal paper-claim map withheld, event records unaffected',err);
