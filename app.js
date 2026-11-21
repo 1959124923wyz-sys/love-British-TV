@@ -2587,6 +2587,10 @@ function setYear(v){
  }
  browsingDecade=halfCenturyPageForYear(year);renderTimelineNavigation();timelineStatus('');
  $('timelineNotice').textContent='';
+ // 1599 and earlier use the Tudor atlas; explicitly clear the 17C-only panes.
+ // The Tudor setYear branch does not call refreshHistoricalLayers(), so old
+ // colonial charter points, physical islands and research frames could persist.
+ renderSeventeenthColonialClaims();renderSeventeenthRegionalStudies();
  renderEventList();renderTerritories();renderControlAreas();renderPoliticalRelationAreas();renderPoints();renderHypotheses();renderWartimeVicinities();renderWarReachCorridors();renderContestedZones();renderWartimeControls();renderSeventhControlSites();renderArchaeologyReferences();renderEighthControlSites();renderEighthCoastalActivity();renderNinthControlSites();renderTenthControlSites();renderTenthInvasionImpactAreas();renderTenthLandRaidImpactAreas();renderEleventhControlCores();renderEleventhInfluenceAreas();renderNineYearsWarImpact();renderAtlanticContactSites();renderChapter11ActionLinks();renderEarlyRegionalImpactAreas();renderHistoricalRegionGuide();
  renderNineteenthSpatial();
  window.historicOverlapDossier?.render?.();
