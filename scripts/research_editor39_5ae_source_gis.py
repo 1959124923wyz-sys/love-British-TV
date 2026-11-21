@@ -157,6 +157,80 @@ for sourceid,id,title,context,kind,years in [
  p["source_vertices"]=sum(len(line) for line in coords_from(geom))
  add(id,geom,p)
  print("REUSED HISTORICAL GIS",id,geom["type"],p["source_vertices"])
+# Audited named historic site for Lenud's Ferry, not invented battle area.
+lenud=base("EDITOR39_5AE_LENUD_FERRY_MARKER","莱努德渡口｜1780年塔尔顿骑兵战斗纪念地",
+ "american_revolution_battle_site",[{"start_year":1780,"end_year":1780}],
+ "1780年5月6日塔尔顿部队在桑蒂河附近袭击怀特率领的大陆军骑兵，造成多人伤亡和俘虏。参照点位是现今历史纪念碑。",
+ ["https://nationalregister.sc.gov/SurveyReports/HC08002.pdf",
+  "https://southcarolina250.com/historical-site/battle-of-lenuds-ferry/",
+  "https://www.hmdb.org/m.asp?m=23249"],
+ "modern_historical_marker_33_17_837N_79_41_064W_not_battlefield_polygon")
+add("EDITOR39_5AE_LENUD_FERRY_MARKER",{"type":"Point","coordinates":[-79.6844,33.297283]},lenud)
+# Real registered 18C royal fort of an independent Coorg political actor.
+coorg=idx["MYSORE_COORG_MADIKERI_FORT"]
+p=base("EDITOR39_5AE_COORG_MADIKERI_FORT","库格马迪凯里王堡｜1790—1799年王公的独立政治地理",
+ "independent_coorg_royal_fort",[{"start_year":1792,"end_year":1799}],
+ "库格王公韦拉拉贾在对迈索尔的战争中与东印度公司结盟。1792年后马迪凯里王堡继续为库格王国的重要据点，地方王公保留政治权力。",
+ coorg["source_urls"],"reused_78_vertex_historical_fort_footprint_not_company_suzerainty",
+ "MYSORE_COORG_MADIKERI_FORT")
+p["source_vertices"]=sum(len(line) for line in coords_from(coorg["geometry"]))
+add("EDITOR39_5AE_COORG_MADIKERI_FORT",coorg["geometry"],p)
+
+# True island coast polygons from 1:50m Natural Earth, NOT reconstructed eighteenth-
+# century political borders. Select only whole source-native rings inside bbox.
+NELAND="https://raw.githubusercontent.com/martynafford/natural-earth-geojson/master/50m/physical/ne_50m_land.json"
+try:
+ land=fetch(NELAND)
+ land_polys=[]
+ for item in land.get("features",[]):
+  g=item.get("geometry")
+  if not g:continue
+  if g["type"]=="Polygon": land_polys.append(g["coordinates"])
+  if g["type"]=="MultiPolygon":land_polys.extend(g["coordinates"])
+ for fid,label,box,kind,dates,hist,legacyid,source2 in [
+  ("EDITOR39_5AE_CORSICA_ISLAND_1794","科西嘉本岛｜1794—1796年英科政治联盟",
+   [8.3,41.1,9.8,43.15],"anglo_corsican_kingdom_island",
+   [{"start_year":1794,"end_year":1796}],
+   "1794年科西嘉成立与英国王室结盟的短暂王国；1796年英军撤出该岛，当地政治归属再次改变。",
+   "CORSICA_1794","https://www.britannica.com/place/Corsica"),
+  ("EDITOR39_5AE_FALKLANDS_ISLANDS_1774","马尔维纳斯／福克兰群岛｜1774年英国撤驻后的声索",
+   [-61.6,-53.0,-56.8,-50.9],"paper_claim_falkland_island_geography",
+   [{"start_year":1774,"end_year":1800}],
+   "1774年英军撤离埃格蒙特港，英国仍留下金属主权声索牌。西班牙在索莱达港持续驻守，岛屿政治归属有长期争议。",
+   "FALKLAND_PAPER","https://falklands-museum.com/early-history")
+ ]:
+  candidates=[]
+  w,s,e,n=box
+  for rings in land_polys:
+   outer=rings[0] if rings else []
+   if len(outer)<4:continue
+   if not all(w<=z[0]<=e and s<=z[1]<=n for z in outer):continue
+   spanx=max(z[0] for z in outer)-min(z[0] for z in outer)
+   spany=max(z[1] for z in outer)-min(z[1] for z in outer)
+   if spanx<0.03 or spany<0.02:continue
+   candidates.append(rings)
+  if not candidates:
+   print("NO VALID ISLAND SOURCE polygon",fid)
+   continue
+  candidates.sort(key=lambda r:abs((max(z[0] for z in r[0])-min(z[0] for z in r[0]))*
+       (max(z[1] for z in r[0])-min(z[1] for z in r[0]))),reverse=True)
+  if "CORSICA" in fid:
+   candidates=candidates[:1] # one physical island
+  else:
+   candidates=candidates[:25] # physically separate Falkland archipelago islands
+  geom={"type":"MultiPolygon","coordinates":candidates}
+  orig=next(z for z in m["zones"] if z["id"]==legacyid)
+  pp=base(fid,label,kind,dates,hist,
+   [NELAND,source2]+orig.get("source_urls",[]),
+   "Natural_Earth_50m_native_island_coastline_not_historical_occupied_boundary")
+  pp.update({"source_vertices":sum(len(r) for poly in candidates for r in poly),
+    "source_polygon_count":len(candidates),"historic_claim_not_occupation":True})
+  add(fid,geom,pp)
+  print("REAL ISLANDS",fid,len(candidates),pp["source_vertices"])
+ sources.append({"url":NELAND,"provider":"Natural Earth 1:50m land source rings",
+  "feature_count":len(land.get("features",[]))})
+except Exception as ex: print("OPTIONAL LAND source download failed",repr(ex))
+
 output={"type":"FeatureCollection","metadata":{
  "schema":"atlas-editor39-5ae-verified-geography-v1",
  "source_primary_1763_arcgis":ARC,"source_primary_1773_st_vincent":"https://www.loc.gov/item/74691610/",
