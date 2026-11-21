@@ -51,7 +51,7 @@
   if(!loaded||year<1700||year>1800||
    !$('mapLayerTerritory').checked||!$('toggleTerritorialFootprints').checked||
    !$('toggleControlAreas').checked)return;
-  for(const f of records)if(active(f,year))layers.get(f.id).addTo(group);
+  for(const f of records)if(active(f,year)&&!window.AtlasPointToArea5AE?.replacesPoint?.(f.id,year))layers.get(f.id).addTo(group);
  }
  function validate(g){
   if(g.type!=='FeatureCollection'||g.metadata?.schema!=='atlas-editor37-5ab-physical-coasts-historic-forts-v1'||
