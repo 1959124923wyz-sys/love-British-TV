@@ -33,6 +33,11 @@ for(const f of g.features){
  a(p.source_urls.every(u=>u.startsWith('https://')));
  a(p.periods.every(t=>t.start_year<=t.end_year));
 }
+const beyin=m.get('EDITOR37_5AB_BEYIN').geometry.coordinates;
+const fortBeyin=m.get('EDITOR37_5AB_BEYIN_FORT_AFTER_1773').geometry.coordinates[0];
+const center=fortBeyin.slice(0,-1).reduce((a,c)=>[a[0]+c[0],a[1]+c[1]],[0,0]).map(n=>n/(fortBeyin.length-1));
+a(Math.hypot(beyin[0]-center[0],beyin[1]-center[1])<0.00005,'Beyin early site must match registered fort locality, never invent distant point');
+a(m.get('EDITOR37_5AB_VIZAGAPATAM').properties.source_urls.some(u=>u.includes('geonames.nga.mil')));
 a.equal(m.get('EDITOR37_5AB_1763_FRENCH_RESTORED_ISLANDS').geometry.type,'MultiPolygon');
 a(m.get('EDITOR37_5AB_GUADELOUPE_SUGAR_SHORE').geometry.coordinates.length>=2);
 a(m.get('EDITOR37_5AB_GOLD_COAST_SHORE').geometry.coordinates[0].length>=25);
