@@ -179,7 +179,7 @@ async function load(){
  try{
   const res=await fetch('data/eighteenth-century-mass-schematic-zones-1700-1799.json',{cache:'no-store'});
   if(!res.ok)throw Error('18C mass data fetch '+res.status);
-  const data=await res.json();validate(data);meta=data;loaded=true;render();
+  const data=await res.json();validate(data);meta=data;loaded=true;render();window.AtlasPointToArea5AE?.refresh?.();
  }catch(e){error=String(e);console.warn('18C mass geography withheld:',e);}
 }
 window.eighteenthMassSpatial={render,getAudit:()=>({
