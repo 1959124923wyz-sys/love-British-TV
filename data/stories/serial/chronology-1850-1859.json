@@ -8,6 +8,62 @@
   "editorial_status": "editorial_review",
   "sources": [
     {
+      "id": "19C-T15-NAM-INDIA",
+      "title": "1857—1858年印度起义主要战事",
+      "publisher": "英国国家陆军博物馆",
+      "label": "National Army Museum｜Decisive Events of the Indian Rebellion",
+      "url": "https://www.nam.ac.uk/explore/decisive-events-indian-mutiny",
+      "access": "已核在线馆方分日年表：德里、坎普尔、1858年3月24日围攻詹西、4月3日攻城及随后印度政权变动。馆方伤亡数是馆方汇总口径，未作为居民死亡精确值。"
+    },
+    {
+      "id": "19C-T15-HANSARD-1858",
+      "title": "1858年2月8日英国下议院关于印度军政的辩论",
+      "publisher": "英国议会汉萨德",
+      "label": "Hansard｜Vote of Thanks, Commons, 8 February 1858, cc.905–908",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1858/feb/08/vote-of-thanks-to-the-civil-service-army",
+      "access": "已核在线议事转录：1857年7月6日阿拉哈巴德、7月13日贝拿勒斯、7月22日阿拉哈巴德三封私人信摘录；所记焚村与夺羊为来信陈述，不是独立核验村册。"
+    },
+    {
+      "id": "19C-T15-KAYE-BANARAS",
+      "title": "The History of the Indian Mutiny: Benares and Allahabad",
+      "publisher": "Kaye与Malleson（十九世纪末英国军史）",
+      "label": "Kaye & Malleson｜History of the Indian Mutiny, Book V, Chapter I",
+      "url": "https://www.ibiblio.org/britishraj/KayeMalleson2/bk05ch01.html",
+      "access": "旧军史在线原印转录，记1857年6月4日贝拿勒斯解除第37团武装、营舍燃烧及尼尔转往阿拉哈巴德；须结合议会所引批评信，不以英军史一方立场定村民罪责。"
+    },
+    {
+      "id": "19C-T15-NAM-JHANSI-1857",
+      "title": "1857年詹西堡塔楼内的避难者",
+      "publisher": "英国国家陆军博物馆馆藏",
+      "label": "National Army Museum｜The Tower at Jhansi, 1857",
+      "url": "https://collection.nam.ac.uk/detail.php?acc=1983-08-126--1",
+      "access": "馆藏对象说明1857年6月欧籍官民受围困与死亡；后来的责任归属应与其他研究对照。"
+    },
+    {
+      "id": "19C-T15-NMA-JHANSI",
+      "title": "詹西堡受保护古迹位置与古迹沿革",
+      "publisher": "印度国家古迹管理局",
+      "label": "National Monuments Authority｜Heritage Bye-Laws for Jhansi Fort, 2025, ch.3",
+      "url": "https://www.nma.gov.in/showfile.php?lang=2&level=2&lid=2021&ls_id=1631&nma_type=0",
+      "access": "官方第35页第3.1节给出古迹坐标25°27′28″N、78°34′32″E；现存堡垒位置可用于旧堡具名点，不将2025年保护区外缘当作1858年城墙或殖民区界。"
+    },
+    {
+      "id": "19C-T15-LOWE-JHANSI",
+      "title": "Central India during the Rebellion of 1857 and 1858",
+      "publisher": "Thomas Lowe（英军随行军医）",
+      "label": "Thomas Lowe｜1860年原书，第259—262页",
+      "url": "https://commons.wikimedia.org/wiki/File:Central_India_during_the_rebellion_of_1857_and_1858_(IA_dli.ministry.10997).pdf",
+      "access": "研究原档B46-S04定位原印259—262页；Lowe为英军随行者，其逾千人遗体处置与近三千人合并估数适用范围不同，当前不以该估数作詹西平民死亡总数。"
+    },
+    {
+      "id": "19C-T15-GODSE-SECONDARY",
+      "title": "My Journey: 1857 Through the Eyes of a Priest",
+      "publisher": "Vishnubhat Godse叙述之研究转引",
+      "label": "研究转引｜Godse詹西经历（原案B46-S02）",
+      "url": "https://www.academia.edu/114158404/My_Journey_1857_Through_the_Eyes_of_a_Priest",
+      "access": "原案B46-S02定位翻译p.91与二手研究，尚待马拉地原版与译本逐页对校；不据此给出独立精确死者人数。"
+    },
+    {
       "id": "19C36-AND-REPORT",
       "publisher": "英印政府1859年档案选编第二十五号",
       "title": "《安达曼群岛》原件及沃克报告",
@@ -7201,6 +7257,252 @@
     }
   ],
   "events": [
+    {
+      "id": "E19-T15-1857-BANARAS-DISARM",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "visible_from": 1857,
+      "date_label": "1857年6月4日",
+      "name": "贝拿勒斯第37团缴械冲突、营舍被焚",
+      "description": "贝拿勒斯驻军对第37孟加拉土著步兵团解除武装时发生交火；英方军史记有人死于被焚营舍，尼尔随后参与恒河流域军事镇压。",
+      "short_description": "贝拿勒斯驻军对第37孟加拉土著步兵团解除武装时发生交火；英方军史记有人死于被焚营舍，尼尔随后参与恒河流域军事镇压。",
+      "category": "military",
+      "icon_code": "WAR",
+      "significance": {
+        "level": 8,
+        "rationale": "当时英国议会记录、国家博物馆及原案研究核证"
+      },
+      "lat": 25.3176,
+      "lng": 82.9739,
+      "source_ids": [
+        "19C-T15-KAYE-BANARAS"
+      ],
+      "geo_precision": "modern_named_city_reference_not_exact_1857_event_site",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B45-E02"
+      ]
+    },
+    {
+      "id": "E19-T15-1857-ALLAHABAD-LETTER",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "visible_from": 1857,
+      "date_label": "1857年7月6日（来信日期）",
+      "name": "阿拉哈巴德来信指责英方焚村与居民逃亡",
+      "description": "阿拉哈巴德7月6日来信指责英方不分对象焚村、导致居民离散和耕种受阻；并称一位铁路官员烧毁十座已撤空的村落。1858年英国下院公布摘录。",
+      "short_description": "阿拉哈巴德7月6日来信指责英方不分对象焚村、导致居民离散和耕种受阻；并称一位铁路官员烧毁十座已撤空的村落。1858年英国下院公布摘录。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "当时英国议会记录、国家博物馆及原案研究核证"
+      },
+      "lat": 25.4381,
+      "lng": 81.8338,
+      "source_ids": [
+        "19C-T15-HANSARD-1858"
+      ],
+      "geo_precision": "modern_named_city_reference_not_exact_1857_event_site",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B45-E03"
+      ]
+    },
+    {
+      "id": "E19-T15-1857-BANARAS-LETTER",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "visible_from": 1857,
+      "date_label": "1857年7月13日（来信日期）",
+      "name": "贝拿勒斯来信记多比地方首领遭袭后的交涉",
+      "description": "贝拿勒斯7月13日来信记述此前英方针对多比地方人士的袭击，以及地方领袖后来争取停息流血的交涉。1858年英国议会引用该信。",
+      "short_description": "贝拿勒斯7月13日来信记述此前英方针对多比地方人士的袭击，以及地方领袖后来争取停息流血的交涉。1858年英国议会引用该信。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "当时英国议会记录、国家博物馆及原案研究核证"
+      },
+      "lat": 25.3176,
+      "lng": 82.9739,
+      "source_ids": [
+        "19C-T15-HANSARD-1858"
+      ],
+      "geo_precision": "modern_named_city_reference_not_exact_1857_event_site",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B45-E04"
+      ]
+    },
+    {
+      "id": "E19-T15-1857-ALLAHABAD-PLUNDER",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "visible_from": 1857,
+      "date_label": "1857年7月22日来信（记6月22日申诉）",
+      "name": "阿拉哈巴德来信揭露欧洲铁路人员夺走当地人羊群",
+      "description": "1857年7月22日来信称，此前6月22日曾救助基督徒的穆罕默德·塔基控告一名欧洲铁路人员与持械随从夺走羊群；被控者承认后归还牲畜。1858年议会公开这段陈述。",
+      "short_description": "1857年7月22日来信称，此前6月22日曾救助基督徒的穆罕默德·塔基控告一名欧洲铁路人员与持械随从夺走羊群；被控者承认后归还牲畜。1858年议会公开这段陈述。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "当时英国议会记录、国家博物馆及原案研究核证"
+      },
+      "lat": 25.4381,
+      "lng": 81.8338,
+      "source_ids": [
+        "19C-T15-HANSARD-1858"
+      ],
+      "geo_precision": "modern_named_city_reference_not_exact_1857_event_site",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B45-E03",
+        "B45-E04"
+      ]
+    },
+    {
+      "id": "E19-T15-1857-JHANSI-JUNE",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "visible_from": 1857,
+      "date_label": "1857年6月",
+      "name": "詹西起事后避难者与投降者被杀害",
+      "description": "詹西驻军起事后，避难或投降的英国军政人员、家眷及印度仆从遇害。拉克希米·芭伊与事件命令链的关系存在争议。",
+      "short_description": "詹西驻军起事后，避难或投降的英国军政人员、家眷及印度仆从遇害。拉克希米·芭伊与事件命令链的关系存在争议。",
+      "category": "military",
+      "icon_code": "WAR",
+      "significance": {
+        "level": 8,
+        "rationale": "当时英国议会记录、国家博物馆及原案研究核证"
+      },
+      "lat": 25.4577778,
+      "lng": 78.5755556,
+      "source_ids": [
+        "19C-T15-NAM-INDIA",
+        "19C-T15-NAM-JHANSI-1857"
+      ],
+      "geo_precision": "modern_named_fort_anchor_not_exact_june_killing_location",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B46-E01"
+      ]
+    },
+    {
+      "id": "E19-T15-1858-JHANSI-SIEGE",
+      "year": 1858,
+      "start_year": 1858,
+      "end_year": 1858,
+      "visible_from": 1858,
+      "date_label": "1858年3月24日起",
+      "name": "休·罗斯率英印军围攻詹西",
+      "description": "休·罗斯的中印度野战军于3月下旬包围詹西城和堡垒；拉克希米·芭伊组织抵抗，塔蒂亚·托佩的援军未能打破围困。",
+      "short_description": "休·罗斯的中印度野战军于3月下旬包围詹西城和堡垒；拉克希米·芭伊组织抵抗，塔蒂亚·托佩的援军未能打破围困。",
+      "category": "military",
+      "icon_code": "WAR",
+      "significance": {
+        "level": 8,
+        "rationale": "当时英国议会记录、国家博物馆及原案研究核证"
+      },
+      "lat": 25.4577778,
+      "lng": 78.5755556,
+      "source_ids": [
+        "19C-T15-NAM-INDIA",
+        "19C-T15-NMA-JHANSI"
+      ],
+      "geo_precision": "official_named_fort_coordinate_not_verified_siege_perimeter",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B46-E02"
+      ]
+    },
+    {
+      "id": "E19-T15-1858-JHANSI-STORM",
+      "year": 1858,
+      "start_year": 1858,
+      "end_year": 1858,
+      "visible_from": 1858,
+      "date_label": "1858年4月3日",
+      "name": "英军攻入詹西、巷战与掠夺",
+      "description": "休·罗斯率英印军4月3日攻入詹西，发生激烈的城内战斗及掠夺；守城方首领拉克希米·芭伊突围后继续战斗。",
+      "short_description": "休·罗斯率英印军4月3日攻入詹西，发生激烈的城内战斗及掠夺；守城方首领拉克希米·芭伊突围后继续战斗。",
+      "category": "military",
+      "icon_code": "WAR",
+      "significance": {
+        "level": 8,
+        "rationale": "当时英国议会记录、国家博物馆及原案研究核证"
+      },
+      "lat": 25.4577778,
+      "lng": 78.5755556,
+      "source_ids": [
+        "19C-T15-NAM-INDIA",
+        "19C-T15-NMA-JHANSI"
+      ],
+      "geo_precision": "official_named_fort_coordinate_not_verified_breach_location",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B46-E03"
+      ]
+    },
+    {
+      "id": "E19-T15-1858-JHANSI-AFTERMATH",
+      "year": 1858,
+      "start_year": 1858,
+      "end_year": 1858,
+      "visible_from": 1858,
+      "date_label": "1858年4月3日后",
+      "name": "英军攻城后的詹西杀戮与不同见证者记载",
+      "description": "詹西被攻入后发生杀戮和尸体处置。英军随行者洛与印度见证者戈德塞的叙述涉及不同死者类别；洛的近三千人估算涵盖城中及贝特瓦河战斗。",
+      "short_description": "詹西被攻入后发生杀戮和尸体处置。英军随行者洛与印度见证者戈德塞的叙述涉及不同死者类别；洛的近三千人估算涵盖城中及贝特瓦河战斗。",
+      "category": "military",
+      "icon_code": "WAR",
+      "significance": {
+        "level": 8,
+        "rationale": "当时英国议会记录、国家博物馆及原案研究核证"
+      },
+      "lat": 25.4577778,
+      "lng": 78.5755556,
+      "source_ids": [
+        "19C-T15-NAM-INDIA",
+        "19C-T15-LOWE-JHANSI",
+        "19C-T15-GODSE-SECONDARY"
+      ],
+      "geo_precision": "official_named_fort_coordinate_not_verified_city_killing_blocks",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B46-E04"
+      ]
+    },
     {
       "id": "E19-AND-1857-COMMITTEE",
       "year": 1857,

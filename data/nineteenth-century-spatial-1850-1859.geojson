@@ -8,6 +8,226 @@
   "features": [
     {
       "type": "Feature",
+      "id": "t15-benares-1857",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.9739,
+          25.3176
+        ]
+      },
+      "properties": {
+        "stable_id": "t15-benares-1857",
+        "name": "贝拿勒斯 · 驻军冲突与地方来信",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "1857年6月驻军缴械交火；7月地方来信质疑此前的惩罚行动。",
+        "source_ids": [
+          "19C-T15-KAYE-BANARAS",
+          "19C-T15-HANSARD-1858"
+        ],
+        "source_urls": [
+          "https://www.ibiblio.org/britishraj/KayeMalleson2/bk05ch01.html",
+          "https://api.parliament.uk/historic-hansard/commons/1858/feb/08/vote-of-thanks-to-the-civil-service-army"
+        ],
+        "related_event_ids": [
+          "E19-T15-1857-BANARAS-DISARM",
+          "E19-T15-1857-BANARAS-LETTER"
+        ],
+        "named_anchors": [
+          "Benares／Varanasi"
+        ],
+        "mapping_method": "Present-day city anchor. Military barracks, historic Dobee position and precise affected villages not surveyed.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t15-allahabad-letters-1857",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.8338,
+          25.4381
+        ]
+      },
+      "properties": {
+        "stable_id": "t15-allahabad-letters-1857",
+        "name": "阿拉哈巴德 · 焚村指控与夺畜申诉",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "conflict",
+        "summary_zh": "1857年7月来信记录英方焚村、居民逃亡，并记欧洲铁路人员夺走地方领袖羊群。",
+        "source_ids": [
+          "19C-T15-HANSARD-1858"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1858/feb/08/vote-of-thanks-to-the-civil-service-army"
+        ],
+        "related_event_ids": [
+          "E19-T15-1857-ALLAHABAD-LETTER",
+          "E19-T15-1857-ALLAHABAD-PLUNDER"
+        ],
+        "named_anchors": [
+          "Allahabad／Prayagraj"
+        ],
+        "mapping_method": "Modern city center anchor. Hansard does not locate the ten deserted villages nor village of complainant.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t15-jhansi-fort-1857-1858",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5755556,
+          25.4577778
+        ]
+      },
+      "properties": {
+        "stable_id": "t15-jhansi-fort-1857-1858",
+        "name": "詹西堡 · 起事、围城与英军占城",
+        "start_year": 1857,
+        "end_year": 1858,
+        "display_kind": "conflict",
+        "summary_zh": "1857年6月避难者被杀；1858年3月至4月英军围攻、攻入詹西，并发生掠夺与杀戮。",
+        "source_ids": [
+          "19C-T15-NMA-JHANSI",
+          "19C-T15-NAM-INDIA",
+          "19C-T15-NAM-JHANSI-1857"
+        ],
+        "source_urls": [
+          "https://www.nma.gov.in/showfile.php?lang=2&level=2&lid=2021&ls_id=1631&nma_type=0",
+          "https://www.nam.ac.uk/explore/decisive-events-indian-mutiny",
+          "https://collection.nam.ac.uk/detail.php?acc=1983-08-126--1"
+        ],
+        "related_event_ids": [
+          "E19-T15-1857-JHANSI-JUNE",
+          "E19-T15-1858-JHANSI-SIEGE",
+          "E19-T15-1858-JHANSI-STORM",
+          "E19-T15-1858-JHANSI-AFTERMATH"
+        ],
+        "named_anchors": [
+          "Jhansi Fort／Bangira Hill"
+        ],
+        "mapping_method": "India National Monuments Authority protected monument coordinates; no derived 1858 fortified footprint, town walls or killing locality.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t15-neill-benares-allahabad-1857",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            82.9739,
+            25.3176
+          ],
+          [
+            81.8338,
+            25.4381
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "t15-neill-benares-allahabad-1857",
+        "name": "贝拿勒斯至阿拉哈巴德 · 尼尔部队行动",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "military_impact",
+        "summary_zh": "1857年6月，英军在贝拿勒斯缴械冲突后向阿拉哈巴德增兵，扩展军事镇压。",
+        "source_ids": [
+          "19C-T15-KAYE-BANARAS",
+          "19C-T15-HANSARD-1858"
+        ],
+        "source_urls": [
+          "https://www.ibiblio.org/britishraj/KayeMalleson2/bk05ch01.html",
+          "https://api.parliament.uk/historic-hansard/commons/1858/feb/08/vote-of-thanks-to-the-civil-service-army"
+        ],
+        "related_event_ids": [
+          "E19-T15-1857-BANARAS-DISARM",
+          "E19-T15-1857-ALLAHABAD-LETTER"
+        ],
+        "named_anchors": [
+          "Benares",
+          "Allahabad"
+        ],
+        "mapping_method": "Dashed city-to-city sequential link; not historic surveyed road, battlefront or claim of control.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "outline_style": "dashed",
+        "dash_only": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t15-calcutta-portblair-convicts-1858",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            88.36304,
+            22.56263
+          ],
+          [
+            92.72405313,
+            11.68791093
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "t15-calcutta-portblair-convicts-1858",
+        "name": "加尔各答至布莱尔港 · 1858年囚运",
+        "start_year": 1858,
+        "end_year": 1858,
+        "display_kind": "administrative",
+        "summary_zh": "1858年3月，塞米拉米斯号从加尔各答押送200名囚犯至布莱尔港，随后囚犯被派往岛上清林。",
+        "source_ids": [
+          "19C36-AND-REPORT",
+          "19C36-AND-PAPERS"
+        ],
+        "source_urls": [
+          "https://upload.wikimedia.org/wikipedia/commons/f/fd/Andaman_Report_%28IA_AndamanReport%29.pdf",
+          "https://upload.wikimedia.org/wikipedia/commons/3/35/The_Andaman_Islands_%28IA_TheAndamanIslands%29.pdf"
+        ],
+        "related_event_ids": [
+          "E19-AND-1858-SEMIRAMIS",
+          "E19-AND-1858-FIRST-LANDING"
+        ],
+        "named_anchors": [
+          "Calcutta",
+          "Port Blair／Chatham Island"
+        ],
+        "mapping_method": "Dashed origin/destination association only, not a surveyed shipping track.",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "outline_style": "dashed",
+        "dash_only": true
+      }
+    },
+    {
+      "type": "Feature",
       "id": "andaman-chatham-1850s",
       "geometry": {
         "type": "Point",
