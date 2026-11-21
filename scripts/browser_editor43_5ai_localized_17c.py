@@ -73,9 +73,11 @@ try:
     assert not warn,warn
     # Preserve original pre-1600 chapter behavior, no 17C overlays displayed.
     set_year(1599)
-    assert count('path.atlas-17c-5ai-physical-island')==0
-    assert count('path.atlas-17c-5ai-localized-point')==0
-    assert count('path.atlas-17c-5ai-referenced-event')==0
+    # setYear updates the large year label before some Leaflet render lifecycle work.
+    # Wait for the previous-century layers to clear rather than sampling mid-transition.
+    wait.until(lambda d:count('path.atlas-17c-5ai-physical-island')==0 and
+               count('path.atlas-17c-5ai-localized-point')==0 and
+               count('path.atlas-17c-5ai-referenced-event')==0)
     print("PASS Chrome 5AI: Saint Helena, Providencia, staggered St Kitts/Nevis and 30 dated named places replace 26 visual rectangles; 1599 and 1700 clean.")
 except Exception:
     driver.save_screenshot(str(out/'editor43-5ai-failure.png'))
