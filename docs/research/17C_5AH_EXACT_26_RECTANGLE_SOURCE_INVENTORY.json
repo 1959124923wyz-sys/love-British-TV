@@ -1,0 +1,716 @@
+{
+  "schema": "editor42_5ah_17c_exact_rectangular_source_inventory_v1",
+  "baseline": "main@219e18dabacf6271c8f78d0f2e55ccf666463b3f",
+  "period": [
+    1600,
+    1699
+  ],
+  "legacy_inventory_count": 26,
+  "claim_layer_rectangle_count": 14,
+  "regional_study_rectangle_count": 12,
+  "filter": "Polygon exactly closed with four orthogonal bbox corners and only two unique longitudes and latitudes; no hidden seven large broad claim polygons included",
+  "note": "Records cite existing source URLs; source citations substantiate event/legal/settlement, NOT bounding-box vertices. Inventory is not a reconstructed map. Preserve every stable ID and evidence before any change.",
+  "not_counted_in_original": "Seven largest default-hidden charter outlines, and other non-rectangle broad envelopes, are separate layer risks.",
+  "records": [
+    {
+      "id": "claim-st-helena-1659",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1659年后东印度公司圣赫勒拿岛：南大西洋补给殖民地",
+      "year_start": 1659,
+      "year_end": 1699,
+      "kind": "island",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -5.93,
+        -16.15,
+        -5.45,
+        -15.77
+      ],
+      "source_urls": [
+        "https://www.legislation.gov.uk/uksi/2009/1751/schedule/part/PREAMBLE",
+        "https://www.sthelenahistory.com/navContent/02-Studies/Land_and_Property.html"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "分离特许法理、殖民行政和真实受控聚落；优先寻找同时代历史测绘边线",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-quebec-kirke-1629",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1629—1632年柯克兄弟短占魁北克：圣劳伦斯河局部驻点",
+      "year_start": 1629,
+      "year_end": 1632,
+      "kind": "conquest",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -72,
+        46.15,
+        -70.3,
+        47.4
+      ],
+      "source_urls": [
+        "https://www.patrimoine-culturel.gouv.qc.ca/detail.do?id=25855&methode=consulter&type=pge",
+        "https://www.historymuseum.ca/cmc/vmnf/champlain/bat2c_en.html"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "核查本对象同期堡墙/商馆地籍或独立岛岸；如无同期足尺图仅保留具名点，勿把商业活动上色为实占范围",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-rhode-island-1663",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1663年罗得岛与普罗维登斯殖民地特许：纳拉甘西特湾",
+      "year_start": 1663,
+      "year_end": 1699,
+      "kind": "charter",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -71.95,
+        41.1,
+        -71.05,
+        42.05
+      ],
+      "source_urls": [
+        "https://www.sos.ri.gov/divisions/civics-and-education/for-educators/themed-collections/rhode-island-charter",
+        "https://avalon.law.yale.edu/17th_century/ri04.asp"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "分离特许法理、殖民行政和真实受控聚落；优先寻找同时代历史测绘边线",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-providence-island-1630",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1630—1640年普罗维登斯岛清教徒殖民地：加勒比西南部岛屿",
+      "year_start": 1630,
+      "year_end": 1640,
+      "kind": "island",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -81.65,
+        13.15,
+        -81.15,
+        13.62
+      ],
+      "source_urls": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581795119",
+        "https://www.cambridge.org/core/books/abs/providence-island-16301641/providence-island-company-and-its-colony-the-program/286208AFED06439921A3752C04DE44B7"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "分离特许法理、殖民行政和真实受控聚落；优先寻找同时代历史测绘边线",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-tangier-english-garrison-1662",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1662—1683年英格兰丹吉尔驻军港：摩洛哥海峡军政据点",
+      "year_start": 1662,
+      "year_end": 1683,
+      "kind": "conquest",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -6.05,
+        35.67,
+        -5.65,
+        35.96
+      ],
+      "source_urls": [
+        "https://archives.lib.ku.edu/repositories/3/resources/4365"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "核查本对象同期堡墙/商馆地籍或独立岛岸；如无同期足尺图仅保留具名点，勿把商业活动上色为实占范围",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-cape-coast-castle-1665",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1665年后英方海岸角城堡：加纳黄金海岸奴隶贸易据点",
+      "year_start": 1665,
+      "year_end": 1699,
+      "kind": "company",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -1.45,
+        5.02,
+        -1.13,
+        5.3
+      ],
+      "source_urls": [
+        "https://gmmb.gov.gh/cape-coast-castle-cape-coast-1653/"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "核查本对象同期堡墙/商馆地籍或独立岛岸；如无同期足尺图仅保留具名点，勿把商业活动上色为实占范围",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-bombay-east-india-company-1668",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1668年后东印度公司孟买岛：王室授予的港口司法和军事管辖",
+      "year_start": 1668,
+      "year_end": 1699,
+      "kind": "company",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        72.63,
+        18.78,
+        73.03,
+        19.3
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "核查本对象同期堡墙/商馆地籍或独立岛岸；如无同期足尺图仅保留具名点，勿把商业活动上色为实占范围",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-madras-fort-st-george-1640",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1640年后东印度公司圣乔治堡：马德拉斯沿海商馆与城镇",
+      "year_start": 1640,
+      "year_end": 1699,
+      "kind": "company",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        80.1,
+        12.92,
+        80.48,
+        13.3
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250",
+        "https://tamildigitallibrary.in/assets/docs/uploads/primary_files/book/TVA_BOK_0046310/TVA_BOK_0046310_List_of_Factory_Records.pdf"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "核查本对象同期堡墙/商馆地籍或独立岛岸；如无同期足尺图仅保留具名点，勿把商业活动上色为实占范围",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-st-kitts-nevis-1623",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1623—1631年圣基茨、尼维斯早期英格兰殖民聚落与法方分区",
+      "year_start": 1623,
+      "year_end": 1631,
+      "kind": "island",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -63.15,
+        16.91,
+        -62.31,
+        17.58
+      ],
+      "source_urls": [
+        "https://1997-2001.state.gov/background_notes/St_Kitts_Nevis_0497_bgn.html"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "分离特许法理、殖民行政和真实受控聚落；优先寻找同时代历史测绘边线",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-eic-surat-factory-1612",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1612—1685年东印度公司苏拉特商馆：莫卧儿帝国内的英商贸易许可",
+      "year_start": 1612,
+      "year_end": 1685,
+      "kind": "company",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        72.27,
+        20.84,
+        73.23,
+        21.58
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "核查本对象同期堡墙/商馆地籍或独立岛岸；如无同期足尺图仅保留具名点，勿把商业活动上色为实占范围",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-eic-hugli-bengal-1651",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1651—1685年英东印度公司孟加拉胡格利商馆：莫卧儿治下河港",
+      "year_start": 1651,
+      "year_end": 1685,
+      "kind": "company",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        87.97,
+        22.47,
+        88.86,
+        23.27
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250",
+        "https://searcharchives.bl.uk/?f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B36%5D+Series&f%5Bproject_collections_ssim%5D%5B%5D=India+Office+Records&per_page=50"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "核查本对象同期堡墙/商馆地籍或独立岛岸；如无同期足尺图仅保留具名点，勿把商业活动上色为实占范围",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-eic-calcutta-sutanati-1690",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1690—1699年东印度公司苏塔纳蒂—加尔各答三村商馆与1698扎明达里",
+      "year_start": 1690,
+      "year_end": 1699,
+      "kind": "company",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        87.96,
+        22.23,
+        88.85,
+        22.85
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/036-000173393",
+        "https://searcharchives.bl.uk/catalog/032-000173250"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "核查本对象同期堡墙/商馆地籍或独立岛岸；如无同期足尺图仅保留具名点，勿把商业活动上色为实占范围",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-eic-bencoolen-1685",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1685—1699年英东印度公司本古伦商站与约克堡：苏门答腊西岸",
+      "year_start": 1685,
+      "year_end": 1699,
+      "kind": "company",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        101.87,
+        -4.28,
+        102.78,
+        -3.36
+      ],
+      "source_urls": [
+        "https://www.cambridge.org/core/journals/journal-of-british-studies/article/making-and-unmaking-of-a-presidency-envisioning-empire-in-british-bencoolen-16851825/4C0CA8C6BF1E88181DA0CEACBC33C47A",
+        "https://searcharchives.bl.uk/catalog/041-000956311"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "核查本对象同期堡墙/商馆地籍或独立岛岸；如无同期足尺图仅保留具名点，勿把商业活动上色为实占范围",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "claim-eic-bantam-1602",
+      "file": "data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson",
+      "title": "1602—1681年英东印度公司万丹商馆：爪哇西北海岸胡椒贸易枢纽",
+      "year_start": 1602,
+      "year_end": 1681,
+      "kind": "company",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        105.61,
+        -6.48,
+        106.68,
+        -5.62
+      ],
+      "source_urls": [
+        "https://searcharchives.bl.uk/catalog/032-000173250",
+        "https://etheses.bham.ac.uk/id/eprint/10007/1/Tran2019PhD.pdf"
+      ],
+      "mapping_method": "2026 editorial intentionally expansive schematic drawn from cited charter latitude corridors, island/country geographic names or documented province; vertex positions constructed for macro readability and must not be presented as reconstructed authentic historical frontier",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "核查本对象同期堡墙/商馆地籍或独立岛岸；如无同期足尺图仅保留具名点，勿把商业活动上色为实占范围",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-ne-pequot-war-saybrook-mystic-1637-study",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1636—1637年塞布鲁克—米斯蒂克：皮阔特战争两个具名行动点的局部阅读范围",
+      "year_start": 1637,
+      "year_end": 1637,
+      "kind": "military_impact",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -72.4,
+        41.25,
+        -71.93,
+        41.41
+      ],
+      "source_urls": [
+        "https://www.mptn-nsn.gov/history/",
+        "https://connecticuthistory.org/connecticut-declares-war-against-the-pequot/",
+        "https://connecticuthistory.org/topics-page/pequot-war/"
+      ],
+      "mapping_method": "deterministic hand-placed bounded rectangle around two published modern atlas points, NOT a surveyed 1636-1637 area; bounding vertices are design-only and not historical limits",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-va-first-war-jamestown-kecoughtan-1610-study",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1610年詹姆斯敦—Kecoughtan：波瓦坦战争与殖民军夺粮具名节点阅读区",
+      "year_start": 1610,
+      "year_end": 1610,
+      "kind": "military_impact",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -76.83,
+        36.97,
+        -76.28,
+        37.28
+      ],
+      "source_urls": [
+        "https://encyclopediavirginia.org/entries/first-anglo-powhatan-war-1609-1614/",
+        "https://www.nps.gov/jame/learn/historyculture/a-short-history-of-jamestown.htm"
+      ],
+      "mapping_method": "Illustrative nonmetric rectangle padded around two published Atlas modern reference points only, NOT a surveyed battle region; artificial vertices are not historical evidence",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-jamaica-rio-nuevo-1658-reading-envelope",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1658年里奥努埃沃：英西争岛战役现代具名地点虚线阅读区",
+      "year_start": 1658,
+      "year_end": 1658,
+      "kind": "military_impact",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -77.055,
+        18.382,
+        -76.975,
+        18.444
+      ],
+      "source_urls": [
+        "https://jis.gov.jm/information/jamaica-heritage-sites/st-mary-heritage-sites/",
+        "https://jnht.gov.jm/st_mary.php"
+      ],
+      "mapping_method": "hand padded illustration only; rectangle corners cannot be interpreted as historic surveyed battlefield or coastline; NOT an actual controlled territory",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-ny-1643-pavonia-corlears-hook-education-only",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1643年帕沃尼亚—科利尔斯角：荷兰对蒙西难民两处袭击地点阅读提示",
+      "year_start": 1643,
+      "year_end": 1643,
+      "kind": "military_impact",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -74.077,
+        40.695,
+        -73.964,
+        40.734
+      ],
+      "source_urls": [
+        "https://www.nationaalarchief.nl/en/research/400-years-of-dutch-american-stories/mass-murder-on-manhattan",
+        "https://history.nycourts.gov/about_period/twelve-men/"
+      ],
+      "mapping_method": "Manual reader-only padded rectangle around two published named Atlas points; vertices not supported by original historic survey; NOT actual controlled territory.",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-car-1680-charlestown-two-sites-nonmetric-reader",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1680年旧查尔斯敦与牡蛎角：两处不同城址的虚线阅读范围",
+      "year_start": 1680,
+      "year_end": 1680,
+      "kind": "economic_network",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -80.014,
+        32.754,
+        -79.907,
+        32.826
+      ],
+      "source_urls": [
+        "https://www.ccpl.org/charleston-time-machine/grasping-neck-origins-charlestons-northern-neighbor",
+        "https://southcarolinaparks.com/charles-towne-landing/history-and-interpretation"
+      ],
+      "mapping_method": "Manual 1680 schematic readers' rectangle enclosing two named modern atlas reference points. Four vertices NOT supported by period boundary surveys and are NOT an actual controlled territory.",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-hbc-1686-three-james-bay-forts-review-box",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1686年法军夺取詹姆斯湾三座英公司贸易站的地图阅读示意",
+      "year_start": 1686,
+      "year_end": 1686,
+      "kind": "military_impact",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -82,
+        51.03,
+        -78.42,
+        52.52
+      ],
+      "source_urls": [
+        "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1951",
+        "https://parks.canada.ca/lhn-nhs/mb/yorkfactory/culture/histoire-history"
+      ],
+      "mapping_method": "Manual dotted outline to let readers see all three named forts on one map; polygon vertices artificial and cannot substantiate occupation or measured military reach.",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-acadia-1629-two-portroyal-sites-distinct",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1629年苏格兰Charles Fort与1605—1613年第一处Port-Royal Habitation遗址对照",
+      "year_start": 1629,
+      "year_end": 1629,
+      "kind": "economic_network",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -65.69,
+        44.678,
+        -65.475,
+        44.776
+      ],
+      "source_urls": [
+        "https://www.parcs.canada.ca/lhn-nhs/ns/portroyal/visit/directions",
+        "https://parks.canada.ca/lhn-nhs/ns/fortanne/visit/directions.aspx",
+        "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/charles-fort/histoire-history"
+      ],
+      "mapping_method": "Padded modern named-reference-site coordinates used only for visual comparability; polygon vertices have no historic boundary evidence and cannot support war-extent or captured-area numbers.",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-acadia-1690-phips-portroyal-nonmetric-raid",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1690年Phips夺取并劫掠法国Port-Royal行政堡的局部虚线阅读框",
+      "year_start": 1690,
+      "year_end": 1690,
+      "kind": "military_impact",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -65.55,
+        44.723,
+        -65.49,
+        44.763
+      ],
+      "source_urls": [
+        "https://www.biographi.ca/en/bio/519",
+        "https://parks.canada.ca/lhn-nhs/ns/fortanne/culture/histoire-history"
+      ],
+      "mapping_method": "Padded modern named-reference-site coordinates used only for visual comparability; polygon vertices have no historic boundary evidence and cannot support war-extent or captured-area numbers.",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-acadia-1696-beaubassin-nonmetric-raid",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1696年Benjamin Church对Beaubassin阿卡迪亚村落袭击的虚线阅读框",
+      "year_start": 1696,
+      "year_end": 1696,
+      "kind": "military_impact",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -64.308,
+        45.825,
+        -64.206,
+        45.887
+      ],
+      "source_urls": [
+        "https://www.parks.canada.ca/lhn-nhs/nb/beausejour/culture/histoire-history/premier-conflit-first-warfare",
+        "https://www.parks.canada.ca/lhn-nhs/ns/beaubassin/culture/village"
+      ],
+      "mapping_method": "Padded modern named-reference-site coordinates used only for visual comparability; polygon vertices have no historic boundary evidence and cannot support war-extent or captured-area numbers.",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-editor10-newfoundland-1696-ferryland-raid",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1696年9月法军攻陷费里兰：现代地区虚线阅读框",
+      "year_start": 1696,
+      "year_end": 1696,
+      "kind": "military_impact",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -52.918,
+        47.003,
+        -52.85,
+        47.046
+      ],
+      "source_urls": [
+        "https://www.heritage.nf.ca/articles/exploration/winter-of-1696.php",
+        "https://www.heritage.nf.ca/articles/exploration/war-and-settlement.php",
+        "https://www.newfoundlandlabrador.com/plan-and-book/attractions/210739"
+      ],
+      "mapping_method": "NOT an attested historic boundary, 17th-century real fort wall, native estate or military sector. Artificial cartographic padding around sourced modern place reference for 1696 short-lived port raid only; no metric area can be inferred.",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-editor10-newfoundland-1696-stjohns-raid",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1696年法军进攻圣约翰斯：现代港区虚线阅读框",
+      "year_start": 1696,
+      "year_end": 1696,
+      "kind": "military_impact",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        -52.754,
+        47.532,
+        -52.673,
+        47.587
+      ],
+      "source_urls": [
+        "https://parks.canada.ca/lhn-nhs/nl/signalhill/visit/-/media/b2ea7cc3ea43465186898523b8c900bf.ashx",
+        "https://www.heritage.nf.ca/articles/exploration/war-and-settlement.php"
+      ],
+      "mapping_method": "NOT an attested historic boundary, 17th-century real fort wall, native estate or military sector. Artificial cartographic padding around sourced modern place reference for 1696 short-lived port raid only; no metric area can be inferred.",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    },
+    {
+      "id": "17c-editor11-nav-1667-medway-river-reading-frame",
+      "file": "data/seventeenth-century-regional-studies-1600-1699.geojson",
+      "title": "1667年梅德韦河袭击具名河段虚线研究框（非实测海战航迹）",
+      "year_start": 1667,
+      "year_end": 1667,
+      "kind": "military_impact",
+      "geometry": "axis_aligned_4_corner_rectangle",
+      "rectangle_bbox": [
+        0.47,
+        51.35,
+        0.84,
+        51.49
+      ],
+      "source_urls": [
+        "https://heritage.kent.gov.uk/Monument/MKE123206/",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-11787"
+      ],
+      "mapping_method": "NOT historical military-front extent or actual ship course. Arbitrary visual cartographic padding around named Medway river locations documented by government HER; map viewer should draw lightly dashed. No real-world area measurement or territorial inference.",
+      "verified_historical_boundary": false,
+      "legitimate_area_sqkm": null,
+      "area_inference_forbidden": true,
+      "suggested_next_step": "审查是否可由同期独立战场/地籍/堡墙取代；两地点之间不得以读者示意框当作影响界",
+      "replacement_id": null,
+      "replacement_verified": false,
+      "status": "unresolved_no_survey_substitution_verified"
+    }
+  ]
+}
