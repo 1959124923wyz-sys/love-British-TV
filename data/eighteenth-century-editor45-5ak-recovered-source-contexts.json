@@ -1,0 +1,2683 @@
+{
+  "schema": "atlas-18c-editor45-5ak-source-point-overview-recovery-v1",
+  "as_of": "2026-11-21",
+  "source_pre5d_ref": "7e5c6cc835fe6629dca0c5e9c8f137fac7cbd8d1",
+  "source_cohort": "original 403: 17C 26 + 18C 377; 5AK covers 56 of 338 B36-B39 original active-zone IDs",
+  "records_recovered": 56,
+  "excluded_known_point_replacements": 14,
+  "precision_statement": "Recovered frames are dated cited reading context ONLY. Editor BBOX edges are not surveyed historical boundaries. No filled control polygon and no area statistics.",
+  "rules": {
+    "require_in_original_5d_source": true,
+    "require_source_both_old_and_point": true,
+    "require_year_overlap": true,
+    "only_point_replacements": true,
+    "no_overwrite_surveyed_polygons": true,
+    "source_period_and_replacement_period_both_must_be_active_on_render": true,
+    "max_span_degrees_for_revenue": 1.7,
+    "max_span_degrees_for_other_kinds": 0.55,
+    "no_fill": true,
+    "no_area_aggregation": true
+  },
+  "records": [
+    {
+      "id": "B36-Z004",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1755大普雷阿卡迪亚人被强制驱逐",
+      "kind": "displacement",
+      "bbox": [
+        -64.43,
+        45.05,
+        -64.22,
+        45.17
+      ],
+      "periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1763
+        }
+      ],
+      "old_source_urls": [
+        "https://acadien.novascotia.ca/en/timeline"
+      ],
+      "old_note": "强制驱逐、流放或土地剥夺的地理影响背景，不属于英国新增实控领土",
+      "replacement_id": "EDITOR37_5AC_GRAND_PRE",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1755,
+          "end_year": 1763
+        }
+      ],
+      "replacement_source_urls": [
+        "https://parks.canada.ca/lhn-nhs/ns/grandpre/culture/histoire-history",
+        "https://whc.unesco.org/en/list/1404/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z029",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1767后草原之犬原住民—欧洲毛皮贸易点",
+      "kind": "trade_influence",
+      "bbox": [
+        -91.26,
+        42.91,
+        -90.94,
+        43.09
+      ],
+      "periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "old_note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "replacement_id": "EDITOR38_5AD_PRAIRIE_DU_CHIEN",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1767,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z033",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1763后拉欣港口毛皮商站往来",
+      "kind": "trade_influence",
+      "bbox": [
+        -73.73,
+        45.37,
+        -73.57,
+        45.48
+      ],
+      "periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "old_note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "replacement_id": "EDITOR38_5AD_LACHINE_TRADING",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1763,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://parks.canada.ca/lhn-nhs/qc/lachine/visit",
+        "https://www.nps.gov/miss/learn/historyculture/river-of-history-chapter-3.htm"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z052",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1760万迪瓦什英法军队战役",
+      "kind": "battle",
+      "bbox": [
+        79.5,
+        12.41,
+        79.75,
+        12.63
+      ],
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "replacement_id": "EDITOR37_5AC_WANDIWASH",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "replacement_source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts/map-of-the-battle-of-wandiwash-1760-vandavasi-tamil-nadu-india-12deg3015n-79deg3620e",
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z054",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1780波利卢尔迈索尔军队重创英军",
+      "kind": "battle",
+      "bbox": [
+        79.52,
+        12.74,
+        79.79,
+        12.94
+      ],
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban"
+      ],
+      "old_note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "replacement_id": "EDITOR37_5AC_POLLILUR_1780",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "replacement_source_urls": [
+        "https://wiki.fibis.org/w/Battle_of_Pollilore_1780",
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts/map-of-the-battle-of-pollilur-1781-pollilur-near-kanchipuram-tamil-nadu-india-12deg5000n-79deg4300e",
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban",
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z055",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1781波尔图诺伏英迈军队战役",
+      "kind": "battle",
+      "bbox": [
+        79.69,
+        11.45,
+        79.91,
+        11.65
+      ],
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "old_note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "replacement_id": "EDITOR37_5AC_PORTO_NOVO",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "replacement_source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts/map-of-the-battle-of-porto-novo-1781-parangipettai-tamil-nadu-india-11deg2859n-79deg4600e",
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z056",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1782波纳尼英迈战争海岸防卫",
+      "kind": "battle",
+      "bbox": [
+        75.84,
+        10.69,
+        76.05,
+        10.89
+      ],
+      "periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "old_note": "战场所在地区，一年内战况不能替代年末逐地军政控制",
+      "replacement_id": "EDITOR37_5AC_PONNANI",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1782,
+          "end_year": 1782
+        }
+      ],
+      "replacement_source_urls": [
+        "https://github.com/martynafford/natural-earth-geojson/blob/master/50m/physical/ne_50m_coastline.json",
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z059",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后伯德万地区东印度公司地税权",
+      "kind": "revenue",
+      "bbox": [
+        87.6,
+        22.9,
+        88.3,
+        23.75
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_BURDWAN",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z060",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后胡格利地区东印度公司地税权",
+      "kind": "revenue",
+      "bbox": [
+        87.86,
+        22.65,
+        88.7,
+        23.27
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_HOOGHLY",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z061",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后纳迪亚地区公司财政影响",
+      "kind": "revenue",
+      "bbox": [
+        88.2,
+        23,
+        89.08,
+        24.17
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_NADIA",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z062",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后杰索尔地区公司财政影响",
+      "kind": "revenue",
+      "bbox": [
+        88.75,
+        22.8,
+        89.78,
+        23.49
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_JESSORE",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z063",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后达卡地区公司财政影响",
+      "kind": "revenue",
+      "bbox": [
+        90,
+        23.3,
+        90.95,
+        24.2
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_DHAKA",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z064",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后迈门辛地区公司财政权",
+      "kind": "revenue",
+      "bbox": [
+        89.5,
+        24.05,
+        90.9,
+        25.5
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_MYMENSINGH",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z065",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后拉杰沙希地区公司财政权",
+      "kind": "revenue",
+      "bbox": [
+        88.1,
+        24,
+        89.4,
+        25.17
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_RAJSHAHI",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z066",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后朗布尔地区公司财政权",
+      "kind": "revenue",
+      "bbox": [
+        88.5,
+        25.5,
+        89.85,
+        26.65
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_RANGPUR",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z067",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后巴特那地区公司地税权",
+      "kind": "revenue",
+      "bbox": [
+        84.83,
+        25.36,
+        85.45,
+        25.85
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_PATNA",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z068",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后伽耶地区公司财政影响",
+      "kind": "revenue",
+      "bbox": [
+        84.65,
+        24.33,
+        85.35,
+        25.15
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_GAYA",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z069",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后蒂尔胡特地区公司财政权",
+      "kind": "revenue",
+      "bbox": [
+        85.15,
+        25.75,
+        86.35,
+        26.8
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_TIRHUT",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z070",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后普尔尼亚地区公司财政权",
+      "kind": "revenue",
+      "bbox": [
+        86.7,
+        25.3,
+        88.25,
+        26.7
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_PURNIA",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z071",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后巴加尔布尔地区公司财政权",
+      "kind": "revenue",
+      "bbox": [
+        86.45,
+        24.72,
+        87.65,
+        25.76
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_BHAGALPUR",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z072",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765后沙哈巴德地区公司财政权",
+      "kind": "revenue",
+      "bbox": [
+        83.3,
+        24.7,
+        84.57,
+        25.65
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AA_SHAHABAD",
+      "replacement_source_file": "data/eighteenth-century-editor37-5aa-bengal.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/041-001116492",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Bengal%20MS%20Records%20Vol.%201.pdf",
+        "https://collections.lib.uwm.edu/digital/collection/agdm/id/19613/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z075",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1766后北萨卡尔维沙卡帕特南税政介入",
+      "kind": "revenue",
+      "bbox": [
+        83.05,
+        17.43,
+        83.6,
+        18.1
+      ],
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AB_VIZAGAPATAM",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+        "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf",
+        "https://geonames.nga.mil/geon-ags/rest/services/RESEARCH/GIS_OUTPUT/MapServer/0/15360147/htmlPopup?f=html"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z076",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1766后北萨卡尔斯里卡库拉姆财政介入",
+      "kind": "revenue",
+      "bbox": [
+        83.55,
+        18.2,
+        84.25,
+        19
+      ],
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AB_SRIKAKULAM",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+        "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf",
+        "https://www.geonames.org/1255649/srikakulam.html"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z077",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1766后北萨卡尔拉贾蒙德里财政介入",
+      "kind": "revenue",
+      "bbox": [
+        81.45,
+        16.85,
+        82.25,
+        17.65
+      ],
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AB_RAJAHMUNDRY",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+        "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf",
+        "https://github.com/recurze/IndianCities/blob/master/data/latlong_location.csv"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z078",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1766后北萨卡尔埃卢鲁财政介入",
+      "kind": "revenue",
+      "bbox": [
+        81,
+        16.45,
+        81.56,
+        17.02
+      ],
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AB_ELURU",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+        "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf",
+        "https://www.geonames.org/1272051/eluru.html"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z079",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1788后北萨卡尔贡土尔公司财政辖区",
+      "kind": "revenue",
+      "bbox": [
+        79.88,
+        15.9,
+        80.84,
+        16.65
+      ],
+      "periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR37_5AB_GUNTUR",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1788,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf",
+        "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+        "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf",
+        "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/elite-groups-in-a-south-indian-district-17881858/DE1056277457FA76D342799AB2F28A5F",
+        "https://www.geonames.org/1270668/guntur.html"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z080",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1775后贝拿勒斯地区公司Zamindari税务干预",
+      "kind": "revenue",
+      "bbox": [
+        82.6,
+        24.95,
+        83.6,
+        25.62
+      ],
+      "periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR38_5AD_BENARES_REVENUE",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1775,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://searcharchives.bl.uk/catalog/040-000004729",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z081",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1781—1782法扎巴德Begam财产强夺",
+      "kind": "coercion",
+      "bbox": [
+        82.07,
+        26.65,
+        82.27,
+        26.88
+      ],
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1782
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "公司财产强制、官员拘捕等暴力手段的受害地点，不代表英国新扩张地块",
+      "replacement_id": "EDITOR38_5AD_FAIZABAD_BEGUMS",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1782
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://www.britishmuseum.org/collection/term/x27093"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z094",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1799坦贾武尔地区公司财政和统治权增强",
+      "kind": "revenue",
+      "bbox": [
+        78.68,
+        10.48,
+        79.36,
+        11.2
+      ],
+      "periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "old_note": "东印度公司税收征管或名义Diwani财政权涉及区，不能与军队直接占领混同",
+      "replacement_id": "EDITOR38_5AD_TANJORE_1799",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1799,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://dl.tufts.edu/downloads/1r66jc42j?filename=4x51hw26r.pdf",
+        "https://thanjavur.nic.in/british-history/",
+        "https://searcharchives.bl.uk/catalog/040-000004729",
+        "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z097",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "18世纪安詹戈英公司沿海商馆",
+      "kind": "trade_influence",
+      "bbox": [
+        76.72,
+        8.6,
+        76.87,
+        8.78
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company"
+      ],
+      "old_note": "跨区域商贸往来或间接影响，不代表英国军政占领",
+      "replacement_id": "EDITOR38_5AD_ANJENGO_FORT",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://www.keralatourism.org/destination/anchuthengu-fort/274"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z107",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1765圣玛丽教区科罗曼提起义",
+      "kind": "resistance",
+      "bbox": [
+        -77.15,
+        18.18,
+        -76.84,
+        18.47
+      ],
+      "periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1765
+        }
+      ],
+      "old_source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "old_note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "replacement_id": "EDITOR38_5AD_JAMAICA_ST_MARY",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1765,
+          "end_year": 1765
+        }
+      ],
+      "replacement_source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z108",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1766西摩兰被奴役者反抗",
+      "kind": "resistance",
+      "bbox": [
+        -78.35,
+        17.84,
+        -77.9,
+        18.25
+      ],
+      "periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1766
+        }
+      ],
+      "old_source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "old_note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "replacement_id": "EDITOR38_5AD_JAMAICA_WESTMORELAND",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1766,
+          "end_year": 1766
+        }
+      ],
+      "replacement_source_urls": [
+        "https://nlj.gov.jm/history-notes/Chronology%20of%20Resistance%20in%20the%20British%20West%20Indies.pdf"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B36-Z114",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "title": "1795—1796费东起义高地战事",
+      "kind": "resistance",
+      "bbox": [
+        -61.77,
+        12.12,
+        -61.57,
+        12.27
+      ],
+      "periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "old_source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "old_note": "原住民族、马龙社群或被奴役者的自主行动与抵抗地点，绝不计为英国实控",
+      "replacement_id": "EDITOR38_5AD_GRENADA_ST_JOHN",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1795,
+          "end_year": 1796
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.cambridge.org/core/journals/americas/article/abs/island-of-grenada-in-1795/8A57445A2A9AFEDC7E95EC4A6D65FFEC"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B37-A-Z002",
+      "source_file": "data/eighteenth-century-b37-africa.json",
+      "title": "海岸角附近登陆和船只商贸水域",
+      "kind": "trade_influence",
+      "bbox": [
+        -1.35,
+        5.02,
+        -1.2,
+        5.2
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "old_note": "海运交易范围仅示意",
+      "replacement_id": "EDITOR37_5AB_CAPE_COAST",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://gmmb.gov.gh/forts-and-castles/",
+        "https://crcc.gov.gh/cape-coast-castle/",
+        "https://api.pageplace.de/preview/DT0400.9781136960703_A23876854/preview-9781136960703_A23876854.pdf",
+        "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B37-A-Z015",
+      "source_file": "data/eighteenth-century-b37-africa.json",
+      "title": "Accra附近英商海岸接驳网络",
+      "kind": "trade_influence",
+      "bbox": [
+        -0.3,
+        5.41,
+        -0.08,
+        5.62
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "old_note": "与荷丹等堡垒商贸竞争",
+      "replacement_id": "EDITOR37_5AB_ACCRA_JAMES",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://gmmb.gov.gh/forts-and-castles/",
+        "https://gmmb.gov.gh/james-fort-accra/",
+        "https://www.rmg.co.uk/collections/archive/rmgc-object-486981",
+        "https://ugspace.ug.edu.gh/server/api/core/bitstreams/71e8985e-3c10-4630-93b5-cc4d63500b1c/content",
+        "https://www.thegazette.co.uk/London/issue/12312/page/4/data.pdf",
+        "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1",
+        "https://www.nationalarchives.gov.uk/explore-the-collection/the-collection-blog/cataloguing-transatlantic-slavery-records-an-archival-history/",
+        "https://www.openstreetmap.org/way/177958818",
+        "https://publish.iupress.indiana.edu/read/making-an-african-city/section/a8f55624-5134-4b9e-aad0-1926fbc13a44"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B37-A-Z017",
+      "source_file": "data/eighteenth-century-b37-africa.json",
+      "title": "Komenda英荷堡垒竞争海岸",
+      "kind": "trade_influence",
+      "bbox": [
+        -1.82,
+        4.96,
+        -1.55,
+        5.21
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://gmmb.gov.gh/british-fort-english-komenda/"
+      ],
+      "old_note": "跨国竞争、当地贸易权并存",
+      "replacement_id": "EDITOR37_5AB_KOMENDA",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://gmmb.gov.gh/british-fort-english-komenda/",
+        "https://whc.unesco.org/document/198275",
+        "https://www.atlasofmutualheritage.nl/page/1451/view-of-the-english-and-dutch-forts-at-kommendo-a-plan-of-the-english",
+        "https://www.rmg.co.uk/collections/archive/rmgc-object-486976",
+        "https://doi.org/10.2307/j.ctv125jqp2.14",
+        "https://www.openstreetmap.org/way/1024365436",
+        "https://www.openstreetmap.org/copyright",
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-I-Z017",
+      "source_file": "data/eighteenth-century-b38-india-mysore.json",
+      "title": "1760年Wandiwash英法战役胜利关联",
+      "kind": "battle",
+      "bbox": [
+        79.45,
+        12.37,
+        79.83,
+        12.76
+      ],
+      "periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "old_note": "南印度英法军事优势更迭",
+      "replacement_id": "EDITOR37_5AC_WANDIWASH",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1760,
+          "end_year": 1760
+        }
+      ],
+      "replacement_source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts/map-of-the-battle-of-wandiwash-1760-vandavasi-tamil-nadu-india-12deg3015n-79deg3620e",
+        "https://www.nam.ac.uk/explore/armies-east-india-company",
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-I-Z026",
+      "source_file": "data/eighteenth-century-b38-india-mysore.json",
+      "title": "1780年Pollilur迈索尔军大胜英军",
+      "kind": "battle",
+      "bbox": [
+        79.51,
+        12.74,
+        79.87,
+        13.02
+      ],
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "old_note": "1780年Pollilur迈索尔军队重创东印度公司军，独立王国政治行动",
+      "replacement_id": "EDITOR37_5AC_POLLILUR_1780",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "replacement_source_urls": [
+        "https://wiki.fibis.org/w/Battle_of_Pollilore_1780",
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts/map-of-the-battle-of-pollilur-1781-pollilur-near-kanchipuram-tamil-nadu-india-12deg5000n-79deg4300e",
+        "https://www.nam.ac.uk/explore/tipu-sultans-war-turban",
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-I-Z027",
+      "source_file": "data/eighteenth-century-b38-india-mysore.json",
+      "title": "1781年Porto Novo英迈战斗地点",
+      "kind": "battle",
+      "bbox": [
+        79.67,
+        11.4,
+        80,
+        11.71
+      ],
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "old_note": "战役胜负不等于整片沿岸占领",
+      "replacement_id": "EDITOR37_5AC_PORTO_NOVO",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "replacement_source_urls": [
+        "https://militarymaps.rct.uk/other-18th/19th-century-conflicts/map-of-the-battle-of-porto-novo-1781-parangipettai-tamil-nadu-india-11deg2859n-79deg4600e",
+        "https://www.nam.ac.uk/explore/their-own-words-unknown-soldier-100th-foot"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-S-Z021",
+      "source_file": "data/eighteenth-century-b38-south-campaign.json",
+      "title": "1780年Moncks Corner英军骑兵突袭",
+      "kind": "battle",
+      "bbox": [
+        -80.1,
+        32.93,
+        -79.8,
+        33.17
+      ],
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "old_note": "特定作战地点，不能长期填色",
+      "replacement_id": "EDITOR37_5AC_MONCKS_CORNER",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-S-Z022",
+      "source_file": "data/eighteenth-century-b38-south-campaign.json",
+      "title": "1780年Lenuds Ferry英军骑兵获胜",
+      "kind": "battle",
+      "bbox": [
+        -79.98,
+        32.99,
+        -79.64,
+        33.21
+      ],
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "old_note": "战斗暂时控制，地域为概略",
+      "replacement_id": "EDITOR39_5AE_LENUD_FERRY_MARKER",
+      "replacement_source_file": "data/eighteenth-century-editor39-5ae-source-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "replacement_source_urls": [
+        "https://nationalregister.sc.gov/SurveyReports/HC08002.pdf",
+        "https://southcarolina250.com/historical-site/battle-of-lenuds-ferry/",
+        "https://www.hmdb.org/m.asp?m=23249"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-S-Z024",
+      "source_file": "data/eighteenth-century-b38-south-campaign.json",
+      "title": "1780年Rocky Mount英方要塞遭反攻",
+      "kind": "battle",
+      "bbox": [
+        -80.98,
+        34.28,
+        -80.64,
+        34.68
+      ],
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "old_note": "美方进攻未能迫使英军撤退",
+      "replacement_id": "EDITOR38_5AD_ROCKY_MOUNT_1780",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "replacement_source_urls": [
+        "https://home.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm",
+        "https://www.battlefields.org/visit/battlefields/rocky-mount",
+        "https://www.hmdb.org/m.asp?m=228191",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-S-Z026",
+      "source_file": "data/eighteenth-century-b38-south-campaign.json",
+      "title": "1780年Fishing Creek英军袭击美军",
+      "kind": "battle",
+      "bbox": [
+        -81.15,
+        34.6,
+        -80.62,
+        35.03
+      ],
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "old_note": "1780年8月18日英军袭击美军的短促战场，地点以宽幅包络示意",
+      "replacement_id": "EDITOR38_5AD_FISHING_CREEK_1780",
+      "replacement_source_file": "data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "replacement_source_urls": [
+        "https://home.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm",
+        "https://www.hmdb.org/m.asp?m=253482",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-S-Z037",
+      "source_file": "data/eighteenth-century-b38-south-campaign.json",
+      "title": "1780年北卡Charlotte英国短时推进",
+      "kind": "battle",
+      "bbox": [
+        -80.97,
+        35.16,
+        -80.7,
+        35.35
+      ],
+      "periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/southerncampaign.htm"
+      ],
+      "old_note": "Cornwallis推进但未持久征服北卡",
+      "replacement_id": "EDITOR37_5AC_CHARLOTTE",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1780,
+          "end_year": 1780
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/southerncampaign.htm",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-S-Z040",
+      "source_file": "data/eighteenth-century-b38-south-campaign.json",
+      "title": "1781年Virginia Gloucester Point英军支撑点",
+      "kind": "battle",
+      "bbox": [
+        -76.58,
+        37.22,
+        -76.43,
+        37.33
+      ],
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "old_source_urls": [
+        "https://home.nps.gov/people/charles-cornwallis.htm"
+      ],
+      "old_note": "与约克河河口攻防一并投降",
+      "replacement_id": "EDITOR37_5AC_GLOUCESTER_POINT",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "replacement_source_urls": [
+        "https://home.nps.gov/people/charles-cornwallis.htm",
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-S-Z041",
+      "source_file": "data/eighteenth-century-b38-south-campaign.json",
+      "title": "1781年Virginia Williamsburg交战带",
+      "kind": "battle",
+      "bbox": [
+        -76.89,
+        37.22,
+        -76.59,
+        37.43
+      ],
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "old_note": "6月26日交锋战况不定",
+      "replacement_id": "EDITOR37_5AC_WILLIAMSBURG",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B38-S-Z043",
+      "source_file": "data/eighteenth-century-b38-south-campaign.json",
+      "title": "1781年Virginia Charlottesville骑兵突袭",
+      "kind": "battle",
+      "bbox": [
+        -78.56,
+        37.98,
+        -78.36,
+        38.13
+      ],
+      "periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "old_note": "Tarleton突袭州议会，非永久占领",
+      "replacement_id": "EDITOR37_5AC_CHARLOTTESVILLE",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1781,
+          "end_year": 1781
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nps.gov/cowp/learn/historyculture/revolutionary-war-timeline.htm"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B39-A-Z002",
+      "source_file": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "title": "Otuam Tantumquery周围Fante社群海岸商贸",
+      "kind": "trade_influence",
+      "bbox": [
+        -0.95,
+        5.16,
+        -0.69,
+        5.4
+      ],
+      "periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://gmmb.gov.gh/the-fort-at-tantumquery/"
+      ],
+      "old_note": "堡垒所处海滨交流地理参考，不能推定英商取得当地村社土地",
+      "replacement_id": "EDITOR37_5AB_TANTUMQUERY",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://gmmb.gov.gh/the-fort-at-tantumquery/",
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11",
+        "https://macmillan.yale.edu/glc/snelgrave-testimony-1726",
+        "https://www.rmg.co.uk/collections/archive/rmgc-object-486972",
+        "https://jscholarship.library.jhu.edu/server/api/core/bitstreams/95fadfd9-8258-4009-8b3e-508695e236ca/content",
+        "https://zenodo.org/records/18855038",
+        "https://www.tandfonline.com/doi/full/10.1080/0067270X.2026.2674423",
+        "https://www.openstreetmap.org/node/2147007505",
+        "https://www.cyberlibrary.org/en/books/mission-from-cape-coast-castle-to-ashantee-77375/chapters/10/",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d8/A_history_of_the_Gold_Coast_and_Ashanti_from_the_earliest_times_to_the_commencement_of_the_twentieth_century_%28IA_historyofgoldcoa00clarrich%29.pdf",
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B39-A-Z003",
+      "source_file": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "title": "Tantumquery英国商人沿岸小船运输",
+      "kind": "trade_influence",
+      "bbox": [
+        -1,
+        5.08,
+        -0.7,
+        5.39
+      ],
+      "periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "old_note": "当时沿海堡垒点状分布，海航框不是英国控制的陆海疆域",
+      "replacement_id": "EDITOR37_5AB_TANTUMQUERY",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1730,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://gmmb.gov.gh/the-fort-at-tantumquery/",
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11",
+        "https://macmillan.yale.edu/glc/snelgrave-testimony-1726",
+        "https://www.rmg.co.uk/collections/archive/rmgc-object-486972",
+        "https://jscholarship.library.jhu.edu/server/api/core/bitstreams/95fadfd9-8258-4009-8b3e-508695e236ca/content",
+        "https://zenodo.org/records/18855038",
+        "https://www.tandfonline.com/doi/full/10.1080/0067270X.2026.2674423",
+        "https://www.openstreetmap.org/node/2147007505",
+        "https://www.cyberlibrary.org/en/books/mission-from-cape-coast-castle-to-ashantee-77375/chapters/10/",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d8/A_history_of_the_Gold_Coast_and_Ashanti_from_the_earliest_times_to_the_commencement_of_the_twentieth_century_%28IA_historyofgoldcoa00clarrich%29.pdf",
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B39-A-Z005",
+      "source_file": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "title": "1742年Prampram海岸英国商人补给地",
+      "kind": "trade_influence",
+      "bbox": [
+        0.01,
+        5.6,
+        0.26,
+        5.85
+      ],
+      "periods": [
+        {
+          "start_year": 1742,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://gmmb.gov.gh/fort-vernon-prampram/"
+      ],
+      "old_note": "渔村与当地政治关系继续，贸易联系不得解释为英国统治内陆",
+      "replacement_id": "EDITOR37_5AB_PRAMPRAM",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1742,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://gmmb.gov.gh/fort-vernon-prampram/",
+        "https://journals.ug.edu.gh/index.php/gssj/article/download/1180/781/",
+        "https://nipda.gov.gh/departments/tourism.html",
+        "https://www.kb.dk/e-mat/dod/11280803744C-bw.pdf",
+        "https://www.mofep.gov.gh/sites/default/files/composite-budget/2025/GR/Ningo_Prampram.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d8/A_history_of_the_Gold_Coast_and_Ashanti_from_the_earliest_times_to_the_commencement_of_the_twentieth_century_%28IA_historyofgoldcoa00clarrich%29.pdf",
+        "https://whc.unesco.org/en/list/34/",
+        "https://whc.unesco.org/document/198275",
+        "https://www.openstreetmap.org/node/3600867562",
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B39-A-Z006",
+      "source_file": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "title": "1742年Prampram当地渔业社群与商站往来",
+      "kind": "diplomacy",
+      "bbox": [
+        0.02,
+        5.61,
+        0.23,
+        5.84
+      ],
+      "periods": [
+        {
+          "start_year": 1742,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://gmmb.gov.gh/fort-vernon-prampram/"
+      ],
+      "old_note": "当地渔村并非英国殖民政区，表达互相接触而非占领",
+      "replacement_id": "EDITOR37_5AB_PRAMPRAM",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1742,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://gmmb.gov.gh/fort-vernon-prampram/",
+        "https://journals.ug.edu.gh/index.php/gssj/article/download/1180/781/",
+        "https://nipda.gov.gh/departments/tourism.html",
+        "https://www.kb.dk/e-mat/dod/11280803744C-bw.pdf",
+        "https://www.mofep.gov.gh/sites/default/files/composite-budget/2025/GR/Ningo_Prampram.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d8/A_history_of_the_Gold_Coast_and_Ashanti_from_the_earliest_times_to_the_commencement_of_the_twentieth_century_%28IA_historyofgoldcoa00clarrich%29.pdf",
+        "https://whc.unesco.org/en/list/34/",
+        "https://whc.unesco.org/document/198275",
+        "https://www.openstreetmap.org/node/3600867562",
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B39-A-Z008",
+      "source_file": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "title": "Winneba附近Fante沿岸政治商贸关系",
+      "kind": "trade_influence",
+      "bbox": [
+        -0.79,
+        5.25,
+        -0.45,
+        5.57
+      ],
+      "periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11"
+      ],
+      "old_note": "名义英堡与Fante各社群地权并存",
+      "replacement_id": "EDITOR37_5AB_WINNEBA",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1750,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11",
+        "https://www.cambridge.org/core/journals/african-studies-review/article/more-than-an-intermediary-james-bannerman-and-colonial-spacemaking-on-the-nineteenthcentury-gold-coast/7013E0FA73342818D6A3313819D680E8",
+        "https://ugspace.ug.edu.gh/items/2631594f-fa59-4712-aebf-ce2c056bb4eb",
+        "https://www.rmg.co.uk/collections/archive/rmgc-object-486972",
+        "https://www.coastal-management.online/PACO/FR/DOCS/5%20SDLAO%20-DIAG%20NATIONAL-GHANA%2062P%201-06.pdf",
+        "https://aqsackey.wordpress.com/2010/01/08/chapter-1/",
+        "https://www.openstreetmap.org/node/2147840760",
+        "https://exploreghanaguide.com/directory/churches/central-region/ebenezer-methodist-cathedral",
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B39-A-Z015",
+      "source_file": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "title": "Apam荷兰贸易与邻近英商贸易竞争岸段",
+      "kind": "trade_influence",
+      "bbox": [
+        -0.91,
+        5.15,
+        -0.57,
+        5.43
+      ],
+      "periods": [
+        {
+          "start_year": 1702,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://gmmb.gov.gh/fort-patience-apam-1697/"
+      ],
+      "old_note": "沿岸有荷兰据点和英国控制影响的邻近社群，不能统一英国占领色",
+      "replacement_id": "EDITOR37_5AB_APAM",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1702,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://gmmb.gov.gh/fort-patience-apam-1697/",
+        "https://www.atlasofmutualheritage.nl/page/1042/floor-plan-of-the-lijdzaamheid-fort-at-apam",
+        "https://www.thegazette.co.uk/London/issue/12312/page/4/data.pdf",
+        "https://www.emersonkent.com/historic_documents/treaty_of_paris_1784_transcript_translation.htm",
+        "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1",
+        "https://whc.unesco.org/document/205570",
+        "https://www.nationaalarchief.nl/onderzoeken/archief/1.05.02/invnr/99",
+        "https://www.atlasofmutualheritage.nl/page/6097/apam",
+        "https://www.academia.edu/4093994/The_Dutch_Atlantic_Slave_Trade_as_Family_Business_The_Case_of_the_Van_der_Noot_de_Gietere_Van_Bakergem_Family",
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B39-A-Z019",
+      "source_file": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "title": "18世纪Christiansborg丹麦商堡与地方贸易互动",
+      "kind": "trade_influence",
+      "bbox": [
+        -0.24,
+        5.47,
+        -0.07,
+        5.67
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://gmmb.gov.gh/christiansborg-castle-accra-1661/"
+      ],
+      "old_note": "1693年Akwamu武装曾夺城堡，至1694售还丹麦；此项仅指丹麦堡与加纳地方贸易联系，不表示持续的Akwamu战争",
+      "replacement_id": "EDITOR37_5AB_CHRISTIANSBORG",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://gmmb.gov.gh/christiansborg-castle-accra-1661/",
+        "https://arkivalieronline.rigsarkivet.dk/en/billedviser?epid=20104124#283223,55099256",
+        "https://danmarkshistorien.lex.dk/Forordning_om_negerhandelen%2C_16._marts_1792",
+        "https://dokumen.pub/peter-thonning-and-denmarks-guinea-commission-a-study-in-nineteenth-century-african-colonial-geography-9004228683-9789004228689.html",
+        "https://christiansborgarchaeologicalheritageproject.org/the-excavation/",
+        "https://christiansborgarchaeologicalheritageproject.org/wp-content/uploads/2019/10/Preliminary-report-on-locally-manufactured.pdf",
+        "https://www.tandfonline.com/doi/pdf/10.1080/03585522.1986.10408070",
+        "https://www.cambridge.org/core/journals/african-studies-review/article/more-than-an-intermediary-james-bannerman-and-colonial-spacemaking-on-the-nineteenthcentury-gold-coast/7013E0FA73342818D6A3313819D680E8",
+        "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1",
+        "https://www.openstreetmap.org/way/11827738",
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B39-A-Z024",
+      "source_file": "data/eighteenth-century-b39-gold-coast-forts.json",
+      "title": "English Komenda英国商站附近河道交易",
+      "kind": "trade_influence",
+      "bbox": [
+        -1.8,
+        4.98,
+        -1.58,
+        5.2
+      ],
+      "periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "old_source_urls": [
+        "https://gmmb.gov.gh/british-fort-english-komenda/"
+      ],
+      "old_note": "英国商馆沿Komenda河口与当地商人交易，英荷堡垒对峙但均未吞并周边村社",
+      "replacement_id": "EDITOR37_5AB_KOMENDA",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1700,
+          "end_year": 1799
+        }
+      ],
+      "replacement_source_urls": [
+        "https://gmmb.gov.gh/british-fort-english-komenda/",
+        "https://whc.unesco.org/document/198275",
+        "https://www.atlasofmutualheritage.nl/page/1451/view-of-the-english-and-dutch-forts-at-kommendo-a-plan-of-the-english",
+        "https://www.rmg.co.uk/collections/archive/rmgc-object-486976",
+        "https://doi.org/10.2307/j.ctv125jqp2.14",
+        "https://www.openstreetmap.org/way/1024365436",
+        "https://www.openstreetmap.org/copyright",
+        "https://gmmb.gov.gh/forts-and-castles/"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    },
+    {
+      "id": "B39-C-Z016",
+      "source_file": "data/eighteenth-century-b39-caribbean-1759-1763.json",
+      "title": "1762年Martinique南岸Marin战争港湾背景",
+      "kind": "trade_influence",
+      "bbox": [
+        -60.98,
+        14.4,
+        -60.82,
+        14.53
+      ],
+      "periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "old_source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war"
+      ],
+      "old_note": "只标出被占岛内的南岸港口与海上联络",
+      "replacement_id": "EDITOR37_5AB_MARTINIQUE_LE_MARIN",
+      "replacement_source_file": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "replacement_type": "Point",
+      "replacement_periods": [
+        {
+          "start_year": 1762,
+          "end_year": 1762
+        }
+      ],
+      "replacement_source_urls": [
+        "https://www.nam.ac.uk/explore/seven-years-war",
+        "https://www.geonames.org/6690668/le-marin.html"
+      ],
+      "area_sqkm": null,
+      "historical_boundary_confirmed": false,
+      "territorial_control_verified": false,
+      "uncertain_line_dashed": true,
+      "fill_authorized": false,
+      "precision": "archival_editorial_locality_or_district_envelope_unrectified",
+      "in_pre5d_active_403": true
+    }
+  ],
+  "excluded": [
+    {
+      "id": "B36-Z006",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "replacement_id": "EDITOR37_5AC_ANNAPOLIS_FORT_ANNE",
+      "reason": "has_surveyed_polygon",
+      "bbox": [
+        -65.6,
+        44.63,
+        -64.3,
+        45.2
+      ],
+      "kind": "displacement"
+    },
+    {
+      "id": "B36-Z020",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "replacement_id": "EDITOR38_5AD_FORT_PITT_1763",
+      "reason": "broad_arbitrary_envelope",
+      "bbox": [
+        -84.8,
+        38.4,
+        -79,
+        42.4
+      ],
+      "kind": "resistance"
+    },
+    {
+      "id": "B36-Z021",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "replacement_id": "EDITOR38_5AD_FORT_MIAMIS_1763",
+      "reason": "broad_arbitrary_envelope",
+      "bbox": [
+        -85,
+        40.9,
+        -82.4,
+        42.3
+      ],
+      "kind": "resistance"
+    },
+    {
+      "id": "B36-Z022",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "replacement_id": "EDITOR38_5AD_PRESQUE_ISLE_1763",
+      "reason": "broad_arbitrary_envelope",
+      "bbox": [
+        -83.6,
+        41.1,
+        -78.7,
+        43
+      ],
+      "kind": "resistance"
+    },
+    {
+      "id": "B36-Z073",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "replacement_id": "EDITOR37_5AA_BALASORE",
+      "reason": "paper_only_grant",
+      "bbox": [
+        86.6,
+        20.9,
+        87.5,
+        21.8
+      ],
+      "kind": "paper_claim"
+    },
+    {
+      "id": "B36-Z096",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "replacement_id": "EDITOR38_5AD_TELLICHERRY_FORT",
+      "reason": "has_surveyed_polygon",
+      "bbox": [
+        75.43,
+        11.71,
+        75.6,
+        11.83
+      ],
+      "kind": "trade_influence"
+    },
+    {
+      "id": "B36-Z109",
+      "source_file": "data/eighteenth-century-expansion-batch36-1700-1799.json",
+      "replacement_id": "EDITOR38_5AD_JAMAICA_HANOVER",
+      "reason": "broad_arbitrary_envelope",
+      "bbox": [
+        -78.35,
+        18.27,
+        -77.75,
+        18.54
+      ],
+      "kind": "resistance"
+    },
+    {
+      "id": "B37-A-Z013",
+      "source_file": "data/eighteenth-century-b37-africa.json",
+      "replacement_id": "EDITOR37_5AB_BEYIN",
+      "reason": "has_surveyed_polygon",
+      "bbox": [
+        -2.88,
+        4.96,
+        -2.43,
+        5.32
+      ],
+      "kind": "trade_influence"
+    },
+    {
+      "id": "B38-H-Z019",
+      "source_file": "data/eighteenth-century-b38-hudson-company.json",
+      "replacement_id": "EDITOR38_5AD_CUMBERLAND_HOUSE_CREE",
+      "reason": "broad_arbitrary_envelope",
+      "bbox": [
+        -103.8,
+        53.1,
+        -100.7,
+        55.2
+      ],
+      "kind": "diplomacy"
+    },
+    {
+      "id": "B38-I-Z023",
+      "source_file": "data/eighteenth-century-b38-india-mysore.json",
+      "replacement_id": "EDITOR38_5AD_TIRUVANNAMALAI_1767",
+      "reason": "broad_arbitrary_envelope",
+      "bbox": [
+        76.15,
+        11.1,
+        80.2,
+        15.4
+      ],
+      "kind": "battle"
+    },
+    {
+      "id": "B38-I-Z024",
+      "source_file": "data/eighteenth-century-b38-india-mysore.json",
+      "replacement_id": "EDITOR38_5AD_MADRAS_TREATY_1769",
+      "reason": "has_surveyed_polygon",
+      "bbox": [
+        80.19,
+        12.95,
+        80.43,
+        13.18
+      ],
+      "kind": "diplomacy"
+    },
+    {
+      "id": "B38-I-Z025",
+      "source_file": "data/eighteenth-century-b38-india-mysore.json",
+      "replacement_id": "EDITOR38_5AD_ARCOT_1780",
+      "reason": "has_surveyed_polygon",
+      "bbox": [
+        77.2,
+        10.6,
+        80.7,
+        14.1
+      ],
+      "kind": "resistance"
+    },
+    {
+      "id": "B38-I-Z029",
+      "source_file": "data/eighteenth-century-b38-india-mysore.json",
+      "replacement_id": "EDITOR38_5AD_SADRAS_1782",
+      "reason": "broad_arbitrary_envelope",
+      "bbox": [
+        79.3,
+        9.4,
+        81.4,
+        15.2
+      ],
+      "kind": "battle"
+    },
+    {
+      "id": "B38-S-Z044",
+      "source_file": "data/eighteenth-century-b38-south-campaign.json",
+      "replacement_id": "EDITOR38_5AD_RICHMOND_JAMES_1781",
+      "reason": "broad_arbitrary_envelope",
+      "bbox": [
+        -77.41,
+        37.2,
+        -76.2,
+        37.75
+      ],
+      "kind": "trade_influence"
+    }
+  ]
+}
