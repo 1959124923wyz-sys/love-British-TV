@@ -50,4 +50,4 @@
 - 5AE历史静态测试仍保证当时23项原退役，5AG独立测试核验新增2项、逐年堡墙与小面、原先5处点转面以及余1。
 - Chromium桌面在1783、1788、1789、1790、1794、1795、1796、1799、1705年检查区域显示与点位，不影响前后世纪；强制空间语义审核与Pages发布门槛保持不变。
 
-后续人员应从[主制图台账](PRE_1800_CARTOGRAPHY_HANDOFF_20261119.md)、[1条剩余旧矩形](18C_5AG_OLD_RECTANGLE_INVENTORY.json)、[2处替换跨表](../../data/eighteenth-century-editor41-5ag-localized-replacements.json)和[165点候选](18C_5AG_479_MASS_POINT_AREA_CANDIDATES.json)开始，不必重新搜集已经存在的283组城堡图形。
+后续人员应从[主制图台账](PRE_1800_CARTOGRAPHY_HANDOFF_20261119.md)、[1条剩余旧矩形](18C_5AG_OLD_RECTANGLE_INVENTORY.json)、[2处替换跨表](../../data/eighteenth-century-editor41-5ag-localized-replacements.json)和[165点候选](18C_5AG_479_MASS_POINT_AREA_CANDIDATES.json)开始，优先复用已入库的280组历史区域多边形，避免重复或凭空描绘。
