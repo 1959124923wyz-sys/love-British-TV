@@ -46,7 +46,7 @@ try:
     assert_shapes(1,1)
     browser.save_screenshot(str(out/'editor7-regional-1622-persian-hormuz-qeshm.png'))
     year(1610)
-    assert_shapes(1,0)
+    assert_shapes(1,1)
     assert count('atlas-17c-5ai-referenced-event')>=2
     year(1629)
     assert_shapes(1,0) # replaced by two precise modern named Port-Royal site markers
