@@ -46,7 +46,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python3 -m pip install --quiet selenium==4.28.1
-      - name: real desktop map: 16C 17C 18C 19C and source reference recovery
+      - name: "real desktop map: 16C 17C 18C 19C and source reference recovery"
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-5aj-http.log 2>&1 &
           python3 scripts/browser_editor44_5aj_reference_restore.py
