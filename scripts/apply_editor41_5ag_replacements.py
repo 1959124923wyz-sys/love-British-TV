@@ -73,9 +73,11 @@ assert len(new["zones"]) == 81 and len(new["sites"]) == 42
 for z in data["zones"]:
     now = next(q for q in new["zones"] if q["id"] == z["id"])
     if z["id"] in REPLACEMENTS:
-        extra = now.pop("superseded_by")
+        extra = now.get("superseded_by")
         assert extra == REPLACEMENTS[z["id"]]["primary"]
-    assert z == now, z["id"]
+        assert z == {k: v for k, v in now.items() if k != "superseded_by"}, z["id"]
+    else:
+        assert z == now, z["id"]
 assert new["regional_zones"] == data["regional_zones"]
 assert new["regional_sites"] == data["regional_sites"]
 unresolved = [z for z in new["zones"] if z.get("bbox") and
