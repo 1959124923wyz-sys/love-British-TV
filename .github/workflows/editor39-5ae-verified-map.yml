@@ -10,7 +10,13 @@ on:
       - 'data/eighteenth-century-b38-south-campaign.json'
       - 'data/eighteenth-century-mass-schematic-zones-1700-1799.json'
       - 'js/eighteenth-editor39-5ae-source-areas.js'
+      - 'js/eighteenth-editor37-5ab-physical-areas.js'
+      - 'js/eighteenth-editor37-5ac-battlefields.js'
+      - 'js/eighteenth-editor38-5ad-geography.js'
+      - 'js/eighteenth-mass-spatial.js'
+      - 'data/eighteenth-century-editor39-5ae-point-area-promotions.json'
       - 'scripts/test_editor39_5ae_source_areas.js'
+      - 'scripts/test_editor39_5ae_point_area_promotions.js'
       - 'scripts/browser_editor39_5ae_source_areas.cjs'
       - '.github/workflows/editor39-5ae-verified-map.yml'
   push:
@@ -33,6 +39,8 @@ jobs:
         run: node --check js/eighteenth-editor39-5ae-source-areas.js
       - name: 5AE native GIS trace and 23 original records
         run: node scripts/test_editor39_5ae_source_areas.js
+      - name: Point to historical polygon original survey and year guard QA
+        run: node scripts/test_editor39_5ae_point_area_promotions.js
       - name: 5AD backwards source geometry QA
         run: node scripts/test_editor38_5ad_treaties_waterways.js
       - name: 5AC ABPP backward compatibility
