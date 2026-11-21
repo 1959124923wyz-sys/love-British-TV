@@ -118,4 +118,4 @@ a(geo.features.find(f=>f.id==='EDITOR39_5AE_CORSICA_ISLAND_1794').geometry.type=
 a(!geo.features.some(f=>f.id.includes('BELIZE_TREATY_POLYGON')),'no speculative Belize 1783/86 polygon');
 a.equal(read('app.js').split('window.eighteenthEditor39FiveAE?.render?.();').length-1,4);
 a(read('index.html').includes('js/eighteenth-editor39-5ae-source-areas.js?v=20261121-5ae-original-gis'));
-console.log('PASS 5AE source GIS unchanged: 15 features and original 23 retirements; 5AG adds two independently tracked retirements, 1 reference remains (zero in 1799).');
+console.log('PASS 5AE source GIS unchanged: 15 features and original 23 retirements; 5AG adds two and 5AH one independently tracked retirements; 0 original 26 references remain.');
