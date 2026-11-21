@@ -47,4 +47,8 @@ a(m.get('EDITOR37_5AB_KRISHNA_RIVER').geometry.coordinates.some(s=>s.length>=6))
 a.equal(read('app.js').split('window.eighteenthEditor37FiveAB?.render?.();').length-1,4);
 a(read('index.html').includes('js/eighteenth-editor37-5ab-physical-areas.js?v=20261121-5ab-coasts-islands-forts'));
 a(read('js/eighteenth-editor37-5ab-physical-areas.js').includes('data-editor37-5ab-id'));
+for(const id of ['EDITOR37_5AB_APAM','EDITOR37_5AB_CHRISTIANSBORG','EDITOR37_5AB_KORMANTIN']){
+ a(read('js/eighteenth-editor37-5ab-physical-areas.js').includes("'"+id+"'"));
+}
+a(read('js/eighteenth-editor37-5ab-physical-areas.js').includes('interactive:clickable'));
 console.log('PASS 5AB: 26 historic zones retired; 7 verified-source geographic polygons, 4 real physical lines, 15 anchored sites; 1799 legacy 44 -> 22.');

@@ -45,6 +45,30 @@ const {chromium}=require('playwright');
   assert.equal(await page.evaluate(()=>window.AtlasPublicCopyGuard.visibleWarnings().length),0);
   const shots=path.join(__dirname,'..','browser-smoke-results');fs.mkdirSync(shots,{recursive:true});
   await page.screenshot({path:path.join(shots,'18c-5ab-gold-coast-1799-dossier.png')});
+  // Preserve original date-specific source at the Dutch Patience Fort.
+  const clickAt=async (lat,lon)=>{
+   const pos=await page.evaluate(([lat,lon])=>{
+    const map=window.__eighteenthSpatialHost.map;
+    const xy=map.latLngToContainerPoint([lat,lon]);
+    const bounds=map.getContainer().getBoundingClientRect();
+    return [bounds.left+xy.x,bounds.top+xy.y];
+   },[lat,lon]);
+   await page.mouse.click(...pos);
+  };
+  for(const [y,stage] of [[1782,/忍耐堡.*英军攻占/],[1785,/忍耐堡.*荷方恢复据点/]]){
+   await set(y);
+   await page.evaluate(()=>window.__eighteenthSpatialHost.map.setView([5.286231,-0.728184],15,{animate:false}));
+   await clickAt(5.286231,-0.728184);
+   await page.locator('#dossierBody h2').filter({hasText:stage}).or(page.locator(
+    '[data-overlap-id="18c:GOLD_COAST_APAM_PATIENCE_FORT"] .atlas-18c-overlap-title'
+   ).filter({hasText:stage})).waitFor();
+  }
+  await set(1799);
+  await page.evaluate(()=>window.__eighteenthSpatialHost.map.setView([5.5467,-0.18272],15,{animate:false}));
+  await clickAt(5.5467,-0.18272);
+  await page.locator('#dossierBody h2').filter({hasText:/奥苏.*王室暂停撤堡令/}).or(page.locator(
+   '[data-overlap-id="18c:GOLD_COAST_ACCRA_CHRISTIANSBORG"] .atlas-18c-overlap-title'
+  ).filter({hasText:/奥苏.*王室暂停撤堡令/})).waitFor();
   await set(1800);a=await state();
   assert.equal(a.visibleLayers,4);assert.equal(a.activeIds.length,4);
   await set(1801);a=await state();assert.equal(a.visibleLayers,0);
