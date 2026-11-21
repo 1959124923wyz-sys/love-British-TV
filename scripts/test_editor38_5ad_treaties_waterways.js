@@ -37,9 +37,9 @@ for(const old of g.metadata.retired_legacy_zone_ids){
   a.equal(s.superseded_by,zone.superseded_by,'source site not preserved '+s.id);
 }
 const remain=legacy.filter(z=>z.bbox&&!z.geometry&&!z.superseded_by);
-a.equal(remain.length,26,'the four legacy collections should contain 26 unresolved rectangles');
+a.equal(remain.length,13,'the four edited source collections should contain 13 unresolved rectangles');
 const active=(z,y)=>z.periods?.some(p=>p.start_year<=y&&y<=p.end_year);
-a.equal(remain.filter(z=>active(z,1799)).length,12,'1799 unresolved count');
+a.equal(remain.filter(z=>active(z,1799)).length,4,'1799 unresolved count in four edited source collections');
 const coords=c=>{if(Array.isArray(c)&&typeof c[0]==='number')return[c];return c.flatMap(coords)};
 for(const f of g.features){
  const p=f.properties,xy=coords(f.geometry.coordinates);
