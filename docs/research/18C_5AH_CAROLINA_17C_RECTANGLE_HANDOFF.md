@@ -39,7 +39,7 @@
 
 **D. 17世纪12条阅读框。** 对战事点优先查同一时期战场注册边界、城堡考古和河岸实图；将地点联线与事件范围分开；保留原独立ID与连贯年份，未验明不做假多边形。
 
-**E. 点转面165条。** `docs/research/18C_5AG_479_MASS_POINT_AREA_CANDIDATES.json` 是自动近邻筛查，165个条目没有任何一项自动确认为“同一历史设施、同年同边界”。本批3条新本地坐标独立统计；5AG既有479点、77点和已完成5个升级**保留冻结**。重点排除“相距近、对象不同”：例如 `GOLD_COAST_SEKONDI_ENGLISH_FORT` 不能转成**荷兰** `GOLD_COAST_ORANGE_FORT`；`OUIDAH_WILLIAM_FORT` 和 `OUIDAH_FRENCH_FORT` 不能转为**葡萄牙** `OUIDAH_PORTUGUESE_FORT`；`BEAUBASSIN_VILLAGE` 不应转成晚建 `FORT_LAWRENCE`；`PITT_FORT_MAIN` 不应套用较晚所建的 `PITT_BOUQUET_BLOCKHOUSE`；`MANILA_BINONDO_CHURCH` 位于因特拉穆罗斯城墙外，不能用城内 Polygon 替代。以上为人工核验**禁转示例**，其余逐项查史料。
+**E. 点转面165条。** `docs/research/18C_5AG_479_MASS_POINT_AREA_CANDIDATES.json` 是自动近邻筛查，165个条目没有任何一项自动确认为“同一历史设施、同年同边界”。[第5AH批165条逐项风险台账](18C_5AH_165_POINT_AREA_SEMANTIC_TRIAGE.json) 已把30条对象/时期不匹配列为禁止直接套用的候选，剩余135条仍待查；原近邻候选本身全部保留。本批3条新本地坐标独立统计；5AG既有479点、77点和已完成5个升级**保留冻结**。重点排除“相距近、对象不同”：例如 `GOLD_COAST_SEKONDI_ENGLISH_FORT` 不能转成**荷兰** `GOLD_COAST_ORANGE_FORT`；`OUIDAH_WILLIAM_FORT` 和 `OUIDAH_FRENCH_FORT` 不能转为**葡萄牙** `OUIDAH_PORTUGUESE_FORT`；`BEAUBASSIN_VILLAGE` 不应转成晚建 `FORT_LAWRENCE`；`PITT_FORT_MAIN` 不应套用较晚所建的 `PITT_BOUQUET_BLOCKHOUSE`；`MANILA_BINONDO_CHURCH` 位于因特拉穆罗斯城墙外，不能用城内 Polygon 替代。以上为人工核验**禁转示例**，其余逐项查史料。
 
 ## 本批审计/测试要点
 
