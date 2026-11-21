@@ -1,0 +1,4047 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "schema": "atlas-editor37-5ab-physical-coasts-historic-forts-v1",
+    "start_year": 1700,
+    "end_year": 1800,
+    "preserve_original_record_types": true,
+    "not_historical_territory_area": true,
+    "coastline_base": "Natural Earth 1:50m coastline; original published 1:10m islands; earlier historic fort map registration",
+    "historical_boundary_confirmed": false,
+    "historical_area_sqkm": null,
+    "area_aggregation_forbidden": true,
+    "retired_legacy_zones": [
+      "B37-A-Z002",
+      "B37-A-Z007",
+      "B37-A-Z010",
+      "B37-A-Z013",
+      "B37-A-Z015",
+      "B37-A-Z017",
+      "B39-A-Z002",
+      "B39-A-Z003",
+      "B39-A-Z005",
+      "B39-A-Z006",
+      "B39-A-Z008",
+      "B39-A-Z015",
+      "B39-A-Z017",
+      "B39-A-Z019",
+      "B39-A-Z024",
+      "B39-A-Z035",
+      "B39-A-Z036",
+      "B36-Z075",
+      "B36-Z076",
+      "B36-Z077",
+      "B36-Z078",
+      "B36-Z079",
+      "B39-C-Z006",
+      "B39-C-Z016",
+      "B39-C-Z030",
+      "B39-C-Z038"
+    ],
+    "retired_1799_count": 22,
+    "original_50m_ghana_coast_vertices": 32,
+    "original_50m_circars_coast_vertices": 57
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_CAPE_COAST",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.241041,
+          5.103524
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_CAPE_COAST",
+        "title": "海岸角城堡 · 英方驻地｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "海岸角城堡是英国公司在黄金海岸的重要驻点，也是贩运被奴役非洲人的沿海基地。城堡与周围范特社群的土地和政治活动分开记录。",
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/forts-and-castles/",
+          "https://crcc.gov.gh/cape-coast-castle/",
+          "https://api.pageplace.de/preview/DT0400.9781136960703_A23876854/preview-9781136960703_A23876854.pdf",
+          "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B37-A-Z002"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "cape-coast-fort-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_ANOMABU",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.1189277,
+              5.1745936
+            ],
+            [
+              -1.1190081,
+              5.1744974
+            ],
+            [
+              -1.1190001,
+              5.1744547
+            ],
+            [
+              -1.1192039,
+              5.1743318
+            ],
+            [
+              -1.1192254,
+              5.1743532
+            ],
+            [
+              -1.1193166,
+              5.1743345
+            ],
+            [
+              -1.1192602,
+              5.174249
+            ],
+            [
+              -1.1192307,
+              5.174257
+            ],
+            [
+              -1.1191127,
+              5.174046
+            ],
+            [
+              -1.119153,
+              5.1740273
+            ],
+            [
+              -1.1191288,
+              5.1739098
+            ],
+            [
+              -1.1190215,
+              5.1739765
+            ],
+            [
+              -1.1190376,
+              5.1740166
+            ],
+            [
+              -1.1188257,
+              5.1741288
+            ],
+            [
+              -1.1188016,
+              5.1741048
+            ],
+            [
+              -1.1186648,
+              5.1741208
+            ],
+            [
+              -1.1187533,
+              5.174241
+            ],
+            [
+              -1.1188177,
+              5.1742223
+            ],
+            [
+              -1.1189142,
+              5.174428
+            ],
+            [
+              -1.1188821,
+              5.174452
+            ],
+            [
+              -1.1189277,
+              5.1745936
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_ANOMABU",
+        "title": "阿诺马布 · 英方堡垒（19世纪称威廉堡）｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "阿诺马布既有范特贸易社群，1753年后英方修建的新堡在1750年代末运作。港外船运与岸上的公司驻堡发生联系；堡垒范围限于主墙。",
+        "periods": [
+          {
+            "start_year": 1757,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/ashanti-question-and-the-british-eighteenthcentury-origins/31ECA3E746C70147090FCA23AF454AC4",
+          "https://gmmb.gov.gh/fort-william-anomabu-1753/",
+          "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1",
+          "https://africa.si.edu/collection/object/nmafa_2014-14-1",
+          "https://dspace.stir.ac.uk/bitstream/1893/25821/1/Thesis%20Final.pdf#page=77",
+          "https://whc.unesco.org/en/list/34/",
+          "https://www.openstreetmap.org/way/520995071",
+          "https://www.openstreetmap.org/copyright",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B37-A-Z007"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "anomabu-fort-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_DIXCOVE",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.9451352,
+              4.7936006
+            ],
+            [
+              -1.9451433,
+              4.7935156
+            ],
+            [
+              -1.9451231,
+              4.7934865
+            ],
+            [
+              -1.9452599,
+              4.7933644
+            ],
+            [
+              -1.9452695,
+              4.793383
+            ],
+            [
+              -1.9452951,
+              4.7933692
+            ],
+            [
+              -1.9452727,
+              4.7933405
+            ],
+            [
+              -1.9452546,
+              4.7933458
+            ],
+            [
+              -1.9452195,
+              4.7932694
+            ],
+            [
+              -1.9452408,
+              4.7932583
+            ],
+            [
+              -1.9452413,
+              4.7932078
+            ],
+            [
+              -1.9452019,
+              4.793228
+            ],
+            [
+              -1.9452035,
+              4.7932609
+            ],
+            [
+              -1.9450256,
+              4.7932991
+            ],
+            [
+              -1.945015,
+              4.793254
+            ],
+            [
+              -1.9449644,
+              4.7932943
+            ],
+            [
+              -1.9449772,
+              4.7933161
+            ],
+            [
+              -1.9448413,
+              4.7933962
+            ],
+            [
+              -1.9448376,
+              4.7933824
+            ],
+            [
+              -1.9447726,
+              4.793383
+            ],
+            [
+              -1.9448216,
+              4.7934323
+            ],
+            [
+              -1.9448429,
+              4.7934079
+            ],
+            [
+              -1.9448707,
+              4.7934579
+            ],
+            [
+              -1.9448096,
+              4.7934829
+            ],
+            [
+              -1.9448472,
+              4.7935379
+            ],
+            [
+              -1.9448984,
+              4.7935079
+            ],
+            [
+              -1.9449324,
+              4.7935692
+            ],
+            [
+              -1.9449159,
+              4.7935799
+            ],
+            [
+              -1.9449372,
+              4.7936695
+            ],
+            [
+              -1.9449893,
+              4.7936201
+            ],
+            [
+              -1.944983,
+              4.7935855
+            ],
+            [
+              -1.9450573,
+              4.7935423
+            ],
+            [
+              -1.9451352,
+              4.7936006
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_DIXCOVE",
+        "title": "迪克斯科夫 · 英方堡垒｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "迪克斯科夫堡由英国商人于1692年开始兴建。十八世纪英方与周边阿汉塔地方政治和贸易往来并存。",
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/fort-metal-cross-dixcove-1692/",
+          "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1",
+          "https://discovery.nationalarchives.gov.uk/details/r/C3980926",
+          "https://ugspace.ug.edu.gh/server/api/core/bitstreams/46b8486b-1c23-481a-85b1-647d48288984/content",
+          "https://whc.unesco.org/en/list/34/",
+          "https://www.openstreetmap.org/way/178066257",
+          "https://www.openstreetmap.org/copyright",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B37-A-Z010"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "dixcove-fort-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_BEYIN",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.621,
+          5.025
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_BEYIN",
+        "title": "贝因 · 阿波罗尼亚堡｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "恩泽马地方领袖在1760年代准许英商筹备阿波罗尼亚堡；1768年开始动工，施工与当地奴役劳动、货物贸易有关。",
+        "periods": [
+          {
+            "start_year": 1766,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/fort-apollonia-beyin-1768/",
+          "https://www.rmg.co.uk/collections/objects/rmgc-object-200888",
+          "https://www.sustainablemediterraneanconstruction.eu/wp-content/uploads/2023/04/SI-2019-01-003.pdf#page=125",
+          "https://whc.unesco.org/document/205570",
+          "https://www.openstreetmap.org/way/937830248",
+          "https://www.openstreetmap.org/copyright",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B37-A-Z013"
+        ],
+        "geometry_precision": "modern_beyin_named_locality_reference",
+        "mapped_1800_id": "beyin-apollonia-fort-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_ACCRA_JAMES",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.211426,
+          5.533578
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_ACCRA_JAMES",
+        "title": "阿克拉詹姆斯镇 · 詹姆斯堡｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "阿克拉詹姆斯堡为英国在阿克拉沿岸的商贸与军事驻点，附近同时存在荷兰和丹麦堡及独立的加人城镇社会。",
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/forts-and-castles/",
+          "https://gmmb.gov.gh/james-fort-accra/",
+          "https://www.rmg.co.uk/collections/archive/rmgc-object-486981",
+          "https://ugspace.ug.edu.gh/server/api/core/bitstreams/71e8985e-3c10-4630-93b5-cc4d63500b1c/content",
+          "https://www.thegazette.co.uk/London/issue/12312/page/4/data.pdf",
+          "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1",
+          "https://www.nationalarchives.gov.uk/explore-the-collection/the-collection-blog/cataloguing-transatlantic-slavery-records-an-archival-history/",
+          "https://www.openstreetmap.org/way/177958818",
+          "https://publish.iupress.indiana.edu/read/making-an-african-city/section/a8f55624-5134-4b9e-aad0-1926fbc13a44"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B37-A-Z015"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "accra-james-fort-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_KOMENDA",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.48952,
+          5.04994
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_KOMENDA",
+        "title": "科门达河右岸 · 英方堡｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "英属科门达堡位于科门达河右岸。十八世纪周围还存在荷兰维雷登堡以及本地瓦萨和范特贸易关系。",
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/british-fort-english-komenda/",
+          "https://whc.unesco.org/document/198275",
+          "https://www.atlasofmutualheritage.nl/page/1451/view-of-the-english-and-dutch-forts-at-kommendo-a-plan-of-the-english",
+          "https://www.rmg.co.uk/collections/archive/rmgc-object-486976",
+          "https://doi.org/10.2307/j.ctv125jqp2.14",
+          "https://www.openstreetmap.org/way/1024365436",
+          "https://www.openstreetmap.org/copyright",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B37-A-Z017",
+          "B39-A-Z024"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "komenda-english-fort-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_TANTUMQUERY",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8086141,
+          5.2220224
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_TANTUMQUERY",
+        "title": "奥图阿姆 · 坦图姆奎里英商堡｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "坦图姆奎里旧商堡位于奥图阿姆聚落附近；当地商站与范特社群沿海贸易有关。",
+        "periods": [
+          {
+            "start_year": 1730,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/the-fort-at-tantumquery/",
+          "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11",
+          "https://macmillan.yale.edu/glc/snelgrave-testimony-1726",
+          "https://www.rmg.co.uk/collections/archive/rmgc-object-486972",
+          "https://jscholarship.library.jhu.edu/server/api/core/bitstreams/95fadfd9-8258-4009-8b3e-508695e236ca/content",
+          "https://zenodo.org/records/18855038",
+          "https://www.tandfonline.com/doi/full/10.1080/0067270X.2026.2674423",
+          "https://www.openstreetmap.org/node/2147007505",
+          "https://www.cyberlibrary.org/en/books/mission-from-cape-coast-castle-to-ashantee-77375/chapters/10/",
+          "https://upload.wikimedia.org/wikipedia/commons/d/d8/A_history_of_the_Gold_Coast_and_Ashanti_from_the_earliest_times_to_the_commencement_of_the_twentieth_century_%28IA_historyofgoldcoa00clarrich%29.pdf",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B39-A-Z002",
+          "B39-A-Z003"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "gold-coast-tantumquery-fort-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_PRAMPRAM",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1142785,
+          5.7050627
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_PRAMPRAM",
+        "title": "普兰普兰 · 弗农堡｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "弗农堡1742年在普兰普兰建造，英商交易与当地渔业及海岸社群持续交织。",
+        "periods": [
+          {
+            "start_year": 1742,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/fort-vernon-prampram/",
+          "https://journals.ug.edu.gh/index.php/gssj/article/download/1180/781/",
+          "https://nipda.gov.gh/departments/tourism.html",
+          "https://www.kb.dk/e-mat/dod/11280803744C-bw.pdf",
+          "https://www.mofep.gov.gh/sites/default/files/composite-budget/2025/GR/Ningo_Prampram.pdf",
+          "https://upload.wikimedia.org/wikipedia/commons/d/d8/A_history_of_the_Gold_Coast_and_Ashanti_from_the_earliest_times_to_the_commencement_of_the_twentieth_century_%28IA_historyofgoldcoa00clarrich%29.pdf",
+          "https://whc.unesco.org/en/list/34/",
+          "https://whc.unesco.org/document/198275",
+          "https://www.openstreetmap.org/node/3600867562",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B39-A-Z005",
+          "B39-A-Z006"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "gold-coast-fort-vernon-site-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_WINNEBA",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.623258,
+          5.3405602
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_WINNEBA",
+        "title": "温内巴 · 英方奴隶贸易堡｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "温内巴英方贸易堡坐落在沿海旧镇一带，范特地方社会与欧洲商人之间有长期交涉。",
+        "periods": [
+          {
+            "start_year": 1750,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11",
+          "https://www.cambridge.org/core/journals/african-studies-review/article/more-than-an-intermediary-james-bannerman-and-colonial-spacemaking-on-the-nineteenthcentury-gold-coast/7013E0FA73342818D6A3313819D680E8",
+          "https://ugspace.ug.edu.gh/items/2631594f-fa59-4712-aebf-ce2c056bb4eb",
+          "https://www.rmg.co.uk/collections/archive/rmgc-object-486972",
+          "https://www.coastal-management.online/PACO/FR/DOCS/5%20SDLAO%20-DIAG%20NATIONAL-GHANA%2062P%201-06.pdf",
+          "https://aqsackey.wordpress.com/2010/01/08/chapter-1/",
+          "https://www.openstreetmap.org/node/2147840760",
+          "https://exploreghanaguide.com/directory/churches/central-region/ebenezer-methodist-cathedral",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B39-A-Z008"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "gold-coast-winneba-fort-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_APAM",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.728184,
+          5.286231
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_APAM",
+        "title": "阿帕姆 · 忍耐堡｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "阿帕姆忍耐堡由荷兰方面经营。1782年英军短暂夺堡，1784年和约议归、1785年恢复荷方人员管理。",
+        "periods": [
+          {
+            "start_year": 1702,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/fort-patience-apam-1697/",
+          "https://www.atlasofmutualheritage.nl/page/1042/floor-plan-of-the-lijdzaamheid-fort-at-apam",
+          "https://www.thegazette.co.uk/London/issue/12312/page/4/data.pdf",
+          "https://www.emersonkent.com/historic_documents/treaty_of_paris_1784_transcript_translation.htm",
+          "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1",
+          "https://whc.unesco.org/document/205570",
+          "https://www.nationaalarchief.nl/onderzoeken/archief/1.05.02/invnr/99",
+          "https://www.atlasofmutualheritage.nl/page/6097/apam",
+          "https://www.academia.edu/4093994/The_Dutch_Atlantic_Slave_Trade_as_Family_Business_The_Case_of_the_Van_der_Noot_de_Gietere_Van_Bakergem_Family",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B39-A-Z015"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "apam-patience-fort-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_KORMANTIN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.0928837,
+              5.1922742
+            ],
+            [
+              -1.0929289,
+              5.1923365
+            ],
+            [
+              -1.0929503,
+              5.1923355
+            ],
+            [
+              -1.0930282,
+              5.1925053
+            ],
+            [
+              -1.0930182,
+              5.1925286
+            ],
+            [
+              -1.0930212,
+              5.1925482
+            ],
+            [
+              -1.0930354,
+              5.1925621
+            ],
+            [
+              -1.0930531,
+              5.1925672
+            ],
+            [
+              -1.0930667,
+              5.192565
+            ],
+            [
+              -1.0932794,
+              5.1924629
+            ],
+            [
+              -1.0933003,
+              5.1924985
+            ],
+            [
+              -1.0934077,
+              5.1924289
+            ],
+            [
+              -1.093309,
+              5.1923605
+            ],
+            [
+              -1.0932668,
+              5.1923641
+            ],
+            [
+              -1.0932116,
+              5.1922363
+            ],
+            [
+              -1.093232,
+              5.1922266
+            ],
+            [
+              -1.0932128,
+              5.1921632
+            ],
+            [
+              -1.0931497,
+              5.192192
+            ],
+            [
+              -1.0929725,
+              5.1922815
+            ],
+            [
+              -1.0929579,
+              5.1922561
+            ],
+            [
+              -1.0928837,
+              5.1922742
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_KORMANTIN",
+        "title": "科尔曼廷 · 阿姆斯特丹堡｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "阿姆斯特丹堡长期属荷兰势力，1782年被英军夺取，1785年重归荷方。海岸堡与当地社群商业活动分别记载。",
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/fort-amsterdam-kormantin-abandze-1638/",
+          "https://www.atlasofmutualheritage.nl/page/987/floor-plan-of-the-amsterdam-fort-at-cormantin",
+          "https://whc.unesco.org/document/176809",
+          "https://www.thegazette.co.uk/London/issue/12312/page/4/data.pdf",
+          "https://www.emersonkent.com/historic_documents/treaty_of_paris_1784_transcript_translation.htm",
+          "https://www.nationaalarchief.nl/onderzoeken/archief/1.05.02/invnr/99",
+          "https://www.openstreetmap.org/way/520993882",
+          "https://www.openstreetmap.org/copyright",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B39-A-Z017"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "kormantin-amsterdam-fort-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_CHRISTIANSBORG",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.18272,
+          5.5467
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_CHRISTIANSBORG",
+        "title": "阿克拉奥苏 · 丹麦克里斯蒂安堡｜十八世纪海岸往来",
+        "kind": "gold_coast_historic_fort_trade_locality",
+        "historical_context": "阿克拉奥苏克里斯蒂安堡在十八世纪属于丹麦体系，至1850年才出售给英国；其经营与当地加人社群相联系。",
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/christiansborg-castle-accra-1661/",
+          "https://arkivalieronline.rigsarkivet.dk/en/billedviser?epid=20104124#283223,55099256",
+          "https://danmarkshistorien.lex.dk/Forordning_om_negerhandelen%2C_16._marts_1792",
+          "https://dokumen.pub/peter-thonning-and-denmarks-guinea-commission-a-study-in-nineteenth-century-african-colonial-geography-9004228683-9789004228689.html",
+          "https://christiansborgarchaeologicalheritageproject.org/the-excavation/",
+          "https://christiansborgarchaeologicalheritageproject.org/wp-content/uploads/2019/10/Preliminary-report-on-locally-manufactured.pdf",
+          "https://www.tandfonline.com/doi/pdf/10.1080/03585522.1986.10408070",
+          "https://www.cambridge.org/core/journals/african-studies-review/article/more-than-an-intermediary-james-bannerman-and-colonial-spacemaking-on-the-nineteenthcentury-gold-coast/7013E0FA73342818D6A3313819D680E8",
+          "https://ir.ucc.edu.gh/xmlui/bitstream/handle/123456789/12199/CHARUKA%2C%202024.pdf?isAllowed=y&sequence=1",
+          "https://www.openstreetmap.org/way/11827738",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B39-A-Z019"
+        ],
+        "geometry_precision": "reused_19c_layer_historic_site_or_fort_outline",
+        "mapped_1800_id": "accra-christiansborg-castle-1800"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_BEYIN_FORT_AFTER_1773",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.5902743,
+              4.9870803
+            ],
+            [
+              -2.5901426,
+              4.987048
+            ],
+            [
+              -2.5901317,
+              4.9870726
+            ],
+            [
+              -2.5900764,
+              4.9870484
+            ],
+            [
+              -2.5900894,
+              4.987019
+            ],
+            [
+              -2.5900362,
+              4.9869761
+            ],
+            [
+              -2.5900151,
+              4.987024
+            ],
+            [
+              -2.5899448,
+              4.9870189
+            ],
+            [
+              -2.5898856,
+              4.9871055
+            ],
+            [
+              -2.5899457,
+              4.9871616
+            ],
+            [
+              -2.589926,
+              4.9872063
+            ],
+            [
+              -2.5899947,
+              4.9872178
+            ],
+            [
+              -2.5900039,
+              4.9871969
+            ],
+            [
+              -2.5901012,
+              4.9872394
+            ],
+            [
+              -2.5900926,
+              4.9872589
+            ],
+            [
+              -2.5901467,
+              4.9873029
+            ],
+            [
+              -2.5901662,
+              4.9872585
+            ],
+            [
+              -2.5901367,
+              4.9872456
+            ],
+            [
+              -2.5901648,
+              4.9871818
+            ],
+            [
+              -2.5901911,
+              4.9871933
+            ],
+            [
+              -2.5902743,
+              4.9870803
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_BEYIN_FORT_AFTER_1773",
+        "title": "贝因阿波罗尼亚堡｜十八世纪后期主堡",
+        "kind": "fort_main_enclosure",
+        "historical_context": "阿波罗尼亚堡在1768年动工，十八世纪七十年代早期基本建成，地方领袖及被奴役劳动者参与了早期工程。",
+        "periods": [
+          {
+            "start_year": 1773,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://gmmb.gov.gh/fort-apollonia-beyin-1768/",
+          "https://www.rmg.co.uk/collections/objects/rmgc-object-200888",
+          "https://www.sustainablemediterraneanconstruction.eu/wp-content/uploads/2023/04/SI-2019-01-003.pdf#page=125",
+          "https://whc.unesco.org/document/205570",
+          "https://www.openstreetmap.org/way/937830248",
+          "https://www.openstreetmap.org/copyright",
+          "https://gmmb.gov.gh/forts-and-castles/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B37-A-Z013"
+        ],
+        "geometry_precision": "reused_fort_enclosure_from_18c_survey_and_19c_continuity"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_GOLD_COAST_SHORE",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -3.347559,
+              5.130664
+            ],
+            [
+              -3.312012,
+              5.160791
+            ],
+            [
+              -3.237598,
+              5.3354
+            ],
+            [
+              -3.199951,
+              5.354492
+            ],
+            [
+              -3.151416,
+              5.348291
+            ],
+            [
+              -3.168701,
+              5.203027
+            ],
+            [
+              -3.063965,
+              5.157715
+            ],
+            [
+              -3.025879,
+              5.150537
+            ],
+            [
+              -3.019141,
+              5.130811
+            ],
+            [
+              -3.086719,
+              5.12832
+            ],
+            [
+              -3.214893,
+              5.147217
+            ],
+            [
+              -3.246387,
+              5.114062
+            ],
+            [
+              -3.114014,
+              5.088672
+            ],
+            [
+              -3.081885,
+              5.082471
+            ],
+            [
+              -2.96499,
+              5.046289
+            ],
+            [
+              -2.723047,
+              5.013721
+            ],
+            [
+              -2.398926,
+              4.929346
+            ],
+            [
+              -2.266406,
+              4.874072
+            ],
+            [
+              -2.090186,
+              4.764062
+            ],
+            [
+              -2.001855,
+              4.762451
+            ],
+            [
+              -1.776855,
+              4.880371
+            ],
+            [
+              -1.638477,
+              4.980859
+            ],
+            [
+              -1.50166,
+              5.037988
+            ],
+            [
+              -1.064307,
+              5.182666
+            ],
+            [
+              -0.797705,
+              5.226709
+            ],
+            [
+              -0.669434,
+              5.318555
+            ],
+            [
+              -0.485449,
+              5.394238
+            ],
+            [
+              -0.34873,
+              5.500781
+            ],
+            [
+              -0.126514,
+              5.568164
+            ],
+            [
+              0.259668,
+              5.757324
+            ],
+            [
+              0.671875,
+              5.759717
+            ],
+            [
+              0.748828,
+              5.760107
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_GOLD_COAST_SHORE",
+        "title": "黄金海岸｜沿海商堡与地方社会",
+        "kind": "physical_shore",
+        "historical_context": "黄金海岸从贝因、迪克斯科夫、科门达、海岸角到阿克拉和普兰普兰，沿岸同时存在多个非洲地方社群与不同欧洲国家的商堡。",
+        "periods": [
+          {
+            "start_year": 1700,
+            "end_year": 1800
+          }
+        ],
+        "source_urls": [
+          "https://github.com/martynafford/natural-earth-geojson/blob/master/50m/physical/ne_50m_coastline.json",
+          "https://gmmb.gov.gh/forts-and-castles/",
+          "https://www.cambridge.org/core/journals/transactions-of-the-royal-historical-society/article/abs/english-establishments-on-the-gold-coast-in-the-second-half-of-the-eighteenth-century/6952B0DF3DC5BB547173E0278227EF11",
+          "https://www.southampton.ac.uk/assets/imported/transforms/content-block/UsefulDownloads_Download/119BE1E844494324BE203BB3AEEA2F71/0921.pdf"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B39-A-Z035",
+          "B39-A-Z036"
+        ],
+        "geometry_precision": "present_day_natural_earth_50m_contiguous_physical_coast"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_VIZAGAPATAM",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.302,
+          17.687
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_VIZAGAPATAM",
+        "title": "维沙卡帕特南｜北萨卡尔沿海税务中心",
+        "kind": "northern_circars_revenue_locality",
+        "historical_context": "北萨卡尔各地在1765年莫卧儿的法令和1766年与海得拉巴尼扎姆的条约后，逐步纳入东印度公司财政、军事安排，地方扎明达里体系继续存在。",
+        "periods": [
+          {
+            "start_year": 1766,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/armies-east-india-company",
+          "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+          "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B36-Z075"
+        ],
+        "geometry_precision": "modern_named_historic_circar_locality_not_1766_tax_border"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_SRIKAKULAM",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.899,
+          18.296
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_SRIKAKULAM",
+        "title": "斯里卡库拉姆｜奇卡科尔旧税区",
+        "kind": "northern_circars_revenue_locality",
+        "historical_context": "北萨卡尔各地在1765年莫卧儿的法令和1766年与海得拉巴尼扎姆的条约后，逐步纳入东印度公司财政、军事安排，地方扎明达里体系继续存在。",
+        "periods": [
+          {
+            "start_year": 1766,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/armies-east-india-company",
+          "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+          "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B36-Z076"
+        ],
+        "geometry_precision": "modern_named_historic_circar_locality_not_1766_tax_border"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_RAJAHMUNDRY",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.783,
+          17.005
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_RAJAHMUNDRY",
+        "title": "拉贾蒙德里｜哥达瓦里河旧税务中心",
+        "kind": "northern_circars_revenue_locality",
+        "historical_context": "北萨卡尔各地在1765年莫卧儿的法令和1766年与海得拉巴尼扎姆的条约后，逐步纳入东印度公司财政、军事安排，地方扎明达里体系继续存在。",
+        "periods": [
+          {
+            "start_year": 1766,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/armies-east-india-company",
+          "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+          "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B36-Z077"
+        ],
+        "geometry_precision": "modern_named_historic_circar_locality_not_1766_tax_border"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_ELURU",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.106,
+          16.711
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_ELURU",
+        "title": "埃卢鲁｜埃洛尔旧税区",
+        "kind": "northern_circars_revenue_locality",
+        "historical_context": "北萨卡尔各地在1765年莫卧儿的法令和1766年与海得拉巴尼扎姆的条约后，逐步纳入东印度公司财政、军事安排，地方扎明达里体系继续存在。",
+        "periods": [
+          {
+            "start_year": 1766,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/armies-east-india-company",
+          "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+          "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B36-Z078"
+        ],
+        "geometry_precision": "modern_named_historic_circar_locality_not_1766_tax_border"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_GUNTUR",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.436,
+          16.306
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_GUNTUR",
+        "title": "贡土尔｜1788年公司接管",
+        "kind": "northern_circars_revenue_locality",
+        "historical_context": "贡土尔因本地与海得拉巴政治安排，直到1788年才进入东印度公司行政征收体系。",
+        "periods": [
+          {
+            "start_year": 1788,
+            "end_year": 1799
+          }
+        ],
+        "source_urls": [
+          "https://bsi.gov.in/uploads/userfiles/file/Rare%20Books/Report%20On%20The%20Old%20Records%20Of%20The%20India%20Office.pdf",
+          "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+          "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf",
+          "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/elite-groups-in-a-south-indian-district-17881858/DE1056277457FA76D342799AB2F28A5F"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [
+          "B36-Z079"
+        ],
+        "geometry_precision": "modern_named_historic_circar_locality_not_1766_tax_border"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_CIRCARS_BAY_SHORE",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              80.101074,
+              15.323633
+            ],
+            [
+              80.293457,
+              15.710742
+            ],
+            [
+              80.384863,
+              15.792773
+            ],
+            [
+              80.646582,
+              15.89502
+            ],
+            [
+              80.707812,
+              15.888086
+            ],
+            [
+              80.781836,
+              15.867334
+            ],
+            [
+              80.825977,
+              15.765918
+            ],
+            [
+              80.864746,
+              15.782227
+            ],
+            [
+              80.917773,
+              15.759668
+            ],
+            [
+              80.978711,
+              15.75835
+            ],
+            [
+              80.993457,
+              15.80874
+            ],
+            [
+              81.030078,
+              15.881445
+            ],
+            [
+              81.132129,
+              15.961768
+            ],
+            [
+              81.238574,
+              16.263965
+            ],
+            [
+              81.286133,
+              16.337061
+            ],
+            [
+              81.401855,
+              16.365234
+            ],
+            [
+              81.711719,
+              16.334473
+            ],
+            [
+              81.761914,
+              16.329492
+            ],
+            [
+              82.141504,
+              16.485352
+            ],
+            [
+              82.258789,
+              16.559863
+            ],
+            [
+              82.327148,
+              16.664355
+            ],
+            [
+              82.338672,
+              16.706543
+            ],
+            [
+              82.359766,
+              16.782812
+            ],
+            [
+              82.35,
+              16.825195
+            ],
+            [
+              82.307227,
+              16.878564
+            ],
+            [
+              82.281934,
+              16.936084
+            ],
+            [
+              82.286523,
+              16.978076
+            ],
+            [
+              82.35957,
+              17.096191
+            ],
+            [
+              82.593164,
+              17.273926
+            ],
+            [
+              82.976855,
+              17.461816
+            ],
+            [
+              83.19834,
+              17.608984
+            ],
+            [
+              83.387988,
+              17.78667
+            ],
+            [
+              83.572266,
+              18.003613
+            ],
+            [
+              83.654297,
+              18.069873
+            ],
+            [
+              84.104102,
+              18.292676
+            ],
+            [
+              84.181738,
+              18.400586
+            ],
+            [
+              84.462793,
+              18.689746
+            ],
+            [
+              84.609375,
+              18.884326
+            ],
+            [
+              84.69082,
+              18.964697
+            ],
+            [
+              84.749805,
+              19.050098
+            ],
+            [
+              84.770996,
+              19.125391
+            ],
+            [
+              85.225586,
+              19.50835
+            ],
+            [
+              85.441602,
+              19.626562
+            ],
+            [
+              85.436914,
+              19.656885
+            ],
+            [
+              85.370898,
+              19.678906
+            ],
+            [
+              85.228516,
+              19.601318
+            ],
+            [
+              85.180762,
+              19.594873
+            ],
+            [
+              85.162793,
+              19.620898
+            ],
+            [
+              85.248633,
+              19.757666
+            ],
+            [
+              85.459961,
+              19.895898
+            ],
+            [
+              85.504102,
+              19.887695
+            ],
+            [
+              85.555078,
+              19.866895
+            ],
+            [
+              85.559766,
+              19.753467
+            ],
+            [
+              85.511133,
+              19.726904
+            ],
+            [
+              85.496875,
+              19.696924
+            ],
+            [
+              85.575,
+              19.69292
+            ],
+            [
+              85.85293,
+              19.791748
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_CIRCARS_BAY_SHORE",
+        "title": "北萨卡尔｜孟加拉湾西岸实际地理轮廓",
+        "kind": "physical_shore",
+        "historical_context": "维沙卡帕特南、斯里卡库拉姆、拉贾蒙德里和埃卢鲁等旧税区沿孟加拉湾西岸展开，1766年公司与海得拉巴尼扎姆达成领地安排。",
+        "periods": [
+          {
+            "start_year": 1766,
+            "end_year": 1800
+          }
+        ],
+        "source_urls": [
+          "https://github.com/martynafford/natural-earth-geojson/blob/master/50m/physical/ne_50m_coastline.json",
+          "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf",
+          "https://escholarship.org/content/qt0h23p0rv/qt0h23p0rv.pdf"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "original_legacy_ids": [],
+        "geometry_precision": "present_day_natural_earth_50m_physical_coast"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_GODAVARI_RIVER",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              81.738815,
+              16.942248
+            ],
+            [
+              81.832556,
+              16.669164
+            ],
+            [
+              81.855655,
+              16.552943
+            ],
+            [
+              81.839429,
+              16.502533
+            ],
+            [
+              81.79969,
+              16.465326
+            ],
+            [
+              81.736334,
+              16.441296
+            ],
+            [
+              81.706414,
+              16.400033
+            ],
+            [
+              81.711736,
+              16.334455
+            ]
+          ],
+          [
+            [
+              73.652487,
+              20.012784
+            ],
+            [
+              73.888648,
+              19.990201
+            ],
+            [
+              73.98983,
+              19.998883
+            ],
+            [
+              74.034686,
+              20.031336
+            ],
+            [
+              74.083571,
+              20.036348
+            ],
+            [
+              74.162946,
+              20.002862
+            ],
+            [
+              74.422465,
+              19.917673
+            ],
+            [
+              74.588967,
+              19.834862
+            ],
+            [
+              74.748957,
+              19.72598
+            ],
+            [
+              74.916906,
+              19.652134
+            ],
+            [
+              75.092915,
+              19.613325
+            ],
+            [
+              75.197405,
+              19.57865
+            ],
+            [
+              75.246911,
+              19.532865
+            ],
+            [
+              75.472789,
+              19.425326
+            ],
+            [
+              75.591231,
+              19.380135
+            ],
+            [
+              75.677531,
+              19.361506
+            ],
+            [
+              75.76905,
+              19.361402
+            ],
+            [
+              75.845531,
+              19.37582
+            ],
+            [
+              75.905062,
+              19.362591
+            ],
+            [
+              75.916586,
+              19.325901
+            ],
+            [
+              75.940512,
+              19.314119
+            ],
+            [
+              75.986711,
+              19.332593
+            ],
+            [
+              76.011309,
+              19.326288
+            ],
+            [
+              76.027432,
+              19.310165
+            ],
+            [
+              76.091769,
+              19.290968
+            ],
+            [
+              76.318991,
+              19.257171
+            ],
+            [
+              76.347206,
+              19.241255
+            ],
+            [
+              76.353304,
+              19.202291
+            ],
+            [
+              76.337284,
+              19.140279
+            ],
+            [
+              76.346637,
+              19.123898
+            ],
+            [
+              76.367773,
+              19.119867
+            ],
+            [
+              76.395885,
+              19.111134
+            ],
+            [
+              76.426788,
+              19.076872
+            ],
+            [
+              76.47309,
+              19.072738
+            ],
+            [
+              76.534585,
+              19.098835
+            ],
+            [
+              76.581713,
+              19.086303
+            ],
+            [
+              76.614476,
+              19.035221
+            ],
+            [
+              76.657264,
+              19.001631
+            ],
+            [
+              76.710181,
+              18.985508
+            ],
+            [
+              76.74775,
+              18.996412
+            ],
+            [
+              76.769971,
+              19.034265
+            ],
+            [
+              76.855599,
+              19.070413
+            ],
+            [
+              77.004737,
+              19.104881
+            ],
+            [
+              77.092897,
+              19.108317
+            ],
+            [
+              77.120079,
+              19.080748
+            ],
+            [
+              77.195526,
+              19.089274
+            ],
+            [
+              77.319136,
+              19.133923
+            ],
+            [
+              77.404816,
+              19.120229
+            ],
+            [
+              77.452668,
+              19.048243
+            ],
+            [
+              77.578914,
+              18.965794
+            ],
+            [
+              77.783656,
+              18.872931
+            ],
+            [
+              77.968347,
+              18.870399
+            ],
+            [
+              78.132988,
+              18.958171
+            ],
+            [
+              78.235359,
+              18.984113
+            ],
+            [
+              78.27546,
+              18.948249
+            ],
+            [
+              78.319385,
+              18.945666
+            ],
+            [
+              78.367238,
+              18.976387
+            ],
+            [
+              78.428836,
+              18.979824
+            ],
+            [
+              78.50418,
+              18.955898
+            ],
+            [
+              78.575494,
+              18.966491
+            ],
+            [
+              78.642776,
+              19.011501
+            ],
+            [
+              78.701171,
+              19.027444
+            ],
+            [
+              78.750883,
+              19.01424
+            ],
+            [
+              78.834806,
+              19.0261
+            ],
+            [
+              78.952938,
+              19.062997
+            ],
+            [
+              79.049625,
+              19.033412
+            ],
+            [
+              79.124762,
+              18.937372
+            ],
+            [
+              79.201037,
+              18.870916
+            ],
+            [
+              79.317154,
+              18.815622
+            ],
+            [
+              79.401025,
+              18.843243
+            ],
+            [
+              79.496264,
+              18.809214
+            ],
+            [
+              79.630933,
+              18.722733
+            ],
+            [
+              79.727155,
+              18.690074
+            ],
+            [
+              79.785032,
+              18.711261
+            ],
+            [
+              79.821619,
+              18.761853
+            ],
+            [
+              79.874484,
+              18.801953
+            ],
+            [
+              79.925127,
+              18.807405
+            ],
+            [
+              80.029048,
+              18.743611
+            ],
+            [
+              80.1416,
+              18.70152
+            ],
+            [
+              80.243609,
+              18.709478
+            ],
+            [
+              80.318643,
+              18.686147
+            ],
+            [
+              80.366495,
+              18.631576
+            ],
+            [
+              80.39006,
+              18.572613
+            ],
+            [
+              80.389336,
+              18.509258
+            ],
+            [
+              80.40825,
+              18.463034
+            ],
+            [
+              80.447007,
+              18.43394
+            ],
+            [
+              80.472742,
+              18.387612
+            ],
+            [
+              80.485455,
+              18.32405
+            ],
+            [
+              80.540748,
+              18.260565
+            ],
+            [
+              80.687509,
+              18.165532
+            ],
+            [
+              80.839903,
+              17.995543
+            ],
+            [
+              80.892148,
+              17.864595
+            ],
+            [
+              80.895042,
+              17.716051
+            ],
+            [
+              80.986044,
+              17.621715
+            ],
+            [
+              81.165155,
+              17.581614
+            ],
+            [
+              81.266802,
+              17.543064
+            ],
+            [
+              81.29109,
+              17.506064
+            ],
+            [
+              81.352068,
+              17.482344
+            ],
+            [
+              81.449737,
+              17.471802
+            ],
+            [
+              81.527975,
+              17.447824
+            ],
+            [
+              81.586576,
+              17.410359
+            ],
+            [
+              81.646624,
+              17.279282
+            ],
+            [
+              81.738815,
+              16.942248
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_GODAVARI_RIVER",
+        "title": "哥达瓦里河｜北萨卡尔河岸自然地理",
+        "kind": "physical_river",
+        "historical_context": "哥达瓦里河与克里希纳河均穿过今日安得拉邦，河口、旧航运和沿岸城镇与十八世纪北萨卡尔的地理和财政史相联系。",
+        "periods": [
+          {
+            "start_year": 1766,
+            "end_year": 1800
+          }
+        ],
+        "source_urls": [
+          "https://github.com/martynafford/natural-earth-geojson/blob/master/50m/physical/ne_50m_rivers_lake_centerlines.json",
+          "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "present_day_natural_earth_50m_river_source_segments",
+        "original_legacy_ids": []
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_KRISHNA_RIVER",
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              79.31333,
+              16.579376
+            ],
+            [
+              79.657185,
+              16.69017
+            ],
+            [
+              79.818415,
+              16.702934
+            ],
+            [
+              79.911536,
+              16.654617
+            ],
+            [
+              79.993081,
+              16.677871
+            ],
+            [
+              80.062948,
+              16.772672
+            ],
+            [
+              80.121497,
+              16.768176
+            ],
+            [
+              80.16873,
+              16.664332
+            ],
+            [
+              80.261902,
+              16.607359
+            ],
+            [
+              80.400912,
+              16.59723
+            ],
+            [
+              80.523592,
+              16.553202
+            ],
+            [
+              80.629838,
+              16.475325
+            ],
+            [
+              80.716552,
+              16.393212
+            ],
+            [
+              80.783834,
+              16.306964
+            ],
+            [
+              80.833754,
+              16.201285
+            ],
+            [
+              80.882743,
+              16.0137
+            ],
+            [
+              80.892458,
+              15.970963
+            ],
+            [
+              80.891631,
+              15.865957
+            ],
+            [
+              80.877575,
+              15.819655
+            ],
+            [
+              80.86476,
+              15.782215
+            ]
+          ],
+          [
+            [
+              76.016477,
+              16.278748
+            ],
+            [
+              76.058541,
+              16.224772
+            ],
+            [
+              76.12417,
+              16.187591
+            ],
+            [
+              76.213261,
+              16.167231
+            ],
+            [
+              76.404877,
+              16.227356
+            ],
+            [
+              76.699019,
+              16.367916
+            ],
+            [
+              76.882057,
+              16.470003
+            ],
+            [
+              76.953991,
+              16.533668
+            ],
+            [
+              77.05724,
+              16.527932
+            ],
+            [
+              77.258985,
+              16.415355
+            ],
+            [
+              77.615707,
+              16.348822
+            ],
+            [
+              77.844996,
+              16.232239
+            ],
+            [
+              78.065654,
+              16.043517
+            ],
+            [
+              78.193088,
+              15.955977
+            ],
+            [
+              78.227298,
+              15.96962
+            ],
+            [
+              78.244351,
+              15.991944
+            ],
+            [
+              78.244351,
+              16.023002
+            ],
+            [
+              78.283263,
+              16.049718
+            ],
+            [
+              78.361088,
+              16.072198
+            ],
+            [
+              78.497772,
+              16.07119
+            ],
+            [
+              78.693419,
+              16.046773
+            ],
+            [
+              78.805144,
+              16.063619
+            ],
+            [
+              78.832946,
+              16.121704
+            ],
+            [
+              78.884467,
+              16.170641
+            ],
+            [
+              78.997173,
+              16.230302
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_KRISHNA_RIVER",
+        "title": "克里希纳河｜北萨卡尔南端自然地理",
+        "kind": "physical_river",
+        "historical_context": "哥达瓦里河与克里希纳河均穿过今日安得拉邦，河口、旧航运和沿岸城镇与十八世纪北萨卡尔的地理和财政史相联系。",
+        "periods": [
+          {
+            "start_year": 1766,
+            "end_year": 1800
+          }
+        ],
+        "source_urls": [
+          "https://github.com/martynafford/natural-earth-geojson/blob/master/50m/physical/ne_50m_rivers_lake_centerlines.json",
+          "https://censusindia.gov.in/nada/index.php/catalog/27687/download/30856/DH_28_2001_VIS.pdf"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "present_day_natural_earth_50m_river_source_segments",
+        "original_legacy_ids": []
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_GUADELOUPE_SUGAR_SHORE",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.551666,
+                16.285549
+              ],
+              [
+                -61.549184,
+                16.280585
+              ],
+              [
+                -61.555409,
+                16.258246
+              ],
+              [
+                -61.547963,
+                16.23843
+              ],
+              [
+                -61.554596,
+                16.236518
+              ],
+              [
+                -61.572662,
+                16.232571
+              ],
+              [
+                -61.579457,
+                16.222317
+              ],
+              [
+                -61.577301,
+                16.17593
+              ],
+              [
+                -61.564565,
+                16.140937
+              ],
+              [
+                -61.557729,
+                16.08633
+              ],
+              [
+                -61.565989,
+                16.033515
+              ],
+              [
+                -61.597483,
+                15.996731
+              ],
+              [
+                -61.643422,
+                15.970364
+              ],
+              [
+                -61.694936,
+                15.949164
+              ],
+              [
+                -61.696523,
+                15.955024
+              ],
+              [
+                -61.702382,
+                15.969631
+              ],
+              [
+                -61.694936,
+                15.976467
+              ],
+              [
+                -61.702016,
+                15.989895
+              ],
+              [
+                -61.710805,
+                15.997382
+              ],
+              [
+                -61.721059,
+                16.003852
+              ],
+              [
+                -61.732777,
+                16.013983
+              ],
+              [
+                -61.740061,
+                16.025824
+              ],
+              [
+                -61.743642,
+                16.037299
+              ],
+              [
+                -61.747792,
+                16.046698
+              ],
+              [
+                -61.756418,
+                16.052191
+              ],
+              [
+                -61.768625,
+                16.087633
+              ],
+              [
+                -61.769439,
+                16.16649
+              ],
+              [
+                -61.784291,
+                16.202338
+              ],
+              [
+                -61.779449,
+                16.217231
+              ],
+              [
+                -61.784006,
+                16.229315
+              ],
+              [
+                -61.7919,
+                16.240058
+              ],
+              [
+                -61.797353,
+                16.2508
+              ],
+              [
+                -61.797841,
+                16.26789
+              ],
+              [
+                -61.793853,
+                16.299058
+              ],
+              [
+                -61.797353,
+                16.312201
+              ],
+              [
+                -61.787587,
+                16.320299
+              ],
+              [
+                -61.770823,
+                16.348822
+              ],
+              [
+                -61.756418,
+                16.360663
+              ],
+              [
+                -61.737864,
+                16.365302
+              ],
+              [
+                -61.728586,
+                16.359605
+              ],
+              [
+                -61.722035,
+                16.350898
+              ],
+              [
+                -61.712026,
+                16.346381
+              ],
+              [
+                -61.687001,
+                16.341702
+              ],
+              [
+                -61.650136,
+                16.329332
+              ],
+              [
+                -61.615834,
+                16.311835
+              ],
+              [
+                -61.598744,
+                16.291693
+              ],
+              [
+                -61.612945,
+                16.285549
+              ],
+              [
+                -61.604644,
+                16.282294
+              ],
+              [
+                -61.603139,
+                16.281195
+              ],
+              [
+                -61.603017,
+                16.282213
+              ],
+              [
+                -61.598744,
+                16.285549
+              ],
+              [
+                -61.59557,
+                16.281643
+              ],
+              [
+                -61.585072,
+                16.271308
+              ],
+              [
+                -61.58023,
+                16.282131
+              ],
+              [
+                -61.570546,
+                16.28974
+              ],
+              [
+                -61.557973,
+                16.291693
+              ],
+              [
+                -61.551666,
+                16.285549
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.544179,
+                16.285386
+              ],
+              [
+                -61.544097,
+                16.285468
+              ],
+              [
+                -61.527659,
+                16.337836
+              ],
+              [
+                -61.518137,
+                16.348944
+              ],
+              [
+                -61.499664,
+                16.353217
+              ],
+              [
+                -61.49706,
+                16.356757
+              ],
+              [
+                -61.495513,
+                16.365139
+              ],
+              [
+                -61.495229,
+                16.374457
+              ],
+              [
+                -61.496246,
+                16.381171
+              ],
+              [
+                -61.500356,
+                16.385647
+              ],
+              [
+                -61.507314,
+                16.389838
+              ],
+              [
+                -61.515614,
+                16.393052
+              ],
+              [
+                -61.52359,
+                16.394761
+              ],
+              [
+                -61.529164,
+                16.430487
+              ],
+              [
+                -61.533844,
+                16.439439
+              ],
+              [
+                -61.534291,
+                16.449286
+              ],
+              [
+                -61.525624,
+                16.462307
+              ],
+              [
+                -61.509918,
+                16.480414
+              ],
+              [
+                -61.505849,
+                16.486965
+              ],
+              [
+                -61.496246,
+                16.49372
+              ],
+              [
+                -61.465321,
+                16.509833
+              ],
+              [
+                -61.462514,
+                16.513088
+              ],
+              [
+                -61.459299,
+                16.511786
+              ],
+              [
+                -61.426829,
+                16.489203
+              ],
+              [
+                -61.409413,
+                16.47248
+              ],
+              [
+                -61.397613,
+                16.45185
+              ],
+              [
+                -61.393219,
+                16.425482
+              ],
+              [
+                -61.39566,
+                16.399237
+              ],
+              [
+                -61.394154,
+                16.38935
+              ],
+              [
+                -61.386464,
+                16.373684
+              ],
+              [
+                -61.376617,
+                16.359565
+              ],
+              [
+                -61.365712,
+                16.348822
+              ],
+              [
+                -61.353139,
+                16.340277
+              ],
+              [
+                -61.338694,
+                16.332709
+              ],
+              [
+                -61.331776,
+                16.340155
+              ],
+              [
+                -61.321523,
+                16.334906
+              ],
+              [
+                -61.311838,
+                16.334174
+              ],
+              [
+                -61.301666,
+                16.33454
+              ],
+              [
+                -61.290191,
+                16.332709
+              ],
+              [
+                -61.280588,
+                16.327053
+              ],
+              [
+                -61.258901,
+                16.309231
+              ],
+              [
+                -61.253,
+                16.305406
+              ],
+              [
+                -61.242584,
+                16.30036
+              ],
+              [
+                -61.188385,
+                16.263821
+              ],
+              [
+                -61.169179,
+                16.258694
+              ],
+              [
+                -61.163564,
+                16.252997
+              ],
+              [
+                -61.174794,
+                16.243964
+              ],
+              [
+                -61.183176,
+                16.244127
+              ],
+              [
+                -61.211252,
+                16.250718
+              ],
+              [
+                -61.218861,
+                16.254218
+              ],
+              [
+                -61.234446,
+                16.258287
+              ],
+              [
+                -61.410715,
+                16.219468
+              ],
+              [
+                -61.444447,
+                16.205064
+              ],
+              [
+                -61.462148,
+                16.202338
+              ],
+              [
+                -61.483713,
+                16.205878
+              ],
+              [
+                -61.503407,
+                16.213284
+              ],
+              [
+                -61.520416,
+                16.222968
+              ],
+              [
+                -61.533844,
+                16.233385
+              ],
+              [
+                -61.544097,
+                16.245673
+              ],
+              [
+                -61.548329,
+                16.258043
+              ],
+              [
+                -61.547963,
+                16.271064
+              ],
+              [
+                -61.544179,
+                16.285386
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_GUADELOUPE_SUGAR_SHORE",
+        "title": "瓜德罗普双岛｜1759—1762年战时糖业运输",
+        "kind": "island_trade_wartime",
+        "historical_context": "1759年英军占领法国殖民地瓜德罗普，岛上糖业贸易与被奴役劳动持续受到战时经营政策影响。",
+        "periods": [
+          {
+            "start_year": 1759,
+            "end_year": 1762
+          }
+        ],
+        "source_urls": [
+          "https://lib.unb.ca/guides/loyalist-collection-british-west-indies",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+          "https://www.academia.edu/120625771/La_Guadeloupe_de_1803_%C3%A0_1816_de_l_Empire_%C3%A0_la_Restauration",
+          "https://memoire-esclavage.org/napoleon-et-le-retablissement-de-lesclavage/focus-thematiques-dossier-napoleon-et-le-retablissement",
+          "https://www.lameca.org/publications-numeriques/dossiers-et-articles/1802-la-rebellion-en-guadeloupe/histoire-chronologie/",
+          "https://guides.loc.gov/francophone-caribbean-collections-library-of-congress/online-resources",
+          "https://memoire-esclavage.org/1848-la-seconde-abolition-de-lesclavage",
+          "https://avalon.law.yale.edu/18th_century/paris763.asp"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "reused_project_historical_10m_island_shore",
+        "original_legacy_ids": [
+          "B39-C-Z006"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_MARTINIQUE_LE_MARIN",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.87,
+          14.47
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_MARTINIQUE_LE_MARIN",
+        "title": "马提尼克马兰港｜1762年战争地理",
+        "kind": "named_harbour",
+        "historical_context": "1762年英军占据法属马提尼克期间，马兰位于岛屿南岸的海湾港口；该港与罗亚尔港、圣皮埃尔分处不同海岸。",
+        "periods": [
+          {
+            "start_year": 1762,
+            "end_year": 1762
+          }
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/seven-years-war"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "modern_named_harbour_anchor",
+        "original_legacy_ids": [
+          "B39-C-Z016"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_TOBAGO_1762_SHORE",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -60.522084,
+              11.318834
+            ],
+            [
+              -60.53303,
+              11.266506
+            ],
+            [
+              -60.585113,
+              11.25552
+            ],
+            [
+              -60.647125,
+              11.204169
+            ],
+            [
+              -60.681304,
+              11.207099
+            ],
+            [
+              -60.803334,
+              11.143256
+            ],
+            [
+              -60.810414,
+              11.159247
+            ],
+            [
+              -60.825429,
+              11.151801
+            ],
+            [
+              -60.847524,
+              11.163967
+            ],
+            [
+              -60.845204,
+              11.179145
+            ],
+            [
+              -60.809926,
+              11.19066
+            ],
+            [
+              -60.794342,
+              11.21662
+            ],
+            [
+              -60.681304,
+              11.296454
+            ],
+            [
+              -60.595815,
+              11.327297
+            ],
+            [
+              -60.560374,
+              11.321194
+            ],
+            [
+              -60.530507,
+              11.35106
+            ],
+            [
+              -60.522084,
+              11.318834
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_TOBAGO_1762_SHORE",
+        "title": "多巴哥本岛｜1762年海上战争与1763年归属",
+        "kind": "island_war_context",
+        "historical_context": "1762年英国与法国在加勒比殖民海域持续战争，1763年《巴黎和约》确认多巴哥归英国，岛上城镇与驻军的具体变动有各自年代。",
+        "periods": [
+          {
+            "start_year": 1762,
+            "end_year": 1762
+          }
+        ],
+        "source_urls": [
+          "https://knowledge.uchicago.edu/record/727/files/Murphy_uchicago_0330D_12932.pdf?ln=en",
+          "https://collection.nam.ac.uk/detail.php?acc=1978-11-87-1",
+          "https://uwispace.sta.uwi.edu/server/api/core/bitstreams/440edb28-1eb4-4f3f-b38b-5382c8e14451/content",
+          "https://www.oas.org/sap/peacefund/belizeandguatemala/timelinedocuments/amiensTreaty.pdf",
+          "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+          "https://avalon.law.yale.edu/18th_century/paris763.asp"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "reused_project_historical_10m_island_shore",
+        "original_legacy_ids": [
+          "B39-C-Z030"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "EDITOR37_5AB_1763_FRENCH_RESTORED_ISLANDS",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -61.551666,
+                16.285549
+              ],
+              [
+                -61.549184,
+                16.280585
+              ],
+              [
+                -61.555409,
+                16.258246
+              ],
+              [
+                -61.547963,
+                16.23843
+              ],
+              [
+                -61.554596,
+                16.236518
+              ],
+              [
+                -61.572662,
+                16.232571
+              ],
+              [
+                -61.579457,
+                16.222317
+              ],
+              [
+                -61.577301,
+                16.17593
+              ],
+              [
+                -61.564565,
+                16.140937
+              ],
+              [
+                -61.557729,
+                16.08633
+              ],
+              [
+                -61.565989,
+                16.033515
+              ],
+              [
+                -61.597483,
+                15.996731
+              ],
+              [
+                -61.643422,
+                15.970364
+              ],
+              [
+                -61.694936,
+                15.949164
+              ],
+              [
+                -61.696523,
+                15.955024
+              ],
+              [
+                -61.702382,
+                15.969631
+              ],
+              [
+                -61.694936,
+                15.976467
+              ],
+              [
+                -61.702016,
+                15.989895
+              ],
+              [
+                -61.710805,
+                15.997382
+              ],
+              [
+                -61.721059,
+                16.003852
+              ],
+              [
+                -61.732777,
+                16.013983
+              ],
+              [
+                -61.740061,
+                16.025824
+              ],
+              [
+                -61.743642,
+                16.037299
+              ],
+              [
+                -61.747792,
+                16.046698
+              ],
+              [
+                -61.756418,
+                16.052191
+              ],
+              [
+                -61.768625,
+                16.087633
+              ],
+              [
+                -61.769439,
+                16.16649
+              ],
+              [
+                -61.784291,
+                16.202338
+              ],
+              [
+                -61.779449,
+                16.217231
+              ],
+              [
+                -61.784006,
+                16.229315
+              ],
+              [
+                -61.7919,
+                16.240058
+              ],
+              [
+                -61.797353,
+                16.2508
+              ],
+              [
+                -61.797841,
+                16.26789
+              ],
+              [
+                -61.793853,
+                16.299058
+              ],
+              [
+                -61.797353,
+                16.312201
+              ],
+              [
+                -61.787587,
+                16.320299
+              ],
+              [
+                -61.770823,
+                16.348822
+              ],
+              [
+                -61.756418,
+                16.360663
+              ],
+              [
+                -61.737864,
+                16.365302
+              ],
+              [
+                -61.728586,
+                16.359605
+              ],
+              [
+                -61.722035,
+                16.350898
+              ],
+              [
+                -61.712026,
+                16.346381
+              ],
+              [
+                -61.687001,
+                16.341702
+              ],
+              [
+                -61.650136,
+                16.329332
+              ],
+              [
+                -61.615834,
+                16.311835
+              ],
+              [
+                -61.598744,
+                16.291693
+              ],
+              [
+                -61.612945,
+                16.285549
+              ],
+              [
+                -61.604644,
+                16.282294
+              ],
+              [
+                -61.603139,
+                16.281195
+              ],
+              [
+                -61.603017,
+                16.282213
+              ],
+              [
+                -61.598744,
+                16.285549
+              ],
+              [
+                -61.59557,
+                16.281643
+              ],
+              [
+                -61.585072,
+                16.271308
+              ],
+              [
+                -61.58023,
+                16.282131
+              ],
+              [
+                -61.570546,
+                16.28974
+              ],
+              [
+                -61.557973,
+                16.291693
+              ],
+              [
+                -61.551666,
+                16.285549
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -61.544179,
+                16.285386
+              ],
+              [
+                -61.544097,
+                16.285468
+              ],
+              [
+                -61.527659,
+                16.337836
+              ],
+              [
+                -61.518137,
+                16.348944
+              ],
+              [
+                -61.499664,
+                16.353217
+              ],
+              [
+                -61.49706,
+                16.356757
+              ],
+              [
+                -61.495513,
+                16.365139
+              ],
+              [
+                -61.495229,
+                16.374457
+              ],
+              [
+                -61.496246,
+                16.381171
+              ],
+              [
+                -61.500356,
+                16.385647
+              ],
+              [
+                -61.507314,
+                16.389838
+              ],
+              [
+                -61.515614,
+                16.393052
+              ],
+              [
+                -61.52359,
+                16.394761
+              ],
+              [
+                -61.529164,
+                16.430487
+              ],
+              [
+                -61.533844,
+                16.439439
+              ],
+              [
+                -61.534291,
+                16.449286
+              ],
+              [
+                -61.525624,
+                16.462307
+              ],
+              [
+                -61.509918,
+                16.480414
+              ],
+              [
+                -61.505849,
+                16.486965
+              ],
+              [
+                -61.496246,
+                16.49372
+              ],
+              [
+                -61.465321,
+                16.509833
+              ],
+              [
+                -61.462514,
+                16.513088
+              ],
+              [
+                -61.459299,
+                16.511786
+              ],
+              [
+                -61.426829,
+                16.489203
+              ],
+              [
+                -61.409413,
+                16.47248
+              ],
+              [
+                -61.397613,
+                16.45185
+              ],
+              [
+                -61.393219,
+                16.425482
+              ],
+              [
+                -61.39566,
+                16.399237
+              ],
+              [
+                -61.394154,
+                16.38935
+              ],
+              [
+                -61.386464,
+                16.373684
+              ],
+              [
+                -61.376617,
+                16.359565
+              ],
+              [
+                -61.365712,
+                16.348822
+              ],
+              [
+                -61.353139,
+                16.340277
+              ],
+              [
+                -61.338694,
+                16.332709
+              ],
+              [
+                -61.331776,
+                16.340155
+              ],
+              [
+                -61.321523,
+                16.334906
+              ],
+              [
+                -61.311838,
+                16.334174
+              ],
+              [
+                -61.301666,
+                16.33454
+              ],
+              [
+                -61.290191,
+                16.332709
+              ],
+              [
+                -61.280588,
+                16.327053
+              ],
+              [
+                -61.258901,
+                16.309231
+              ],
+              [
+                -61.253,
+                16.305406
+              ],
+              [
+                -61.242584,
+                16.30036
+              ],
+              [
+                -61.188385,
+                16.263821
+              ],
+              [
+                -61.169179,
+                16.258694
+              ],
+              [
+                -61.163564,
+                16.252997
+              ],
+              [
+                -61.174794,
+                16.243964
+              ],
+              [
+                -61.183176,
+                16.244127
+              ],
+              [
+                -61.211252,
+                16.250718
+              ],
+              [
+                -61.218861,
+                16.254218
+              ],
+              [
+                -61.234446,
+                16.258287
+              ],
+              [
+                -61.410715,
+                16.219468
+              ],
+              [
+                -61.444447,
+                16.205064
+              ],
+              [
+                -61.462148,
+                16.202338
+              ],
+              [
+                -61.483713,
+                16.205878
+              ],
+              [
+                -61.503407,
+                16.213284
+              ],
+              [
+                -61.520416,
+                16.222968
+              ],
+              [
+                -61.533844,
+                16.233385
+              ],
+              [
+                -61.544097,
+                16.245673
+              ],
+              [
+                -61.548329,
+                16.258043
+              ],
+              [
+                -61.547963,
+                16.271064
+              ],
+              [
+                -61.544179,
+                16.285386
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -60.810414,
+                14.461982
+              ],
+              [
+                -60.810414,
+                14.468736
+              ],
+              [
+                -60.81664,
+                14.480902
+              ],
+              [
+                -60.819814,
+                14.496649
+              ],
+              [
+                -60.825266,
+                14.510403
+              ],
+              [
+                -60.838368,
+                14.516588
+              ],
+              [
+                -60.830922,
+                14.527086
+              ],
+              [
+                -60.824778,
+                14.530219
+              ],
+              [
+                -60.832997,
+                14.541002
+              ],
+              [
+                -60.836415,
+                14.552965
+              ],
+              [
+                -60.835846,
+                14.56566
+              ],
+              [
+                -60.832143,
+                14.578599
+              ],
+              [
+                -60.845204,
+                14.571234
+              ],
+              [
+                -60.84496,
+                14.588609
+              ],
+              [
+                -60.848378,
+                14.596096
+              ],
+              [
+                -60.865061,
+                14.601711
+              ],
+              [
+                -60.873158,
+                14.619615
+              ],
+              [
+                -60.893381,
+                14.630805
+              ],
+              [
+                -60.901031,
+                14.638577
+              ],
+              [
+                -60.907297,
+                14.653754
+              ],
+              [
+                -60.894358,
+                14.659817
+              ],
+              [
+                -60.88679,
+                14.660549
+              ],
+              [
+                -60.920277,
+                14.674872
+              ],
+              [
+                -60.928863,
+                14.66352
+              ],
+              [
+                -60.937489,
+                14.666409
+              ],
+              [
+                -60.93928,
+                14.674994
+              ],
+              [
+                -60.927113,
+                14.681098
+              ],
+              [
+                -60.93456,
+                14.688463
+              ],
+              [
+                -60.907297,
+                14.702826
+              ],
+              [
+                -60.912668,
+                14.708564
+              ],
+              [
+                -60.918935,
+                14.712226
+              ],
+              [
+                -60.926178,
+                14.712714
+              ],
+              [
+                -60.93456,
+                14.70897
+              ],
+              [
+                -60.936676,
+                14.731269
+              ],
+              [
+                -60.933827,
+                14.750312
+              ],
+              [
+                -60.926178,
+                14.755561
+              ],
+              [
+                -60.914133,
+                14.736314
+              ],
+              [
+                -60.892974,
+                14.757392
+              ],
+              [
+                -60.895375,
+                14.763821
+              ],
+              [
+                -60.892445,
+                14.767768
+              ],
+              [
+                -60.879303,
+                14.777289
+              ],
+              [
+                -60.903188,
+                14.777086
+              ],
+              [
+                -60.926584,
+                14.771145
+              ],
+              [
+                -60.946889,
+                14.761379
+              ],
+              [
+                -60.961293,
+                14.749945
+              ],
+              [
+                -60.978993,
+                14.784735
+              ],
+              [
+                -60.990631,
+                14.787909
+              ],
+              [
+                -60.995676,
+                14.795356
+              ],
+              [
+                -60.998158,
+                14.804185
+              ],
+              [
+                -61.002268,
+                14.811428
+              ],
+              [
+                -61.018625,
+                14.821723
+              ],
+              [
+                -61.057851,
+                14.83869
+              ],
+              [
+                -61.101959,
+                14.866197
+              ],
+              [
+                -61.135894,
+                14.876899
+              ],
+              [
+                -61.170969,
+                14.87637
+              ],
+              [
+                -61.210601,
+                14.854438
+              ],
+              [
+                -61.219472,
+                14.846503
+              ],
+              [
+                -61.226186,
+                14.835517
+              ],
+              [
+                -61.228831,
+                14.821967
+              ],
+              [
+                -61.226186,
+                14.807766
+              ],
+              [
+                -61.219106,
+                14.795478
+              ],
+              [
+                -61.190541,
+                14.766343
+              ],
+              [
+                -61.182973,
+                14.756415
+              ],
+              [
+                -61.177113,
+                14.74494
+              ],
+              [
+                -61.174794,
+                14.732896
+              ],
+              [
+                -61.18163,
+                14.713039
+              ],
+              [
+                -61.170237,
+                14.696438
+              ],
+              [
+                -61.167348,
+                14.68476
+              ],
+              [
+                -61.159576,
+                14.666938
+              ],
+              [
+                -61.141591,
+                14.650092
+              ],
+              [
+                -61.105865,
+                14.626451
+              ],
+              [
+                -61.095937,
+                14.610256
+              ],
+              [
+                -61.091624,
+                14.605943
+              ],
+              [
+                -61.085927,
+                14.604641
+              ],
+              [
+                -61.043568,
+                14.605455
+              ],
+              [
+                -61.016469,
+                14.612779
+              ],
+              [
+                -61.014312,
+                14.595852
+              ],
+              [
+                -60.996002,
+                14.565009
+              ],
+              [
+                -61.003326,
+                14.550523
+              ],
+              [
+                -61.01773,
+                14.545315
+              ],
+              [
+                -61.033274,
+                14.549872
+              ],
+              [
+                -61.043813,
+                14.565009
+              ],
+              [
+                -61.052317,
+                14.557074
+              ],
+              [
+                -61.078521,
+                14.544582
+              ],
+              [
+                -61.105865,
+                14.516588
+              ],
+              [
+                -61.092397,
+                14.508287
+              ],
+              [
+                -61.091624,
+                14.496772
+              ],
+              [
+                -61.069569,
+                14.466702
+              ],
+              [
+                -61.061187,
+                14.461982
+              ],
+              [
+                -61.046376,
+                14.464179
+              ],
+              [
+                -61.021596,
+                14.474026
+              ],
+              [
+                -61.005971,
+                14.476264
+              ],
+              [
+                -60.947621,
+                14.468736
+              ],
+              [
+                -60.920033,
+                14.473375
+              ],
+              [
+                -60.913401,
+                14.472113
+              ],
+              [
+                -60.914133,
+                14.461982
+              ],
+              [
+                -60.898101,
+                14.460883
+              ],
+              [
+                -60.882232,
+                14.470526
+              ],
+              [
+                -60.86852,
+                14.475979
+              ],
+              [
+                -60.858876,
+                14.461982
+              ],
+              [
+                -60.859853,
+                14.446723
+              ],
+              [
+                -60.869496,
+                14.441474
+              ],
+              [
+                -60.880767,
+                14.437974
+              ],
+              [
+                -60.88679,
+                14.427802
+              ],
+              [
+                -60.882476,
+                14.413275
+              ],
+              [
+                -60.870595,
+                14.408108
+              ],
+              [
+                -60.856435,
+                14.409369
+              ],
+              [
+                -60.845204,
+                14.41413
+              ],
+              [
+                -60.834828,
+                14.427558
+              ],
+              [
+                -60.822662,
+                14.456692
+              ],
+              [
+                -60.810414,
+                14.461982
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -60.892201,
+                13.833197
+              ],
+              [
+                -60.907297,
+                13.77733
+              ],
+              [
+                -60.927113,
+                13.769924
+              ],
+              [
+                -60.940785,
+                13.722113
+              ],
+              [
+                -60.955068,
+                13.714667
+              ],
+              [
+                -60.973378,
+                13.739
+              ],
+              [
+                -61.048166,
+                13.76732
+              ],
+              [
+                -61.074208,
+                13.798733
+              ],
+              [
+                -61.078521,
+                13.879788
+              ],
+              [
+                -61.026601,
+                13.987372
+              ],
+              [
+                -60.933461,
+                14.111884
+              ],
+              [
+                -60.914133,
+                14.105699
+              ],
+              [
+                -60.918609,
+                14.088446
+              ],
+              [
+                -60.892974,
+                14.064683
+              ],
+              [
+                -60.892201,
+                13.833197
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "stable_id": "EDITOR37_5AB_1763_FRENCH_RESTORED_ISLANDS",
+        "title": "1763年巴黎和约｜瓜德罗普、马提尼克与圣卢西亚归法",
+        "kind": "1763_treaty_return",
+        "historical_context": "1763年《巴黎和约》规定瓜德罗普、马提尼克和圣卢西亚归还法国；多米尼克、圣文森特与多巴哥归英国。各岛的原住民社会和被奴役人口仍处在各自殖民制度下。",
+        "periods": [
+          {
+            "start_year": 1763,
+            "end_year": 1763
+          }
+        ],
+        "source_urls": [
+          "https://avalon.law.yale.edu/18th_century/paris763.asp",
+          "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+          "https://www.academia.edu/120625771/La_Guadeloupe_de_1803_%C3%A0_1816_de_l_Empire_%C3%A0_la_Restauration",
+          "https://memoire-esclavage.org/napoleon-et-le-retablissement-de-lesclavage/focus-thematiques-dossier-napoleon-et-le-retablissement",
+          "https://www.lameca.org/publications-numeriques/dossiers-et-articles/1802-la-rebellion-en-guadeloupe/histoire-chronologie/",
+          "https://guides.loc.gov/francophone-caribbean-collections-library-of-congress/online-resources",
+          "https://memoire-esclavage.org/1848-la-seconde-abolition-de-lesclavage",
+          "https://www.oas.org/sap/peacefund/belizeandguatemala/timelinedocuments/amiensTreaty.pdf",
+          "https://www.persee.fr/doc/outre_0300-9513_1974_num_61_223_1769_t1_0338_0000_2",
+          "https://www.usni.org/magazines/proceedings/1942/august/naval-history-martinique",
+          "https://www.napoleonica.org/document/53538",
+          "https://api.pageplace.de/preview/DT0400.9782296498792_A23455147/preview-9782296498792_A23455147.pdf#page=11",
+          "https://www.cyberlibrary.org/en/books/historical-record-of-the-first-or-royal-regiment-of-foot-contai-a22eb374/chapters/15/",
+          "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/"
+        ],
+        "source_geometry": "existing_source_backed_geometry",
+        "historical_boundary_confirmed": false,
+        "territorial_control_verified": false,
+        "uncertain_line_dashed": true,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_precision": "reused_project_10m_island_shore_components",
+        "original_legacy_ids": [
+          "B39-C-Z038"
+        ]
+      }
+    }
+  ]
+}

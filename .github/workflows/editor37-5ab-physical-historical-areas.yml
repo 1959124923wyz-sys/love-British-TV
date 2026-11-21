@@ -1,0 +1,35 @@
+name: Editor37 5AB geographic islands coasts fort sites
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'data/eighteenth-century-editor37-5ab-physical-areas.geojson'
+      - 'data/eighteenth-century-b37-africa.json'
+      - 'data/eighteenth-century-b39-gold-coast-forts.json'
+      - 'data/eighteenth-century-b39-caribbean-1759-1763.json'
+      - 'data/eighteenth-century-expansion-batch36-1700-1799.json'
+      - 'js/eighteenth-editor37-5ab-physical-areas.js'
+      - 'scripts/test_editor37_5ab_source_geography.js'
+  push:
+    branches: [main]
+    paths:
+      - 'data/eighteenth-century-editor37-5ab-physical-areas.geojson'
+      - 'js/eighteenth-editor37-5ab-physical-areas.js'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  historical-shapes-and-sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check js/eighteenth-editor37-5ab-physical-areas.js
+      - run: node scripts/test_editor37_5ab_source_geography.js
+      - run: python3 scripts/audit_spatial_semantics.py --strict
+      - run: node scripts/test_atlas_47_public_copy_guard.js
+      - run: node scripts/lint_atlas_47_frontend_copy.js
