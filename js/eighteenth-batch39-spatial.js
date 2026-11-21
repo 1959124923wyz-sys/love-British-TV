@@ -28,7 +28,7 @@
   'trade_influence','battle','coercion','foreign_occupation']);
  const active=(obj,yr)=>!obj.superseded_by&&obj.periods.some(p=>p.start_year<=yr&&yr<=p.end_year);
  const phase=(obj,yr)=>obj.periods.find(p=>p.start_year<=yr&&yr<=p.end_year);
- let year=host.getYear(),loaded=false,error=null,areas=[],points=[],loadedRegions=[];
+ let year=host.getYear(),loaded=false,error=null,areas=[],points=[],loadedRegions=[],newNamedSites=[];
  const reader=window.AtlasReaderCopy;
  const sourceHTML=x=>([...new Set(x.source_urls||[])]).map(url=>{
   let domain=url;try{domain=new URL(url).hostname}catch{}
@@ -36,8 +36,9 @@
  }).join();
  function dossier(x,isSite){
   host.clearSelection();const p=phase(x,year);
-  $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪地图 · 第39批 · '+year+'年</div>'+
-   '<h2>'+esc(x.title)+'</h2>'+
+  $('dossierBody').innerHTML='<div class="dossier-kicker">18世纪地图 · '+(x.batch_label||'第39批')+' · '+year+'年</div>'+
+   '<h2>'+esc(x.title)+'</h2>'+ 
+   (x.records?'<ul class="source-list">'+x.records.filter(q=>q.start_year<=year&&year<=q.end_year).map(q=>'<li>'+esc(q.title)+'</li>').join('')+'</ul>':'')+
    '<p><strong>'+esc(label[x.kind])+'</strong>　'+p.start_year+'—'+p.end_year+'</p>'+
    (reader.clean(x.note)?'<p>'+esc(reader.clean(x.note))+'</p>':'')+
    '<details open><summary>可追溯历史来源</summary><ul class="source-list">'+sourceHTML(x)+'</ul></details>';
@@ -76,6 +77,7 @@
    }).bindTooltip('<strong>'+esc(x.title)+'</strong><div class="atlas-hover-summary">'+
     esc(label[x.kind]+' · '+p.start_year+'—'+p.end_year)+'</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]})
+    .on('add',ev=>{ev.target.getElement()?.setAttribute('data-site-id',x.id)})
     .on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);dossier(x,true)})
     .addTo(siteLayer);
   }
@@ -126,9 +128,22 @@
     if(!r.ok)throw Error('missing 18c batch39 '+region+': '+r.status);
     const d=await r.json();verify(d,region);return d;
    }));
-   areas=files.flatMap(d=>d.zones);points=files.flatMap(d=>d.sites);
-   if(areas.length!==126||points.length!==83||
-    new Set([...areas,...points].map(x=>x.id)).size!==209)
+   const response=await fetch('data/eighteenth-century-editor36-5y-named-sites.json',{cache:'no-store'});
+   if(!response.ok)throw Error('missing editor36 5Y named sites');
+   const named=await response.json();
+   if(named.schema!=='atlas-18c-editor36-5y-named-sites-v1'||named.sites?.length!==25||
+      new Set(named.sites.map(p=>p.id)).size!==25||named.sites.some(p=>
+      !p.id.startsWith('EDITOR36_5Y_')||!p.historical_locality_anchor||!p.title||
+      !colors[p.kind]||!validPeriods(p.periods)||p.coordinates?.length!==2||
+      !p.coordinates.every(Number.isFinite)||p.coordinates[0]<-180||p.coordinates[0]>180||
+      p.coordinates[1]<-90||p.coordinates[1]>90||p.territorial_control_verified!==false||
+      p.area_sqkm!==null||!p.source_urls?.length||!p.source_urls.every(u=>u.startsWith('https://'))||
+      !p.records?.length||!p.records.every(q=>q.start_year<=q.end_year&&q.legacy_id&&q.title)))
+      throw Error('invalid editor36 5Y named sites');
+   newNamedSites=named.sites;
+   areas=files.flatMap(d=>d.zones);points=[...files.flatMap(d=>d.sites),...newNamedSites];
+   if(areas.length!==126||points.length!==108||
+    new Set([...areas,...points].map(x=>x.id)).size!==234)
     throw Error('cumulative batch39 surface integrity failure');
    loadedRegions=files.map(d=>d.region);loaded=true;render();
   }catch(err){error=String(err);console.warn('18C batch39 source-grounded polygons withheld:',err)}
@@ -136,7 +151,7 @@
  window.eighteenthBatch39Spatial={
   render,getAudit:()=>({
    loaded,error,year,loadedRegions,
-   zoneCount:areas.length,siteCount:points.length,
+   zoneCount:areas.length,siteCount:points.length,named5ySites:newNamedSites.length,
    phases:[...areas,...points].reduce((n,x)=>n+x.periods.length,0),
    activeZoneIds:areas.filter(x=>active(x,year)).map(x=>x.id),
    activeSiteIds:points.filter(x=>active(x,year)).map(x=>x.id),

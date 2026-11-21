@@ -6,6 +6,10 @@ on:
       - 'js/history-stories.js'
       - 'data/stories/serial/**'
       - 'data/eighteenth-century-b37-india-ocean.json'
+      - 'data/eighteenth-century-b39-gulf-surat-factories.json'
+      - 'data/eighteenth-century-editor36-5y-named-sites.json'
+      - 'js/eighteenth-batch39-spatial.js'
+      - 'scripts/test_editor36_5y_named_sites.js'
       - 'data/eighteenth-century-dynamic-spatial-1700-1799.json'
       - 'scripts/*18c_statia_bencoolen*'
       - 'scripts/*18c_antigua_bermuda_bahamas*'
@@ -28,6 +32,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - run: node scripts/test_editor36_5y_named_sites.js
+      - run: node scripts/test_18c_batch39_126_83.js
       - run: node scripts/test_18c_statia_bencoolen.js
       - run: node scripts/test_18c_antigua_bermuda_bahamas.js
       - run: node scripts/test_18c_barbados_wir.js
@@ -45,3 +51,4 @@ jobs:
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-topics-http.log 2>&1 &
           node scripts/browser_18c_statia_bencoolen.cjs
+          node scripts/browser_editor36_5y_named_sites.cjs
