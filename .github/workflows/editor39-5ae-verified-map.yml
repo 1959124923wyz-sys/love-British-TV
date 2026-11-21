@@ -38,7 +38,7 @@ jobs:
       - name: 5AC ABPP backward compatibility
         run: node scripts/test_editor37_5ac_source_battlefields.js
       - name: Existing 5AB geographic archive
-        run: node scripts/test_editor37_5ab_physical_areas.js
+        run: node scripts/test_editor37_5ab_source_geography.js
       - name: Strict political spatial semantics
         run: python3 scripts/audit_spatial_semantics.py --strict
       - name: Decade and century seam
