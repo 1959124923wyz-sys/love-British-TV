@@ -11,6 +11,7 @@
  map.createPane(areaPane);map.getPane(areaPane).style.zIndex='443';
  map.createPane(sitePane);map.getPane(sitePane).style.zIndex='477';
  const areaLayer=L.layerGroup().addTo(map),siteLayer=L.layerGroup().addTo(map);
+ const referenceLayer=L.layerGroup().addTo(map);
  const areaRenderer=L.svg({pane:areaPane}),siteRenderer=L.svg({pane:sitePane});
  const regions=['africa','india-ocean','caribbean'];
  const counts={africa:[39,27], 'india-ocean':[60,44],caribbean:[41,37]};
@@ -30,6 +31,7 @@
  const phase=(obj,yr)=>obj.periods.find(p=>p.start_year<=yr&&yr<=p.end_year);
  let year=host.getYear(),loaded=false,error=null,areas=[],points=[],loadedRegions=[];
  const reader=window.AtlasReaderCopy;
+ let recovered=new Map(),siteRecords=new Map();
  const sourceHTML=x=>([...new Set(x.source_urls||[])]).map(url=>{
   let domain=url;try{domain=new URL(url).hostname}catch{}
   return '<li><a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(domain)+'</a></li>';
@@ -45,13 +47,30 @@
  }
  function render(){
   year=host.getYear();
-  areaLayer.clearLayers();siteLayer.clearLayers();
+  areaLayer.clearLayers();siteLayer.clearLayers();referenceLayer.clearLayers();
   if(!loaded||year<1700||year>1799||!$('mapLayerTerritory').checked||
      !$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
   const sorted=areas.filter(x=>active(x,year)).sort((a,b)=>{
    const size=x=>(x.bbox[2]-x.bbox[0])*(x.bbox[3]-x.bbox[1]);
    return size(b)-size(a);
   });
+
+  // 5AJ: Source-linked small locality overview for point-only 5Y upgrades.
+  for(const z of areas){
+   if(!recovered.has(z.id)||!z.periods.some(p=>p.start_year<=year&&year<=p.end_year))continue;
+   const site=siteRecords.get(z.superseded_by);
+   if(!site?.periods.some(p=>p.start_year<=year&&year<=p.end_year))continue;
+   const [w,s,e,n]=z.bbox;
+   L.rectangle([[s,w],[n,e]],{
+    pane:areaPane,renderer:areaRenderer,color:colors[z.kind]||'#bdb5b8',
+    weight:1.35,opacity:.5,dashArray:'2 10',lineCap:'round',fill:false,fillOpacity:0,
+    interactive:true,bubblingMouseEvents:false,
+    className:'atlas-18c-5aj-reference-outline'
+   }).bindTooltip('<strong>'+esc(z.title)+'</strong>',{
+    sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]
+   }).on('click',ev=>{if(ev.originalEvent)L.DomEvent.stopPropagation(ev.originalEvent);dossier(z,false)})
+    .addTo(referenceLayer);
+  }
   for(const z of sorted){
    const [w,s,e,n]=z.bbox,c=colors[z.kind],p=phase(z,year),hollow=outline.has(z.kind);
    const fill=hollow?0:z.kind==='revenue'?.052:z.kind==='military'?.085:.060;
@@ -129,6 +148,31 @@
    areas=files.flatMap(d=>d.zones);points=files.flatMap(d=>d.sites);
    if(new Set([...areas,...points].map(x=>x.id)).size!==areas.length+points.length)
     throw Error('cumulative batch37 surface integrity failure');
+   const [backfillRes,sitesRes]=await Promise.all([
+    fetch('data/eighteenth-century-editor44-5aj-reference-fallbacks.json',{cache:'no-store'}),
+    fetch('data/eighteenth-century-editor36-5y-named-sites.json',{cache:'no-store'})
+   ]);
+   if(!backfillRes.ok||!sitesRes.ok)throw Error('5AJ crosswalk absent');
+   const backfill=await backfillRes.json(),sites=await sitesRes.json();
+   if(sites.schema!=='atlas-18c-editor36-5y-named-sites-v1'||sites.sites?.length!==25)
+    throw Error('5AJ historic site chronology unavailable');
+   if(backfill.schema!=='atlas-18c-5aj-selected-point-only-area-context-v1'||
+      backfill.records?.length!==32)throw Error('5AJ recovery registry invalid');
+   siteRecords=new Map(sites.sites.map(x=>[x.id,x]));
+   const originalById=new Map(areas.map(x=>[x.id,x]));
+   recovered=new Map(backfill.records.filter(x=>x.id.startsWith('B37-'))
+    .map(x=>{
+     const old=originalById.get(x.id),replacement=siteRecords.get(x.site_id);
+     if(!old||old.superseded_by!==x.site_id||!replacement||
+        !replacement.records.some(q=>q.legacy_id===x.id)||
+        !old.source_urls?.length||!old.bbox||
+        JSON.stringify(old.bbox)!==JSON.stringify(x.bbox)||
+        old.area_sqkm!==null||x.area_sqkm!==null||
+        x.historical_boundary_confirmed!==false)
+      throw Error('Invalid 5AJ locality recovery '+x.id);
+     return [x.id,x];
+    }));
+   if(recovered.size!==8)throw Error('5AJ filtered recovery count mismatch');
    loadedRegions=files.map(d=>d.region);loaded=true;render();
   }catch(err){error=String(err);console.warn('18C batch37 source-grounded polygons withheld:',err)}
  }
@@ -140,7 +184,9 @@
    activeZoneIds:areas.filter(x=>active(x,year)).map(x=>x.id),
    activeSiteIds:points.filter(x=>active(x,year)).map(x=>x.id),
    activeZoneTitles:areas.filter(x=>active(x,year)).map(x=>x.title),
-   visibleAreas:areaLayer.getLayers().length,visibleSites:siteLayer.getLayers().length
+   visibleAreas:areaLayer.getLayers().length,visibleSites:siteLayer.getLayers().length,
+   visibleRecoveredReferenceOutlines:referenceLayer.getLayers().length,
+   recoveredReferenceIds:[...recovered.keys()]
   })
  };
  void load();
