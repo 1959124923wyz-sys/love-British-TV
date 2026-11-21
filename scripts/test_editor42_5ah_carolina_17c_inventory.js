@@ -85,4 +85,17 @@ for(const path of paths){
   a.deepEqual(rec.source_urls,src.properties.source_urls);
  }
 }
-console.log('PASS 5AH: 3 locally attested Carolina points, one 1708 fort, 1700-1711 province rectangle retired; 26 exact 17C rectangles accounted for with original citations.');
+const originalCandidates=J('docs/research/18C_5AG_479_MASS_POINT_AREA_CANDIDATES.json');
+const triage=J('docs/research/18C_5AH_165_POINT_AREA_SEMANTIC_TRIAGE.json');
+a.equal(triage.baseline_count,165);a.equal(triage.records.length,165);
+a.equal(triage.semantically_blocked_count,30);a.equal(triage.still_pending_count,135);
+a.equal(triage.additional_historical_polygons_this_review,0);
+a.deepEqual(triage.records.map(x=>x.point_id),originalCandidates.candidate_sites.map(x=>x.point_id));
+for(let i=0;i<165;i++){
+ const rec=triage.records[i],old=originalCandidates.candidate_sites[i];
+ a.deepEqual(rec.source_urls,old.point_source_urls);
+ a.deepEqual(rec.candidate_polygon_ids,old.shortlisted_polygon_candidates.map(p=>p.polygon_id));
+ a(rec.original_point_preserved&&!rec.historical_polygon_promoted);
+ if(rec.disposition.startsWith('do_not_promote'))a(rec.issue_code&&rec.reason_zh.length>=20);
+}
+console.log('PASS 5AH: 3 dated Carolina sites, last 18C reference frame retired, 26 exact 17C rectangles registered, 165 source candidates/30 unsafe proximity substitutions traced.');
