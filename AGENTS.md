@@ -3,6 +3,8 @@
 
 ## 19世纪任务统一入口（2026-11-21，PR #463 已合并 main）
 
+**跨对话总任务板：[Issue #499](https://github.com/1959124923wyz-sys/love-British-TV/issues/499)。** 所有后继任务可以从此进入，状态以CSV和已合并PR为准。
+
 **以后任何新的主编／调查员／GIS智能体收到“继续十九世纪”“制作19世纪专题”“画十九世纪历史区域”等指令，第一步必须阅读 [19世纪接力总入口](research/19c/consolidated/START_HERE.md) 与 [总编—GIS交接](docs/research/19C_EDITORIAL_GIS_HANDOFF.md)，然后读取 [59专题工作板](research/19c/consolidated/TOPIC_WORKBOARD.csv)、[150章节工作板](research/19c/consolidated/CHAPTER_WORKBOARD.csv) 和 [研究进度](research/19c/consolidated/PROGRESS.md)。**
 
 PR #463 的研究卷已正式归档：**59专题、150章、1,980条研究年表、1,520条史料索引、1,317条GIS线索、353条待核问题**；其中27专题为首批，32专题为后续。**这些数字只属于研究，不是已经发表的文章、实测疆界或新增正式事件。** 研究原案号、事件号、引用键不可丢失。后续任何新对话以 GitHub 的工作板和最新 `main` 数据为准，不必要求用户重复上传ZIP或自行操作代码。
