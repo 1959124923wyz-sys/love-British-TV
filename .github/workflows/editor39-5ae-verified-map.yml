@@ -1,0 +1,55 @@
+name: Editor39 5AE official boundaries real islands and historic archive QA
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'data/eighteenth-century-editor39-5ae-source-areas.geojson'
+      - 'data/eighteenth-century-expansion-batch36-1700-1799.json'
+      - 'data/eighteenth-century-b38-hudson-company.json'
+      - 'data/eighteenth-century-b38-south-campaign.json'
+      - 'data/eighteenth-century-mass-schematic-zones-1700-1799.json'
+      - 'js/eighteenth-editor39-5ae-source-areas.js'
+      - 'scripts/test_editor39_5ae_source_areas.js'
+      - 'scripts/browser_editor39_5ae_source_areas.cjs'
+      - '.github/workflows/editor39-5ae-verified-map.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/eighteenth-century-editor39-5ae-source-areas.geojson'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  real-geo-boundaries-and-desktop:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 5AE JavaScript syntax
+        run: node --check js/eighteenth-editor39-5ae-source-areas.js
+      - name: 5AE native GIS trace and 23 original records
+        run: node scripts/test_editor39_5ae_source_areas.js
+      - name: 5AD backwards source geometry QA
+        run: node scripts/test_editor38_5ad_treaties_waterways.js
+      - name: 5AC ABPP backward compatibility
+        run: node scripts/test_editor37_5ac_source_battlefields.js
+      - name: Existing 5AB geographic archive
+        run: node scripts/test_editor37_5ab_physical_areas.js
+      - name: Strict political spatial semantics
+        run: python3 scripts/audit_spatial_semantics.py --strict
+      - name: Decade and century seam
+        run: python3 scripts/test_century_seam_handoffs.py
+      - name: Reader language policy
+        run: |
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+      - run: npm install --no-save --package-lock=false playwright@1.58.2
+      - run: npx playwright install --with-deps chromium
+      - name: Desktop 5AE geography, original stories, 1799 to 1800
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-5ae-http.log 2>&1 &
+          node scripts/browser_editor39_5ae_source_areas.cjs
