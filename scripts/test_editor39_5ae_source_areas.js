@@ -19,6 +19,10 @@ const known=new Set([
  ...J('data/eighteenth-century-editor37-5ac-surveyed-geography.geojson').features.map(x=>x.id),
  ...J('data/eighteenth-century-editor38-5ad-treaties-waterways-sites.geojson').features.map(x=>x.id),
  ...J('data/eighteenth-century-editor36-5y-named-sites.json').sites.map(x=>x.id)]);
+const followup5AG={
+ 'GREAT_LAKES_POSTS':'FORT_NIAGARA_MAIN',
+ 'NSW_CROWN_CLAIM':'WARRANE_SYDNEY_COVE'
+};
 const expected={
  'B36-Z023':'EDITOR39_5AE_PROCLAMATION_NORTH',
  'B36-Z024':'EDITOR39_5AE_PROCLAMATION_SOUTH',
@@ -62,6 +66,9 @@ for(const z of original.records){
   a.equal(cur.superseded_by,expected[z.id],'incorrect GIS mapping '+z.id);
   a(known.has(cur.superseded_by),'missing source geometry '+z.id);
   retiredOriginal.push(z.id);
+ }else if(Object.hasOwn(followup5AG,z.id)){
+  a.equal(cur.superseded_by,followup5AG[z.id],'5AG localized source mapping changed '+z.id);
+  a(known.has(cur.superseded_by),'5AG source polygon or site is missing '+z.id);
  }else a(!cur.superseded_by,'unverified shapes should be retained for followup '+z.id);
 }
 a.equal(retiredOriginal.length,23);
@@ -69,10 +76,10 @@ for(const s of oldSites.filter(s=>expected[s.linked_zone_id]))
  a.equal(s.superseded_by,expected[s.linked_zone_id]);
 for(const s of mass.sites.filter(s=>expected[s.linked_zone_id]))
  a.equal(s.superseded_by,expected[s.linked_zone_id]);
-const remain=original.records.filter(x=>!expected[x.id]);a.equal(remain.length,3);
-a.deepEqual(new Set(remain.map(x=>x.id)),new Set(['CAROLINA_PROPRIETORS','GREAT_LAKES_POSTS','NSW_CROWN_CLAIM']));
+const remain=original.records.filter(x=>!expected[x.id]&&!followup5AG[x.id]);a.equal(remain.length,1);
+a.deepEqual(new Set(remain.map(x=>x.id)),new Set(['CAROLINA_PROPRIETORS']));
 const y=(z,n)=>z.periods.some(p=>p.start_year<=n&&n<=p.end_year);
-a.equal(remain.filter(z=>y(z,1799)).length,1);
+a.equal(remain.filter(z=>y(z,1799)).length,0);
 const sourceIndex=new Map([...mass.regional_zones,...mass.regional_lines].map(x=>[x.id,x]));
 const ids=new Set(),points=c=>Array.isArray(c)&&typeof c[0]==='number'?[c]:c.flatMap(points);
 for(const f of geo.features){
@@ -105,4 +112,4 @@ a(geo.features.find(f=>f.id==='EDITOR39_5AE_CORSICA_ISLAND_1794').geometry.type=
 a(!geo.features.some(f=>f.id.includes('BELIZE_TREATY_POLYGON')),'no speculative Belize 1783/86 polygon');
 a.equal(read('app.js').split('window.eighteenthEditor39FiveAE?.render?.();').length-1,4);
 a(read('index.html').includes('js/eighteenth-editor39-5ae-source-areas.js?v=20261121-5ae-original-gis'));
-console.log('PASS 5AE: 15 verified GIS features, 23/26 real-source retirements, source legacy records intact; 3 remain (1 in 1799).');
+console.log('PASS 5AE source GIS unchanged: 15 features and original 23 retirements; 5AG adds two independently tracked retirements, 1 reference remains (zero in 1799).');
