@@ -1050,7 +1050,7 @@ function renderSeventeenthRegionalStudies(){
   if(p.display_kind==='economic_network')return $('togglePoliticalRelations').checked;
   return $('toggleControlAreas').checked;
  });
- if(!selected.length)return;
+ // Do not return early when the old research rectangles are all replaced by dated points.
  const colors={
   economic_network:'#78b6ad',land_dispossession:'#d1a35a',
   military_impact:'#bc7786',local_governance:'#ac8ad0'
@@ -1083,10 +1083,11 @@ function renderSeventeenthRegionalStudies(){
 
  // Dated anchor points replace arbitrary reader-only two-site/battle rectangles.
  // The original event evidence and 12 study polygons remain accessible as archival data.
+ const studyKinds=new Map(seventeenthRegionalStudies.features.map(f=>[f.id,f.properties.display_kind]));
  const localPlaces=(seventeenth5aiRealGeometry?.features||[]).filter(f=>
   f.properties.supersedes_visual_reference.startsWith('17c-')&&
   year>=f.properties.start_year&&year<=f.properties.end_year&&
-  (f.properties.supersedes_visual_reference==='17c-car-1680-charlestown-two-sites-nonmetric-reader'
+  (studyKinds.get(f.properties.supersedes_visual_reference)==='economic_network'
    ?$('togglePoliticalRelations').checked:$('toggleControlAreas').checked));
  if(localPlaces.length)L.geoJSON({type:'FeatureCollection',features:localPlaces},{
   pane:'seventeenthStudiesPane',renderer:seventeenthStudiesRenderer,
