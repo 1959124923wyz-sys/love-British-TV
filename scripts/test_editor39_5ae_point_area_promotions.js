@@ -13,7 +13,7 @@ assert.equal(p.area_totals_forbidden,true);assert.equal(p.source_polygon_already
 assert.equal(p.point_markers_replaced_by_existing_polygons.length,5);
 const sources=new Map([...m.regional_zones,...a.features].map(x=>[x.id,x]));
 const points=new Map([...a.features,...b.features,...c.features].map(x=>[x.id,x]));
-const yearMatch=(ps,start,end)=>ps.some(q=>q.start_year<=start&&q.end_year>=end);
+const yearMatch=(ps,start,end)=>Array.from({length:end-start+1},(_,i)=>start+i).every(y=>ps.some(q=>q.start_year<=y&&y<=q.end_year));
 for(const r of p.point_markers_replaced_by_existing_polygons){
  const point=points.get(r.id),polygon=sources.get(r.polygon_id);
  assert(point&&polygon,'missing source point or polygon: '+r.id);
