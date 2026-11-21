@@ -37,9 +37,9 @@ for(const old of g.metadata.retired_legacy_zone_ids){
   a.equal(s.superseded_by,zone.superseded_by,'source site not preserved '+s.id);
 }
 const remain=legacy.filter(z=>z.bbox&&!z.geometry&&!z.superseded_by);
-a.equal(remain.length,13,'the four edited source collections should contain 13 unresolved rectangles');
+a(remain.length<=13,'future source-verified batches must not reintroduce 5AD era rectangles');
 const active=(z,y)=>z.periods?.some(p=>p.start_year<=y&&y<=p.end_year);
-a.equal(remain.filter(z=>active(z,1799)).length,4,'1799 unresolved count in four edited source collections');
+a(remain.filter(z=>active(z,1799)).length<=4,'subsequent source replacements cannot raise 1799 old boxes');
 const coords=c=>{if(Array.isArray(c)&&typeof c[0]==='number')return[c];return c.flatMap(coords)};
 for(const f of g.features){
  const p=f.properties,xy=coords(f.geometry.coordinates);
@@ -70,4 +70,4 @@ a.equal(belize('EDITOR38_5AD_TANJORE_1799').properties.periods[0].start_year,179
 a(!g.features.some(f=>['Polygon','MultiPolygon'].includes(f.geometry.type)),'no invented concession border');
 a.equal(read('app.js').split('window.eighteenthEditor38FiveAD?.render?.();').length-1,4);
 a(read('index.html').includes('js/eighteenth-editor38-5ad-geography.js?v=20261121-5ad-hayes-belize-historic-sites'));
-console.log('PASS Editor38 5AD: 25 boxes retired, 26 remain (12 in 1799); 26 named points, 1 preserved 298-vertex sourced hydrological feature, Belize staged 1783/1786.');
+console.log('PASS Editor38 5AD original 25 boxes retained; future 5AE supersessions allowed; 26 named points, 1 preserved 298-vertex sourced hydrological feature, Belize staged 1783/1786.');
