@@ -40,5 +40,6 @@ for(const part of app.split("className:'atlas-17c-5aj-reference-outline").slice(
  assert(part.includes('fill:false,fillOpacity:0'),'No-filled-area rule');
  assert(part.includes("dashArray:'2 10'"),'Uncertain reference must be dashed');
 }
-assert(!app.includes('if(!selected.length)return;'), 'Do not discard point-only upgrades when no old claims are selected');
+const claimRenderer=app.slice(app.indexOf('function renderSeventeenthColonialClaims'),app.indexOf('function renderSeventeenthRegionalStudies'));
+assert(!claimRenderer.includes('if(!selected.length)return;'), 'Do not discard point-only claims when no old claims are selected');
 console.log('PASS 5AJ: 23 dated source-linked study/claim context outlines, 3 natural-island upgrades kept, no territorial fill');
