@@ -76,7 +76,8 @@
 - [ ] **持续升级“点→面”：556点历史基线，5AH新增3个独立地点。** 先复核[5AE原77点、9候选、5完成](18C_5AE_POINT_AREA_CANDIDATES.json)，再逐条处理[5AG新增479点、165近邻候选](18C_5AG_479_MASS_POINT_AREA_CANDIDATES.json)。第5AH批已把[全部165条逐项分类、30条误套面明确阻止](18C_5AH_165_POINT_AREA_SEMANTIC_TRIAGE.json)，余135条待核。近邻不等于同一历史事件、土地辖界或堡墙。对证据足够的城防围线按年份升级；其余地点继续保留，不以等距缓冲圈代替历史区域。
 - [x] **第5AF批权威原图目录入库。** [原始测绘来源与点转面门槛](18C_5AF_PRIMARY_MAP_EVIDENCE_AND_AREA_RULES.md)分列卡罗来纳地籍图、五大湖军事堡址、新南威尔士1796/1799同期聚落图；另登记尼亚加拉1790年两套已地理配准的馆藏军事测绘影像（加拿大地图档案馆NMC 17879；安大略省档案馆C295-1-102-0-1）。对应 [PR #490](https://github.com/1959124923wyz-sys/love-British-TV/pull/490)、[PR #491](https://github.com/1959124923wyz-sys/love-British-TV/pull/491) 已合并。原图光栅与史图研究均**不计新增已确认控制面／旧矩形退役数量**。
 - [x] **第5AG批退出两处高风险宽框。** 1783—1795五大湖分散驻堡 `GREAT_LAKES_POSTS` 由尼亚加拉、底特律、麦基诺岛三座同期堡墙分别呈现；1788—1799新南威尔士 `NSW_CROWN_CLAIM` 由悉尼营地、帕拉马塔住区和农场等局部形状及具名点呈现。仍保留原法律声索的历史记录。[逐项史证](18C_5AG_LOCALIZED_FORTS_SETTLEMENTS_HANDOFF.md) · [源ID跨表](../../data/eighteenth-century-editor41-5ag-localized-replacements.json)。
-- [ ] **剩余唯一十八世纪旧框。** `CAROLINA_PROPRIETORS`（1700—1711）：寻找领主时期同时代授地、海岸定居和行政地籍；1712年及之后的北卡州县/教区地图不能前推。 [5AG当前余项](18C_5AG_OLD_RECTANGLE_INVENTORY.json)。
+- [x] **第5AH批退役最后一条十八世纪旧框。** `CAROLINA_PROPRIETORS`（1700—1711）仅退出巨框显示，原法律声索及来源保留；同期落图查尔斯敦、巴斯、新伯尔尼以及已有约翰逊堡 Point。[5AH当前0条余项](18C_5AH_OLD_RECTANGLE_INVENTORY.json) · [原地图与地籍继续核查](18C_5AH_CAROLINA_17C_RECTANGLE_HANDOFF.md)。
+- [ ] **继续提取1704查尔斯敦城墙、1705巴斯原镇地段、1710新伯尔尼地籍的真实多边形。** 必须由同期原图和控制点配准，1780年查尔斯敦轮廓及1712年以后的北卡行政界不得前推。
 - [ ] **补建 16、17 世纪点位及缺绘名录。** 记录时间、主体、地点和证据，分别查清可配准史图、定界条款及地方驻点。18 世纪其余旧框也按证据分别保留事件、点、线或面。
 - [ ] **接续十九世纪研究归档。** [研究草稿 PR #463](https://github.com/1959124923wyz-sys/love-British-TV/pull/463) 为并行资料入库，待审内容含 59 个专题、150 个章节、1,980 条分章年表和 1,520 条史料索引。历史专题先核源档和候选地图 ID，地图发布状态查 [正式章节](../../data/chapters.json) 和 [专题索引](../../data/stories/index.json)。
 
