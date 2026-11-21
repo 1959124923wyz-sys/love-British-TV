@@ -6,6 +6,10 @@
 
 **[第34章网页预览（1830—1839）](https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1830)**
 
+## 十九世纪工作接力
+
+**19世纪研究归档已并入 `main`（原研究 PR #463）**。今后新对话无须重新搜寻或上传原资料：直接读取 [19世纪专题与GIS总入口](research/19c/consolidated/START_HERE.md)、[59专题进度板](research/19c/consolidated/TOPIC_WORKBOARD.csv)、[150章制作状态](research/19c/consolidated/CHAPTER_WORKBOARD.csv) 及 [总编交接](docs/research/19C_EDITORIAL_GIS_HANDOFF.md)，从未认领任务继续。**目前59专题与1317条地图线索均为研究资料**；本站已有的19世纪年表与GeoJSON独立审查，不能把研究条数当作发布条数或地图面积。
+
 ## 当前状态
 
 - **正式发表**：1497—1599年，共10章。逐年导航、历史事件、长篇专题、史料与地图图层均以 `main` 分支为准。

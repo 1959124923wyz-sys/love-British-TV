@@ -1,3 +1,9 @@
+## 2026-11-21 · 19世纪资料已并入main，后续主编与GIS制图接力
+
+**[固定接力入口](research/19c/consolidated/START_HERE.md) · [顶层总编手册](docs/research/19C_EDITORIAL_GIS_HANDOFF.md) · [59专题工作板](research/19c/consolidated/TOPIC_WORKBOARD.csv) · [150章节工作板](research/19c/consolidated/CHAPTER_WORKBOARD.csv) · [累积进度](research/19c/consolidated/PROGRESS.md)。**
+
+源草稿PR [#463](https://github.com/1959124923wyz-sys/love-British-TV/pull/463) 已通过档案校验、59/150状态板校验和 1800、1857、1899桌面Chrome回归后合并，原始归档SHA `93840516d8574bd81c4d87bcfb2bd93486968c15` 可追溯。1800—1899研究卷包含59专题、150章节、1980条年表、1520条引用键、1317条地图研究线索；研究卷不会自动发布到网站。每次另起对话直接读上述入口，核对主干已有19世纪站内年表与GeoJSON，再按工作板独立PR推进专题、真实轮廓、浏览器审查与跨年代交接，避免重复改稿或丢弃史料。
+
 ## 2026-10-13 · 第六章新考证跟进与战时参考范围
 
 主编将调查员PR #27 Collector3最新研究选择性补入第六章（`editorial/1540-1549/REFRESH_20261013.md`）：**Hailes英军1548占领又于同年失去；Dundee1547年末英军短占但1548年末无确证英军持续驻守**。Pinkie及Tantallon有官方现代遗产地理参考，仍不可作当年确界。主编新版紫色填色仅是10片研究任意半径的驻地概略虚线，并非真实古疆域Polygon；合法历史边界绘制仍需调查员继续寻找带年份、许可、可配准的原图。原PR #27继续由调查员维护，数据不自动合并。
