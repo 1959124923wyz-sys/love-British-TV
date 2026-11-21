@@ -90,3 +90,14 @@ p=ROOT/"docs/research/18C_5AE_ALL_PUBLISHED_SHAPES.json"
 p.write_text(json.dumps({"schema":"editor39_5ae_all_published_source_shapes_v1","count":len(all_geos),
  "shapes":all_geos},ensure_ascii=False,indent=2)+"\n")
 print("PUBLISHED polygon/line/point GIS anchors",len(all_geos))
+
+words=("carolin","surat","benar","senegal","gold","coast","circars","carnatic",
+ "corsic","falkland","austral","new south wales","hudson","belize","jamaica",
+ "mysore","georgia","niagara","kingstown","ballice","vincent")
+short=[{"id":x["id"],"title":x["title"],"type":x["geometry_type"],
+ "group":x["group"],"vertices":x["vertices"],"bbox":x["bbox"],
+ "years":[(p.get("start_year"),p.get("end_year")) for p in x.get("periods") or []]}
+ for x in all_geos if any(w in (str(x["id"])+" "+str(x["title"])).lower() for w in words)]
+p=ROOT/"docs/research/18C_5AE_HISTORIC_SHAPE_SHORTLIST.json"
+p.write_text(json.dumps({"schema":"editor39_5ae_shortlist_v1","count":len(short),"shapes":short},ensure_ascii=False,indent=1)+"\n")
+print("GEOGRAPHIC shortlist",len(short))
