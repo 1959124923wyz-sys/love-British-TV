@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "namespace": "19c/consolidated",
+  "status": "research_only",
+  "primary_period": {
+    "from": 1800,
+    "through": 1899
+  },
+  "counts": {
+    "topics": 59,
+    "sections": 150,
+    "original_cases": 273,
+    "included_cases": 245,
+    "excluded_cases": 28,
+    "split_cases": 14,
+    "reading_events": 314,
+    "events": 1980,
+    "excluded_events": 114,
+    "sources": 1520,
+    "map_leads": 1317,
+    "supporting_materials": 374,
+    "archive_images": 179
+  },
+  "upstream": [
+    {
+      "name": "19C-editorial-dossiers.zip",
+      "bytes": 2626660,
+      "sha256": "3bb8b753f8c6edbf7f8aa4c38a290c423a6b4cbbb689e9be4b977496052b2bb5"
+    },
+    {
+      "name": "19C-research.zip",
+      "bytes": 248437955,
+      "sha256": "c7993b40552f7f9ece7aea83a848a893f20e8b8dc4d3963bf676c9c32de5d395"
+    }
+  ],
+  "csv_tables": {
+    "tables/topics-and-sections.csv": {
+      "rows": 150,
+      "encoding": "UTF-8 with BOM"
+    },
+    "tables/reading-events.csv": {
+      "rows": 314,
+      "encoding": "UTF-8 with BOM"
+    },
+    "tables/events.csv": {
+      "rows": 1980,
+      "encoding": "UTF-8 with BOM"
+    },
+    "tables/sources.csv": {
+      "rows": 1520,
+      "encoding": "UTF-8 with BOM"
+    },
+    "tables/map-leads.csv": {
+      "rows": 1317,
+      "encoding": "UTF-8 with BOM"
+    },
+    "tables/open-questions.csv": {
+      "rows": 353,
+      "encoding": "UTF-8 with BOM"
+    },
+    "tables/case-crosswalk.csv": {
+      "rows": 273,
+      "encoding": "UTF-8 with BOM"
+    },
+    "tables/excluded-events.csv": {
+      "rows": 114,
+      "encoding": "UTF-8 with BOM"
+    },
+    "tables/supporting-materials.csv": {
+      "rows": 374,
+      "encoding": "UTF-8 with BOM"
+    },
+    "tables/archive-images.csv": {
+      "rows": 179,
+      "encoding": "UTF-8 with BOM"
+    }
+  },
+  "topic_index": "README.md",
+  "topic_directory": "topics",
+  "supporting_notes_directory": "materials",
+  "handoff": {
+    "entry_point": "START_HERE.md",
+    "topic_workboard": {
+      "path": "TOPIC_WORKBOARD.csv",
+      "rows": 59,
+      "status": "living_tracking_not_source_archive"
+    },
+    "chapter_workboard": {
+      "path": "CHAPTER_WORKBOARD.csv",
+      "rows": 150,
+      "status": "living_tracking_not_source_archive"
+    },
+    "verification": [
+      "verify.py",
+      "verify_handoff.py"
+    ],
+    "continuity_log": "PROGRESS.md",
+    "curation_pr": 463,
+    "publication_requires_independent_review": true,
+    "note": "All 1317 map leads remain research leads. 179 scan listings are only upstream locator/hash records."
+  }
+}
