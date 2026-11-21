@@ -1,11 +1,23 @@
 #!/usr/bin/env python3
 """Real desktop Chromium: 1609 paper claim, 1652 English occupation of Scotland, 1670 HBC, 1681 Pennsylvania, layers toggle, original 1599."""
 from pathlib import Path
+import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 root=Path(__file__).resolve().parents[1];out=root/'browser-smoke-results';out.mkdir(exist_ok=True)
+# The 5AI physical island contours and dated points retire 14 claim rectangles
+# from DISPLAY ONLY; all 53 original documentary features stay in the archive.
+source=json.loads((root/'data/seventeenth-century-editor43-5ai-localized-geometries-1600-1699.geojson').read_text(encoding='utf-8'))
+claim_data=json.loads((root/'data/seventeenth-century-expansive-colonial-claims-1600-1699.geojson').read_text(encoding='utf-8'))
+retired_claims=set(x for x in source['metadata']['unique_original_source_ids'] if x.startswith('claim-'))
+def removed_in(y):
+    return sum(f['properties']['start_year']<=y<=f['properties']['end_year'] and f['id'] in retired_claims
+               for f in claim_data['features'])
+def threshold(y,old):
+    return max(1,old-removed_in(y))
+
 opt=Options()
 for k in ('--headless=new','--disable-gpu','--no-sandbox','--disable-dev-shm-usage','--window-size=1700,1000'):opt.add_argument(k)
 d=webdriver.Chrome(options=opt);wait=WebDriverWait(d,85)
@@ -13,9 +25,9 @@ def j(s,*a):return d.execute_script(s,*a)
 def goto(year,required,forbidden=None):
  d.get(f'http://127.0.0.1:8765/?year={year}')
  wait.until(lambda _:j("return document.getElementById('bigYear')?.textContent===String(arguments[0])",year))
- wait.until(lambda _:j("return document.querySelectorAll('path.atlas-17c-expansive-claim').length>=arguments[0]",required))
+ wait.until(lambda _:j("return document.querySelectorAll('path.atlas-17c-expansive-claim').length>=arguments[0]",threshold(year,required)))
  active=j("return [...document.querySelectorAll('path.atlas-17c-expansive-claim')].length")
- assert active>=required
+ assert active>=threshold(year,required)
  if forbidden:assert j("return !document.querySelector(arguments[0])",forbidden)
  d.save_screenshot(str(out/f'editor23-wide-paper-claims-{year}.png'))
  print('PASS',year,active,'large-area SVG polygons')
@@ -91,7 +103,7 @@ try:
  d.find_element(By.ID,'mapLayerTerritory').click()
  wait.until(lambda _:j("return document.querySelectorAll('path.atlas-17c-expansive-claim').length===0"))
  d.find_element(By.ID,'mapLayerTerritory').click()
- wait.until(lambda _:j("return document.querySelectorAll('path.atlas-17c-expansive-claim').length>=9"))
+ wait.until(lambda _:j("return document.querySelectorAll('path.atlas-17c-expansive-claim').length>=arguments[0]",threshold(1685,9)))
  # Leaflet SVG feature listeners open the original-source dossier, not merely a decorative fill.
  j("""const el=[...document.querySelectorAll('path.atlas-17c-expansive-claim')].find(e=>
     e._leaflet_id!==undefined)||document.querySelector('path.atlas-17c-expansive-claim');
