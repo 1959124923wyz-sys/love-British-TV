@@ -1,7 +1,7 @@
 {
   "schema": "editor39_5ae_site_point_to_area_candidates_v1",
   "site_count": 77,
-  "confirmed_upgrades": 0,
+  "confirmed_upgrades": 5,
   "manual_verification_required": true,
   "candidate_site_count": 9,
   "candidates": [
@@ -33,7 +33,8 @@
             "https://www.fortpittblockhouse.com/timeline/"
           ]
         }
-      ]
+      ],
+      "promotion_status": "requires_further_historical_scope_review"
     },
     {
       "id": "EDITOR38_5AD_TELLICHERRY_FORT",
@@ -63,7 +64,8 @@
             "https://www.nma.gov.in/showfile.php?lang=1&level=1&lid=1779&ls_id=1446"
           ]
         }
-      ]
+      ],
+      "promotion_status": "promoted_existing_surveyed_polygon"
     },
     {
       "id": "EDITOR38_5AD_MADRAS_TREATY_1769",
@@ -83,7 +85,7 @@
         {
           "shape_id": "MADRAS_ST_GEORGE_SIEGE",
           "title": "马德拉斯 · 圣乔治堡围城时期堡墙",
-          "nearest_bbox_km": 0.0,
+          "nearest_bbox_km": 0,
           "bbox_km": [
             0.52,
             0.69
@@ -93,7 +95,8 @@
             "https://gallica.bnf.fr/ark:/12148/btv1b6903954f"
           ]
         }
-      ]
+      ],
+      "promotion_status": "promoted_existing_surveyed_polygon"
     },
     {
       "id": "EDITOR38_5AD_ARCOT_1780",
@@ -123,7 +126,8 @@
             "https://www.nam.ac.uk/explore/robert-clive"
           ]
         }
-      ]
+      ],
+      "promotion_status": "promoted_existing_surveyed_polygon"
     },
     {
       "id": "EDITOR36_5Y_BOMBAY",
@@ -166,7 +170,8 @@
             "https://commons.wikimedia.org/wiki/File:Plan_of_Bombay_1760.jpg"
           ]
         }
-      ]
+      ],
+      "promotion_status": "requires_further_historical_scope_review"
     },
     {
       "id": "EDITOR36_5Y_CALCUTTA",
@@ -196,7 +201,8 @@
             "https://ignca.gov.in/Asi_data/17544.pdf"
           ]
         }
-      ]
+      ],
+      "promotion_status": "requires_further_historical_scope_review"
     },
     {
       "id": "EDITOR36_5Y_ARCOT",
@@ -226,7 +232,8 @@
             "https://www.nam.ac.uk/explore/robert-clive"
           ]
         }
-      ]
+      ],
+      "promotion_status": "requires_further_historical_scope_review"
     },
     {
       "id": "EDITOR37_5AB_BEYIN",
@@ -246,7 +253,7 @@
         {
           "shape_id": "GOLD_COAST_APOLLONIA_FORT",
           "title": "贝因 · 阿波罗尼亚堡",
-          "nearest_bbox_km": 0.0,
+          "nearest_bbox_km": 0,
           "bbox_km": [
             0.04,
             0.04
@@ -259,7 +266,7 @@
         {
           "shape_id": "EDITOR37_5AB_BEYIN_FORT_AFTER_1773",
           "title": "贝因阿波罗尼亚堡｜十八世纪后期主堡",
-          "nearest_bbox_km": 0.0,
+          "nearest_bbox_km": 0,
           "bbox_km": [
             0.04,
             0.04
@@ -269,7 +276,8 @@
             "https://www.rmg.co.uk/collections/objects/rmgc-object-200888"
           ]
         }
-      ]
+      ],
+      "promotion_status": "promoted_existing_surveyed_polygon"
     },
     {
       "id": "EDITOR37_5AC_ANNAPOLIS_FORT_ANNE",
@@ -289,7 +297,7 @@
         {
           "shape_id": "FORT_ANNE_ROYAL_PORT",
           "title": "阿卡迪亚皇家港 · 安妮堡",
-          "nearest_bbox_km": 0.0,
+          "nearest_bbox_km": 0,
           "bbox_km": [
             0.18,
             0.17
@@ -299,7 +307,16 @@
             "https://collections.newberry.org/archive/-2KXJ8ZSA3T7IF.html"
           ]
         }
-      ]
+      ],
+      "promotion_status": "promoted_existing_surveyed_polygon"
     }
-  ]
+  ],
+  "confirmed_upgrade_ids": [
+    "EDITOR38_5AD_TELLICHERRY_FORT",
+    "EDITOR38_5AD_MADRAS_TREATY_1769",
+    "EDITOR38_5AD_ARCOT_1780",
+    "EDITOR37_5AC_ANNAPOLIS_FORT_ANNE",
+    "EDITOR37_5AB_BEYIN"
+  ],
+  "pending_upgrades": 4
 }
