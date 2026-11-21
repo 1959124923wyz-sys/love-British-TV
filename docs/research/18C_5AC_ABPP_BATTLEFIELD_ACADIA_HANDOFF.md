@@ -56,3 +56,7 @@
 第5AC完成后尚有 **51条**十八世纪旧参考矩形，其中1799年 **22条**。剩余重点为1759—1760后各国条约范围、1763北美公告线、英属伯利兹采木条款、尼扎姆/迈索尔财政边线、约克厂贸易运输和南卡部分尚未配准的骑兵、渡河及补给路线。应优先读取同时期军用图、土地契据、河谷旧图，不能凭战役点外推占领县界。旧大框与无法核实的商业路线继续留待核查。
 
 第5AC文件包括 `data/eighteenth-century-editor37-5ac-surveyed-geography.geojson`、`js/eighteenth-editor37-5ac-battlefields.js`、`scripts/test_editor37_5ac_source_battlefields.js`、`scripts/browser_editor37_5ac_source_battlefields.cjs` 及独立CI。原源抓取脚本 `scripts/research_editor37_5ac_nps_abpp_probe.py` 保留于本分支，后继人员可按官方图层更新校准。严禁读者页面显示编审和精度说明；这些留在此研究档案。
+
+## 战场多环审查与公共史实正文（5AC校订）
+
+2026-11-21在主分支前QA发现测试代码原将全部坐标环展平后比对第一和最后一个点，误判NPS官方约克镇、格林斯普林及萨拉托加多环Polygon/MultiPolygon。现改为**逐独立ring检查坐标闭合与折点数**，同时保留官方的洞孔/不连续多边形信息；19个NPS全部原形源结构有效。战场公共档案的简介以独立战争的具体参战方、行动和结果为正文；官方ABPP研究范围性质、调查方法和RDP简化等仅在此研究档案和机器属性保存。

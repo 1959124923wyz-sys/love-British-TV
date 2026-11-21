@@ -58,7 +58,9 @@ function valid(geo){
   const rings=g.type==='Point'?[[g.coordinates]]:
     g.type==='MultiLineString'?g.coordinates:g.type==='Polygon'?g.coordinates:
     g.type==='MultiPolygon'?g.coordinates.flat():null;
-  if(!rings||!rings.length||rings.some(r=>r.length<1||r.some(x=>!validCoord(x))))throw Error('invalid geometry '+f.id);
+  if(!rings||!rings.length||rings.some(r=>r.length<(g.type==='Point'?1:g.type==='MultiLineString'?2:4)||
+   r.some(x=>!validCoord(x))||(['Polygon','MultiPolygon'].includes(g.type)&&
+   JSON.stringify(r[0])!==JSON.stringify(r[r.length-1]))))throw Error('invalid geometry '+f.id);
   seen.add(f.id);
  }
 }

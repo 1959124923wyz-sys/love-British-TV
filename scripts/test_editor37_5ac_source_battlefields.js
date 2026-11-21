@@ -33,7 +33,10 @@ for(const f of g.features){
   a.equal(p.source_abpp_boundary,'STUDY AREA');
   a.equal(p.source_abpp_war,'REVOLUTIONARY WAR');
   a(p.source_abpp_site&&p.source_abpp_name);
-  a(xy.length>=4);a.deepEqual(xy[0],xy.at(-1));
+  const rings=f.geometry.type==='Polygon'?f.geometry.coordinates:f.geometry.coordinates.flat();
+  a(rings.length>=1);
+  for(const ring of rings){a(ring.length>=4);a.deepEqual(ring[0],ring.at(-1));}
+
  }
  if(p.kind.startsWith('physical_'))a(p.source_vertices>=10);
 }
