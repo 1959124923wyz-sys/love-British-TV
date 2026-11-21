@@ -6,7 +6,7 @@
 
 **可核资料：**
 - [北卡罗来纳州档案馆：历史地图馆藏与地界调查](https://archives.ncdcr.gov/researchers/collections/maps)：州界、郡界、殖民时期与战事史图原件索引。
-- [北卡罗来纳州图书馆：1663—1775土地授予指南](https://libraryofnc.libguides.com/nclandrecords1800/1663-1775)：领主时期土地授予要从申请／丈量文书／pl at／专利状逐项建立；1700年不能把1665年特许状所声索的“东海岸至太平洋”涂为已经占领的省。
+- [北卡罗来纳州图书馆：1663—1775土地授予指南](https://libraryofnc.libguides.com/nclandrecords1800/1663-1775)：领主时期土地授予要从申请／丈量文书／地籍图（plat）／土地专利状逐项建立；1700年不能把1665年特许状所声索的“东海岸至太平洋”涂为已经占领的省。
 - [NCpedia 1663/1665两版特许范围](https://www.ncpedia.org/media/map/original-boundaries)及[特许状释读](https://www.ncpedia.org/reading-guide-carolina-charter)：只供**虚线法律声索边界**比对，具体地图应另分海岸聚落、属地边界与原住民族治理范围。
 - [北卡州档案馆：英国殖民部原始档案目录](https://archives.ncdcr.gov/british-records-colonial-office)：地界、殖民行政及土地产权案。
 
