@@ -77,5 +77,26 @@
   },
   "topic_index": "README.md",
   "topic_directory": "topics",
-  "supporting_notes_directory": "materials"
+  "supporting_notes_directory": "materials",
+  "handoff": {
+    "entry_point": "START_HERE.md",
+    "topic_workboard": {
+      "path": "TOPIC_WORKBOARD.csv",
+      "rows": 59,
+      "status": "living_tracking_not_source_archive"
+    },
+    "chapter_workboard": {
+      "path": "CHAPTER_WORKBOARD.csv",
+      "rows": 150,
+      "status": "living_tracking_not_source_archive"
+    },
+    "verification": [
+      "verify.py",
+      "verify_handoff.py"
+    ],
+    "continuity_log": "PROGRESS.md",
+    "curation_pr": 463,
+    "publication_requires_independent_review": true,
+    "note": "All 1317 map leads remain research leads. 179 scan listings are only upstream locator/hash records."
+  }
 }
