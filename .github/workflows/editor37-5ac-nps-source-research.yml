@@ -1,0 +1,19 @@
+name: Editor37 5AC NPS ABPP source geometry research probe
+on:
+  push:
+    branches:
+      - cartography/editor37-5ac-abpp-acadian-battlefield-geography
+    paths:
+      - 'scripts/research_editor37_5ac_nps_abpp_probe.py'
+      - '.github/workflows/editor37-5ac-nps-source-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  nps-primary-geodata:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Query official NPS ABPP public revolutionary war GIS
+        run: python3 -u scripts/research_editor37_5ac_nps_abpp_probe.py

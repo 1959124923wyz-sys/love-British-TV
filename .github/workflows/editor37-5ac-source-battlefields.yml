@@ -1,0 +1,40 @@
+name: Editor37 5AC NPS ABPP surveyed battlefield and Acadian geography
+on:
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'data/eighteenth-century-editor37-5ac-surveyed-geography.geojson'
+      - 'data/eighteenth-century-expansion-batch36-1700-1799.json'
+      - 'data/eighteenth-century-b38-south-campaign.json'
+      - 'data/eighteenth-century-b38-india-mysore.json'
+      - 'js/eighteenth-editor37-5ac-battlefields.js'
+      - 'scripts/test_editor37_5ac_source_battlefields.js'
+      - 'scripts/browser_editor37_5ac_source_battlefields.cjs'
+  push:
+    branches: [main]
+    paths:
+      - 'data/eighteenth-century-editor37-5ac-surveyed-geography.geojson'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-survey-and-desktop:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check js/eighteenth-editor37-5ac-battlefields.js
+      - run: node scripts/test_editor37_5ac_source_battlefields.js
+      - run: python3 scripts/audit_spatial_semantics.py --strict
+      - run: node scripts/test_atlas_47_public_copy_guard.js
+      - run: node scripts/lint_atlas_47_frontend_copy.js
+      - run: npm install --no-save --package-lock=false playwright@1.58.2
+      - run: npx playwright install --with-deps chromium
+      - name: Desktop 5AC battlefields, old dossiers, 1799 to 1800
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-5ac-http.log 2>&1 &
+          node scripts/browser_editor37_5ac_source_battlefields.cjs
