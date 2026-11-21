@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate natural island coastlines + exact historical place anchors, not sovereignty boundaries.
 
-Requirements: pyshp, shapely. Input Natural Earth 10m land 5.1.1.
+Requirements: pyshp, shapely. Input Natural Earth 10m land 5.1.1.\nSource archive checksum is recorded in generated metadata for reproducibility.
 Original 17C paper-claim and research-study GeoJSON datasets are immutable archives.
 """
 import hashlib
