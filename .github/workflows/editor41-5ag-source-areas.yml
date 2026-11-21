@@ -10,9 +10,13 @@ on:
       - 'scripts/research_editor39_5ae_point_to_area_candidates.py'
       - '.github/workflows/editor41-5ag-source-areas.yml'
   push:
-    branches: [main]
+    branches:
+      - main
+      - cartography/editor41-5ag-audited-fort-and-settlement-areas
     paths:
       - 'data/eighteenth-century-mass-schematic-zones-1700-1799.json'
+      - 'scripts/test_editor41_5ag_localized_areas.js'
+      - '.github/workflows/editor41-5ag-source-areas.yml'
   workflow_dispatch:
 permissions:
   contents: read
