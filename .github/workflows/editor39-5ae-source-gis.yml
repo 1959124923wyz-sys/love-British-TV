@@ -1,0 +1,32 @@
+name: Editor39 5AE fetch official source geometry and generate audited GeoJSON
+on:
+  push:
+    branches:
+      - cartography/editor39-5ae-historical-boundaries-real-shores
+    paths:
+      - 'scripts/research_editor39_5ae_source_gis.py'
+      - '.github/workflows/editor39-5ae-source-gis.yml'
+permissions:
+  contents: write
+jobs:
+  source-geometry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Query Maps.com/NPS 1763 line and verbatim published land/coast geometry
+        run: python3 -u scripts/research_editor39_5ae_source_gis.py
+      - name: Commit GIS result with native evidence coordinates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/eighteenth-century-editor39-5ae-source-areas.geojson
+          if ! git diff --cached --quiet; then
+            git commit -m "data(5AE): source-backed 1763 Proclamation Line, Caribbean original islands and Natural Earth coast"
+            git push origin HEAD:cartography/editor39-5ae-historical-boundaries-real-shores
+          fi

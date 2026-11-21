@@ -1,0 +1,33 @@
+name: Editor39 5AE inspect existing real source geometry
+on:
+  push:
+    branches:
+      - cartography/editor39-5ae-historical-boundaries-real-shores
+    paths:
+      - scripts/research_editor39_5ae_existing_sources.py
+      - .github/workflows/editor39-5ae-source-inventory.yml
+permissions:
+  contents: write
+jobs:
+  source-inventory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/research_editor39_5ae_existing_sources.py
+      - run: python3 scripts/research_editor39_5ae_point_to_area_candidates.py
+      - run: python3 scripts/research_editor39_5ae_historic_fort_details.py
+      - name: Save source shape inventory in branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/research/18C_5AE_EXISTING_GEOMETRY_INVENTORY.json docs/research/18C_5AE_OLD_RECTANGLE_INVENTORY.json docs/research/18C_5AE_ALL_PUBLISHED_SHAPES.json docs/research/18C_5AE_HISTORIC_SHAPE_SHORTLIST.json docs/research/18C_5AE_POINT_AREA_CANDIDATES.json docs/research/18C_5AE_PROMOTION_EVIDENCE.json
+          if ! git diff --cached --quiet; then
+            git commit -m "docs(5AE): inventory historically anchored geometry in existing map source"
+            git push origin HEAD:cartography/editor39-5ae-historical-boundaries-real-shores
+          fi

@@ -1,0 +1,1411 @@
+{
+  "schema": "editor39_5ae_geometry_inventory_v1",
+  "files": [
+    {
+      "path": "data/eighteenth-century-mass-schematic-zones-1700-1799.json",
+      "size_bytes": 4288370,
+      "counts": {
+        "regional_zones": 280,
+        "regional_lines": 55,
+        "coastal_rights": 2,
+        "zones": 81
+      },
+      "matches": [
+        {
+          "group": "regional_zones",
+          "id": "CHARLESTON_OLD_TOWN_1780",
+          "title": "查尔斯敦旧城与商港",
+          "hits": [
+            "charleston"
+          ],
+          "kind": "settlement",
+          "type": "Polygon",
+          "vertices": 66,
+          "bbox": [
+            -79.93735,
+            32.76961,
+            -79.92673,
+            32.78174
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://www.loc.gov/item/gm71002163/",
+            "https://www.loc.gov/item/gm71000887/",
+            "https://www.argomaps.org/maps/commonwealth-oai%3A4x51nj007/"
+          ],
+          "periods": [
+            {
+              "start_year": 1776,
+              "end_year": 1778,
+              "title": "查尔斯敦旧城 · 南卡罗来纳革命政府",
+              "note": "1776年南卡罗来纳建立革命政府。6月驻军守住港口入口。1778年城内发生大火。"
+            },
+            {
+              "start_year": 1779,
+              "end_year": 1779,
+              "title": "查尔斯敦旧城 · 守军扩充城防",
+              "note": "英军在1779年5月逼近，南卡罗来纳守军加固半岛防线，并守住城镇。"
+            },
+            {
+              "start_year": 1780,
+              "end_year": 1780,
+              "title": "查尔斯敦旧城 · 5月12日英军占城",
+              "note": "英军由陆地围城并封锁港口。5月12日本杰明·林肯投降，英军接管城镇，并在6月要求原获假释者改向王室宣誓。",
+              "kind": "wartime_occupation"
+            },
+            {
+              "start_year": 1781,
+              "end_year": 1781,
+              "title": "查尔斯敦旧城 · 英军驻城",
+              "note": "英军继续驻城，将交易所用作兵营和军警羁押地。格林指挥的大陆军向低地推进。",
+              "kind": "wartime_occupation"
+            },
+            {
+              "start_year": 1782,
+              "end_year": 1782,
+              "title": "查尔斯敦旧城 · 12月14日英军撤离",
+              "note": "英军后卫经加兹登码头登船，大陆军安东尼·韦恩所部同时进入城镇。迁离者既有随军效忠派和争取自由者，也有被效忠派强行带走的人。"
+            },
+            {
+              "start_year": 1783,
+              "end_year": 1799,
+              "title": "查尔斯敦旧城 · 设立市政府",
+              "note": "1783年南卡罗来纳州依建市法授权市政机关接管市场、街道和城防事务，沿袭旧城街网并修复港口。"
+            }
+          ]
+        },
+        {
+          "group": "regional_zones",
+          "id": "CHARLESTON_HORN_WORK",
+          "title": "马里恩广场角堡",
+          "hits": [
+            "charleston"
+          ],
+          "kind": "military",
+          "type": "Polygon",
+          "vertices": 21,
+          "bbox": [
+            -79.93718,
+            32.78491,
+            -79.93461,
+            32.78656
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://www.loc.gov/item/gm71002163/",
+            "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_45019_edges.zip",
+            "https://www.ccpl.org/charleston-time-machine/horn-work-marion-squares-tabby-fortress"
+          ],
+          "periods": [
+            {
+              "start_year": 1779,
+              "end_year": 1779,
+              "title": "马里恩广场角堡 · 城北加固",
+              "note": "南卡罗来纳军队在原城北角堡周围增修防御。"
+            },
+            {
+              "start_year": 1780,
+              "end_year": 1780,
+              "title": "马里恩广场角堡 · 正门交降",
+              "note": "围城期间守军补筑南侧防御，5月12日本杰明·林肯与莫尔特里在角堡门下向英军交降。",
+              "kind": "wartime_occupation"
+            },
+            {
+              "start_year": 1781,
+              "end_year": 1781,
+              "title": "马里恩广场角堡 · 英军驻守",
+              "note": "占城英军维修并调整部分城防设施。",
+              "kind": "wartime_occupation"
+            },
+            {
+              "start_year": 1782,
+              "end_year": 1782,
+              "title": "马里恩广场角堡 · 美军接收",
+              "note": "1782年12月14日英军撤离后，大陆军经角堡进入查尔斯敦。"
+            },
+            {
+              "start_year": 1783,
+              "end_year": 1783,
+              "title": "马里恩广场角堡 · 移交市政府",
+              "note": "南卡罗来纳州将角堡和邻近土地移交新设市政府管理。",
+              "kind": "administration"
+            }
+          ]
+        },
+        {
+          "group": "regional_zones",
+          "id": "WEST_FLORIDA_1763_PROCLAMATION",
+          "title": "西佛罗里达 · 1763年王室划界",
+          "hits": [
+            "proclamation"
+          ],
+          "kind": "administration",
+          "type": "MultiPolygon",
+          "vertices": 751,
+          "bbox": [
+            -91.6634,
+            29.66647,
+            -84.85838,
+            31.0
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://avalon.law.yale.edu/18th_century/proc1763.asp",
+            "https://publications.newberry.org/ahcb/documents/FL_Consolidated_Chronology.htm",
+            "https://pubs.usgs.gov/bul/1212/report.pdf"
+          ],
+          "periods": [
+            {
+              "start_year": 1763,
+              "end_year": 1763,
+              "title": "西佛罗里达 · 10月王室划界",
+              "note": "英国王室设西佛罗里达省，以北纬31度为北界，东临阿巴拉契科拉水系，西侧经密西西比河、伊贝维尔河及庞恰特雷恩湖。彭萨科拉是殖民首府。"
+            }
+          ]
+        },
+        {
+          "group": "regional_zones",
+          "id": "ST_VINCENT_MAIN_ISLAND_18C",
+          "title": "圣文森特本岛",
+          "hits": [
+            "vincent"
+          ],
+          "kind": "administration",
+          "type": "Polygon",
+          "vertices": 22,
+          "bbox": [
+            -61.27937,
+            13.13251,
+            -61.12393,
+            13.38076
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://www.uottawa.ca/about-us/official-languages-bilingualism-institute/clmc/linguistic-history/historic-documents/treaty-paris-1763",
+            "https://mjp.univ-perp.fr/traites/1783versailles.htm",
+            "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/582086475"
+          ],
+          "periods": [
+            {
+              "start_year": 1762,
+              "end_year": 1762,
+              "kind": "wartime_occupation",
+              "title": "圣文森特 · 七年战争中的英军行动",
+              "note": "七年战争期间英军进入圣文森特。加里富纳和卡利纳戈社群继续捍卫自己的土地。"
+            },
+            {
+              "start_year": 1763,
+              "end_year": 1771,
+              "kind": "administration",
+              "title": "圣文森特 · 巴黎和约与英国殖民扩张",
+              "note": "1763年《巴黎和约》将圣文森特列为割让给英国的岛屿。殖民政府推进土地测量、出让和种植园经营。"
+            },
+            {
+              "start_year": 1772,
+              "end_year": 1772,
+              "kind": "resistance",
+              "title": "圣文森特 · 加里富纳抵抗殖民扩张",
+              "note": "殖民政府企图在加里富纳人居住的土地上扩展种植园，加里富纳人与英军交战。"
+            },
+            {
+              "start_year": 1773,
+              "end_year": 1778,
+              "kind": "administration",
+              "title": "圣文森特 · 1773年土地和约后的殖民行政",
+              "note": "加里富纳人与英国殖民当局在1773年议和。条约规定保留土地的分界。殖民政府后来继续扩张。"
+            },
+            {
+              "start_year": 1779,
+              "end_year": 1782,
+              "kind": "foreign_occupation",
+              "title": "圣文森特 · 法军占岛",
+              "note": "1779年6月法军攻占圣文森特，接管金斯敦和岛上殖民行政。"
+            },
+            {
+              "start_year": 1783,
+              "end_year": 1783,
+              "kind": "foreign_occupation",
+              "title": "圣文森特 · 和约约定交还",
+              "note": "1783年《凡尔赛和约》约定法国向英国归还圣文森特。英国殖民政府在次年接回岛屿。"
+            },
+            {
+              "start_year": 1784,
+              "end_year": 1794,
+              "kind": "administration",
+              "title": "圣文森特 · 英国恢复殖民行政",
+              "note": "1784年英方恢复殖民行政，殖民议会重新开会。"
+            },
+            {
+              "start_year": 1795,
+              "end_year": 1795,
+              "kind": "resistance",
+              "title": "圣文森特 · 加里富纳与法方盟军起事",
+              "note": "加里富纳人和法国共和派结盟，与试图夺取其土地的英国殖民政府交战。"
+            },
+            {
+              "start_year": 1796,
+              "end_year": 1796,
+              "kind": "conflict_damage",
+              "title": "圣文森特 · 英军镇压与强制拘留",
+              "note": "英国殖民军击败抵抗者，开始将被俘居民及妇女、儿童送往巴利索岛拘留。"
+            },
+            {
+              "start_year": 1797,
+              "end_year": 1797,
+              "kind": "administration",
+              "title": "圣文森特 · 1797年强制驱逐与殖民接管",
+              "note": "英国殖民政府把大批加里富纳人从巴利索岛驱逐至罗阿坦岛，并接管圣文森特原有加里富纳土地。"
+            },
+            {
+              "start_year": 1798,
+              "end_year": 1799,
+              "kind": "administration",
+              "title": "圣文森特 · 驱逐后的英国殖民行政",
+              "note": "英国殖民政府在驱逐加里富纳人后继续经营岛上种植园和港口。"
+            }
+          ]
+        },
+        {
+          "group": "regional_zones",
+          "id": "BALICEAUX_GARIFUNA_DETENTION_ISLAND",
+          "title": "巴利索岛 · 加里富纳拘留与流放",
+          "hits": [
+            "garifuna"
+          ],
+          "kind": "conflict_damage",
+          "type": "Polygon",
+          "vertices": 427,
+          "bbox": [
+            -61.14937,
+            12.93894,
+            -61.13608,
+            12.95948
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://digitallibrary.un.org/record/755522?ln=en",
+            "https://www.garifunanation.org/history/",
+            "https://www.cavehill.uwi.edu/cermes/wp-content/uploads/sites/38/Docs/Technical_Reports/DeGraff_Baldwin_2013_GrenadinesHeritageMapping_CTR_65.pdf"
+          ],
+          "periods": [
+            {
+              "start_year": 1796,
+              "end_year": 1796,
+              "kind": "conflict_damage",
+              "title": "巴利索岛 · 英方强制拘留加里富纳人",
+              "note": "英方把被俘的加里富纳居民，包括妇女和儿童，成批押到巴利索岛。拘留期间缺乏饮水和食物，许多人因疾病、饥饿或缺水死亡。"
+            },
+            {
+              "start_year": 1797,
+              "end_year": 1797,
+              "kind": "conflict_damage",
+              "title": "巴利索岛 · 押送幸存者至罗阿坦",
+              "note": "1797年3月英国船队押送幸存者离岛，4月抵达当时西属的罗阿坦岛。"
+            }
+          ]
+        },
+        {
+          "group": "regional_zones",
+          "id": "KINGSTOWN_HISTORIC_TOWN",
+          "title": "金斯敦 · 港城旧街区",
+          "hits": [
+            "vincent",
+            "kingstown"
+          ],
+          "kind": "settlement",
+          "type": "Polygon",
+          "vertices": 26,
+          "bbox": [
+            -61.23105,
+            13.15072,
+            -61.22279,
+            13.15776
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/582086475",
+            "https://www.loc.gov/item/74691678/",
+            "https://www.loc.gov/item/2004670068/"
+          ],
+          "periods": [
+            {
+              "start_year": 1776,
+              "end_year": 1778,
+              "kind": "administration",
+              "title": "金斯敦 · 殖民地独立设政府",
+              "note": "圣文森特于1776年成立单独的殖民政府，金斯敦继续为殖民行政与港务中心。"
+            },
+            {
+              "start_year": 1779,
+              "end_year": 1782,
+              "kind": "foreign_occupation",
+              "title": "金斯敦 · 法军进入港城",
+              "note": "1779年6月，法军攻占圣文森特，接管金斯敦港城。"
+            },
+            {
+              "start_year": 1783,
+              "end_year": 1783,
+              "kind": "foreign_occupation",
+              "title": "金斯敦 · 和约约定交还",
+              "note": "1783年英法和约约定交还圣文森特，英国次年恢复港城行政。"
+            },
+            {
+              "start_year": 1784,
+              "end_year": 1794,
+              "kind": "administration",
+              "title": "金斯敦 · 英属殖民政府恢复",
+              "note": "英国在1784年恢复殖民政府。金斯敦继续经营贸易和港务。"
+            },
+            {
+              "start_year": 1795,
+              "end_year": 1796,
+              "kind": "military",
+              "title": "金斯敦 · 加里富纳起事期间的英方据点",
+              "note": "加里富纳部队在1795年夺取港城外围的多塞特郡山要点，英军继续据守港城。次年殖民军发动反攻。"
+            },
+            {
+              "start_year": 1797,
+              "end_year": 1799,
+              "kind": "administration",
+              "title": "金斯敦 · 驱逐后的殖民港务",
+              "note": "殖民政府将大批加里富纳人驱逐至罗阿坦岛后，继续管理金斯敦并扩张种植园经济。"
+            }
+          ]
+        },
+        {
+          "group": "regional_zones",
+          "id": "GRAND_RIVER_HALDIMAND_PROCLAMATION",
+          "title": "大河六族 · 哈尔迪曼德文告范围",
+          "hits": [
+            "proclamation"
+          ],
+          "kind": "paper_claim",
+          "type": "Polygon",
+          "vertices": 103,
+          "bbox": [
+            -80.60498,
+            42.82785,
+            -79.44739,
+            44.28137
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://iaac-aeic.gc.ca/050/documents/p80100/130877E.pdf",
+            "https://www.sixnations.ca/about/key-issues/land-claims/",
+            "https://www.ontario.ca/page/six-nations-grand-river"
+          ],
+          "periods": [
+            {
+              "start_year": 1784,
+              "end_year": 1792,
+              "kind": "paper_claim",
+              "title": "大河六族 · 1784年哈尔迪曼德土地文告",
+              "note": "美国独立战争后，部分莫霍克人与其他六族成员迁往大河。1784年10月25日，哈尔迪曼德宣布他们可沿大河两岸各六英里定居，自伊利湖延至源头。"
+            }
+          ]
+        },
+        {
+          "group": "regional_zones",
+          "id": "GRAND_RIVER_HALDIMAND_HEADWATERS",
+          "title": "大河六族 · 源头土地范围争议",
+          "hits": [
+            "proclamation"
+          ],
+          "kind": "paper_claim",
+          "type": "Polygon",
+          "vertices": 9,
+          "bbox": [
+            -80.58262,
+            43.66273,
+            -80.20741,
+            44.28137
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://iaac-aeic.gc.ca/050/documents/p80100/130877E.pdf",
+            "https://www.sixnations.ca/about/key-issues/land-claims/",
+            "https://www.ontario.ca/page/six-nations-grand-river"
+          ],
+          "periods": [
+            {
+              "start_year": 1793,
+              "end_year": 1799,
+              "kind": "paper_claim",
+              "title": "大河六族 · 1793年专利状排除大河源头",
+              "note": "1793年西姆科向六族发出土地专利状，范围止于大河上游，排除原文告所及的源头地带。六族继续主张1784年文告所写的源头土地。"
+            }
+          ]
+        },
+        {
+          "group": "regional_lines",
+          "id": "CALCUTTA_1794_TOLLYS_NULLAH_BOUNDARY",
+          "title": "加尔各答法定南界 · 托利水道段",
+          "hits": [
+            "boundary"
+          ],
+          "kind": "administration",
+          "type": "LineString",
+          "vertices": 22,
+          "bbox": [
+            88.32428,
+            22.5396,
+            88.33317,
+            22.54962
+          ],
+          "precision": "source_backed_historical_line",
+          "source_urls": [
+            "https://upload.wikimedia.org/wikipedia/commons/b/b4/Selections_from_Calcutta_gazettes_vol.2_%281789-1797%29_%28IA_in.gov.ignca.31051%29.pdf",
+            "https://ignca.gov.in/Asi_data/30993.pdf",
+            "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/37906/GIPE-028116.pdf?isAllowed=y&sequence=3"
+          ],
+          "periods": [
+            {
+              "start_year": 1794,
+              "end_year": 1799,
+              "title": "加尔各答法定南界 · 托利水道段 · 1794 年公告划定的南界",
+              "note": "1794年9月10日，威廉堡总督参事会公布城界。南界的一段沿托利水道南岸高潮线，经过瑟曼桥南端。"
+            }
+          ]
+        },
+        {
+          "group": "regional_lines",
+          "id": "CALCUTTA_1794_BYTACONNAH_ROAD_BOUNDARY",
+          "title": "加尔各答法定东界 · 贝塔卡纳路段",
+          "hits": [
+            "boundary"
+          ],
+          "kind": "administration",
+          "type": "LineString",
+          "vertices": 11,
+          "bbox": [
+            88.36618,
+            22.55837,
+            88.36837,
+            22.56428
+          ],
+          "precision": "source_backed_historical_line",
+          "source_urls": [
+            "https://upload.wikimedia.org/wikipedia/commons/b/b4/Selections_from_Calcutta_gazettes_vol.2_%281789-1797%29_%28IA_in.gov.ignca.31051%29.pdf",
+            "https://ignca.gov.in/Asi_data/30993.pdf",
+            "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/37906/GIPE-028116.pdf?isAllowed=y&sequence=3"
+          ],
+          "periods": [
+            {
+              "start_year": 1794,
+              "end_year": 1798,
+              "title": "加尔各答法定东界 · 贝塔卡纳路段 · 1794 年公告沿贝塔卡纳路东侧划界",
+              "note": "1794年公告沿贝塔卡纳路东侧划定城镇东界，经过旧达尔马塔拉路口。"
+            },
+            {
+              "start_year": 1799,
+              "end_year": 1799,
+              "title": "加尔各答法定东界 · 贝塔卡纳路段 · 环城路工程改变旧界地标",
+              "note": "1799年填壕拓宽环城路，贝塔卡纳集市附近的界树被砍。公告中的道路继续使用。"
+            }
+          ]
+        },
+        {
+          "group": "regional_lines",
+          "id": "STANWIX_1768_OHIO_BOUNDARY",
+          "title": "1768年斯坦威克斯条约界线 · 田纳西河口至基坦宁",
+          "hits": [
+            "boundary"
+          ],
+          "kind": "diplomacy",
+          "type": "LineString",
+          "vertices": 587,
+          "bbox": [
+            -88.56121,
+            37.06745,
+            -79.5257,
+            40.8172
+          ],
+          "precision": "source_backed_historical_line",
+          "source_urls": [
+            "https://catalog.archives.gov/id/81152508",
+            "https://encyclopediavirginia.org/primary-documents/the-treaty-of-fort-stanwix-november-5-1768/",
+            "https://digital.libraries.psu.edu/digital/collection/maps1/id/30068"
+          ],
+          "periods": [
+            {
+              "start_year": 1768,
+              "end_year": 1773,
+              "title": "斯坦威克斯条约 · 田纳西河口至基坦宁",
+              "note": "1768年11月5日，英方和豪德诺索尼六国所订界线由田纳西河口沿俄亥俄河上溯，到阿勒格尼河上的基坦宁。肖尼等族未承认六国有权处分其土地。"
+            },
+            {
+              "start_year": 1774,
+              "end_year": 1782,
+              "title": "俄亥俄河 · 斯坦威克斯界约与其后的争夺",
+              "note": "1774年邓莫尔战争后，弗吉尼亚总督与肖尼代表在夏洛特营议和，殖民者继续移入河以南。1783年英美另定两国边界，各原住民族继续争取土地。"
+            }
+          ]
+        },
+        {
+          "group": "regional_lines",
+          "id": "QUEBEC_TREATY_45_PARALLEL",
+          "title": "魁北克法界 · 北纬 45 度条文线",
+          "hits": [
+            "treaty"
+          ],
+          "kind": "diplomacy",
+          "type": "LineString",
+          "vertices": 5,
+          "bbox": [
+            -74.71294,
+            45.0,
+            -71.53178,
+            45.0
+          ],
+          "precision": "source_backed_historical_line",
+          "source_urls": [
+            "https://www.rcaanc.gc.ca/eng/1370355181092/1607905122267",
+            "https://publications.gc.ca/collections/collection_2017/aanc-inac/R5-158-1-1978-eng.pdf",
+            "https://www.archives.gov/milestone-documents/treaty-of-paris"
+          ],
+          "periods": [
+            {
+              "start_year": 1763,
+              "end_year": 1774,
+              "title": "魁北克省南界 · 王室公告中的北纬45度",
+              "note": "1763年公告采用北纬45度界定圣劳伦斯河和尚普兰湖一带的魁北克省南界。"
+            },
+            {
+              "start_year": 1775,
+              "end_year": 1782,
+              "title": "魁北克省南界 · 扩省法案中的北纬45度",
+              "note": "1775年生效的法案规定，从康涅狄格河的同纬度点向西经尚普兰湖至圣劳伦斯河。"
+            },
+            {
+              "start_year": 1783,
+              "end_year": 1799,
+              "title": "英美国界 · 巴黎和约中的北纬45度",
+              "note": "1783年和约再次写入北纬45度。沿线仍有早期实际测出的界桩，后续英美勘界涉及这些旧界桩。"
+            }
+          ]
+        },
+        {
+          "group": "regional_lines",
+          "id": "CHARLESTON_SIEGE_HORN_LINE",
+          "title": "查尔斯敦城北守军防线",
+          "hits": [
+            "charleston"
+          ],
+          "kind": "military",
+          "type": "LineString",
+          "vertices": 31,
+          "bbox": [
+            -79.93897,
+            32.78516,
+            -79.93102,
+            32.79206
+          ],
+          "precision": "source_backed_historical_line",
+          "source_urls": [
+            "https://www.loc.gov/item/gm71002163/",
+            "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_45019_edges.zip",
+            "https://www.ccpl.org/charleston-time-machine/horn-work-marion-squares-tabby-fortress"
+          ],
+          "periods": [
+            {
+              "start_year": 1780,
+              "end_year": 1780,
+              "title": "查尔斯敦城北守军防线 · 角堡两侧的工事",
+              "note": "守军在角堡两侧修筑连续壕垒，守住半岛北面的道路和陆上出入口。5月投降后工事易手。"
+            }
+          ]
+        },
+        {
+          "group": "regional_lines",
+          "id": "CHARLESTON_BRITISH_SIEGE_PARALLEL",
+          "title": "查尔斯敦英军城北围壕",
+          "hits": [
+            "charleston"
+          ],
+          "kind": "conflict_damage",
+          "type": "LineString",
+          "vertices": 15,
+          "bbox": [
+            -79.93991,
+            32.78624,
+            -79.93183,
+            32.79229
+          ],
+          "precision": "source_backed_historical_line",
+          "source_urls": [
+            "https://www.loc.gov/item/gm71002163/",
+            "https://www.loc.gov/item/gm71000887/",
+            "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_45019_edges.zip"
+          ],
+          "periods": [
+            {
+              "start_year": 1780,
+              "end_year": 1780,
+              "title": "查尔斯敦英军城北围壕 · 逼近守军工事",
+              "note": "英军从半岛北面掘进平行壕并部署攻城火炮，逐段逼近守军防线。"
+            }
+          ]
+        },
+        {
+          "group": "regional_lines",
+          "id": "CHARLESTON_GADSDEN_WHARF_LINE",
+          "title": "加兹登码头旧岸线",
+          "hits": [
+            "charleston"
+          ],
+          "kind": "trade_influence",
+          "type": "LineString",
+          "vertices": 4,
+          "bbox": [
+            -79.92469,
+            32.78662,
+            -79.9246,
+            32.78933
+          ],
+          "precision": "source_backed_historical_line",
+          "source_urls": [
+            "https://www.loc.gov/item/gm71002163/",
+            "https://www2.census.gov/geo/tiger/TIGER2025/EDGES/tl_2025_45019_edges.zip",
+            "https://www.ccpl.org/charleston-time-machine/story-gadsdens-wharf"
+          ],
+          "periods": [
+            {
+              "start_year": 1780,
+              "end_year": 1781,
+              "title": "加兹登码头 · 围城及驻军期间受损",
+              "note": "英军围城和占领期间，码头设施遭到损坏。"
+            },
+            {
+              "start_year": 1782,
+              "end_year": 1782,
+              "title": "加兹登码头 · 英军后卫登船",
+              "note": "12月14日英军后卫从库珀河岸的加兹登码头登船撤离。",
+              "kind": "military"
+            }
+          ]
+        },
+        {
+          "group": "regional_lines",
+          "id": "ST_VINCENT_CARIB_TREATY_DIVIDE",
+          "title": "圣文森特 · 1773年土地条约界线",
+          "hits": [
+            "vincent",
+            "carib",
+            "treaty"
+          ],
+          "kind": "diplomacy",
+          "type": "LineString",
+          "vertices": 61,
+          "bbox": [
+            -61.23437,
+            13.25703,
+            -61.12015,
+            13.31513
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://www.loc.gov/item/74691610/",
+            "https://purl.stanford.edu/vc907zx4948",
+            "https://westindiacommittee.org/historyheritageculture/wp-content/uploads/2024/03/Chatoyer-ebook.pdf"
+          ],
+          "periods": [
+            {
+              "start_year": 1773,
+              "end_year": 1778,
+              "kind": "diplomacy",
+              "title": "圣文森特 · 1773年条约保留地界线",
+              "note": "加里富纳人与英国殖民当局订立土地条约。第4条划定保留地的部分分界，约翰·杰弗里斯刊行的测绘图标出了这条线。"
+            }
+          ]
+        },
+        {
+          "group": "coastal_rights",
+          "id": "NF_FRENCH_SHORE_1713",
+          "title": "纽芬兰法国渔岸",
+          "hits": [
+            "treaty"
+          ],
+          "kind": "treaty_fishing",
+          "type": "LineString",
+          "vertices": 1334,
+          "bbox": [
+            -57.39851,
+            48.35529,
+            -53.08454,
+            51.62775
+          ],
+          "precision": null,
+          "source_urls": [
+            "https://primarydocuments.ca/wp-content/uploads/2018/04/TreatyUtrecht1713.pdf",
+            "https://www.heritage.nf.ca/articles/exploration/french-shore.php",
+            "https://www.heritage.nf.ca/articles/exploration/french-presence-18c.php"
+          ],
+          "periods": [
+            {
+              "start_year": 1713,
+              "end_year": 1762,
+              "title": "法国渔岸 · 邦纳维斯塔角至里什角",
+              "note": "《乌得勒支和约》第十三条允许法国渔船在捕捞季沿指定海岸捕鱼和晒鱼。权利从邦纳维斯塔角经纽芬兰北端延至里什角。七年战争期间，法国渔民一度停止来此。"
+            },
+            {
+              "start_year": 1763,
+              "end_year": 1782,
+              "title": "法国渔岸 · 巴黎和约续订原渔岸",
+              "note": "1763年《巴黎和约》第五条续订法国渔船的季节性捕鱼及晒鱼权。法国渔民可以在邦纳维斯塔角经岛北端至里什角的海岸作业。"
+            }
+          ]
+        },
+        {
+          "group": "coastal_rights",
+          "id": "NF_FRENCH_SHORE_1783",
+          "title": "纽芬兰法国渔岸",
+          "hits": [
+            "treaty"
+          ],
+          "kind": "treaty_fishing",
+          "type": "LineString",
+          "vertices": 869,
+          "bbox": [
+            -59.40583,
+            47.62241,
+            -55.4042,
+            51.62775
+          ],
+          "precision": null,
+          "source_urls": [
+            "https://www.heritage.nl.ca/articles/exploration/versailles.php",
+            "https://epe.lac-bac.gc.ca/100/205/301/ic/cdc/nflshore/article3_4.asp?nodisclaimer=1",
+            "https://www.heritage.nf.ca/articles/exploration/french-shore.php"
+          ],
+          "periods": [
+            {
+              "start_year": 1783,
+              "end_year": 1903,
+              "title": "法国渔岸 · 圣约翰角至雷角",
+              "note": "1783年《凡尔赛和约》第五条把法国渔岸改为自圣约翰角绕过北端至西岸雷角。法国放弃原东岸一段，渔岸向西岸延伸。1904年法国放弃旧约特权，两国渔民随后适用新的平等捕鱼条款。"
+            }
+          ]
+        },
+        {
+          "group": "zones",
+          "id": "OHIO_PROCLAMATION",
+          "title": "1763年公告线外王室保留区",
+          "hits": [
+            "proclamation"
+          ],
+          "kind": "paper_claim",
+          "type": null,
+          "vertices": 0,
+          "bbox": null,
+          "precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+          "source_urls": [
+            "https://www.nationalarchives.gov.uk/explore-the-collection/stories/anglo-indigenous-diplomacy-in-colonial-north-america/"
+          ],
+          "periods": [
+            {
+              "start_year": 1763,
+              "end_year": 1773
+            }
+          ]
+        },
+        {
+          "group": "zones",
+          "id": "CHARLESTON_GARRISON",
+          "title": "查尔斯顿英军占城与海港",
+          "hits": [
+            "charleston"
+          ],
+          "kind": "wartime_occupation",
+          "type": null,
+          "vertices": 0,
+          "bbox": null,
+          "precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+          "source_urls": [
+            "https://www.nps.gov/waro/learn/historyculture/timeline-of-the-war-for-independence.htm"
+          ],
+          "periods": [
+            {
+              "start_year": 1780,
+              "end_year": 1781
+            }
+          ]
+        },
+        {
+          "group": "zones",
+          "id": "ST_VINCENT",
+          "title": "圣文森特1763后英属殖民争夺",
+          "hits": [
+            "vincent"
+          ],
+          "kind": "administration",
+          "type": null,
+          "vertices": 0,
+          "bbox": null,
+          "precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+          "source_urls": [
+            "https://avalon.law.yale.edu/18th_century/paris763.asp"
+          ],
+          "periods": [
+            {
+              "start_year": 1763,
+              "end_year": 1778
+            },
+            {
+              "start_year": 1783,
+              "end_year": 1799
+            }
+          ]
+        },
+        {
+          "group": "zones",
+          "id": "ST_KITTS",
+          "title": "圣基茨英国殖民岛屿参考",
+          "hits": [
+            "carib"
+          ],
+          "kind": "administration",
+          "type": null,
+          "vertices": 0,
+          "bbox": null,
+          "precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+          "source_urls": [
+            "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+          ],
+          "periods": [
+            {
+              "start_year": 1700,
+              "end_year": 1781
+            },
+            {
+              "start_year": 1783,
+              "end_year": 1799
+            }
+          ]
+        },
+        {
+          "group": "zones",
+          "id": "NEVIS",
+          "title": "尼维斯英国殖民岛屿参考",
+          "hits": [
+            "carib"
+          ],
+          "kind": "administration",
+          "type": null,
+          "vertices": 0,
+          "bbox": null,
+          "precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+          "source_urls": [
+            "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+          ],
+          "periods": [
+            {
+              "start_year": 1700,
+              "end_year": 1781
+            },
+            {
+              "start_year": 1783,
+              "end_year": 1799
+            }
+          ]
+        },
+        {
+          "group": "zones",
+          "id": "ANTIGUA",
+          "title": "安提瓜英国殖民行政参考",
+          "hits": [
+            "carib"
+          ],
+          "kind": "administration",
+          "type": null,
+          "vertices": 0,
+          "bbox": null,
+          "precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+          "source_urls": [
+            "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+          ],
+          "periods": [
+            {
+              "start_year": 1700,
+              "end_year": 1799
+            }
+          ]
+        },
+        {
+          "group": "zones",
+          "id": "MONTSERRAT",
+          "title": "蒙特塞拉特英国殖民岛屿参考",
+          "hits": [
+            "carib"
+          ],
+          "kind": "administration",
+          "type": null,
+          "vertices": 0,
+          "bbox": null,
+          "precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+          "source_urls": [
+            "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+          ],
+          "periods": [
+            {
+              "start_year": 1700,
+              "end_year": 1781
+            },
+            {
+              "start_year": 1783,
+              "end_year": 1799
+            }
+          ]
+        },
+        {
+          "group": "zones",
+          "id": "BARBUDA",
+          "title": "巴布达英国殖民行政参考",
+          "hits": [
+            "carib"
+          ],
+          "kind": "administration",
+          "type": null,
+          "vertices": 0,
+          "bbox": null,
+          "precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+          "source_urls": [
+            "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+          ],
+          "periods": [
+            {
+              "start_year": 1700,
+              "end_year": 1799
+            }
+          ]
+        },
+        {
+          "group": "zones",
+          "id": "CAYMAN",
+          "title": "开曼群岛殖民隶属及奴役贸易参考",
+          "hits": [
+            "carib"
+          ],
+          "kind": "administration",
+          "type": null,
+          "vertices": 0,
+          "bbox": null,
+          "precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+          "source_urls": [
+            "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+          ],
+          "periods": [
+            {
+              "start_year": 1700,
+              "end_year": 1799
+            }
+          ]
+        },
+        {
+          "group": "zones",
+          "id": "BELIZE_LOGGING",
+          "title": "1783/1786条约下伯利兹英商采木权范围",
+          "hits": [
+            "belize"
+          ],
+          "kind": "trade_influence",
+          "type": null,
+          "vertices": 0,
+          "bbox": null,
+          "precision": "editorial_schematic_bounding_envelope_not_historical_survey",
+          "source_urls": [
+            "https://heritage.bnf.fr/france-ameriques/en/1783-peace-treaties"
+          ],
+          "periods": [
+            {
+              "start_year": 1783,
+              "end_year": 1799
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "data/nineteenth-century-territorial-areas-batch7.geojson",
+      "size_bytes": 2391231,
+      "counts": {
+        "features": 530
+      },
+      "matches": [
+        {
+          "group": "features",
+          "id": "st-vincent-continuity-1800",
+          "title": "圣文森特本岛 · 英国殖民行政",
+          "hits": [
+            "vincent"
+          ],
+          "kind": null,
+          "type": "Polygon",
+          "vertices": 22,
+          "bbox": [
+            -61.27937,
+            13.13251,
+            -61.12393,
+            13.38076
+          ],
+          "precision": null,
+          "source_urls": [
+            "https://www.uottawa.ca/about-us/official-languages-bilingualism-institute/clmc/linguistic-history/historic-documents/treaty-paris-1763",
+            "https://documentsdedroitinternational.fr/ressources/TdP/1783-09-03-TraitedeVersailles%28France%29.pdf",
+            "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/caribbean-social-and-cultural-history/"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "calcutta-1794-tollys-nullah-boundary-1800",
+          "title": "加尔各答法定南界 · 托利水道段",
+          "hits": [
+            "boundary"
+          ],
+          "kind": null,
+          "type": "LineString",
+          "vertices": 22,
+          "bbox": [
+            88.32428,
+            22.5396,
+            88.33317,
+            22.54962
+          ],
+          "precision": "source_backed_historical_line",
+          "source_urls": [
+            "https://upload.wikimedia.org/wikipedia/commons/b/b4/Selections_from_Calcutta_gazettes_vol.2_%281789-1797%29_%28IA_in.gov.ignca.31051%29.pdf",
+            "https://ignca.gov.in/Asi_data/30993.pdf",
+            "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/37906/GIPE-028116.pdf?isAllowed=y&sequence=3"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "calcutta-1794-bytaconnah-road-boundary-1800",
+          "title": "加尔各答法定东界 · 贝塔卡纳路段",
+          "hits": [
+            "boundary"
+          ],
+          "kind": null,
+          "type": "LineString",
+          "vertices": 11,
+          "bbox": [
+            88.36618,
+            22.55837,
+            88.36837,
+            22.56428
+          ],
+          "precision": "source_backed_historical_line",
+          "source_urls": [
+            "https://upload.wikimedia.org/wikipedia/commons/b/b4/Selections_from_Calcutta_gazettes_vol.2_%281789-1797%29_%28IA_in.gov.ignca.31051%29.pdf",
+            "https://ignca.gov.in/Asi_data/30993.pdf",
+            "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/37906/GIPE-028116.pdf?isAllowed=y&sequence=3"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "stanwix-council-grounds-1800",
+          "title": "斯坦威克斯堡旧址",
+          "hits": [
+            "treaty"
+          ],
+          "kind": null,
+          "type": "Point",
+          "vertices": 1,
+          "bbox": [
+            -75.45531,
+            43.2106,
+            -75.45531,
+            43.2106
+          ],
+          "precision": "named_place_anchor",
+          "source_urls": [
+            "https://irma.nps.gov/DataStore/FileSource/Get/2186013?filename=FOST_Fort+Stanwix+NM+Landscape_CLI+Update+Park+Report_2026-rev.pdf",
+            "https://home.nps.gov/articles/650027.htm"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "cockspur-fort-greene-1800",
+          "title": "科克斯珀岛东南部 · 格林堡",
+          "hits": [
+            "greene"
+          ],
+          "kind": null,
+          "type": "Point",
+          "vertices": 1,
+          "bbox": [
+            -80.88575,
+            32.0243,
+            -80.88575,
+            32.0243
+          ],
+          "precision": "named_place_anchor",
+          "source_urls": [
+            "https://home.nps.gov/articles/000/cockspur-island-before-fort-pulaski.htm",
+            "https://www.nps.gov/orgs/1539/the-southeast-chronicles-fort-pulaski-national-monument.htm",
+            "https://www.nps.gov/parkhistory/online_books/fopu/fopu_quarantine_hsr.pdf"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "charleston-old-town-1780-1800",
+          "title": "查尔斯敦旧城与商港",
+          "hits": [
+            "charleston"
+          ],
+          "kind": null,
+          "type": "Polygon",
+          "vertices": 66,
+          "bbox": [
+            -79.93735,
+            32.76961,
+            -79.92673,
+            32.78174
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://www.loc.gov/item/gm71002163/",
+            "https://www.loc.gov/item/gm71000887/",
+            "https://www.argomaps.org/maps/commonwealth-oai%3A4x51nj007/"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "charleston-horn-work-1800",
+          "title": "马里恩广场角堡旧址",
+          "hits": [
+            "charleston"
+          ],
+          "kind": null,
+          "type": "Point",
+          "vertices": 1,
+          "bbox": [
+            -79.93633,
+            32.78675,
+            -79.93633,
+            32.78675
+          ],
+          "precision": "named_place_anchor",
+          "source_urls": [
+            "https://www.ccpl.org/charleston-time-machine/horn-work-marion-squares-tabby-fortress",
+            "https://www.ccpl.org/uncovering-history-locating-horn-work-under-marion-square",
+            "https://www.hmdb.org/m.asp?m=67437"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "charleston-old-exchange-1800",
+          "title": "查尔斯敦旧交易所与军警监所",
+          "hits": [
+            "charleston"
+          ],
+          "kind": null,
+          "type": "Point",
+          "vertices": 1,
+          "bbox": [
+            -79.92684,
+            32.77686,
+            -79.92684,
+            32.77686
+          ],
+          "precision": "named_place_anchor",
+          "source_urls": [
+            "https://www.nationalregister.sc.gov/charleston/S10817710010/index.htm",
+            "https://npgallery.nps.gov/NRHP/GetAsset/NHLS/69000160_text",
+            "https://mapcarta.com/W491702219"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "charleston-gadsden-wharf-1800",
+          "title": "查尔斯敦加兹登码头",
+          "hits": [
+            "charleston"
+          ],
+          "kind": null,
+          "type": "Point",
+          "vertices": 1,
+          "bbox": [
+            -79.92584,
+            32.78761,
+            -79.92584,
+            32.78761
+          ],
+          "precision": "named_place_anchor",
+          "source_urls": [
+            "https://www.loc.gov/item/gm71002163/",
+            "https://www.ccpl.org/charleston-time-machine/story-gadsdens-wharf",
+            "https://www.ccpl.org/charleston-time-machine/ansons-landing-to-gadsdens-wharf-a-brief-history"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "charleston-st-michael-church-1800",
+          "title": "查尔斯敦圣迈克尔教堂",
+          "hits": [
+            "charleston"
+          ],
+          "kind": null,
+          "type": "Point",
+          "vertices": 1,
+          "bbox": [
+            -79.93067,
+            32.7763,
+            -79.93067,
+            32.7763
+          ],
+          "precision": "named_place_anchor",
+          "source_urls": [
+            "https://www.scencyclopedia.org/sce/entries/st-michaels-church/",
+            "https://citeseerx.ist.psu.edu/document?doi=575c801c1a696951c9e1e48b8ef92c5576a341ce&repid=rep1&type=pdf",
+            "https://www.scencyclopedia.org/sce/entries/charleston/"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "charleston-old-state-house-1800",
+          "title": "查尔斯敦旧议会楼与县法院",
+          "hits": [
+            "charleston"
+          ],
+          "kind": null,
+          "type": "Point",
+          "vertices": 1,
+          "bbox": [
+            -79.93122,
+            32.77663,
+            -79.93122,
+            32.77663
+          ],
+          "precision": "named_place_anchor",
+          "source_urls": [
+            "https://www.studentconnection.scstatehouse.gov/state-house-history",
+            "https://home.nps.gov/places/charleston-county-courthouse.htm",
+            "https://www.ccpl.org/charleston-time-machine/charles-towns-growing-pains"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "kingstown-historic-port-1800",
+          "title": "金斯敦 · 港城旧街区",
+          "hits": [
+            "vincent",
+            "kingstown"
+          ],
+          "kind": null,
+          "type": "Polygon",
+          "vertices": 26,
+          "bbox": [
+            -61.23105,
+            13.15072,
+            -61.22279,
+            13.15776
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/582086475",
+            "https://www.loc.gov/item/74691678/",
+            "https://www.loc.gov/item/2004670068/"
+          ],
+          "periods": []
+        },
+        {
+          "group": "features",
+          "id": "grand-river-haldimand-headwaters-1800",
+          "title": "大河六族 · 源头土地范围争议",
+          "hits": [
+            "proclamation"
+          ],
+          "kind": null,
+          "type": "Polygon",
+          "vertices": 9,
+          "bbox": [
+            -80.58262,
+            43.66273,
+            -80.20741,
+            44.28137
+          ],
+          "precision": "source_backed_historical_outline",
+          "source_urls": [
+            "https://iaac-aeic.gc.ca/050/documents/p80100/130877E.pdf",
+            "https://www.sixnations.ca/about/key-issues/land-claims/",
+            "https://www.ontario.ca/page/six-nations-grand-river"
+          ],
+          "periods": []
+        }
+      ]
+    },
+    {
+      "path": "data/nineteenth-century-spatial-1800-1819.geojson",
+      "size_bytes": 43096,
+      "counts": {
+        "features": 23
+      },
+      "matches": []
+    },
+    {
+      "path": "data/eighteenth-century-editor37-5ab-physical-areas.geojson",
+      "size_bytes": 107544,
+      "counts": {
+        "features": 26
+      },
+      "matches": [
+        {
+          "group": "features",
+          "id": "EDITOR37_5AB_1763_FRENCH_RESTORED_ISLANDS",
+          "title": "1763年巴黎和约｜瓜德罗普、马提尼克与圣卢西亚归法",
+          "hits": [
+            "treaty"
+          ],
+          "kind": "1763_treaty_return",
+          "type": "MultiPolygon",
+          "vertices": 245,
+          "bbox": [
+            -61.79784,
+            13.71467,
+            -60.81041,
+            16.51309
+          ],
+          "precision": "reused_project_10m_island_shore_components",
+          "source_urls": [
+            "https://avalon.law.yale.edu/18th_century/paris763.asp",
+            "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+            "https://www.academia.edu/120625771/La_Guadeloupe_de_1803_%C3%A0_1816_de_l_Empire_%C3%A0_la_Restauration"
+          ],
+          "periods": [
+            {
+              "start_year": 1763,
+              "end_year": 1763
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "data/eighteenth-century-editor37-5ac-surveyed-geography.geojson",
+      "size_bytes": 259583,
+      "counts": {
+        "features": 38
+      },
+      "matches": []
+    },
+    {
+      "path": "data/eighteenth-century-editor36-5z-waterways.geojson",
+      "size_bytes": 788038,
+      "counts": {
+        "features": 18
+      },
+      "matches": []
+    }
+  ]
+}

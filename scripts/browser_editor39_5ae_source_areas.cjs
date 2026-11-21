@@ -1,0 +1,80 @@
+const assert=require('node:assert/strict');
+const {chromium}=require('playwright');
+(async()=>{
+ const browser=await chromium.launch();
+ try{
+  const page=await browser.newPage({viewport:{width:1780,height:1020}});
+  page.setDefaultTimeout(45000);
+  await page.goto((process.env.ATLAS_TEST_URL||'http://127.0.0.1:8765/')+
+   '?review18c=1&review19c=1&year=1780',{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>window.eighteenthEditor39FiveAE?.getAudit()?.loaded===true);
+  await page.waitForFunction(()=>document.querySelector('#workspace')?.dataset.atlasReady==='true');
+  await page.waitForFunction(()=>window.eighteenthMassSpatial?.getAudit()?.loaded===true);
+  const audit=()=>page.evaluate(()=>window.eighteenthEditor39FiveAE.getAudit());
+  const set=async y=>{
+   await page.evaluate(y=>window.atlasStoryBridge.setYear(y),y);
+   await page.waitForFunction(y=>window.eighteenthEditor39FiveAE.getAudit().year===y,y);
+  };
+  let a=await audit();assert.equal(a.featureCount,15);
+  assert.equal(a.polygonCount,5);assert.equal(a.physicalLineCount,6);
+  await set(1755);a=await audit();
+  assert(await page.evaluate(()=>window.AtlasPointToArea5AE.replacesPoint('EDITOR37_5AC_ANNAPOLIS_FORT_ANNE',1755)));
+  assert(await page.evaluate(()=>window.eighteenthMassSpatial.getAudit().activeRegionalZones.includes('FORT_ANNE_ROYAL_PORT')));
+  assert(!await page.evaluate(()=>document.querySelector('[data-editor37-5ac-id="EDITOR37_5AC_ANNAPOLIS_FORT_ANNE"]')));
+  await set(1762);a=await audit();
+  assert(!a.activeIds.includes('EDITOR39_5AE_PROCLAMATION_NORTH'));
+  await set(1763);a=await audit();
+  assert(a.activeIds.includes('EDITOR39_5AE_PROCLAMATION_NORTH'));
+  assert(a.activeIds.includes('EDITOR39_5AE_PROCLAMATION_SOUTH'));
+  assert(!a.activeIds.includes('EDITOR39_5AE_ST_VINCENT_1773_TREATY_DIVIDE'));
+  assert(!await page.evaluate(()=>window.eighteenthBatch36Spatial.getAudit().activeZoneIds.includes('B36-Z023')));
+  await set(1769);a=await audit();
+  assert(await page.evaluate(()=>window.AtlasPointToArea5AE.replacesPoint('EDITOR38_5AD_MADRAS_TREATY_1769',1769)));
+  assert(!await page.evaluate(()=>document.querySelector('[data-editor38-5ad-id="EDITOR38_5AD_MADRAS_TREATY_1769"]')));
+  await set(1773);a=await audit();
+  assert(await page.evaluate(()=>window.AtlasPointToArea5AE.replacesPoint('EDITOR37_5AB_BEYIN',1773)));
+  assert(!await page.evaluate(()=>document.querySelector('[data-editor37-5ab-id="EDITOR37_5AB_BEYIN"]')));
+  assert(a.activeIds.includes('EDITOR39_5AE_ST_VINCENT_1773_TREATY_DIVIDE'));
+  assert(a.activeIds.includes('EDITOR39_5AE_ST_VINCENT_ISLAND_CONTEXT'));
+  await set(1774);a=await audit();
+  assert(a.activeIds.includes('EDITOR39_5AE_FALKLANDS_ISLANDS_1774'));
+  await set(1780);a=await audit();
+  assert(await page.evaluate(()=>window.AtlasPointToArea5AE.replacesPoint('EDITOR38_5AD_ARCOT_1780',1780)));
+  assert(!await page.evaluate(()=>document.querySelector('[data-editor38-5ad-id="EDITOR38_5AD_ARCOT_1780"]')));
+  assert(a.activeIds.includes('EDITOR39_5AE_LENUD_FERRY_MARKER'));
+  assert(a.activeIds.includes('EDITOR39_5AE_RIVER_SANTEE'));
+  await page.evaluate(()=>window.__eighteenthSpatialHost.map.setView([33.297283,-79.6844],12,{animate:false}));
+  await page.waitForFunction(()=>!!document.querySelector('[data-editor39-5ae-id="EDITOR39_5AE_LENUD_FERRY_MARKER"]'));
+  await page.evaluate(()=>{
+   document.querySelector('[data-editor39-5ae-id="EDITOR39_5AE_LENUD_FERRY_MARKER"]')
+    .dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}));
+  });
+  await page.waitForFunction(()=>document.querySelector('#dossierBody')?.textContent?.includes('莱努德'));
+  assert((await page.locator('#dossierBody').innerText()).includes('历史来源'));
+  assert.equal(await page.evaluate(()=>window.AtlasPublicCopyGuard.visibleWarnings().length),0);
+  await set(1786);a=await audit();
+  assert(a.activeIds.includes('EDITOR39_5AE_BELIZE_CARIBBEAN_SHORE'));
+  await set(1794);a=await audit();
+  assert(a.activeIds.includes('EDITOR39_5AE_CORSICA_ISLAND_1794'));
+  assert(a.activeIds.includes('EDITOR39_5AE_COORG_MADIKERI_FORT'));
+  await set(1796);a=await audit();
+  assert(a.activeIds.includes('EDITOR39_5AE_CORSICA_ISLAND_1794'));
+  assert(a.activeIds.includes('EDITOR39_5AE_BALICEAUX_GARIFUNA_ISLAND'));
+  await set(1797);a=await audit();
+  assert(!a.activeIds.includes('EDITOR39_5AE_CORSICA_ISLAND_1794'));
+  assert(a.activeIds.includes('EDITOR39_5AE_BALICEAUX_GARIFUNA_ISLAND'));
+  await set(1799);a=await audit();
+  assert(await page.evaluate(()=>window.AtlasPointToArea5AE.replacesPoint('EDITOR38_5AD_TELLICHERRY_FORT',1799)));
+  assert(!await page.evaluate(()=>document.querySelector('[data-editor38-5ad-id="EDITOR38_5AD_TELLICHERRY_FORT"]')));
+  assert(a.activeIds.includes('EDITOR39_5AE_FALKLANDS_ISLANDS_1774'));
+  assert(a.activeIds.includes('EDITOR39_5AE_COORG_MADIKERI_FORT'));
+  assert(!a.activeIds.includes('EDITOR39_5AE_BALICEAUX_GARIFUNA_ISLAND'));
+  await set(1800);a=await audit();
+  assert(a.activeIds.includes('EDITOR39_5AE_YORK_HUDSON_SHORE'));
+  assert(a.activeIds.includes('EDITOR39_5AE_BELIZE_CARIBBEAN_SHORE'));
+  assert(!a.activeIds.includes('EDITOR39_5AE_COORG_MADIKERI_FORT'));
+  await set(1801);a=await audit();assert.equal(a.visibleLayers,0);
+  await set(1699);a=await audit();assert.equal(a.visibleLayers,0);
+  console.log('PASS Editor39 5AE Chromium: 1763 boundary, 1773 treaty, 1780 battle, 1794 Corsica, 1796 Baliceaux, 1799–1800 atlas clicks.');
+ }finally{await browser.close()}
+})().catch(e=>{console.error(e);process.exitCode=1});
