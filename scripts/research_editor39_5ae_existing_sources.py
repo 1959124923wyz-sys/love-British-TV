@@ -73,3 +73,20 @@ p.write_text(json.dumps({"schema":"editor39_5ae_unresolved_rectangles_v1","count
  "records":old},ensure_ascii=False,indent=2)+"\n")
 print("UNRESOLVED legacy boxes",len(old),"active1799",
  sum(any(q["start_year"]<=1799<=q["end_year"] for q in z.get("periods",[])) for z in old))
+
+# Concise lookup for all 18C published true polygons/lines; useful for eliminating
+# redundant rectangles without duplicated or invented geometry.
+mass=json.loads((ROOT/"data/eighteenth-century-mass-schematic-zones-1700-1799.json").read_text())
+all_geos=[]
+for kind in ["regional_zones","regional_lines","coastal_rights","regional_sites"]:
+ for z in mass.get(kind,[]):
+  g=z.get("geometry") or {}
+  if g.get("type") not in {"Point","Polygon","MultiPolygon","LineString","MultiLineString"}:continue
+  all_geos.append({"id":z.get("id"),"group":kind,"title":z.get("title"),"kind":z.get("kind"),
+   "geometry_type":g.get("type"),"vertices":vertices(g.get("coordinates",[])),
+   "bbox":bbox(g.get("coordinates",[])),"periods":z.get("periods"),
+   "source_urls":(z.get("source_urls") or [])[:3]})
+p=ROOT/"docs/research/18C_5AE_ALL_PUBLISHED_SHAPES.json"
+p.write_text(json.dumps({"schema":"editor39_5ae_all_published_source_shapes_v1","count":len(all_geos),
+ "shapes":all_geos},ensure_ascii=False,indent=2)+"\n")
+print("PUBLISHED polygon/line/point GIS anchors",len(all_geos))
