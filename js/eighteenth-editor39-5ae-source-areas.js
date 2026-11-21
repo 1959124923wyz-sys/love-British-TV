@@ -7,8 +7,8 @@ const host=window.__eighteenthSpatialHost;if(!host)return;
 const pointAreaPromotions=Object.freeze({
  EDITOR38_5AD_TELLICHERRY_FORT:{layer:'mass',polygon:'MYSORE_TELLICHERRY_FORT',start:1708,end:1799},
  EDITOR38_5AD_MADRAS_TREATY_1769:{layer:'mass',polygon:'MADRAS_ST_GEORGE_SIEGE',start:1769,end:1769},
- EDITOR38_5AD_ARCOT_1780:{layer:'mass',polygon:'ARCOT_FORT_CORE',start:1780,end:1780},
- EDITOR37_5AC_ANNAPOLIS_FORT_ANNE:{layer:'mass',polygon:'FORT_ANNE_ROYAL_PORT',start:1755,end:1755},
+ EDITOR38_5AD_ARCOT_1780:{layer:'mass',polygon:'ARCOT_FORT_CORE',start:1780,end:1781},
+ EDITOR37_5AC_ANNAPOLIS_FORT_ANNE:{layer:'mass',polygon:'FORT_ANNE_ROYAL_PORT',start:1755,end:1763},
  EDITOR37_5AB_BEYIN:{layer:'5ab',polygon:'EDITOR37_5AB_BEYIN_FORT_AFTER_1773',start:1773,end:1799}
 });
 window.AtlasPointToArea5AE={
