@@ -7,7 +7,7 @@
 - 十八世纪旧矩形按源档 `bbox`、`!geometry`、`!superseded_by` 全部筛查：**26→3 条**；其中1799年仍有 **12→1 条**；1497—1799前期合计 **52→29 条**。新增 `superseded_by` 23 处，旧记录所有年份、原始笔记、经纬度参考框与网页来源全部保留；旧框逐条ID和对应的正式几何见下面。
 - 新增 **15组真实来源GIS**：5组自然岛岸／历史堡址多边形、9组官方历史界线或 Natural Earth 地形折线、1个有登记纪念碑出处的地理点。真实GIS折点均直接从原文献/数据抽取，绝不沿人工矩形或凭两点连线构造航线。
 - 按新的追加任务，把 **5个已经存在历史城堡多边形的点位显示升级为面**，全是使用仓库原有、已审过的多边形。面积统计禁用，靠来源可靠程度标虚线。旧点及来源数据保留不删除。
-- 原始全仓筛查 `docs/research/18C_5AE_OLD_RECTANGLE_INVENTORY.json`，GIS源资料候选 `docs/research/18C_5AE_EXISTING_GEOMETRY_INVENTORY.json`，筛查全部可用面图 `docs/research/18C_5AE_ALL_PUBLISHED_SHAPES.json` 与 `18C_5AE_HISTORIC_SHAPE_SHORTLIST.json`。
+- 原始26条冻结清单 `docs/research/18C_5AE_BASELINE_26_RECTANGLES.json`；新一轮当前仍未处理3条记录见 `docs/research/18C_5AE_OLD_RECTANGLE_INVENTORY.json`，GIS源资料候选 `docs/research/18C_5AE_EXISTING_GEOMETRY_INVENTORY.json`，筛查全部可用面图 `docs/research/18C_5AE_ALL_PUBLISHED_SHAPES.json` 与 `18C_5AE_HISTORIC_SHAPE_SHORTLIST.json`。
 
 ## 实测历史地理
 
