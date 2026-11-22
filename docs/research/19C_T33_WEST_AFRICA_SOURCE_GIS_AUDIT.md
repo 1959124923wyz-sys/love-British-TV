@@ -31,6 +31,12 @@
 
 Kirk调查转录的**£50/£10/£100**为公司陈述的收费条件，不能当实际财政收益。Pitt-Rivers函件的**£7＋£9＝£16**是两件贝宁旧物的买方交易记录，不能当全部战利品估值；1887–1897年被放逐的Jaja、Nana、Ovonramwen需要分案追责，不把三案处罚、家产和损失合并计数。
 
+### 1894年Ebrohimi堡垒旧地图：新找到的可用档案目录
+
+2026-11-22另查到英国皇家格林尼治博物馆／国家海事博物馆 1894 年影印档案 **[MSS/73/089](https://www.rmg.co.uk/collections/archive/rmgc-object-463260)**，馆方目录原题为 *Xerox of an account of the war against Chief Nana, 1894, including map of the area and the African fortress of Broheme, in the Niger Delta*，含**Broheme/Ebrohimi堡垒及周边地区地图**。这是此前没有取得的直接历史测图线索，但馆方公开目录尚未放出可配准的图像；**目前不能从档案题名反推坐标／堡垒轮廓**。应取档案原影、核历史河网基准，再决定堡垒定位精度及可绘的虚线和实线。
+
+同一馆已登记 Nana Olomu 在1894年战事中被缴获的旗帜 **[AAA0555](https://www.rmg.co.uk/collections/objects/rmgc-object-555)**（目录明确 *flag was captured during the expedition of 1894*），另有其个人旗帜 **[AAA0556](https://www.rmg.co.uk/collections/objects/rmgc-object-556)**（记录关联1894年远征）。应继续核两旗的军队缴获人、舰船移交、入馆手续和旧王室权属；勿先行推断每面旗帜的具体缴获房屋和实际转运航线。
+
 ## 三、十年图层与落图责任
 
 | 年代 | 新参考点 | 对应考证事件 |
