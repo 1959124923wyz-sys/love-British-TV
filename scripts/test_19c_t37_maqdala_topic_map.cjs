@@ -8,12 +8,16 @@ const load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const story=load('data/stories/serial/e19-t37-maqdala-expedition-looting-1867-1872.json');
 const index=load('data/stories/serial/index.json');
 const meta=index.topics.find(t=>t.id===story.id);
-assert(meta&&meta.status==='editorial_review'&&meta.publication_review==='not_submitted');
+assert(meta&&meta.status==='published'&&meta.publication_review==='approved');
+assert(meta.publication_note?.includes('主编2026-11-22出版核验'));
+
 assert.equal(story.sections.length,12);
 const sourceIds=new Set(story.sources.map(s=>s.id));assert.equal(sourceIds.size,16);
 for(const s of story.sources)assert(s.url.startsWith('https://')&&s.label&&s.access);
 const pattern=/\[\[([A-Za-z0-9-]+)\|([^\]\n]{1,100})\]\]/g;
 const ids=story.sections.flatMap(sec=>{assert(sec.source_keys.length&&sec.source_keys.every(id=>sourceIds.has(id)),sec.id);assert(story.topic_source_claims.some(s=>s.section_id===sec.id));return sec.paragraphs.flatMap(p=>[...p.matchAll(pattern)].map(m=>m[1]));});
+for(const sec of story.sections)for(const p of sec.paragraphs)assert(!/(地图路线|待.*配准|图上|绘图|GIS|不应继续在.*地图|原测图)/.test(p),'public article includes internal GIS note: '+sec.id);
+for(const src of story.sources)assert(!/(待核|待原图|未取得.*配准|参考点|堡墙测绘)/.test(src.access),'public source includes GIS note: '+src.id);
 assert.equal(ids.length,12);assert.equal(new Set(ids).size,12);assert.deepEqual(new Set(meta.event_ids),new Set(ids));
 const events=new Map(),maps=[];
 for(const start of [1860,1870]){
@@ -49,4 +53,4 @@ assert.equal(events.get('E19-T37-1872-YOHANNES-REQUEST').lng,null);
 assert(maps.some(f=>f.id==='t37-maqdala-1868'&&f.properties.mapping_method.includes('11.2N')));
 const board=fs.readFileSync(path.join(root,'research/19c/consolidated/TOPIC_WORKBOARD.csv'),'utf8').split('\n').find(x=>x.startsWith('T37,'));
 assert(board.includes('review_ready'));
-console.log('PASS T37: 12 sections, 12 live chronology links, 11 GIS (8 sourced reference points / 3 dashed links), no territorial polygon');
+console.log('PASS published T37: 12 sections, 12 live chronology links, 11 GIS (8 sourced reference points / 3 dashed links), no territorial polygon');
