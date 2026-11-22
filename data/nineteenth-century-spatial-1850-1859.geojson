@@ -12775,6 +12775,51 @@
         "stable_id": "burma-pegu-northern-frontier-yule-1857",
         "dash_only": true
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t33-lagos-naval-intervention-1850s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.394673,
+          6.454066
+        ]
+      },
+      "properties": {
+        "stable_id": "t33-lagos-naval-intervention",
+        "name": "拉各斯：1851英军炮击及1852条约",
+        "start_year": 1851,
+        "end_year": 1852,
+        "display_kind": "conflict",
+        "summary_zh": "拉各斯：1851英军炮击及1852条约。位置采用现代地名中心作为历史资料定位参考，旧堡、军路、行政界需同步原图。",
+        "source_ids": [
+          "19C-T33-C15-S01",
+          "19C-T33-C15-S04",
+          "19C-T33-GEO-LAGOS"
+        ],
+        "source_urls": [
+          "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/lagos-consulate-18511861-an-outline/34C1206738F437DDE69C63879D4BF087",
+          "https://ugspace.ug.edu.gh/bitstreams/dfe23897-ce0a-468e-a62c-1a802cdf5793/download",
+          "https://www.geonames.org/2332453/lagos.html"
+        ],
+        "related_event_ids": [
+          "E19-T33-1851-LAGOS-ATTACK",
+          "E19-T33-1852-LAGOS-TREATY"
+        ],
+        "named_anchors": [
+          "LAGOS"
+        ],
+        "mapping_method": "英国同期法律/议会/殖民史料与现代GeoNames/UNGEGN/OSM具名地理参照互核；不据此描绘原战场、王宫、河界或主权范围",
+        "geo_precision": "modern_named_lagos_reference_not_historic_boundary",
+        "geometry_source": "Named modern urban/locality reference WGS84, not historic cadastral survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "Lagos_local_royal_rule_with_British_military_interference"
+      }
     }
   ]
 }

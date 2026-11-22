@@ -3570,6 +3570,50 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "new_zealand_colonial_military_legal_action_only_at_documented_named_locality"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t33-lagos-cession-governance-1870s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.394673,
+          6.454066
+        ]
+      },
+      "properties": {
+        "stable_id": "t33-lagos-cession-governance",
+        "name": "拉各斯：英国殖民官署延续",
+        "start_year": 1870,
+        "end_year": 1879,
+        "display_kind": "political",
+        "summary_zh": "拉各斯：英国殖民官署延续。位置采用现代地名中心作为历史资料定位参考，旧堡、军路、行政界需同步原图。",
+        "source_ids": [
+          "19C-T33-C15-S02",
+          "19C-T33-C15-S04",
+          "19C-T33-GEO-LAGOS"
+        ],
+        "source_urls": [
+          "https://www.thegazette.co.uk/London/issue/22549/page/3785/data.pdf",
+          "https://ugspace.ug.edu.gh/bitstreams/dfe23897-ce0a-468e-a62c-1a802cdf5793/download",
+          "https://www.geonames.org/2332453/lagos.html"
+        ],
+        "related_event_ids": [
+          "E19-T33-1861-LAGOS-CESSION"
+        ],
+        "named_anchors": [
+          "LAGOS"
+        ],
+        "mapping_method": "英国同期法律/议会/殖民史料与现代GeoNames/UNGEGN/OSM具名地理参照互核；不据此描绘原战场、王宫、河界或主权范围",
+        "geo_precision": "modern_named_lagos_reference_not_historic_boundary",
+        "geometry_source": "Named modern urban/locality reference WGS84, not historic cadastral survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "British_crown_colony_at_Lagos_named_locality"
+      }
     }
   ]
 }
