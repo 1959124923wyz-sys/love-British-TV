@@ -526,7 +526,8 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1849-LOUISBURGH-DELPHI')));
   assert.equal(await pointStroke(57.650136,-7.345310),'#a5cdec');
   assert.equal(await pointStroke(-42.581667,148.070000),'#65c7b6');
-  assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(49.72,-125.63)),1);
+  // The 1849 grant footprint and the separate colony overlap at this location.
+  assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(49.72,-125.63)),2);
   assert.equal(await page.evaluate(()=>window.historicOverlapDossier.hitCountAt(49.72,-124.1)),0);
   assert.equal(await pointStroke(50.692778,-127.410833),'#65c7b6');
   assert.equal(await pointStroke(-28.525,150.152),'#65c7b6');
@@ -630,6 +631,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1842-KABUL-GANDAMAK-JALALABAD')));
   await jump(1843);
   assert.equal(await pointStroke(22.28606,114.14767),'#c5a6f5');
+  await page.locator('#mapLayerEvents').uncheck();
   const hongKong=await page.evaluate(()=>{
    const map=window.__historicOverlapHost.map,bounds=map.getContainer().getBoundingClientRect();
    const point=map.latLngToContainerPoint([22.28606,114.14767]);
@@ -638,6 +640,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await page.mouse.click(...hongKong);
   await page.locator('#dossierBody h2').filter({hasText:'英国殖民政府'}).waitFor();
   await page.locator('#resetDossier').click();
+  await page.locator('#mapLayerEvents').check();
   await jump(1842);
   assert.equal(await pointStroke(25.3844,68.3727),'#65c7b6');
   await jump(1843);
@@ -687,6 +690,7 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   assert.equal(await pointStroke(-39.930902,175.052305),'#c5a6f5');
   assert(await page.evaluate(()=>window.atlasStoryBridge.activeEventWindow().routeIds.includes('E19-ROUTE-1846-MATAI-TAUA-HOROKIRI')));
   const ruaPosition=[-35.45641,174.14354];
+  await page.locator('#mapLayerEvents').uncheck();
   await page.locator('#workspace').evaluate(el=>Promise.all(el.getAnimations().map(a=>a.finished.catch(()=>{}))));
   await page.evaluate(position=>window.__historicOverlapHost.map.stop().invalidateSize({pan:false}).setView(position,10,{animate:false}),ruaPosition);
   const ruaMarker=await page.evaluate(([lat,lon])=>{
@@ -702,8 +706,10 @@ const assetDir=process.env.ATLAS_TEST_CDN_MIRROR;
   await ruaArea.locator('[data-area-event="E19-NZ-1846-RUA-ENTRY"]').click();
   assert.equal(await selected(),'E19-NZ-1846-RUA-ENTRY');
   await page.locator('#resetDossier').click();
+  await page.locator('#mapLayerEvents').check();
   await jump(1847);
-  assert.equal(await page.evaluate(([lat,lng])=>window.historicOverlapDossier.hitCountAt(lat,lng),ruaPosition),0);
+  assert(!(await page.evaluate(()=>window.__historicOverlapHost.visibleAreaFeatures()
+   .some(row=>row.feature.id==='nz-ruapekapeka-pa'))));
   for(let y=1840;y<=1849;y++){
    await jump(y);
    await assertClean();
