@@ -60,7 +60,7 @@ for(const f of points){
  a(p.related_event_ids.every(x=>unique.has(x)),f.id);
  a.equal(p.historical_boundary_confirmed,false);a.equal(p.fill_authorized,false);
  a.equal(p.territorial_claim,false);a.equal(p.area_sqkm,null);
- a.equal(p.exclude_from_area_aggregation,true);a(p.geo_precision.includes('not_'),f.id);
+ a.equal(p.exclude_from_area_aggregation,true);a(p.geo_precision.startsWith('modern_')&&(/not_|unlocated|candidate/.test(p.geo_precision)),f.id);
 }
 for(const id0 of ['E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES','E19-T14-SINDH-PUNJAB-AWADH-CONQUEST-EXPROPRIATION','E19-T46-AUSTRALIAN-FRONTIER-LAND-VIOLENCE'])a.equal(idx.topics.find(x=>x.id===id0)?.status,'published');
 console.log('PASS T21 Burma: 36 sections, 97 paragraphs, 93 sources, 109 source-backed event links (97 reused/12 new), 1891 violence, 1876 law, 1899 rice, 4 named points');
