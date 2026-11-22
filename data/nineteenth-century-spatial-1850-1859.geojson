@@ -1370,12 +1370,12 @@
         "type": "LineString",
         "coordinates": [
           [
-            141.0,
-            -29.0
+            141,
+            -29
           ],
           [
             148.95788398333332,
-            -29.0
+            -29
           ]
         ]
       },
@@ -5266,7 +5266,7 @@
             ],
             [
               80.2,
-              28.0
+              28
             ],
             [
               80.03,
@@ -5584,7 +5584,7 @@
           "法扎巴德",
           "萨尔达河"
         ],
-        "mapping_method": "Dashed generalized outline read from the red boundary shading of the Survey of India map printed April 1855, based on the January 1848 map. Piecewise interpolation against labeled latitude and longitude lines. Outer jurisdiction only; no year-by-year combat area or calculated land area.",
+        "mapping_method": "Dashed generalized outline read from the red boundary shading of the Survey of India map printed April 1855, based on the January 1848 map. Piecewise interpolation against labeled latitude and longitude lines. Outer jurisdiction only; no year-by-year combat area or calculated land area.. 2026-11-22 T14 audit explicitly enforces dashed uncertain outline only; does not depict each district's actual land confiscation.",
         "related_event_ids": [
           "E19-AWD-1855-MINUTE",
           "E19-AWD-1856-ANNEX",
@@ -5628,7 +5628,9 @@
             "title": "阿瓦德 · 重占、没收与重新授地",
             "summary_zh": "殖民军重占勒克瑙后，印度总督宣布没收省内大部分土地的所有权，随后重新发给归顺者。"
           }
-        ]
+        ],
+        "dash_only": true,
+        "outline_style": "dashed"
       }
     },
     {
