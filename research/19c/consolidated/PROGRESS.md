@@ -1,5 +1,14 @@
 # 归档进度
 
+## 2026-11-22 · 主编46 R2 T10正式发布，生产49/49、出版48/48、Pages构建部署双成功
+
+- [制作PR #518](https://github.com/1959124923wyz-sys/love-British-TV/pull/518) **49/49 GitHub Actions全部成功**，merge SHA `c893dd3f88458c4f7591dc130674abdfa395df9c`；[正式出版PR #519](https://github.com/1959124923wyz-sys/love-British-TV/pull/519) **48/48全部成功**（含旧16世纪网页交互一次重试成功），squash SHA `a5e895859914a0da424d4908289a8e6bd989019d`。T10专项Node、严格GIS与1780×1020真实Chrome均成功。
+- [正式Pages工作流 #45003796678](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45003796678) **build=success / deploy=success**。正式入口为 [1847年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1847) 和 [1861年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1861)，无需`review19c=1`。源数据已核对 `status=published`、`publication_review=approved`，两章记 `published_new`。
+- 交付范围：**T10.1/T10.2两章28节84段、50条史料、34个有证正文互动事件**（28旧事件ID复用、6个1861新事件）、1个Letterkenny城镇具名GIS参考点、0个捏造地产Polygon。1847救济法、1849司法出售、1861年德里维格47令/244人/159儿童/28毁屋/200警力与7月2日调查动议23:88分别留证。
+- 旧版七节`E19-IR-FAMINE-RELIEF`仍 `editorial_review/not_submitted` 用于档案交叉核实，避免正文重复公开；原卷6个待核问题及后续地籍与救济官原档保持开放，详 [T10长期待办](T10_NEXT_ACTIONS.md) / [来源GIS审计](../../../docs/research/19C_T10_IRISH_FAMINE_SOURCE_GIS_AUDIT.md)。下一制作顺位可转R2 T21英缅战争，T48新西兰土地没收同为候选。
+- 59专题、150章节工作板已回填这两次真实合并与Pages验收，无需用户手动处理GitHub代码。
+
+
 ## 2026-11-22 · T10正式出版授权与发布门禁
 
 - 用户明确要求将T10制作内容合并并全部上站。已建正式发布分支 `release/19c-t10-irish-famine-publication-20261122`，拟将新母专题 `E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES` 设置为 `published / approved`，普通网站1847和1861年代入口均可用；修改前的旧7节E19-IR-FAMINE-RELIEF仍保留独立编审，避免同事件重复公布。
