@@ -58,3 +58,7 @@
 8. 1849旁遮普与1855阿瓦德原调查地籍、地图比例尺、行政边界与现有示意地图配准；未经原件精确校准仍全部虚线。
 
 **出版门禁**：T14当前仅 `editorial_review / not_submitted`。必须先通过专用Node来源、地理和51事件合同及1780×1020真实桌面Chrome，才可制作PR合并。普通站上线另经出版批准和GitHub Pages deploy双成功。
+
+## 2026-11-22 · 生产QA与出版审批补充
+
+主编制作[PR #515](https://github.com/1959124923wyz-sys/love-British-TV/pull/515)49/49项全站检查全部通过并合并主分支，提交 `5b97aede9766610784e983945585d86f6fca5bfa`。T14的29节87段、30史料与51复用事件已入主分支。独立出版审核会强制历史故事白名单与无编审预览参数的真实桌面Chrome，母专题登记为`published/approved`、三章工作板为`published_new`，**正式上线以出版PR所有检查通过及GitHub Pages build/deploy双成功为准**。本文的战利品原账、原国库名册、王宫财产与地主地籍待核项目仍有效。
