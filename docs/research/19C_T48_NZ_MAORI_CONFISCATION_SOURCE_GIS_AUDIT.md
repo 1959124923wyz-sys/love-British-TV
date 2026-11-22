@@ -50,3 +50,8 @@
 ## 自动验收门禁
 
 `node scripts/test_19c_t48_new_zealand.cjs` 核43/129/73/81、73新年表、15个准确地名点以及原案ID、各十年可点击链接；`scripts/browser_19c_t48_new_zealand.py` 以**1780×1020 Chrome**检查1845/1863/1864/1865/1869/1879/1880/1881/1882历史跳转、Parihaka和Rīpapa地图镜头、图层开关、双击进入并返回。附 `.github/workflows/19c-t48-new-zealand.yml`。当前仍为制作版`editorial_review/not_submitted`，待独立出版PR与GitHub Pages真实build/deploy验证之后才称正式发布。
+
+## 制作版合并与独立出版候审（2026-11-22）
+
+- 制作[PR #525](https://github.com/1959124923wyz-sys/love-British-TV/pull/525)已经合并 `1a138ab4db740b955d74ae39a72be88c169a7f21`：43节129段、73来源、81正文事件、73新增逐年事件、15个现代具名地理锚点。来源GIS及真实桌面Chrome门禁通过。
+- 出版分支 `release/19c-t48-new-zealand-maori-confiscation-20261122`正在申请正式公开；需要出版PR通过、合并与Pages实际部署以后方可确认上线。1840年代旧遗址保持，尚无配准旧测图的土地没收边界未生成Poly。
