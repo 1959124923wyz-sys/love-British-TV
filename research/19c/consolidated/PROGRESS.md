@@ -4,7 +4,7 @@
 
 - 用户明确要求将T10制作内容合并并全部上站。已建正式发布分支 `release/19c-t10-irish-famine-publication-20261122`，拟将新母专题 `E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES` 设置为 `published / approved`，普通网站1847和1861年代入口均可用；修改前的旧7节E19-IR-FAMINE-RELIEF仍保留独立编审，避免同事件重复公布。
 - 本次出版基线：T10.1/T10.2 **28节84段、50来源、34正文事件（28旧ID+6个1861年新增）、1个Letterkenny参考点、0个无据历史地籍Polygon**。1861年下院认定159儿童/28毁屋，以及调查动议23:88否决均保留原资料链接。
-- 独立制作PR [#518](https://github.com/1959124923wyz-sys/love-British-TV/pull/518) 的GitHub required check `check-approved-interaction`尚待完成；不得绕开主分支合并规则。正式出版分支/PR、工作板 `published_new` 是**待合并候选**，待GitHub Actions及Pages真实成功才能视为已上线；最后合并SHA、发布PR和Pages run在验收后追记。
+- 独立已合并制作PR [#518](https://github.com/1959124923wyz-sys/love-British-TV/pull/518)（merge SHA `c893dd3f88458c4f7591dc130674abdfa395df9`） 的GitHub required check `check-approved-interaction`已通过并成功合并至`main`；不得绕开主分支合并规则。正式出版分支/PR、工作板 `published_new` 是**待合并候选**，待GitHub Actions及Pages真实成功才能视为已上线；最后合并SHA、发布PR和Pages run在验收后追记。
 - 进一步案件原档见 [T10待办](T10_NEXT_ACTIONS.md) 与 [史料GIS审计](../../../docs/research/19C_T10_IRISH_FAMINE_SOURCE_GIS_AUDIT.md)。
 
 
