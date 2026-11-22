@@ -12,7 +12,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 def rows(name):
     with (ROOT / name).open(encoding="utf-8-sig", newline="") as file:
-        return list(csv.DictReader(file))
+        data = list(csv.DictReader(file))
+    if name in {"TOPIC_WORKBOARD.csv", "CHAPTER_WORKBOARD.csv"}:
+        if any(None in row for row in data):
+            raise ValueError(name + ": unquoted comma created extra CSV columns")
+    return data
 
 def require(condition, message):
     if not condition:
