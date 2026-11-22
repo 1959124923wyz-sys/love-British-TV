@@ -1,4 +1,11 @@
 # 归档进度
+## 2026-11-22 · R2 T48全部完成正式出版：生产55/55、发行52/52、Pages构建部署双成功
+
+- [制作PR #525](https://github.com/1959124923wyz-sys/love-British-TV/pull/525) GitHub Actions **55/55全部成功**，merge`1a138ab4db740b955d74ae39a72be88c169a7f21`；[出版PR #526](https://github.com/1959124923wyz-sys/love-British-TV/pull/526) **52/52全部成功**，squash`4e7c3f0e2f589a3d5ebec61e76ebd47f21035ac6`；两次源证据/GIS及1780×1020真实Chrome全绿，普通年份公开模式同验。
+- [Pages发布 #45022856080](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45022856080)：`build=success`，`deploy=success`。正常[1864年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1864)、[1865年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1865)、[1869年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1869)、[1881年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1881)都能无review预览进入，T48母篇`published/approved`，三章均`published_new`。
+- 成品**43节129段73来源81真实互动事件链接（71新ID+10复用）**；新增**73正式事件（42+10+21）和15具名GIS Point（10+2+3）**。原1840年代47年表和14个NZ相关地理要素及Ruapekapeka可考寨址Polygon保留。Waikato/Tauranga/Whakatōhea 1863—66法律没收额与实际测绘宗地、实际卖地和补偿分账；未绘无据历史没收边界面。
+- 59专题、150章节工作板已标记T48全章批准和`published_new`，记录真实制作/出版SHA及Pages。继续争取[官方1865/66原地籍图与逐户殖民镇压罪证](T48_NEXT_ACTIONS.md)及[来源GIS审计](../../../docs/research/19C_T48_NZ_MAORI_CONFISCATION_SOURCE_GIS_AUDIT.md)。下一主专题须从CSV挑未认领未发布者，优先大规模暴行与掠夺。
+
 ## 2026-11-22 · T48制作PR合并，三章独立出版审核
 
 - [制作PR #525](https://github.com/1959124923wyz-sys/love-British-TV/pull/525) 已合并主干，merge `1a138ab4db740b955d74ae39a72be88c169a7f21`。43节129段、73来源、81历史内链、73新年表事件、15个新西兰具名地点已进入正式主分支，专项史料、GIS及真实1780px Chrome已通过。
