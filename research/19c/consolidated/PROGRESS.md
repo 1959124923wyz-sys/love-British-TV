@@ -1,5 +1,13 @@
 # 归档进度
 
+## 2026-11-22 · R2 T48新西兰毛利战争与土地没收制成品待验收
+
+- 按59专题工作板承接T21后首批T48，原卷三章T48.1/T48.2/T48.3。先对正式站去重：1840年代既有47新西兰事件/14处相关地理要素和Ruapekapeka有源旧寨址Polygon，1860/70/80年代原先几乎无新西兰战争与土地剥夺图层。
+- 已编制 **43节129段、73项原始法律和部族—王室和解及审裁庭研究来源、81个有证点击事件（71本次新ID+10旧历史事件）** 的新母篇 `E19-T48-NEW-ZEALAND-MAORI-LAND-CONFISCATION-WARS`。
+- 年表新增 **73事件（1860s42、1870s10、1880s21）**，各有研究原案号C01/C02/C21/C22/C49/C50；地理新增 **15个已定位具名Point（10+2+3）**，未添加虚构宗地Polygon、随意战线、没收英亩数几何推算。1840年代旧数据完全保留。
+- T48专项Node、1780×1020 Chrome、GIS严格审查与公共文案检查已纳入新GH workflow，独立制作分支 `feat/19c-t48-new-zealand-raupatu-wars-20261122` **等待CI**，工作板标记review_ready / not_checked，不能提前称正式出版。完整[来源/GIS审计](../../../docs/research/19C_T48_NZ_MAORI_CONFISCATION_SOURCE_GIS_AUDIT.md)。
+
+
 ## 2026-11-22 · R2 T21全部正式出版，生产51/51、出版50/50、Pages双成功
 
 - [制作PR #521](https://github.com/1959124923wyz-sys/love-British-TV/pull/521) GitHub Actions **51/51全部成功**，merge SHA `805d2706f7cf5c9f068cd871fd2bd985e34e17d0`；[正式出版PR #522](https://github.com/1959124923wyz-sys/love-British-TV/pull/522) **50/50全部成功**，squash SHA `99e184ce9df619aded745c4253dce46dad4d6652`。两批T21专项历史事件、GIS严格语义与1780×1020桌面真实Chrome均通过。

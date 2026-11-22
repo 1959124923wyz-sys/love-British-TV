@@ -3483,6 +3483,93 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "british_colonial_jamaica"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t48-nz-1870-parihaka",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          173.833,
+          -39.3
+        ]
+      },
+      "properties": {
+        "stable_id": "t48-nz-1870-parihaka",
+        "name": "Parihaka：1879年和平耕作抗议",
+        "start_year": 1879,
+        "end_year": 1879,
+        "display_kind": "repression",
+        "summary_zh": "1879年Parihaka支持者以耕作抗争土地占夺，殖民武装警察逮捕182名耕作者",
+        "source_ids": [
+          "19C-T48-P02",
+          "19C-T48-GEO-1870-PARIHAKA"
+        ],
+        "source_urls": [
+          "https://www.whakatau.govt.nz/assets/Treaty-Settlements/FIND_Treaty_Settlements/Taranaki-iwi/DOS_documents/Taranaki-Iwi-Deed-of-Settlement-5-Sep-2015.pdf",
+          "https://collections.tepapa.govt.nz/place/2871779"
+        ],
+        "related_event_ids": [
+          "E19-T48-1879-C02-E08",
+          "E19-T48-1879-C02-E11"
+        ],
+        "named_anchors": [
+          "Parihaka"
+        ],
+        "mapping_method": "Te Papa官方地名坐标或有明确地名的地方遗产坐标，对照Waitangi Tribunal/新西兰殖民公报/部族和解史；未从现代地名推断土地历史边界",
+        "geometry_source": "Museum official named-place WGS84 reference, not cadastral parcel or battle casualty position",
+        "geo_precision": "documented_modern_named_locality_not_historic_confiscation_parcel",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "new_zealand_colonial_military_legal_action_only_at_documented_named_locality"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t48-nz-1870-waikato-land",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.933,
+          -37.2
+        ]
+      },
+      "properties": {
+        "stable_id": "t48-nz-1870-waikato-land",
+        "name": "Waikato：殖民政府出售没收地的档案中心",
+        "start_year": 1871,
+        "end_year": 1879,
+        "display_kind": "land_dispossession",
+        "summary_zh": "1871及1873年殖民议会提交没收地处置分类表，Opaheke等地列有待拍土地；Pukekohe镇仅为地名参考",
+        "source_ids": [
+          "19C-T48-W22",
+          "19C-T48-GEO-1870-WAIKATO-LAND"
+        ],
+        "source_urls": [
+          "https://paperspast.natlib.govt.nz/parliamentary/AJHR1873-I.2.2.2.8",
+          "https://collections.tepapa.govt.nz/place/2750129"
+        ],
+        "related_event_ids": [
+          "E19-T48-1871-C01-E36",
+          "E19-T48-1873-C01-E44",
+          "E19-T48-1871-C01-E64"
+        ],
+        "named_anchors": [
+          "Waikato"
+        ],
+        "mapping_method": "Te Papa官方地名坐标或有明确地名的地方遗产坐标，对照Waitangi Tribunal/新西兰殖民公报/部族和解史；未从现代地名推断土地历史边界",
+        "geometry_source": "Museum official named-place WGS84 reference, not cadastral parcel or battle casualty position",
+        "geo_precision": "documented_modern_named_locality_not_historic_confiscation_parcel",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "new_zealand_colonial_military_legal_action_only_at_documented_named_locality"
+      }
     }
   ]
 }
