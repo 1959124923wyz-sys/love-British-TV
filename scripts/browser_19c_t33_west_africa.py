@@ -1,5 +1,6 @@
 """R3 T33 West Africa 1851–1899 desktop historical sources and map verification."""
 import os
+import json
 from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -25,8 +26,11 @@ def click_event(event_id,year,photo):
 
 try:
     # Draft editorial review must be opened explicitly; public version uses ?year=... without review19c.
-    published=os.environ.get('ATLAS_T33_PUBLISHED','0')=='1'
+    publication=next(t for t in json.loads((root/'data/stories/serial/index.json').read_text(encoding='utf8'))['topics'] if t['id']==tid)
+    published=publication['status']=='published' and publication['publication_review']=='approved'
     qs='?year=1887' if published else '?review19c=1&year=1887'
+    if published:
+        assert 'review19c' not in qs, 'published T33 must open through ordinary year entry'
     driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+qs)
     wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
     wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById('E19-T33-1887-JAJA-DETAINED')"))
