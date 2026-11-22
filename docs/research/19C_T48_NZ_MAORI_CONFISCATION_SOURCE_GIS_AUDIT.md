@@ -55,3 +55,9 @@
 
 - 制作[PR #525](https://github.com/1959124923wyz-sys/love-British-TV/pull/525)已经合并 `1a138ab4db740b955d74ae39a72be88c169a7f21`：43节129段、73来源、81正文事件、73新增逐年事件、15个现代具名地理锚点。来源GIS及真实桌面Chrome门禁通过。
 - 出版分支 `release/19c-t48-new-zealand-maori-confiscation-20261122`正在申请正式公开；需要出版PR通过、合并与Pages实际部署以后方可确认上线。1840年代旧遗址保持，尚无配准旧测图的土地没收边界未生成Poly。
+
+## 正式公开后审计封存（2026-11-22）
+
+- **制作[PR #525](https://github.com/1959124923wyz-sys/love-British-TV/pull/525) 55/55** GitHub Actions全部通过，merge`1a138ab4db740b955d74ae39a72be88c169a7f21`；**出版[PR #526](https://github.com/1959124923wyz-sys/love-British-TV/pull/526) 52/52**全部通过，merge`4e7c3f0e2f589a3d5ebec61e76ebd47f21035ac6`；[正式Pages #45022856080](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45022856080) **build/deploy双成功**。
+- 三章43节129段73有证来源81历史事件链接（71新+10复用）正式状态`published/approved`；年表增加1860s42/1870s10/1880s21，GIS新增15个现代Te Papa及官方地名Point，原1840年代Ruapekapeka有源Polygon完整保留。真实1780×1020 Chrome全套验收成功。
+- 历史法律取地与已实际卖地、英正规军杀害与当地王室盟军执行处决分案。继续[原始没收地籍图与逐户受害者调查](../../research/19c/consolidated/T48_NEXT_ACTIONS.md)，**不能凭法律公告英亩数自行绘制无源领土面**。
