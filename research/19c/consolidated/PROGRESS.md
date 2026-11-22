@@ -98,3 +98,10 @@
 ## 2026-11-22 · T05制作PR47/47通过，独立正式出版审核
 
 制作[PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)已在47项全站Actions（包括1780×1020真实桌面Chrome和历史GIS严格审核）全部成功后合并至主分支 `734caec0adde77e447018934d7636e7340ffe109`。另按出版流程独立审核母专题的普通网站入口：T05.status=`published`，publication_review=`approved`，两章章节板=`published_new`，新增不带`review19c`参数的桌面浏览器门禁。正式出版PR自身的Actions与Pages构建/部署记录应在运行完毕后填写，不得提前声称成功。历史郡界、原地籍、逐人军法与财产登记疑问继续保持开放。
+
+## 2026-11-22 · R2 T05正式出版与Pages归档完成
+
+- 制作[PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)在47/47全站Actions与桌面Chrome成功后合并（`734caec0adde77e447018934d7636e7340ffe109`）。
+- 独立正式出版[PR #513](https://github.com/1959124923wyz-sys/love-British-TV/pull/513)在46/46 Actions成功后合并（`dd20fca460be9008524fe5e66a965bc85f9ccf8d`）；母专题`published / approved`，T05.1/T05.2工作板`published_new`，读者不需要`review19c`，并有真实桌面Chrome出入年表和图层验收。
+- GitHub Pages [#44991739561](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44991739561)制作版和[#44992361081](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44992361081)正式版均已核实`build=success / deploy=success`。直接进入[1865年莫兰特湾主题地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1865)。
+- 成果最终：T05两章18节54段、23新关联年表、19史料来源、1860年代4现代具名地名点与1文献端点虚线、1870年代1Kingston行政持续点；0无据控制区Polygon和0伪造面积。原26条研究卷保留，历史原文/地籍待核继续开放，详[T05长期执行表](T05_NEXT_ACTIONS.md)。**R2下一制作顺位 T14：东印度公司征服信德、旁遮普、阿瓦德。**

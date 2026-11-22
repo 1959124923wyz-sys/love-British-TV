@@ -38,3 +38,7 @@
 6. 1867 No.20/No.22法规编号与各新旧教区边界；John Peter Grant时期实物地契、王室地回收、受益人及被驱离家庭原登记。
 
 **正式出版审核**：制作PR #512已47/47项检查全部通过（包括真实桌面Chrome与严格GIS）并合入主分支；独立出版PR将T05标记为`published / approved`，公开阅读无须`review19c`参数。该出版PR自身的全站CI与Pages构建/部署须单独留证，历史原档和边界疑问仍继续追查。
+
+## 2026-11-22正式公开发布后验收
+
+母专题`published/approved`、T05两章`published_new`。生产[PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)47/47项静态/Chrome通过；出版[PR #513](https://github.com/1959124923wyz-sys/love-British-TV/pull/513)46/46项通过，公开入口无`review19c`参数；正式[GitHub Pages #44992361081](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44992361081)已核实build、deploy双成功。上述历史GIS六项待核清单保持开放，绝不为了完成发布改画无据边界。

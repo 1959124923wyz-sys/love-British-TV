@@ -44,5 +44,17 @@
 - [x] 制作PR [#512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512) 已于**47/47 项检查全部成功**后合并主分支（squash SHA `734caec0adde77e447018934d7636e7340ffe109`）。
 - [x] 两章长文18节54段、23条历史年表单击／双击返回、19史料来源、1860年代5个历史GIS图元及1870年代1行政延续点已整合。
 - [x] 按独立出版审核将母专题标记为 `published/approved`，T05.1、T05.2章板更新为`published_new`。正式专题读者使用普通首页 `?year=1865` 而非 `?review19c=1`；新CI必须在无预览参数下验证。
-- [ ] 取得正式出版PR自身的全部Actions通过结果；[ ] 核GitHub Pages最新构建和部署成功；[ ] 在Issue #499登记正式发布SHA、Pages运行号和剩余原卷疑点。
+- [x] 正式出版[PR #513](https://github.com/1959124923wyz-sys/love-British-TV/pull/513) **46/46项CI成功**，已合并 `dd20fca460be9008524fe5e66a965bc85f9ccf8d`；[x] GitHub Pages [#44992361081](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44992361081) `build / deploy` 双成功；[x] Issue #499完成正式发布交接。
 - [ ] 长期史料：1865 Surrey历史郡边／Kingston豁免、Bogle与Gordon精确审判和处刑原卷、439死亡及600鞭打名册、房屋损失户籍、1867教区法律条文号和1870年代John Peter Grant被驱离地块。
+
+## T05最终发布证据与后继顺位（2026-11-22）
+
+| 验收阶段 | 直接可核链接 | 已验证结论 |
+| --- | --- | --- |
+| 生产PR | [#512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512) | 47/47项Actions通过（含真实Chrome），`734caec0adde77e447018934d7636e7340ffe109` 合并 |
+| 制作版Pages | [#44991739561](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44991739561) | build成功，deploy成功 |
+| 出版PR | [#513](https://github.com/1959124923wyz-sys/love-British-TV/pull/513) | 46/46项Actions通过；普通站无`review19c` Chrome验收；`dd20fca460be9008524fe5e66a965bc85f9ccf8d` 合并 |
+| 正式版Pages | [#44992361081](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44992361081) | build成功，deploy成功 |
+| 网站公开访问 | https://1959124923wyz-sys.github.io/love-British-TV/?year=1865 | 正式专题元数据`published / approved`，源地图数据与普通首页同批部署 |
+
+**主编判定**：T05制作、正式出版、桌面QA与Pages部署全部完成。**未结研究问题**保持历史卷原案和GIS审计：1865 Surrey＋Kingston戒严法律旧边界；Gordon/Bogle军法原始记录及执行时刻；439死者分项与鞭打/房屋损失原始名册；1867法令条次；Grant时期农村地权地籍。下一制作顺位 **R2 · T14「1843—1858东印度公司征服信德、旁遮普与阿瓦德」**；其后可视T05原档新材料回访。
