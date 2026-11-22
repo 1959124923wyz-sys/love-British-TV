@@ -9270,6 +9270,50 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "east_india_company_campaign"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t34-cape-1840s-1844",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2466,
+          5.10535
+        ]
+      },
+      "properties": {
+        "stable_id": "t34-cape-1844",
+        "name": "开普海岸：1844年司法协定",
+        "start_year": 1844,
+        "end_year": 1849,
+        "display_kind": "administrative",
+        "summary_zh": "英国官员与沿海首领签订司法协定，规定英方司法官与地方首领联合审理部分严重案件。",
+        "source_ids": [
+          "19C-T34-C-X02-S02",
+          "19C-T34-C-X02-S01",
+          "19C-T34-GEO-CAPE"
+        ],
+        "source_urls": [
+          "https://ugspace.ug.edu.gh/bitstreams/fb8e8b95-13fd-4e99-bd3b-b9eb25d75c32/download",
+          "https://www.judicial.gov.gh/index.php/beforeindependence",
+          "https://www.geonames.org/2302357/cape-coast.html"
+        ],
+        "related_event_ids": [
+          "E19-T34-1844-C-X02-E01"
+        ],
+        "named_anchors": [
+          "Cape Coast"
+        ],
+        "mapping_method": "加纳大学原1844协定和加纳司法官方回顾核地点；GeoNames现代城市WGS84仅为地名锚点，非城堡签字室精确坐标",
+        "geo_precision": "modern_named_cape_coast_reference_not_historic_boundary",
+        "geometry_source": "GeoNames Cape Coast modern populated place",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "British_coastal_judicial_treaty_partial_not_all_Gold_Coast"
+      }
     }
   ]
 }
