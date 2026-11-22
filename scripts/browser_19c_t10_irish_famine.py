@@ -24,8 +24,8 @@ def click_event(event_id,year,photo):
     driver.save_screenshot(str(out/photo))
 
 try:
-    published=os.environ.get('T10_PUBLISHED')=='1'
-    qs='?year=1847' if published else '?review19c=1&year=1847'
+    published=True # standalone formal release: no editorial preview parameter
+    qs='?year=1847'
     driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+qs)
     wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
     wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById('E19-IR-1847-QUARTER-ACRE-RULE')"))
