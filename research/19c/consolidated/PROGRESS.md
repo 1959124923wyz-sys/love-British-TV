@@ -36,3 +36,10 @@
 - 该PR在合并前共 **34/34 项GitHub Actions成功**，含T15专项静态历史/地理合同、1857→1858詹西桌面Chrome年份和地图中心跳转、19C研究归档/工作板、严格GIS审计与跨世纪回归。
 - [GitHub Pages发布工作流 #44922027446](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44922027446) 的 `build` 和 `deploy` 均成功；主站十九世纪阅读预览入口：<https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1857>。
 - **状态**：T15母篇在 `data/stories/serial/index.json` 中仍为 `editorial_review/not_submitted`，属于可在预览入口打开的专题；其正式发布及行政边界原卷审查仍单独排队。已在T15、T15.1、T15.2任务板写入审稿和桌面CI结果，保留未核事项。
+
+## 2026-11-22 · R1 T26 鸦片战争、中国条约港与对华贸易施压（审查分支）
+
+- 认领 T26.1/B01、T26.2/B02、T26.3/B49+B67；创建独立分支 `feat/19c-t26-china-opium-treaty-ports-gis-20261122`，此前主分支已存在四个分别覆盖1839专卖、第一次战争、广州占城及1860年北京劫掠的史料较详专题。
+- 新母篇 `E19-T26-OPIUM-WARS-CHINA-TREATY-PORTS` 已完成 **14节44段、99个真实地图事件链接**（复用76、补23），严格区分战争临占、永久割让、通商法权与条约款项应付/实收。
+- 1850/1890等十年审计后沿用现有数据，新增 **48个十年展示图元**（46点、2条虚线），包括五口1843/44—1899和《烟台条约》四口1877—1899清朝行政延续；没有新增未经证实的历史领土多边形或可计量殖民面积。
+- 本轮来源和新事件原案对照：`docs/research/19C_T26_CHINA_OPIUM_TREATY_PORTS_GIS_AUDIT.md`；**11项待核研究问题**、原卷/档号、下一批作业和验收清单：[`T26_NEXT_ACTIONS.md`](T26_NEXT_ACTIONS.md)。正文 `editorial_review/not_submitted`；未执行CI和Pages以前不称正式出版。

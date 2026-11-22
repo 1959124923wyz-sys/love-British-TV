@@ -1,0 +1,62 @@
+name: 19C T26 China opium wars and treaty-port historical GIS QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e19-t26-opium-wars-china-treaty-ports-1839-1899.json'
+      - 'data/stories/serial/index.json'
+      - 'data/stories/serial/chronology-1840-1849.json'
+      - 'data/stories/serial/chronology-1850-1859.json'
+      - 'data/stories/serial/chronology-1860-1869.json'
+      - 'data/stories/serial/chronology-1870-1879.json'
+      - 'data/stories/serial/chronology-1880-1889.json'
+      - 'data/stories/serial/chronology-1890-1899.json'
+      - 'data/nineteenth-century-spatial-1840-1849.geojson'
+      - 'data/nineteenth-century-spatial-1850-1859.geojson'
+      - 'data/nineteenth-century-spatial-1860-1869.geojson'
+      - 'data/nineteenth-century-spatial-1870-1879.geojson'
+      - 'data/nineteenth-century-spatial-1880-1889.geojson'
+      - 'data/nineteenth-century-spatial-1890-1899.geojson'
+      - 'research/19c/consolidated/**'
+      - 'scripts/test_19c_t26_topic_map.cjs'
+      - 'scripts/browser_19c_t26_topic.py'
+      - '.github/workflows/19c-t26-china-treaty-ports.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/e19-t26-opium-wars-china-treaty-ports-1839-1899.json'
+      - 'data/nineteenth-century-spatial-*.geojson'
+      - 'research/19c/consolidated/**'
+permissions:
+  contents: read
+jobs:
+  evidence-map-contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node scripts/test_19c_t26_topic_map.cjs
+          python3 research/19c/consolidated/verify.py
+          python3 research/19c/consolidated/verify_handoff.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+  desktop-century-story-map:
+    needs: evidence-map-contract
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-t26.log 2>&1 &
+          python3 scripts/browser_19c_t26_topic.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 19c-t26-china-treaty-ports-desktop-proof
+          path: browser-smoke-results/19c-t26-*.png
+          if-no-files-found: ignore
