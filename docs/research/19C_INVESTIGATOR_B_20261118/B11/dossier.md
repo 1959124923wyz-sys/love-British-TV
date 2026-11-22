@@ -1,0 +1,29 @@
+# B11 阿富汗、亚丁与波斯湾
+
+阿富汗先对读第一次战争喀布尔占驻、1842年1月撤退及秋季再次进驻和撤出。当时随军人员另统计，不能把4,500军人、12,000随军者相加当作死亡总数。甘达马克最后抵抗的12与13日记法需还原双方使用何日、描述何部队。1879年同地再签条约是第二次战争事件，拆地方行政与狭口通行执权。［B11-S01–S05］
+
+亚丁1839年1月19日英国海军炮击、印度部队夺港，分别接1839年6月与拉赫季协议、11月反攻、1849地峡条款。当前图上既有亚丁半岛、小亚丁与佩里姆等地块，不依港城起初占领推邻近政体的归属。［B11-S06；仓库地图对照表］
+
+波斯湾拆1809年拉斯海马焚城撤兵、林格焚船、拉夫特堡转交马斯喀特，以及1819围攻拉斯海马后转向达亚。首领分签《海上总条约》在1820年1月起陆续完成。不同档案采用英国方面的海盗指称与卡西米／地区史关于本地政治的解释。建议保留双方原用词来源。［B11-S07–S09］
+
+## 既有稿件与核查
+
+- [E19-FIRST-AFGHAN-WAR-KALAT 第一次英阿战争：从坎大哈到喀布尔与卡拉特](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/data/stories/serial/e19-first-afghan-war-kalat-1838-1839.json) · [旧史料登记](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/docs/research/EDITOR23_19C_CHAPTER34_1830_1839.md)
+- [E19-AFGHAN-WAR-WITHDRAWAL-KALAT 喀布尔起事、英军撤退与卡拉特复位](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/data/stories/serial/e19-afghan-war-withdrawal-kalat-1840-1843.json) · [旧史料登记](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/docs/research/EDITOR23_19C_CHAPTER35_1840_1849.md)
+- [E19-ADEN-CAPTURE 亚丁攻占：从沉船争端到殖民港口](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/data/stories/serial/e19-aden-capture-1837-1839.json) · [旧史料登记](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/docs/research/EDITOR23_19C_CHAPTER34_1830_1839.md)
+- [E19-ADEN-LAHEJ-AGREEMENTS 亚丁反攻与拉赫季协议](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/data/stories/serial/e19-aden-lahej-agreements-1840-1849.json) · [旧史料登记](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/docs/research/EDITOR23_19C_CHAPTER35_1840_1849.md)
+- [E19-GULF-EXPEDITION-1809 1809年波斯湾远征：拉斯海马焚城、林格焚船与拉夫特交接](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/data/stories/serial/e19-gulf-expedition-1809-1810.json) · [旧史料登记](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/docs/research/EDITOR36_19C_GULF_BATCH3.md)
+- [E19-GULF-EXPEDITION-1819 1819年波斯湾远征：扣船、拆堡与达亚俘虏](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/data/stories/serial/e19-gulf-expedition-1819-1820.json) · [旧史料登记](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/docs/research/EDITOR36_19C_GULF_BATCH3.md)
+- [E19-GULF-MARITIME-TREATY 波斯湾的海上管制：从采珠季停战到排他协定](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/data/stories/serial/e19-gulf-maritime-treaty-1820-1823.json) · [旧史料登记](https://github.com/1959124923wyz-sys/love-British-TV/blob/c8a9d37a341bd7e3d05e24d61a7ee31f9c4365b6/docs/research/EDITOR37_GULF_MARITIME_ORDER.md)
+
+本仓 [事件年表](events.csv)、[史料索引](sources.csv)、[地图线索](map-leads.csv) 与 [待核记录](open-items.csv) 随题收录。完整版 ZIP 提供地图稳定 ID 和原件影像。
+
+## 待核记录
+
+**撤军损失**　军队与随行者存估计，甘达马克有12／13日差。已定位馆藏和地区史；逐人军籍、伤亡、被俘、回营日期未核。第二次战争1879驻节、遇害、1880接掌撤军需补逐日。
+
+下一入口　NAM 2001-01-613--9；India Office Political and Secret；Iranica以及当地历史馆藏。
+
+**亚丁/波斯湾赔付和据点**　条约与既有图层已锁定，英方退到海上、其他主体接堡、预付及实际到账未逐件对页。
+
+下一入口　英舰ADM 53、Bombay Political Proceedings；QDL文书Aitchison和Lorimer；S08下一页与原签件。柯尔围达亚战报、俘虏处分原件核毁物数。
