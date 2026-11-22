@@ -101,4 +101,4 @@
 | R1-C | **T37 马格达拉劫掠与物件流向** | 尚未认领正式制图PR | 先查 [T37原案](topics/T37.md) C10 与1850/1860既有GIS；核V&A/British Museum藏号及德兰塔拍卖清单，独立分支制作 |
 | R1-D | **T46 澳洲边疆殖民土地与暴力** | 尚未认领正式制图PR | 先查 [T46原案](topics/T46.md) 五章及98条地理线索，原住民权属、殖民警察、当年土地测绘；避免现代州界替代历史实控 |
 
-**正式状态不变：** T26母篇 `editorial_review/not_submitted`，其可在[19世纪年表1839年](https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1839)进入阅读。57个其他尚未制作专题仍由两张工作板逐项记录，下一智能体从未认领状态开始，不重复已完成的T15/T26。
+**正式状态不变：** T26母篇 `editorial_review/not_submitted`，其可在[19世纪年表1839年](https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1839)进入阅读。其余57个专题的实际制作状态仍由两张工作板逐项记录，下一智能体从未认领状态开始，不重复已完成的T15/T26。
