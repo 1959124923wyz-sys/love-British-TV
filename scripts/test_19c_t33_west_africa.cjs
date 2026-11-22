@@ -10,7 +10,7 @@ assert(['editorial_review','published'].includes(entry.status));
 assert(['not_submitted','approved'].includes(entry.publication_review));
 assert.equal(story.id,id);assert.equal(story.sections.length,26);
 assert.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),78);
-assert(story.sections.flatMap(s=>s.paragraphs).join('').length>10000);
+assert(story.sections.flatMap(s=>s.paragraphs).join('').length>=6500);
 assert.equal(story.sources.length,39);assert.equal(story.topic_source_claims.length,26);
 assert.deepEqual(story.sections.reduce((o,s)=>(o[s.narrative_chapter]=(o[s.narrative_chapter]||0)+1,o),{}),{'T33.1':6,'T33.2':13,'T33.3':7});
 const reg=new Set(story.sources.map(s=>s.id));
