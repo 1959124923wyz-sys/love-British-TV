@@ -43,3 +43,10 @@
 - 新母篇 `E19-T26-OPIUM-WARS-CHINA-TREATY-PORTS` 已完成 **14节44段、99个真实地图事件链接**（复用76、补23），严格区分战争临占、永久割让、通商法权与条约款项应付/实收。
 - 1850/1890等十年审计后沿用现有数据，新增 **48个十年展示图元**（46点、2条虚线），包括五口1843/44—1899和《烟台条约》四口1877—1899清朝行政延续；没有新增未经证实的历史领土多边形或可计量殖民面积。
 - 本轮来源和新事件原案对照：`docs/research/19C_T26_CHINA_OPIUM_TREATY_PORTS_GIS_AUDIT.md`；**11项待核研究问题**、原卷/档号、下一批作业和验收清单：[`T26_NEXT_ACTIONS.md`](T26_NEXT_ACTIONS.md)。正文 `editorial_review/not_submitted`；未执行CI和Pages以前不称正式出版。
+
+## 2026-11-22 · T26 首个横跨1839—1899中国专题合并、35项CI全绿及Pages部署
+
+- 制作PR [#503](https://github.com/1959124923wyz-sys/love-British-TV/pull/503) 已合并 `main`，**合并 SHA `53d9a7cb8287a6699b177b4a67126622cbb75aca`**；14节44段长文99条地图内链、23个补写事件、六十年连续48个GIS展示图元（46点/2虚线）；所有原有鸦片战争/广州/圆明园4篇独立文章不被覆盖。
+- PR #503 全部 **35/35 项GitHub Actions最终成功**（17世纪跨年回归因偶发浏览器等待超时单独重跑后成功），含T26专项静态史料/空间审计及桌面Chrome 1839→1843→1868→1877→1885、双击返回、1899地图连续性。专项 [Actions #44977109145](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977109145)。
+- [Pages 部署工作流 #44977462856](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977462856) `build` 和 `deploy` **成功**，预览入口 <https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1839>。研究缺口的史料编审仍保留 `editorial_review/not_submitted`，非最终史料批准。
+- T26.1/B01、T26.2/B02、T26.3/B49+B67 三章CI及交互状态回填任务板；[T26未结原卷与长期待办](T26_NEXT_ACTIONS.md)列清11项研究缺口、历史边界和财税收据；下一个R1制作专题 **T37马格达拉（C10）**，随后 **T46澳洲边疆扩张与暴力**。

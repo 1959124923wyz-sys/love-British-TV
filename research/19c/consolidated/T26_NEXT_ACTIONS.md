@@ -4,12 +4,12 @@
 
 ## P0：上线稳定性、来源与分期（本轮PR验收）
 
-- [ ] `node scripts/test_19c_t26_topic_map.cjs` 检验14节、99事件链接、23增补、48图元和跨十年连续性，3章原案逐节对照
-- [ ] `python3 research/19c/consolidated/verify.py`、`verify_handoff.py`，保留59专题/150章/1317图线索常量
-- [ ] `python3 scripts/audit_spatial_semantics.py --strict`：3条法律状态（清行政/英占暂驻/割地）不可混色；所有补充图元不入真实面积
-- [ ] `node scripts/test_atlas_47_public_copy_guard.js` 和 `node scripts/lint_atlas_47_frontend_copy.js`
-- [ ] 真实Chrome验证1843→1868→1877→1885→1899地图和正文点击年份跳转/平移；保留截图；覆盖“版图/事件”开关
-- [ ] PR状态全绿后合并，核实Pages部署；再回填实际PR号、合并SHA、Pages run和工作板“桌面CI”字段
+- [x] `node scripts/test_19c_t26_topic_map.cjs` 检验14节、99事件链接、23增补、48图元和跨十年连续性，3章原案逐节对照
+- [x] `python3 research/19c/consolidated/verify.py`、`verify_handoff.py`，保留59专题/150章/1317图线索常量
+- [x] `python3 scripts/audit_spatial_semantics.py --strict`：3条法律状态（清行政/英占暂驻/割地）不可混色；所有补充图元不入真实面积
+- [x] `node scripts/test_atlas_47_public_copy_guard.js` 和 `node scripts/lint_atlas_47_frontend_copy.js`
+- [x] 真实Chrome验证1843→1868→1877→1885→1899地图和正文点击年份跳转/平移；保留截图；覆盖“版图/事件”开关
+- [x] PR状态全绿后合并，核实Pages部署；再回填实际PR号、合并SHA、Pages run和工作板“桌面CI”字段
 
 ## P1：原卷决定可否新增有边界的历史Polygon
 
@@ -40,3 +40,9 @@
 ## 下一专题接力
 
 R1顺位：T15 已有 PR #501；T26 进行中；**T37 马格达拉文物掠夺**；**T46 澳洲边疆暴力**。优先检查最新主分支与开放PR，以 `TOPIC_WORKBOARD.csv`、`CHAPTER_WORKBOARD.csv`、`PROGRESS.md` 为权威实时状态。本清单只维护T26的新进展，不覆盖其他57个专题。
+
+## 已完成制图与CI交付（2026-11-22）
+
+- 已合并 [PR #503](https://github.com/1959124923wyz-sys/love-British-TV/pull/503)（合并SHA `53d9a7cb8287a6699b177b4a67126622cbb75aca`）；35/35 GitHub Actions 最终绿灯，T26 Chrome 专项 [run #44977109145](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977109145)。
+- [Pages部署 run #44977462856](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977462856) 构建及部署成功；<https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1839>。
+- P0制作门禁均通过；P1/P2未核原卷照原清单保留不打勾。项目仅维持中国条约港**清朝管辖**的法权点，没有发明英控Polygon。新母篇仍在编审预览门禁，待11项缺口逐批核原卷。
