@@ -4,7 +4,7 @@
 
 ## 与既有站点去重
 - 旧母篇 **E19-IR-FAMINE-RELIEF** 已有7节/38来源及1840年代34个登记事件，当前 `editorial_review/not_submitted`；保留原文原ID和旧出版状态。
-- 新母篇 **E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES** 26节78段，按正式年表复用其中28个ID；补造**零**已有事件点；1861年新增4个独立有据事件（47令244人与45户约280人先期报刊估计区分）。新母篇先保持 `editorial_review/not_submitted`。
+- 新母篇 **E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES** 28节84段，按正式年表复用其中28个ID；补造**零**已有事件点；1861年新增6个独立有据事件（47令244人与45户约280人先期报刊估计区分）。新母篇先保持 `editorial_review/not_submitted`。
 - 与T11、苏格兰Highland Clearances、1830年代什一税战争和1848青年爱尔兰事件不合并人口或事件统计。
 
 ## 可复核的证据链及准确口径
@@ -50,3 +50,11 @@
 
 制作分支 `feat/19c-t10-irish-famine-evictions-estates-20261122`，新文章初始 `editorial_review/not_submitted`；工作板和PROGRESS应注明真实制作PR及CI（需按最终结果填补），批准独立PR、Pages成功后再改 `published/approved`。
 专项静态合同：`node scripts/test_19c_t10_irish_famine.cjs`；桌面Chrome：`python3 scripts/browser_19c_t10_irish_famine.py`；基础研究、GIS、公开文案、serial story合同均在 `.github/workflows/19c-t10-irish-famine.yml`。
+
+
+## 2026-11-22 补充实证：1861年英国政府的正式调查资料和调查动议失败
+- [英国下议院1861-06-24 Derryveagh辩论全文](https://hansard.parliament.uk/Commons/1861-06-24/debates/254d4536-869b-45b3-b689-63616471e515/TheDerryveaghEvictions)：议员引官方returns为**47户、46栋房屋、28栋揭顶或拆平、244人、其中159名儿童**，又引郡警察副巡长报告称保护司法官执行时出动200名警察。报告称现场没有破坏治安事件，须将警力数量与受害人口分开。议员称驱逐后有人入济贫院且一名老人死亡；死亡只作为议员证词，待死亡原簿核查。
+- [英国下议院1861-07-02 Derryveagh辩论和最终投票](https://hansard.parliament.uk/commons/1861-07-02/debates/e972ae9c-6ef6-45ac-97cc-a7e62a8f3ea0/DerryveaghEvictions)：Palmerston对合法私人地产权的介入提出限制性见解；正式表决**赞成调查23、反对88**，动议被否决。需记录此项议会责任选择，但不能把否决调查当成所有逐户违法情节已被法院定罪或无罪。
+- [Donegal County Archives Service Board of Guardians minutes catalogue](https://www.donegalculture.ie/media/ohnnfugh/donegal-board-of-guardians-list-updated-2022.pdf)：官方目录记有1861-04-26至05-03 Relieving Officer对德里维格驱逐的逐地走访、马车送救济者回济贫院及实际收容数据，指名**Shane Bradley、Anne Burke、Susan Moore**等救济者，原会议簿待调阅全文。只记录档案目录提供的信息，不能从目录条目推算总体获救人数。
+- 爱尔兰国家图书馆明确的庄园地图目录现已复核：[MS_UR_081877](https://sources.nli.ie/Record/MS_UR_081877)，原纸质档在PRONI **D.2125**；本项目引用由不确定的旧目录URL更换为官方直接链接。
+- 追加新事件 `E19-IR-1861-DERRYVEAGH-HOUSE-CHILDREN-RETURN` 和 `E19-IR-1861-DERRYVEAGH-INQUIRY-DEFEATED`，均为议会政治史事件，地点不虚填为被逐房屋；与前4条1861年表合计6条新增、28条旧事件复用、34个正文互动节点，整篇28节84段50项来源。
