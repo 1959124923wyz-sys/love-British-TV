@@ -1,0 +1,34 @@
+name: 19C T37 Maqdala artefact provenance and GIS review
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e19-t37-maqdala-expedition-looting-1867-1872.json'
+      - 'data/stories/serial/index.json'
+      - 'data/stories/serial/chronology-1860-1869.json'
+      - 'data/stories/serial/chronology-1870-1879.json'
+      - 'data/nineteenth-century-spatial-1860-1869.geojson'
+      - 'data/nineteenth-century-spatial-1870-1879.geojson'
+      - 'research/19c/consolidated/**'
+      - 'scripts/test_19c_t37_maqdala_topic_map.cjs'
+      - '.github/workflows/19c-t37-maqdala.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/e19-t37-maqdala-expedition-looting-1867-1872.json'
+      - 'data/nineteenth-century-spatial-1860-1869.geojson'
+      - 'data/nineteenth-century-spatial-1870-1879.geojson'
+permissions:
+  contents: read
+jobs:
+  facts-and-map:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node scripts/test_19c_t37_maqdala_topic_map.cjs
+          python3 research/19c/consolidated/verify.py
+          python3 research/19c/consolidated/verify_handoff.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
