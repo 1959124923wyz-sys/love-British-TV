@@ -10,7 +10,7 @@ const old=load('data/stories/index.json');
 const reader=fs.readFileSync(path.join(root,'js/history-stories.js'),'utf8');
 assert.equal(serial.schema,'atlas-serial-stories-v1');
 assert.equal(serial.navigation_contract,'existing_decade_chapters_unchanged');
-assert.deepEqual(serial.topics.filter(t=>t.status==='published').map(t=>t.id).sort(),['E19-BUSSA-REBELLION','E19-CAPE-OPENING','E19-GULF-EXPEDITION-1809','E19-GULF-EXPEDITION-1819','E19-GULF-MARITIME-TREATY','E19-KANDY-OPENING','E19-RISDON-COVE','E19-T05-MORANT-BAY-MARTIAL-LAW-CROWN-COLONY','E19-T37-MAQDALA-EXPEDITION-LOOTING','E19-T46-AUSTRALIAN-FRONTIER-LAND-VIOLENCE','E6-T03-LAND-1642-1698','E6-T04-DARIEN','E6-T04-GLENCOE','E6-T05','E6-T06','E6-T07-BARBADOS','E6-T08','E6-T09-CAR','E6-T09-NY','E6-T10-ACADIA','E6-T10-HBC','E6-T10-NEWFOUNDLAND','E6-T11-VOYAGES','E6-T12','E6-T13','E6-T14-NAV','E6-T02','E6-T15','E6-T01','E6-T16-SURINAME','E6-T16-PROVIDENCE','E6-T17-AFRICAN-FORTS','E6-T07-LEEWARD','E6-T04-CONQUEST','E6-T03-WILLIAMITE-WAR','E6-T09-PENNSYLVANIA','E6-T10-QUEBEC-KIRKE','E6-T16-ATLANTIC-ISLANDS','E6-T09-NE-DOMINION'].sort() ,'only explicitly editor-audited completed story stages may publish');
+assert.deepEqual(serial.topics.filter(t=>t.status==='published').map(t=>t.id).sort(),['E19-T14-SINDH-PUNJAB-AWADH-CONQUEST-EXPROPRIATION','E19-BUSSA-REBELLION','E19-CAPE-OPENING','E19-GULF-EXPEDITION-1809','E19-GULF-EXPEDITION-1819','E19-GULF-MARITIME-TREATY','E19-KANDY-OPENING','E19-RISDON-COVE','E19-T05-MORANT-BAY-MARTIAL-LAW-CROWN-COLONY','E19-T37-MAQDALA-EXPEDITION-LOOTING','E19-T46-AUSTRALIAN-FRONTIER-LAND-VIOLENCE','E6-T03-LAND-1642-1698','E6-T04-DARIEN','E6-T04-GLENCOE','E6-T05','E6-T06','E6-T07-BARBADOS','E6-T08','E6-T09-CAR','E6-T09-NY','E6-T10-ACADIA','E6-T10-HBC','E6-T10-NEWFOUNDLAND','E6-T11-VOYAGES','E6-T12','E6-T13','E6-T14-NAV','E6-T02','E6-T15','E6-T01','E6-T16-SURINAME','E6-T16-PROVIDENCE','E6-T17-AFRICAN-FORTS','E6-T07-LEEWARD','E6-T04-CONQUEST','E6-T03-WILLIAMITE-WAR','E6-T09-PENNSYLVANIA','E6-T10-QUEBEC-KIRKE','E6-T16-ATLANTIC-ISLANDS','E6-T09-NE-DOMINION'].sort() ,'only explicitly editor-audited completed story stages may publish');
 const canonicalFamilies=Array.from({length:15},(_,i)=>'E6-T'+String(i+1).padStart(2,'0'));
 const knownIds=new Set(serial.topics.map(t=>t.id));
 assert.equal(knownIds.size,serial.topics.length,'unique IDs required');
@@ -21,6 +21,9 @@ assert(t46?.status==='published'&&t46?.publication_review==='approved'&&t46?.eve
 const t05=serial.topics.find(t=>t.id==='E19-T05-MORANT-BAY-MARTIAL-LAW-CROWN-COLONY');
 assert(t05?.status==='published'&&t05?.publication_review==='approved'&&t05.event_ids?.length===23,'T05 requires approved production PR with 23 audited Morant Bay event links');
 assert(t05.article_file==='data/stories/serial/e19-t05-morant-bay-martial-law-crown-colony-1865-1879.json');
+const t14=serial.topics.find(t=>t.id==='E19-T14-SINDH-PUNJAB-AWADH-CONQUEST-EXPROPRIATION');
+assert(t14?.status==='published'&&t14?.publication_review==='approved'&&t14.event_ids?.length===51,'T14 must be independently approved with 51 reused dated source events');
+assert(t14.article_file==='data/stories/serial/e19-t14-sindh-punjab-awadh-conquest-expropriation-1842-1859.json');
 const t37=serial.topics.find(t=>t.id==='E19-T37-MAQDALA-EXPEDITION-LOOTING');
 assert(t37&&t37.status==='published'&&t37.publication_review==='approved'&&t37.event_ids.length===12&&t37.source_register_state?.includes('museum'), 'T37 Maqdala is an explicitly approved publication with retained archival scope');
 const glencoe=serial.topics.find(t=>t.id==='E6-T04-GLENCOE');
