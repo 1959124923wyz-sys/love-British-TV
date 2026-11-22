@@ -1,6 +1,6 @@
 # 爱英TV｜GitHub / AI 调查员接手入口
 
-**2026-11-22正式进展：** 19世纪R1的T37已正式发表（#507）；**T46澳大利亚边疆五章**已按#509（37/37 Actions）与#510（35/35 Actions）正式发布，Pages #44985306164的构建和部署均成功。T46单专题25节75段、39年表链接、17 GIS图元，历史未核地籍与死亡点保留待核。R2 T05 Morant Bay[制作PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)已47/47全绿并合并，18节54段、23年份节点、6 GIS，母专题已提请独立发布审核；Pages及发布PR的最终检查见[R2 T05长期待办](research/19c/consolidated/T05_NEXT_ACTIONS.md)。后续主制作T14信德、旁遮普、阿瓦德，T15/T26旧编审预览不会自动批准。
+**2026-11-22正式进展：** 19世纪R1的T37已正式发表（#507）；**T46澳大利亚边疆五章**已按#509（37/37 Actions）与#510（35/35 Actions）正式发布，Pages #44985306164的构建和部署均成功。T46单专题25节75段、39年表链接、17 GIS图元，历史未核地籍与死亡点保留待核。R2 T05 Morant Bay已正式发表：[制作#512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)47/47、[出版#513](https://github.com/1959124923wyz-sys/love-British-TV/pull/513)46/46、[Pages #44992361081](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44992361081) build/deploy双成功，18节54段23个历史事件6个GIS图元。继续原卷GIS待核，下一T14，详[R2 T05长期待办](research/19c/consolidated/T05_NEXT_ACTIONS.md)，T15/T26旧编审预览不会自动批准。
 
 
 
