@@ -1,4 +1,10 @@
 # 归档进度
+## 2026-11-22 · R3 T34黄金海岸与阿散蒂战争/殖民黄金掠夺制作版等待验收
+
+- 从T33正式出版与归档后承接T34三章。已建立母篇 `E19-T34-GOLD-COAST-ASANTE-CONQUEST-LAND-GOLD`，**32节96段32项史料来源、35个新逐年事件及正文链接**（1840s1／1850s1／1870s12／1880s2／1890s19）。原1820年代阿散蒂旧篇和1840/50年代Kumasi旧地名点原样保留。
+- 新增**13个WGS84有证具名地点Point（1+1+3+1+7）**，城市地名参考不冒充王宫、王陵、矿权实地、英军战场和19世纪英国实控Polygon；对1897 Akyem勘探合同旧址及多个土地法/1874金料接收地不造坐标。
+- 已提交独立源证据／GIS审计、9项罪证与原地籍追档、专项Node/GIS与1780×1020真实Chrome测试。制作分支 `feat/19c-t34-gold-coast-asante-colonial-conquest-20261122`，工作板 `review_ready`，母篇 `editorial_review/not_submitted`；**在完成CI与独立出版PR及Pages部署之前不能宣称T34公开上线**。详[审计](../../../docs/research/19C_T34_GOLD_COAST_ASANTE_SOURCE_GIS_AUDIT.md)及[后续原档](T34_NEXT_ACTIONS.md)。
+
 ## 2026-11-22 · R3 T33独立制作、正式出版和Pages部署已全部验证
 
 - **生产PR #528：55/55 checks，合并 SHA `3fb73bd4432fe9ba8ac7203fce3f767c71c5c897`**；**正式出版PR #529：54/54 checks，合并 SHA `2b0102bcf335c179777afb58c338a742f178a4af`**。两套均验证真实1780×1020桌面Chrome，正式出版测试不带review19c预览参数。

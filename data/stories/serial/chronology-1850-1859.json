@@ -7334,6 +7334,30 @@
       "label": "GeoNames｜Lagos, Nigeria",
       "url": "https://www.geonames.org/search.html?country=NG&q=Lagos",
       "access": "Modern Lagos urban center, not 1851 port fortifications or 1861 treaty boundaries"
+    },
+    {
+      "id": "19C-T34-C-X03-S01",
+      "publisher": "加纳大学数字馆藏",
+      "title": "英国议会委员会",
+      "label": "加纳大学数字馆藏｜英国议会委员会",
+      "url": "https://ugspace.ug.edu.gh/server/api/core/bitstreams/78d50877-c481-4423-9278-9885666e8024/content",
+      "access": "Select Committee on Africa (Western Coast)｜报告回收 1852 协议｜附录 No. 3，印页 420，检索“The Agreement called the Poll-TaX Ordinance”。议会报告中的同期文本｜核会议地点、日期和协定成文。"
+    },
+    {
+      "id": "19C-T34-C-X03-S02",
+      "publisher": "密歇根州立大学数字论文库",
+      "title": "Modes of Resistance: Colonialism, Maritime Culture",
+      "label": "密歇根州立大学数字论文库｜Modes of Resistance: Colonialism, Maritime Culture",
+      "url": "https://d.lib.msu.edu/etd/1945/OBJ/download",
+      "access": "学位研究｜检索“PRO CO 96/25”、仅用为调卷索引。学术研究与档号指引｜定位税费抵抗和原协定档号。"
+    },
+    {
+      "id": "19C-T34-GEO-CAPE",
+      "publisher": "GeoNames",
+      "title": "Cape Coast, Ghana",
+      "label": "GeoNames｜Cape Coast, Ghana",
+      "url": "https://www.geonames.org/2302357/cape-coast.html",
+      "access": "现代开普海岸地名WGS84，非1852原会议具体房间或实际缴税行政范围"
     }
   ],
   "events": [
@@ -24055,6 +24079,37 @@
       "area_sqkm": null,
       "research_original_node_ids": [
         "C15-E02"
+      ]
+    },
+    {
+      "id": "E19-T34-1852-C-X03-E01",
+      "year": 1852,
+      "start_year": 1852,
+      "end_year": 1852,
+      "visible_from": 1852,
+      "date_label": "1852年4月19日",
+      "name": "形成征收人头税的协定 总督与多地首领及地方代表",
+      "description": "形成征收人头税的协定 总督与多地首领及地方代表。签署者、应纳款和实际缴费范围分别追档。",
+      "short_description": "形成征收人头税的协定 总督与多地首领及地方代表",
+      "category": "economic",
+      "icon_code": "ECN",
+      "significance": {
+        "level": 8,
+        "rationale": "加纳大学馆藏英国议会委员会人头税条文与CO96/25研究核查；课税计划与实际缴税范围不混同"
+      },
+      "lat": 5.10535,
+      "lng": -1.2466,
+      "source_ids": [
+        "19C-T34-C-X03-S01",
+        "19C-T34-C-X03-S02"
+      ],
+      "geo_precision": "modern_named_cape_coast_reference_not_original_tax_jurisdiction",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_original_node_ids": [
+        "C-X03-E01"
       ]
     }
   ],
