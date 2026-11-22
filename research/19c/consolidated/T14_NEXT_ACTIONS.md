@@ -26,6 +26,20 @@
 - [x] [制作PR #515](https://github.com/1959124923wyz-sys/love-British-TV/pull/515) **49/49项Actions通过**，涵盖T14自身事实/GIS合同、真实1780×1020 Chrome跨三地、跨世纪合同、全站页面回归。主分支合并 `5b97aede9766610784e983945585d86f6fca5bfa`。
 - [x] 将母专题登记`published/approved`、T14.1至T14.3正式出版字段`published_new`；出版白名单显式加入T14的51来源事件审查门槛。
 - [x] 独立出版Chrome使用`T14_PUBLISHED=1`，测试普通网站`?year=1843`，不能依赖`review19c`编审参数。
-- [ ] 出版PR全站Actions（含无预览桌面Chrome）实际全部成功；[ ] 正式PR合并；[ ] GitHub Pages build/deploy双成功；[ ] Issue #499与交接工作板登记真实验收编号。
+- [x] 正式出版[PR #516](https://github.com/1959124923wyz-sys/love-British-TV/pull/516) **48/48项CI全通过**（含无预览参数真实Chrome），合并SHA `c580550e911242a039ddc29bb77cb9d83399e3be`；[x] 正式版[Pages #44999746867](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44999746867) **build=success / deploy=success**；[x] 本轮已在Issue #499及双工作板完成最终交接。
 
 原账剩余六组未结疑问继续按[独立来源GIS审计](../../../docs/research/19C_T14_CONQUEST_PLUNDER_SOURCE_GIS_AUDIT.md)追查，不因母专题发布而关闭。
+
+## R2 · T14正式结案后的可追溯验收链
+
+| 阶段 | 验收页面 | 实际核证 |
+| --- | --- | --- |
+| 母专题生产 | [制作PR #515](https://github.com/1959124923wyz-sys/love-British-TV/pull/515) | 49/49 CI成功，真实Chrome覆盖1843/49/56/58并双击返回；主分支SHA `5b97aede9766610784e983945585d86f6fca5bfa` |
+| 制作版部署 | [Pages #44999188189](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44999188189) | build、deploy均成功 |
+| 正式出版审核 | [出版PR #516](https://github.com/1959124923wyz-sys/love-British-TV/pull/516) | 48/48 CI成功；公开长篇无`review19c`的Desktop Chrome通过；主分支SHA `c580550e911242a039ddc29bb77cb9d83399e3be` |
+| 正式版部署 | [Pages #44999746867](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44999746867) | build、deploy均成功 |
+| 公开入口 | [1843年南亚历史地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1843) | 1843年米亚尼、1849年拉合尔、1858年阿瓦德证据链均可在已发表母专题中切换阅读 |
+
+**最终审定**：T14母专题`published / approved`，T14.1—T14.3全部`published_new`。成果29节87段、30来源、51个复用事件（0重复新增旧案）、3具名地理参考点；阿瓦德旧界仅虚线、不填色、不计实控面积。尚未校验的Talpur家族财产、英印军原始战利品账、拉合尔国库和光之山移交原件、凯萨尔巴格逐件损失及1858—59实际失地/再授地籍都保持**开放待核**。
+
+**下一主制作候选 R2 · T10「1840年代爱尔兰大饥荒：救济、饥饿死亡、逐佃与土地转手」**，与T14的原财务档案追索并行。

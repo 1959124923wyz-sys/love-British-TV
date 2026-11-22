@@ -110,4 +110,4 @@ E6-T14-NAV航海法与英荷战争子篇，单列1651/1660/1663法令、1654/166
 
 ## R2 · 19世纪T14当前接力（2026-11-22）
 
-新制作任务 **T14信德、旁遮普、阿瓦德征服与掠夺**：[专题工作清单](research/19c/consolidated/T14_NEXT_ACTIONS.md)；[29节长篇](data/stories/serial/e19-t14-sindh-punjab-awadh-conquest-expropriation-1842-1859.json)；[51已有事件的去重台账](data/research/19c-t14-existing-event-crosswalk.json)；[严格史料和历史GIS审计](docs/research/19C_T14_CONQUEST_PLUNDER_SOURCE_GIS_AUDIT.md)。只复用现有51旧事件ID、增3地名参考点，1855年阿瓦德旧边界明确虚线，不得编造战时死亡或财产金额。制作PR #515已49/49全站CI和Chrome通过并合并；母专题已转published/approved，正在独立出版PR审核与Pages部署。T05已正式`published/approved`并完结。
+新制作任务 **T14信德、旁遮普、阿瓦德征服与掠夺**：[专题工作清单](research/19c/consolidated/T14_NEXT_ACTIONS.md)；[29节长篇](data/stories/serial/e19-t14-sindh-punjab-awadh-conquest-expropriation-1842-1859.json)；[51已有事件的去重台账](data/research/19c-t14-existing-event-crosswalk.json)；[严格史料和历史GIS审计](docs/research/19C_T14_CONQUEST_PLUNDER_SOURCE_GIS_AUDIT.md)。只复用现有51旧事件ID、增3地名参考点，1855年阿瓦德旧边界明确虚线，不得编造战时死亡或财产金额。制作PR #515（49/49）与正式出版PR #516（48/48）均全站CI及真实桌面Chrome通过并合并；Pages #44999746867 build/deploy均成功，三章已正式published_new。T05已正式`published/approved`并完结。

@@ -117,3 +117,9 @@
 ## 2026-11-22 · T14制作PR49/49通过并合并，正式出版独立审核
 
 [T14制作PR #515](https://github.com/1959124923wyz-sys/love-British-TV/pull/515)全部49/49 GitHub Actions成功，含真实1780×1020桌面Chrome及51复用年表链接验证。主分支squash提交`5b97aede9766610784e983945585d86f6fca5bfa`。独立出版审批将母专题转为`published/approved`，三章T14.1—.3为`published_new`，并把T14正式写入`test_serial_story_contract.js`白名单；出版浏览器须不带预览参数运行。独立出版PR本身的CI和GitHub Pages部署结果尚须另行核实并写入长期交接。各地战役伤亡、原王廷财物、军官奖金、1849国家财产没收和1858地产归还按来源分列，原件继续待核。
+
+## 2026-11-22 · R2 T14三章正式发表、真Chrome和GitHub Pages双验收结案
+
+- [制作PR #515](https://github.com/1959124923wyz-sys/love-British-TV/pull/515)在49/49项GitHub Actions通过后合并`5b97aede9766610784e983945585d86f6fca5bfa`；另经[出版PR #516](https://github.com/1959124923wyz-sys/love-British-TV/pull/516) 48/48项CI和无预览参数真实桌面Chrome通过后合并`c580550e911242a039ddc29bb77cb9d83399e3be`。
+- Pages制作版#44999188189和[正式版#44999746867](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44999746867)都通过**build/deploy双成功**。网站[1843年历史地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1843)正式专题状态`published/approved`、三章工作板`published_new`。
+- 已发表29节87段、30来源及51项**全部复用**Sin/first-Sikh/second-Sikh/Awadh已考史实节点；新增3具名地名点和旧阿瓦德边界虚线（禁止控制填色与面积），不编造平民死亡数字。重点公开原英国议会和英军档对Talpur俘虏与战利品、锡克条约国家没产和光之山、凯萨尔巴格劫掠、阿瓦德没产公告与再授地契的证据。资料未核处见[T14长期执行清单](T14_NEXT_ACTIONS.md)。下一主制作候选T10爱尔兰大饥荒。
