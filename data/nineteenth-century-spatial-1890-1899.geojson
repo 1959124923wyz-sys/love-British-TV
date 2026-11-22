@@ -3533,6 +3533,182 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "australian_colonial_frontier_context"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t21-kawlin-town-wuntho-1891",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.6777,
+          23.79397
+        ]
+      },
+      "properties": {
+        "stable_id": "t21-kawlin-town-wuntho-1891",
+        "name": "Kawlin：1891年英军攻占佛塔山寨",
+        "start_year": 1891,
+        "end_year": 1891,
+        "display_kind": "conflict",
+        "summary_zh": "1891年2月，英印军从Kawlin出兵，攻打佛塔内守卫者并占领Kyaingkwintaung方向的山寨。",
+        "source_ids": [
+          "19C-T21-SCOTT-WUNTHO",
+          "19C-T21-GEO-KAWLIN",
+          "19C-T21-NAM-KYAING"
+        ],
+        "source_urls": [
+          "https://www.burmalibrary.org/docs21/Scott-JG-1900-Gazetteer-Pt1-Vol1-tu.pdf",
+          "https://mapcarta.com/14985406",
+          "https://collection.nam.ac.uk/detail.php?acc=1991-01-33-17"
+        ],
+        "related_event_ids": [
+          "E19-T21-1891-KAWLIN-OUTPOST",
+          "E19-T21-1891-KAWLIN-PAGODA",
+          "E19-T21-1891-KYAING-HILL"
+        ],
+        "named_anchors": [
+          "Kawlin"
+        ],
+        "mapping_method": "1900年Scott殖民官志/1891年剑桥馆藏与现存GeoNames/OSM同名地名交叉定位；现代城镇锚点，未以现代地界重绘1891王国疆域",
+        "geo_precision": "modern_Kawlin_town_reference_pagoda_hill_and_Kyaing_stockade_unlocated",
+        "geometry_source": "Documented historical town name paired with current WGS84 named-place reference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "post_1891_British_administration_at_named_locality_not_polygon_claim"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t21-pegon-modern-named-place-1891",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.66254,
+          23.81455
+        ]
+      },
+      "properties": {
+        "stable_id": "t21-pegon-modern-named-place-1891",
+        "name": "Pegon：1891年英军摧毁抵抗者集结地",
+        "start_year": 1891,
+        "end_year": 1891,
+        "display_kind": "conflict",
+        "summary_zh": "殖民官志记英军于1891年2月20日摧毁温托边缘的Pegon聚落，受害住户数量未列。",
+        "source_ids": [
+          "19C-T21-SCOTT-WUNTHO",
+          "19C-T21-GEO-PEGON"
+        ],
+        "source_urls": [
+          "https://www.burmalibrary.org/docs21/Scott-JG-1900-Gazetteer-Pt1-Vol1-tu.pdf",
+          "https://mapcarta.com/14946624"
+        ],
+        "related_event_ids": [
+          "E19-T21-1891-PEGON-DESTROYED"
+        ],
+        "named_anchors": [
+          "Pegon"
+        ],
+        "mapping_method": "1900年Scott殖民官志/1891年剑桥馆藏与现存GeoNames/OSM同名地名交叉定位；现代城镇锚点，未以现代地界重绘1891王国疆域",
+        "geo_precision": "modern_Pegon_toponym_candidate_historic_1891_destroyed_village_identity_to_confirm",
+        "geometry_source": "Documented historical town name paired with current WGS84 named-place reference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "post_1891_British_administration_at_named_locality_not_polygon_claim"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t21-wuntho-town-1891-annexation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.6856,
+          23.8989
+        ]
+      },
+      "properties": {
+        "stable_id": "t21-wuntho-town-1891-annexation",
+        "name": "Wuntho：地方首领被黜与英国直接接管",
+        "start_year": 1891,
+        "end_year": 1899,
+        "display_kind": "political",
+        "summary_zh": "1891年英印军占据温托城；英属印度政府废黜当地Sawbwa，开始将原地方政权纳入殖民辖区。",
+        "source_ids": [
+          "19C-T21-SCOTT-WUNTHO",
+          "19C-T21-CAM-WUNTHO",
+          "19C-T21-GEO-WUNTHO"
+        ],
+        "source_urls": [
+          "https://www.burmalibrary.org/docs21/Scott-JG-1900-Gazetteer-Pt1-Vol1-tu.pdf",
+          "https://www.repository.cam.ac.uk/items/af22387d-96ce-4761-83eb-8f3b45b95028/full",
+          "https://mapcarta.com/14917676"
+        ],
+        "related_event_ids": [
+          "E19-T21-1891-WUNTHO-OCCUPIED",
+          "E19-T21-1891-WUNTHO-DEPOSED",
+          "E19-T21-1891-WUNTHO-DISARMED"
+        ],
+        "named_anchors": [
+          "Wuntho"
+        ],
+        "mapping_method": "1900年Scott殖民官志/1891年剑桥馆藏与现存GeoNames/OSM同名地名交叉定位；现代城镇锚点，未以现代地界重绘1891王国疆域",
+        "geo_precision": "modern_Wuntho_town_center_not_1891_palace_or_land_titles",
+        "geometry_source": "Documented historical town name paired with current WGS84 named-place reference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "post_1891_British_administration_at_named_locality_not_polygon_claim"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t21-pinlebu-1891-occupation",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.38115,
+          24.09043
+        ]
+      },
+      "properties": {
+        "stable_id": "t21-pinlebu-1891-occupation",
+        "name": "Pinlebu：1891年英军进入温托首领驻地",
+        "start_year": 1891,
+        "end_year": 1891,
+        "display_kind": "conflict",
+        "summary_zh": "1891年2月27日英军占据Pinlebu，首领Maung Aung Myat此前离开，宫室与寨垒已有焚毁痕迹。",
+        "source_ids": [
+          "19C-T21-SCOTT-WUNTHO",
+          "19C-T21-GEO-PINLEBU"
+        ],
+        "source_urls": [
+          "https://www.burmalibrary.org/docs21/Scott-JG-1900-Gazetteer-Pt1-Vol1-tu.pdf",
+          "https://mapcarta.com/14945590"
+        ],
+        "related_event_ids": [
+          "E19-T21-1891-PINLEBU-OCCUPIED"
+        ],
+        "named_anchors": [
+          "Pinlebu"
+        ],
+        "mapping_method": "1900年Scott殖民官志/1891年剑桥馆藏与现存GeoNames/OSM同名地名交叉定位；现代城镇锚点，未以现代地界重绘1891王国疆域",
+        "geo_precision": "modern_Pinlebu_town_reference_not_Mankin_pass_or_1891_palace",
+        "geometry_source": "Documented historical town name paired with current WGS84 named-place reference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "post_1891_British_administration_at_named_locality_not_polygon_claim"
+      }
     }
   ]
 }

@@ -1,5 +1,12 @@
 # 归档进度
 
+## 2026-11-22 · R2 T21缅甸三次战争/暴力镇压/土地与米业制作完成，待CI
+
+- 接T10正式出版后，按59专题工作板首批任务认领T21（T21.1历次战争、T21.2土地/稻米）。先去重旧三篇缅甸编审母篇及1820/1850/1880年代已建年表、已有军事地理点。
+- **新母篇36节97段、93来源、109唯一正文事件链接：97旧复用/12新年度事件**。新增1891温托10条官方军报所涉杀戮、毁Pegon、炮击Mankin、废黜地方首领；1876土地法1条、1898/99海关统计1条。保留源研究B09/B58/B72案号。旧三篇仍 `editorial_review/not_submitted`，新母篇也保持 `editorial_review/not_submitted` 待专题审查，不抢先公开。
+- 新地理：1890—1899源GeoJSON增加4个具名Point（Kawlin/Pegon/Wuntho/Pinlebu），全部保留 `historical_boundary_confirmed=false` 及不可汇总面积；旧三次战争已经存在的军事点维持连续。未取得历史镇村边界和家宅测图的，不发明殖民占地Polygon。
+- 已提交专项测试 `scripts/test_19c_t21_burma_wars.cjs`、1780x1020真实Chrome `scripts/browser_19c_t21_burma_wars.py` 与 GHA `19c-t21-burma-wars.yml`；**CI、正式合并与Pages状态待后续实报**。核查详情与继续追档见[19C T21 GIS及来源审计](../../../docs/research/19C_T21_BURMA_CONQUEST_WUNTHO_LAND_GIS_AUDIT.md)及[T21底册](topics/T21.md)。
+
 ## 2026-11-22 · 主编46 R2 T10正式发布，生产49/49、出版48/48、Pages构建部署双成功
 
 - [制作PR #518](https://github.com/1959124923wyz-sys/love-British-TV/pull/518) **49/49 GitHub Actions全部成功**，merge SHA `c893dd3f88458c4f7591dc130674abdfa395df9c`；[正式出版PR #519](https://github.com/1959124923wyz-sys/love-British-TV/pull/519) **48/48全部成功**（含旧16世纪网页交互一次重试成功），squash SHA `a5e895859914a0da424d4908289a8e6bd989019d`。T10专项Node、严格GIS与1780×1020真实Chrome均成功。
