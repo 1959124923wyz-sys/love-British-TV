@@ -1,10 +1,10 @@
 # T46 下一制作专题｜澳大利亚边疆扩张、殖民暴力与抵抗
 
-**创建：2026-11-22，来源为T46研究卷与59专题/150章节工作板。** T46为T37 #505完成之后的**下一顺位，尚未认领制作PR、未增GIS、未发表**。从[原研究T46](topics/T46.md)与[永久接力入口](START_HERE.md)进入。原卷冻结规模：**5章、81条研究年表、10个导读节点、98条制图线索、17个待核问题、72条史料索引**。各章原案/子线索有交叉重叠，不将章内制图线索简单相加为独立对象。
+**创建：2026-11-22，来源为T46研究卷与59专题/150章节工作板。** T46已由主编于2026-11-22在独立GitHub分支认领并完成五章联稿、事件去重与首批GIS；**编审状态仍是`editorial_review/not_submitted`，专项CI、PR合并和Pages另行验收**。从[原研究T46](topics/T46.md)与[永久接力入口](START_HERE.md)进入。原卷冻结规模：**5章、81条研究年表、10个导读节点、98条制图线索、17个待核问题、72条史料索引**。各章原案/子线索有交叉重叠，不将章内制图线索简单相加为独立对象。
 
 ## 全专题统一制图和统计门禁
 
-- [ ] 扫描已正式注册的1830—1899年地图事件与文章，记录Pinjarra、Myall Creek、Waterloo Creek等已存在ID、地理精度、独立故事；**先复用、补足，禁止重号和重复计杀**。
+- [x] 扫描已正式注册的1830—1899年地图事件与文章，记录Pinjarra、Myall Creek、Waterloo Creek等已存在ID、地理精度、独立故事；**先复用、补足，禁止重号和重复计杀**。
 - [ ] 为每一起暴力事件保存日期上下界、指挥链（州警/Native Mounted Police/移民武装/牧场公司）、受害社群族名及不同材料的死亡区间；执法报告与受害人口述应标明陈述者。
 - [ ] University of Newcastle Colonial Frontier Massacres“groups”与子案有重复覆盖；不得合计组案、点案和较晚估计三次计算同一死者。
 - [ ] 现今澳大利亚行政州界≠19世纪王室批地/牧区/定居地占有范围；没有史图及产权档号不画殖民已实控面，能证明行动路程但未逐段配准的仅用虚线。
@@ -44,8 +44,22 @@
 
 ## 制作交付与交接
 
-- [ ] 新建独立T46制作分支并登记到专题工作板，五章各按来源/正文/GIS/桌面CI独立状态推进。
+- [x] 新建独立T46制作分支并登记到专题工作板，五章各按来源/正文/GIS/桌面CI独立状态推进。
 - [ ] 新正文建立精确`[[eventID|text]]`导航，死亡区间脚注+原案号双向可查；按证据制作点、虚线、只有地籍史图审核通过才制作面。
 - [ ] 完成2026主分支已注册事件重复审计、工作板和Issue #499回填；PR全部检查及Pages发布成功后才勾选发布验收。
 
 参考入口： [T46研究原卷](topics/T46.md) · [专题工作板](TOPIC_WORKBOARD.csv) · [章节工作板](CHAPTER_WORKBOARD.csv)。
+
+## 2026-11-22 五章制作用独立分支与下一步
+
+**制作分支：** `feat/19c-t46-australian-frontier-five-chapters-20261122`。本轮新增工作并非原研究卷全量复核完成：
+
+- [x] 五章联写：`data/stories/serial/e19-t46-australian-frontier-land-violence-1829-1897.json`，**25节75段**，分T46.1六节、T46.2六节、T46.3五节、T46.4四节、T46.5四节；专题来源共48项，文本中39个独立历史事件跳转。
+- [x] `data/research/19c-t46-editorial-event-ledger.json`保存**10条已公开事件复用**、**29条新增事件**一一对应。已复用Pinjarra、Waterloo Creek、Myall Creek、Warrigal/Gippsland系列与Hornet Bank等，不复制同一事件，也不把同一组报复估数累加。
+- [x] 29条新事件分1820s(2)、1830s(8)、1840s(2)、1850s(1)、1860s(8)、1870s(5)、1890s(3)接入本仓库现有逐十年JSON；原始档案追查ID继续保留在每个事件里。
+- [x] 添加**17个GIS图元（16个具名公开城镇、政务与遗产地点；1条仅端点相连的虚线）**。公开Lillimooloora州遗产坐标以UTM转WGS84约化呈现，Murujuga只用UNESCO当代世界遗产景观参考中心，Boulia只标现代市镇而非城外25km营地；报复杀戮具体死亡点与遗骨/圣地不编造。零真实控制区Polygon。
+- [x] 编写专用静态历史、来源与GIS合同`scripts/test_19c_t46_australian_frontier.cjs`和真实桌面Chrome`scripts/browser_19c_t46_australian_frontier.py`；GitHub Actions `.github/workflows/19c-t46-australian-frontier.yml`，由主编在PR全面检查。
+- [ ] 优先按 C86 SROWA Acc36与Old Historic Plan 142、C37 Roebourne S1751、C51 QSA ITM3681985—1988／ITM3682012、C68 南澳 GRG5/2 files 230/261/461/540、C73 Bunuba州遗产及社区材料核有争议的全套原件。来源目录和同行引用已经提供追档入口。
+- [ ] CI和Chrome、Pages部署后在本清单、59/150工作板、Issue #499登记PR及真正发布状态。深查仍不足的图元维持现有参考精度和虚线，编审预览不误填`published_new`。
+
+**核史对照文档：** [T46五章来源GIS审计](../../../docs/research/19C_T46_AUSTRALIAN_FRONTIER_SOURCE_GIS_AUDIT.md)。
