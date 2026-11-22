@@ -1,4 +1,11 @@
 # 归档进度
+## 2026-11-22 · R3 T33独立制作、正式出版和Pages部署已全部验证
+
+- **生产PR #528：55/55 checks，合并 SHA `3fb73bd4432fe9ba8ac7203fce3f767c71c5c897`**；**正式出版PR #529：54/54 checks，合并 SHA `2b0102bcf335c179777afb58c338a742f178a4af`**。两套均验证真实1780×1020桌面Chrome，正式出版测试不带review19c预览参数。
+- [GitHub Pages 发布运行 #45031133754](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45031133754)：**build success、deploy success**。已出版母篇 `E19-T33-LAGOS-NIGER-BENIN-COMPANY-CONQUEST` 在普通年份地图 [1851](https://1959124923wyz-sys.github.io/love-British-TV/?year=1851)、[1861](https://1959124923wyz-sys.github.io/love-British-TV/?year=1861)、[1887](https://1959124923wyz-sys.github.io/love-British-TV/?year=1887)、[1894](https://1959124923wyz-sys.github.io/love-British-TV/?year=1894)、[1895](https://1959124923wyz-sys.github.io/love-British-TV/?year=1895)、[1897](https://1959124923wyz-sys.github.io/love-British-TV/?year=1897)可调阅。
+- 三章26节78段，39项史料源、39个互动事件（26新、13复用既有46条贝宁旧年表），五年代合计17个具名GIS点，**零推测的领土Polygon/实控面积**。四起缺原址的事件保留时间和史料但不画坐标。
+- 新获可考档案：皇家格林尼治国家海事博物馆 **MSS/73/089** 1894年Broheme堡垒原地图目录；**AAA0555/AAA0556** Nana旗帜。原图影像、实测坐标和缴获财产账尚待核。下一R3首批 **T34 黄金海岸—阿散蒂战争**，勿与其他已进行中的专题重复立项。
+
 ## 2026-11-22 · R3 T33制作PR #528正式合并，独立出版审核启动
 
 - [制作PR #528](https://github.com/1959124923wyz-sys/love-British-TV/pull/528) 已通过**55/55 GitHub Actions**并合并至 `main`，mergeSHA `3fb73bd4432fe9ba8ac7203fce3f767c71c5c897`；史料、GIS、59/150工作板与真实1780px桌面Chrome均通过。

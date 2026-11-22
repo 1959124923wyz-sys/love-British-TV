@@ -1,6 +1,6 @@
 # 爱英TV · R3 T33｜1851—1899年拉各斯、尼日尔公司与贝宁罪证／历史GIS审计
 
-**生产版已验收，2026-11-22制作PR #528通过55/55并合并SHA `3fb73bd4432fe9ba8ac7203fce3f767c71c5c897`。** 正式发布另须独立出版PR与GitHub Pages build/deploy。
+**正式出版验证完成：2026-11-22制作PR #528通过55/55并合并SHA `3fb73bd4432fe9ba8ac7203fce3f767c71c5c897`；出版PR #529通过54/54并合并SHA `2b0102bcf335c179777afb58c338a742f178a4af`。GitHub Pages运行 [#45031133754](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45031133754) 的build及deploy均成功。**
 
 ## 一、产出和旧案交叉核验
 
