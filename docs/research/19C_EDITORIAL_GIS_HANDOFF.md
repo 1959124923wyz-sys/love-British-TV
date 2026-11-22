@@ -61,4 +61,4 @@ node scripts/lint_atlas_47_frontend_copy.js
 - 印度 T15: PR #501 + #502 已合并与Pages验收，母篇编审预览。
 - **中国 T26：** [PR #503](https://github.com/1959124923wyz-sys/love-British-TV/pull/503) 合并SHA `53d9a7cb8287a6699b177b4a67126622cbb75aca`，14节44段99内链、23条新增年表与48条跨年GIS图元。**35/35 GitHub Actions通过**；[Pages run #44977462856](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977462856)构建及部署成功。[1839年地图/长文预览入口](https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1839)。
 - 未完成原卷、地图配准和实收账项详 [T26独立后续清单](../../research/19c/consolidated/T26_NEXT_ACTIONS.md) 与 [源档审计](19C_T26_CHINA_OPIUM_TREATY_PORTS_GIS_AUDIT.md)。新母篇 `editorial_review/not_submitted`，不算经终审的正式 `published/approved`。
-- 下一优先 **T37 马格达拉文物掠夺（C10）**，其后 **T46 澳大利亚边疆与殖民土地暴力（五章）**。具体认领、QA、剩余55篇量表入口持续以 `TOPIC_WORKBOARD.csv`、`CHAPTER_WORKBOARD.csv`和 `PROGRESS.md` 为准。
+- 下一优先 **T37 马格达拉文物掠夺（C10）**，其后 **T46 澳大利亚边疆与殖民土地暴力（五章）**。具体认领、QA、其余57专题的状态入口持续以 `TOPIC_WORKBOARD.csv`、`CHAPTER_WORKBOARD.csv`和 `PROGRESS.md` 为准。
