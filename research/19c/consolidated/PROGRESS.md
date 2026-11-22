@@ -1,4 +1,11 @@
 # 归档进度
+## 2026-11-22 · R3 T34黄金海岸与阿散蒂全部发布并完成Pages双成功
+
+- [制作PR #531](https://github.com/1959124923wyz-sys/love-British-TV/pull/531)：**57/57**检查含真实桌面Chrome和GIS，合并 `64f629fad35a383d54b8aa050a83cd18536035aa`；[独立出版PR #532](https://github.com/1959124923wyz-sys/love-British-TV/pull/532)：**56/56**全绿，无review19c参数Chrome，合并 `a5fad4d11ef6c8f8a62eb0ae527d516806fd72a8`。
+- [GitHub Pages运行#45039811646](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45039811646)：**build=success，deploy=success**。普通地图年份：[1844](https://1959124923wyz-sys.github.io/love-British-TV/?year=1844)、[1852](https://1959124923wyz-sys.github.io/love-British-TV/?year=1852)、[1874](https://1959124923wyz-sys.github.io/love-British-TV/?year=1874)、[1896](https://1959124923wyz-sys.github.io/love-British-TV/?year=1896)、[1897](https://1959124923wyz-sys.github.io/love-British-TV/?year=1897)已发布母篇。
+- 成品T34.1–.3 **32节96段32项来源35条新历史事件及13个具名现代GIS Point**，原1820年代Asante及1840/50年代老Kumasi点未重复统计。1874五万盎司条约索款与实付分开，British Museum 1874/1876各批与V&A藏物分开；矿区地籍及王宫焚毁真实足迹无原图一律不画主权Polygon。
+- 后续原档与有据历史边界见[T34审计](../../../docs/research/19C_T34_GOLD_COAST_ASANTE_SOURCE_GIS_AUDIT.md)、[T34下一轮取证](T34_NEXT_ACTIONS.md)。**下一首批 T36：英国占领埃及与英埃征服苏丹**。
+
 ## 2026-11-22 · T34制作PR #531完成57/57且合并，独立公开审查开始
 
 - [T34制作PR #531](https://github.com/1959124923wyz-sys/love-British-TV/pull/531) **57/57项CI全部成功**，含专项历史来源、GIS和真实1780×1020桌面Chrome。merge SHA `64f629fad35a383d54b8aa050a83cd18536035aa`。
