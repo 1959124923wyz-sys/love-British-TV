@@ -37,7 +37,7 @@ try:
     assert len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article [data-story-event]'))==12,"Expected 12 live body links"
     driver.save_screenshot(str(out/"19c-t37-1867-long-story.png"))
     focus("E19-T37-1867-ZULA-BASE",1867,15.25,39.66667,"19c-t37-1867-zula.png")
-    focus("E19-T37-1868-MAQDALA-STORM",1868,11.43333,39.28333,"19c-t37-1868-maqdala.png")
+    focus("E19-T37-1868-MAQDALA-STORM",1868,11.35,39.18333,"19c-t37-1868-maqdala.png")
     focus("E19-T37-1868-DELANTA-AUCTION",1868,11.58333,39.16667,"19c-t37-1868-delanta.png")
     focus("E19-T37-1871-CROWN-DEBATE",1871,51.5007,-0.1246,"19c-t37-1871-parliament.png")
     focus("E19-T37-1872-CROWN-DEPOSIT",1872,51.4966,-0.1722,"19c-t37-1872-crown.png")

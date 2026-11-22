@@ -13,7 +13,7 @@
 
 ## 史料与地点的边界
 
-Maqdala堡垒、Aroge战场及Delanta拍卖营地的1868年实测轮廓均未复原。British Library馆藏目录 `IOR/X/12126` 列出远征军实测图，需要取源图、年份和比例尺后配准。Amba Mariam / Magdala现代地点文献有纬度11.2°与11.4333°两套常见参考，核原图前只用具名地点点位，不画堡墙及受灾范围。
+Maqdala堡垒、Aroge战场及Delanta拍卖营地的1868年实测轮廓均未复原。British Library馆藏目录 `IOR/X/12126` 列出远征军实测图，需要取源图、年份和比例尺后配准。Maqdala历史高原与现代Amba Mariam定位曾出现明显歧异：Getty TGN 11.4333°N/39.2833°E，Wikidata衍生地名库11.2°N/39.2833°E。经重新比对北欧非洲研究所保存的Bernhard Lindahl《Local History of Ethiopia: Mek–Mekwenta》（2005）第12/40页 HEE58，Mekdela Maryam教堂记录为11°21′N/39°11′E，处于历史Mekdela高原西南。**正式站新增点与虚线所用参考端点改为高原附近11.35°N/39.18333°E，并明确它是教堂附近地名参考，不是1868堡墙或战场实测中心。** 实测仍须British Library IOR/X/12126/19—23测图配准。
 
 拟绘GIS图元：孟买出发、Zula驻点、Maqdala攻堡/劫掠/焚毁、Delanta拍卖、伦敦BM与南肯辛顿购藏、1871议会、1872财政部寄存；两端点之间有据顺序线（孟买→Zula、Zula→Maqdala、Maqdala→Delanta）仅画虚线、无面积。不以战地或航线转换为英国治下领土。
 
@@ -30,3 +30,9 @@ Maqdala堡垒、Aroge战场及Delanta拍卖营地的1868年实测轮廓均未复
 - [历史研究：British Museum与远征](https://onlinelibrary.wiley.com/doi/10.1111/1468-229X.13439)；[Historical Journal对事前征集的研究](https://www.cambridge.org/core/journals/historical-journal/article/planned-plunder-the-british-museum-and-the-1868-maqdala-expedition/3109780C72D6A3E24D6B5A5387B6087C)
 
 **后续查档和CI清单：** [T37_NEXT_ACTIONS.md](../../research/19c/consolidated/T37_NEXT_ACTIONS.md)。
+
+## 2026-11-22 GIS坐标纠正原始依据
+
+- [Nordic Africa Institute，Bernhard Lindahl, *Local History of Ethiopia: Mek–Mekwenta*（2005），p.12/40 HEE58](https://nai.uu.se/download/18.39fca04516faedec8b248e19/1580829013197/ORTMEK05.pdf)：Mekdela Maryam教堂11°21′N、39°11′E，位于Mekdela高原西南。
+- [Getty TGN现代Amba Maryam条目](https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=7003249&nation=&place=&subjectid=1089703)：11.4333°N、39.2833°E，现代地名记录；与历史高原近址不能直接当作同一点。
+- 1868英国战地测量图I/O/R馆藏目录只确认图件存在，本轮未从中矢量化任何堡墙或战场Polygon。

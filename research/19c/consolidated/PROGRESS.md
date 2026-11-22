@@ -58,3 +58,5 @@
 - 1860/1870s GIS增11图元（8具名参考点、3有据关系虚线），**零个未经测量的行政/英国实控多边形**；马格达拉与Aroge原测图尚未取原件配准，战场精确坐标保留空值。
 - 冠杯1871年议会动议与1872年财政部寄存、V&A 1868年11月约£15的整组购价、Or607馆藏批次和个别物件运输缺口分账。详情与后续任务见[T37长期待办](T37_NEXT_ACTIONS.md)。
 - 制作分支 `feat/19c-t37-maqdala-provenance-gis-20261122`，状态`editorial_review/not_submitted`，专项CI、浏览器验证、PR合并和Pages仍待核，下一制作顺位T46。
+
+- **GIS纠偏**：交叉对读Nordic Africa Institute/Bernhard Lindahl (2005) Mekdela Maryam 11°21′N/39°11′E，与Getty TGN及Wikidata衍生地名纬度差异后，将马格达拉地图点/两条关系线端点更正为高原西南**近址**39.18333E/11.35N，保留堡墙及Aroge战地待同期原测图配准；正文和QA同步修正。

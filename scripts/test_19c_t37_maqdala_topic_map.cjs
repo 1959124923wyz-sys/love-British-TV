@@ -10,7 +10,7 @@ const index=load('data/stories/serial/index.json');
 const meta=index.topics.find(t=>t.id===story.id);
 assert(meta&&meta.status==='editorial_review'&&meta.publication_review==='not_submitted');
 assert.equal(story.sections.length,12);
-const sourceIds=new Set(story.sources.map(s=>s.id));assert.equal(sourceIds.size,15);
+const sourceIds=new Set(story.sources.map(s=>s.id));assert.equal(sourceIds.size,16);
 for(const s of story.sources)assert(s.url.startsWith('https://')&&s.label&&s.access);
 const pattern=/\[\[([A-Za-z0-9-]+)\|([^\]\n]{1,100})\]\]/g;
 const ids=story.sections.flatMap(sec=>{assert(sec.source_keys.length&&sec.source_keys.every(id=>sourceIds.has(id)),sec.id);assert(story.topic_source_claims.some(s=>s.section_id===sec.id));return sec.paragraphs.flatMap(p=>[...p.matchAll(pattern)].map(m=>m[1]));});
