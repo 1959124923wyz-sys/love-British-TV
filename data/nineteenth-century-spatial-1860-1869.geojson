@@ -4714,6 +4714,50 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "new_zealand_colonial_military_legal_action_only_at_documented_named_locality"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t33-lagos-cession-governance-1860s",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.394673,
+          6.454066
+        ]
+      },
+      "properties": {
+        "stable_id": "t33-lagos-cession-governance",
+        "name": "拉各斯：1861割让及英国殖民政府驻地",
+        "start_year": 1861,
+        "end_year": 1869,
+        "display_kind": "political",
+        "summary_zh": "拉各斯：1861割让及英国殖民政府驻地。有关殖民军事行动、条约、政权及财产权利的具体变化，按同时代文献中的年代和参与方分别考察。",
+        "source_ids": [
+          "19C-T33-C15-S02",
+          "19C-T33-C15-S01",
+          "19C-T33-GEO-LAGOS"
+        ],
+        "source_urls": [
+          "https://www.thegazette.co.uk/London/issue/22549/page/3785/data.pdf",
+          "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/lagos-consulate-18511861-an-outline/34C1206738F437DDE69C63879D4BF087",
+          "https://www.geonames.org/search.html?country=NG&q=Lagos"
+        ],
+        "related_event_ids": [
+          "E19-T33-1861-LAGOS-CESSION"
+        ],
+        "named_anchors": [
+          "LAGOS"
+        ],
+        "mapping_method": "英国同期法律/议会/殖民史料与现代GeoNames/UNGEGN/OSM具名地理参照互核；不据此描绘原战场、王宫、河界或主权范围",
+        "geo_precision": "modern_named_lagos_reference_not_historic_boundary",
+        "geometry_source": "Named modern urban/locality reference WGS84, not historic cadastral survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "British_crown_colony_at_Lagos_named_locality"
+      }
     }
   ]
 }
