@@ -10,10 +10,10 @@ assert(entry&&story.id===id);
 assert(['editorial_review','published'].includes(entry.status));
 assert(['not_submitted','approved'].includes(entry.publication_review));
 assert(old&&old.event_ids.length===34,'legacy famine study retained');
-assert.equal(story.sections.length,26);
-assert.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),78);
+assert.equal(story.sections.length,28);
+assert.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),84);
 assert(story.sections.flatMap(s=>s.paragraphs).join('').length>6500);
-assert.deepEqual(story.sections.reduce((v,s)=>(v[s.narrative_chapter]=(v[s.narrative_chapter]||0)+1,v),{}),{'T10.1':14,'T10.2':12});
+assert.deepEqual(story.sections.reduce((v,s)=>(v[s.narrative_chapter]=(v[s.narrative_chapter]||0)+1,v),{}),{'T10.1':14,'T10.2':14});
 const sourceIds=new Set(story.sources.map(s=>s.id));
 assert.equal(sourceIds.size,story.sources.length,'no duplicate source ID');
 for(const s of story.sources)assert(s.url.startsWith('https://')&&s.title&&s.publisher&&s.access,s.id);
@@ -27,14 +27,16 @@ for(const sec of story.sections){
   for(const p of sec.paragraphs)for(const match of p.matchAll(/\[\[([A-Za-z0-9-]+)\|([^\]\n]+)\]\]/g))links.push(match[1]);
 }
 const unique=[...new Set(links)];
-assert.equal(unique.length,32,'verified unique linked events');
+assert.equal(unique.length,34,'verified unique linked events');
 assert.deepEqual(new Set(unique),new Set(entry.event_ids));
 const newIds=[
   'E19-IR-1861-DERRYVEAGH-EXECUTION',
   'E19-IR-1861-DERRYVEAGH-COMMONS-12APR',
   'E19-IR-1861-DERRYVEAGH-OFFICIAL-RETURN',
-  'E19-IR-1861-LETTERKENNY-RELIEF-APPEALS'];
-assert.equal(new Set(unique.filter(x=>!old.event_ids.includes(x))).size,4,'four newly researched 1861 events');
+  'E19-IR-1861-LETTERKENNY-RELIEF-APPEALS',
+  'E19-IR-1861-DERRYVEAGH-HOUSE-CHILDREN-RETURN',
+  'E19-IR-1861-DERRYVEAGH-INQUIRY-DEFEATED'];
+assert.equal(new Set(unique.filter(x=>!old.event_ids.includes(x))).size,6,'six newly researched 1861 events');
 for(const x of unique)assert(old.event_ids.includes(x)||newIds.includes(x),'unknown new ID '+x);
 const records=load('data/stories/serial/chronology-1840-1849.json').events.concat(load('data/stories/serial/chronology-1860-1869.json').events);
 const eventById=new Map(records.map(e=>[e.id,e]));
@@ -60,4 +62,4 @@ assert(a.geo_precision.includes('not_'));
 const textBody=story.sections.flatMap(x=>x.paragraphs).join('\n');
 for(const phrase of ['1847年','四分之一','302万','1849年','1861年','244人','43名户主','47份','500万英亩','1858年'])assert(textBody.includes(phrase),phrase);
 for(const t of ['E19-T05-MORANT-BAY-MARTIAL-LAW-CROWN-COLONY','E19-T14-SINDH-PUNJAB-AWADH-CONQUEST-EXPROPRIATION','E19-T37-MAQDALA-EXPEDITION-LOOTING','E19-T46-AUSTRALIAN-FRONTIER-LAND-VIOLENCE'])assert.equal(index.topics.find(x=>x.id===t)?.status,'published','prior published work preserved '+t);
-console.log('PASS 19C T10: 26 sections / 78 paragraphs / '+story.sources.length+' sources / 32 linked events / four 1861 nodes / one accurately located named point');
+console.log('PASS 19C T10: 28 sections / 84 paragraphs / '+story.sources.length+' sources / 34 linked events / six 1861 nodes / one accurately located named point');
