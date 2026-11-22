@@ -67,3 +67,9 @@
 - PR最新 `cfc1222196bef1038c229f7b2f33d87ceb61312c` 全部 **36/36 GitHub Actions成功**，含T37来源GIS审计和真实桌面Chrome。T37专项[工作流 #44979476836](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979476836) 2/2 jobs成功并保存地图截图证据。
 - [Pages #44979833161](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979833161) **build+deploy成功**，T37编审预览 <https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1868>。
 - T37继续维持 `editorial_review/not_submitted`，BL 1868原测图、原竞买账、Saunders上手、财政部寄存实物凭证未核；T26 11个遗留问题未改动。[T37待办](T37_NEXT_ACTIONS.md)独立保存。**下一制作顺位为T46**，五章、81条研究年表、98GIS线索、17原问题，见[T46任务清单](T46_NEXT_ACTIONS.md)。
+
+## 2026-11-22 · T37马格达拉真正正式发布（不再只是编审预览）
+
+- 取得[PR #507](https://github.com/1959124923wyz-sys/love-British-TV/pull/507) 35/35 CI全部通过，合并SHA `58590ac07f40060d6efcdcfce5ef45fc19072901`；保留12节/12可跳转事件/11GIS（8点、3虚线、0无据Polygon），修正文稿中的制图内部说明，并在原英文机构史料基础上补足英印远征后勤与具体实物出处。
+- [GitHub Pages #44981515205](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44981515205) `build/deploy`成功；普通网站地址 <https://1959124923wyz-sys.github.io/love-British-TV/?year=1868> **不需要**`review19c=1`。
+- 仅T37在 `data/stories/serial/index.json` 中获`published/approved`出版资格，研究原卷和未核档案不因此判为全部查清。正式站T37母篇与T37.1按`published_new`记入工作板，BL历史测图、德兰塔售卖原簿与本地教会原件仍待核。[T37跟进](T37_NEXT_ACTIONS.md)；[T46接力](T46_NEXT_ACTIONS.md)为下一优先。

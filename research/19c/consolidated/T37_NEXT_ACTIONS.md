@@ -10,8 +10,8 @@
 - [x] 将史实具名点和有据端点连接线加入1860s和1870s GeoJSON，所有未经复原边界仅用虚线，历史国土面积不增
 - [x] 新增专项CI并核验 GitHub Actions [T37 #44979476836](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979476836) facts-and-map与desktop-map-interactions均成功，整个PR [36/36工作流全绿](https://github.com/1959124923wyz-sys/love-British-TV/pull/505/checks)
 - [x] 桌面Chrome验收1867→1868→1871→1872、正文跳年定位、双击事件/返回、1899地图连续性；截图保存在Actions T37桌面proof artifact
-- [ ] **人工交互补测**：分别点击地图版图/事件图层开关、缩放叠加遮挡顺序，并核真实桌面浏览器上虚线显示；该项与已通过的日期跳转脚本分开
-- [x] [PR #505](https://github.com/1959124923wyz-sys/love-British-TV/pull/505) 合并SHA `2cdc3ed1a23293a49be0b06d9fcb4d0005dda18f`；[Pages #44979833161](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979833161) build及deploy成功；专题仍为 `editorial_review/not_submitted`
+- [ ] **补充视觉审稿**：真实桌面Chrome已点击地图版图和事件图层开关、并验证恢复状态；后续仍可对缩放叠加遮挡与虚线细节人工逐图查看（不阻断已通过的正式发布）
+- [x] [PR #505](https://github.com/1959124923wyz-sys/love-British-TV/pull/505) 合并SHA `2cdc3ed1a23293a49be0b06d9fcb4d0005dda18f`；[Pages #44979833161](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979833161) build及deploy成功；此前专题为 `editorial_review/not_submitted`；现已按PR #507更改为正式`published/approved`
 
 ## P1 史料、地理和数字缺口
 
@@ -43,3 +43,10 @@ T46「澳大利亚边疆殖民扩张与暴力」，先核五章、98条制图研
 - [T37专项 Actions #44979476836](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979476836)：两项jobs成功（史料/GIS静态契约、桌面Chrome1867—1899交互），产出`19c-t37-maqdala-desktop-proof`截图凭证。
 - [GitHub Pages #44979833161](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979833161)：`build`与`deploy`均成功。预览入口 <https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1868>。
 - 原案C10原始2项待核与本清单的实测图、购买链、教会原文仍留未勾项；严禁将当前版本标为史料最终批准。下一个主制作专题T46。
+
+## 2026-11-22 T37正式发表（发布后审计）
+
+- [x] [正式发布PR #507](https://github.com/1959124923wyz-sys/love-British-TV/pull/507)合并`main`，合并SHA `58590ac07f40060d6efcdcfce5ef45fc19072901`；T37专题索引已从`editorial_review/not_submitted`变为`published/approved`。
+- [x] 最新PR的 **35/35 GitHub Actions全绿**，含新增公开入口`?year=1867`无`review19c=1`、正文跳年份与地图位置、双击返回、地图版图/事件图层控件切换的真实桌面Chrome核验。
+- [x] [Pages工作流 #44981515205](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44981515205) `build`和`deploy`均通过；[正常网站入口（1868年）](https://1959124923wyz-sys.github.io/love-British-TV/?year=1868)。独立出版只是批准正文所列证据支持的史实，不会删除本清单待证原件。
+- [ ] 阿罗格精确战地、马格达拉历史堡墙、德兰塔拍卖册及埃塞俄比亚教会原物清单仍按P1逐项继续核史；不虚造英占Polygon、死亡总数和文物现金总值。
