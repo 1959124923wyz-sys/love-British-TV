@@ -1,3 +1,5 @@
+**当前19世纪接力（2026-11-22）：** R2 T14「信德、旁遮普与阿瓦德武装征服及国家财产/土地掠夺」已制作三章29节87段、30资料来源、复用51正式年表节点和3新具名GIS点，原阿瓦德不确定旧界虚线。目前仅`editorial_review/not_submitted`，待专项CI、桌面Chrome、独立正式出版和Pages部署；执行入口：[T14长期待办](T14_NEXT_ACTIONS.md)、[史料GIS审计](../../../docs/research/19C_T14_CONQUEST_PLUNDER_SOURCE_GIS_AUDIT.md)。T05已按#512/#513/#514双阶段出版及归档完成。
+
 # 爱英TV｜19世纪接力总入口（必须先读）
 
 **维护日期：2026-11-22｜适用时间：1800—1899｜仓库唯一正式研究入口：`research/19c/consolidated/`。**

@@ -105,3 +105,11 @@
 - 独立正式出版[PR #513](https://github.com/1959124923wyz-sys/love-British-TV/pull/513)在46/46 Actions成功后合并（`dd20fca460be9008524fe5e66a965bc85f9ccf8d`）；母专题`published / approved`，T05.1/T05.2工作板`published_new`，读者不需要`review19c`，并有真实桌面Chrome出入年表和图层验收。
 - GitHub Pages [#44991739561](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44991739561)制作版和[#44992361081](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44992361081)正式版均已核实`build=success / deploy=success`。直接进入[1865年莫兰特湾主题地图](https://1959124923wyz-sys.github.io/love-British-TV/?year=1865)。
 - 成果最终：T05两章18节54段、23新关联年表、19史料来源、1860年代4现代具名地名点与1文献端点虚线、1870年代1Kingston行政持续点；0无据控制区Polygon和0伪造面积。原26条研究卷保留，历史原文/地籍待核继续开放，详[T05长期执行表](T05_NEXT_ACTIONS.md)。**R2下一制作顺位 T14：东印度公司征服信德、旁遮普、阿瓦德。**
+
+## 2026-11-22 · R2 T14「信德—旁遮普—阿瓦德征服与殖民掠夺」编审制作
+
+- 重点以英国官方材料核查三地战争、强迫签约、财物没产及惩罚：1843米亚尼英军馆藏逾5000当地Baluch战斗伤亡（与民众遇害统计分开）；1848—1850信德战利品分配和纳皮尔回溯所获683522卢比（1877著作待原账）；1849第II条旁遮普国家财产全数没收与第III条光之山钻石交女王（英王室馆藏承认强迫签字）；1858勒克瑙凯萨尔巴格英军劫掠（英国家陆军博物馆明确记载），及阿瓦德有条件没产与1859重发地契。
+- 已制作[T14三章29节87段长文](../../../data/stories/serial/e19-t14-sindh-punjab-awadh-conquest-expropriation-1842-1859.json)，采用30份选定来源和51条**既存**正式年表ID，原四份具体专题的状态与事件均不变；未造新战役/死亡数字。参见[51事件去重台账](../../../data/research/19c-t14-existing-event-crosswalk.json)。
+- 1840年代增加米亚尼、奇利安瓦拉、古杰拉特三个已有年表地名参考点；已有1855阿瓦德示意旧界强制虚线、不授权实控填充和面积合计；旧海得拉巴、拉合尔、木尔坦、勒克瑙、凯萨尔巴格GIS继续复用。
+- [独立来源、数字和GIS审计](../../../docs/research/19C_T14_CONQUEST_PLUNDER_SOURCE_GIS_AUDIT.md)保留原账户、军民伤亡、王廷财物、土地逐宗地籍8类未解问题；研究卷B06十条原事不删。
+- 当前母专题 `editorial_review/not_submitted`、T14.1—.3 `review_ready`，已加入专用Node和1780×1020真实桌面Chrome制作门禁；后续见[T14_NEXT_ACTIONS.md](T14_NEXT_ACTIONS.md)。待PR和Pages验收再确认是否出版。
