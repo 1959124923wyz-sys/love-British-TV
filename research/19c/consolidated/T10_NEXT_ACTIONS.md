@@ -4,8 +4,8 @@
 
 ## 制作阶段核对
 - [x] 对照正式站旧7节/34关联事件、研究A08/A40/A35/A60，去重并保留原ID。
-- [x] 完成两章26节78段专题及47条具名史料索引，32个已注册/新增有证事件跳转；旧34点保留不改。
-- [x] 新增1861 Derryveagh四条年表事件，分开4月12日报刊与4月19日政府核定口径。
+- [x] 完成两章28节84段专题及50条具名史料索引，32个已注册/新增有证事件跳转；旧34点保留不改。
+- [x] 新增1861 Derryveagh六条年表事件，分开4月12日报刊与4月19日政府核定口径。
 - [x] 1860年代莱特肯尼城镇1点；没有来源的逐户民房和司法售地Polygon一律不画。
 - [x] 加入专用Node、Chrome及GHA测试和史料地理审计。
 - [ ] 静态CI与1780x1020桌面Chrome真实验收（凭PR run记录）。
@@ -26,3 +26,8 @@
 - 下一主制作候选可转 R2 T21（英缅战争及财产转移）、T48（新西兰被没土地）；T10原件追查可继续追加独立PR。
 
 证据和GIS审计见 [19C T10 专题审计](../../../docs/research/19C_T10_IRISH_FAMINE_SOURCE_GIS_AUDIT.md)。
+
+## 已找到的下一轮原档入口（11月22日新增）
+- [多尼戈尔郡档案馆 Board of Guardians 会议簿目录](https://www.donegalculture.ie/media/ohnnfugh/donegal-board-of-guardians-list-updated-2022.pdf)：定位1861-04-26至05-03 relieving officer report；取Shane Bradley、Anne Burke、Susan Moore等人的申请、收容结果原簿。
+- [1861-06-24 Hansard](https://hansard.parliament.uk/Commons/1861-06-24/debates/254d4536-869b-45b3-b689-63616471e515/TheDerryveaghEvictions)：159名儿童、46住房中28揭顶/拆平、200警力及议员转述一名老人病亡（待独立死亡登记）。
+- [1861-07-02 Hansard](https://hansard.parliament.uk/commons/1861-07-02/debates/e972ae9c-6ef6-45ac-97cc-a7e62a8f3ea0/DerryveaghEvictions)：调查动议23赞成、88反对；后续如查1861年度进一步诉讼及调查，需要明确议会没有通过该项特别调查。
