@@ -62,3 +62,9 @@
 ## 2026-11-22 · 生产QA与出版审批补充
 
 主编制作[PR #515](https://github.com/1959124923wyz-sys/love-British-TV/pull/515)49/49项全站检查全部通过并合并主分支，提交 `5b97aede9766610784e983945585d86f6fca5bfa`。T14的29节87段、30史料与51复用事件已入主分支。独立出版审核会强制历史故事白名单与无编审预览参数的真实桌面Chrome，母专题登记为`published/approved`、三章工作板为`published_new`，**正式上线以出版PR所有检查通过及GitHub Pages build/deploy双成功为准**。本文的战利品原账、原国库名册、王宫财产与地主地籍待核项目仍有效。
+
+## 正式上线后验收与尚未解决的核查（2026-11-22）
+
+制作PR [#515](https://github.com/1959124923wyz-sys/love-British-TV/pull/515)**49/49项GitHub Actions成功**；独立出版PR [#516](https://github.com/1959124923wyz-sys/love-British-TV/pull/516)**48/48项成功**，普通首页无`review19c`参数的真实桌面Chrome已验收；[Pages #44999746867](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44999746867)**build/deploy双成功**。母专题`published/approved`、三章`published_new`。[正式网站1843年入口](https://1959124923wyz-sys.github.io/love-British-TV/?year=1843)。此段记录的是实际运行核验，而非未来工作预计。
+
+历史研究档案的八项原始账本、实际受害者名单、军官分赏、战争死亡明细、当年克什米尔/阿瓦德地籍与权利范围仍保持开放。原1855年阿瓦德示意边界因并无准确历史测绘配准，已固定为虚线，未经进一步原图校准不得填色、计算面积或写成英军实际没收土地的边线。
