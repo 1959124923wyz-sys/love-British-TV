@@ -1,3 +1,5 @@
+**T33正式出版归档（2026-11-22）：** 生产PR [#528](https://github.com/1959124923wyz-sys/love-British-TV/pull/528) 55/55通过；出版PR [#529](https://github.com/1959124923wyz-sys/love-British-TV/pull/529) 54/54通过；[GitHub Pages #45031133754](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45031133754) build/deploy均成功。T33三章26节78段、39史源39内链26新年表17处有据GIS，1894 Broheme旧堡图MSS/73/089待取。**下一专题T34**，详[审计](../../../docs/research/19C_T33_WEST_AFRICA_SOURCE_GIS_AUDIT.md)与[未解原案](T33_NEXT_ACTIONS.md)。
+
 **T33生产PR #528已合并（55/55）、正式出版独立审核：** 原始三章26节78段、39史料、39史事事件内链、26新年表与17参考地名点。格林尼治MSS/73/089含1894年Broheme堡垒原地图，须原影配准。详[正式出版状态](PROGRESS.md)、[源证据审计](../../../docs/research/19C_T33_WEST_AFRICA_SOURCE_GIS_AUDIT.md)。
 
 **2026-11-22 R3 T33制作版：** 三章26节78段、39来源、39内链（26新+13复用已有贝宁）、17地名GIS点，专项历史证据和Chrome在独立分支待验。详 [T33源证据审计](../../../docs/research/19C_T33_WEST_AFRICA_SOURCE_GIS_AUDIT.md) 与 [T33继续追档](T33_NEXT_ACTIONS.md)。
