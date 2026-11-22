@@ -1,4 +1,12 @@
 # 归档进度
+
+## 2026-11-22 · R2 T21全部正式出版，生产51/51、出版50/50、Pages双成功
+
+- [制作PR #521](https://github.com/1959124923wyz-sys/love-British-TV/pull/521) GitHub Actions **51/51全部成功**，merge SHA `805d2706f7cf5c9f068cd871fd2bd985e34e17d0`；[正式出版PR #522](https://github.com/1959124923wyz-sys/love-British-TV/pull/522) **50/50全部成功**，squash SHA `99e184ce9df619aded745c4253dce46dad4d6652`。两批T21专项历史事件、GIS严格语义与1780×1020桌面真实Chrome均通过。
+- [Pages #45007048591](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45007048591) `build=success/deploy=success`；1826、1852、1885、1891、1899年正式站入口无需`review19c`。新母篇`E19-T21-BURMA-THREE-WARS-DISPOSSESSION` `published/approved`，T21.1/T21.2两章`published_new`，旧三篇编审稿不重复公开。
+- 最终基线：**36节97段、93来源、109逐年事件内链**（97已有ID复用、12新事件）、1891温托地区4个现代地名Point、0捏造地籍或行政Polygon。英国官志自行记述的Kawlin佛塔守卫者遇杀、英军毁Pegon、英军炮击Mankin、Kyaingkwintaung与Monan不同战役的50/27人军报分别登记。米业1898/99出口1298445原表Tons，不与税收净收益相混。
+- 59专题和150章节工作板已回填两次真实合并 SHA、51/50完整CI、Pages运行和未解决原档清单。下一追档见[T21长期待办](T21_NEXT_ACTIONS.md)及[T21来源GIS审计](../../../docs/research/19C_T21_BURMA_CONQUEST_WUNTHO_LAND_GIS_AUDIT.md)；可开始下一首批T48新西兰毛利征地没收（先查是否已经有人领取）。
+
 ## 2026-11-22 · R2 T21制作PR正式合并，独立出版审核启动
 
 - [制作 PR #521](https://github.com/1959124923wyz-sys/love-British-TV/pull/521) 已合并至main，merge SHA `805d2706f7cf5c9f068cd871fd2bd985e34e17d0`，T21两章36节97段、93来源、109已链接事件（97复用/12新增）及4个现代具名历史锚点。T21专项史料/GIS、桌面Chrome及强制交互门禁已通过。
