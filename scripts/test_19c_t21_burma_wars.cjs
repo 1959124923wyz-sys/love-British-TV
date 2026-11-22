@@ -21,7 +21,7 @@ for(const sec of story.sections){
  a(sec.period_start_year>=1823&&sec.period_end_year<=1899,sec.id);
  for(const key of sec.source_keys)a(keys.has(key),sec.id+' source '+key);
  for(const p of sec.paragraphs){a(!/(本轮研究|本轮任务|下轮补充|GIS|地图不应画|未伪称)/.test(p),sec.id+' internal copy');
-  for(const m of p.matchAll(/\\[\\[([A-Za-z0-9-]+)\\|([^\\]\\n]+)\\]\\]/g))links.push(m[1]);}
+  for(const m of p.matchAll(/\[\[([A-Za-z0-9-]+)\|([^\n]+?)\]\]/g))links.push(m[1]);}
 }
 for(const c of story.topic_source_claims){a(secIds.has(c.section_id));for(const k of c.source_keys)a(keys.has(k));}
 const unique=new Set(links);a.equal(unique.size,109);a.deepEqual(unique,new Set(topic.event_ids));
