@@ -12820,6 +12820,50 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "Lagos_local_royal_rule_with_British_military_interference"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t34-cape-1850s-1852",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2466,
+          5.10535
+        ]
+      },
+      "properties": {
+        "stable_id": "t34-cape-1852",
+        "name": "开普海岸：1852人头税协定",
+        "start_year": 1852,
+        "end_year": 1859,
+        "display_kind": "economic",
+        "summary_zh": "总督与部分地方首领在开普海岸形成课税协定，实际缴纳范围和税额需要地方收支卷核查。",
+        "source_ids": [
+          "19C-T34-C-X03-S01",
+          "19C-T34-C-X03-S02",
+          "19C-T34-GEO-CAPE"
+        ],
+        "source_urls": [
+          "https://ugspace.ug.edu.gh/server/api/core/bitstreams/78d50877-c481-4423-9278-9885666e8024/content",
+          "https://d.lib.msu.edu/etd/1945/OBJ/download",
+          "https://www.geonames.org/2302357/cape-coast.html"
+        ],
+        "related_event_ids": [
+          "E19-T34-1852-C-X03-E01"
+        ],
+        "named_anchors": [
+          "Cape Coast"
+        ],
+        "mapping_method": "历史会议记录核对地名与现代GeoNames城镇参照；不扩展成征税实控面",
+        "geo_precision": "modern_named_cape_coast_reference_not_historic_boundary",
+        "geometry_source": "GeoNames populated place",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "British_fort_tax_agreement_not_all_coast"
+      }
     }
   ]
 }
