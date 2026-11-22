@@ -3458,8 +3458,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          39.28333,
-          11.43333
+          39.18333,
+          11.35
         ]
       },
       "properties": {
@@ -3472,12 +3472,14 @@
         "source_ids": [
           "19C-T37-NAM",
           "19C-T37-VA-ETH",
-          "19C-T37-GETTY-GEO"
+          "19C-T37-GETTY-GEO",
+          "19C-T37-NAI-MEK"
         ],
         "source_urls": [
           "https://www.nam.ac.uk/explore/abyssinia",
           "https://www.vam.ac.uk/articles/ethiopian-collections-at-the-vampa",
-          "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=7003249&nation=&place=&subjectid=1089703"
+          "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=7003249&nation=&place=&subjectid=1089703",
+          "https://nai.uu.se/download/18.39fca04516faedec8b248e19/1580829013197/ORTMEK05.pdf"
         ],
         "related_event_ids": [
           "E19-T37-1868-MAQDALA-STORM",
@@ -3487,8 +3489,8 @@
         "named_anchors": [
           "马格达拉·攻堡、劫掠、焚毁"
         ],
-        "mapping_method": "Getty TGN 现代Amba Mariam 11.4333N/39.2833E；另有11.2N异文，待IOR/X/12126同期测图测定堡址；未确认城墙",
-        "geo_precision": "modern_named_site_reference_disputed_not_historic_fort_perimeter",
+        "mapping_method": "Nordic Africa Institute/Bernhard Lindahl 2005 HEE58: Mekdela Maryam教堂11°21N/39°11E，位于Mekdela高原西南；取此作为高原近址参考，不代表历史堡门或炮位。Getty TGN现代Amba Mariam 11.4333N/39.2833E和Wikidata地点11.2N/39.2833E互有歧异；待BL IOR/X/12126/19—23实测图与现代地形配准后定位堡垒。",
+        "geo_precision": "Nordic_Africa_Institute_nearby_Mekdela_Maryam_reference_not_1868_fort_perimeter",
         "geometry_source": "historic named endpoint placed using modern reference or documentary endpoint-only relation",
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -3683,8 +3685,8 @@
             15.25
           ],
           [
-            39.28333,
-            11.43333
+            39.18333,
+            11.35
           ]
         ]
       },
@@ -3697,11 +3699,13 @@
         "summary_zh": "Zula至马格达拉·远征行军顺序。相关历史事件详见左侧年表及专题正文。",
         "source_ids": [
           "19C-T37-NAM",
-          "19C-T37-BL-MAPS"
+          "19C-T37-BL-MAPS",
+          "19C-T37-NAI-MEK"
         ],
         "source_urls": [
           "https://www.nam.ac.uk/explore/abyssinia",
-          "https://searcharchives.bl.uk/catalog/037-004282410"
+          "https://searcharchives.bl.uk/catalog/037-004282410",
+          "https://nai.uu.se/download/18.39fca04516faedec8b248e19/1580829013197/ORTMEK05.pdf"
         ],
         "related_event_ids": [
           "E19-T37-1867-ZULA-BASE",
@@ -3710,7 +3714,7 @@
         "named_anchors": [
           "Zula至马格达拉·远征行军顺序"
         ],
-        "mapping_method": "Zula—Maqdala有历史顺序，线未按IOR/X/12126地图配准，不是真实道路或占据边界",
+        "mapping_method": "Zula—Maqdala有历史顺序，线未按IOR/X/12126地图配准，不是真实道路或占据边界；Maqdala端点暂用NAI所记高原西南Mekdela Maryam附近参考，未测得1868年营地／堡门",
         "geo_precision": "documented_endpoint_connection_not_historic_march_track",
         "geometry_source": "historic named endpoint placed using modern reference or documentary endpoint-only relation",
         "historical_boundary_confirmed": false,
@@ -3731,8 +3735,8 @@
         "type": "LineString",
         "coordinates": [
           [
-            39.28333,
-            11.43333
+            39.18333,
+            11.35
           ],
           [
             39.16667,
@@ -3749,11 +3753,13 @@
         "summary_zh": "马格达拉至德兰塔·战利品转运。相关历史事件详见左侧年表及专题正文。",
         "source_ids": [
           "19C-T37-BM",
-          "19C-T37-VA-ETH"
+          "19C-T37-VA-ETH",
+          "19C-T37-NAI-MEK"
         ],
         "source_urls": [
           "https://www.britishmuseum.org/about-us/british-museum-story/contested-objects-collection/maqdala-collection",
-          "https://www.vam.ac.uk/articles/ethiopian-collections-at-the-vampa"
+          "https://www.vam.ac.uk/articles/ethiopian-collections-at-the-vampa",
+          "https://nai.uu.se/download/18.39fca04516faedec8b248e19/1580829013197/ORTMEK05.pdf"
         ],
         "related_event_ids": [
           "E19-T37-1868-MAQDALA-LOOT",
@@ -3762,7 +3768,7 @@
         "named_anchors": [
           "马格达拉至德兰塔·战利品转运"
         ],
-        "mapping_method": "从马格达拉所夺物件在德兰塔出售的文献关系示意，非实际驮畜路线",
+        "mapping_method": "从马格达拉所夺物件在德兰塔出售的文献关系示意，非实际驮畜路线；Maqdala端点暂用NAI所记高原西南Mekdela Maryam附近参考，未测得1868年营地／堡门",
         "geo_precision": "documented_loot_transfer_endpoints_only",
         "geometry_source": "historic named endpoint placed using modern reference or documentary endpoint-only relation",
         "historical_boundary_confirmed": false,
