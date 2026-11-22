@@ -65,4 +65,4 @@
 - 正式出版 [PR #519](https://github.com/1959124923wyz-sys/love-British-TV/pull/519)：**48/48** CI全绿（旧16世纪Chrome偶发页面遮挡首次失败后重试成功），合并`a5e895859914a0da424d4908289a8e6bd989019d`。
 - [Pages #45003796678](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45003796678)：**build=success；deploy=success**；正式地图 [1847年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1847) 和 [1861年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1861) 不需编审预览。母篇 `E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES` `published/approved`；章节T10.1及T10.2均 `published_new`。
 - **冻结本轮制成品总量**：28节84段、50具名来源、34自然语言历史事件内链、28旧ID复用、6新1861事件、1个具名Letterkenny点，零新历史地籍主权面。旧版七节饥荒稿仍为未批准母篇，不重复公开。
-- 法令形成、司法执行、地产司法出售、房屋毁损及受害者实际入院需分别查证。旧研究6项问题继续保留，具体卷宗详 [T10_NEXT_ACTIONS](../../../../research/19c/consolidated/T10_NEXT_ACTIONS.md)。
+- 法令形成、司法执行、地产司法出售、房屋毁损及受害者实际入院需分别查证。旧研究6项问题继续保留，具体卷宗详 [T10_NEXT_ACTIONS](../../research/19c/consolidated/T10_NEXT_ACTIONS.md)。
