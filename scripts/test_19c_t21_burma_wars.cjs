@@ -5,8 +5,8 @@ const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.
 const id='E19-T21-BURMA-THREE-WARS-DISPOSSESSION',file='data/stories/serial/e19-t21-burma-three-wars-wuntho-land-rice-1823-1899.json';
 const story=read(file),idx=read('data/stories/serial/index.json'),topic=idx.topics.find(x=>x.id===id);
 a(topic&&story.id===id);
-a(['editorial_review','published'].includes(topic.status));
-a(['not_submitted','approved'].includes(topic.publication_review));
+a.equal(topic.status,'published','T21 must be public');
+a.equal(topic.publication_review,'approved','T21 needs formal publication approval');
 a.equal(story.sections.length,36);
 a.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),97);
 a(story.sections.flatMap(s=>s.paragraphs).join('').length>12000);
