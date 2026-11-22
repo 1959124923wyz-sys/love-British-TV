@@ -24,7 +24,7 @@ def click_event(event_id,year,photo):
     driver.save_screenshot(str(out/photo))
 
 try:
-    published=os.environ.get('T48_PUBLISHED')=='1'
+    published=True # public site must pass ordinary year query with no preview flag
     qs='?year=1863' if published else '?review19c=1&year=1863'
     driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+qs)
     wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
