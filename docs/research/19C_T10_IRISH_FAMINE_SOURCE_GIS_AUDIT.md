@@ -58,3 +58,11 @@
 - [Donegal County Archives Service Board of Guardians minutes catalogue](https://www.donegalculture.ie/media/ohnnfugh/donegal-board-of-guardians-list-updated-2022.pdf)：官方目录记有1861-04-26至05-03 Relieving Officer对德里维格驱逐的逐地走访、马车送救济者回济贫院及实际收容数据，指名**Shane Bradley、Anne Burke、Susan Moore**等救济者，原会议簿待调阅全文。只记录档案目录提供的信息，不能从目录条目推算总体获救人数。
 - 爱尔兰国家图书馆明确的庄园地图目录现已复核：[MS_UR_081877](https://sources.nli.ie/Record/MS_UR_081877)，原纸质档在PRONI **D.2125**；本项目引用由不确定的旧目录URL更换为官方直接链接。
 - 追加新事件 `E19-IR-1861-DERRYVEAGH-HOUSE-CHILDREN-RETURN` 和 `E19-IR-1861-DERRYVEAGH-INQUIRY-DEFEATED`，均为议会政治史事件，地点不虚填为被逐房屋；与前4条1861年表合计6条新增、28条旧事件复用、34个正文互动节点，整篇28节84段50项来源。
+
+## 2026-11-22 · T10正式出版验收归档
+
+- 制作 [PR #518](https://github.com/1959124923wyz-sys/love-British-TV/pull/518)：**49/49** CI全绿，合并`c893dd3f88458c4f7591dc130674abdfa395df9c`。
+- 正式出版 [PR #519](https://github.com/1959124923wyz-sys/love-British-TV/pull/519)：**48/48** CI全绿（旧16世纪Chrome偶发页面遮挡首次失败后重试成功），合并`a5e895859914a0da424d4908289a8e6bd989019d`。
+- [Pages #45003796678](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45003796678)：**build=success；deploy=success**；正式地图 [1847年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1847) 和 [1861年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1861) 不需编审预览。母篇 `E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES` `published/approved`；章节T10.1及T10.2均 `published_new`。
+- **冻结本轮制成品总量**：28节84段、50具名来源、34自然语言历史事件内链、28旧ID复用、6新1861事件、1个具名Letterkenny点，零新历史地籍主权面。旧版七节饥荒稿仍为未批准母篇，不重复公开。
+- 法令形成、司法执行、地产司法出售、房屋毁损及受害者实际入院需分别查证。旧研究6项问题继续保留，具体卷宗详 [T10_NEXT_ACTIONS](../../../../research/19c/consolidated/T10_NEXT_ACTIONS.md)。
