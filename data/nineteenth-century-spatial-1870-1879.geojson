@@ -3436,6 +3436,53 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "australian_colonial_frontier_context"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t05-kingston-crown-administration-1870",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.794,
+          17.997
+        ]
+      },
+      "properties": {
+        "stable_id": "t05-kingston-crown-administration",
+        "name": "Kingston · 王室殖民地行政",
+        "start_year": 1870,
+        "end_year": 1879,
+        "display_kind": "administrative",
+        "summary_zh": "1866年后牙买加由总督与获任命的行政立法机构实行更直接的王室殖民地治理，行政改革延续至1870年代。",
+        "source_ids": [
+          "19C-T05-HANSARD-BILL",
+          "19C-T05-CAMBRIDGE",
+          "19C-T05-LOCAL-GOV",
+          "19C-T05-GEONAMES-KINGSTON"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1866/feb/28/bill-17-third-beading",
+          "https://www.cambridge.org/core/journals/law-and-history-review/article/rereading-morant-bay-protest-inquiry-and-colonial-rule/8EF2A2E67182DAE4E752F62C370194EF",
+          "https://localauthorities.gov.jm/history/local-government",
+          "https://www.geonames.org/JM/largest-cities-in-jamaica.html"
+        ],
+        "related_event_ids": [
+          "E19-T05-1866-FEB28-GOVERNMENT-BILL",
+          "E19-T05-1867-PARISH-REFORM"
+        ],
+        "named_anchors": [
+          "Kingston · 王室殖民地行政"
+        ],
+        "mapping_method": "Official Jamaica heritage site plus GeoNames named WGS84 gazetteer anchor; historical event scope is evidenced separately.",
+        "geo_precision": "modern_named_city_not_historic_1870_district_outline",
+        "geometry_source": "Modern named-place reference, not colonial historic cadastral survey",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "british_colonial_jamaica"
+      }
     }
   ]
 }
