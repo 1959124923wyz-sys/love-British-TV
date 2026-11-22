@@ -7,8 +7,8 @@ const story=load('data/stories/serial/e19-t10-irish-famine-evictions-estates-184
 const index=load('data/stories/serial/index.json');
 const entry=index.topics.find(t=>t.id===id), old=index.topics.find(t=>t.id==='E19-IR-FAMINE-RELIEF');
 assert(entry&&story.id===id);
-assert(['editorial_review','published'].includes(entry.status));
-assert(['not_submitted','approved'].includes(entry.publication_review));
+assert.equal(entry.status,'published','T10 must be public');
+assert.equal(entry.publication_review,'approved','T10 needs explicit editorial approval');
 assert(old&&old.event_ids.length===34,'legacy famine study retained');
 assert.equal(story.sections.length,28);
 assert.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),84);
