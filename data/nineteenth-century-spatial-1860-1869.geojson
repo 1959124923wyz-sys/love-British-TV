@@ -4241,6 +4241,49 @@
         "outline_style": "dashed",
         "political_controller": "jamaican_local_protest"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t10-ireland-letterkenny-relief-1861",
+      "properties": {
+        "stable_id": "t10-ireland-letterkenny-relief-1861",
+        "name": "莱特肯尼 · 德里维格失居住户求济",
+        "start_year": 1861,
+        "end_year": 1861,
+        "display_kind": "humanitarian",
+        "summary_zh": "1861年德里维格居民遭驱逐后，43名户主向莱特肯尼济贫院申请救济；英国下议院当年4月19日曾讨论这批申请。",
+        "source_ids": [
+          "19C-T10-HANSARD-1861-APR19",
+          "19C-T10-DERRYVEAGH-LOCAL",
+          "19C-T10-LETTERKENNY-GEONAMES"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1861/apr/19/ireland-evictions-at-derry-veagh-question",
+          "https://www.letterkennyhistory.com/the-derryveagh-evictions-1861/",
+          "https://entities.oclc.org/worldcat/entity/E39PBJh4qwyYDFkFc9J74P6h73.html"
+        ],
+        "related_event_ids": [
+          "E19-IR-1861-LETTERKENNY-RELIEF-APPEALS"
+        ],
+        "named_anchors": [
+          "莱特肯尼镇"
+        ],
+        "mapping_method": "John Vincent Scully reported workhouse applications in Commons 19 April 1861; modern Letterkenny town centroid only, not verified original workhouse building, evicted townlands or historical parcel boundary.",
+        "geo_precision": "modern_named_Letterkenny_town_reference_not_1861_workhouse_or_eviction_parcel",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geometry_source": "named modern town geographic reference"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.73333,
+          54.95
+        ]
+      }
     }
   ]
 }
