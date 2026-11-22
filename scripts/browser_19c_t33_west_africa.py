@@ -30,6 +30,8 @@ try:
     driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+qs)
     wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
     wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById('E19-T33-1887-JAJA-DETAINED')"))
+    js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById('E19-T33-1887-JAJA-DETAINED'))")
+    wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+tid+'"]'))>0)
     js("window.HistoryStories.openStory(arguments[0],false,'E19-T33-1887-JAJA-DETAINED')",tid)
     wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article [data-story-event="E19-T33-1895-AKASSA-ATTACK"]'))>0)
     assert len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article [data-story-event]'))>=39
