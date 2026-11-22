@@ -80,3 +80,10 @@
 - 新增29条严格逐十年事件：1820年代2、1830年代8、1840年代2、1850年代1、1860年代8、1870年代5、1890年代3，未改变原已公开Pinjarra、Myall、Waterloo及Warrigal五子案的ID/死亡统计。Queensland Native Mounted Police的Hornet Bank和Cullin-la-Ringo报复不同事件及相互覆盖数据库组案保留各自口径；Barrow Creek纪念碑同时追述原住民雇员Jemmy。
 - 新增**16个可追溯具名点及1条只有证据端点的虚线**：珀斯、Melbourne契约涉及地区、Sydney/Bourke/审判、Glenelg、Roebourne、Murujuga UNESCO景观、Barrow Creek、Boulia城镇及Bunuba已开放遗址，**零新增无据土地面积Polygon**。对原住民圣地、受害遗骨和没有原测绘确认的屠杀/战地保留空坐标或区域点。
 - 研究审计：[T46来源地理审计](../../../docs/research/19C_T46_AUSTRALIAN_FRONTIER_SOURCE_GIS_AUDIT.md)；独立静态CI、桌面Chrome脚本和工作流随分支提交，当前索引状态`editorial_review/not_submitted`，须等PR全面检验、Pages成功才更新发布。下一优先依[T46长期待办](T46_NEXT_ACTIONS.md)调SROWA、QSA、GRG档案与Bunuba/Wurundjeri等当地资料。
+
+## 2026-11-22 · T46五章全部正式发布（37+35项CI与双阶段Pages）
+
+- T46生产[PR #509](https://github.com/1959124923wyz-sys/love-British-TV/pull/509)通过37/37全站检查后合并`main` SHA `5ebc9757a4e4129d2d1ccc6a11dbb8035b962ef9`：25节75段、48项结构化来源、39个事件跳转（10既有、29新增）、16具名GIS参考点/1虚线、0无据殖民领土Polygon。
+- 主编正式公开[PR #510](https://github.com/1959124923wyz-sys/love-British-TV/pull/510)通过35/35全站Actions，含无预览URL的真实桌面Chrome跨1829—1899、单击跳年地图镜头、双击档案与返回、地图图层开关，合并SHA `4995474e0ec87496a59e878f310dd3b18979a3ea`。T46单专题状态`published/approved`，原T15/T26的编审状态未变。
+- [正式Pages #44985306164](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44985306164) **build+deploy均成功**；[官网1838年入口](https://1959124923wyz-sys.github.io/love-British-TV/?year=1838)无需`review19c`。T46与T46.1—T46.5全部登记`published_new`，来源、GIS和原案待核研究仍独立续查。
+- R2下一主要制作任务切换到**T05牙买加1865 Morant Bay戒严镇压与王室殖民治理**，具体原案、顺位、法令地理与数字计数限制见[T05执行清单](T05_NEXT_ACTIONS.md)。其它T15/T26等编审预览仍等各自来源核证。

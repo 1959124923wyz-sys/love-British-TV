@@ -99,10 +99,14 @@
 | R1-A | T15 印度1857起义和报复 | PR #501已合并，34/34 PR CI及Pages通过；独立长文为编审预览 | 对照原18世纪后续历史地理及B45/B46原卷，详 T15与PROGRESS |
 | R1-B | **T26 鸦片战争、赔款、条约港** | [PR #503](https://github.com/1959124923wyz-sys/love-British-TV/pull/503)已合并，35/35 PR CI及 [Pages](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977462856) 构建部署成功；**14节、99内链、23新事件、48地图图元** | **[T26剩余任务（11个历史缺口）](T26_NEXT_ACTIONS.md)**；按条约港旧海关告示、安平史图、赔款收据、英法军令逐案补核 |
 | R1-C | **T37 马格达拉劫掠与文物流向** | [PR #505](https://github.com/1959124923wyz-sys/love-British-TV/pull/505)基础制图36/36全绿；[PR #507](https://github.com/1959124923wyz-sys/love-British-TV/pull/507)正式上线35/35全绿，[Pages](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44981515205)部署成功；`published/approved` | [正式站1868年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1868)（无预览参数）；[T37未决原卷](T37_NEXT_ACTIONS.md)继续核购买账与历史测图 |
-| R1-D | **T46 澳洲边疆土地、警队暴力与抵抗** | 2026-11-22已认领独立分支、25节联稿、48来源、29新事件/10复用、17GIS、专用静态与Chrome测试；专题仍为编审预览待CI | 参见[T46制作长期任务](T46_NEXT_ACTIONS.md)和[史料GIS审计](../../../docs/research/19C_T46_AUSTRALIAN_FRONTIER_SOURCE_GIS_AUDIT.md)，先完成PR CI与Pages，再追C86地籍、C37/C51警方原账及C68电报站记录 |
+| R1-D | **T46 澳洲边疆土地、骑警暴力与原住民抵抗** | [生产PR #509](https://github.com/1959124923wyz-sys/love-British-TV/pull/509)37/37全绿，[正式出版PR #510](https://github.com/1959124923wyz-sys/love-British-TV/pull/510)35/35全绿；[Pages #44985306164](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44985306164)构建部署成功；**published/approved** | [正式站1838年](https://1959124923wyz-sys.github.io/love-British-TV/?year=1838)（无需预览标志）；25节75段、39事件（29新增、10复用）、17 GIS；[17项原卷研究缺口](T46_NEXT_ACTIONS.md)持续调档 |
 
 **正式状态不变：** T26母篇 `editorial_review/not_submitted`，其可在[19世纪年表1839年](https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1839)进入阅读。其余57个专题的实际制作状态仍由两张工作板逐项记录，下一智能体从未认领状态开始，不重复已完成的T15/T26。
 
 ## 2026-11-22 T37出版状态追加说明
 
 T37独立长篇已公开上站（PR #507、35/35CI、Pages #44981515205），T37研究底本2项原问题和T37新增具体档案待核未勾销。下一顺位T46，按[T46五章任务清单](T46_NEXT_ACTIONS.md)认领独立制作PR，先去重正式Pinjarra/Myall Creek和重叠屠杀计数。
+
+## 2026-11-22 R1完成生产阶段与R2接棒
+
+T37已正式发布（#507）、T46五章已正式发布（#509制作37/37、#510出版35/35、Pages #44985306164）并录两张工作板为`published_new`；T15、T26仍按各自编审预览状态和原卷待核问题执行，不越权更改。下一主制作项选定[R2 T05 Morant Bay牙买加戒严镇压](T05_NEXT_ACTIONS.md)，已有2章、26研究事件、15空间线索、6原始待核问题和16史料索引。按同一套长期责任审核、实际文物/军令/法令地图、公示Chrome QA工作流完成。
