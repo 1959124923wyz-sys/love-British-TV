@@ -1,5 +1,14 @@
 # 归档进度
 
+## 2026-11-22 · 主编46 R2 T10爱尔兰大饥荒与逐佃罪证（制作验收中）
+
+- 从最新`main`复核 T10.1/T10.2原案 A08/A40/A35/A60，原有大饥荒七节编审旧篇（34正式年表ID）与Skibbereen、Ballinlass、Kilrush、Doolough地理点；保留原篇而不重复制作。
+- 制作两章28节84段、50来源的新T10母专题（`E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES`），正文34个互动事件链接，28复用既有正式ID，另加入6个1861 Derryveagh暴力逐佃/议会/济贫记录；新增1个1861 Letterkenny具名Point，未创造全国没产Polygon。
+- 当场成立的罪证：1847济贫法§X/§XIII，1849负债地产法，1858后继法院原法，1861下院12/19 April数字口径，PRONI1849–57售地指南及Doolough同期来信。死亡、土地面积、逐人损失不混计；1861按饥荒后遗制度单列。
+- 已创建专项Node/真实Chrome CI及[罪证/GIS审计](../../../docs/research/19C_T10_IRISH_FAMINE_SOURCE_GIS_AUDIT.md)、[长期待办](T10_NEXT_ACTIONS.md)。**现阶段独立制作分支审查中**，需等PR全绿、合并和Pages真实部署，再将工作板从review_ready/未发表改为published_new。
+- 旧大饥荒单篇和T15/T26编审状态、T05/T14/T37/T46正式发表状态不变。长期原件：1861逐户令与警察报告、1849救济查验及死者清单、法院售地契据与租户、贫民税实收账。
+
+
 ## 2026-11-19 · 十九世纪编审资料入库
 
 - 归档 59 个专题与 150 个章节，保留原 273 案处置、1,980 条分章年表、1,520 条史料索引与 374 份文本底稿。14 个混合原卷按历史进程拆分。
@@ -97,7 +106,7 @@
 
 ## 2026-11-22 · T05制作PR47/47通过，独立正式出版审核
 
-制作[PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)已在47项全站Actions（包括1780×1020真实桌面Chrome和历史GIS严格审核）全部成功后合并至主分支 `734caec0adde77e447018934d7636e7340ffe109`。另按出版流程独立审核母专题的普通网站入口：T05.status=`published`，publication_review=`approved`，两章章节板=`published_new`，新增不带`review19c`参数的桌面浏览器门禁。正式出版PR自身的Actions与Pages构建/部署记录应在运行完毕后填写，不得提前声称成功。历史郡界、原地籍、逐人军法与财产登记疑问继续保持开放。
+制作[PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)已在50项全站Actions（包括1780×1020真实桌面Chrome和历史GIS严格审核）全部成功后合并至主分支 `734caec0adde77e447018934d7636e7340ffe109`。另按出版流程独立审核母专题的普通网站入口：T05.status=`published`，publication_review=`approved`，两章章节板=`published_new`，新增不带`review19c`参数的桌面浏览器门禁。正式出版PR自身的Actions与Pages构建/部署记录应在运行完毕后填写，不得提前声称成功。历史郡界、原地籍、逐人军法与财产登记疑问继续保持开放。
 
 ## 2026-11-22 · R2 T05正式出版与Pages归档完成
 
