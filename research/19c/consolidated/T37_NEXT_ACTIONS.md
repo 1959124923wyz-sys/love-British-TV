@@ -8,9 +8,9 @@
 - [x] 核对维多利亚与阿尔伯特博物馆、英国博物馆、英国图书馆、英国国家陆军博物馆、1871年议会辩论和研究论文的核心证据
 - [x] 12节独立长篇及正式年表事件全部注册，保持原 C10 事件号的回溯关系
 - [x] 将史实具名点和有据端点连接线加入1860s和1870s GeoJSON，所有未经复原边界仅用虚线，历史国土面积不增
-- [x] 新增专项CI配置与静态专项检验脚本；运行结果仍待GitHub Actions确认
-- [ ] 桌面Chrome验收1867→1868→1871→1872、正文单击跳年份和中心、双击事件档案与返回、版图/事件图层开关
-- [ ] PR合并后记录合并SHA，核实Pages部署run；编审预览与 `published/approved` 分开
+- [x] 新增专项CI并核验 GitHub Actions [T37 #44979476836](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979476836) facts-and-map与desktop-map-interactions均成功，整个PR [36/36工作流全绿](https://github.com/1959124923wyz-sys/love-British-TV/pull/505/checks)
+- [x] 桌面Chrome验收1867→1868→1871→1872、正文跳年定位、双击事件/返回、1899地图连续性；截图保存在Actions T37桌面proof artifact（图层开关的独立人工复核仍列后续）
+- [x] [PR #505](https://github.com/1959124923wyz-sys/love-British-TV/pull/505) 合并SHA `2cdc3ed1a23293a49be0b06d9fcb4d0005dda18f`；[Pages #44979833161](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979833161) build及deploy成功；专题仍为 `editorial_review/not_submitted`
 
 ## P1 史料、地理和数字缺口
 
@@ -35,3 +35,10 @@ T46「澳大利亚边疆殖民扩张与暴力」，先核五章、98条制图研
 - [British Library：IOR/X/12126测绘图目录](https://searcharchives.bl.uk/catalog/037-004282410)
 - [National Army Museum：Abyssinia](https://www.nam.ac.uk/explore/abyssinia)
 - [1871 Hansard冠杯讨论](https://api.parliament.uk/historic-hansard/commons/1871/jun/30/motion-for-an-address)
+
+## 2026-11-22 GitHub发布验收实录
+
+- [制作PR #505](https://github.com/1959124923wyz-sys/love-British-TV/pull/505)：36/36 GitHub Actions成功后按squash合并至`main`，SHA `2cdc3ed1a23293a49be0b06d9fcb4d0005dda18f`。
+- [T37专项 Actions #44979476836](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979476836)：两项jobs成功（史料/GIS静态契约、桌面Chrome1867—1899交互），产出`19c-t37-maqdala-desktop-proof`截图凭证。
+- [GitHub Pages #44979833161](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979833161)：`build`与`deploy`均成功。预览入口 <https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1868>。
+- 原案C10原始2项待核与本清单的实测图、购买链、教会原文仍留未勾项；严禁将当前版本标为史料最终批准。下一个主制作专题T46。
