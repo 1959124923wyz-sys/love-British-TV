@@ -8,6 +8,46 @@
   "editorial_status": "editorial_review",
   "sources": [
     {
+      "id": "19C-T26-PORTS",
+      "publisher": "中国人民大学清史研究所",
+      "title": "对外贸易：五口开埠日期及关税史",
+      "label": "中国人民大学清史研究所｜对外贸易：五口开埠日期及关税史",
+      "url": "https://iqh.ruc.edu.cn/old/qdjjsyj/jjs_ztyj/dwmy/fd35f01bd03140d2b6e4ee1792407ea2.htm",
+      "access": "比较广州1843-07-27、厦门1843-11月初、上海1843-11-17、宁波1844-01-01、福州开埠争议。"
+    },
+    {
+      "id": "19C-T26-NANKING",
+      "publisher": "东京大学东洋文化研究所",
+      "title": "Treaty of Nanking, 1842",
+      "label": "东京大学东洋文化研究所｜Treaty of Nanking, 1842",
+      "url": "https://worldjpn.net/documents/texts/pw/18420829.T1E.html",
+      "access": "条约II款五口、III款香港岛、IV–VI款600/300/1200万银元，法定应付而非实收。"
+    },
+    {
+      "id": "19C-T26-XIAMEN",
+      "publisher": "福建省人民政府",
+      "title": "厦门海关：关声悠扬三百年",
+      "label": "福建省人民政府｜厦门海关：关声悠扬三百年",
+      "url": "https://fujian.gov.cn/xwdt/mszx/202504/t20250418_6902042.htm",
+      "access": "官方材料11月2日；部分史家采用11月1日，保留精确日期分歧。"
+    },
+    {
+      "id": "19C-T26-SHANGHAI",
+      "publisher": "上海政务平台",
+      "title": "近代上海海关",
+      "label": "上海政务平台｜近代上海海关",
+      "url": "https://kab.sww.sh.gov.cn/xxgk/003006/003006004/20180813/b97efec8-1862-4836-b676-68fa6cee4ad1.html",
+      "access": "1843年11月17日设盘验所，作为开埠标志，不等于外商拥有上海市区主权。"
+    },
+    {
+      "id": "19C-T26-FUZHOU",
+      "publisher": "福州市政协",
+      "title": "十九世纪四十年代至二十世纪中叶福州港的洋行概述",
+      "label": "福州市政协｜十九世纪四十年代至二十世纪中叶福州港的洋行概述",
+      "url": "https://zx.fuzhou.gov.cn/zz/gzwh/wszlhxxxcwyh/ttyw_2213/202505/t20250514_5018624.htm",
+      "access": "1844-07-03开埠地方研究口径；早期贸易量小。"
+    },
+    {
       "id": "19C35-CN-NAM",
       "publisher": "英国国家陆军博物馆",
       "title": "第一次对华战争战事",
@@ -5537,6 +5577,161 @@
     }
   ],
   "events": [
+    {
+      "id": "E19-T26-1843-CANTON-OPEN",
+      "year": 1843,
+      "start_year": 1843,
+      "end_year": 1843,
+      "visible_from": 1843,
+      "date_label": "1843年7月27日",
+      "name": "广州开始按条约新税则通商",
+      "description": "广州原有对外贸易活动。1843年7月27日起按清英五口章程办理新例征税及通商；中国地方官继续履行行政。",
+      "short_description": "广州原有对外贸易活动。1843年7月27日起按清英五口章程办理新例征税及通商；中国地方官继续履行行政。",
+      "category": "law",
+      "icon_code": "LAW",
+      "significance": {
+        "level": 8,
+        "rationale": "按研究归档T26原案、同期条约/外交原文或官方史料分日核对"
+      },
+      "lat": 23.11667,
+      "lng": 113.25,
+      "source_ids": [
+        "19C-T26-PORTS",
+        "19C-T26-NANKING"
+      ],
+      "geo_precision": "modern_named_place_reference_not_precise_historical_site",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B01-E16"
+      ]
+    },
+    {
+      "id": "E19-T26-1843-AMOY-OPEN",
+      "year": 1843,
+      "start_year": 1843,
+      "end_year": 1843,
+      "visible_from": 1843,
+      "date_label": "1843年11月初（1日或2日有异说）",
+      "name": "厦门五口通商章程开始实际执行",
+      "description": "清英双方在1843年11月初办理厦门开埠，地方及官方史料有11月1日与2日两说，相关领事任职与征税首次办理应另查。",
+      "short_description": "清英双方在1843年11月初办理厦门开埠，地方及官方史料有11月1日与2日两说，相关领事任职与征税首次办理应另查。",
+      "category": "law",
+      "icon_code": "LAW",
+      "significance": {
+        "level": 8,
+        "rationale": "按研究归档T26原案、同期条约/外交原文或官方史料分日核对"
+      },
+      "lat": 24.4798,
+      "lng": 118.0894,
+      "source_ids": [
+        "19C-T26-PORTS",
+        "19C-T26-XIAMEN"
+      ],
+      "geo_precision": "modern_named_place_reference_not_precise_historical_site",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B01-E17"
+      ]
+    },
+    {
+      "id": "E19-T26-1843-SHANGHAI-OPEN",
+      "year": 1843,
+      "start_year": 1843,
+      "end_year": 1843,
+      "visible_from": 1843,
+      "date_label": "1843年11月17日",
+      "name": "上海开埠与江海关盘验所办事",
+      "description": "上海地方与英方按条约落实通商，江海关为外商船货设置盘验所，清朝继续行使城市行政。",
+      "short_description": "上海地方与英方按条约落实通商，江海关为外商船货设置盘验所，清朝继续行使城市行政。",
+      "category": "law",
+      "icon_code": "LAW",
+      "significance": {
+        "level": 8,
+        "rationale": "按研究归档T26原案、同期条约/外交原文或官方史料分日核对"
+      },
+      "lat": 31.2323,
+      "lng": 121.4691,
+      "source_ids": [
+        "19C-T26-PORTS",
+        "19C-T26-SHANGHAI"
+      ],
+      "geo_precision": "modern_named_place_reference_not_precise_historical_site",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B01-E13"
+      ]
+    },
+    {
+      "id": "E19-T26-1844-NINGPO-OPEN",
+      "year": 1844,
+      "start_year": 1844,
+      "end_year": 1844,
+      "visible_from": 1844,
+      "date_label": "1844年1月1日",
+      "name": "宁波开市执行五口贸易条款",
+      "description": "宁波于1844年1月1日按《南京条约》通商安排正式开市，港口贸易许可与英国租界土地登记是不同事项。",
+      "short_description": "宁波于1844年1月1日按《南京条约》通商安排正式开市，港口贸易许可与英国租界土地登记是不同事项。",
+      "category": "law",
+      "icon_code": "LAW",
+      "significance": {
+        "level": 8,
+        "rationale": "按研究归档T26原案、同期条约/外交原文或官方史料分日核对"
+      },
+      "lat": 29.872,
+      "lng": 121.55,
+      "source_ids": [
+        "19C-T26-PORTS",
+        "19C-T26-NANKING"
+      ],
+      "geo_precision": "modern_named_place_reference_not_precise_historical_site",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B01-E18"
+      ]
+    },
+    {
+      "id": "E19-T26-1844-FOOCHOW-OPEN",
+      "year": 1844,
+      "start_year": 1844,
+      "end_year": 1844,
+      "visible_from": 1844,
+      "date_label": "1844年7月3日（福州地方史口径）",
+      "name": "福州按五口通商安排开埠",
+      "description": "福州地方文史研究以1844年7月3日为开埠日期；最初十年外商活动不旺，合法开市与实际贸易繁荣分阶段发生。",
+      "short_description": "福州地方文史研究以1844年7月3日为开埠日期；最初十年外商活动不旺，合法开市与实际贸易繁荣分阶段发生。",
+      "category": "law",
+      "icon_code": "LAW",
+      "significance": {
+        "level": 8,
+        "rationale": "按研究归档T26原案、同期条约/外交原文或官方史料分日核对"
+      },
+      "lat": 26.0745,
+      "lng": 119.2965,
+      "source_ids": [
+        "19C-T26-FUZHOU",
+        "19C-T26-PORTS"
+      ],
+      "geo_precision": "modern_named_place_reference_not_precise_historical_site",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "B01-E19"
+      ]
+    },
     {
       "id": "E19-OP-1840-DINGHAI-FIRST",
       "year": 1840,
