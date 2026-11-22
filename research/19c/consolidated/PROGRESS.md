@@ -1,4 +1,10 @@
 # 归档进度
+## 2026-11-22 · R3 T33西非战争、皇家尼日尔公司与贝宁专题制作版待审
+
+- 继T48后开始T33.1—.3，三章26节78段、39来源、39历史内链（26新事件+13复用旧贝宁母篇）；原贝宁46事件及1897王宫点位保留。
+- 正式年表新增26条（1850年代2／1860年代2／1880年代7／1890年代15），五个年代GIS增17真实具名Point（1／1／1／5／9）；1885索科托签约原址及1894 Ebrohimi封锁、攻陷、没产共4事件因无核实原址暂不落假坐标。不生成未经实测边界的殖民疆域Polygon。
+- 专题 `editorial_review/not_submitted`，制作分支 `feat/19c-t33-lagos-niger-benin-evidence-gis-20261122` 已含独立来源审计、原档继续调查清单、专项Node/GIS与1780×1020桌面Chrome流程；工作板`review_ready`，**未声明CI已绿、主干已合并或Pages已部署**。详[来源GIS审计](../../../docs/research/19C_T33_WEST_AFRICA_SOURCE_GIS_AUDIT.md)与[T33下一轮罪证追档](T33_NEXT_ACTIONS.md)。
+
 ## 2026-11-22 · R2 T48全部完成正式出版：生产55/55、发行52/52、Pages构建部署双成功
 
 - [制作PR #525](https://github.com/1959124923wyz-sys/love-British-TV/pull/525) GitHub Actions **55/55全部成功**，merge`1a138ab4db740b955d74ae39a72be88c169a7f21`；[出版PR #526](https://github.com/1959124923wyz-sys/love-British-TV/pull/526) **52/52全部成功**，squash`4e7c3f0e2f589a3d5ebec61e76ebd47f21035ac6`；两次源证据/GIS及1780×1020真实Chrome全绿，普通年份公开模式同验。
