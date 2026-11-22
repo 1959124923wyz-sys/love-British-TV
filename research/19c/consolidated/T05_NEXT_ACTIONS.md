@@ -1,6 +1,6 @@
 # R2 T05 下一专题执行清单｜1865牙买加Morant Bay戒严、杀戮和土地权
 
-**2026-11-22创建，当前阶段仅计划，未开展T05正式制图/文章PR。** R1 T37和T46已完成正式发表，T15/T26仍按本身资料缺口继续审。参考[T05源研究](topics/T05.md)、[59专题工作板](TOPIC_WORKBOARD.csv)、[150章节工作板](CHAPTER_WORKBOARD.csv)及统一研究规范[START_HERE](START_HERE.md)。
+**2026-11-22 R2制作已提交 [PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)：18节54段、23条事件、19史料来源、6个GIS；正式出版及浏览器验证仍需Actions/Pages验收。** R1 T37和T46已完成正式发表，T15/T26仍按本身资料缺口继续审。参考[T05源研究](topics/T05.md)、[59专题工作板](TOPIC_WORKBOARD.csv)、[150章节工作板](CHAPTER_WORKBOARD.csv)及统一研究规范[START_HERE](START_HERE.md)。
 
 ## 本专题的原卷与禁止误用的统计
 
@@ -21,10 +21,20 @@
 
 ## 首批地图事件、地理和交互生产清单
 
-- [ ] 先读取当前`main`的`data/stories/serial/chronology-1860-1869.json`和`data/nineteenth-century-spatial-1860-1869.geojson`，按事件日期、命名地点、实施者和来源去重；复用现存ID，不重新生产同一Gordon／Bogle事件。
+- [x] 先读取当前`main`的`data/stories/serial/chronology-1860-1869.json`和`data/nineteenth-century-spatial-1860-1869.geojson`，按事件日期、命名地点、实施者和来源去重；复用现存ID，不重新生产同一Gordon／Bogle事件。
 - [ ] 调原1830—1870牙买加西印度地图、皇家调查原卷所列Morant Bay Court House／Stony Gut／Kingston／Port Antonio的可复核地理位置，分开**民众抗议地点、殖民军方登陆、逮捕、戒严公告、军事审判、焚屋与行政政制变化**。
 - [ ] 18世纪及17世纪已有牙买加地理层不要误用为1865年行政边界。时间维度重点1865-10-11、10-13、10-23、11-13、1866后政制接续；对后续1870年代地权追收仅画档号可证地块。
-- [ ] 写独立历史长篇（背景/当地经济诉求/请愿与冲突/戒严实施者/军法逮捕和处死/妇孺等受害者证词/皇家调查和英国议会辩论/政制转变/受影响土地），每节`[[realEventID|自然语言]]`单击定位/双击档案与返回。
+- [x] 写独立历史长篇（背景/当地经济诉求/请愿与冲突/戒严实施者/军法逮捕和处死/妇孺等受害者证词/皇家调查和英国议会辩论/政制转变/受影响土地），每节`[[realEventID|自然语言]]`单击定位/双击档案与返回。
 - [ ] 做只针对T05的史料事实+GIS静态合同、真实1780×1020桌面Chrome跨1865至1870年代和1899持续性的截图测试；全套CI通过并Pages部署成功后正式出版；更新两工作板、[PROGRESS](PROGRESS.md)、Issue #499与本任务清单。
 
 **现阶段状态**：`T05 research archived / article pending / GIS untriaged / formal publication not_checked`。优先调原稿并做史实去重，再设计地理面；所有未证杀戮数字及范围留在待核表。
+
+## R2专题生产与未结原档（2026-11-22）
+
+- [制作PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512) 已提交T05.1/A01与T05.2/A-X14共18节54段历史正文、23条年度可跳事件、19项来源，含官方牙买加国家遗产、JIS、1866皇家委员会、英国1866/1872议会记录、学术论文和1867年法令转录。
+- GIS 4个1865—69具名地点点＋1个Stony Gut→Morant Bay史料端点虚线，1870—79年Kingston殖民行政延续点；0无据郡界Polygon。1865公告里的Surrey **排除Kingston城市与教区**，不可把现代牙买加整岛或当代郡界涂成戒严区。地图来源审计：[`19C_T05_MORANT_BAY_SOURCE_GIS_AUDIT.md`](../../../docs/research/19C_T05_MORANT_BAY_SOURCE_GIS_AUDIT.md)。
+- 遵守正式年表ID去重：现有1860年代无Paul Bogle、George William Gordon与Morant Bay同事件ID，新增23条全部独立；原研究卷26条完整留存，Pure行政命令未证实际执行的案件不强制上地图。
+- [ ] CI: `node scripts/test_19c_t05_morant_bay.cjs` 和严格GIS／原卷／文案守门通过；[ ] 真实桌面Chrome交互和跨年、双击返回通过；[ ] PR合并及Pages构建部署通过；[ ] 正式出版另行批准后更新为`published/approved`。
+- 后续调档仍按A01-S01/S02/S03：1865旧Surrey原始法定边线、Parry 1866调查地图和Kingston豁免范围；1866 Royal Commission pp1081—1082/1158原请愿、军方拘留和舰册；Gordon 23日07:00与军令08:00细节；439死者军法与战场分类逐人核名；600鞭打名册和约千房屋索赔；1867法令No20/No22原始编号；1867—1879 John Peter Grant王室土地追收与被驱离居民的逐宗地契。
+
+**后续R2顺位**：T14 信德/旁遮普/阿瓦德，T05正式发布与历史档案待核应分轨跟进。

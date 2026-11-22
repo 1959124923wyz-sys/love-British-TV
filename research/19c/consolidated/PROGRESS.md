@@ -87,3 +87,10 @@
 - 主编正式公开[PR #510](https://github.com/1959124923wyz-sys/love-British-TV/pull/510)通过35/35全站Actions，含无预览URL的真实桌面Chrome跨1829—1899、单击跳年地图镜头、双击档案与返回、地图图层开关，合并SHA `4995474e0ec87496a59e878f310dd3b18979a3ea`。T46单专题状态`published/approved`，原T15/T26的编审状态未变。
 - [正式Pages #44985306164](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44985306164) **build+deploy均成功**；[官网1838年入口](https://1959124923wyz-sys.github.io/love-British-TV/?year=1838)无需`review19c`。T46与T46.1—T46.5全部登记`published_new`，来源、GIS和原案待核研究仍独立续查。
 - R2下一主要制作任务切换到**T05牙买加1865 Morant Bay戒严镇压与王室殖民治理**，具体原案、顺位、法令地理与数字计数限制见[T05执行清单](T05_NEXT_ACTIONS.md)。其它T15/T26等编审预览仍等各自来源核证。
+
+## 2026-11-22 · 主编45 R2 T05 Morant Bay：两章18节长文及1865—1879年地图制作PR
+
+- 新增[T05制作PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)：T05.1/A01、T05.2/A-X14共18节54段历史正文，19条结构化史料来源，23个与正式1860年代年表对应的单击/双击事件链接。原26条研究卷年表、15制图线索与6待核问题继续保留。
+- 1865—69新增4个具名地理参考点和1条仅有证据端点的虚线，1870—79新增1个Kingston英国王室殖民地行政延续点；没有伪造Surrey戒严边界、战地微址及殖民面积。来源审计详[独立T05 GIS研究](../../../docs/research/19C_T05_MORANT_BAY_SOURCE_GIS_AUDIT.md)。
+- 1872年英国议会关于439死者、600鞭打和约1000毁屋的回述各属不同统计口径；Gordon/Bogle的23/24日处刑与军事审判依来源分列。文章状态先保留`editorial_review/not_submitted`，T37/T46已发表及T15/T26待审状态不动。
+- 专用Node历史空间合同、1780×1020桌面Chrome互动脚本与T05 Actions工作流一并提交，正式CI/PR合并/Pages部署结果须另据实际运行更新。本批待调原卷详[T05长期待办](T05_NEXT_ACTIONS.md)。
