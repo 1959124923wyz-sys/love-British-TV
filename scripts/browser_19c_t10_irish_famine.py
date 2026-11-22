@@ -33,7 +33,7 @@ try:
     wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+tid+'"]'))>0)
     js("window.HistoryStories.openStory(arguments[0],false,'E19-IR-1847-QUARTER-ACRE-RULE')",tid)
     wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article [data-story-event="E19-IR-1861-DERRYVEAGH-OFFICIAL-RETURN"]'))>0)
-    assert len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article [data-story-event]'))==32
+    assert len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article [data-story-event]'))==34
     driver.save_screenshot(str(out/'19c-t10-26-sections.png'))
     click_event('E19-IR-1846-BALLINLASS-EVICTION',1846,'19c-t10-1846-ballinlass.png')
     click_event('E19-IR-1847-QUARTER-ACRE-RULE',1847,'19c-t10-1847-poor-law.png')
@@ -56,7 +56,7 @@ try:
         js("window.atlasStoryBridge.setYear(arguments[0])",year)
         wait.until(lambda _:js("return window.atlasStoryBridge.currentYear()===arguments[0]",year))
     driver.save_screenshot(str(out/'19c-t10-1869-continuity.png'))
-    print('PASS T10 Chrome desktop: 26 sections, 32 event links, 1846/1847/1849/1861 years, town GIS, layer toggles, double click and back')
+    print('PASS T10 Chrome desktop: 28 sections, 34 event links, 1846/1847/1849/1861 years, town GIS, layer toggles, double click and back')
 except Exception:
     driver.save_screenshot(str(out/'19c-t10-failure.png'))
     raise
