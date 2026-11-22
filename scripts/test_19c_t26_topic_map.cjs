@@ -86,7 +86,7 @@ for(const id of [...five.map(x=>'fiveport-'+x),...four.map(x=>'chefooport-'+x)])
 }
 const anping=t26.find(x=>x.id==='t26-anping-fort-1860s');
 assert(anping&&Math.abs(anping.geometry.coordinates[0]-120.16062)<1e-6&&Math.abs(anping.geometry.coordinates[1]-23.001509)<1e-6);
-assert(/not_1868/.test(anping.properties.mapping_method)||/not surveyed 1868/.test(anping.properties.mapping_method));
+assert(/cannot be reconstructed|not surveyed 1868/.test(anping.properties.mapping_method));
 const board=read('research/19c/consolidated/TOPIC_WORKBOARD.csv').split('\n').find(x=>x.startsWith('T26,'));
 assert(board&&board.includes('review_ready'),'T26 status must be updated');
 const reader=read('js/history-stories.js'),app=read('app.js');
