@@ -23,7 +23,7 @@ def follow(event_id,year,name):
     driver.save_screenshot(str(out/name))
 
 try:
-    published=os.environ.get('T21_PUBLISHED')=='1'
+    published=True # public release: browser uses ordinary year URL with no review parameter
     qs='?year=1824' if published else '?review19c=1&year=1824'
     driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+qs)
     wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))

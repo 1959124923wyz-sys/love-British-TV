@@ -1,4 +1,10 @@
 # 归档进度
+## 2026-11-22 · R2 T21制作PR正式合并，独立出版审核启动
+
+- [制作 PR #521](https://github.com/1959124923wyz-sys/love-British-TV/pull/521) 已合并至main，merge SHA `805d2706f7cf5c9f068cd871fd2bd985e34e17d0`，T21两章36节97段、93来源、109已链接事件（97复用/12新增）及4个现代具名历史锚点。T21专项史料/GIS、桌面Chrome及强制交互门禁已通过。
+- 用户要求按清单继续制作绘图；正式公开版位于 `release/19c-t21-burma-wars-publication-20261122`，拟将新母篇标记为`published/approved`、T21.1/T21.2章节`published_new`，并纳入强制完整文章合同与**无预览参数**的真实Chrome。旧三篇英缅战争保留`editorial_review/not_submitted`，避免相同战争重复公开。
+- 当前为**待审核发布变更**；必须等独立出版PR全部门禁成功并合并及GitHub Pages build/deploy成功，才可在主干宣布正式上线。本次未扩展任何未经原图核实的村落毁损边界或英国国土Polygon。
+
 
 ## 2026-11-22 · R2 T21缅甸三次战争/暴力镇压/土地与米业制作完成，待CI
 
