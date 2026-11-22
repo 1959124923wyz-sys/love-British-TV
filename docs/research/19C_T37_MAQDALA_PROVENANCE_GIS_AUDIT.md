@@ -1,6 +1,6 @@
 # T37｜马格达拉远征与文物来源 GIS 审计（2026-11-22）
 
-**专题** T37.1 / C10；已起草十二节母篇，预览状态 `editorial_review/not_submitted`，正式发表仍待独立史料审核。
+**专题** T37.1 / C10；已完成十二节母篇及读者正式发表：`published/approved`（PR #507、35/35CI、Pages #44981515205）。**此批准适用于已核的历史叙述、事件时间和非领土GIS参考点；下列档案研究缺口仍按原卷追查。**
 
 ## 原研究与新正文关系
 
@@ -36,3 +36,9 @@ Maqdala堡垒、Aroge战场及Delanta拍卖营地的1868年实测轮廓均未复
 - [Nordic Africa Institute，Bernhard Lindahl, *Local History of Ethiopia: Mek–Mekwenta*（2005），p.12/40 HEE58](https://nai.uu.se/download/18.39fca04516faedec8b248e19/1580829013197/ORTMEK05.pdf)：Mekdela Maryam教堂11°21′N、39°11′E，位于Mekdela高原西南。
 - [Getty TGN现代Amba Maryam条目](https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=7003249&nation=&place=&subjectid=1089703)：11.4333°N、39.2833°E，现代地名记录；与历史高原近址不能直接当作同一点。
 - 1868英国战地测量图I/O/R馆藏目录只确认图件存在，本轮未从中矢量化任何堡墙或战场Polygon。
+
+## 正式出版审查与未解决史料分层
+
+- 已审已发表：1867—1868英印远征、4月10日Aroge、4月13日攻堡、4月17日焚毁、4月20—21日德兰塔拍卖，英国馆藏冠杯、BL Or607、V&A Aleka Zeneb手稿和1871议会/1872寄存；来源NAM、V&A 2026、BM、BL和议会史料及史学研究。
+- 未作事实过度推导：军方拍卖总实收/每件成交款、所有被掠宗教物品的完整数、损失总体金额、阿罗格死伤全额、历史堡垒实控地籍范围、Saunders每一次转手、埃塞俄比亚教会原账。数据继续保留证据精度和虚线权利状态。
+- [正式发布PR #507](https://github.com/1959124923wyz-sys/love-British-TV/pull/507)合并SHA `58590ac07f40060d6efcdcfce5ef45fc19072901`，[Pages部署 #44981515205](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44981515205)；正式入口<https://1959124923wyz-sys.github.io/love-British-TV/?year=1868>。
