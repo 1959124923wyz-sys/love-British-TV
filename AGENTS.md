@@ -1,6 +1,6 @@
 # 爱英TV｜GitHub / AI 调查员接手入口
 
-**2026-11-22正式进展：** 19世纪R1的T37已正式发表（#507）；**T46澳大利亚边疆五章**已按#509（37/37 Actions）与#510（35/35 Actions）正式发布，Pages #44985306164的构建和部署均成功。T46单专题25节75段、39年表链接、17 GIS图元，历史未核地籍与死亡点保留待核。下一主制作为[R2 T05 Morant Bay](research/19c/consolidated/T05_NEXT_ACTIONS.md)，T15/T26旧编审预览不会自动批准。
+**2026-11-22正式进展：** 19世纪R1的T37已正式发表（#507）；**T46澳大利亚边疆五章**已按#509（37/37 Actions）与#510（35/35 Actions）正式发布，Pages #44985306164的构建和部署均成功。T46单专题25节75段、39年表链接、17 GIS图元，历史未核地籍与死亡点保留待核。R2 T05已创建18节／23事件／6 GIS的[制作PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)，待CI与正式出版，后续调查见[R2 T05 Morant Bay](research/19c/consolidated/T05_NEXT_ACTIONS.md)，T15/T26旧编审预览不会自动批准。
 
 
 
