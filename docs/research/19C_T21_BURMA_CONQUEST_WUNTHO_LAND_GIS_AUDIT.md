@@ -57,3 +57,7 @@
 - 制作母篇 `editorial_review/not_submitted`，不影响三个旧独立编审故事或当前已发布T05/T10/T14/T37/T46。
 - 专项测试 `node scripts/test_19c_t21_burma_wars.cjs`，真实1780×1020 Chrome `scripts/browser_19c_t21_burma_wars.py`，已配 `.github/workflows/19c-t21-burma-wars.yml`；严格检查109历史事件、12新事件、4地理点、法令和海关统计数字。
 - 仅当制作PR通过仓库required checks和桌面测试并合并后，独立出版PR方可改为 `published/approved`，出版检查及Pages构建部署均应追记真实运行链接。当前不得提前宣称上站。
+
+## 制作PR核准与正式出版候审（2026-11-22）
+
+[制作PR #521](https://github.com/1959124923wyz-sys/love-British-TV/pull/521) 已合并：`805d2706f7cf5c9f068cd871fd2bd985e34e17d0`。两章36节97段、93来源、109有历史ID的事件链接，1891温托4个现代具名Point；严格GIS、桌面Chrome与强制交互检查已经通过。独立公开版本在 `release/19c-t21-burma-wars-publication-20261122` 待审核，`published/approved` 标记需发行PR主干合并和Pages实际build/deploy验收后才可称为正式上线。历史原地图、村民损失和王室财物去向仍按原始归档待追。
