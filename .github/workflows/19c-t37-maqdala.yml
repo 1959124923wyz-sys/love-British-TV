@@ -11,6 +11,7 @@ on:
       - 'research/19c/consolidated/**'
       - 'scripts/test_19c_t37_maqdala_topic_map.cjs'
       - '.github/workflows/19c-t37-maqdala.yml'
+      - 'scripts/browser_19c_t37_maqdala.py'
   push:
     branches: [main]
     paths:
@@ -32,3 +33,22 @@ jobs:
           python3 scripts/audit_spatial_semantics.py --strict
           node scripts/test_atlas_47_public_copy_guard.js
           node scripts/lint_atlas_47_frontend_copy.js
+  desktop-map-interactions:
+    needs: facts-and-map
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-t37.log 2>&1 &
+          python3 scripts/browser_19c_t37_maqdala.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 19c-t37-maqdala-desktop-proof
+          path: browser-smoke-results/19c-t37-*.png
+          if-no-files-found: ignore
