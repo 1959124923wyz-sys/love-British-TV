@@ -9,7 +9,9 @@ const topic=index.topics.find(t=>t.id===tid);
 const ledger=load('data/research/19c-t14-existing-event-crosswalk.json');
 assert(topic&&article.id===tid,'T14 mother story indexed');
 assert(['editorial_review','published'].includes(topic.status));
-if(topic.status==='published')assert.equal(topic.publication_review,'approved');
+assert.equal(topic.status,'published','public T14 must not require preview');
+assert.equal(topic.publication_review,'approved','T14 needs editorial acceptance');
+
 assert.equal(article.sections.length,29);assert.equal(article.sections.reduce((n,s)=>n+s.paragraphs.length,0),87);
 assert(article.sections.flatMap(x=>x.paragraphs).join('').length>5200);
 assert.deepEqual(article.sections.reduce((s,x)=>(s[x.narrative_chapter]=(s[x.narrative_chapter]||0)+1,s),{}),{'T14.1':8,'T14.2':10,'T14.3':11});

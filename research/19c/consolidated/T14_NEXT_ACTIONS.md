@@ -20,3 +20,12 @@
 **原文证据及制图误差说明：** [T14来源GIS审计](../../../docs/research/19C_T14_CONQUEST_PLUNDER_SOURCE_GIS_AUDIT.md)。**正文：** [T14三章故事](../../../data/stories/serial/e19-t14-sindh-punjab-awadh-conquest-expropriation-1842-1859.json)。**去重映射：** [51历史事件](../../../data/research/19c-t14-existing-event-crosswalk.json)。
 
 **下一候选顺位：** R2 T10「1840年代爱尔兰大饥荒中的土地、救济和逐佃」；出版完成后再根据工作板确认，避免与T15已有1857专题重复。
+
+## 正式出版审核阶段（2026-11-22）
+
+- [x] [制作PR #515](https://github.com/1959124923wyz-sys/love-British-TV/pull/515) **49/49项Actions通过**，涵盖T14自身事实/GIS合同、真实1780×1020 Chrome跨三地、跨世纪合同、全站页面回归。主分支合并 `5b97aede9766610784e983945585d86f6fca5bfa`。
+- [x] 将母专题登记`published/approved`、T14.1至T14.3正式出版字段`published_new`；出版白名单显式加入T14的51来源事件审查门槛。
+- [x] 独立出版Chrome使用`T14_PUBLISHED=1`，测试普通网站`?year=1843`，不能依赖`review19c`编审参数。
+- [ ] 出版PR全站Actions（含无预览桌面Chrome）实际全部成功；[ ] 正式PR合并；[ ] GitHub Pages build/deploy双成功；[ ] Issue #499与交接工作板登记真实验收编号。
+
+原账剩余六组未结疑问继续按[独立来源GIS审计](../../../docs/research/19C_T14_CONQUEST_PLUNDER_SOURCE_GIS_AUDIT.md)追查，不因母专题发布而关闭。

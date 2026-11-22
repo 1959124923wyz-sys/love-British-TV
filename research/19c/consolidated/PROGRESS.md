@@ -113,3 +113,7 @@
 - 1840年代增加米亚尼、奇利安瓦拉、古杰拉特三个已有年表地名参考点；已有1855阿瓦德示意旧界强制虚线、不授权实控填充和面积合计；旧海得拉巴、拉合尔、木尔坦、勒克瑙、凯萨尔巴格GIS继续复用。
 - [独立来源、数字和GIS审计](../../../docs/research/19C_T14_CONQUEST_PLUNDER_SOURCE_GIS_AUDIT.md)保留原账户、军民伤亡、王廷财物、土地逐宗地籍8类未解问题；研究卷B06十条原事不删。
 - 当前母专题 `editorial_review/not_submitted`、T14.1—.3 `review_ready`，已加入专用Node和1780×1020真实桌面Chrome制作门禁；后续见[T14_NEXT_ACTIONS.md](T14_NEXT_ACTIONS.md)。待PR和Pages验收再确认是否出版。
+
+## 2026-11-22 · T14制作PR49/49通过并合并，正式出版独立审核
+
+[T14制作PR #515](https://github.com/1959124923wyz-sys/love-British-TV/pull/515)全部49/49 GitHub Actions成功，含真实1780×1020桌面Chrome及51复用年表链接验证。主分支squash提交`5b97aede9766610784e983945585d86f6fca5bfa`。独立出版审批将母专题转为`published/approved`，三章T14.1—.3为`published_new`，并把T14正式写入`test_serial_story_contract.js`白名单；出版浏览器须不带预览参数运行。独立出版PR本身的CI和GitHub Pages部署结果尚须另行核实并写入长期交接。各地战役伤亡、原王廷财物、军官奖金、1849国家财产没收和1858地产归还按来源分列，原件继续待核。
