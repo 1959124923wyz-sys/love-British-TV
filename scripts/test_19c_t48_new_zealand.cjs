@@ -68,6 +68,6 @@ assert(eventByID.get('E19-T48-1869-C22-E07').description.includes('120'));
 assert(eventByID.get('E19-T48-1869-C50-E04').description.includes('焚'));
 assert(eventByID.get('E19-T48-1881-C02-E18').description.includes('1600'));
 assert(eventByID.get('E19-T48-1881-C02-E20').description.includes('房屋'));
-assert(eventByID.get('E19-T48-1882-C02-E66').description.includes('Indemnity'));
+assert(eventByID.get('E19-T48-1882-C02-E66').description.includes('豁免'));
 for(const old of ['E19-T21-BURMA-THREE-WARS-DISPOSSESSION','E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES','E19-T46-AUSTRALIAN-FRONTIER-LAND-VIOLENCE'])assert.equal(idx.topics.find(t=>t.id===old)?.status,'published');
 console.log('PASS 19C T48 Maori wars: 43 sections / 129 paragraphs / 73 primary sources / 81 verified links (71 new + 10 old) / 73 audited new chronology events / 15 modern named GIS reference points');
