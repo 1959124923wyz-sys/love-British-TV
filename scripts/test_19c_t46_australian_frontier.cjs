@@ -8,12 +8,15 @@ const story=load('data/stories/serial/e19-t46-australian-frontier-land-violence-
 const meta=load('data/stories/serial/index.json').topics.find(x=>x.id===story.id);
 const ledger=load('data/research/19c-t46-editorial-event-ledger.json');
 const newEvents=load('data/research/19c-t46-new-chronology-events.json').events;
-assert(meta&&meta.status==='editorial_review'&&meta.publication_review==='not_submitted','This project is a historical editorial preview, not final formal approval');
+assert(meta&&meta.status==='published'&&meta.publication_review==='approved','T46 is editor-approved for ordinary public site');
+assert(meta.publication_note?.includes('主编2026-11-22正式发表审核'));
+
 assert.equal(story.sections.length,25);
 assert.equal(story.sources.length,48);
 assert(story.sections.flatMap(s=>s.paragraphs).join('').length>6000);
 assert.deepEqual(story.sections.reduce((m,s)=>(m[s.narrative_chapter]=(m[s.narrative_chapter]||0)+1,m),{}),{'T46.1':6,'T46.2':6,'T46.3':5,'T46.4':4,'T46.5':4});
 const refs=new Set(story.sources.map(s=>s.id));assert.equal(refs.size,48);
+for(const s of story.sources)assert(!/(地图边界|配准|GPS|不当作|仅供|未核|待原|坐标参考|示意线)/.test(s.access),'public source exposes internal cartographic note '+s.id);
 for(const s of story.sources)assert(s.url.startsWith('https://')&&s.publisher&&s.access);
 const exp=new Set(ledger.event_ids);
 assert.equal(exp.size,39);
@@ -71,4 +74,4 @@ assert(gis.some(x=>x.id==='t46-roebourne-murujuga-1868'&&x.properties.dash_only=
 const notice=load('data/stories/serial/index.json').topics;
 for(const t of ['E19-T37-MAQDALA-EXPEDITION-LOOTING'])assert(notice.some(x=>x.id===t&&x.status==='published'),'do not alter released T37');
 for(const t of ['E19-T15-INDIA-1857-REPRISALS','E19-T26-OPIUM-WARS-CHINA-TREATY-PORTS'])if(notice.find(x=>x.id===t))assert.equal(notice.find(x=>x.id===t).status,'editorial_review','never prematurely approve unrelated T15/T26');
-console.log('PASS T46 preview: 25 sections, 48 sources, 39 unique live links (29 new, 10 reused), 17 GIS (16 named heritage references / 1 dashed endpoint line), all 5 chapters and 1829-1897 chronology, no invented territories');
+console.log('PASS published T46: 25 sections, 48 sources, 39 unique live links (29 new, 10 reused), 17 GIS (16 named heritage references / 1 dashed endpoint line), all 5 chapters and 1829-1897 chronology, no invented territories');

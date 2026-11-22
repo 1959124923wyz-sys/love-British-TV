@@ -29,8 +29,9 @@ def focus(eid,year,lat,lng,proof):
     driver.save_screenshot(str(out/proof))
 
 try:
-    driver.get(os.environ.get("ATLAS_TEST_URL","http://127.0.0.1:8765/")+"?review19c=1&year=1829")
+    driver.get(os.environ.get("ATLAS_TEST_URL","http://127.0.0.1:8765/")+"?year=1829")
     wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
+    assert "review19c" not in driver.current_url, "Published T46 must work without preview URL flag"
     wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById('E19-T46-1874-BARROW-ATTACK')"))
     js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById('E19-T46-1829-PERTH-FOUNDATION'))")
     wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]'))>0)
@@ -65,7 +66,7 @@ try:
     wait.until(lambda _:js("return window.atlasStoryBridge.currentYear()===1899"))
     assert js("return !!document.querySelector('.leaflet-container')")
     driver.save_screenshot(str(out/"19c-t46-1899-continuity.png"))
-    print("PASS T46 desktop Chrome: 25 sections, 39 links, Perth->Myall->Hornet->Murujuga->Barrow->Bunuba, layer toggles, double click/back, 1899")
+    print("PASS T46 published no-review Chrome: 25 sections, 39 links, Perth->Myall->Hornet->Murujuga->Barrow->Bunuba, layer toggles, double click/back, 1899")
 except Exception:
     driver.save_screenshot(str(out/"19c-t46-failure.png"))
     raise
