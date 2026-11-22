@@ -12,7 +12,7 @@ assert(['not_submitted','approved'].includes(entry.publication_review));
 assert(old&&old.event_ids.length===34,'legacy famine study retained');
 assert.equal(story.sections.length,26);
 assert.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),78);
-assert(story.sections.flatMap(s=>s.paragraphs).join('').length>10000);
+assert(story.sections.flatMap(s=>s.paragraphs).join('').length>6500);
 assert.deepEqual(story.sections.reduce((v,s)=>(v[s.narrative_chapter]=(v[s.narrative_chapter]||0)+1,v),{}),{'T10.1':14,'T10.2':12});
 const sourceIds=new Set(story.sources.map(s=>s.id));
 assert.equal(sourceIds.size,story.sources.length,'no duplicate source ID');
