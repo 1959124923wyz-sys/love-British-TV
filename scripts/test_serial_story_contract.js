@@ -10,7 +10,7 @@ const old=load('data/stories/index.json');
 const reader=fs.readFileSync(path.join(root,'js/history-stories.js'),'utf8');
 assert.equal(serial.schema,'atlas-serial-stories-v1');
 assert.equal(serial.navigation_contract,'existing_decade_chapters_unchanged');
-assert.deepEqual(serial.topics.filter(t=>t.status==='published').map(t=>t.id).sort(),['E19-T14-SINDH-PUNJAB-AWADH-CONQUEST-EXPROPRIATION','E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES','E19-BUSSA-REBELLION','E19-CAPE-OPENING','E19-GULF-EXPEDITION-1809','E19-GULF-EXPEDITION-1819','E19-GULF-MARITIME-TREATY','E19-KANDY-OPENING','E19-RISDON-COVE','E19-T05-MORANT-BAY-MARTIAL-LAW-CROWN-COLONY','E19-T37-MAQDALA-EXPEDITION-LOOTING','E19-T46-AUSTRALIAN-FRONTIER-LAND-VIOLENCE','E6-T03-LAND-1642-1698','E6-T04-DARIEN','E6-T04-GLENCOE','E6-T05','E6-T06','E6-T07-BARBADOS','E6-T08','E6-T09-CAR','E6-T09-NY','E6-T10-ACADIA','E6-T10-HBC','E6-T10-NEWFOUNDLAND','E6-T11-VOYAGES','E6-T12','E6-T13','E6-T14-NAV','E6-T02','E6-T15','E6-T01','E6-T16-SURINAME','E6-T16-PROVIDENCE','E6-T17-AFRICAN-FORTS','E6-T07-LEEWARD','E6-T04-CONQUEST','E6-T03-WILLIAMITE-WAR','E6-T09-PENNSYLVANIA','E6-T10-QUEBEC-KIRKE','E6-T16-ATLANTIC-ISLANDS','E6-T09-NE-DOMINION'].sort() ,'only explicitly editor-audited completed story stages may publish');
+assert.deepEqual(serial.topics.filter(t=>t.status==='published').map(t=>t.id).sort(),['E19-T14-SINDH-PUNJAB-AWADH-CONQUEST-EXPROPRIATION','E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES','E19-T21-BURMA-THREE-WARS-DISPOSSESSION','E19-BUSSA-REBELLION','E19-CAPE-OPENING','E19-GULF-EXPEDITION-1809','E19-GULF-EXPEDITION-1819','E19-GULF-MARITIME-TREATY','E19-KANDY-OPENING','E19-RISDON-COVE','E19-T05-MORANT-BAY-MARTIAL-LAW-CROWN-COLONY','E19-T37-MAQDALA-EXPEDITION-LOOTING','E19-T46-AUSTRALIAN-FRONTIER-LAND-VIOLENCE','E6-T03-LAND-1642-1698','E6-T04-DARIEN','E6-T04-GLENCOE','E6-T05','E6-T06','E6-T07-BARBADOS','E6-T08','E6-T09-CAR','E6-T09-NY','E6-T10-ACADIA','E6-T10-HBC','E6-T10-NEWFOUNDLAND','E6-T11-VOYAGES','E6-T12','E6-T13','E6-T14-NAV','E6-T02','E6-T15','E6-T01','E6-T16-SURINAME','E6-T16-PROVIDENCE','E6-T17-AFRICAN-FORTS','E6-T07-LEEWARD','E6-T04-CONQUEST','E6-T03-WILLIAMITE-WAR','E6-T09-PENNSYLVANIA','E6-T10-QUEBEC-KIRKE','E6-T16-ATLANTIC-ISLANDS','E6-T09-NE-DOMINION'].sort() ,'only explicitly editor-audited completed story stages may publish');
 const canonicalFamilies=Array.from({length:15},(_,i)=>'E6-T'+String(i+1).padStart(2,'0'));
 const knownIds=new Set(serial.topics.map(t=>t.id));
 assert.equal(knownIds.size,serial.topics.length,'unique IDs required');
@@ -21,6 +21,9 @@ assert(t46?.status==='published'&&t46?.publication_review==='approved'&&t46?.eve
 const t05=serial.topics.find(t=>t.id==='E19-T05-MORANT-BAY-MARTIAL-LAW-CROWN-COLONY');
 assert(t05?.status==='published'&&t05?.publication_review==='approved'&&t05.event_ids?.length===23,'T05 requires approved production PR with 23 audited Morant Bay event links');
 assert(t05.article_file==='data/stories/serial/e19-t05-morant-bay-martial-law-crown-colony-1865-1879.json');
+const t21=serial.topics.find(t=>t.id==='E19-T21-BURMA-THREE-WARS-DISPOSSESSION');
+assert(t21?.status==='published'&&t21?.publication_review==='approved'&&t21.event_ids?.length===109,'T21 Burma requires 109 audited event links and explicit approved publication');
+assert(t21.article_file==='data/stories/serial/e19-t21-burma-three-wars-wuntho-land-rice-1823-1899.json');
 const t10=serial.topics.find(t=>t.id==='E19-T10-IRISH-FAMINE-EVICTIONS-ESTATES');
 assert(t10?.status==='published'&&t10?.publication_review==='approved'&&t10.event_ids?.length===34,'T10 publication must retain 34 sourced events');
 assert(t10.article_file==='data/stories/serial/e19-t10-irish-famine-evictions-estates-1842-1861.json');
