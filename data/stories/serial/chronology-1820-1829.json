@@ -1542,6 +1542,30 @@
       "title": "十九世纪V6冻结资料",
       "url": "https://github.com/1959124923wyz-sys/love-British-TV/tree/eb9c17d0da5c2d2a1d4bbaf48f128737e1247d1e/data/research/19c/v6",
       "access": "events-01、p0-research-queue、v4-original-evidence-03/06、research-evidence-01、geography-review-01，A-74、A-73。"
+    },
+    {
+      "id": "19C-T46-C86-S01",
+      "publisher": "Founding Documents／James Stirling",
+      "title": "Lieutenant-Governor Stirling’s Proclamation of the Colony, 18 June 1829",
+      "label": "Founding Documents／James Stirling｜Lieutenant-Governor Stirling’s Proclamation of the Colony, 18 June 1829",
+      "url": "https://www.foundingdocs.gov.au/resources/transcripts/wa4_doc_1829.pdf",
+      "access": "1829-06-18，原文转录2页。殖民原令官方转录｜殖民司发布任命与行政司法主张，和各地实际占用分开。"
+    },
+    {
+      "id": "19C-T46-NMA-PERTH",
+      "publisher": "澳大利亚国家博物馆",
+      "title": "Founding of Perth",
+      "label": "澳大利亚国家博物馆｜Founding of Perth",
+      "url": "https://www.nma.gov.au/defining-moments/resources/founding-of-perth",
+      "access": "1829年Garden Island公告、8月12日Perth、Peel批地承诺及缩减。"
+    },
+    {
+      "id": "19C-T46-C86-S04",
+      "publisher": "National Museum of Australia",
+      "title": "Founding of Perth",
+      "label": "National Museum of Australia｜Founding of Perth",
+      "url": "https://www.nma.gov.au/defining-moments/resources/founding-of-perth",
+      "access": "Peel 的承诺、抵达与缩改；Noongar地及平贾拉段。国家博物馆历史研究｜提供占据的部族视角和早期500,000英亩提案；该口径与地方馆250,000英亩口径逐阶段核。"
     }
   ],
   "events": [
@@ -5123,6 +5147,70 @@
       "research_original_node_ids": [],
       "research_v6_evidence_ids": [],
       "research_v6_stage_ids": []
+    },
+    {
+      "id": "E19-T46-1829-SWAN-PROCLAMATION",
+      "year": 1829,
+      "start_year": 1829,
+      "end_year": 1829,
+      "visible_from": 1829,
+      "date_label": "1829年6月18日",
+      "name": "西澳天鹅河殖民地公告在Garden Island宣读",
+      "description": "James Stirling在Whadjuk Noongar传统土地的沿海岛屿宣读殖民行政公告；公告主张英国殖民司法和土地管辖权。",
+      "short_description": "James Stirling在Whadjuk Noongar传统土地的沿海岛屿宣读殖民行政公告；公告主张英国殖民司法和土地管辖权。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T46-C86-S01",
+        "19C-T46-NMA-PERTH"
+      ],
+      "geo_precision": "historic_event_site_unlocated_or_wide_area",
+      "significance": {
+        "level": 8,
+        "rationale": "T46澳大利亚殖民边疆原始案号、官方文献及大学原住民史料互核"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_original_node_ids": [
+        "C86-E02"
+      ],
+      "research_v6_event_ids": []
+    },
+    {
+      "id": "E19-T46-1829-PERTH-FOUNDATION",
+      "year": 1829,
+      "start_year": 1829,
+      "end_year": 1829,
+      "visible_from": 1829,
+      "date_label": "1829年8月12日",
+      "name": "在Whadjuk土地上举行珀斯建城仪式",
+      "description": "英国殖民行政人员在Whadjuk Noongar土地上规划珀斯，随后测量道路、地块并向定居者授地。",
+      "short_description": "英国殖民行政人员在Whadjuk Noongar土地上规划珀斯，随后测量道路、地块并向定居者授地。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": -31.9523,
+      "lng": 115.8613,
+      "source_ids": [
+        "19C-T46-C86-S04",
+        "19C-T46-NMA-PERTH"
+      ],
+      "geo_precision": "modern_named_place_reference_not_verified_specific_historic_site",
+      "significance": {
+        "level": 8,
+        "rationale": "T46澳大利亚殖民边疆原始案号、官方文献及大学原住民史料互核"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_original_node_ids": [
+        "C86-E02"
+      ],
+      "research_v6_event_ids": []
     }
   ],
   "routes": [

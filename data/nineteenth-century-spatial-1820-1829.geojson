@@ -1728,7 +1728,7 @@
               26.656
             ],
             [
-              92.0,
+              92,
               26.667
             ],
             [
@@ -1798,6 +1798,48 @@
             "summary_zh": "1828年边境冲突后，东印度公司接管布里古马杜阿尔。1834年7月，该地交回不丹方面管理。"
           }
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t46-perth-founding-1829",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.8613,
+          -31.9523
+        ]
+      },
+      "properties": {
+        "stable_id": "t46-perth-founding-1829",
+        "name": "珀斯·天鹅河殖民授地",
+        "start_year": 1829,
+        "end_year": 1829,
+        "display_kind": "land_dispossession",
+        "summary_zh": "1829年8月12日，英国殖民者在Whadjuk Noongar的传统土地上建立珀斯，随后测量并分配城镇地块。",
+        "source_ids": [
+          "19C-T46-C86-S04",
+          "19C-T46-NMA-PERTH"
+        ],
+        "source_urls": [
+          "https://www.nma.gov.au/defining-moments/resources/founding-of-perth",
+          "https://www.nma.gov.au/defining-moments/resources/founding-of-perth"
+        ],
+        "related_event_ids": [
+          "E19-T46-1829-PERTH-FOUNDATION"
+        ],
+        "named_anchors": [
+          "珀斯·天鹅河殖民授地"
+        ],
+        "mapping_method": "NMA和WA殖民史记1829-08-12珀斯，现代城镇地名中心作空间入口，具体仪式位置不作同位断言",
+        "geo_precision": "modern_perth_city_anchor_not_foundation_ceremony",
+        "geometry_source": "Source-attested named locality / heritage site; WGS84 modern public placename reference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "australian_colonial_frontier_context"
       }
     }
   ]

@@ -73,3 +73,10 @@
 - 取得[PR #507](https://github.com/1959124923wyz-sys/love-British-TV/pull/507) 35/35 CI全部通过，合并SHA `58590ac07f40060d6efcdcfce5ef45fc19072901`；保留12节/12可跳转事件/11GIS（8点、3虚线、0无据Polygon），修正文稿中的制图内部说明，并在原英文机构史料基础上补足英印远征后勤与具体实物出处。
 - [GitHub Pages #44981515205](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44981515205) `build/deploy`成功；普通网站地址 <https://1959124923wyz-sys.github.io/love-British-TV/?year=1868> **不需要**`review19c=1`。
 - 仅T37在 `data/stories/serial/index.json` 中获`published/approved`出版资格，研究原卷和未核档案不因此判为全部查清。正式站T37母篇与T37.1按`published_new`记入工作板，BL历史测图、德兰塔售卖原簿与本地教会原件仍待核。[T37跟进](T37_NEXT_ACTIONS.md)；[T46接力](T46_NEXT_ACTIONS.md)为下一优先。
+
+## 2026-11-22 · R1 T46澳大利亚边疆五章联稿与地图生产（专项审查中）
+
+- 五章全部从[T46源研究](topics/T46.md)转入独立[25节75段长篇](../../../data/stories/serial/e19-t46-australian-frontier-land-violence-1829-1897.json)；48条附出版机构及链接的史料来源，39个可点击事件链接（10条同事件现有ID复用、29条新事件）。
+- 新增29条严格逐十年事件：1820年代2、1830年代8、1840年代2、1850年代1、1860年代8、1870年代5、1890年代3，未改变原已公开Pinjarra、Myall、Waterloo及Warrigal五子案的ID/死亡统计。Queensland Native Mounted Police的Hornet Bank和Cullin-la-Ringo报复不同事件及相互覆盖数据库组案保留各自口径；Barrow Creek纪念碑同时追述原住民雇员Jemmy。
+- 新增**16个可追溯具名点及1条只有证据端点的虚线**：珀斯、Melbourne契约涉及地区、Sydney/Bourke/审判、Glenelg、Roebourne、Murujuga UNESCO景观、Barrow Creek、Boulia城镇及Bunuba已开放遗址，**零新增无据土地面积Polygon**。对原住民圣地、受害遗骨和没有原测绘确认的屠杀/战地保留空坐标或区域点。
+- 研究审计：[T46来源地理审计](../../../docs/research/19C_T46_AUSTRALIAN_FRONTIER_SOURCE_GIS_AUDIT.md)；独立静态CI、桌面Chrome脚本和工作流随分支提交，当前索引状态`editorial_review/not_submitted`，须等PR全面检验、Pages成功才更新发布。下一优先依[T46长期待办](T46_NEXT_ACTIONS.md)调SROWA、QSA、GRG档案与Bunuba/Wurundjeri等当地资料。

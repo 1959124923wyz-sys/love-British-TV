@@ -1613,7 +1613,7 @@
               26.656
             ],
             [
-              92.0,
+              92,
               26.667
             ],
             [
@@ -1941,7 +1941,7 @@
               26.656
             ],
             [
-              92.0,
+              92,
               26.667
             ],
             [
@@ -2979,6 +2979,168 @@
             "summary_zh": "总督府是巴哈马殖民总督的驻地。1830年，总督从拿骚发出将被拘禁者送返埃克苏马和派兵登岛的命令。"
           }
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t46-melbourne-batman-1835",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9631,
+          -37.8136
+        ]
+      },
+      "properties": {
+        "stable_id": "t46-melbourne-batman-1835",
+        "name": "菲利普港·巴特曼契约所涉地区",
+        "start_year": 1835,
+        "end_year": 1835,
+        "display_kind": "land_dispossession",
+        "summary_zh": "1835年，菲利普港协会声称通过契约获得墨尔本和吉朗一带土地，当地Kulin诸社群继续维护传统土地关系。",
+        "source_ids": [
+          "19C-T46-C-X21-S01"
+        ],
+        "source_urls": [
+          "https://www.slv.vic.gov.au/batman-deed-melbourne"
+        ],
+        "related_event_ids": [
+          "E19-T46-1835-BATMAN-DEED"
+        ],
+        "named_anchors": [
+          "菲利普港·巴特曼契约所涉地区"
+        ],
+        "mapping_method": "SLV保存1835契约，现代墨尔本中心仅对应文件声称的广域土地，不定位签约具体地点",
+        "geo_precision": "modern_melbourne_city_context_not_1835_deed_signing_site",
+        "geometry_source": "Source-attested named locality / heritage site; WGS84 modern public placename reference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "australian_colonial_frontier_context"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t46-bourke-sydney-1835",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.20732,
+          -33.86785
+        ]
+      },
+      "properties": {
+        "stable_id": "t46-bourke-sydney-1835",
+        "name": "悉尼·伯克总督土地公告",
+        "start_year": 1835,
+        "end_year": 1835,
+        "display_kind": "political",
+        "summary_zh": "1835年8月26日，总督伯克公告不承认私人与原住民族达成的购地契约，由殖民政府继续行使王室土地处分权。",
+        "source_ids": [
+          "19C-T46-C-X21-S03"
+        ],
+        "source_urls": [
+          "https://www.foundingdocs.gov.au/item-sdid-75.html"
+        ],
+        "related_event_ids": [
+          "E19-T46-1835-BOURKE-PROCLAMATION"
+        ],
+        "named_anchors": [
+          "悉尼·伯克总督土地公告"
+        ],
+        "mapping_method": "Documenting Democracy官方公布1835 NSW总督公告，悉尼为首府地名近址",
+        "geo_precision": "modern_named_sydney_reference_not_governor_office",
+        "geometry_source": "Source-attested named locality / heritage site; WGS84 modern public placename reference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "australian_colonial_frontier_context"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t46-glenelg-administration-1836",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.519,
+          -34.982
+        ]
+      },
+      "properties": {
+        "stable_id": "t46-glenelg-administration-1836",
+        "name": "Glenelg·南澳殖民当局成立",
+        "start_year": 1836,
+        "end_year": 1836,
+        "display_kind": "political",
+        "summary_zh": "1836年12月28日，殖民总督John Hindmarsh在Glenelg宣布殖民政府成立，随后推动农牧占据。",
+        "source_ids": [
+          "19C-T46-C-X27-S01"
+        ],
+        "source_urls": [
+          "https://education.parliament.sa.gov.au/learn/first-nations-history-and-the-parliament/"
+        ],
+        "related_event_ids": [
+          "E19-T46-1836-SA-ADMIN"
+        ],
+        "named_anchors": [
+          "Glenelg·南澳殖民当局成立"
+        ],
+        "mapping_method": "南澳议会建省历史与Glenelg史料，现代市区中心不重建1836仪式地点",
+        "geo_precision": "modern_glenelg_locality_reference",
+        "geometry_source": "Source-attested named locality / heritage site; WGS84 modern public placename reference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "australian_colonial_frontier_context"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t46-myall-sydney-trials-1838",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.20732,
+          -33.86785
+        ]
+      },
+      "properties": {
+        "stable_id": "t46-myall-sydney-trials-1838",
+        "name": "悉尼·Myall Creek谋杀案审判",
+        "start_year": 1838,
+        "end_year": 1838,
+        "display_kind": "political",
+        "summary_zh": "1838年11月悉尼法院两度审理Myall Creek屠杀，第二轮七人被判罪，12月18日在悉尼执行死刑。",
+        "source_ids": [
+          "19C-T46-NMA-MYALL"
+        ],
+        "source_urls": [
+          "https://www.nma.gov.au/defining-moments/resources/myall-creek-massacre"
+        ],
+        "related_event_ids": [
+          "E19-T46-1838-MYALL-TRIAL-FIRST",
+          "E19-T46-1838-MYALL-TRIAL-SECOND",
+          "E19-T46-1838-MYALL-EXECUTIONS"
+        ],
+        "named_anchors": [
+          "悉尼·Myall Creek谋杀案审判"
+        ],
+        "mapping_method": "NMA Myall Creek 1838法庭时间线；现代悉尼城市参照，非1838法庭建筑/刑场GPS",
+        "geo_precision": "modern_sydney_city_not_precise_court_or_gallows",
+        "geometry_source": "Source-attested named locality / heritage site; WGS84 modern public placename reference",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "australian_colonial_frontier_context"
       }
     }
   ]
