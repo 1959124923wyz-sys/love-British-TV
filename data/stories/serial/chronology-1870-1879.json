@@ -1859,6 +1859,96 @@
       "area_sqkm": null,
       "research_v6_event_ids": [],
       "research_original_node_ids": []
+    },
+    {
+      "id": "E19-T37-1871-CROWN-DEBATE",
+      "year": 1871,
+      "start_year": 1871,
+      "end_year": 1871,
+      "visible_from": 1871,
+      "date_label": "1871年6月30日",
+      "name": "英国议会就马格达拉金冠和圣杯进行讨论",
+      "description": "英国议会对金冠圣杯收购及军队战利品法律性质有争论，动议非已支付账单。",
+      "short_description": "英国议会对金冠圣杯收购及军队战利品法律性质有争论，动议非已支付账单。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "T37研究卷C10结合英国博物馆、英国国家陆军博物馆及英国议会资料分期核实"
+      },
+      "lat": 51.5007,
+      "lng": -0.1246,
+      "source_ids": [
+        "19C-T37-HANSARD",
+        "19C-T37-CORMACK"
+      ],
+      "geo_precision": "modern_named_parliament_reference_not_precise_1868_historical_footprint",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C10-E11"
+      ]
+    },
+    {
+      "id": "E19-T37-1872-CROWN-DEPOSIT",
+      "year": 1872,
+      "start_year": 1872,
+      "end_year": 1872,
+      "visible_from": 1872,
+      "date_label": "1872年",
+      "name": "金冠和圣杯由财政部寄存南肯辛顿博物馆",
+      "description": "两件埃塞俄比亚宗教物件经英国财政部在1872年移交南肯辛顿馆寄存。",
+      "short_description": "两件埃塞俄比亚宗教物件经英国财政部在1872年移交南肯辛顿馆寄存。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 8,
+        "rationale": "T37研究卷C10结合英国博物馆、英国国家陆军博物馆及英国议会资料分期核实"
+      },
+      "lat": 51.4966,
+      "lng": -0.1722,
+      "source_ids": [
+        "19C-T37-VA-ETH",
+        "19C-T37-CORMACK"
+      ],
+      "geo_precision": "modern_named_va_reference_not_precise_1868_historical_footprint",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C10-E05"
+      ]
+    },
+    {
+      "id": "E19-T37-1872-YOHANNES-REQUEST",
+      "year": 1872,
+      "start_year": 1872,
+      "end_year": 1872,
+      "visible_from": 1872,
+      "date_label": "1872年",
+      "name": "约翰内斯四世向维多利亚要求归还宗教文物",
+      "description": "埃塞俄比亚皇帝提出返还《列王荣耀》手稿及宗教圣像，实际转移结果分物件核对。",
+      "short_description": "埃塞俄比亚皇帝提出返还《列王荣耀》手稿及宗教圣像，实际转移结果分物件核对。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "T37研究卷C10结合英国博物馆、英国国家陆军博物馆及英国议会资料分期核实"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T37-HJ"
+      ],
+      "geo_precision": "historic_venue_unlocated_pending_survey",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": []
     }
   ],
   "routes": [
@@ -4017,6 +4107,38 @@
       "label": "大英图书馆／卡塔尔数字图书馆｜1868年卡塔尔一方付款条文",
       "url": "https://www.qdl.qa/archive/81055/vdc_100023462215.0x000025",
       "access": "IOR/L/PS/20/G3/12 f.114r；列明申报额、付款路径、巴林主张与停缴。"
+    },
+    {
+      "id": "19C-T37-HANSARD",
+      "publisher": "英国议会历史辩论",
+      "title": "Abyssinian War Prize The Abana's Crown and Chalice",
+      "label": "英国议会历史辩论｜Abyssinian War Prize The Abana's Crown and Chalice",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1871/jun/30/motion-for-an-address",
+      "access": "1871年6月30日下院辩论，动议是讨论而非已付款"
+    },
+    {
+      "id": "19C-T37-CORMACK",
+      "publisher": "History",
+      "title": "The British Museum and the Abyssinian Campaign 1867–8",
+      "label": "History｜The British Museum and the Abyssinian Campaign 1867–8",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/1468-229X.13439",
+      "access": "研究附BM馆档，1868—71金冠圣杯暂存、1872财政部寄存"
+    },
+    {
+      "id": "19C-T37-VA-ETH",
+      "publisher": "维多利亚与阿尔伯特博物馆",
+      "title": "Ethiopian collections at the V&A",
+      "label": "维多利亚与阿尔伯特博物馆｜Ethiopian collections at the V&A",
+      "url": "https://www.vam.ac.uk/articles/ethiopian-collections-at-the-vampa",
+      "access": "2026来源研究：Qwesqwam金冠、圣杯、Tewodros转运、英军劫掠、1872财政部寄存；不同物件须逐件查"
+    },
+    {
+      "id": "19C-T37-HJ",
+      "publisher": "The Historical Journal",
+      "title": "Planned Plunder the British Museum and the 1868 Maqdala Expedition",
+      "label": "The Historical Journal｜Planned Plunder the British Museum and the 1868 Maqdala Expedition",
+      "url": "https://www.cambridge.org/core/journals/historical-journal/article/planned-plunder-the-british-museum-and-the-1868-maqdala-expedition/3109780C72D6A3E24D6B5A5387B6087C",
+      "access": "史学研究：博物馆事前征集、Holmes角色、1872 Yohannes IV返还要求；按原论文口径记录"
     }
   ]
 }

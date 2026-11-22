@@ -50,3 +50,13 @@
 - PR #503 全部 **35/35 项GitHub Actions最终成功**（17世纪跨年回归因偶发浏览器等待超时单独重跑后成功），含T26专项静态史料/空间审计及桌面Chrome 1839→1843→1868→1877→1885、双击返回、1899地图连续性。专项 [Actions #44977109145](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977109145)。
 - [Pages 部署工作流 #44977462856](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977462856) `build` 和 `deploy` **成功**，预览入口 <https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1839>。研究缺口的史料编审仍保留 `editorial_review/not_submitted`，非最终史料批准。
 - T26.1/B01、T26.2/B02、T26.3/B49+B67 三章CI及交互状态回填任务板；[T26未结原卷与长期待办](T26_NEXT_ACTIONS.md)列清11项研究缺口、历史边界和财税收据；下一个R1制作专题 **T37马格达拉（C10）**，随后 **T46澳洲边疆扩张与暴力**。
+
+## 2026-11-22 · T37 马格达拉远征初版制图与长篇（编审分支）
+
+- 按R1顺位制作T37.1 / C10；原研究59专题、150章、1980条年表等常量保持不变。对照National Army Museum、V&A、British Museum、British Library、1871 Hansard和研究论文，保留物件原宗教来源、夺取、转卖与英方馆藏的区别。
+- 新增[12节T37长篇](../../../data/stories/serial/e19-t37-maqdala-expedition-looting-1867-1872.json)及12条正式年表事件链接；分布1867年2、1868年7、1871年1、1872年2；原研究C10-E03等映射见[T37来源GIS审计](../../../docs/research/19C_T37_MAQDALA_PROVENANCE_GIS_AUDIT.md)。
+- 1860/1870s GIS增11图元（8具名参考点、3有据关系虚线），**零个未经测量的行政/英国实控多边形**；马格达拉与Aroge原测图尚未取原件配准，战场精确坐标保留空值。
+- 冠杯1871年议会动议与1872年财政部寄存、V&A 1868年11月约£15的整组购价、Or607馆藏批次和个别物件运输缺口分账。详情与后续任务见[T37长期待办](T37_NEXT_ACTIONS.md)。
+- 制作分支 `feat/19c-t37-maqdala-provenance-gis-20261122`，状态`editorial_review/not_submitted`，专项CI、浏览器验证、PR合并和Pages仍待核，下一制作顺位T46。
+
+- **GIS纠偏**：交叉对读Nordic Africa Institute/Bernhard Lindahl (2005) Mekdela Maryam 11°21′N/39°11′E，与Getty TGN及Wikidata衍生地名纬度差异后，将马格达拉地图点/两条关系线端点更正为高原西南**近址**39.18333E/11.35N，保留堡墙及Aroge战地待同期原测图配准；正文和QA同步修正。
