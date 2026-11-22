@@ -5,7 +5,10 @@ const root=path.resolve(__dirname,'..'),load=p=>JSON.parse(fs.readFileSync(path.
 const story=load('data/stories/serial/e19-t05-morant-bay-martial-law-crown-colony-1865-1879.json');
 const meta=load('data/stories/serial/index.json').topics.find(t=>t.id===story.id);
 assert(meta && ['editorial_review','published'].includes(meta.status));
-if(meta.status==='published') assert.equal(meta.publication_review,'approved');
+assert.equal(meta.status,'published','T05 must be public without preview');
+assert.equal(meta.publication_review,'approved');
+assert(meta.publication_note.includes('正式出版核验'));
+
 assert.equal(story.sections.length,18);assert.equal(story.sources.length,19);
 assert.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),54);
 assert(story.sections.flatMap(s=>s.paragraphs).join('').length>4000);

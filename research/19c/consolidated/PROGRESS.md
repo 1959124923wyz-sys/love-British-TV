@@ -94,3 +94,7 @@
 - 1865—69新增4个具名地理参考点和1条仅有证据端点的虚线，1870—79新增1个Kingston英国王室殖民地行政延续点；没有伪造Surrey戒严边界、战地微址及殖民面积。来源审计详[独立T05 GIS研究](../../../docs/research/19C_T05_MORANT_BAY_SOURCE_GIS_AUDIT.md)。
 - 1872年英国议会关于439死者、600鞭打和约1000毁屋的回述各属不同统计口径；Gordon/Bogle的23/24日处刑与军事审判依来源分列。文章状态先保留`editorial_review/not_submitted`，T37/T46已发表及T15/T26待审状态不动。
 - 专用Node历史空间合同、1780×1020桌面Chrome互动脚本与T05 Actions工作流一并提交，正式CI/PR合并/Pages部署结果须另据实际运行更新。本批待调原卷详[T05长期待办](T05_NEXT_ACTIONS.md)。
+
+## 2026-11-22 · T05制作PR47/47通过，独立正式出版审核
+
+制作[PR #512](https://github.com/1959124923wyz-sys/love-British-TV/pull/512)已在47项全站Actions（包括1780×1020真实桌面Chrome和历史GIS严格审核）全部成功后合并至主分支 `734caec0adde77e447018934d7636e7340ffe109`。另按出版流程独立审核母专题的普通网站入口：T05.status=`published`，publication_review=`approved`，两章章节板=`published_new`，新增不带`review19c`参数的桌面浏览器门禁。正式出版PR自身的Actions与Pages构建/部署记录应在运行完毕后填写，不得提前声称成功。历史郡界、原地籍、逐人军法与财产登记疑问继续保持开放。
