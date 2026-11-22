@@ -61,3 +61,11 @@
 参见 `research/19c/consolidated/tables/open-questions.csv` 所列11项：鸦片专卖毛/净收入议会原表、原奏折箱/袋数量异文、英海军定海撤军日志、五口领事原公告、第一次战争赔款银行收据；第二次战争清法军令及破坏、圆明园物件竞售价、1858/1860实收分款、九龙租地附图原界、安平担保返还及古港岸、烟台条约20万两实付和1885—1887鸦片征税原册。
 
 缺少原件时保持数字来源归属和日期口径，不自动编写死伤人数、历史精确租界外缘或实际收款金额。
+
+## 2026-11-22 · PR #503合并后的正式版本确认
+
+- [PR #503](https://github.com/1959124923wyz-sys/love-British-TV/pull/503) 已经合并到 `main`：`53d9a7cb8287a6699b177b4a67126622cbb75aca`。
+- 合并前 **35/35 CI 全部通过**。包括19C专项静态合同、`verify.py`、`verify_handoff.py`、严格GIS空间审计、公开文案审计、T26真实Chrome及现有16/17/18/19世纪回归。17世纪一个浏览器等待超时的偶发失败，经同一Git SHA重试后检查成功，无需更改历史源码。
+- [T26 Chrome证据与截图](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977109145)：1839总篇、1843上海、1868安平、1877宜昌、1885伦敦、双击原事件返回专题、1899地图仍可操作。
+- [GitHub Pages正式部署run #44977462856](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977462856)的 **build与deploy成功**；主站1839年预览 <https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1839>。
+- 数据和地图已进入主站，母篇仍是 `editorial_review/not_submitted` 历史研究编审预览。待核印证及地图真边界由 T26_NEXT_ACTIONS.md 长期持有，不提早上升为 `published/approved`。
