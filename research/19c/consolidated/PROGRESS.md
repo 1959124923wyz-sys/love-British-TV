@@ -1,4 +1,10 @@
 # 归档进度
+## 2026-11-22 · T48制作PR合并，三章独立出版审核
+
+- [制作PR #525](https://github.com/1959124923wyz-sys/love-British-TV/pull/525) 已合并主干，merge `1a138ab4db740b955d74ae39a72be88c169a7f21`。43节129段、73来源、81历史内链、73新年表事件、15个新西兰具名地点已进入正式主分支，专项史料、GIS及真实1780px Chrome已通过。
+- 在`release/19c-t48-new-zealand-maori-confiscation-20261122`单独批准T48母篇`published/approved`、三章`published_new`，并把公开状态加入禁止擅自增添的已批准专题清单；真正的GitHub Pages部署需等出版PR检查和build/deploy核实。
+- 原1840年代47项新西兰年表及14个地理图元与Ruapekapeka有证Polygon均保留；法定没收总面积、英国实际授地面积、毛利赔偿或返还以及地籍Polygon严格区分。未有原始地图的1865/66没收范围不画假实线面。
+
 
 ## 2026-11-22 · R2 T48新西兰毛利战争与土地没收制成品待验收
 
