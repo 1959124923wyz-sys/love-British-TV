@@ -60,3 +60,10 @@
 - 制作分支 `feat/19c-t37-maqdala-provenance-gis-20261122`，状态`editorial_review/not_submitted`，专项CI、浏览器验证、PR合并和Pages仍待核，下一制作顺位T46。
 
 - **GIS纠偏**：交叉对读Nordic Africa Institute/Bernhard Lindahl (2005) Mekdela Maryam 11°21′N/39°11′E，与Getty TGN及Wikidata衍生地名纬度差异后，将马格达拉地图点/两条关系线端点更正为高原西南**近址**39.18333E/11.35N，保留堡墙及Aroge战地待同期原测图配准；正文和QA同步修正。
+
+## 2026-11-22 · T37 #505合并36项CI全绿及Pages部署
+
+- [制作PR #505](https://github.com/1959124923wyz-sys/love-British-TV/pull/505)已squash合并到 `main`，提交SHA `2cdc3ed1a23293a49be0b06d9fcb4d0005dda18f`，15个文件变化，12节历史母篇及12事件、11GIS已正式进入源树。
+- PR最新 `cfc1222196bef1038c229f7b2f33d87ceb61312c` 全部 **36/36 GitHub Actions成功**，含T37来源GIS审计和真实桌面Chrome。T37专项[工作流 #44979476836](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979476836) 2/2 jobs成功并保存地图截图证据。
+- [Pages #44979833161](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979833161) **build+deploy成功**，T37编审预览 <https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1868>。
+- T37继续维持 `editorial_review/not_submitted`，BL 1868原测图、原竞买账、Saunders上手、财政部寄存实物凭证未核；T26 11个遗留问题未改动。[T37待办](T37_NEXT_ACTIONS.md)独立保存。**下一制作顺位为T46**，五章、81条研究年表、98GIS线索、17原问题，见[T46任务清单](T46_NEXT_ACTIONS.md)。
