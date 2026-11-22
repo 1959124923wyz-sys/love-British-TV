@@ -3180,6 +3180,88 @@
           "https://www.geonames.org/3489854/kingston.html"
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t37-westminster-1871",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1246,
+          51.5007
+        ]
+      },
+      "properties": {
+        "stable_id": "t37-westminster-1871",
+        "name": "威斯敏斯特·冠杯争议",
+        "start_year": 1871,
+        "end_year": 1871,
+        "display_kind": "political",
+        "summary_zh": "威斯敏斯特·冠杯争议。相关历史事件详见左侧年表及专题正文。",
+        "source_ids": [
+          "19C-T37-HANSARD"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1871/jun/30/motion-for-an-address"
+        ],
+        "related_event_ids": [
+          "E19-T37-1871-CROWN-DEBATE"
+        ],
+        "named_anchors": [
+          "威斯敏斯特·冠杯争议"
+        ],
+        "mapping_method": "1871年6月30日下院辩论，地点为议会参考点",
+        "geo_precision": "modern_parliament_reference",
+        "geometry_source": "historic named endpoint placed using modern reference or documentary endpoint-only relation",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "british_institution"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t37-south-kensington-1872",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1722,
+          51.4966
+        ]
+      },
+      "properties": {
+        "stable_id": "t37-south-kensington-1872",
+        "name": "南肯辛顿·财政部寄存冠杯",
+        "start_year": 1872,
+        "end_year": 1872,
+        "display_kind": "economic_network",
+        "summary_zh": "南肯辛顿·财政部寄存冠杯。相关历史事件详见左侧年表及专题正文。",
+        "source_ids": [
+          "19C-T37-VA-ETH",
+          "19C-T37-CORMACK"
+        ],
+        "source_urls": [
+          "https://www.vam.ac.uk/articles/ethiopian-collections-at-the-vampa",
+          "https://onlinelibrary.wiley.com/doi/10.1111/1468-229X.13439"
+        ],
+        "related_event_ids": [
+          "E19-T37-1872-CROWN-DEPOSIT"
+        ],
+        "named_anchors": [
+          "南肯辛顿·财政部寄存冠杯"
+        ],
+        "mapping_method": "1872英国财政部向博物馆寄存，不同于2005永久收藏所有权处理",
+        "geo_precision": "modern_museum_institution_reference",
+        "geometry_source": "historic named endpoint placed using modern reference or documentary endpoint-only relation",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "british_institution"
+      }
     }
   ]
 }
