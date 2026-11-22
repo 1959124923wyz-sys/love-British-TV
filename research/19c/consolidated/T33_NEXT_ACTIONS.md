@@ -1,8 +1,8 @@
 # R3 T33｜西非贸易战争、掠夺与王廷流放：长期原始罪证调查
 
-**2026-11-22制作版：** `feat/19c-t33-lagos-niger-benin-evidence-gis-20261122`。详细底本见 [来源及GIS审计](../../../docs/research/19C_T33_WEST_AFRICA_SOURCE_GIS_AUDIT.md)，[T33原始研究卷](topics/T33.md)。
+**2026-11-22制作PR #528合并后，独立出版审核：** `feat/19c-t33-lagos-niger-benin-evidence-gis-20261122`。详细底本见 [来源及GIS审计](../../../docs/research/19C_T33_WEST_AFRICA_SOURCE_GIS_AUDIT.md)，[T33原始研究卷](topics/T33.md)。
 
-**本次产物冻结：**T33.1/T33.2/T33.3共26节78段39项史料索引、39年表链接（26新/13旧贝宁）；26新正式编年事件及17个有证城市点。原贝宁46事件、1897王宫与Ughoton等既有GIS保留。公开状态为`editorial_review/not_submitted`，须独立出版审批。
+**本次产物冻结：**T33.1/T33.2/T33.3共26节78段39项史料索引、39年表链接（26新/13旧贝宁）；26新正式编年事件及17个有证城市点。原贝宁46事件、1897王宫与Ughoton等既有GIS保留。制作基线原状态`editorial_review/not_submitted`已完成；公开资格须正式出版PR独立批准并核实Pages部署。
 
 ## P0：优先取证与GIS
 

@@ -1,3 +1,5 @@
+**T33生产PR #528已合并（55/55）、正式出版独立审核：** 原始三章26节78段、39史料、39史事事件内链、26新年表与17参考地名点。格林尼治MSS/73/089含1894年Broheme堡垒原地图，须原影配准。详[正式出版状态](PROGRESS.md)、[源证据审计](../../../docs/research/19C_T33_WEST_AFRICA_SOURCE_GIS_AUDIT.md)。
+
 **2026-11-22 R3 T33制作版：** 三章26节78段、39来源、39内链（26新+13复用已有贝宁）、17地名GIS点，专项历史证据和Chrome在独立分支待验。详 [T33源证据审计](../../../docs/research/19C_T33_WEST_AFRICA_SOURCE_GIS_AUDIT.md) 与 [T33继续追档](T33_NEXT_ACTIONS.md)。
 
 **2026-11-22 R2 T48已正式出版、地图上线、工作板封存：** [制作PR #525](https://github.com/1959124923wyz-sys/love-British-TV/pull/525) **55/55**、merge`1a138ab4db740b955d74ae39a72be88c169a7f21`；[出版PR #526](https://github.com/1959124923wyz-sys/love-British-TV/pull/526) **52/52**、merge`4e7c3f0e2f589a3d5ebec61e76ebd47f21035ac6`；[Pages #45022856080](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45022856080) build/deploy双成功。母篇`E19-T48-NEW-ZEALAND-MAORI-LAND-CONFISCATION-WARS` `published/approved`，T48.1/2/3三章`published_new`，**43节129段73史料81事件链接、73新年表及15新NZ具名Point**。旧1840s年表和寨址留存，未核实的没收区域不造Polygon。下一重点[原件追档](T48_NEXT_ACTIONS.md)及[T48 GIS审计](../../../docs/research/19C_T48_NZ_MAORI_CONFISCATION_SOURCE_GIS_AUDIT.md)。
