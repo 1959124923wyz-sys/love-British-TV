@@ -9,7 +9,8 @@
 - [x] 12节独立长篇及正式年表事件全部注册，保持原 C10 事件号的回溯关系
 - [x] 将史实具名点和有据端点连接线加入1860s和1870s GeoJSON，所有未经复原边界仅用虚线，历史国土面积不增
 - [x] 新增专项CI并核验 GitHub Actions [T37 #44979476836](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979476836) facts-and-map与desktop-map-interactions均成功，整个PR [36/36工作流全绿](https://github.com/1959124923wyz-sys/love-British-TV/pull/505/checks)
-- [x] 桌面Chrome验收1867→1868→1871→1872、正文跳年定位、双击事件/返回、1899地图连续性；截图保存在Actions T37桌面proof artifact（图层开关的独立人工复核仍列后续）
+- [x] 桌面Chrome验收1867→1868→1871→1872、正文跳年定位、双击事件/返回、1899地图连续性；截图保存在Actions T37桌面proof artifact
+- [ ] **人工交互补测**：分别点击地图版图/事件图层开关、缩放叠加遮挡顺序，并核真实桌面浏览器上虚线显示；该项与已通过的日期跳转脚本分开
 - [x] [PR #505](https://github.com/1959124923wyz-sys/love-British-TV/pull/505) 合并SHA `2cdc3ed1a23293a49be0b06d9fcb4d0005dda18f`；[Pages #44979833161](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44979833161) build及deploy成功；专题仍为 `editorial_review/not_submitted`
 
 ## P1 史料、地理和数字缺口
