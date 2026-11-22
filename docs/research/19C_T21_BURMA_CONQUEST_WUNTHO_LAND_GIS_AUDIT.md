@@ -61,3 +61,9 @@
 ## 制作PR核准与正式出版候审（2026-11-22）
 
 [制作PR #521](https://github.com/1959124923wyz-sys/love-British-TV/pull/521) 已合并：`805d2706f7cf5c9f068cd871fd2bd985e34e17d0`。两章36节97段、93来源、109有历史ID的事件链接，1891温托4个现代具名Point；严格GIS、桌面Chrome与强制交互检查已经通过。独立公开版本在 `release/19c-t21-burma-wars-publication-20261122` 待审核，`published/approved` 标记需发行PR主干合并和Pages实际build/deploy验收后才可称为正式上线。历史原地图、村民损失和王室财物去向仍按原始归档待追。
+
+## 正式出版后核证与遗留原档（2026-11-22）
+
+- 生产 [PR #521](https://github.com/1959124923wyz-sys/love-British-TV/pull/521) 51/51 GitHub CI通过，合并SHA `805d2706f7cf5c9f068cd871fd2bd985e34e17d0`；出版 [PR #522](https://github.com/1959124923wyz-sys/love-British-TV/pull/522) 50/50 CI通过，合并SHA `99e184ce9df619aded745c4253dce46dad4d6652`；[Pages #45007048591](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45007048591) build/deploy均成功。
+- T21`published/approved`，36节97段93来源109真实历史事件内链；新增4个现代地名WGS84点，不把当年山寨或地方王国边线虚构成实测GIS；两个章节在59专题、150章节工作板已正式记`published_new`。
+- 后续原件执行清单：[T21_NEXT_ACTIONS](../../research/19c/consolidated/T21_NEXT_ACTIONS.md)。尤其调查英方2月19日在Kawlin佛塔内杀死全部守卫者的**确切人数**、2月20毁Pegon逐户财产账、2月25炮击Mankin损失与1885王宫战利品委员会实际接收、转卖及现馆藏档案。
