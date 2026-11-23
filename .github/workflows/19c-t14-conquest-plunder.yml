@@ -3,12 +3,9 @@ on:
   pull_request:
     paths:
       - 'data/stories/serial/e19-t14-sindh-punjab-awadh-conquest-expropriation-1842-1859.json'
-      - 'data/stories/serial/index.json'
       - 'data/research/19c-t14-*'
-      - 'data/nineteenth-century-spatial-1840-1849.geojson'
-      - 'data/nineteenth-century-spatial-1850-1859.geojson'
       - 'docs/research/19C_T14_*'
-      - 'research/19c/consolidated/**'
+      - 'research/19c/consolidated/T14*'
       - 'scripts/test_19c_t14_conquest_plunder.cjs'
       - 'scripts/browser_19c_t14_conquest_plunder.py'
       - '.github/workflows/19c-t14-conquest-plunder.yml'
@@ -16,8 +13,6 @@ on:
     branches: [main]
     paths:
       - 'data/stories/serial/e19-t14-sindh-punjab-awadh-conquest-expropriation-1842-1859.json'
-      - 'data/nineteenth-century-spatial-1840-1849.geojson'
-      - 'data/nineteenth-century-spatial-1850-1859.geojson'
 permissions:
   contents: read
 jobs:

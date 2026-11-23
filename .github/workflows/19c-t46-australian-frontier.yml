@@ -3,11 +3,8 @@ on:
   pull_request:
     paths:
       - 'data/stories/serial/e19-t46-australian-frontier-land-violence-1829-1897.json'
-      - 'data/stories/serial/index.json'
-      - 'data/stories/serial/chronology-*.json'
-      - 'data/nineteenth-century-spatial-*.geojson'
       - 'data/research/19c-t46-*.json'
-      - 'research/19c/consolidated/**'
+      - 'research/19c/consolidated/T46*'
       - 'docs/research/19C_T46_*'
       - 'scripts/test_19c_t46_australian_frontier.cjs'
       - 'scripts/browser_19c_t46_australian_frontier.py'
@@ -16,7 +13,6 @@ on:
     branches: [main]
     paths:
       - 'data/stories/serial/e19-t46-australian-frontier-land-violence-1829-1897.json'
-      - 'data/nineteenth-century-spatial-*.geojson'
 permissions:
   contents: read
 jobs:

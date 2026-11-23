@@ -20,12 +20,27 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  pull-requests: read
 jobs:
   public-copy-policy-static:
+    outputs:
+      frontend_changed: ${{ steps.frontend_paths.outputs.frontend }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+      - name: Detect frontend changes for pull-request desktop gate
+        id: frontend_paths
+        if: github.event_name == 'pull_request'
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            frontend:
+              - 'index.html'
+              - 'app.js'
+              - 'js/**'
+              - 'css/**'
+              - 'style.css'
       - name: Source syntax and mandatory reader text contract
         run: |
           node --check js/atlas-public-ui-guard.js
@@ -40,6 +55,9 @@ jobs:
           python3 -m py_compile scripts/browser_atlas_47_public_copy_guard.py scripts/browser_atlas_47_all_years.py
           python3 scripts/audit_spatial_semantics.py --strict
   public-copy-policy-real-desktop:
+    # PR-only data/story changes use their topic-specific Chrome smoke.
+    # Full cross-century Chrome stays for UI PRs, main pushes and manual runs.
+    if: github.event_name != 'pull_request' || needs.public-copy-policy-static.outputs.frontend_changed == 'true'
     needs: public-copy-policy-static
     runs-on: ubuntu-latest
     timeout-minutes: 65

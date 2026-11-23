@@ -3,12 +3,7 @@ on:
   pull_request:
     paths:
       - 'data/stories/serial/e19-t37-maqdala-expedition-looting-1867-1872.json'
-      - 'data/stories/serial/index.json'
-      - 'data/stories/serial/chronology-1860-1869.json'
-      - 'data/stories/serial/chronology-1870-1879.json'
-      - 'data/nineteenth-century-spatial-1860-1869.geojson'
-      - 'data/nineteenth-century-spatial-1870-1879.geojson'
-      - 'research/19c/consolidated/**'
+      - 'research/19c/consolidated/T37*'
       - 'scripts/test_19c_t37_maqdala_topic_map.cjs'
       - '.github/workflows/19c-t37-maqdala.yml'
       - 'scripts/browser_19c_t37_maqdala.py'
@@ -16,8 +11,6 @@ on:
     branches: [main]
     paths:
       - 'data/stories/serial/e19-t37-maqdala-expedition-looting-1867-1872.json'
-      - 'data/nineteenth-century-spatial-1860-1869.geojson'
-      - 'data/nineteenth-century-spatial-1870-1879.geojson'
 permissions:
   contents: read
 jobs:
