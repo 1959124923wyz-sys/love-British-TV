@@ -3,15 +3,8 @@ on:
   pull_request:
     paths:
       - 'data/stories/serial/e19-t48-new-zealand-maori-confiscation-1840-1883.json'
-      - 'data/stories/serial/index.json'
-      - 'data/stories/serial/chronology-1860-1869.json'
-      - 'data/stories/serial/chronology-1870-1879.json'
-      - 'data/stories/serial/chronology-1880-1889.json'
-      - 'data/nineteenth-century-spatial-1860-1869.geojson'
-      - 'data/nineteenth-century-spatial-1870-1879.geojson'
-      - 'data/nineteenth-century-spatial-1880-1889.geojson'
       - 'docs/research/19C_T48_*'
-      - 'research/19c/consolidated/**'
+      - 'research/19c/consolidated/T48*'
       - 'scripts/test_19c_t48_new_zealand.cjs'
       - 'scripts/browser_19c_t48_new_zealand.py'
       - '.github/workflows/19c-t48-new-zealand.yml'
@@ -19,8 +12,6 @@ on:
     branches: [main]
     paths:
       - 'data/stories/serial/e19-t48-new-zealand-maori-confiscation-1840-1883.json'
-      - 'data/stories/serial/chronology-1860-1869.json'
-      - 'data/nineteenth-century-spatial-1860-1869.geojson'
 permissions:
   contents: read
 jobs:
