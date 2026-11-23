@@ -4,7 +4,7 @@ on:
     paths:
       - 'app.js'
       - 'js/history-stories.js'
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'scripts/test_editor7_17c_inline_story_map.js'
       - 'scripts/browser_editor7_17c_inline_story.py'
       - '.github/workflows/editor7-17c-inline-story.yml'
@@ -12,7 +12,7 @@ on:
     branches: [main]
     paths:
       - 'app.js'
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'scripts/browser_editor7_17c_inline_story.py'
 jobs:
   desktop:

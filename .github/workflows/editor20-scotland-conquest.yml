@@ -3,7 +3,7 @@ on:
   pull_request:
     paths:
       - 'data/atlas-1650-1659.json'
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/research/editor20-scotland*'
       - 'scripts/test_editor20_scotland_conquest_pow.js'
       - 'scripts/browser_editor20_scotland_conquest.py'
@@ -12,7 +12,7 @@ on:
     branches: [main]
     paths:
       - 'data/atlas-1650-1659.json'
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'scripts/test_editor20_scotland_conquest_pow.js'
       - 'scripts/browser_editor20_scotland_conquest.py'
 jobs:

@@ -2,7 +2,7 @@ name: Editor10 Darien Guna Scottish Overseas Colony History QA
 on:
   pull_request:
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1690-1699.json'
       - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
       - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
@@ -12,7 +12,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1690-1699.json'
       - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
       - 'data/seventeenth-century-regional-studies-1600-1699.geojson'

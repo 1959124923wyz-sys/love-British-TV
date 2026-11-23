@@ -5,7 +5,7 @@ on:
       - 'app.js'
       - 'data/atlas-16*.json'
       - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'scripts/browser_editor6_17c_spatial_story.py'
       - '.github/workflows/editor6-17c-browser.yml'
   push:
@@ -14,7 +14,7 @@ on:
       - 'app.js'
       - 'data/atlas-16*.json'
       - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'scripts/browser_editor6_17c_spatial_story.py'
 jobs:
   desktop:

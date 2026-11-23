@@ -2,7 +2,7 @@ name: Seventeenth-century stories must match Tudor story and research-map contra
 on:
   pull_request:
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
       - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
       - 'app.js'
@@ -15,7 +15,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
       - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
       - 'app.js'

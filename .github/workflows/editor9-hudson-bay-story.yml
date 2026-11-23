@@ -2,7 +2,7 @@ name: Editor9 HBC Indigenous Fur Trade and English-French Fort Control QA
 on:
   pull_request:
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1660-1669.json'
       - 'data/atlas-1670-1679.json'
       - 'data/atlas-1680-1689.json'
@@ -17,7 +17,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1660-1669.json'
       - 'data/atlas-1670-1679.json'
       - 'data/atlas-1680-1689.json'

@@ -2,7 +2,7 @@ name: Editor7 E6-T06 New England Indigenous Wars Desktop Story Navigation
 on:
   pull_request:
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
       - 'data/seventeenth-century-regional-studies-1600-1699.geojson'
       - 'scripts/browser_editor7_new_england_story.py'
@@ -13,7 +13,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'scripts/browser_editor7_new_england_story.py'
       - 'data/seventeenth-century-spatial-evidence-1600-1699.geojson'
       - 'data/seventeenth-century-regional-studies-1600-1699.geojson'

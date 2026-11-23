@@ -6,7 +6,7 @@ on:
       - 'data/atlas-1630-1639.json'
       - 'data/atlas-1660-1669.json'
       - 'data/atlas-1670-1679.json'
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/research/editor19-leewards*'
       - 'scripts/test_editor19_leewards_kalinago.js'
       - 'scripts/browser_editor19_leewards.py'
@@ -14,7 +14,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1620-1629.json'
       - 'data/atlas-1630-1639.json'
       - 'data/atlas-1660-1669.json'

@@ -3,7 +3,7 @@ on:
   pull_request:
     paths:
       - 'data/atlas-16*.json'
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/research/editor22-four-17c-gap-evidence*'
       - 'scripts/test_editor22_four_gaps.js'
       - 'scripts/browser_editor22_four_gaps.py'
@@ -12,7 +12,7 @@ on:
     branches: [main]
     paths:
       - 'data/atlas-16*.json'
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'scripts/test_editor22_four_gaps.js'
 jobs:
   history-legal-maps-and-desktop:
