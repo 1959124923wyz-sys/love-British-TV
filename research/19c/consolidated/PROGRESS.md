@@ -1,4 +1,11 @@
 # 归档进度
+## 2026-11-23 · R3 T36埃及／苏丹专题正式出版、Pages上线全部确认
+
+- [制作PR #534](https://github.com/1959124923wyz-sys/love-British-TV/pull/534)：**59/59**项GitHub自动检查及真正1780×1020桌面Chrome全绿；合并`663a80c1d8ffb7a5a9cdcbdb5c3b18100d042946`。
+- [正式出版PR #535](https://github.com/1959124923wyz-sys/love-British-TV/pull/535)：**58/58**项全部通过，无`review19c`的普通地图年份入口验收；合并`9c4d069d3b6f16e8b7d1fb160c2c5609b1b9cf95`。
+- [GitHub Pages运行 #45102089955](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45102089955)：**build=success / deploy=success**。正式年份链接：[1882年亚历山大炮击](https://1959124923wyz-sys.github.io/love-British-TV/?year=1882)、[1885年赔偿](https://1959124923wyz-sys.github.io/love-British-TV/?year=1885)、[1897年苏丹军用铁路](https://1959124923wyz-sys.github.io/love-British-TV/?year=1897)、[1898年恩图曼和法绍达](https://1959124923wyz-sys.github.io/love-British-TV/?year=1898)、[1899年英埃苏丹协定](https://1959124923wyz-sys.github.io/love-British-TV/?year=1899)。
+- T36.1+T36.2 **24节72段21件史料、33个历史事件及互动内链、16个现代具名历史锚点，3个欠原始位置的战场及轨道终点保留无坐标。零编造英国实控面积。** 重点证据1882炮击／火灾与赔偿及1898官方战报记毁堡清村，1899伤亡英方报告口径。详[原始证据GIS审计](../../../docs/research/19C_T36_EGYPT_SUDAN_SOURCE_GIS_AUDIT.md)与[T36追档](T36_NEXT_ACTIONS.md)。下一首批 **T40：南部非洲矿权、劳工约束与英布战争**。
+
 ## 2026-11-23 · R3 T36埃及与苏丹制作PR #534 59/59全绿合并，启动独立正式出版审核
 
 - [制作PR #534](https://github.com/1959124923wyz-sys/love-British-TV/pull/534) **59/59项检查全部成功**，包含专项24节72段21史料33年表16GIS、不造三处旧战址坐标，以及1780×1020真实桌面Chrome。合并SHA `663a80c1d8ffb7a5a9cdcbdb5c3b18100d042946`。全站牙买加T05桌面回归曾有随机页面返回超时，经原单项重跑通过，制作全部59/59成功。
