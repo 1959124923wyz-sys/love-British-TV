@@ -1,6 +1,6 @@
 # R3 T40｜南部非洲矿权、囚工、英布战争史料及GIS核验
 
-制作日期：2026-11-23。**制作PR #537 61/61成功并合并**（`07610961c0a25c4c6fa3de812601e5eb48313e6c`）。独立正式出版候审；未经新PR、正式Chrome与Pages成功不报已上线。
+制作日期：2026-11-23。**制作PR #537 61/61成功并合并**（`07610961c0a25c4c6fa3de812601e5eb48313e6c`）。独立正式出版 PR #538 60/60全部通过并合并；Pages #45121612106 build/deploy双成功，已正式上线。
 
 ## 原卷去重和正文
 - 主工作板 T40.1/T40.2：原研究 **34** 案，1905年 C87-E09 是用于回看19世纪制度的补充证词，不写成19世纪地图节点。
@@ -37,3 +37,10 @@
 
 ## 制作通过（2026-11-23）
 [PR #537](https://github.com/1959124923wyz-sys/love-British-TV/pull/537) 61/61项 GitHub Actions通过，包含严格史料GIS与真实桌面1780×1020 Chrome跨年代导航。
+
+## 正式出版及网站部署核实（2026-11-23）
+- 制作 [PR #537](https://github.com/1959124923wyz-sys/love-British-TV/pull/537)：61/61 Checks通过，已合并。
+- 独立正式出版 [PR #538](https://github.com/1959124923wyz-sys/love-British-TV/pull/538)：60/60 Checks通过，已合并 `eb8201b3f309f8d9d8b589327767aee2d4062955`。
+- [GitHub Pages Actions #45121612106](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45121612106)：**build=success，deploy=success**；已部署普通年份公开专题，浏览器测试不含预览参数。
+- 总资产：**22节、66段、23项来源、33事件链接（32新、1复用）、12处现代具名城镇Point**；无臆测地籍、矿权/战场/围城历史边线。
+- 后续原创追档和原图定位仍需开展；T41另开制作分支。

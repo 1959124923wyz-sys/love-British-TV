@@ -1,3 +1,5 @@
+**2026-11-23 · R3 T40现已正式上线并归档：** [制作#537](https://github.com/1959124923wyz-sys/love-British-TV/pull/537)61/61检查通过；[独立正式出版#538](https://github.com/1959124923wyz-sys/love-British-TV/pull/538)60/60检查通过；[Pages #45121612106](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45121612106) **build/deploy均成功**。22节66段23项来源33史事内链（32新+1复用）、12具名WGS84城市参考点。未确定历史矿区/监狱/战场坐标继续null，未画未经原图证实的殖民实控范围。 **接续 T41｜马塔贝莱兰征服、公司矿权与第一次Chimurenga。**
+
 **2026-11-23 T40制作PR #537 61/61全绿并合并；独立正式出版候审**：22节66段23史料，33案例内链，12城市GIS，真实桌面Chrome测试成功。正式普通年份阅读、独立出版PR及Pages还需验收，原地籍矿界和武装越境路线不绘。 [审计](../../../docs/research/19C_T40_SOUTHERN_AFRICA_SOURCE_GIS_AUDIT.md)。
 
 **2026-11-23 T40南部非洲矿地与劳工研究制作：** 22节/66段、23来源、33事件互动（32新+1旧）、12城市参考Point，候审分支 `feat/19c-t40-griqualand-kimberley-transvaal-evidence-20261123`。制作验收、独立正式出版和Pages尚待核实。旧矿坑、矿权地籍和詹姆森越境线没有强行绘制。 [史料/GIS审计](../../../docs/research/19C_T40_SOUTHERN_AFRICA_SOURCE_GIS_AUDIT.md)。
