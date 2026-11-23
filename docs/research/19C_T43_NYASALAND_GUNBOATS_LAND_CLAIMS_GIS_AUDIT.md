@@ -1,6 +1,6 @@
 # T43｜尼亚萨兰：炮击焚镇、殖民土地确认、速审绞刑与税收｜原始证据及GIS审计
 
-日期：2026-11-23｜制作阶段：research/production_review｜主史源：Johnston（1897）与皇家海军Clowes（1903），并对读马拉维、法律史及民众史研究
+日期：2026-11-23｜独立正式出版候选：published/approved，等待真实Chrome与GitHub Pages双成功｜主史源：Johnston（1897）与皇家海军Clowes（1903），并对读马拉维、法律史及民众史研究
 
 ## 可供正式制作的事实
 
