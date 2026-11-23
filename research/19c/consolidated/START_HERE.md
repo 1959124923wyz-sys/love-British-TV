@@ -1,3 +1,5 @@
+**2026-11-23 T36制作PR #534：59/59检查通过并入main；独立正式出版审查中**。两章24节72段21来源33事件16点；克里里战场、1897凯尔迈旧轨道终点等三件未核旧址不落猜测坐标。详[源证据GIS审计](../../../docs/research/19C_T36_EGYPT_SUDAN_SOURCE_GIS_AUDIT.md)、[下一轮取证](T36_NEXT_ACTIONS.md)。
+
 **2026-11-23 T36埃及与苏丹制作候审：** 两章24节72段21来源，33条原史案逐年事件/阅读链接，16处有证地理Point；[独立GIS审计](../../../docs/research/19C_T36_EGYPT_SUDAN_SOURCE_GIS_AUDIT.md)、[未解原档](T36_NEXT_ACTIONS.md)。旧战场/铁路/受害者损失暂未强行标点，生产CI与正式出版分离。下一首批T40。
 
 **T34正式出版及部署（2026-11-22）**：制作[#531](https://github.com/1959124923wyz-sys/love-British-TV/pull/531) 57/57、出版[#532](https://github.com/1959124923wyz-sys/love-British-TV/pull/532) 56/56、[Pages#45039811646](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45039811646) build/deploy成功。32节96段32来源35新事件13个具名GIS。保留旧王宫/王陵和Akyem矿区待实测原图。[原档清单](T34_NEXT_ACTIONS.md)。**下一首批T36埃及苏丹**。
