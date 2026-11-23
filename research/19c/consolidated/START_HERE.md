@@ -1,3 +1,5 @@
+**T34正式出版及部署（2026-11-22）**：制作[#531](https://github.com/1959124923wyz-sys/love-British-TV/pull/531) 57/57、出版[#532](https://github.com/1959124923wyz-sys/love-British-TV/pull/532) 56/56、[Pages#45039811646](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45039811646) build/deploy成功。32节96段32来源35新事件13个具名GIS。保留旧王宫/王陵和Akyem矿区待实测原图。[原档清单](T34_NEXT_ACTIONS.md)。**下一首批T36埃及苏丹**。
+
 **R3 T34制作PR #531已完成（57/57并入main）独立正式出版待验**：32节96段32来源35历史事件与13现代具名点；[T34审计](../../../docs/research/19C_T34_GOLD_COAST_ASANTE_SOURCE_GIS_AUDIT.md)与[T34原始罪证追档](T34_NEXT_ACTIONS.md)。下一优先首批T36埃及及苏丹战争。
 
 **2026-11-22 R3 T34制作候审：** 三章32节96段、32来源、35新事件、13有史源现代地名Point；1897 Akyem矿地、1874 Kumasi旧宫毁区待原图，不编无据Polygon。制作分支 `feat/19c-t34-gold-coast-asante-colonial-conquest-20261122`，[T34源证据GIS审计](../../../docs/research/19C_T34_GOLD_COAST_ASANTE_SOURCE_GIS_AUDIT.md)、[T34未解罪证和地籍](T34_NEXT_ACTIONS.md)。

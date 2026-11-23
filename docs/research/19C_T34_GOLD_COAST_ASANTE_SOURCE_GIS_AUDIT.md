@@ -1,6 +1,6 @@
 # R3 · 19C T34｜黄金海岸与阿散蒂：英国殖民暴行、王廷黄金、土地矿权GIS审计
 
-**生产验收结果：2026-11-22制作PR #531通过57/57项CI、真实桌面Chrome及GIS严格检查，并合并SHA `64f629fad35a383d54b8aa050a83cd18536035aa`。独立正式出版PR与Pages部署另行核验。**
+**最终验收：2026-11-22制作PR #531 57/57通过并合并SHA `64f629fad35a383d54b8aa050a83cd18536035aa`；独立出版PR #532 56/56通过并合并SHA `a5fad4d11ef6c8f8a62eb0ae527d516806fd72a8`；[Pages #45039811646](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45039811646) build/deploy双成功。已经公开，剩余地籍和旧址原档仍按审计推进。**
 
 ## 一、源档和去重
 
