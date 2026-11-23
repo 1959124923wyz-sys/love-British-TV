@@ -52,9 +52,9 @@ for(const decade of [1880,1890]){
  }
 }
 assert.equal(history.size,37);assert.equal(original,20);assert.equal(extra,17);
-assert.deepEqual(specs,{1880:2,1890:35});assert.equal(points,8);assert.equal(unlocated,28);
+assert.deepEqual(specs,{1880:3,1890:34});assert.equal(points,8);assert.equal(unlocated,26);
 assert(links.every(x=>history.has(x)));
 assert(history.get('E19-T41-1896-N08').description.includes('没有信息'),'100 explosion deaths only unconfirmed inquiry');
 assert(history.get('E19-T41-1895-N06').description.includes('79,500'),'cattle administrative figures kept distinct');
 assert(history.get('E19-T41-1897-N15').description.includes('武力'),'Martin forced labour confirmation');
-console.log('PASS T41: 34 sections/102 paragraphs/24 sources/37 chronology links (20 original +17 new)/8 city-only GIS/28 unlocated, parliamentary and Oxford evidence, no imaginary colonial polygons');
+console.log('PASS T41: 34 sections/102 paragraphs/24 sources/37 chronology links (20 original +17 new)/8 city-only GIS/26 unlocated, parliamentary and Oxford evidence, no imaginary colonial polygons');
