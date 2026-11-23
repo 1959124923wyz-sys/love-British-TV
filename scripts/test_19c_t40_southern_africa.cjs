@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..'),load=p=>JSON.parse(fs.readFileSync(path.
 const id='E19-T40-SOUTHERN-AFRICA-MINES-CONVICT-LABOUR-BOER-WAR',story=load('data/stories/serial/e19-t40-southern-africa-mines-labour-war-1866-1899.json'),index=load('data/stories/serial/index.json');
 const entry=index.topics.find(x=>x.id===id);
 assert(entry&&story.id===id&&entry.article_file==='data/stories/serial/e19-t40-southern-africa-mines-labour-war-1866-1899.json');
-assert.equal(entry.status,'editorial_review');assert.equal(entry.publication_review,'not_submitted');
+assert.equal(entry.status,'published');assert.equal(entry.publication_review,'approved');
 assert.equal(story.sections.length,22);assert.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),66);
 assert(story.sources.length>=18&&story.topic_source_claims.length===22);
 const sources=new Map(story.sources.map(s=>[s.id,s]));
