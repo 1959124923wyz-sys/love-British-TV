@@ -5,9 +5,8 @@ const root=path.resolve(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.
 const sid='E19-T41-MATABELELAND-CONQUEST-CATTLE-LOOT-CHIMURENGA',sp='data/stories/serial/e19-t41-matabeleland-conquest-cattle-chimurenga-1888-1899.json';
 const s=read(sp),index=read('data/stories/serial/index.json'),t=index.topics.find(x=>x.id===sid);
 assert(t&&s.id===sid&&t.article_file===sp,'T41 must remain registered with exact article source file');
-assert(['editorial_review','published'].includes(t.status));
-if(t.status==='published')assert.equal(t.publication_review,'approved');
-else assert.equal(t.publication_review,'not_submitted');
+assert.equal(t.status,'published','formal T41 public release requires published registry');
+assert.equal(t.publication_review,'approved','independent T41 editorial release requires approval');
 assert.equal(s.sections.length,34);assert.equal(s.sections.reduce((n,x)=>n+x.paragraphs.length,0),102);
 assert.equal(s.sources.length,24);assert.equal(s.topic_source_claims.length,34);
 assert.deepEqual(s.sections.reduce((o,x)=>(o[x.narrative_chapter]=(o[x.narrative_chapter]||0)+1,o),{}),{'T41.1':9,'T41.2':9,'T41.3':16});
