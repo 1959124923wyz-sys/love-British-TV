@@ -2,7 +2,7 @@ name: Editor12 17C Atlantic enslavement quantitative voyages and resistance QA
 on:
   pull_request:
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/research/e6-t11-transatlantic-slavery-1601-1700-estimates.json'
       - 'data/atlas-1660-1669.json'
       - 'data/atlas-1670-1679.json'
@@ -18,7 +18,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/research/e6-t11-transatlantic-slavery-1601-1700-estimates.json'
       - 'data/atlas-1690-1699.json'
       - 'js/history-stories.js'

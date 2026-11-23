@@ -2,7 +2,7 @@ name: Editor9 New Netherland and New York Tudor Story QA
 on:
   pull_request:
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1640-1649.json'
       - 'data/atlas-1660-1669.json'
       - 'data/atlas-1670-1679.json'
@@ -17,7 +17,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1640-1649.json'
       - 'data/atlas-1660-1669.json'
       - 'data/atlas-1670-1679.json'

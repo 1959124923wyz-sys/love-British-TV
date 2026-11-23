@@ -2,7 +2,7 @@ name: Editor11 Navigation Acts Anglo-Dutch Wars 17C Tudor-style Desktop QA
 on:
   pull_request:
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1650-1659.json'
       - 'data/atlas-1660-1669.json'
       - 'data/atlas-1670-1679.json'
@@ -16,7 +16,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1650-1659.json'
       - 'data/atlas-1660-1669.json'
       - 'data/atlas-1670-1679.json'

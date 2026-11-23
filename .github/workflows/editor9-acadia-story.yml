@@ -2,7 +2,7 @@ name: Editor9 Acadia Mi’kma’ki Port-Royal and English Scottish French Site C
 on:
   pull_request:
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1600-1609.json'
       - 'data/atlas-1610-1619.json'
       - 'data/atlas-1620-1629.json'
@@ -22,7 +22,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/stories/serial/**'
+      - 'data/stories/serial/e6-*.json'
       - 'data/atlas-1600-1609.json'
       - 'data/atlas-1610-1619.json'
       - 'data/atlas-1620-1629.json'

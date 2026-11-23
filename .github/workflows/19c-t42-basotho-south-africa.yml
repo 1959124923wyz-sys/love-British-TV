@@ -11,14 +11,24 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  pull-requests: read
 jobs:
   evidence-and-gis:
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     outputs:
       is_published: ${{ steps.release.outputs.published }}
+      article_changed: ${{ steps.t42_paths.outputs.article }}
     steps:
       - uses: actions/checkout@v4
+      - name: Detect T42 article changes to avoid rerunning Chrome on archive metadata
+        id: t42_paths
+        if: github.event_name == 'pull_request'
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            article:
+              - 'data/stories/serial/e19-t42-basotho-cattle-disarmament-southern-protectorates-1852-1890.json'
       - name: Dedicated fact, story, event, source and geometry checks
         run: |
           node --check scripts/test_19c_t42_basotho_south_africa.cjs
@@ -36,7 +46,7 @@ jobs:
   desktop-real-chrome:
     # One authentic browser gate when the story goes public.
     # Production draft stays in fast static review; no repeated 1497-1799 scan.
-    if: needs.evidence-and-gis.outputs.is_published == 'true'
+    if: needs.evidence-and-gis.outputs.is_published == 'true' && (github.event_name == 'workflow_dispatch' || needs.evidence-and-gis.outputs.article_changed == 'true')
     needs: evidence-and-gis
     runs-on: ubuntu-24.04
     timeout-minutes: 20
