@@ -1,6 +1,6 @@
 # T44｜查戈斯：1835—1888年奴役遗制、椰园永久业权、跨洋劳动与煤站掠夺｜独立史源/GIS审计
 
-日期：2026-11-23｜状态：独立正式出版候选 published/approved；等待T44真实1780px Chrome验收及GitHub Pages部署核证
+日期：2026-11-23｜状态：正式出版 published/approved；制作PR#552、独立出版PR#553、Pages#45175450612 build/deploy双成功；真实1780×1020 Chrome十次跨年链接及交互通过
 
 ## 历史责任与直接损害
 
@@ -73,7 +73,13 @@
 
 注意M06与MARITIME-1881指同一印本，M12与后出转引的COAL-ANNEX存在共享材料，M05与M05P可能互引；史料条目数21项，独立第一手证言数量少于21。优先核M12当时公文和M13原档扫描，避免仅凭英国殖民官员评价决定工人待遇。
 
-## 发布程序
+## 已完成的发布程序（2026-11-23；证据为GitHub实际运行）
+
+- [制作PR #552](https://github.com/1959124923wyz-sys/love-British-TV/pull/552) 专题Node、共用故事、GIS及研究档案验收成功并合并 `f92f6e14`。
+- [独立出版PR #553](https://github.com/1959124923wyz-sys/love-British-TV/pull/553) 专项真实1780×1020 Chrome验证35链接、10次1835–1888年份跳图、两个图层、双击返回后合并 `fa7b30e6`。
+- [Pages #45175450612](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45175450612) `build=success / deploy=success`。
+
+## 已执行的三阶段流程
 
 1. T44制作PR合并前跑Node专题合同/四十年年表源索引/独立GIS严格语义/档案工作板/文章公共文案，阶段保持`editorial_review/not_submitted`。
 2. 独立出版PR修改`published/approved`并设置`release_review_t44_*`，真实1780×1020 Chrome从无review19c公开入口打开，验证35条正文内链、1835—1888十次年份跳转、两图层与双击返回。

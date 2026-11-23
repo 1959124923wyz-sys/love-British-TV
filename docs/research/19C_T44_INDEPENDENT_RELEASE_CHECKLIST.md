@@ -10,11 +10,13 @@
 - [x] 1883 40索马里人1.20卢比合同工资，40–50替工只是一项计划
 - [x] 1883 15,100吨是累计进口、7,000吨是库存，2/4英亩的行政资料矛盾并列，1885收回六英亩只留原档记录
 
-## 待完成的独立发布门禁
-- [ ] 制作PR #552合并之后的正式出版PR独立静态及公共故事合同通过
-- [ ] 真正1780×1020桌面Chrome，无`review19c`参数，35条链接、十次1835—1888跨年跳转、双图层开关、双击返回成功
-- [ ] 正式出版PR合并到main
-- [ ] GitHub Pages build、deploy均成功并记录run URL
-- [ ] 完成研究工作板、PROGRESS/START_HERE、T44史源GIS归档，归档不重复浏览器
+## 已完成的独立发布门禁
+
+真实验收：[T44出版PR #553](https://github.com/1959124923wyz-sys/love-British-TV/pull/553)专项真正Chrome通过；[Pages #45175450612](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45175450612) build/deploy双成功。
+- [x] 制作PR #552合并之后的正式出版PR独立静态及公共故事合同通过
+- [x] 真正1780×1020桌面Chrome，无`review19c`参数，35条链接、十次1835—1888跨年跳转、双图层开关、双击返回成功
+- [x] 正式出版PR合并到main
+- [x] GitHub Pages build、deploy均成功并记录run URL
+- [x] 完成研究工作板、PROGRESS/START_HERE、T44史源GIS归档，归档不重复浏览器
 
 研究证据：[T44史源和GIS审计](19C_T44_CHAGOS_PLANTATIONS_COAL_LABOUR_GIS_AUDIT.md)。
