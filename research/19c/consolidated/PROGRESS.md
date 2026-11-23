@@ -1,3 +1,9 @@
+## 2026-11-23 · R3 T41｜马塔贝莱兰特许公司、牲畜掠夺与Chimurenga制作候审
+
+- 在 `feat/19c-t41-matabeleland-atrocities-cattle-labour-gis-20261123` 新增 **34节102段、24项史料、37条逐年史事（20旧案+17独立新罪证）及8处现代城市定位GIS**。
+- 特别加入英国同期1893/1896夺牛/毁粮质询、1896烧村官方辩护、1897 Martin强征劳工结论、1896洞穴炸药与妇孺避难等史料；不同牛群估计及战死/饥荒数字各自分账，未定位旧址不画。
+- **仅为制作候审，专项史料GIS、真实1780px Chrome、正式出版PR及Pages尚未验收，不能称已上线**。详 [T41证据GIS审计](../../../docs/research/19C_T41_MATABELELAND_COLONIAL_ATROCITIES_GIS_AUDIT.md) 和 [追档](T41_NEXT_ACTIONS.md)。
+
 **2026-11-23 · R3 T40现已正式上线并归档：** [制作#537](https://github.com/1959124923wyz-sys/love-British-TV/pull/537)61/61检查通过；[独立正式出版#538](https://github.com/1959124923wyz-sys/love-British-TV/pull/538)60/60检查通过；[Pages #45121612106](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45121612106) **build/deploy均成功**。22节66段23项来源33史事内链（32新+1复用）、12具名WGS84城市参考点。未确定历史矿区/监狱/战场坐标继续null，未画未经原图证实的殖民实控范围。 **接续 T41｜马塔贝莱兰征服、公司矿权与第一次Chimurenga。**
 
 ## 2026-11-23 · T40制作完成，正式出版独立候审
