@@ -1,3 +1,5 @@
+**2026-11-23 · R3 T40制作候审：** 已在 `feat/19c-t40-griqualand-kimberley-transvaal-evidence-20261123` 完成T40.1/T40.2两章22节66段、23项来源、33条原案链接（32新增，1复用1899开战事件）、12处有史料和地名来源的WGS84具名参考点。1885旧工棚、1895越境路线及历史矿地辖区无证不绘。制作PR和历史源GIS/Chrome门禁待验，尚未正式出版，详 [T40独立审计](../../../docs/research/19C_T40_SOUTHERN_AFRICA_SOURCE_GIS_AUDIT.md) 与 [追档](T40_NEXT_ACTIONS.md)。
+
 # 归档进度
 ## 2026-11-23 · R3 T36埃及／苏丹专题正式出版、Pages上线全部确认
 

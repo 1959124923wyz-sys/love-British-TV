@@ -1,0 +1,56 @@
+name: 19C T40 Southern Africa mining law convict labour Boer War source GIS and desktop QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e19-t40-southern-africa-mines-labour-war-1866-1899.json'
+      - 'data/stories/serial/index.json'
+      - 'data/stories/serial/chronology-1860-1869.json'
+      - 'data/stories/serial/chronology-1870-1879.json'
+      - 'data/stories/serial/chronology-1880-1889.json'
+      - 'data/stories/serial/chronology-1890-1899.json'
+      - 'data/nineteenth-century-spatial-*.geojson'
+      - 'docs/research/19C_T40_*'
+      - 'research/19c/consolidated/**'
+      - 'scripts/test_19c_t40_southern_africa.cjs'
+      - 'scripts/browser_19c_t40_southern_africa.py'
+      - '.github/workflows/19c-t40-southern-africa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/e19-t40-southern-africa-mines-labour-war-1866-1899.json'
+permissions:
+  contents: read
+jobs:
+  evidence-and-gis:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node --check scripts/test_19c_t40_southern_africa.cjs
+          node scripts/test_19c_t40_southern_africa.cjs
+          python3 research/19c/consolidated/verify.py
+          python3 research/19c/consolidated/verify_handoff.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          node scripts/test_serial_story_contract.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+  desktop-real-chrome:
+    needs: evidence-and-gis
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-t40.log 2>&1 &
+          python3 scripts/browser_19c_t40_southern_africa.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t40-southern-africa-convict-mines-boerwar-desktop
+          path: browser-smoke-results/19c-t40-*.png
+          if-no-files-found: ignore
