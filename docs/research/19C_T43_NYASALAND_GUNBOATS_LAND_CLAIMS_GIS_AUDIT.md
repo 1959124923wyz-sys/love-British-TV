@@ -1,6 +1,6 @@
 # T43｜尼亚萨兰：炮击焚镇、殖民土地确认、速审绞刑与税收｜原始证据及GIS审计
 
-日期：2026-11-23｜独立正式出版候选：published/approved，等待真实Chrome与GitHub Pages双成功｜主史源：Johnston（1897）与皇家海军Clowes（1903），并对读马拉维、法律史及民众史研究
+日期：2026-11-23｜published/approved｜制作PR #549、独立出版PR #550、Pages #45149376522 build及deploy双成功，真实桌面Chrome通过｜主史源：Johnston（1897）与皇家海军Clowes（1903），并对读马拉维、法律史及民众史研究
 
 ## 可供正式制作的事实
 
@@ -56,6 +56,7 @@
 ## 形式和工作流
 
 - 数据：37节、111段，三部分；23项URL史源记录；9个既有T43研究案及28条增补事件；正文37个不同事件内链；7个现代城市地理点。
+- 已完成：制作PR #549全部关键静态门禁通过、出版PR #550独立真实Chrome验收通过，Pages #45149376522 build/deploy双成功。
 - 制作：新专项Node静态合同、严格GIS审计、研究档案自检与公共文字门禁，review19c预览态，不提前上线。
 - 正式出版：独立PR设`published/approved`并将`source_register_state`设为`release_review_t43_...`，触发唯一一次真实Chrome全套1780×1020（无预览参数、9次年份跳图、图层、双击返回）。成功合并并核实Pages build/deploy后再称已正式发布；归档时恢复`published_production_...`不重复Chrome。
 - 后续：追查1891炮兵记录、Makanjira村舍与死亡名单、Mlozi庭审证据、土地确认FO84/2197及FO403/185的原文/宗地测图、茅屋税各地区明细，绝不为内容丰富而捏造数字或地界。
