@@ -1,3 +1,8 @@
+## 2026-11-23 · T40制作完成，正式出版独立候审
+
+- [制作PR #537](https://github.com/1959124923wyz-sys/love-British-TV/pull/537) **61/61项检查全通过**，merge `07610961c0a25c4c6fa3de812601e5eb48313e6c`；22节66段23项来源、33案例内链（32新增+1复用）、12城市有据GIS参考点。
+- 正式出版分支只有在新PR全面验收、合并至main并确认Pages build/deploy双成功后才宣告正式发布。 [独立证据GIS审计](../../../docs/research/19C_T40_SOUTHERN_AFRICA_SOURCE_GIS_AUDIT.md) · [下轮原档](T40_NEXT_ACTIONS.md)。
+
 **2026-11-23 · R3 T40制作候审：** 已在 `feat/19c-t40-griqualand-kimberley-transvaal-evidence-20261123` 完成T40.1/T40.2两章22节66段、23项来源、33条原案链接（32新增，1复用1899开战事件）、12处有史料和地名来源的WGS84具名参考点。1885旧工棚、1895越境路线及历史矿地辖区无证不绘。制作PR和历史源GIS/Chrome门禁待验，尚未正式出版，详 [T40独立审计](../../../docs/research/19C_T40_SOUTHERN_AFRICA_SOURCE_GIS_AUDIT.md) 与 [追档](T40_NEXT_ACTIONS.md)。
 
 # 归档进度
