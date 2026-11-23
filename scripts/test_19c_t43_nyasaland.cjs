@@ -47,7 +47,7 @@ assert(links.every(id=>events.some(e=>e.id===id)));
 const t22=events.find(x=>x.id==='E19-T43-1895-N22');
 const t24=events.find(x=>x.id==='E19-T43-1895-N24');
 const t7=events.find(x=>x.id==='E19-T43-1893-N07');
-assert(t22.description.includes('燃烧弹')&&t22.description.includes('重大死伤'),'fire and civilian losses primary-source bound');
+assert(t22.description.includes('燃烧弹')&&t22.description.includes('重大生命损失'),'fire and civilian losses primary-source bound');
 assert(t24.description.includes('200至300')&&t24.description.includes('殖民方'),'battle death estimate not repurposed as verified civilian count');
 assert(t7.description.includes('73张')&&t7.description.includes('66张'),'conflicting land certificate totals kept distinct');
 assert(events.find(x=>x.id==='E19-T43-1895-C-X11-E01')?.date_label==='1895-12-04');
