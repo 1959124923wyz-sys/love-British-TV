@@ -1,6 +1,6 @@
 # R3 T36｜埃及与苏丹：军事征服、轰炸、损失赔偿及殖民控制长期追档
 
-**2026-11-23制作PR #534 59/59成功合并后，正式出版审查：** `feat/19c-t36-egypt-sudan-war-evidence-gis-20261123`；两章24节72段、21来源、33条正式年表、16具名GIS参考点、三条具体战址缺证不落点。[逐案证据GIS审计](../../../docs/research/19C_T36_EGYPT_SUDAN_SOURCE_GIS_AUDIT.md)。
+**2026-11-23 T36正式上线归档：#534制作59/59、#535出版58/58、Pages #45102089955成功：** `feat/19c-t36-egypt-sudan-war-evidence-gis-20261123`；两章24节72段、21来源、33条正式年表、16具名GIS参考点、三条具体战址缺证不落点。[逐案证据GIS审计](../../../docs/research/19C_T36_EGYPT_SUDAN_SOURCE_GIS_AUDIT.md)。
 
 ## P0：下一轮需取原档和地理配准的十大问题
 
