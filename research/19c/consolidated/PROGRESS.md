@@ -1,3 +1,9 @@
+## 2026-11-23 · T41制作正式完成、独立出版验收中
+
+- [制作PR #541](https://github.com/1959124923wyz-sys/love-British-TV/pull/541) **63/63项检查全通过** 并合并 `eca4890d99cd08cc22aaa7b09d392b4629df1d0d`。三篇叙事共34节102段24来源37原案链接和8处现代城市参考Point；原T41研究两章保留不变。
+- 正式出版分支 `release/19c-t41-matabeleland-colonial-atrocities-20261123` 已变更为 published/approved，尚须独立PR、真实Chrome普通年份入口、全站回归及Pages部署双成功，才可称正式发布。
+- [独立罪证GIS审计](../../../docs/research/19C_T41_MATABELELAND_COLONIAL_ATROCITIES_GIS_AUDIT.md)；[原卷续查](T41_NEXT_ACTIONS.md)。
+
 ## 2026-11-23 · R3 T41｜马塔贝莱兰特许公司、牲畜掠夺与Chimurenga制作候审
 
 - 在 `feat/19c-t41-matabeleland-atrocities-cattle-labour-gis-20261123` 新增 **34节102段、24项史料、37条逐年史事（20旧案+17独立新罪证）及8处现代城市定位GIS**。

@@ -34,3 +34,9 @@
 - 1900年前公司与英国政府财务往来、矿地登记及王廷交付记录；Nehanda和Kaguvi司法原案；各批次工人工资克扣受害者姓名。
 
 *本审计随制作PR提交，正式独立出版需另起PR且必须检查真实桌面浏览器和Pages。*
+
+## 制作验收结论（2026-11-23）
+
+- [制作PR #541](https://github.com/1959124923wyz-sys/love-British-TV/pull/541)：63/63 Check通过并合并 `eca4890d99cd08cc22aaa7b09d392b4629df1d0d`，含专项史料GIS、1780px Chrome及全站回归。
+- 制作期间修复原有Editor15 17世纪目录测试的点击后立即断言竞态条件。真实桌面浏览器已确认T41的1888—1899跨年跳转、历史叙事与Bulawayo／Harare／London城市镜头正常。
+- 正式发布仍需新出版PR全绿、合并及Pages build/deploy验证。严禁提前报公开成功。
