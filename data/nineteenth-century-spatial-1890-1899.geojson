@@ -5354,6 +5354,48 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "historically_disputed_or_temporary_company_influence_not_area_control"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t42-london-1890",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1278,
+          51.5074
+        ]
+      },
+      "properties": {
+        "stable_id": "t42-london-1890",
+        "name": "伦敦 · 1890年贝专纳电报线争议",
+        "start_year": 1890,
+        "end_year": 1890,
+        "display_kind": "documentary",
+        "summary_zh": "1890年7月8日英国下院质询贝专纳保护地电报线对当地首领权利的影响，殖民部官员为跨地工程辩护。",
+        "source_ids": [
+          "19C-T42-C-X12-S03",
+          "19C-T42-GEO-LONDON"
+        ],
+        "source_urls": [
+          "https://hansard.parliament.uk/Commons/1890-07-08/debates/13334d77-c1c2-44b0-be4c-65acc5005a32/Bechuanaland",
+          "https://www.geonames.org/2643743/london.html"
+        ],
+        "related_event_ids": [
+          "E19-T42-1890-C-X12-E02"
+        ],
+        "named_anchors": [
+          "伦敦"
+        ],
+        "mapping_method": "原始议会/国际裁决史料识别具名城市，GeoNames提供现代城市点作地图定位；不用于复原战争范围、权属地界或损失现场。",
+        "geo_precision": "modern_named_city_reference_not_historic_site_or_boundary",
+        "geometry_source": "GeoNames populated-place record (WGS84)",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "historic_local_sovereignty_or_colonial_jurisdiction_disputed_not_area_control"
+      }
     }
   ]
 }
