@@ -1,3 +1,5 @@
+**2026-11-23 T41马塔贝莱兰征服暴行专题制作候审：** 三章34节102段、37原案+新增逐年罪证事件、24来源和8处具名城市参考GIS，未核旧洞穴和保留地界保持无坐标。生产CI、真实Chrome、独立出版及Pages待验。[史料/GIS核查](../../../docs/research/19C_T41_MATABELELAND_COLONIAL_ATROCITIES_GIS_AUDIT.md)。
+
 **2026-11-23 · R3 T40现已正式上线并归档：** [制作#537](https://github.com/1959124923wyz-sys/love-British-TV/pull/537)61/61检查通过；[独立正式出版#538](https://github.com/1959124923wyz-sys/love-British-TV/pull/538)60/60检查通过；[Pages #45121612106](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45121612106) **build/deploy均成功**。22节66段23项来源33史事内链（32新+1复用）、12具名WGS84城市参考点。未确定历史矿区/监狱/战场坐标继续null，未画未经原图证实的殖民实控范围。 **接续 T41｜马塔贝莱兰征服、公司矿权与第一次Chimurenga。**
 
 **2026-11-23 T40制作PR #537 61/61全绿并合并；独立正式出版候审**：22节66段23史料，33案例内链，12城市GIS，真实桌面Chrome测试成功。正式普通年份阅读、独立出版PR及Pages还需验收，原地籍矿界和武装越境路线不绘。 [审计](../../../docs/research/19C_T40_SOUTHERN_AFRICA_SOURCE_GIS_AUDIT.md)。

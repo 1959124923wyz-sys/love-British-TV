@@ -4222,6 +4222,48 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "disputed_or_context_specific_history_not_territorial_control"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t41-london-1889",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1278,
+          51.5074
+        ]
+      },
+      "properties": {
+        "stable_id": "t41-london-1889",
+        "name": "LONDON · 1889年殖民史城市参照",
+        "start_year": 1889,
+        "end_year": 1889,
+        "display_kind": "documentary",
+        "summary_zh": "T41殖民军事/税权/证据事件所涉LONDON城市参考位置；绝不标示旧王廷、失火宫殿、战场、牲畜拍卖场或行政控制面。",
+        "source_ids": [
+          "19C-T41-D05",
+          "19C-T41-GEO-LONDON"
+        ],
+        "source_urls": [
+          "https://www.thegazette.co.uk/London/issue/25990/page/5873/data.pdf",
+          "https://www.geonames.org/2643743/london.html"
+        ],
+        "related_event_ids": [
+          "E19-T41-1889-C08-E14"
+        ],
+        "named_anchors": [
+          "LONDON"
+        ],
+        "mapping_method": "英国议会/特许公司/研究原案与GeoNames有名城市地名点交叉对照，仅供年份导航，不代表历史事件精确位置。",
+        "geo_precision": "modern_named_city_reference_not_historic_site_or_boundary",
+        "geometry_source": "GeoNames city gazetteer WGS84 point",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "historically_disputed_or_temporary_company_influence_not_area_control"
+      }
     }
   ]
 }

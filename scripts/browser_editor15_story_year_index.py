@@ -24,7 +24,7 @@ try:
     wait.until(lambda _:js("return document.querySelectorAll('.major-story-article .story-section').length===15"))
     assert js("return !!document.querySelector('.major-story-article .story-chronology:not([open])')")
     browser.find_element(By.CSS_SELECTOR,'.major-story-article .story-chronology > summary').click()
-    assert js("return document.querySelector('.story-chronology').open")
+    wait.until(lambda _:js("return !!document.querySelector('.major-story-article .story-chronology[open]')"))
     assert js("return document.querySelector('.story-chronology').textContent.includes('1640年代') && document.querySelector('.story-chronology').textContent.includes('1650年代')")
     original=js("return document.querySelector('.major-story-article').dataset.storyId")
     # Choose a real source-linked event from the 1650s; no synthetic year pin.
