@@ -1,3 +1,5 @@
+**2026-11-23 · R3 T40现已正式上线并归档：** [制作#537](https://github.com/1959124923wyz-sys/love-British-TV/pull/537)61/61检查通过；[独立正式出版#538](https://github.com/1959124923wyz-sys/love-British-TV/pull/538)60/60检查通过；[Pages #45121612106](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45121612106) **build/deploy均成功**。22节66段23项来源33史事内链（32新+1复用）、12具名WGS84城市参考点。未确定历史矿区/监狱/战场坐标继续null，未画未经原图证实的殖民实控范围。 **接续 T41｜马塔贝莱兰征服、公司矿权与第一次Chimurenga。**
+
 ## 2026-11-23 · T40制作完成，正式出版独立候审
 
 - [制作PR #537](https://github.com/1959124923wyz-sys/love-British-TV/pull/537) **61/61项检查全通过**，merge `07610961c0a25c4c6fa3de812601e5eb48313e6c`；22节66段23项来源、33案例内链（32新增+1复用）、12城市有据GIS参考点。
