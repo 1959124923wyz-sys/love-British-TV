@@ -1,6 +1,6 @@
 # T42｜巴索托索牛、强制缴械战争、鲸湾与贝专纳殖民法权：史料/GIS审计
 
-日期：2026-11-23｜专题：T42｜阶段：production_review（等待独立出版批准）
+日期：2026-11-23｜专题：T42｜阶段：independent_publication_review（候选正式公开：Chrome/Pages验证中）
 
 ## 已完成制作内容
 
