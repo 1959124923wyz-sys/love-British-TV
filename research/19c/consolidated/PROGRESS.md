@@ -1,4 +1,10 @@
 # 归档进度
+## 2026-11-23 · R3 T36「英国占领埃及与英埃征服苏丹」生产制作待验
+
+- 已在 `feat/19c-t36-egypt-sudan-war-evidence-gis-20261123` 建立两章**24节72段、21项史料、33条历史事件年表+可点击内链、16个来源明确的埃及／苏丹具名GIS Point**；1870年代4事件/3点，1880年代10/4，1890年代19/9。原T36研究33案全数入年表，未复制前人的来源案例。三条无法核实战地／线路精确坐标的事件`lat:null/lng:null`；没有伪造Polygon或推测军用铁路线路。
+- 原罪证重点：1882亚历山大英舰炮击与居民赔偿；1898 Omdurman英军《London Gazette》认载毁堡、清村、马赫迪墓圆顶受毁，1899英国议会报告的10,600战死、约16,000伤者；1899共管文书的法律性质。各类索款、裁决、实付分别计账。
+- 生产PR/全站CI/真正1780px Chrome及Pages均尚未验收。 [史料GIS审计](../../../docs/research/19C_T36_EGYPT_SUDAN_SOURCE_GIS_AUDIT.md) · [继续追档清单](T36_NEXT_ACTIONS.md)。后续按工作板首批T40。
+
 ## 2026-11-22 · R3 T34黄金海岸与阿散蒂全部发布并完成Pages双成功
 
 - [制作PR #531](https://github.com/1959124923wyz-sys/love-British-TV/pull/531)：**57/57**检查含真实桌面Chrome和GIS，合并 `64f629fad35a383d54b8aa050a83cd18536035aa`；[独立出版PR #532](https://github.com/1959124923wyz-sys/love-British-TV/pull/532)：**56/56**全绿，无review19c参数Chrome，合并 `a5fad4d11ef6c8f8a62eb0ae527d516806fd72a8`。
