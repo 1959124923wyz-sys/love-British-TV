@@ -10,7 +10,7 @@ assert.equal(story.sections.length,22);assert.equal(story.sections.reduce((n,s)=
 assert(story.sources.length>=18&&story.topic_source_claims.length===22);
 const sources=new Map(story.sources.map(s=>[s.id,s]));
 for(const s of story.sections){assert(s.paragraphs.length===3,s.id);assert(s.source_keys.every(k=>sources.has(k)),s.id);assert(s.period_end_year<=1899);}
-const links=[...story.sections.flatMap(s=>s.paragraphs).join('\n').matchAll(/\\[\\[([A-Za-z0-9-]+)\\|([^\\]\\n]+)\\]\\]/g)].map(m=>m[1]);
+const links=[...story.sections.flatMap(s=>s.paragraphs).join('\n').matchAll(/\[\[([A-Za-z0-9-]+)\|([^\]\n]+)\]\]/g)].map(m=>m[1]);
 assert.equal(links.length,33);assert.equal(new Set(links).size,33);
 assert.equal(links.filter(x=>x==='E19-SAW-1899-WAR').length,1);
 assert.deepEqual(new Set(entry.event_ids),new Set(links));
