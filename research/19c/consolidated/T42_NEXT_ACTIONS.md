@@ -17,4 +17,4 @@
 - 鲸湾：查1878接管原公报、1884开普地方法及1911仲裁原测图；不得以现代城市点还原港口法定边界。
 - 贝专纳：1885保护国与南部王领殖民地分开；查首领同意、土地/矿权、1890电报线实际施工地界及补偿。
 
-史源及既有研究链见[专项GIS证据清单](../../docs/research/19C_T42_BASOTHO_WALVIS_BECHUANALAND_GIS_AUDIT.md)。
+史源及既有研究链见[专项GIS证据清单](../../../docs/research/19C_T42_BASOTHO_WALVIS_BECHUANALAND_GIS_AUDIT.md)。
