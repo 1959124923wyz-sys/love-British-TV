@@ -1,3 +1,5 @@
+**2026-11-23 R3 T41｜已完成制作、正式出版和最终部署：** [制作 PR #541](https://github.com/1959124923wyz-sys/love-British-TV/pull/541) **63/63**，[正式出版 PR #542](https://github.com/1959124923wyz-sys/love-British-TV/pull/542) **62/62**， [GitHub Pages #45134534972](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45134534972) **build/deploy双成功**。T41三部分34节102段24史料37历史事件（原20+扩17暴行）8处地名参考GIS；26个无精确址案例保持空坐标，不画未经证实的领地界、洞穴、村落与矿界。**下一首批T42：巴索托缴械索牛、贝专纳保护地与鲸湾港地。**
+
 ## 2026-11-23 · T41制作正式完成、独立出版验收中
 
 - [制作PR #541](https://github.com/1959124923wyz-sys/love-British-TV/pull/541) **63/63项检查全通过** 并合并 `eca4890d99cd08cc22aaa7b09d392b4629df1d0d`。三篇叙事共34节102段24来源37原案链接和8处现代城市参考Point；原T41研究两章保留不变。

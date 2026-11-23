@@ -1,3 +1,5 @@
+**2026-11-23 R3 T41｜已完成制作、正式出版和最终部署：** [制作 PR #541](https://github.com/1959124923wyz-sys/love-British-TV/pull/541) **63/63**，[正式出版 PR #542](https://github.com/1959124923wyz-sys/love-British-TV/pull/542) **62/62**， [GitHub Pages #45134534972](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45134534972) **build/deploy双成功**。T41三部分34节102段24史料37历史事件（原20+扩17暴行）8处地名参考GIS；26个无精确址案例保持空坐标，不画未经证实的领地界、洞穴、村落与矿界。**下一首批T42：巴索托缴械索牛、贝专纳保护地与鲸湾港地。**
+
 **2026-11-23 T41制作PR #541 63/63全绿并合并、独立正式出版候审：** 34节102段24史源37历史事件（20旧+17新暴行），8个现代有证城市Point。生产版严格GIS、真实1780px Chrome和全站已通过；待发布PR普通年份Chrome以及Pages build/deploy确认，尚未宣告上线。[证据GIS审计](../../../docs/research/19C_T41_MATABELELAND_COLONIAL_ATROCITIES_GIS_AUDIT.md)。
 
 **2026-11-23 T41马塔贝莱兰征服暴行专题制作候审：** 三章34节102段、37原案+新增逐年罪证事件、24来源和8处具名城市参考GIS，未核旧洞穴和保留地界保持无坐标。生产CI、真实Chrome、独立出版及Pages待验。[史料/GIS核查](../../../docs/research/19C_T41_MATABELELAND_COLONIAL_ATROCITIES_GIS_AUDIT.md)。

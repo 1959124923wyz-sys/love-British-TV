@@ -1,6 +1,6 @@
 # T41｜1888—1899英属南非公司征服与暴行：史料证据及GIS独立审计
 
-制作分支：`feat/19c-t41-matabeleland-atrocities-cattle-labour-gis-20261123`。**生产候审；未完成正式发布。**
+制作分支：`feat/19c-t41-matabeleland-atrocities-cattle-labour-gis-20261123`。**已正式发布并归档（2026-11-23）：生产#541 63/63、出版#542 62/62、Pages#45134534972 build/deploy双成功。**
 
 ## 结构与去重
 
@@ -33,10 +33,17 @@
 - 1896—1897 Selous、Alderson、Plumer、Sykes原军人日志、征工名册、各乡村死亡/饥馑记录、洞穴爆破原图与津巴布韦地方口述。
 - 1900年前公司与英国政府财务往来、矿地登记及王廷交付记录；Nehanda和Kaguvi司法原案；各批次工人工资克扣受害者姓名。
 
-*本审计随制作PR提交，正式独立出版需另起PR且必须检查真实桌面浏览器和Pages。*
+*本审计在制作PR #541提交，并经独立出版PR #542、真实公开年份桌面Chrome与Pages部署全部验收。未定位地点仍保留待查。*
 
 ## 制作验收结论（2026-11-23）
 
 - [制作PR #541](https://github.com/1959124923wyz-sys/love-British-TV/pull/541)：63/63 Check通过并合并 `eca4890d99cd08cc22aaa7b09d392b4629df1d0d`，含专项史料GIS、1780px Chrome及全站回归。
 - 制作期间修复原有Editor15 17世纪目录测试的点击后立即断言竞态条件。真实桌面浏览器已确认T41的1888—1899跨年跳转、历史叙事与Bulawayo／Harare／London城市镜头正常。
-- 正式发布仍需新出版PR全绿、合并及Pages build/deploy验证。严禁提前报公开成功。
+- 独立正式出版#542全绿合并；Pages#45134534972 build/deploy均成功，已正式上线。
+
+## 正式出版与持续追档（2026-11-23）
+
+- 生产 [PR #541](https://github.com/1959124923wyz-sys/love-British-TV/pull/541) **63/63 Checks全绿**，merge `eca4890d99cd08cc22aaa7b09d392b4629df1d0d`。
+- 独立正式出版 [PR #542](https://github.com/1959124923wyz-sys/love-British-TV/pull/542) **62/62 Checks全绿**，merge `1898e62879e9a314a10c5af97dd94309c7fa7118`。
+- [GitHub Pages build/deploy run #45134534972](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45134534972) 两阶段均success。正式公开年份Chrome已通过，不用review19c参数。
+- 34节102段24项来源37历史史案及8城市点。所有关于牛群、强制征工、焚村、逃出洞穴的数字仍保留史料口径；26个缺原址案仍null，不捏造历史主权Polygon或战场几何。

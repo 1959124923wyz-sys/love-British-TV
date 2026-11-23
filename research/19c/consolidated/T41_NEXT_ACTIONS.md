@@ -1,3 +1,5 @@
+**2026-11-23 正式出版后归档：** [#541生产](https://github.com/1959124923wyz-sys/love-British-TV/pull/541)63/63、[#542独立出版](https://github.com/1959124923wyz-sys/love-British-TV/pull/542)62/62及[Pages#45134534972](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45134534972) build/deploy双成功；本文其余内容均为**额外历史取证和地籍配准待办**，已上线的有证研究仍有效。接续T42。
+
 **制作验收记录：** PR #541 63/63 GitHub Actions全绿，含真实桌面Chrome与GIS，2026-11-23合并。独立正式出版仍在审核中，Pages实际部署待确认。
 
 # T41 继续取证与历史测绘（2026-11-23）
