@@ -12864,6 +12864,48 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "British_fort_tax_agreement_not_all_coast"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t44-port-louis-1859",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.49889,
+          -20.16194
+        ]
+      },
+      "properties": {
+        "stable_id": "t44-port-louis-1859",
+        "name": "路易港（1859年返航记录登记城市）",
+        "start_year": 1859,
+        "end_year": 1859,
+        "display_kind": "documentary",
+        "summary_zh": "毛里求斯港口入境档中1859年Governess三名具名返航者属于路易港殖民登记口径；现代城市点不能定位历史码头、转配庄园或居留住所。",
+        "source_ids": [
+          "19C-T44-M14",
+          "19C-T44-GEONAMES-PORTLOUIS"
+        ],
+        "source_urls": [
+          "https://www.academia.edu/122330008/On_the_Move_Remigration_in_the_Indian_Ocean_1850_to_1906",
+          "https://www.geonames.org/934154/port-louis.html"
+        ],
+        "related_event_ids": [
+          "E19-T44-1859-C11-E20"
+        ],
+        "named_anchors": [
+          "Port Louis"
+        ],
+        "mapping_method": "当时殖民文件确认岛/港具名地点，现代NGA或GeoNames官方地名WGS84只标地理参照，不外推十九世纪园地、住房、海港站台或海上交通实际航线。",
+        "geo_precision": "modern_named_atoll_or_city_reference_not_historic_site_or_boundary",
+        "geometry_source": "US NGA / GeoNames named place, present-day WGS84",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "colonial_mauritius_administration_named_place_without_actual_land_parcel_geometry"
+      }
     }
   ]
 }

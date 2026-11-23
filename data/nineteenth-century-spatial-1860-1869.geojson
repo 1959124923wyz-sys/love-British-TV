@@ -4758,6 +4758,90 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "British_crown_colony_at_Lagos_named_locality"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t44-port-louis-1860",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.49889,
+          -20.16194
+        ]
+      },
+      "properties": {
+        "stable_id": "t44-port-louis-1860",
+        "name": "路易港 · 1860年查戈斯返航者入港登记",
+        "start_year": 1860,
+        "end_year": 1860,
+        "display_kind": "documentary",
+        "summary_zh": "1860年Zoel返航登记现代路易港参照；21名labourers及具名项按原航次表分列。",
+        "source_ids": [
+          "19C-T44-M14",
+          "19C-T44-GEONAMES-PORTLOUIS"
+        ],
+        "source_urls": [
+          "https://www.academia.edu/122330008/On_the_Move_Remigration_in_the_Indian_Ocean_1850_to_1906",
+          "https://www.geonames.org/934154/port-louis.html"
+        ],
+        "related_event_ids": [
+          "E19-T44-1860-C11-E24"
+        ],
+        "named_anchors": [
+          "Port Louis"
+        ],
+        "mapping_method": "历史报告识别具名环礁/海港，再用NGA官方及GeoNames现行WGS84地名点；不重建椰园地产界、煤场、工棚位置或海上交通实际航线。",
+        "geo_precision": "modern_named_atoll_or_city_reference_not_historic_site_or_boundary",
+        "geometry_source": "NGA / GeoNames modern gazetteer WGS84",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "colonial_jurisdiction_only_without_land_parcel_mapping"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t44-diego-garcia-1865",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.451611,
+          -7.312645
+        ]
+      },
+      "properties": {
+        "stable_id": "t44-diego-garcia-1865",
+        "name": "Diego Garcia环礁 · 1865年土地永久业权销售",
+        "start_year": 1865,
+        "end_year": 1865,
+        "display_kind": "documentary",
+        "summary_zh": "1865年9月12日三椰园地产权销售法权发生地的环礁级参考；不能以环礁外缘推定卖出的庄园边界。",
+        "source_ids": [
+          "19C-T44-M12",
+          "19C-T44-NGA-DIEGO"
+        ],
+        "source_urls": [
+          "https://edspace.american.edu/chagosarchive/wp-content/uploads/sites/941/2017/04/Dupont-I.-Report-on-Diego-Garcia.-23-05-1883.pdf",
+          "https://geonames.nga.mil/geon-ags/rest/services/RESEARCH/GIS_OUTPUT/MapServer/0/3772083/htmlPopup?f=html"
+        ],
+        "related_event_ids": [
+          "E19-T44-1865-C11-E15"
+        ],
+        "named_anchors": [
+          "Diego Garcia"
+        ],
+        "mapping_method": "历史报告识别具名环礁/海港，再用NGA官方及GeoNames现行WGS84地名点；不重建椰园地产界、煤场、工棚位置或海上交通实际航线。",
+        "geo_precision": "modern_named_atoll_or_city_reference_not_historic_site_or_boundary",
+        "geometry_source": "NGA / GeoNames modern gazetteer WGS84",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "colonial_jurisdiction_only_without_land_parcel_mapping"
+      }
     }
   ]
 }
