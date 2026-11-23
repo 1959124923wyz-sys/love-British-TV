@@ -1,3 +1,5 @@
+**2026-11-23 R3 T42｜制作审查阶段：** 巴索托索牛、Berea远征与1852年夺牛4,500头、1880—1881年开普殖民政府强制缴械战争、1881年5000头罚牛裁决及英国鲸湾1878/1884和贝专纳1885/1890法律管辖，已整理3部分20节60段27来源、20条有出处历史事件、6个现代城市年点。**正式出版及Pages尚未批准或部署**。已按[新CI提速准则](../../docs/research/19C_CI_FAST_PATH_POLICY_20261123.md)把旧14专题重复Chrome关停；T42专项静态与出版一次真实Chrome。证据未证的战场/失牛家庭/旧港界/保护地线路不编位置和面积。后续见[T42审计](../../docs/research/19C_T42_BASOTHO_WALVIS_BECHUANALAND_GIS_AUDIT.md)、[长期待查](T42_NEXT_ACTIONS.md)。
+
 **2026-11-23 R3 T41｜已完成制作、正式出版和最终部署：** [制作 PR #541](https://github.com/1959124923wyz-sys/love-British-TV/pull/541) **63/63**，[正式出版 PR #542](https://github.com/1959124923wyz-sys/love-British-TV/pull/542) **62/62**， [GitHub Pages #45134534972](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45134534972) **build/deploy双成功**。T41三部分34节102段24史料37历史事件（原20+扩17暴行）8处地名参考GIS；26个无精确址案例保持空坐标，不画未经证实的领地界、洞穴、村落与矿界。**下一首批T42：巴索托缴械索牛、贝专纳保护地与鲸湾港地。**
 
 ## 2026-11-23 · T41制作正式完成、独立出版验收中

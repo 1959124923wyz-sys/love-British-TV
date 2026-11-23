@@ -4061,6 +4061,90 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "disputed_or_context_specific_history_not_territorial_control"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t42-walvis-bay-1878",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.50528,
+          -22.9575
+        ]
+      },
+      "properties": {
+        "stable_id": "t42-walvis-bay-1878",
+        "name": "鲸湾 · 1878年英国海军接管",
+        "start_year": 1878,
+        "end_year": 1878,
+        "display_kind": "documentary",
+        "summary_zh": "1878年3月12日，英国海军在鲸湾宣布取得港口，并把这一宣告提交英帝国政府追认。",
+        "source_ids": [
+          "19C-T42-C-X13-S01",
+          "19C-T42-GEO-WALVIS"
+        ],
+        "source_urls": [
+          "https://legal.un.org/riaa/cases/vol_XI/263-308.pdf",
+          "https://www.geonames.org/3359638/walvis-bay.html"
+        ],
+        "related_event_ids": [
+          "E19-T42-1878-C-X13-E01"
+        ],
+        "named_anchors": [
+          "鲸湾"
+        ],
+        "mapping_method": "原始议会/国际裁决史料识别具名城市，GeoNames提供现代城市点作地图定位；不用于复原战争范围、权属地界或损失现场。",
+        "geo_precision": "modern_named_city_reference_not_historic_site_or_boundary",
+        "geometry_source": "GeoNames populated-place record (WGS84)",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "historic_local_sovereignty_or_colonial_jurisdiction_disputed_not_area_control"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t42-maseru-1879",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.48333,
+          -29.31667
+        ]
+      },
+      "properties": {
+        "stable_id": "t42-maseru-1879",
+        "name": "马塞卢 · 1879年缴械计划",
+        "start_year": 1879,
+        "end_year": 1879,
+        "display_kind": "documentary",
+        "summary_zh": "1879年，开普殖民政府在马塞卢提出解除巴索托武装的措施，政策在当地引发反对。",
+        "source_ids": [
+          "19C-T42-C14-S02",
+          "19C-T42-GEO-MASERU"
+        ],
+        "source_urls": [
+          "https://journals.co.za/doi/10.18820/24150509/SJCH46.v2.3",
+          "https://www.geonames.org/932505/maseru.html"
+        ],
+        "related_event_ids": [
+          "E19-T42-1879-C14-E01"
+        ],
+        "named_anchors": [
+          "马塞卢"
+        ],
+        "mapping_method": "原始议会/国际裁决史料识别具名城市，GeoNames提供现代城市点作地图定位；不用于复原战争范围、权属地界或损失现场。",
+        "geo_precision": "modern_named_city_reference_not_historic_site_or_boundary",
+        "geometry_source": "GeoNames populated-place record (WGS84)",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "historic_local_sovereignty_or_colonial_jurisdiction_disputed_not_area_control"
+      }
     }
   ]
 }
