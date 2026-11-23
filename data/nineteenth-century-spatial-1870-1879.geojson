@@ -3758,6 +3758,135 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "not_a_sovereignty_polygon"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t36-london-1870s-1875",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1278,
+          51.5074
+        ]
+      },
+      "properties": {
+        "stable_id": "t36-london-1870s-1875",
+        "name": "伦敦：1875年英国买入苏伊士公司股份",
+        "start_year": 1875,
+        "end_year": 1875,
+        "display_kind": "economic",
+        "summary_zh": "伦敦：1875年英国买入苏伊士公司股份。具体军事行动、财政条款或受害数据按同年原档分别核查。",
+        "source_ids": [
+          "19C-T36-D10",
+          "19C-T36-GEO-LONDON"
+        ],
+        "source_urls": [
+          "https://hansard.parliament.uk/commons/1876-02-14/debates/509d9d36-bc23-408e-a5e3-01d21b712ed2/Supply%E2%80%94TheSuezCanalShares",
+          "https://www.geonames.org/2643743/london.html"
+        ],
+        "related_event_ids": [
+          "E19-T36-1875-C09-E01"
+        ],
+        "named_anchors": [
+          "LONDON"
+        ],
+        "mapping_method": "历史战争、法律及铁路原档与现代具名WGS84地理参考交叉校验。点位仅代表可确定地名，不是旧城墙、古战场、炮位或行政区界。",
+        "geo_precision": "modern_named_london_reference_not_historic_boundary",
+        "geometry_source": "Modern gazetteer city/locality reference, historical structure and colonial boundary not surveyed",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "british_state_equity_not_egyptian_territorial_annexation"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t36-cairo-1870s-1876",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2357,
+          30.0444
+        ]
+      },
+      "properties": {
+        "stable_id": "t36-cairo-1870s-1876",
+        "name": "开罗：1876年公共债务监管机构",
+        "start_year": 1876,
+        "end_year": 1876,
+        "display_kind": "administrative",
+        "summary_zh": "开罗：1876年公共债务监管机构。具体军事行动、财政条款或受害数据按同年原档分别核查。",
+        "source_ids": [
+          "19C-T36-D11",
+          "19C-T36-D35",
+          "19C-T36-GEO-CAIRO"
+        ],
+        "source_urls": [
+          "https://access.archive-ouverte.unige.ch/access/metadata/da634d27-cce5-4795-8da1-8292bf24f768/download",
+          "https://history.state.gov/historicaldocuments/frus1877/d345",
+          "https://www.geonames.org/360630/cairo.html"
+        ],
+        "related_event_ids": [
+          "E19-T36-1876-C09-E02"
+        ],
+        "named_anchors": [
+          "CAIRO"
+        ],
+        "mapping_method": "历史战争、法律及铁路原档与现代具名WGS84地理参考交叉校验。点位仅代表可确定地名，不是旧城墙、古战场、炮位或行政区界。",
+        "geo_precision": "modern_named_cairo_reference_not_historic_boundary",
+        "geometry_source": "Modern gazetteer city/locality reference, historical structure and colonial boundary not surveyed",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "Egyptian_government_under_international_debt_control"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t36-alex-1870s-1876",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.9187,
+          31.2001
+        ]
+      },
+      "properties": {
+        "stable_id": "t36-alex-1870s-1876",
+        "name": "亚历山大：1876年铁路与港务收益监管",
+        "start_year": 1876,
+        "end_year": 1876,
+        "display_kind": "economic",
+        "summary_zh": "亚历山大：1876年铁路与港务收益监管。具体军事行动、财政条款或受害数据按同年原档分别核查。",
+        "source_ids": [
+          "19C-T36-D35",
+          "19C-T36-GEO-ALEX"
+        ],
+        "source_urls": [
+          "https://history.state.gov/historicaldocuments/frus1877/d345",
+          "https://www.geonames.org/361058/alexandria.html"
+        ],
+        "related_event_ids": [
+          "E19-T36-1876-C09-E19",
+          "E19-T36-1876-C09-E20"
+        ],
+        "named_anchors": [
+          "ALEX"
+        ],
+        "mapping_method": "历史战争、法律及铁路原档与现代具名WGS84地理参考交叉校验。点位仅代表可确定地名，不是旧城墙、古战场、炮位或行政区界。",
+        "geo_precision": "modern_named_alex_reference_not_historic_boundary",
+        "geometry_source": "Modern gazetteer city/locality reference, historical structure and colonial boundary not surveyed",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "Egyptian_port_finance_international_creditor_oversight"
+      }
     }
   ]
 }
