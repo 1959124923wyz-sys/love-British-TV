@@ -3142,6 +3142,48 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "australian_colonial_frontier_context"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t44-diego-garcia-1835",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.451611,
+          -7.312645
+        ]
+      },
+      "properties": {
+        "stable_id": "t44-diego-garcia-1835",
+        "name": "Diego Garcia环礁（1835年学徒制度地点）",
+        "start_year": 1835,
+        "end_year": 1835,
+        "display_kind": "documentary",
+        "summary_zh": "NGA命名环礁中心，仅标示1835年Harrison巡视所在的迪戈加西亚环礁；不可定位当年椰园、居民住房或法定奴役者名册。",
+        "source_ids": [
+          "19C-T44-M05",
+          "19C-T44-NGA-DIEGO"
+        ],
+        "source_urls": [
+          "https://edspace.american.edu/chagosarchive/wp-content/uploads/sites/941/2017/04/Ly-Tio-Fane-H.-and-Rajabalee-S.-An-Account-of-Diego-Garcie-and-its-People.-History-of-Diego-Garcia.-ND.pdf",
+          "https://geonames.nga.mil/geon-ags/rest/services/RESEARCH/GIS_OUTPUT/MapServer/0/3772083/htmlPopup?f=html"
+        ],
+        "related_event_ids": [
+          "E19-T44-1835-N01"
+        ],
+        "named_anchors": [
+          "Diego Garcia"
+        ],
+        "mapping_method": "当时殖民文件确认岛/港具名地点，现代NGA或GeoNames官方地名WGS84只标地理参照，不外推十九世纪园地、住房、海港站台或海上交通实际航线。",
+        "geo_precision": "modern_named_atoll_or_city_reference_not_historic_site_or_boundary",
+        "geometry_source": "US NGA / GeoNames named place, present-day WGS84",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "political_controller": "colonial_mauritius_administration_named_place_without_actual_land_parcel_geometry"
+      }
     }
   ]
 }
