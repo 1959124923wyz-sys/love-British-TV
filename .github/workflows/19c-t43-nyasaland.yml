@@ -1,0 +1,68 @@
+name: 19C T43 Nyasaland land seizure gunboats burned villages and Mlozi hanging source GIS
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e19-t43-nyasaland-land-claims-gunboats-atrocities-1891-1896.json'
+      - 'docs/research/19C_T43_*'
+      - 'research/19c/consolidated/T43*'
+      - 'scripts/test_19c_t43_nyasaland.cjs'
+      - 'scripts/browser_19c_t43_nyasaland.py'
+      - '.github/workflows/19c-t43-nyasaland.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  source-and-gis:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    outputs:
+      published: ${{ steps.release.outputs.published }}
+      release_candidate: ${{ steps.release.outputs.release_candidate }}
+      article_changed: ${{ steps.t43_paths.outputs.article }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check if T43 article itself was changed
+        id: t43_paths
+        if: github.event_name == 'pull_request'
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            article:
+              - 'data/stories/serial/e19-t43-nyasaland-land-claims-gunboats-atrocities-1891-1896.json'
+      - name: Dedicated T43 sources, 37 links, chronology, GIS and shared publication contract
+        run: |
+          node --check scripts/test_19c_t43_nyasaland.cjs
+          node scripts/test_19c_t43_nyasaland.cjs
+          python3 research/19c/consolidated/verify.py
+          python3 research/19c/consolidated/verify_handoff.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          node scripts/test_serial_story_contract.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+      - name: Publication state and one-time release gate
+        id: release
+        run: |
+          node -e 'const x=require("./data/stories/serial/index.json").topics.find(t=>t.id==="E19-T43-NYASALAND-LAND-CLAIMS-GUNBOATS-ATROCITIES");console.log("published="+String(x.status==="published"&&x.publication_review==="approved"));console.log("release_candidate="+String(x.source_register_state?.startsWith("release_review_")))' >> "$GITHUB_OUTPUT"
+  real-desktop-chrome:
+    # Full real desktop test once on formal release, on article changes, or manual dispatch.
+    # Research-only changes/archival bookkeeping do not rerun Chrome.
+    needs: source-and-gis
+    if: needs.source-and-gis.outputs.published == 'true' && (needs.source-and-gis.outputs.release_candidate == 'true' || needs.source-and-gis.outputs.article_changed == 'true' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-t43.log 2>&1 &
+          python3 scripts/browser_19c_t43_nyasaland.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t43-nyasaland-burned-towns-cattle-claims-real-desktop
+          path: browser-smoke-results/19c-t43-*.png
+          if-no-files-found: ignore
