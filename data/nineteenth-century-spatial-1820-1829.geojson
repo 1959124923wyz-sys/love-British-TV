@@ -1929,6 +1929,50 @@
         "mapping_method": "现代具名地名参考，非历史事件精确现场或实控边界",
         "geometry_source": "https://www.geonames.org/3451190/rio-de-janeiro.html"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T13-1821-SYDNEY",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.20732,
+          -33.86785
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T13-1821-SYDNEY",
+        "stable_id": "GIS-19C-T13-1821-SYDNEY",
+        "name": "悉尼现代城址",
+        "display_kind": "documentary",
+        "start_year": 1821,
+        "end_year": 1821,
+        "source_ids": [
+          "19C-T13-A38-S05",
+          "19C-T13-A38-S06",
+          "19C-T13-G-SYDNEY"
+        ],
+        "source_urls": [
+          "https://adb.anu.edu.au/biography/anderson-john-1704",
+          "https://guides.sl.nsw.gov.au/convicts-bound-for-australia/arrivals",
+          "https://www.geonames.org/2147714/sydney.html"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "related_event_ids": [
+          "E19-T13-1821-A38-E06"
+        ],
+        "summary_zh": "T13：悉尼现代城址，史料阅读定位",
+        "named_anchors": [
+          "悉尼现代城址"
+        ],
+        "mapping_method": "现代地名参考；非历史现场或实控边界",
+        "geometry_source": "https://www.geonames.org/2147714/sydney.html"
+      }
     }
   ]
 }
