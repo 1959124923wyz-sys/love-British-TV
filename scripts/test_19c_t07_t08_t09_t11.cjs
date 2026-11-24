@@ -46,6 +46,10 @@ assert(allEventIds.has('E19-YI-1848-MITCHEL'),'1848 Mitchel old event not reused
 const officialPoints=[];for(const dec of [1800,1820,1840,1850,1880]){
  const last=dec===1800?1819:dec+9;
  const spatial=read('data/nineteenth-century-spatial-'+dec+'-'+last+'.geojson');
+ const sourceIds=new Set(decades[dec].sources.map(s=>s.id));
+ for(const feature of spatial.features.filter(x=>x.id.startsWith('GIS-19C-T07-')||x.id.startsWith('GIS-19C-T09-')||x.id.startsWith('GIS-19C-T11-1887-CORK-'))){
+  assert(feature.properties.source_ids.every(id=>sourceIds.has(id)),'GIS source missing from decade register '+feature.id);
+ }
  officialPoints.push(...spatial.features.filter(x=>x.id.startsWith('GIS-19C-T07-')||x.id.startsWith('GIS-19C-T09-')||x.id.startsWith('GIS-19C-T11-1887-CORK-')));
 }
 assert.equal(officialPoints.length,7);
