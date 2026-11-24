@@ -296,6 +296,26 @@
         "A16-E05"
       ],
       "reuse_existing": false
+    },
+    {
+      "id": "E19-T03-1896-NONPAREIL",
+      "year": 1896,
+      "chapter": "T03.2",
+      "original_refs": [
+        "A34-E01",
+        "A34-E02",
+        "A34-E03"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T03-1897-BECHU-COMMISSION",
+      "year": 1897,
+      "chapter": "T03.2",
+      "original_refs": [
+        "A34-E04"
+      ],
+      "reuse_existing": false
     }
   ],
   "events": [
@@ -802,6 +822,78 @@
         "A16-E04",
         "A16-E05"
       ]
+    },
+    {
+      "id": "E19-T03-1896-NONPAREIL",
+      "year": 1896,
+      "start_year": 1896,
+      "end_year": 1896,
+      "visible_from": 1896,
+      "date_label": "1896年10月",
+      "name": "诺恩帕雷尔庄园劳工冲突",
+      "description": "英属圭亚那诺恩帕雷尔庄园劳工因工资与工量等问题抗议，遭殖民警察暴力镇压。相关历史研究将事件与随后劳工Bechu的公开投书相联系。 工人希望保护机关介入劳动纠纷，但殖民制度下行政管理、雇主利益与警务权力相互交织。",
+      "short_description": "英属圭亚那诺恩帕雷尔庄园劳工因工资与工量等问题抗议，遭殖民警察暴力镇压。相关历史研究将事件与随后劳工Bechu的公开投书相联系。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T03-BECHU",
+        "19C-T03-LOC"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "具名殖民劳动争议与史料"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "A34-E01",
+        "A34-E02",
+        "A34-E03"
+      ],
+      "research_original_node_ids": [
+        "A34-E01",
+        "A34-E02",
+        "A34-E03"
+      ]
+    },
+    {
+      "id": "E19-T03-1897-BECHU-COMMISSION",
+      "year": 1897,
+      "start_year": 1897,
+      "end_year": 1897,
+      "visible_from": 1897,
+      "date_label": "1897年",
+      "name": "契约劳工Bechu向皇家委员会陈述",
+      "description": "在公开质疑契约用工制度后，印度契约劳工Bechu向1897年皇家委员会提交证据，陈述在殖民地的劳动及生活问题。 美国国会图书馆著录的Bechu研究著作及劳工史论文记录了其投书与调查证词。",
+      "short_description": "在公开质疑契约用工制度后，印度契约劳工Bechu向1897年皇家委员会提交证据，陈述在殖民地的劳动及生活问题。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T03-BECHU",
+        "19C-T03-LOC"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "具名殖民劳动争议与史料"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "A34-E04"
+      ],
+      "research_original_node_ids": [
+        "A34-E04"
+      ]
     }
   ],
   "points": [
@@ -1296,6 +1388,22 @@
       "label": "英国图书馆：Chinese indentured labour in post-emancipation British Guiana",
       "url": "https://www.bl.uk/stories/blogs/posts/chinese-indentured-labour-in-post-emancipation-british-guiana",
       "access": "华工招募、殖民地使用"
+    },
+    {
+      "id": "19C-T03-BECHU",
+      "publisher": "Cambridge University Press",
+      "title": "Following Custom? Representations of Community among Indian Immigrant Labour in the West Indies, 1880–1920",
+      "label": "同行评议劳工史研究",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/476D31B1755AF713F07B0DDD8A4B7878/S0020859006002653a.pdf/following_custom_representations_of_community_among_indian_immigrant_labour_in_the_west_indies_18801920.pdf",
+      "access": "Bechu及Non Pareil段、注38–45"
+    },
+    {
+      "id": "19C-T03-LOC",
+      "publisher": "美国国会图书馆",
+      "title": "Bechu: bound coolie radical in British Guiana, 1894–1901",
+      "label": "Bechu劳工史著作馆藏",
+      "url": "https://www.loc.gov/item/hlas-bi2003001429/",
+      "access": "馆藏摘要：报纸投书与皇家委员会证词"
     }
   ],
   "original_archive": "research/19c/consolidated/topics/T03.md"
