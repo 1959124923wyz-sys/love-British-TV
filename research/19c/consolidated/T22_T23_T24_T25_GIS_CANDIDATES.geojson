@@ -1,0 +1,338 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "schema": "atlas-19c-spatial-candidate-v1",
+    "publication_status": "candidate_only",
+    "note": "仅具名地点参考；跨年事件逐条显示，不能把参考点的时间跨度解释为连续驻军。"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "t22-imphal",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.944203,
+          24.808053
+        ]
+      },
+      "properties": {
+        "topic_id": "T22",
+        "name": "因帕尔",
+        "start_year": 1891,
+        "end_year": 1891,
+        "summary_zh": "仅现代城址参考，宫城及处刑点另核",
+        "original_case_ids": [
+          "B22-E01",
+          "B22-E04",
+          "B22-E05"
+        ],
+        "related_existing_event_ids": [],
+        "source_ids": [
+          "B22-S01",
+          "B22-S02",
+          "B22-S03"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1891/jun/16/manipur",
+          "https://blog.mygov.in/patriots-day-remembering-the-fallen-heroes-of-anglo-manipuri-war/",
+          "https://pahar.in/pahar/Books%20and%20Articles/Indian%20Subcontinent/1942%20History%20of%20Frontier%20Areas%20Bordering%20on%20Assam%20by%20Reid%20s.pdf"
+        ],
+        "geometry_source": "https://www.geonames.org/search.html?country=IN&q=India&startRow=50",
+        "geo_precision": "modern_named_city_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "publication_status": "candidate_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t23-kabul",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.17233,
+          34.52813
+        ]
+      },
+      "properties": {
+        "topic_id": "T23",
+        "name": "喀布尔",
+        "start_year": 1839,
+        "end_year": 1842,
+        "summary_zh": "复用既有喀布尔事件地理",
+        "original_case_ids": [
+          "B11-E06",
+          "B11-E08"
+        ],
+        "related_existing_event_ids": [
+          "E19-AFG-1839-KABUL",
+          "E19-AFG-1842-FINAL-WITHDRAWAL"
+        ],
+        "source_ids": [
+          "B11-S01",
+          "B11-S03"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/first-afghan-war",
+          "https://www.iranicaonline.org/articles/jalalabad/"
+        ],
+        "geometry_source": "repository:data/stories/serial/chronology-1830-1839.json#E19-AFG-1839-KABUL",
+        "geo_precision": "modern_named_city_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "publication_status": "candidate_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t24-aden",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.03862,
+          12.77522
+        ]
+      },
+      "properties": {
+        "topic_id": "T24",
+        "name": "亚丁",
+        "start_year": 1839,
+        "end_year": 1839,
+        "summary_zh": "原研究港区点，复用既有事件",
+        "original_case_ids": [
+          "B11-E04"
+        ],
+        "related_existing_event_ids": [
+          "E19-ADE-1839-CAPTURE"
+        ],
+        "source_ids": [
+          "B11-S06"
+        ],
+        "source_urls": [
+          "https://qdl.qa/en/archive/81055/vdc_100023462214.0x000014"
+        ],
+        "geometry_source": "repository:research/19c/consolidated/tables/map-leads.csv",
+        "geo_precision": "modern_named_city_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "publication_status": "candidate_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t24-kuwait",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.974,
+          29.367
+        ]
+      },
+      "properties": {
+        "topic_id": "T24",
+        "name": "科威特城",
+        "start_year": 1899,
+        "end_year": 1899,
+        "summary_zh": "现代城市参考，排他协定不作占领面",
+        "original_case_ids": [
+          "B37-E08"
+        ],
+        "related_existing_event_ids": [],
+        "source_ids": [
+          "B37-S05"
+        ],
+        "source_urls": [
+          "https://www.qdl.qa/en/archive/81055/vdc_100023403539.0x000038"
+        ],
+        "geometry_source": "https://www.geonames.org/kw/largest-cities-in-kuwait.html",
+        "geo_precision": "modern_named_city_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "publication_status": "candidate_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t24-muscat",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.40778,
+          23.58413
+        ]
+      },
+      "properties": {
+        "topic_id": "T24",
+        "name": "马斯喀特",
+        "start_year": 1899,
+        "end_year": 1899,
+        "summary_zh": "现代城市参考，非历史港口或舰位",
+        "original_case_ids": [
+          "B54-E01",
+          "B54-E02",
+          "B54-E03",
+          "B54-E06"
+        ],
+        "related_existing_event_ids": [],
+        "source_ids": [
+          "B54-S01",
+          "B54-S02"
+        ],
+        "source_urls": [
+          "https://www.qdl.qa/en/archive/81055/vdc_100000000193.0x000176",
+          "https://www.qdl.qa/en/archive/81055/vdc_100047240859.0x000029"
+        ],
+        "geometry_source": "https://www.geonames.org/advanced-search.html?q=Oman",
+        "geo_precision": "modern_named_city_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "publication_status": "candidate_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t25-tehran",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          51.422,
+          35.694
+        ]
+      },
+      "properties": {
+        "topic_id": "T25",
+        "name": "德黑兰",
+        "start_year": 1872,
+        "end_year": 1892,
+        "summary_zh": "现代城市参考，特许权及取消",
+        "original_case_ids": [
+          "B44-E01",
+          "B44-E03",
+          "B38-E01",
+          "B38-E05"
+        ],
+        "related_existing_event_ids": [],
+        "source_ids": [
+          "B44-S01",
+          "B44-S02",
+          "B44-S04",
+          "B38-S01",
+          "B38-S02",
+          "B38-S04",
+          "B38-S05",
+          "B38-S03"
+        ],
+        "source_urls": [
+          "https://searcharchives.bl.uk/catalog/041-004534407",
+          "https://www.iranicaonline.org/articles/concessions/concessions-ii-in-the-qajar-period/",
+          "https://tile.loc.gov/storage-services/service/gdc/gdclccn/03/01/72/04/03017204/03017204.pdf",
+          "https://qdl.qa/en/archive/81055/vdc_100149372603.0x000020",
+          "https://www.iranicaonline.org/articles/fars-iv/",
+          "https://www.iranicaonline.org/articles/qajar-big-merchants/",
+          "https://api.pageplace.de/preview/DT0400.9781135043810_A24427341/preview-9781135043810_A24427341.pdf",
+          "https://api.parliament.uk/historic-hansard/commons/1892/may/26/the-persian-tobacco-concession-1"
+        ],
+        "geometry_source": "https://www.geonames.org/IR/largest-cities-in-iran.html",
+        "geo_precision": "modern_named_city_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "publication_status": "candidate_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t25-shiraz",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          52.531135,
+          29.610308
+        ]
+      },
+      "properties": {
+        "topic_id": "T25",
+        "name": "设拉子",
+        "start_year": 1891,
+        "end_year": 1891,
+        "summary_zh": "现代城市参考，烟草抗争",
+        "original_case_ids": [
+          "B38-E03"
+        ],
+        "related_existing_event_ids": [],
+        "source_ids": [
+          "B38-S02",
+          "B38-S04"
+        ],
+        "source_urls": [
+          "https://www.iranicaonline.org/articles/fars-iv/",
+          "https://www.iranicaonline.org/articles/qajar-big-merchants/"
+        ],
+        "geometry_source": "https://www.geonames.org/search.html?country=IR&q=Persia",
+        "geo_precision": "modern_named_city_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "publication_status": "candidate_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t25-nicosia",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.35396865,
+          35.17283752
+        ]
+      },
+      "properties": {
+        "topic_id": "T25",
+        "name": "尼科西亚",
+        "start_year": 1878,
+        "end_year": 1878,
+        "summary_zh": "现代城市参考，交接日期异说保留",
+        "original_case_ids": [
+          "B61-E03"
+        ],
+        "related_existing_event_ids": [],
+        "source_ids": [
+          "B61-S02",
+          "B61-S06"
+        ],
+        "source_urls": [
+          "https://cypruslibrary.moec.gov.cy/ebooks/40923/files/40923w.pdf",
+          "https://www.nicosia.org.cy/en-GB/discover/nicosia/nicosia/british/"
+        ],
+        "geometry_source": "https://www.geonames.org/search.html?country=CY&q=Cyprus",
+        "geo_precision": "modern_named_city_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "publication_status": "candidate_only"
+      }
+    }
+  ]
+}
