@@ -1,3 +1,11 @@
+**2026-11-24 R3 T45、T47、T51正式出版并部署：** [制作#555](https://github.com/1959124923wyz-sys/love-British-TV/pull/555)、[制作#556](https://github.com/1959124923wyz-sys/love-British-TV/pull/556)、[制作#557](https://github.com/1959124923wyz-sys/love-British-TV/pull/557)，[独立出版#558](https://github.com/1959124923wyz-sys/love-British-TV/pull/558) 11/11全绿合并`a51b8a4d502fdc54ea9ab2ce9ac858339fef64a7`，[Pages#45309244116](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45309244116) build/deploy双成功。三篇普通年份1780×1020真实Chrome全部通过；共101节303段、101互动、38分年代具名GIS参考Point。
+
+- T45：制作#555合并26a2876e；正式出版#558合并a51b8a4d；Pages#45309244116 build/deploy双成功；2章34节102段23来源34互动(16新18复用)及6分年代参考点。真实1780×1020普通年份Chrome通过。未核原卷及地理细节见T45_NEXT_ACTIONS.md。
+- T47：制作#556合并b758aea5；正式出版#558合并a51b8a4d；Pages#45309244116 build/deploy双成功；3章35节105段30来源35互动(30新5复用)及19分年代参考点。真实1780×1020普通年份Chrome通过。未核原卷及地理细节见T47_NEXT_ACTIONS.md。
+- T51：制作#557合并08c21e0d；正式出版#558合并a51b8a4d；Pages#45309244116 build/deploy双成功；3章32节96段25来源32互动(30新2复用)及13分年代参考点。真实1780×1020普通年份Chrome通过。未核原卷及地理细节见T51_NEXT_ACTIONS.md。
+
+**下一首批专题按地区顺序T53：加拿大编号条约、保留地与原住民通行管制。**
+
 **2026-11-24 T51｜太平洋岛民掳掠招工与伊查博鸟粪劳动制作候审：** 三章32节96段、25来源、32互动（30新2复用）、13分年代地名Point。89被掳、60转派、13幸存、11返乡分口径，Carl案司法与1875原法§6–7、1861占岛及商号租权、1896赔款与1890–96产量/佣金/工资分账；4未定位null，无虚构路线和实控面。分支 `feat/19c-t51-island-labour-guano-20261124`。[史料GIS审计](../../../docs/research/19C_T51_PACIFIC_LABOUR_GUANO_GIS_AUDIT.md) · [原卷续查](T51_NEXT_ACTIONS.md)。制作门禁、正式出版及Pages待核。
 
 **2026-11-24 T47｜澳大利亚原住民拘禁、迁置与劳工管制制作候审：** 三章35节105段、30史源/地理登记、35互动事件（30新增5复用）、19个分年代地名导航Point。Quod设计106与峰值近170、1897年51人与73人分口径、1898第9及12–13条原影像、1886西澳海上合同排除与监外囚工、科兰德克请愿与收益转拨。原A15调查403，未核死亡表及盐账保留追档；5无定位事件null，无推算实控面及路线。分支 `feat/19c-t47-australian-incarceration-labour-20261124`。[史料GIS审计](../../../docs/research/19C_T47_INCARCERATION_LABOUR_GIS_AUDIT.md) · [后续取证](T47_NEXT_ACTIONS.md)。制作门禁、独立出版及Pages待核。
