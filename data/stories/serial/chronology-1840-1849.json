@@ -5902,6 +5902,30 @@
       "label": "GeoNames：伦敦",
       "url": "https://www.geonames.org/2643743/london.html",
       "access": "现代城市地理参照，非历史现场边界"
+    },
+    {
+      "id": "19C-T04-A46-S01",
+      "publisher": "英国下议院",
+      "title": "Insurrection in Dominica",
+      "label": "英国下议院：Insurrection in Dominica",
+      "url": "https://hansard.parliament.uk/commons/1844-07-16/debates/d1a5761d-c321-4542-8ab9-fc824a91ee79/InsurrectionInDominica",
+      "access": "1844-07-16｜Hansard当日问答｜关于June 3、普查与戒严。同时代官方质询｜讨论行政对普查反应与戒严，责任叙述按发言归属。"
+    },
+    {
+      "id": "19C-T04-A46-S03",
+      "publisher": "Michel-Rolph Trouillot",
+      "title": "Peasants and Capital",
+      "label": "Michel-Rolph Trouillot：Peasants and Capital",
+      "url": "https://haubooks.org/wp-content/uploads/2025/09/Trouillot_2025_Peasants-and-Capital_HAU-Books_9781914363221.pdf",
+      "access": "原著1988，后出数字版｜相关章节引Chace 1983及PP 1845 31｜1844 Census Riots／特别庭证词。史学研究｜给出反应造成4死、4伤和约300名耕作者被关押的研究口径，并讨论Rémy和庭审。"
+    },
+    {
+      "id": "19C-T04-G-LON",
+      "publisher": "GeoNames",
+      "title": "伦敦",
+      "label": "GeoNames：伦敦",
+      "url": "https://www.geonames.org/2643743/london.html",
+      "access": "现代具名地点WGS84参考，不表示历史地块、战事位置或管辖边界"
     }
   ],
   "events": [
@@ -22347,6 +22371,74 @@
       ],
       "research_original_node_ids": [
         "B69-E01"
+      ]
+    },
+    {
+      "id": "E19-T04-1844-A46-E01",
+      "year": 1844,
+      "start_year": 1844,
+      "end_year": 1844,
+      "visible_from": 1844,
+      "date_label": "1844年",
+      "name": "多米尼克普查引起抗议",
+      "description": "1844年6月3日前后，多米尼克居民抵制殖民人口普查。英国政府称部分居民担心普查与恢复奴役有关。 奴役结束时间尚近，殖民政府的登记行为容易被居民与此前的人口管制联系起来。居民对身份和劳动自由的担忧是理解抗议的重要背景。",
+      "short_description": "1844年6月3日前后，多米尼克居民抵制殖民人口普查。英国政府称部分居民担心普查与恢复奴役有关。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T04-A46-S01",
+        "19C-T04-A46-S03"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民地劳动、土地及行政权利历史节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "A46-E01"
+      ],
+      "research_original_node_ids": [
+        "A46-E01"
+      ]
+    },
+    {
+      "id": "E19-T04-1844-A46-E04",
+      "year": 1844,
+      "start_year": 1844,
+      "end_year": 1844,
+      "visible_from": 1844,
+      "date_label": "1844年",
+      "name": "英国议会质询多米尼克戒严与拘捕",
+      "description": "1844年7月16日英国下院讨论多米尼克普查争议及戒严，议员转述来自当地的拘捕和伤害投诉。 殖民事务大臣将反抗归因于对普查的理解，而议员质疑殖民人员未充分告知普查目的。议会记录显示不同责任解释。",
+      "short_description": "1844年7月16日英国下院讨论多米尼克普查争议及戒严，议员转述来自当地的拘捕和伤害投诉。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 51.50853,
+      "lng": -0.12574,
+      "source_ids": [
+        "19C-T04-A46-S01",
+        "19C-T04-G-LON"
+      ],
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民地劳动、土地及行政权利历史节点"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "A46-E04"
+      ],
+      "research_original_node_ids": [
+        "A46-E04"
       ]
     }
   ],
