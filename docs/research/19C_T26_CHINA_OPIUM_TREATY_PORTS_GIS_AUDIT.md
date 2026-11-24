@@ -69,3 +69,8 @@
 - [T26 Chrome证据与截图](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977109145)：1839总篇、1843上海、1868安平、1877宜昌、1885伦敦、双击原事件返回专题、1899地图仍可操作。
 - [GitHub Pages正式部署run #44977462856](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/44977462856)的 **build与deploy成功**；主站1839年预览 <https://1959124923wyz-sys.github.io/love-British-TV/?review19c=1&year=1839>。
 - 数据和地图已进入主站，母篇仍是 `editorial_review/not_submitted` 历史研究编审预览。待核印证及地图真边界由 T26_NEXT_ACTIONS.md 长期持有，不提早上升为 `published/approved`。
+
+
+## 2026-11-24 主编出版复核
+
+批准现有证据范围内正式注册，保留99条既有互动和原GIS图元。重核美国国务院FRUS 1877 d57的烟台协定文本，20万两为约定应付额，实际付款证据仍待追档；沿用口岸清朝管辖、条约权利与割地分列。前情节起始年与正文1839年边界对齐。原待调档案、地权、财税和精确边界不宣称已解决。普通年份Chrome与实际Pages待核。
