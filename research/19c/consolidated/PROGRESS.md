@@ -1,3 +1,5 @@
+**2026-11-24 T53与T55正式注册候选：** 制作#560已合并 cba3a028；专项Chrome通过；主编批准正式注册，独立普通年份Chrome及Pages待验；T55 两章20节60段17来源20新事件7分年代GIS点；主编批准注册，独立Chrome及Pages待验。分支 `feat/19c-t55-cpr-chinese-head-tax-20261124`；下一加拿大首批 T57。详 [T55审计](../../../docs/research/19C_T55_RAILWAY_CHINESE_HEAD_TAX_SOURCE_GIS_AUDIT.md) 与 [追档](T55_NEXT_ACTIONS.md)。部署未核前不登记已上线。
+
 **2026-11-24 T53制作候审：** 三章29节87段25来源29新事件13分年代GIS点；制作候审，专项CI及独立出版待核。分支 `feat/19c-t53-canada-treaties-reserve-pass-20261124`，保留原52事件、31史料及45GIS线索。详 [T53源证据GIS审计](../../../docs/research/19C_T53_CANADA_TREATIES_RESERVE_PASS_GIS_AUDIT.md) 和 [追档](T53_NEXT_ACTIONS.md)。正式出版须核验。
 
 **2026-11-24 R3 T45、T47、T51正式出版并部署：** [制作#555](https://github.com/1959124923wyz-sys/love-British-TV/pull/555)、[制作#556](https://github.com/1959124923wyz-sys/love-British-TV/pull/556)、[制作#557](https://github.com/1959124923wyz-sys/love-British-TV/pull/557)，[独立出版#558](https://github.com/1959124923wyz-sys/love-British-TV/pull/558) 11/11全绿合并`a51b8a4d502fdc54ea9ab2ce9ac858339fef64a7`，[Pages#45309244116](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45309244116) build/deploy双成功。三篇普通年份1780×1020真实Chrome全部通过；共101节303段、101互动、38分年代具名GIS参考Point。
