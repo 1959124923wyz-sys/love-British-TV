@@ -1,0 +1,40 @@
+name: 19C T07 T08 T09 T11 timeline and GIS evidence integrity
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e19-t07-*'
+      - 'data/stories/serial/e19-t08-*'
+      - 'data/stories/serial/e19-t09-*'
+      - 'data/stories/serial/e19-t11-*'
+      - 'data/stories/serial/chronology-*.json'
+      - 'data/stories/serial/index.json'
+      - 'data/nineteenth-century-spatial-*.geojson'
+      - 'scripts/test_19c_t07_t08_t09_t11.cjs'
+      - '.github/workflows/19c-t07-t08-t09-t11.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/e19-t07-*'
+      - 'data/stories/serial/e19-t08-*'
+      - 'data/stories/serial/e19-t09-*'
+      - 'data/stories/serial/e19-t11-*'
+      - 'data/stories/serial/chronology-*.json'
+      - 'data/stories/serial/index.json'
+      - 'data/nineteenth-century-spatial-*.geojson'
+      - 'scripts/test_19c_t07_t08_t09_t11.cjs'
+      - '.github/workflows/19c-t07-t08-t09-t11.yml'
+jobs:
+  time-series-and-cartography:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify 40 historical passages, one reused event and seven GIS references
+        run: node scripts/test_19c_t07_t08_t09_t11.cjs
+      - name: Enforce source handoff
+        run: |
+          python3 research/19c/consolidated/verify.py
+          python3 research/19c/consolidated/verify_handoff.py
+      - name: Strict spatial semantics
+        run: python3 scripts/audit_spatial_semantics.py --strict
+      - name: Cross-century story contract
+        run: node scripts/test_serial_story_contract.js
