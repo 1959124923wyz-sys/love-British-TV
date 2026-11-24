@@ -1,3 +1,5 @@
+**2026-11-24 T57正式注册候选：** 一章24节72段22来源24新事件10分年代GIS点；主编批准注册，独立Chrome及Pages待验。分支 `feat/19c-t57-residential-schools-20261124`；原18事件14史料26GIS线索保留。详 [史料GIS审计](../../../docs/research/19C_T57_CANADA_STATUS_RESIDENTIAL_SCHOOLS_SOURCE_GIS_AUDIT.md) 与 [追档](T57_NEXT_ACTIONS.md)。T53及T55 出版#561合并92fb15eb；13项CI全部成功及普通年份Chrome通过；Pages待核。下一回补首批T01/T02/T03、T19/T20、T31/T38及旧候审T15/T26，以最新工作板为准。
+
 **2026-11-24 T53与T55正式注册候选：** 制作#560已合并 cba3a028；专项Chrome通过；主编批准正式注册，独立普通年份Chrome及Pages待验；T55 两章20节60段17来源20新事件7分年代GIS点；主编批准注册，独立Chrome及Pages待验。分支 `feat/19c-t55-cpr-chinese-head-tax-20261124`；下一加拿大首批 T57。详 [T55审计](../../../docs/research/19C_T55_RAILWAY_CHINESE_HEAD_TAX_SOURCE_GIS_AUDIT.md) 与 [追档](T55_NEXT_ACTIONS.md)。部署未核前不登记已上线。
 
 **2026-11-24 T53制作候审：** 三章29节87段25来源29新事件13分年代GIS点；制作候审，专项CI及独立出版待核。分支 `feat/19c-t53-canada-treaties-reserve-pass-20261124`，保留原52事件、31史料及45GIS线索。详 [T53源证据GIS审计](../../../docs/research/19C_T53_CANADA_TREATIES_RESERVE_PASS_GIS_AUDIT.md) 和 [追档](T53_NEXT_ACTIONS.md)。正式出版须核验。
