@@ -7766,6 +7766,70 @@
       "label": "UNGEGN｜Hobart city gazetteer",
       "url": "https://ungegn.un.org/dashboard/cities/details?id=534",
       "access": "沿用主站19C33-TAS-HOB-GEO霍巴特城市参考点"
+    },
+    {
+      "id": "19C-T57-TRC",
+      "publisher": "Truth and Reconciliation Commission of Canada",
+      "title": "Canada’s Residential Schools: The History, Part 1, Origins to 1939",
+      "label": "Truth and Reconciliation Commission of Canada｜Canada’s Residential Schools: The History, Part 1, Origins to 1939",
+      "url": "https://publications.gc.ca/collections/collection_2015/trc/IR4-9-1-1-2015-eng.pdf",
+      "access": "印pp.73–80、107–109、251–255、578、621–622；历史档案引证"
+    },
+    {
+      "id": "19C-T57-LAND",
+      "publisher": "Province of Canada / UNB",
+      "title": "An Act for the better protection of the Lands and Property of the Indians in Lower Canada (1850)",
+      "label": "Province of Canada / UNB｜An Act for the better protection of the Lands and Property of the Indians in Lower Canada (1850)",
+      "url": "https://bnald.lib.unb.ca/sites/default/files/UnC.1850.ch_.42_0.pdf",
+      "access": "13 & 14 Vict c.42，p1247 §I原印影像"
+    },
+    {
+      "id": "19C-T57-AMEND",
+      "publisher": "Province of Canada / UNB",
+      "title": "An Act to repeal in part and to amend the 1850 Act (1851)",
+      "label": "Province of Canada / UNB｜An Act to repeal in part and to amend the 1850 Act (1851)",
+      "url": "https://bnald.lib.unb.ca/legislation/act-repeal-part-and-amend-act-intituled-act-better-protection-lands-and-property",
+      "access": "14 & 15 Vict c.59，1851-08-30原法目录"
+    },
+    {
+      "id": "19C-T57-CIV",
+      "publisher": "Province of Canada / UNB",
+      "title": "An Act to encourage the gradual Civilization of the Indian Tribes in this Province (1857)",
+      "label": "Province of Canada / UNB｜An Act to encourage the gradual Civilization of the Indian Tribes in this Province (1857)",
+      "url": "https://bnald.lib.unb.ca/sites/default/files/UnC.1857.ch_.26_0.pdf",
+      "access": "20 Vict c.26 pp85–86 §§III–VIII原印影像"
+    },
+    {
+      "id": "19C-T57-STATUS",
+      "publisher": "CIRNAC",
+      "title": "Background on Indian registration",
+      "label": "CIRNAC｜Background on Indian registration",
+      "url": "https://www.cirnac.gc.ca/eng/1540405608208/1568898474141",
+      "access": "1850、1857、1869及1876身份法史"
+    },
+    {
+      "id": "19C-T57-ELGIN",
+      "publisher": "NCTR",
+      "title": "Mount Elgin Residential School",
+      "label": "NCTR｜Mount Elgin Residential School",
+      "url": "https://nctr.ca/residential-schools/ontario/mount-elgin-muncey/",
+      "access": "档案站点覆盖1867–1946；早期1851开办依据TRC"
+    },
+    {
+      "id": "19C-T57-G-ALDER",
+      "publisher": "Natural Resources Canada",
+      "title": "Alderville First Nation",
+      "label": "Natural Resources Canada｜Alderville First Nation",
+      "url": "https://geonames.nrcan.gc.ca/search-place-names/unique?id=FESXK",
+      "access": "CGNDB 44.176058,-78.08053"
+    },
+    {
+      "id": "19C-T57-G-MUNCEY",
+      "publisher": "Natural Resources Canada",
+      "title": "Muncey",
+      "label": "Natural Resources Canada｜Muncey",
+      "url": "https://geonames.nrcan.gc.ca/search-place-names/unique?id=FCFIU",
+      "access": "CGNDB 42.82132,-81.44094"
     }
   ],
   "events": [
@@ -24806,6 +24870,312 @@
       "fill_authorized": false,
       "area_sqkm": null,
       "research_v6_event_ids": []
+    },
+    {
+      "id": "E19-T57-1850-LAND-TRUST",
+      "year": 1850,
+      "start_year": 1850,
+      "end_year": 1850,
+      "date_label": "1850年8月10日",
+      "name": "下加拿大土地与财产纳入殖民托管",
+      "description": "英属加拿大省颁布下加拿大原住民土地与财产法，授权总督任命土地委员；符合条文范围的社群土地及财物由委员以信托形式持有。第一条授予委员收取租金、收益及行使相关产权的法律权能，同时列出适用例外。",
+      "short_description": "英属加拿大省颁布下加拿大原住民土地与财产法，授权总督任命土地委员；符合条文范围的社群土地及财物由委员以信托形式持有。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "unlocated",
+      "source_ids": [
+        "19C-T57-LAND"
+      ],
+      "research_original_node_ids": [
+        "C58-E05"
+      ],
+      "significance": {
+        "level": 8,
+        "rationale": "T57身份法律、教育同化及社群抵制"
+      },
+      "visible_from": 1850,
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C58-E05"
+      ]
+    },
+    {
+      "id": "E19-T57-1851-ELGIN",
+      "year": 1851,
+      "start_year": 1851,
+      "end_year": 1851,
+      "date_label": "1851年",
+      "name": "Mount Elgin寄宿劳动学校开办",
+      "description": "Mount Elgin学校在Munceytown开办，早期由卫理公会运营。学校将儿童生活、宗教活动和劳动纳入持续监督，课程与农场及学校内务相结合。",
+      "short_description": "Mount Elgin学校在Munceytown开办，早期由卫理公会运营。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 42.82132,
+      "lng": -81.44094,
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "source_ids": [
+        "19C-T57-TRC",
+        "19C-T57-ELGIN",
+        "19C-T57-G-MUNCEY"
+      ],
+      "research_original_node_ids": [
+        "C58-E06"
+      ],
+      "significance": {
+        "level": 8,
+        "rationale": "T57身份法律、教育同化及社群抵制"
+      },
+      "visible_from": 1851,
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C58-E06"
+      ]
+    },
+    {
+      "id": "E19-T57-1851-STATUS-AMEND",
+      "year": 1851,
+      "start_year": 1851,
+      "end_year": 1851,
+      "date_label": "1851年8月30日",
+      "name": "下加拿大修订土地保护法中的身份制度",
+      "description": "英属加拿大省通过修正前一年下加拿大土地保护法的法规，延续以殖民法律确定原住民身份和相应权益的路径。法定身份关系到土地财产管理、社群成员资格及殖民机构适用的规则。",
+      "short_description": "英属加拿大省通过修正前一年下加拿大土地保护法的法规，延续以殖民法律确定原住民身份和相应权益的路径。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "unlocated",
+      "source_ids": [
+        "19C-T57-AMEND",
+        "19C-T57-STATUS"
+      ],
+      "research_original_node_ids": [
+        "C58-E07"
+      ],
+      "significance": {
+        "level": 8,
+        "rationale": "T57身份法律、教育同化及社群抵制"
+      },
+      "visible_from": 1851,
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C58-E07"
+      ]
+    },
+    {
+      "id": "E19-T57-1851-LABOUR",
+      "year": 1851,
+      "start_year": 1851,
+      "end_year": 1851,
+      "date_label": "1850年代初",
+      "name": "学校部门利用学童劳动降低运营成本",
+      "description": "TRC所引历史记录显示，Alnwick的学童与一名受雇工人共同照料105只牲畜，耕作超过30公顷土地，还承担燃料、衣物与洗涤事务。印第安事务部门要求学校依靠学生无偿劳动节约成本，逐渐达到自给。Mount Elgin的日常制度也将男生农务和女生家务与课程并置。",
+      "short_description": "TRC所引历史记录显示，Alnwick的学童与一名受雇工人共同照料105只牲畜，耕作超过30公顷土地，还承担燃料、衣物与洗涤事务。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 44.176058,
+      "lng": -78.08053,
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "source_ids": [
+        "19C-T57-TRC",
+        "19C-T57-G-ALDER"
+      ],
+      "research_original_node_ids": [
+        "C58-E04",
+        "C58-E06"
+      ],
+      "significance": {
+        "level": 8,
+        "rationale": "T57身份法律、教育同化及社群抵制"
+      },
+      "visible_from": 1851,
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C58-E04",
+        "C58-E06"
+      ]
+    },
+    {
+      "id": "E19-T57-1855-ALNWICK-EPIDEMIC",
+      "year": 1855,
+      "start_year": 1855,
+      "end_year": 1855,
+      "date_label": "1855年",
+      "name": "Alnwick学校斑疹伤寒流行致死",
+      "description": "1855年Alnwick学校发生斑疹伤寒疫情，造成四名学生及一名教师死亡，学校一度关闭。学校集体住宿及健康状况由运营机构负责，疫情使儿童在远离家庭的环境中承受生命风险。",
+      "short_description": "1855年Alnwick学校发生斑疹伤寒疫情，造成四名学生及一名教师死亡，学校一度关闭。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 44.176058,
+      "lng": -78.08053,
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "source_ids": [
+        "19C-T57-TRC",
+        "19C-T57-G-ALDER"
+      ],
+      "research_original_node_ids": [
+        "C58-E04"
+      ],
+      "significance": {
+        "level": 8,
+        "rationale": "T57身份法律、教育同化及社群抵制"
+      },
+      "visible_from": 1855,
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C58-E04"
+      ]
+    },
+    {
+      "id": "E19-T57-1856-ALNWICK-REOPEN",
+      "year": 1856,
+      "start_year": 1856,
+      "end_year": 1856,
+      "date_label": "1856年",
+      "name": "Alnwick学校疫情后恢复招生",
+      "description": "1856年Alnwick恢复运行时，在校登记人数为51名。学校在前一年疫情及暂时关闭后继续招收儿童，殖民教育方案在健康危机后仍然延续。",
+      "short_description": "1856年Alnwick恢复运行时，在校登记人数为51名。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 44.176058,
+      "lng": -78.08053,
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "source_ids": [
+        "19C-T57-TRC",
+        "19C-T57-G-ALDER"
+      ],
+      "research_original_node_ids": [
+        "C58-E04"
+      ],
+      "significance": {
+        "level": 8,
+        "rationale": "T57身份法律、教育同化及社群抵制"
+      },
+      "visible_from": 1856,
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C58-E04"
+      ]
+    },
+    {
+      "id": "E19-T57-1857-CIVILIZATION",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "date_label": "1857年6月10日",
+      "name": "殖民地制定逐步文明化法",
+      "description": "英属加拿大省通过20 Vict c.26，规定成年原住民男子可经委员会审核后退出法律所定义的身份。第三条设定英语或法语读写能力、基础教育、品行及无债等审查条件。第四条对另一类符合条件的申请者设置三年考核期，考核及最终身份决定由殖民机构掌握。",
+      "short_description": "英属加拿大省通过20 Vict c.26，规定成年原住民男子可经委员会审核后退出法律所定义的身份。第三条设定英语或法语读写能力、基础教育、品行及无债等审查条件。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "unlocated",
+      "source_ids": [
+        "19C-T57-CIV",
+        "19C-T57-STATUS"
+      ],
+      "research_original_node_ids": [
+        "C58-E08"
+      ],
+      "significance": {
+        "level": 8,
+        "rationale": "T57身份法律、教育同化及社群抵制"
+      },
+      "visible_from": 1857,
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C58-E08"
+      ]
+    },
+    {
+      "id": "E19-T57-1857-LAND-ENFRANCHISE",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "date_label": "1857年",
+      "name": "退出身份可从社群土地拨出最多50英亩",
+      "description": "逐步文明化法第七条允许由社群保留土地划给退出身份者最多50英亩，并给付按规定计算的年金及其他收入份额。接受此类财产后，退出者通常失去继续分享社群现有土地、款项和参与社群事务的权利；该条另设后续土地让渡等情形的规定。",
+      "short_description": "逐步文明化法第七条允许由社群保留土地划给退出身份者最多50英亩，并给付按规定计算的年金及其他收入份额。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "unlocated",
+      "source_ids": [
+        "19C-T57-CIV"
+      ],
+      "research_original_node_ids": [
+        "C58-E08"
+      ],
+      "significance": {
+        "level": 8,
+        "rationale": "T57身份法律、教育同化及社群抵制"
+      },
+      "visible_from": 1857,
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C58-E08"
+      ]
+    },
+    {
+      "id": "E19-T57-1857-FAMILY-STATUS",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "date_label": "1857年",
+      "name": "丈夫身份退出连带影响妻子及后代",
+      "description": "第八条规定，在该法下退出身份男子的妻子、遗孀及直系后代也随之改变法律身份，并载有女性再婚的相关例外。身份改变由丈夫的法定地位引发，家庭其他成员并非都需要独立提出申请。",
+      "short_description": "第八条规定，在该法下退出身份男子的妻子、遗孀及直系后代也随之改变法律身份，并载有女性再婚的相关例外。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "geo_precision": "unlocated",
+      "source_ids": [
+        "19C-T57-CIV"
+      ],
+      "research_original_node_ids": [
+        "C58-E08"
+      ],
+      "significance": {
+        "level": 8,
+        "rationale": "T57身份法律、教育同化及社群抵制"
+      },
+      "visible_from": 1857,
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C58-E08"
+      ]
     }
   ],
   "routes": [
