@@ -1,5 +1,7 @@
 # T51 太平洋岛民掳掠招工与鸟粪贸易：史料及GIS审计
 
+**正式出版验证（2026-11-24）：** 制作PR #557 已合并；独立正式出版PR [#558](https://github.com/1959124923wyz-sys/love-British-TV/pull/558) 11/11全部成功，main `a51b8a4d502fdc54ea9ab2ce9ac858339fef64a7`。独立普通年份真实1780×1020 Chrome [#45308849203](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45308849203) 静态与桌面双成功；[Pages #45309244116](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45309244116) build/deploy双成功。旧待核线索继续保存。
+
 制作态 editorial_review / not_submitted。三章32节96段，25来源（18历史、7地理），32事件互动（30新、2复用）、13分年代现代地名点；4新增事件无坐标。原26事件、20来源、21地图线索保留。
 
 - ANU Press Moore ch.2：89名被掳、60转派、13幸存、11返乡为同事件链不同阶段；不可合计；未到庄园人数不编。1863 NAA、NMA 67为抵达者，1863–1904 62000份合同不是截至1899独立人数。
