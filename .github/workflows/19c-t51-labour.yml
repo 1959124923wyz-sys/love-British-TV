@@ -1,0 +1,67 @@
+name: 19C T51 Pacific island labour guano and GIS
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e19-t51-pacific-labour-guano-jurisdiction-1843-1899.json'
+      - 'docs/research/19C_T51_*'
+      - 'data/stories/serial/index.json'
+      - 'research/19c/consolidated/T51*'
+      - 'scripts/test_19c_t51_labour.cjs'
+      - 'scripts/browser_19c_t51_labour.py'
+      - '.github/workflows/19c-t51-labour.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  primary-source-and-gis:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    outputs:
+      published: ${{ steps.release.outputs.published }}
+      release_candidate: ${{ steps.release.outputs.release_candidate }}
+      story_changed: ${{ steps.t51_paths.outputs.story }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect T51 story changes for one-time publication browser QA
+        id: t51_paths
+        if: github.event_name == 'pull_request'
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            story:
+              - 'data/stories/serial/e19-t51-pacific-labour-guano-jurisdiction-1843-1899.json'
+      - name: 32 source events 13 named reference points and archive invariants
+        run: |
+          node --check scripts/test_19c_t51_labour.cjs
+          node scripts/test_19c_t51_labour.cjs
+          python3 research/19c/consolidated/verify.py
+          python3 research/19c/consolidated/verify_handoff.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          node scripts/test_serial_story_contract.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+      - name: Check release approval and one-time desktop requirement
+        id: release
+        run: |
+          node -e 'const t=require("./data/stories/serial/index.json").topics.find(x=>x.id==="E19-T51-PACIFIC-LABOUR-GUANO-JURISDICTION-1843-1899");console.log("published="+String(t.status==="published"&&t.publication_review==="approved"));console.log("release_candidate="+String(t.source_register_state?.startsWith("release_review_")))' >> "$GITHUB_OUTPUT"
+  independent-true-desktop-chrome:
+    needs: primary-source-and-gis
+    if: needs.primary-source-and-gis.outputs.release_candidate == 'true' || needs.primary-source-and-gis.outputs.story_changed == 'true' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-t51.log 2>&1 &
+          python3 scripts/browser_19c_t51_labour.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t51-labour-independent-chrome
+          path: browser-smoke-results/19c-t51-*.png
+          if-no-files-found: ignore
