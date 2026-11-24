@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..'),load=p=>JSON.parse(fs.readFileSync(path.
 const dirs=fs.readdirSync(path.join(root,'data/stories/serial')).filter(p=>/^chronology-18\d\d-18\d\d\.json$/.test(p));
 const c=dirs.map(p=>load('data/stories/serial/'+p)),all=c.flatMap(x=>x.events),events=new Map(all.map(e=>[e.id,e]));
 const sources=new Set(c.flatMap(x=>x.sources.map(s=>s.id))),pts=dirs.flatMap(p=>load('data/nineteenth-century-spatial-'+p.slice(11,-5)+'.geojson').features),index=load('data/stories/serial/index.json');
-const targets=[{"topic":"T04","id":"E19-T04-CARIBBEAN-PLANTATION-RESISTANCE-REPRESSION-1816-1897","sections":25,"added":18,"points":6,"sources":27,"reuse":7,"chapters":{"T04.1":8,"T04.2":10,"T04.3":7}},{"topic":"T06","id":"E19-T06-BELIZE-GUIANA-TIMBER-LAND-RIGHTS-1814-1893","sections":24,"added":22,"points":7,"sources":25,"reuse":2,"chapters":{"T06.1":11,"T06.2":9,"T06.3":4}}];
+const targets=[{"topic":"T04","id":"E19-T04-CARIBBEAN-PLANTATION-RESISTANCE-REPRESSION-1816-1897","sections":25,"added":18,"points":6,"sources":28,"reuse":7,"chapters":{"T04.1":8,"T04.2":10,"T04.3":7}},{"topic":"T06","id":"E19-T06-BELIZE-GUIANA-TIMBER-LAND-RIGHTS-1814-1893","sections":24,"added":22,"points":7,"sources":25,"reuse":2,"chapters":{"T06.1":11,"T06.2":9,"T06.3":4}}];
 for(const t of targets){
  const r=load('research/19c/consolidated/'+t.topic+'_VERIFIED_EVENT_GIS_REGISTER.json'),a=load(r.article_file),idx=index.topics.find(x=>x.id===t.id);
  assert(idx&&idx.status==='published'&&idx.publication_review==='approved');
