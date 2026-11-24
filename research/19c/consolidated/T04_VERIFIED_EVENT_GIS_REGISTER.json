@@ -94,6 +94,15 @@
       "reuse_existing": false
     },
     {
+      "id": "E19-T04-1862-A31-E04",
+      "year": 1862,
+      "chapter": "T04.2",
+      "original_refs": [
+        "A31-E04"
+      ],
+      "reuse_existing": false
+    },
+    {
       "id": "E19-T04-1862-A31-E05",
       "year": 1862,
       "chapter": "T04.2",
@@ -135,6 +144,15 @@
       "chapter": "T04.2",
       "original_refs": [
         "A25-E01"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T04-1896-A25-E02",
+      "year": 1896,
+      "chapter": "T04.2",
+      "original_refs": [
+        "A25-E02"
       ],
       "reuse_existing": false
     },
@@ -758,6 +776,76 @@
       "research_original_node_ids": [
         "A51-E05"
       ]
+    },
+    {
+      "id": "E19-T04-1862-A31-E04",
+      "year": 1862,
+      "start_year": 1862,
+      "end_year": 1862,
+      "visible_from": 1862,
+      "date_label": "1862年",
+      "name": "英方海军介入圣文森特劳动冲突",
+      "description": "1862年10月，圣文森特劳动抗争进入戒严阶段，近同时代的书信记载英国海军抵达金斯敦并参与殖民治安行动。 殖民行政借助驻军、地方武装及海军等力量维护种植园秩序。跨岛调用力量反映英国加勒比殖民治理的区域联系。",
+      "short_description": "1862年10月，圣文森特劳动抗争进入戒严阶段，近同时代的书信记载英国海军抵达金斯敦并参与殖民治安行动。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 13.15527,
+      "lng": -61.22742,
+      "source_ids": [
+        "19C-T04-A31-S01",
+        "19C-T04-G-KING"
+      ],
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民地劳动抗争与行政权力"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "A31-E04"
+      ],
+      "research_original_node_ids": [
+        "A31-E04"
+      ]
+    },
+    {
+      "id": "E19-T04-1896-A25-E02",
+      "year": 1896,
+      "start_year": 1896,
+      "end_year": 1896,
+      "visible_from": 1896,
+      "date_label": "1896年",
+      "name": "圣基茨巴斯特尔劳动抗争遭武力镇压",
+      "description": "1896年圣基茨糖工抗争影响巴斯特尔，殖民当局及英国海军介入。殖民大臣3月10日转述2月19日收到的报告，确认有人遭枪击。 殖民地政府面对工资和劳动条件争议时采取治安及军事措施。遭枪击人员的身份和司法责任是地方档案需要回答的问题。",
+      "short_description": "1896年圣基茨糖工抗争影响巴斯特尔，殖民当局及英国海军介入。殖民大臣3月10日转述2月19日收到的报告，确认有人遭枪击。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 17.2955,
+      "lng": -62.72499,
+      "source_ids": [
+        "19C-T04-A25-S01",
+        "19C-T04-A25-S02",
+        "19C-T04-A25-S03",
+        "19C-T04-G-BASS"
+      ],
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民地劳动抗争与行政权力"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "A25-E02"
+      ],
+      "research_original_node_ids": [
+        "A25-E02"
+      ]
     }
   ],
   "features": [
@@ -934,6 +1022,94 @@
         ],
         "mapping_method": "现代具名地点参考，非历史边界",
         "geometry_source": "https://www.geonames.org/search.html?country=DM",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T04-1860-KING",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.22742,
+          13.15527
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T04-1860-KING",
+        "stable_id": "GIS-19C-T04-1860-KING",
+        "name": "金斯敦",
+        "display_kind": "documentary",
+        "start_year": 1862,
+        "end_year": 1862,
+        "related_event_ids": [
+          "E19-T04-1862-A31-E04"
+        ],
+        "source_ids": [
+          "19C-T04-A31-S01",
+          "19C-T04-G-KING"
+        ],
+        "source_urls": [
+          "https://www.geonames.org/advanced-search.html?country=VC&q=St.+Vincent",
+          "https://dai.mun.ca/pdfs/nfldexpress/18621220NewfoundlandExpress.pdf"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "英方海军介入圣文森特劳动冲突",
+        "named_anchors": [
+          "金斯敦"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/advanced-search.html?country=VC&q=St.+Vincent",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T04-1890-BASS",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.72499,
+          17.2955
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T04-1890-BASS",
+        "stable_id": "GIS-19C-T04-1890-BASS",
+        "name": "巴斯特尔",
+        "display_kind": "documentary",
+        "start_year": 1896,
+        "end_year": 1896,
+        "related_event_ids": [
+          "E19-T04-1896-A25-E02"
+        ],
+        "source_ids": [
+          "19C-T04-A25-S01",
+          "19C-T04-A25-S02",
+          "19C-T04-A25-S03",
+          "19C-T04-G-BASS"
+        ],
+        "source_urls": [
+          "https://www.geonames.org/3575551/basseterre.html",
+          "https://hansard.parliament.uk/commons/1896-03-10/debates/703174a3-8572-444e-95f5-397942a17c26/RiotingAtStKitts",
+          "https://dai.mun.ca/pdfs/cns_permorv/PeriodicalAccountsRelatingToMoravianMissions1897Vol003No031.pdf",
+          "https://brill.com/view/journals/nwig/66/3-4/article-p169_1.pdf"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "圣基茨巴斯特尔劳动抗争遭武力镇压",
+        "named_anchors": [
+          "巴斯特尔"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/3575551/basseterre.html",
         "fill_authorized": false,
         "territorial_claim": false,
         "area_sqkm": null

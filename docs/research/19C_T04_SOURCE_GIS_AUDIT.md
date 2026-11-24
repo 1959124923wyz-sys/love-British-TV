@@ -1,8 +1,8 @@
 # T04｜英属加勒比种植园反抗与殖民镇压：史源与地图审计
 
-制作候选。原卷保留，现代参考点不计入历史面积。未定位事件保持null，未核实地块及行动范围不画实线。目录级资料尚待调卷，不称已阅读完整原件。
+制作候选。原卷保留。现代具名地理参考不计历史面积；未定位事件保持null，无未经原图确证的边界。
 
-23节69段，4213正文字符，25来源，16新增、7复用、4分年代参考点。
+25节75段，4585正文字符，27来源，18新增、7复用、6分年代参考点。英国议会1896年3月10日、1844年7月16日、1893年5月11日及1824年4月13日公开文本已复读；康奈尔庭录完整图像访问403，保留原研究页码，勿称本次逐页校阅。当地报刊转引须保持陈述归属。新增金斯敦、巴斯特尔地名参考据GeoNames。
 
 ## 来源
 - 19C-T04-A05-S01｜英国国家档案馆：Bussa’s Rebellion｜Source 1a｜1816 原件｜CO 28/85；Leith 致 Bathurst 1816-04-30｜Source 1a；Codd 报告作为附件线索。馆教原档入口｜现次检索有摘要，页面直接访问受限。｜https://www.nationalarchives.gov.uk/education/resources/bussas-rebellion/source-1a/
@@ -30,23 +30,27 @@
 - 19C-T04-A51-S03｜University of Florida数字藏：Political and social disturbances in the West Indies｜20世纪初殖民汇编｜AA00078892/00001｜1893 Dominica La Plaine摘要。殖民回顾及Hamilton调查踪迹｜财政、公共服务、执法与语言问题。｜https://ufdcimages.uflib.ufl.edu/AA/00/07/88/92/00001/AA00078892_00001.pdf
 - 19C-T04-G-LAP｜GeoNames：拉普兰（La Plaine）｜现代具名地点WGS84参考，不表示历史地块、战事位置或管辖边界｜https://www.geonames.org/search.html?country=DM
 - 19C-T04-A51-S01｜英国下议院：Disturbances in Dominica｜1893-05-05｜Hansard同日问答｜4月17日来信、HMS Mohawk、伤亡。同期议会质询｜议员提转述信列四男子死亡、两女子受伤，并对水兵在场和作用提出质询。｜https://hansard.parliament.uk/commons/1893-05-05/debates/f03f19c7-6404-46dd-8c69-972dfc87bc22/DisturbancesInDominica
+- 19C-T04-G-KING｜GeoNames：金斯敦｜现代具名城市参照，非历史行动地点或边界｜https://www.geonames.org/advanced-search.html?country=VC&q=St.+Vincent
+- 19C-T04-G-BASS｜GeoNames：巴斯特尔｜现代具名城市参照，非历史行动地点或边界｜https://www.geonames.org/3575551/basseterre.html
 
 ## 原案索引
-- A05-E01 → E19-BUS-RISE（既有事件复用）
-- A05-E02 → E19-BUS-MARTIAL（既有事件复用）
-- A05-E02 → E19-BUS-SHIP（既有事件复用）
-- A05-E03 → E19-DEM-1823-UPRISING（既有事件复用）
-- A05-E04 → E19-DEM-1823-BACHELORS-ADVENTURE（既有事件复用）
-- A05-E05 → E19-DEM-1823-SMITH-TRIAL（既有事件复用）
+- A05-E01 → E19-BUS-RISE（复用）
+- A05-E02 → E19-BUS-MARTIAL（复用）
+- A05-E02 → E19-BUS-SHIP（复用）
+- A05-E03 → E19-DEM-1823-UPRISING（复用）
+- A05-E04 → E19-DEM-1823-BACHELORS-ADVENTURE（复用）
+- A05-E05 → E19-DEM-1823-SMITH-TRIAL（复用）
 - A05-B7-E07 → E19-T04-1823-A05-B7-E07
-- A05-E06 → E19-DEM-1824-COMMONS（既有事件复用）
+- A05-E06 → E19-DEM-1824-COMMONS（复用）
 - A31-E01 → E19-T04-1862-A31-E01
 - A31-E02 → E19-T04-1862-A31-E02
+- A31-E04 → E19-T04-1862-A31-E04
 - A31-E05 → E19-T04-1862-A31-E05
 - A14-E01 → E19-T04-1876-A14-E01
 - A14-E04 → E19-T04-1876-A14-E04
 - A14-E05 → E19-T04-1876-A14-E05
 - A25-E01 → E19-T04-1896-A25-E01
+- A25-E02 → E19-T04-1896-A25-E02
 - A25-E04 → E19-T04-1896-A25-E04
 - A46-E01 → E19-T04-1844-A46-E01
 - A46-E04 → E19-T04-1844-A46-E04
