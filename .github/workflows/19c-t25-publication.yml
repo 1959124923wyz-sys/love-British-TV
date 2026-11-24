@@ -1,0 +1,49 @@
+name: 19C T25 independent real desktop publication gate
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/index.json'
+      - 'scripts/browser_19c_t25.py'
+      - 'scripts/test_19c_t25.cjs'
+      - '.github/workflows/19c-t25-publication.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/stories/serial/index.json'
+      - 'scripts/browser_19c_t25.py'
+      - 'scripts/test_19c_t25.cjs'
+permissions:
+  contents: read
+jobs:
+  source-and-geometry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node scripts/test_19c_t25.cjs
+          python3 research/19c/consolidated/verify.py
+          python3 research/19c/consolidated/verify_handoff.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          node scripts/test_serial_story_contract.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+  true-desktop-chrome:
+    needs: source-and-geometry
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-t07-t11-publication.log 2>&1 &
+          python3 scripts/browser_19c_t25.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t25-one-topic-desktop-1780px
+          path: browser-smoke-results/19c-release-*.png
+          if-no-files-found: ignore
