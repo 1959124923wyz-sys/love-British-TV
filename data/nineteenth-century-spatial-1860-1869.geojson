@@ -4842,6 +4842,41 @@
         "exclude_from_area_aggregation": true,
         "political_controller": "colonial_jurisdiction_only_without_land_parcel_mapping"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t45-hob-1860",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.3272,
+          -42.8821
+        ]
+      },
+      "properties": {
+        "id": "t45-hob-1860",
+        "stable_id": "t45-hob-1860",
+        "name": "霍巴特 · 1860年代帕拉瓦专题",
+        "display_kind": "documentary",
+        "start_year": 1869,
+        "end_year": 1869,
+        "related_event_ids": [
+          "E19-T45-1869-N-LANNE-DEATH",
+          "E19-T45-1869-N-LANNE-REMAINS"
+        ],
+        "source_ids": [
+          "19C-T45-HOB-LANNE",
+          "19C-T45-HOB-GEO"
+        ],
+        "source_urls": [
+          "https://www.hobartcity.com.au/Things-To-Do/Arts-and-culture/Creative-Hobart-projects/Crowther-Reinterpreted",
+          "https://ungegn.un.org/dashboard/cities/details?id=534"
+        ],
+        "geo_precision": "named_place_reference",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_note": "沿用主站已登记的具名城市／站址参考点；不定位具体建筑、墓地或未测历史疆界。"
+      }
     }
   ]
 }
