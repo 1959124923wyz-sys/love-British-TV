@@ -13426,6 +13426,90 @@
         "mapping_method": "现代具名地名参考，非历史事件精确现场或实控边界",
         "geometry_source": "https://www.geonames.org/3435910/buenos-aires.html"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T24-E19-T24-1856-BUSHIRE",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.83657,
+          28.96887
+        ]
+      },
+      "properties": {
+        "stable_id": "GIS-19C-T24-E19-T24-1856-BUSHIRE",
+        "name": "布什尔 · 布什尔港投降并由英方管理",
+        "start_year": 1856,
+        "end_year": 1856,
+        "display_kind": "administrative",
+        "summary_zh": "1856年12月10日，布什尔投降，随后由英国方面管理。伊朗研究百科全书记载此前英国已占据哈尔克岛，港口的政治和行政关系因此受到直接军事干预。",
+        "source_ids": [
+          "19C-T24-IRANICA",
+          "19C-T24-GEO-BUSHEHR"
+        ],
+        "source_urls": [
+          "https://www.iranicaonline.org/articles/anglo-persian-war-1856-57/",
+          "https://www.geonames.org/139817/bushehr.html"
+        ],
+        "related_event_ids": [
+          "E19-T24-1856-BUSHIRE"
+        ],
+        "named_anchors": [
+          "布什尔"
+        ],
+        "mapping_method": "具名现代地点参考，非历史疆界或军事驻点精确位置",
+        "geometry_source": "https://www.geonames.org/139817/bushehr.html",
+        "geo_precision": "modern_named_locality_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T24-E19-T24-1857-PERIM",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.42013,
+          12.656923
+        ]
+      },
+      "properties": {
+        "stable_id": "GIS-19C-T24-E19-T24-1857-PERIM",
+        "name": "佩里姆岛 · 英国重新占据佩里姆岛",
+        "start_year": 1857,
+        "end_year": 1857,
+        "display_kind": "administrative",
+        "summary_zh": "殖民行政报告记载英国在1857年1月重新占据佩里姆岛。1857年的同期亚丁档案还保存了驻留工程与供应安排的记录，说明占据之后需要持续的行政和后勤投入。",
+        "source_ids": [
+          "19C-T24-PERIM",
+          "19C-T24-PERIM-WATER",
+          "19C-T24-GEO-PERIM"
+        ],
+        "source_urls": [
+          "https://qdl.qa/en/archive/81055/vdc_100047811977.0x000012",
+          "https://www.qdl.qa/en/archive/81055/vdc_100107714444.0x0000b4",
+          "https://www.geonames.org/search.html?q=Ula%2F&startRow=50"
+        ],
+        "related_event_ids": [
+          "E19-T24-1857-PERIM"
+        ],
+        "named_anchors": [
+          "佩里姆岛"
+        ],
+        "mapping_method": "具名现代地点参考，非历史疆界或军事驻点精确位置",
+        "geometry_source": "https://www.geonames.org/search.html?q=Ula%2F&startRow=50",
+        "geo_precision": "modern_named_locality_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
     }
   ]
 }
