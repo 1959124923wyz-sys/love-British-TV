@@ -1,0 +1,74 @@
+# T09｜拉美商业资本、矿业奴役、关税与鸟粪贸易：主编逐案审计及GIS绘图底稿
+
+**状态：研究制作版，未发布。** 2026-11-24。以下原案保留证据口径，不能自动等同为正式上线事件。
+
+## 论证及关键史实边界
+
+巴西1810葡英通商约与1827巴英商约分主权体。1845年Cata Branca租约所涉385人为合同范围，1859期满、1879法院判决和实际释放、1882补薪各自定日。古巴抵押条款、华工雇主链须逐原件验证。
+
+## GIS绘图约束
+
+区分英国商号所在地、当地生产区、领事／国会地点；英国资本获利的市场不能着色为英国领地。禁止虚构强制运输航线。
+
+只允许来源可追踪的历史地名参考点进入地图；历史疆域需要有时间归属及原图配准。争议边线如证据不足，只能在有据前提下用虚线、无填色表达。不能把现代边界回画成19世纪英国控制区。
+
+## 研究底册：逐条事件与来源键
+
+| A58-E01 | 1810-02-19 | Rio de Janeiro | 签通商航行约，确立英国贸易优惠框架 英国与驻里约葡萄牙王室代表 | 通商商人及税关 葡方政策受条约承诺约束 政治主体是葡萄牙王室，不能标为英国控制巴西疆域。 | A58-S01、A58-S02、A58-S05 |
+| A58-E02 | 1810-02-26 | Rio de Janeiro | 发批准和执行文件 葡萄牙王室 | 通商条约及海关行政 留下官方条约施行记录 签、批准和实际进口申税日分列。 | A58-S02 |
+| A58-E03 | 1827-08-17 | Rio de Janeiro | 签新商约；Art. XIX限定特定英货税率及估价程序 巴西帝国与英国代表 | 沿海海关、英国商货与本地纳税制度 适用巴西帝国海关及协定覆盖来源 英国本土和准许通商的英殖民地货物须分别比报关单。 | A58-S03、A58-S05 |
+| A58-E04 | 1844-08-12 | 巴西口岸 | 第376号令调整税则 巴西帝国 | 受新税表所涉品种和进口方 调整先前低关税框架 不同品种新税并不统一。 | A58-S04、A58-S05 |
+| A58-E05 | 1844-11-11 | 巴西帝国各海关 | 按Regulamento第1条执行新税则 巴西帝国税关 | 进口货物申报人 烟草的部分税档为60%；实际收入按各港年度账核 法律施行与地方实征分别。 | A58-S04 |
+| A17-E01 | 1845-06-27 | London | 签订14年劳动力租约 St John d'El Rey Mining Company、Brazilian Mining Company | Cata Branca的385名受奴役者 按最初合同，1859到期应释放；部分未成年人适用21岁条款 合同原件待逐条转录。1846-03-04巴西另行认证。 | A17-S02、A17-S03 |
+| A17-E02 | 1846-03-04 | Minas Gerais | 认证1845合同 巴西当地认证机关 | 合同内385人 法律与实施证据可自此进入地方档 注册机构与实际搬运各自另查。 | A17-S03 |
+| A17-E03 | 1859 | Morro Velho | 原合同期限届满 英国矿业公司 | Cata Branca劳动者 据1871后注册及1877诉讼，该群体中仍有人被继续奴役 公司在诉讼中出示据称1857的另一安排，须保留争议。 | A17-S01、A17-S03 |
+| A-X05-E01 | 1861-06 | Albardão 海岸／Rio Grande do Sul | 英国领事得知英国船员遗体上岸，展开沉船与遗物争议。 英国领事、巴西地方官 | 领事获知日期与实际遭难日分开。 | A-X05-S01 |
+| A-X05-E02 | 1863-02-06 | 伦敦下议院／里约热内卢 | 议会公开说明已扣五艘巴西船，赔偿及仲裁安排后返还。 英国外交部、副海军上将 Warren | 议会披露日与海军行动日分开。 | A-X05-S01 |
+| A17-E04 | 1877-06-11 | Sabará法院 | 就1872年James Gordon的登记提出自由申请 Jacintho Dias da Silva | Cata Branca劳动者 法院要求正式另行提诉，案件继续拖延 登记人作为公司负责人兼驻地英国副领事，登记行动以公司身份描述。 | A17-S01、A17-S03 |
+| A17-E05 | 1879-08-26 | 里约热内卢众议院 | 要求提供案件资料、催司法处理 Joaquim Nabuco | 被继续拘役劳动者；巴西司法部 巴西众议院通过索资请求，9月30日再辩 议会发言不是解放命令。 | A17-S01、A17-S03、A17-S04 |
+| A17-E06 | 1879-10-14 | Sabará | 裁决该群体自由 Sabará法院 | 仍在矿上的Cata Branca劳工 公司尚可等待上级确认；10月24日劳工反抗，公司请求警力 裁决、起事、实际释放有独立日期。 | A17-S03 |
+| A17-E07 | 1879-10-24 | Morro Velho | 劳工得知裁决后抗争，矿方召警与司法人员 Cata Branca劳动者；矿方求援 | 矿方、地方警察与劳动者 人员进入矿区，把抗争与实际释放连成链 案件最后释人前的公司动作。 | A17-S03 |
+| A17-E08 | 1879-12-09 | Morro Velho | 释放仍被拘役的劳工 矿业公司 | Cata Branca劳动者 公司实际停止拘役的具日节点 地方实际安置和个人自由文书待调。 | A17-S03 |
+| A17-E09 | 1882-04-14 | 巴西法院／矿业公司 | 补发欠薪 矿业公司 | Cata Branca案受益者 据研究可日期化，款额未识 不可由1859或1879工人数推算款额。 | A17-S03 |
+| A33-E01 | 1820年代–1830年代 | 巴哈马至古巴Candelaria地区 | 带被奴役者迁往古巴生产糖及咖啡 由巴哈马等地迁出的部分种植园业者 | 同去古巴的被奴役者 部分人继续被控制，其国籍与自由身份后成调查争点 按人按船区分迁移和可能的非法贩运。 | A33-S01、A33-S02 |
+| A33-E02 | 1842-09-17 | Nassau | 向Lord Stanley报送英国相关地产主涉案线索 David Turnbull | 被汇报的地产主和受奴役者 可从附件逐名查法律归属及被持有人 28是研究据该调查给出的地产主数量，不等于定罪人数。 | A33-S01、A33-S03 |
+| A33-E03 | 1844-03-22 | 牙买加 | Thomson作证，记录其逃离以及11处庄园线索 James Thomson；Max. Aug. Baron v. Ketelhodt记录 | 被继续奴役者与Candelaria的地产 可按Sam Clarke、Gibara和其他业主名回古巴查土地来源与被奴役者名单 证言说一地产规模约500且逾半来自巴哈马；目前按见证人估计。 | A33-S01、A33-S02 |
+| A33-E04 | 1844-05-01 | 牙买加至伦敦 | 将具名证言转送Lord Stanley Jamaica Governor Lord Elgin | 证言和英国殖民办公室 18世纪前情与同期英国调查分开 处分和给个人自由的后续仍待卷。 | A33-S02 |
+| A33-E05 | 1850–1852 | Havana／London | 商号协助取得抵押融资，有违约接管线索 Storey, Spalding & Co；Baring Brothers | 承贷种植园及其生产体系 英国资本进入收益和托管链 需具名庄园合同与法拍、账，确认每案对劳工命运的影响。 | A33-S01、A33-S04 |
+| A18-E01 | 1842–1861 | 卡亚俄／伦敦 | 以托售方式运作大宗英国市场出口 英国Gibbs家族商号、秘鲁政府 | 鸟粪出口业务 英国商号取得长期商业利益 全世界份额与英国市场份额分开。商号名称按合同年份核。 | A18-S01、A18-S04 |
+| A18-E02 | 1850年代 | 钦查群岛 | 矿岛以强制性劳动支撑采挖和装卸 秘鲁政府、采掘承包商和监工 | 矿岛华工、受奴役者、囚徒等 供应出口市场，部分劳动者受限制及虐待 各类劳动者身份不互换；Gibbs未在现有证据中被确认是每名工人的雇主。 | A18-S01、A18-S02、A18-S04 |
+| A18-E03 | 1854 | 秘鲁领事区／伦敦 | 上报所见运输问题 英国驻秘鲁领事Sulivan | FO、其所报中国劳工运输及英国船 生成英国旗船及不同代理可追的FO记录 未通读原函，不将所有运人船归于英国商号。 | A18-S02 |
+| A18-E04 | 1872-02-16 | 伦敦议会 | 议会记录关于强制劳动处境的转述 英国下议院发言人 | 中国劳工及涉外招运制度 留下可追问的同时代英国记录 追发言所引报告，与钦查同地同日核对。 | A18-S03 |
+
+## 归档已定位的来源（保留档号与正文入口）
+
+- **A17-S01**　巴西众议院历史档案｜Joaquim Nabuco, Escravos da Companhia de Mineração do Morro Velho｜1879-08-26｜国会演说Dig. Joaquim Nabuco｜演说正文，全文可见。议会原文数字稿｜纳布科要求司法部长追查，以巴西公民权和奴役非法性为论点。 <https://www2.camara.leg.br/a-camara/documentos-e-pesquisa/arquivo/sites-tematicos/ano-joaquim-nabuco/pdfs-discursos/escravos-da-companhia-de-mineracao-morro-velho-1879>
+- **A17-S02**　University of Texas Libraries｜Saint John d’El Rey Mining Company Records｜19世纪｜档案馆收藏Saint John d'El Rey Mining Company Records｜馆藏说明、文件索引。企业档案目录｜原合同、董事会会议、主管信档。重点检索1845/1857、Thomas Walker、John Hockin、James Gordon。 <https://archives.lib.utexas.edu/repositories/4/resources/1011>
+- **A17-S03**　University of Birmingham｜Courtney J. Campbell, Making Abolition Brazilian｜现代发表｜机构库作者稿｜作者排版pp.8–15，图页9–16，尤其pp.9–10和15。研究，注有码头引档与判决材料｜列明合同、族谱/人数、James Gordon登记和法庭、释放日、补发工资。文件夹保留档案入口而非转收全文。 <https://pure-oai.bham.ac.uk/ws/portalfiles/portal/38125097/Campbell_Making_Abolition_Brazilian.pdf>
+- **A17-S04**　University of London Press｜Leslie Bethell, The decline and fall of slavery in Brazil｜现代发表｜Brazil: Essays on History and Politics｜第4章特别1879年辩论段。研究｜核纳布科演说及巴西废奴语境；矿上奴役总人数范围不是Cata Branca合同范围。 <https://read.uolpress.co.uk/read/brazil/section/6edef003-fbde-4bb8-813e-6aa932c8c182>
+- **A18-S01**　秘鲁中央储备银行｜W. M. Mathew, La firma inglesa Gibbs y el monopolio del guano en el Perú｜原研究1981，西语机构电子版｜BCRP书籍｜El comercio británico, 1850–1861 p.163起，目录另有采掘和合同。研究据商号账与官方档｜确认英国Gibbs商号在该出口市场的业务范围及秘鲁承包人权限。 <https://www.bcrp.gob.pe/docs/Publicaciones/libros/2020/la-firma-inglesa-gibbs-y-el-monopolio-del-guano-en-el-peru.pdf>
+- **A18-S02**　期刊研究｜The corporeal rift: from 19th-Century guano diggers to the present｜2024在线｜DOI 10.1080/23251042.2024.2425644；引FO 61/144｜正文历史部分及Sulivan相关注释。研究及外交原件入口｜1854年英国驻秘鲁领事所报英国船及代理参与须回到原函核定个体与授权。 <https://www.tandfonline.com/doi/full/10.1080/23251042.2024.2425644>
+- **A18-S03**　英国下议院｜Commons Chamber，涉及中国劳工的发言｜1872-02-16｜Hansard｜会议内检索Chincha／Peru／guano。同时代议会发言｜发言人转述有关劳动者境况的观察，地理及船名需从相应材料核。 <https://hansard.parliament.uk/commons/1872-02-16/debates/6e7cd7f4-837a-498c-9e79-b50619d40bb9/CommonsChamber>
+- **A18-S04**　秘鲁研究所 IEP｜Empresas británicas, economía y política en el Perú, 1850–1934｜机构电子版｜IEP研究书｜鸟粪章；检索Chincha、Gibbs、chinos。地方学术研究｜提供秘鲁官商及市场网络、对劳工人数需查看统计年份。 <https://repositorio.iep.org.pe/server/api/core/bitstreams/38d1544c-1693-404c-9a73-55563e17916d/content>
+- **A18-S05**　Canadian Centre for Architecture｜Inexhaustible Terrain，历史钦查照片｜约1865；机构释读｜馆藏摄影与说明｜Great Heap及工人题注。影像及现代释读｜证明矿区工作场景和地名用途；看不出企业指令或每人身份。 <https://www.cca.qc.ca/en/articles/issues/24/into-the-material-world/41431/inexhaustible-terrain>
+- **A33-S01**　University of London School of Advanced Study｜Jonathan Curry-Machado, Running from Albion: migration to Cuba｜现代研究｜SAS 3090｜印页8–10，对应数字图8–10附近；脚注27–33。研究及具名新档定位｜提供Thomson、Sam Clarke、Turnbull、抵押商号及各档号。 <https://sas-space.sas.ac.uk/3090/1/British_migration_to_Cuba.pdf>
+- **A33-S02**　英国殖民部／TNA｜Statement of James Thomson before Max. Aug. Baron v. Ketelhodt；Elgin to Lord Stanley No.69｜1844-03-22证言，1844-05-01转文｜CO 137/279｜S01 p.10 n.32；No.69附件。同时代证言定位，原件待逐行｜证人称逃至牙买加，报11处地产和Sam Clarke庄园的人数估计。 <https://discovery.nationalarchives.gov.uk/results/r?_q=CO%20137%2F279>
+- **A33-S03**　英国殖民部／TNA｜David Turnbull to Lord Stanley, Nassau｜1842-09-17｜CO 318/157｜S01 p.10 n.33。同时代领事相关报告定位｜学术据此提到28名涉案地产主；人物、体量与法律归属需逐件查。 <https://discovery.nationalarchives.gov.uk/results/r?_q=CO%20318%2F157>
+- **A33-S04**　Barings Archive｜Storey, Spalding & Co to Baring Brothers｜1850–1852｜HC4.6.10｜S01 p.10 n.31；来往函及抵押追债。商业档案目录｜研究据函称融资与违约后接管。具体条款是否包括被奴役者须见契约。 <https://baringarchive.org.uk/wp-content/uploads/2022/08/The-Baring-Archive_HC4.pdf>
+- **A33-S05**　University of London School of Advanced Study｜Jonathan Curry-Machado, Indispensable Aliens｜现代史学研究｜SAS 3091｜论文有关殖民地劳工、商号及英国领事章。研究、同时代档提示｜查FO 84/508、FO 72/664及同时代古巴本地材料；与S01同作者，汇考不可误作两名见证者。 <https://sas-space.sas.ac.uk/3091/2/Curry-Machado_thesis.pdf>
+- **A33-S06**　Cambridge University Press｜The Path to Sweet Success: Free and Unfree Labor in the Building of Roads and Rails in Havana, Cuba, 1790–1835｜2019｜International Review of Social History｜pp.149–171，合同、束缚劳工及西班牙政府制度。独立学术研究｜证实经济背景和地方工役类型。不能就此推具体英商给某条线路融资或征人。 <https://www.cambridge.org/core/journals/international-review-of-social-history/article/path-to-sweet-success-free-and-unfree-labor-in-the-building-of-roads-and-rails-in-havana-cuba-17901835/80E0453B56632BB27A8E3EDA75DF112C>
+- **A33-S07**　Slavery & Abolition｜Jonathan Curry-Machado, How Cuba burned with the ghosts of British slavery: race, abolition and the Escalera｜2004发表｜DOI 10.1080/0144039042000220937｜文中索James Thomson、Baron v. Ketelhodt与英领事。学术研究，同作者交叉，不作独立当事人材料｜回到逃离者证言和英国领事调查原位置，关联1844古巴处置史。 <https://www.tandfonline.com/doi/abs/10.1080/0144039042000220937>
+- **A58-S01**　巴西最高联邦法院数字馆｜Tratado de commercio, e navegação，Rio de Janeiro 19 fevereiro 1810｜1810-02-19｜数字馆馆藏项｜题名与全文，英葡贸易条款。原件目录及扫描入口｜条约为葡萄牙王室和英国之间；不要用同期另一份结盟条约代原文。 <https://bibliotecadigital.stf.jus.br/items/cdae59bb-b0a8-432c-af62-4a3b60ab03e9>
+- **A58-S02**　巴西众议院法规库｜Carta de Lei，26 fevereiro 1810｜1810-02-26｜Coleção de Leis do Império do Brasil｜批准与执行通商条约文书。原文件转录｜网页目录提要写18日；核条约签署页及批准正文均作19日，批准26日。 <https://www2.camara.leg.br/legin/fed/carlei_sn/anterioresa1824/cartadelei-39922-26-fevereiro-1810-571060-publicacaooriginal-94160-pe.html>
+- **A58-S03**　巴西帝国法令汇编｜Treaty of Amity and Commerce between Great Britain and Brazil｜1827-08-17签｜Collecção das Leis 1827 Parte II｜印pp.36–37，Art. XIX；印本前言及条约末。葡英同期对照法令汇编扫描｜英国本土及开放外贸的英殖民地合格货物，在巴西海关估价基础上税率不超15%；英领事对估价亦有条约程序。 <https://upload.wikimedia.org/wikipedia/commons/8/8d/Colleccao_leis_1827_parte2.pdf>
+- **A58-S04**　巴西国家图书馆Hemeroteca｜Publicador Maranhense印本｜1844｜Decreto 376 de 12 agosto 1844｜同期报纸刊录新税法。当期政令转载｜核条例与新税表生效，税率按货类列。 <https://hemeroteca-pdf.bn.gov.br/720089/per720089_1844_00218.pdf>
+- **A58-S05**　FUNAG巴西外交史研究｜Formação da diplomacia econômica no Brasil, vol.1｜学术出版｜FUNAG｜关税政策、英巴商约与1844调整章节。本地官方机构出版研究｜给贸易约实务、巴西政府政策和关税期限，进一步按港账核效果。 <https://funag.gov.br/loja/download/1212-Formacao-da-diplomacia-economica-no-brasil-VOL1.pdf>
+- **A-X05-S01**　UK Parliament｜The Outrage in Brazil｜1863-02-06｜英国外交部副国务大臣答复，扣5船段。同期议会记录｜扣船数量、赔偿和仲裁条件陈述。 <https://hansard.parliament.uk/commons/1863-02-06/debates/a11454b6-59c5-481f-9b1b-851358ac5f25/TheOutrageInBrazil>
+- **A-X05-S02**　巴西外交部 FUNAG｜Grã-Bretanha 双边关系史｜馆方数字版｜1860年代 Questão Christie 关系时间线。外交史机构整理｜巴西外交关系背景与处分。 <https://www.gov.br/funag/pt-br/chdd/historia-diplomatica/historia-das-relacoes-bilaterais-do-brasil/gra-bretanha>
+
+## 待完成正式出版门禁
+
+1. 与既有年代年表逐条核ID，避免重复点及同事异ID。
+2. 制作独立叙事章节并登记每段来源，不使用研究归档虚充公开稿。
+3. 精确点位未核时保留null，不凭现代港市位置推断旧炮台或矿井。
+4. 跑严格GIS、内容合同、桌面Chrome及Pages；成功后才能标记正式published/approved。
