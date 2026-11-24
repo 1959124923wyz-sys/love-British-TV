@@ -5175,6 +5175,70 @@
         "t44-1865-reserve-four-acre"
       ],
       "evidence_confidence": "archival_reference_and_historical_source"
+    },
+    {
+      "id": "E19-T45-1869-N-LANNE-DEATH",
+      "year": 1869,
+      "start_year": 1869,
+      "end_year": 1869,
+      "date_label": "1869年3月",
+      "name": "1869年3月：William Lanne在霍巴特去世",
+      "description": "William Lanne在霍巴特去世，殖民医疗机构、科学收藏者与原住民社群之间随即发生围绕其遗体的争执。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": -42.8821,
+      "lng": 147.3272,
+      "geo_precision": "named_place_reference",
+      "source_ids": [
+        "19C-T45-HOB-LANNE",
+        "19C-T45-HOB-GEO"
+      ],
+      "source_urls": [
+        "https://www.hobartcity.com.au/Things-To-Do/Arts-and-culture/Creative-Hobart-projects/Crowther-Reinterpreted",
+        "https://ungegn.un.org/dashboard/cities/details?id=534"
+      ],
+      "research_original_node_ids": [
+        "C66-E01"
+      ],
+      "significance": {
+        "level": "high",
+        "reason": "T45 source-linked documented historical event"
+      },
+      "historical_boundary_confirmed": false,
+      "exclude_from_area_aggregation": true
+    },
+    {
+      "id": "E19-T45-1869-N-LANNE-REMAINS",
+      "year": 1869,
+      "start_year": 1869,
+      "end_year": 1869,
+      "date_label": "1869年",
+      "name": "1869年：殖民外科医生侵夺William Lanne遗骸",
+      "description": "霍巴特市政府公共史确认，殖民外科医生William Crowther在兰恩死后侵夺其遗骸，并涉及头骨被盗。",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": -42.8821,
+      "lng": 147.3272,
+      "geo_precision": "named_place_reference",
+      "source_ids": [
+        "19C-T45-HOB-LANNE",
+        "19C-T45-HOB-GEO"
+      ],
+      "source_urls": [
+        "https://www.hobartcity.com.au/Things-To-Do/Arts-and-culture/Creative-Hobart-projects/Crowther-Reinterpreted",
+        "https://ungegn.un.org/dashboard/cities/details?id=534"
+      ],
+      "research_original_node_ids": [
+        "C66-E02",
+        "C66-E03",
+        "C66-E04"
+      ],
+      "significance": {
+        "level": "high",
+        "reason": "T45 source-linked documented historical event"
+      },
+      "historical_boundary_confirmed": false,
+      "exclude_from_area_aggregation": true
     }
   ],
   "routes": [
@@ -8408,6 +8472,22 @@
       "label": "Nineteenth-century maritime narrative｜Diego Garcia and Egmont Islands, separate atoll and plantation descriptions",
       "url": "https://mc.dlib.nyu.edu/files/books/fales_io_book000032/fales_io_book000032_lo.pdf",
       "access": "与M06为同一原书不同研究入口，不当独立证词；1881人口/椰油统计源"
+    },
+    {
+      "id": "19C-T45-HOB-LANNE",
+      "publisher": "City of Hobart",
+      "title": "Crowther Reinterpreted",
+      "label": "City of Hobart｜Crowther Reinterpreted",
+      "url": "https://www.hobartcity.com.au/Things-To-Do/Arts-and-culture/Creative-Hobart-projects/Crowther-Reinterpreted",
+      "access": "市公共史，兰恩生平及1869年遗骸侵夺，检索摘要核实"
+    },
+    {
+      "id": "19C-T45-HOB-GEO",
+      "publisher": "UNGEGN",
+      "title": "Hobart city gazetteer",
+      "label": "UNGEGN｜Hobart city gazetteer",
+      "url": "https://ungegn.un.org/dashboard/cities/details?id=534",
+      "access": "沿用主站19C33-TAS-HOB-GEO霍巴特城市参考点"
     }
   ]
 }
