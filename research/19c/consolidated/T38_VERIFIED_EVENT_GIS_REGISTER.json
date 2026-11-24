@@ -1,0 +1,916 @@
+{
+  "topic": "T38",
+  "story_id": "E19-T38-CAPE-FRONTIER-DISPOSSESSION-LABOUR-1850-1899",
+  "article_file": "data/stories/serial/e19-t38-cape-frontier-dispossession-labour-1850-1899.json",
+  "links": [
+    {
+      "id": "E19-X8-1850-BLINKWATER",
+      "year": 1850,
+      "chapter": "T38.1",
+      "original_refs": [
+        "C08-E24"
+      ],
+      "reuse_existing": true
+    },
+    {
+      "id": "E19-X8-1851-ARMSTRONG-LOOT",
+      "year": 1851,
+      "chapter": "T38.1",
+      "original_refs": [
+        "C08-E04"
+      ],
+      "reuse_existing": true
+    },
+    {
+      "id": "E19-X8-1852-WATERKLOOF-CIVILIANS",
+      "year": 1852,
+      "chapter": "T38.1",
+      "original_refs": [
+        "C08-E05"
+      ],
+      "reuse_existing": true
+    },
+    {
+      "id": "E19-X8-1852-BOTHA",
+      "year": 1852,
+      "chapter": "T38.1",
+      "original_refs": [
+        "C08-E26"
+      ],
+      "reuse_existing": true
+    },
+    {
+      "id": "E19-T38-1855-C08-E28",
+      "year": 1855,
+      "chapter": "T38.1",
+      "original_refs": [
+        "C08-E28"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1862-C08-E29",
+      "year": 1862,
+      "chapter": "T38.1",
+      "original_refs": [
+        "C08-E29"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1865-C08-E30",
+      "year": 1865,
+      "chapter": "T38.1",
+      "original_refs": [
+        "C08-E30"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1856-C13-E01",
+      "year": 1856,
+      "chapter": "T38.2",
+      "original_refs": [
+        "C13-E01"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1857-C13-E02",
+      "year": 1857,
+      "chapter": "T38.2",
+      "original_refs": [
+        "C13-E02"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1857-C13-E03",
+      "year": 1857,
+      "chapter": "T38.2",
+      "original_refs": [
+        "C13-E03"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1857-C13-E04",
+      "year": 1857,
+      "chapter": "T38.2",
+      "original_refs": [
+        "C13-E04"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1866-C13-E07",
+      "year": 1866,
+      "chapter": "T38.2",
+      "original_refs": [
+        "C13-E07"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1894-C60-E01",
+      "year": 1894,
+      "chapter": "T38.3",
+      "original_refs": [
+        "C60-E01"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1894-C60-E02",
+      "year": 1894,
+      "chapter": "T38.3",
+      "original_refs": [
+        "C60-E02"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1894-C60-E03",
+      "year": 1894,
+      "chapter": "T38.3",
+      "original_refs": [
+        "C60-E03"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1894-C60-E04",
+      "year": 1894,
+      "chapter": "T38.3",
+      "original_refs": [
+        "C60-E04"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1895-C48-E01",
+      "year": 1895,
+      "chapter": "T38.3",
+      "original_refs": [
+        "C48-E01"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1897-C48-E05",
+      "year": 1897,
+      "chapter": "T38.3",
+      "original_refs": [
+        "C48-E05"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1897-C48-E06",
+      "year": 1897,
+      "chapter": "T38.3",
+      "original_refs": [
+        "C48-E06"
+      ],
+      "reuse_existing": false
+    },
+    {
+      "id": "E19-T38-1897-C48-E07",
+      "year": 1897,
+      "chapter": "T38.3",
+      "original_refs": [
+        "C48-E07"
+      ],
+      "reuse_existing": false
+    }
+  ],
+  "events": [
+    {
+      "id": "E19-T38-1855-C08-E28",
+      "year": 1855,
+      "start_year": 1855,
+      "end_year": 1855,
+      "visible_from": 1855,
+      "date_label": "1855年",
+      "name": "Botha获得附返乡限制的赦免",
+      "description": "1855年10月Botha与另外38人获皇家赦免，但附有不得返回卡特河条件。 结束刑罚并未恢复原居住及地权，被赦免者仍须在殖民行政许可范围内安排生活。",
+      "short_description": "1855年10月Botha与另外38人获皇家赦免，但附有不得返回卡特河条件。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-D32",
+        "19C-T38-D33"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C08-E28"
+      ],
+      "research_original_node_ids": [
+        "C08-E28"
+      ]
+    },
+    {
+      "id": "E19-T38-1862-C08-E29",
+      "year": 1862,
+      "start_year": 1862,
+      "end_year": 1862,
+      "visible_from": 1862,
+      "date_label": "1862年",
+      "name": "Botha获得卡特河地权赔偿",
+      "description": "博物馆研究记载1862年6月Botha据报获赔339英镑10先令8便士，其申请为卡特河赔偿调查早期案件。 研究另记战争后158宗被指反抗者土地和83宗空置地被没收，居民地权进入殖民行政处分和补偿程序。",
+      "short_description": "博物馆研究记载1862年6月Botha据报获赔339英镑10先令8便士，其申请为卡特河赔偿调查早期案件。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-D33"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C08-E29"
+      ],
+      "research_original_node_ids": [
+        "C08-E29"
+      ]
+    },
+    {
+      "id": "E19-T38-1865-C08-E30",
+      "year": 1865,
+      "start_year": 1865,
+      "end_year": 1865,
+      "visible_from": 1865,
+      "date_label": "1865年",
+      "name": "Botha获准返回卡特河",
+      "description": "1865年殖民当局批复Botha返回卡特河的请求。 获赦多年后仍须许可才能回到原社区，说明战后居住与迁移权继续受殖民行政限制。",
+      "short_description": "1865年殖民当局批复Botha返回卡特河的请求。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-D33"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C08-E30"
+      ],
+      "research_original_node_ids": [
+        "C08-E30"
+      ]
+    },
+    {
+      "id": "E19-T38-1856-C13-E01",
+      "year": 1856,
+      "start_year": 1856,
+      "end_year": 1856,
+      "visible_from": 1856,
+      "date_label": "1856年",
+      "name": "英属卡弗拉里亚强化欧洲治安官治理",
+      "description": "1856年总督乔治·格雷时期治理调整包括指派欧洲治安官进入当地首领的政治事务。 此前土地损失、牲畜疫病及殖民压力使科萨社会面临危机，地方政治权威亦受到行政干预。",
+      "short_description": "1856年总督乔治·格雷时期治理调整包括指派欧洲治安官进入当地首领的政治事务。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-C13-S01",
+        "19C-T38-C13-S03"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C13-E01"
+      ],
+      "research_original_node_ids": [
+        "C13-E01"
+      ]
+    },
+    {
+      "id": "E19-T38-1857-C13-E02",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "visible_from": 1857,
+      "date_label": "1857年",
+      "name": "救济配给与劳动条件相联系",
+      "description": "1857年格雷政府把提供劳动作为救济配给的重要条件，在科萨粮荒期间组织公共工程及用工安排。 殖民政府将取得食物与劳动供给联系，使生存危机成为推动人口进入殖民用工体系的条件。",
+      "short_description": "1857年格雷政府把提供劳动作为救济配给的重要条件，在科萨粮荒期间组织公共工程及用工安排。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-C13-S01",
+        "19C-T38-C13-S03"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C13-E02"
+      ],
+      "research_original_node_ids": [
+        "C13-E02"
+      ]
+    },
+    {
+      "id": "E19-T38-1857-C13-E03",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "visible_from": 1857,
+      "date_label": "1857年",
+      "name": "科萨劳工被登记输送至开普",
+      "description": "地方历史研究引述1857年6月统计，涉及13,137名进入开普殖民地的科萨劳工。 灾时人口迁移与劳动安排改变家庭生计，为殖民农业及其他雇主提供劳动力。",
+      "short_description": "地方历史研究引述1857年6月统计，涉及13,137名进入开普殖民地的科萨劳工。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-C13-S01",
+        "19C-T38-C13-S03"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C13-E03"
+      ],
+      "research_original_node_ids": [
+        "C13-E03"
+      ]
+    },
+    {
+      "id": "E19-T38-1857-C13-E04",
+      "year": 1857,
+      "start_year": 1857,
+      "end_year": 1857,
+      "visible_from": 1857,
+      "date_label": "1857年",
+      "name": "年末科萨劳工注册统计",
+      "description": "历史学者J. B. Peires引述1857年末开普登记劳作的科萨人数为29,142。 劳动登记使殖民行政及雇主管理来自灾区的人群，其选择雇主、离开合同和返乡的自由需要逐人查档。",
+      "short_description": "历史学者J. B. Peires引述1857年末开普登记劳作的科萨人数为29,142。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-C13-S02"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C13-E04"
+      ],
+      "research_original_node_ids": [
+        "C13-E04"
+      ]
+    },
+    {
+      "id": "E19-T38-1866-C13-E07",
+      "year": 1866,
+      "start_year": 1866,
+      "end_year": 1866,
+      "visible_from": 1866,
+      "date_label": "1866年",
+      "name": "英属卡弗拉里亚并入开普殖民地",
+      "description": "1866年英属卡弗拉里亚并入开普殖民地，地方行政与开普政府制度进一步整合。威廉王城与东伦敦为原研究卷标出的行政地理节点。 这一变化发生在多年战争、饥荒及劳工迁移之后，殖民制度继续调整当地政治与土地关系。",
+      "short_description": "1866年英属卡弗拉里亚并入开普殖民地，地方行政与开普政府制度进一步整合。威廉王城与东伦敦为原研究卷标出的行政地理节点。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": -32.88075918,
+      "lng": 27.3937654,
+      "source_ids": [
+        "19C-T38-C13-S04",
+        "19C-T38-G-QONCE"
+      ],
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C13-E07"
+      ],
+      "research_original_node_ids": [
+        "C13-E07"
+      ]
+    },
+    {
+      "id": "E19-T38-1894-C60-E01",
+      "year": 1894,
+      "start_year": 1894,
+      "end_year": 1894,
+      "visible_from": 1894,
+      "date_label": "1894年",
+      "name": "罗得斯阐述土地与劳动政策",
+      "description": "1894年7月30日开普总理塞西尔·罗得斯在议会阐述格伦格雷土地与劳动政策。 限制土地取得及鼓励外出受雇有助于扩大商业农业与工业的劳动供给，土地政策与用工目标相连。",
+      "short_description": "1894年7月30日开普总理塞西尔·罗得斯在议会阐述格伦格雷土地与劳动政策。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": -33.92584,
+      "lng": 18.42322,
+      "source_ids": [
+        "19C-T38-C60-S01",
+        "19C-T38-C60-S05",
+        "19C-T38-G-CAPE"
+      ],
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C60-E01"
+      ],
+      "research_original_node_ids": [
+        "C60-E01"
+      ]
+    },
+    {
+      "id": "E19-T38-1894-C60-E02",
+      "year": 1894,
+      "start_year": 1894,
+      "end_year": 1894,
+      "visible_from": 1894,
+      "date_label": "1894年",
+      "name": "格伦格雷法限制土地及投票权",
+      "description": "1894年格伦格雷法采用个体小宗土地分配，改变原有习惯土地安排，依此产权不能作为取得财产投票资格的依据。 制度改变家庭生产和资源利用条件，同时影响非洲居民参与殖民政治的机会。",
+      "short_description": "1894年格伦格雷法采用个体小宗土地分配，改变原有习惯土地安排，依此产权不能作为取得财产投票资格的依据。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-C60-S03",
+        "19C-T38-C60-S04"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C60-E02"
+      ],
+      "research_original_node_ids": [
+        "C60-E02"
+      ]
+    },
+    {
+      "id": "E19-T38-1894-C60-E03",
+      "year": 1894,
+      "start_year": 1894,
+      "end_year": 1894,
+      "visible_from": 1894,
+      "date_label": "1894年",
+      "name": "格伦格雷法设置十先令劳动税",
+      "description": "格伦格雷法规定附条件十先令劳动税，将证明符合规定的雇佣劳动等列入免税安排。 不能满足用工条件者面对额外税务压力，殖民政府借财政措施推动居民进入商业用工体系。",
+      "short_description": "格伦格雷法规定附条件十先令劳动税，将证明符合规定的雇佣劳动等列入免税安排。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-C60-S01",
+        "19C-T38-C60-S06",
+        "19C-T38-C60-S07"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C60-E03"
+      ],
+      "research_original_node_ids": [
+        "C60-E03"
+      ]
+    },
+    {
+      "id": "E19-T38-1894-C60-E04",
+      "year": 1894,
+      "start_year": 1894,
+      "end_year": 1894,
+      "visible_from": 1894,
+      "date_label": "1894年",
+      "name": "非洲报刊刊载反对格伦格雷法意见",
+      "description": "1894年9月5日非洲人报刊《Imvo Zabantsundu》刊载有关格伦格雷法及其他原住民法规的意见。报刊所在地为威廉王城。 地方报刊提供立法对象的公开回应，是英国议会及殖民行政档案之外的重要视角。",
+      "short_description": "1894年9月5日非洲人报刊《Imvo Zabantsundu》刊载有关格伦格雷法及其他原住民法规的意见。报刊所在地为威廉王城。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": -32.88075918,
+      "lng": 27.3937654,
+      "source_ids": [
+        "19C-T38-C60-S02",
+        "19C-T38-G-QONCE"
+      ],
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C60-E04"
+      ],
+      "research_original_node_ids": [
+        "C60-E04"
+      ]
+    },
+    {
+      "id": "E19-T38-1895-C48-E01",
+      "year": 1895,
+      "start_year": 1895,
+      "end_year": 1895,
+      "visible_from": 1895,
+      "date_label": "1895年",
+      "name": "开普兼并英属贝专纳兰直辖殖民地",
+      "description": "1895年11月16日英属贝专纳兰直辖殖民地并入开普，Tlhaping、Tlharo等社群进入新行政体系。 兼并后保留地、牲畜管理与殖民定居者土地需求的冲突更加突出。",
+      "short_description": "1895年11月16日英属贝专纳兰直辖殖民地并入开普，Tlhaping、Tlharo等社群进入新行政体系。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-C48-S01",
+        "19C-T38-C48-S02"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C48-E01"
+      ],
+      "research_original_node_ids": [
+        "C48-E01"
+      ]
+    },
+    {
+      "id": "E19-T38-1897-C48-E05",
+      "year": 1897,
+      "start_year": 1897,
+      "end_year": 1897,
+      "visible_from": 1897,
+      "date_label": "1897年",
+      "name": "兰格贝赫战争后集中押送居民",
+      "description": "南非史学者Snyman引原卷称战争后3,793人投降，1,896人最终被送往开普敦。投降者随后被集中送往库鲁曼和弗赖堡，再经历跨地押送。 集中、移送及分派劳动改变被拘居民及其家属的居住和劳动条件，同期非洲报刊批评这些处置。",
+      "short_description": "南非史学者Snyman引原卷称战争后3,793人投降，1,896人最终被送往开普敦。投降者随后被集中送往库鲁曼和弗赖堡，再经历跨地押送。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": -27.46353348,
+      "lng": 23.4355159,
+      "source_ids": [
+        "19C-T38-C48-S01",
+        "19C-T38-C48-S03",
+        "19C-T38-G-KURUMAN"
+      ],
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C48-E05"
+      ],
+      "research_original_node_ids": [
+        "C48-E05"
+      ]
+    },
+    {
+      "id": "E19-T38-1897-C48-E06",
+      "year": 1897,
+      "start_year": 1897,
+      "end_year": 1897,
+      "visible_from": 1897,
+      "date_label": "1897年",
+      "name": "保留地被公告改列王室土地",
+      "description": "1897年9月30日开普当局依据第17号法和第419号公告，将Deben、Kathu及兰格贝赫部分保留地改列王室土地。 战后地权处分削弱非洲社群原有保留地权利，为重新丈量、划分农场和殖民定居创造条件。",
+      "short_description": "1897年9月30日开普当局依据第17号法和第419号公告，将Deben、Kathu及兰格贝赫部分保留地改列王室土地。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "19C-T38-C48-S01",
+        "19C-T38-C48-S05"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C48-E06"
+      ],
+      "research_original_node_ids": [
+        "C48-E06"
+      ]
+    },
+    {
+      "id": "E19-T38-1897-C48-E07",
+      "year": 1897,
+      "start_year": 1897,
+      "end_year": 1897,
+      "visible_from": 1897,
+      "date_label": "1897年",
+      "name": "部分被押送者遭五年劳工契约安排",
+      "description": "1897年末至1898年开普殖民行政对部分被押送者安排五年劳工契约，涉及开普敦和开普西部雇主。 拘押移送后的分派将原本与地方土地及社区相联系的人群纳入殖民农业用工，家属和病弱人员亦受影响。",
+      "short_description": "1897年末至1898年开普殖民行政对部分被押送者安排五年劳工契约，涉及开普敦和开普西部雇主。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": -33.92584,
+      "lng": 18.42322,
+      "source_ids": [
+        "19C-T38-C48-S01",
+        "19C-T38-C48-S03",
+        "19C-T38-C48-S05",
+        "19C-T38-G-CAPE"
+      ],
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民政策、财产及劳动关系史事"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": [
+        "C48-E07"
+      ],
+      "research_original_node_ids": [
+        "C48-E07"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T38-1890-CAPE",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.42322,
+          -33.92584
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T38-1890-CAPE",
+        "stable_id": "GIS-19C-T38-1890-CAPE",
+        "name": "开普敦",
+        "display_kind": "documentary",
+        "start_year": 1894,
+        "end_year": 1897,
+        "related_event_ids": [
+          "E19-T38-1894-C60-E01",
+          "E19-T38-1897-C48-E07"
+        ],
+        "source_ids": [
+          "19C-T38-C60-S01",
+          "19C-T38-C60-S05",
+          "19C-T38-C48-S01",
+          "19C-T38-C48-S03",
+          "19C-T38-C48-S05",
+          "19C-T38-G-CAPE"
+        ],
+        "source_urls": [
+          "https://www.geonames.org/3369157/cape-town.html",
+          "https://sahistory.org.za/archive/glen-grey-act-native-issue-cecil-john-rhodes-july-30-1894-cape-house-parliament",
+          "https://researchrepository.ru.ac.za/items/59f2d254-8a20-4e57-9e5b-9cc57ad11126",
+          "https://repository.nwu.ac.za/server/api/core/bitstreams/712d03ec-aa5c-4950-94bb-65cb6c719569/content",
+          "https://emandulo.apc.uct.ac.za/collection/Imvo/Typescripts/1897/IMVO_1897-08-26.pdf",
+          "https://www.bristol.ac.uk/media-library/sites/history/documents/dissertations/Josh_Vallance2016.pdf"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "开普东部边疆战争、夺地与劳工输送：具名城市参照",
+        "named_anchors": [
+          "开普敦"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/3369157/cape-town.html",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T38-1860-QONCE",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.3937654,
+          -32.88075918
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T38-1860-QONCE",
+        "stable_id": "GIS-19C-T38-1860-QONCE",
+        "name": "威廉王城（Qonce）",
+        "display_kind": "documentary",
+        "start_year": 1866,
+        "end_year": 1866,
+        "related_event_ids": [
+          "E19-T38-1866-C13-E07"
+        ],
+        "source_ids": [
+          "19C-T38-C13-S04",
+          "19C-T38-G-QONCE"
+        ],
+        "source_urls": [
+          "https://sahistory.org.za/place/british-kaffraria-now-border-region",
+          "https://www.geonames.org/advanced-search.html?q=Cape+Town"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "开普东部边疆战争、夺地与劳工输送：具名地点参照",
+        "named_anchors": [
+          "威廉王城（Qonce）"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/advanced-search.html?q=Cape+Town",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T38-1890-QONCE",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.3937654,
+          -32.88075918
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T38-1890-QONCE",
+        "stable_id": "GIS-19C-T38-1890-QONCE",
+        "name": "威廉王城（Qonce）",
+        "display_kind": "documentary",
+        "start_year": 1894,
+        "end_year": 1894,
+        "related_event_ids": [
+          "E19-T38-1894-C60-E04"
+        ],
+        "source_ids": [
+          "19C-T38-C60-S02",
+          "19C-T38-G-QONCE"
+        ],
+        "source_urls": [
+          "https://emandulo.apc.uct.ac.za/collection/Imvo/Typescripts/1894/IMVO_1894-09-05.pdf",
+          "https://www.geonames.org/advanced-search.html?q=Cape+Town"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "开普东部边疆战争、夺地与劳工输送：具名地点参照",
+        "named_anchors": [
+          "威廉王城（Qonce）"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/advanced-search.html?q=Cape+Town",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T38-1890-KURUMAN",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.4355159,
+          -27.46353348
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T38-1890-KURUMAN",
+        "stable_id": "GIS-19C-T38-1890-KURUMAN",
+        "name": "库鲁曼",
+        "display_kind": "documentary",
+        "start_year": 1897,
+        "end_year": 1897,
+        "related_event_ids": [
+          "E19-T38-1897-C48-E05"
+        ],
+        "source_ids": [
+          "19C-T38-C48-S01",
+          "19C-T38-C48-S03",
+          "19C-T38-G-KURUMAN"
+        ],
+        "source_urls": [
+          "https://repository.nwu.ac.za/server/api/core/bitstreams/712d03ec-aa5c-4950-94bb-65cb6c719569/content",
+          "https://emandulo.apc.uct.ac.za/collection/Imvo/Typescripts/1897/IMVO_1897-08-26.pdf",
+          "https://www.geonames.org/search.html?country=ZA&q=Kapa+Leboa&startRow=50"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "开普东部边疆战争、夺地与劳工输送：具名地点参照",
+        "named_anchors": [
+          "库鲁曼"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/search.html?country=ZA&q=Kapa+Leboa&startRow=50",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    }
+  ]
+}
