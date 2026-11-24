@@ -1,0 +1,56 @@
+name: 19C T04 T06 T15 T26 Caribbean India and China publication GIS
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/index.json'
+      - 'data/stories/serial/e19-t04-*.json'
+      - 'data/stories/serial/e19-t06-*.json'
+      - 'data/stories/serial/e19-t15-*.json'
+      - 'data/stories/serial/e19-t26-*.json'
+      - 'research/19c/consolidated/T04*'
+      - 'research/19c/consolidated/T06*'
+      - 'scripts/test_19c_t04_t06.cjs'
+      - 'scripts/browser_19c_t04_t06.py'
+      - '.github/workflows/19c-t04-t06-t15-t26.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  primary-source-and-gis:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 49 new-story links and 133 existing-story links
+        run: |
+          node scripts/test_19c_t04_t06.cjs
+          node scripts/test_19c_t15_topic_map.cjs
+          node scripts/test_19c_t26_topic_map.cjs
+          python3 research/19c/consolidated/verify.py
+          python3 research/19c/consolidated/verify_handoff.py
+          python3 scripts/audit_spatial_semantics.py --strict
+          node scripts/test_serial_story_contract.js
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
+  independent-true-desktop-chrome:
+    needs: primary-source-and-gis
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-t04-t26.log 2>&1 &
+          python3 scripts/browser_19c_t04_t06.py
+          python3 scripts/browser_19c_t15_topic.py
+          python3 scripts/browser_19c_t26_topic.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t04-t06-t15-t26-independent-chrome
+          path: browser-smoke-results/19c-t*.png
+          if-no-files-found: ignore

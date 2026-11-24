@@ -9,7 +9,7 @@ const story=load('data/stories/serial/e19-t26-opium-wars-china-treaty-ports-1839
 const index=load('data/stories/serial/index.json');
 const meta=index.topics.find(x=>x.id===topicID);
 assert(meta&&story.id===topicID&&meta.article_file.endsWith('e19-t26-opium-wars-china-treaty-ports-1839-1899.json'));
-assert.equal(meta.status,'editorial_review');assert.equal(meta.publication_review,'not_submitted');
+assert.equal(meta.status,'published');assert.equal(meta.publication_review,'approved');
 assert.equal(story.sections.length,14);
 assert.equal(story.sections.reduce((n,s)=>n+s.paragraphs.length,0),44);
 assert.equal(story.sources.length,29);

@@ -14,7 +14,7 @@ driver=webdriver.Chrome(options=options)
 wait=WebDriverWait(driver,95)
 script=lambda code,*args:driver.execute_script(code,*args)
 try:
-    driver.get(os.environ.get("ATLAS_TEST_URL","http://127.0.0.1:8765/")+"?review19c=1&year=1857")
+    driver.get(os.environ.get("ATLAS_TEST_URL","http://127.0.0.1:8765/")+"?year=1857")
     wait.until(lambda _:script("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
     wait.until(lambda _:script("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById('E19-T15-1857-BANARAS-DISARM')"))
     for id in ("E19-T15-1857-BANARAS-DISARM","E19-T15-1857-ALLAHABAD-LETTER","E19-T15-1858-JHANSI-STORM"):
