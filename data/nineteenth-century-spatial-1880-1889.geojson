@@ -5635,6 +5635,92 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true
       }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T27-E19-T27-1888-B64-E01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17469,
+          22.27832
+        ]
+      },
+      "properties": {
+        "stable_id": "GIS-19C-T27-E19-T27-1888-B64-E01",
+        "name": "香港市区 · 欧洲人保留区限制华式住宅",
+        "start_year": 1888,
+        "end_year": 1888,
+        "display_kind": "administrative",
+        "summary_zh": "香港古物古迹办事处的历史环境评估记载，1888年政府在维多利亚城划出欧洲人保留区，威灵顿街与坚道之间不得新建华式多户住宅。报告同时说明1904年山顶住宅法规另属一个时期和适用区域。",
+        "source_ids": [
+          "19C-T27-B64-S03",
+          "19C-T27-GEO-HK"
+        ],
+        "source_urls": [
+          "https://www.amo.gov.hk/filemanager/amo/common/form/HIA_Report_HPM.pdf",
+          "https://www.geonames.org/search.html?country=HK"
+        ],
+        "related_event_ids": [
+          "E19-T27-1888-B64-E01"
+        ],
+        "named_anchors": [
+          "香港市区"
+        ],
+        "mapping_method": "具名现代地点参考，不作历史边界",
+        "geometry_source": "https://www.geonames.org/search.html?country=HK",
+        "geo_precision": "modern_named_locality_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T29-E19-T29-1888-B28-E01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.3996,
+          3.4836
+        ]
+      },
+      "properties": {
+        "stable_id": "GIS-19C-T29-E19-T29-1888-B28-E01",
+        "name": "北根（Pekan） · 彭亨驻扎官进入地方政务",
+        "start_year": 1888,
+        "end_year": 1888,
+        "display_kind": "administrative",
+        "summary_zh": "彭亨接受英国驻扎官安排，殖民顾问体系开始更深入地介入当地行政。",
+        "source_ids": [
+          "19C-T29-B28-S01",
+          "19C-T29-B28-S02",
+          "19C-T29-T29-PAHANG-CUP",
+          "19C-T29-GEO-B28-E01"
+        ],
+        "source_urls": [
+          "https://www.arkib.gov.my/images/penerbitan/edaran%20awam/puspawangsa/Buletin%20Puspawangsa%20Bil.%202%20Tahun%202022.pdf",
+          "https://gambang.pulasan.my/_media/gambang/a_history_of_pahang_w._linehan_may_1936.pdf",
+          "https://www.cambridge.org/core/books/abs/challenging-cosmopolitanism/bordering-malayas-benighted-lands-frontiers-of-race-and-colonialism-on-the-malay-peninsula-18871902/B8128A92EAD15100668ED2DEC98E43ED",
+          "https://www.geonames.org/advanced-search.html?country=MY&featureClass=P&q=&startRow=100"
+        ],
+        "related_event_ids": [
+          "E19-T29-1888-B28-E01"
+        ],
+        "named_anchors": [
+          "北根（Pekan）"
+        ],
+        "mapping_method": "地方行政中心参考；非驻扎官办公室",
+        "geometry_source": "https://www.geonames.org/advanced-search.html?country=MY&featureClass=P&q=&startRow=100",
+        "geo_precision": "modern_named_locality_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
     }
   ]
 }
