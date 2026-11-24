@@ -1,5 +1,7 @@
 # T47 澳大利亚原住民拘禁、强迁与劳工管制：史料和GIS审计
 
+**正式出版验证（2026-11-24）：** 制作PR #556 已合并；独立正式出版PR [#558](https://github.com/1959124923wyz-sys/love-British-TV/pull/558) 11/11全部成功，main `a51b8a4d502fdc54ea9ab2ce9ac858339fef64a7`。独立普通年份真实1780×1020 Chrome [#45308849182](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45308849182) 静态与桌面双成功；[Pages #45309244116](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45309244116) build/deploy双成功。旧待核线索继续保存。
+
 制作态：editorial_review / not_submitted。三章35节105段，30项来源登记（20历史、10地理），35事件链接（30新增、5复用），19个分年代具名参考点，5个新增事件无坐标。旧原研究51事件、35史料及55制图线索不删。原始案例与采用事件见 T47_CASE_CROSSWALK.json。
 
 ## 史料分级与数据口径
