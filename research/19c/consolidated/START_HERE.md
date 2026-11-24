@@ -1,3 +1,5 @@
+**2026-11-24 T53制作候审：** 三章29节87段25来源29新事件13分年代GIS点；制作候审，专项CI及独立出版待核。分支 `feat/19c-t53-canada-treaties-reserve-pass-20261124`，保留原52事件、31史料及45GIS线索。详 [T53源证据GIS审计](../../../docs/research/19C_T53_CANADA_TREATIES_RESERVE_PASS_GIS_AUDIT.md) 和 [追档](T53_NEXT_ACTIONS.md)。正式出版须核验。
+
 **2026-11-24 R3 T45、T47、T51正式出版并部署：** [制作#555](https://github.com/1959124923wyz-sys/love-British-TV/pull/555)、[制作#556](https://github.com/1959124923wyz-sys/love-British-TV/pull/556)、[制作#557](https://github.com/1959124923wyz-sys/love-British-TV/pull/557)，[独立出版#558](https://github.com/1959124923wyz-sys/love-British-TV/pull/558) 11/11全绿合并`a51b8a4d502fdc54ea9ab2ce9ac858339fef64a7`，[Pages#45309244116](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45309244116) build/deploy双成功。三篇普通年份1780×1020真实Chrome全部通过；共101节303段、101互动、38分年代具名GIS参考Point。
 
 - T45：制作#555合并26a2876e；正式出版#558合并a51b8a4d；Pages#45309244116 build/deploy双成功；2章34节102段23来源34互动(16新18复用)及6分年代参考点。真实1780×1020普通年份Chrome通过。未核原卷及地理细节见T45_NEXT_ACTIONS.md。
