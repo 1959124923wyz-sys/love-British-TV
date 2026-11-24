@@ -1,0 +1,15 @@
+name: 19C T07 browser bootstrap diagnostic
+on:
+  pull_request:
+    paths: ['scripts/diagnose_19c_t07_browser.py', '.github/workflows/19c-t07-browser-diag.yml']
+jobs:
+  diagnosis:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/19c-diag-http.log 2>&1 &
+          python3 scripts/diagnose_19c_t07_browser.py
