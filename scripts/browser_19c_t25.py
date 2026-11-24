@@ -13,7 +13,7 @@ driver=webdriver.Chrome(options=opts)
 wait=WebDriverWait(driver,90)
 js=lambda code,*args:driver.execute_script(code,*args)
 topics=[
- ("E19-T25-PERSIAN-CONCESSIONS-CYPRUS-TRIBUTE-1872-1892",1872,"E19-T25-1872-B44-E01","E19-T25-1892-B38-E06",1892,12),
+ ("E19-T25-PERSIAN-CONCESSIONS-CYPRUS-TRIBUTE-1872-1892",1872,"E19-T25-1872-B44-E01","E19-T25-1892-B38-E06",1892,13),
 ]
 idx=json.loads((root/'data/stories/serial/index.json').read_text('utf8'))
 base=os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/').rstrip('/')+'/'

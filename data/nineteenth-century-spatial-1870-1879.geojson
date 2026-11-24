@@ -5230,6 +5230,49 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true
       }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T25-E19-T25-1878-NICOSIA-ADMIN",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.35397,
+          35.17284
+        ]
+      },
+      "properties": {
+        "stable_id": "GIS-19C-T25-E19-T25-1878-NICOSIA-ADMIN",
+        "name": "尼科西亚 · 英国在尼科西亚建立行政驻点",
+        "start_year": 1878,
+        "end_year": 1878,
+        "display_kind": "administrative",
+        "summary_zh": "尼科西亚市政府的历史资料记载，1878年7月英国接管塞浦路斯行政，尼科西亚出现英国驻军。第一任高级专员在城外修道院附近建立行政工作地点。",
+        "source_ids": [
+          "19C-T25-NICOSIA-HIST",
+          "19C-T25-NICOSIA-GEO",
+          "19C-T25-B61-S01"
+        ],
+        "source_urls": [
+          "https://history.state.gov/historicaldocuments/frus1878/d521",
+          "https://www.nicosia.org.cy/en-GB/discover/nicosia/nicosia/british/",
+          "https://www.geonames.org/146268/nicosia.html"
+        ],
+        "related_event_ids": [
+          "E19-T25-1878-NICOSIA-ADMIN"
+        ],
+        "named_anchors": [
+          "尼科西亚"
+        ],
+        "mapping_method": "现代城市参考；不代表1878年历史驻地或行政范围",
+        "geometry_source": "https://www.geonames.org/146268/nicosia.html",
+        "geo_precision": "modern_named_locality_reference_not_historic_site",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
     }
   ]
 }
