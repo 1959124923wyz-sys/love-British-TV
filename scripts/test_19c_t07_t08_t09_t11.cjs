@@ -22,8 +22,8 @@ for(const [topic,file] of Object.entries(files)){
  const story=read('data/stories/serial/'+file);
  const item=index.topics.find(x=>x.id===story.id);
  assert(item,'missing index entry '+topic);
- assert.equal(item.status,'editorial_review','not yet published '+topic);
- assert.equal(item.publication_review,'not_submitted');
+ assert(['editorial_review','published'].includes(item.status),'invalid publication status '+topic);
+ assert.equal(item.publication_review,item.status==='published'?'approved':'not_submitted');
  assert.equal(item.event_ids.length,story.sections.length);
  const sourceIds=new Set(story.sources.map(x=>x.id));
  for(const section of story.sections){
