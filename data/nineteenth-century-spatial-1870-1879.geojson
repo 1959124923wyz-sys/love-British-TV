@@ -4881,6 +4881,95 @@
         "territorial_claim": false,
         "area_sqkm": null
       }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T03-1870-DEVONSHIRE",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.48153,
+          7.32581
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T03-1870-DEVONSHIRE",
+        "stable_id": "GIS-19C-T03-1870-DEVONSHIRE",
+        "name": "德文郡堡",
+        "display_kind": "documentary",
+        "start_year": 1872,
+        "end_year": 1872,
+        "related_event_ids": [
+          "E19-T03-1872-DEVONSHIRE-COMPLAINT",
+          "E19-T03-1872-DEVONSHIRE-SHOOTING"
+        ],
+        "source_ids": [
+          "19C-T03-PHI",
+          "19C-T03-EHR",
+          "19C-T03-GDEV",
+          "19C-T03-DEV"
+        ],
+        "source_urls": [
+          "https://doi.org/10.1093/ehr/cead002",
+          "https://dukespace.lib.duke.edu/server/api/core/bitstreams/bde01f54-07e4-4408-8cee-1b5f95deda1c/content",
+          "https://www.geonames.org/3378930/devonshire-castle.html",
+          "https://ntg.gov.gy/monument/devonshire-castle-monument/"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "德文郡堡工人提出工资及工量申诉；殖民警察镇压德文郡堡劳工",
+        "named_anchors": [
+          "德文郡堡"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/3378930/devonshire-castle.html",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T03-1870-GEORGETOWN",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.15527,
+          6.80448
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T03-1870-GEORGETOWN",
+        "stable_id": "GIS-19C-T03-1870-GEORGETOWN",
+        "name": "乔治敦",
+        "display_kind": "documentary",
+        "start_year": 1873,
+        "end_year": 1873,
+        "related_event_ids": [
+          "E19-T03-1873-DEVONSHIRE-TRANSFER"
+        ],
+        "source_ids": [
+          "19C-T03-PHI",
+          "19C-T03-GGE"
+        ],
+        "source_urls": [
+          "https://dukespace.lib.duke.edu/server/api/core/bitstreams/bde01f54-07e4-4408-8cee-1b5f95deda1c/content",
+          "https://www.geonames.org/3378644/georgetown.html"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "停止进一步追诉并重新派工",
+        "named_anchors": [
+          "乔治敦"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/3378644/georgetown.html",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
     }
   ]
 }
