@@ -3151,7 +3151,9 @@
         "mapping_method": "Named historical site or locality anchored to cited WGS84 place reference.",
         "related_event_ids": [
           "E19-TAS-1846-WYBALENNA-PETITION",
-          "E19-TAS-1847-PUTALINA-REMOVAL"
+          "E19-TAS-1847-PUTALINA-REMOVAL",
+          "E19-T45-1847-N-REBUY",
+          "E19-T45-1847-N-CONTAIN"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -9313,6 +9315,90 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "political_controller": "British_coastal_judicial_treaty_partial_not_all_Gold_Coast"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t45-hob-1840",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.3272,
+          -42.8821
+        ]
+      },
+      "properties": {
+        "id": "t45-hob-1840",
+        "stable_id": "t45-hob-1840",
+        "name": "霍巴特 · 1840年代帕拉瓦专题",
+        "display_kind": "documentary",
+        "start_year": 1847,
+        "end_year": 1847,
+        "related_event_ids": [
+          "E19-T45-1847-N-CHILDREN",
+          "E19-T45-1847-N-LANNE-SCHOOL"
+        ],
+        "source_ids": [
+          "19C-T45-HARMAN",
+          "19C-T45-ORPHAN",
+          "19C-T45-AHRC",
+          "19C-T45-ALC",
+          "19C-T45-HOB-LANNE",
+          "19C-T45-HOB-GEO"
+        ],
+        "source_urls": [
+          "https://press-files.anu.edu.au/downloads/press/n4260/html/ch06.xhtml?page=9&referer=",
+          "https://www.libraries.tas.gov.au/slat/blog/the-orphan-schools/",
+          "https://humanrights.gov.au/resource-hub/by-resource-type/bringing-them-home-reports/bringing-them-home-chapter-6",
+          "https://alctas.org.au/project/wybalenna/",
+          "https://www.hobartcity.com.au/Things-To-Do/Arts-and-culture/Creative-Hobart-projects/Crowther-Reinterpreted",
+          "https://ungegn.un.org/dashboard/cities/details?id=534"
+        ],
+        "geo_precision": "named_place_reference",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_note": "沿用主站已登记的具名城市／站址参考点；不定位具体建筑、墓地或未测历史疆界。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t45-mel-1840",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.96332,
+          -37.814
+        ]
+      },
+      "properties": {
+        "id": "t45-mel-1840",
+        "stable_id": "t45-mel-1840",
+        "name": "墨尔本 · 1840年代帕拉瓦专题",
+        "display_kind": "documentary",
+        "start_year": 1841,
+        "end_year": 1842,
+        "related_event_ids": [
+          "E19-T45-1841-N-TRIAL",
+          "E19-T45-1842-N-EXECUTION"
+        ],
+        "source_ids": [
+          "19C-T45-WILLIS",
+          "19C-T45-MEL-TRIAL",
+          "19C-T45-ADB-PEEVAY",
+          "19C-T45-MEL-MEM",
+          "19C-T45-MEL-GEO"
+        ],
+        "source_urls": [
+          "https://www.historyvictoria.org.au/the-judge-willis-casebooks/casebook-12-transcripts-and-commentary/",
+          "https://citycollection.melbourne.vic.gov.au/tunnerminnerwait-and-maulboyheenner/",
+          "https://adb.anu.edu.au/biography/eumarrah-12905",
+          "https://citycollection.melbourne.vic.gov.au/standing-by-tunnerminnerwait-and-maulboyheenner/",
+          "https://www.geonames.org/2158177/melbourne.html"
+        ],
+        "geo_precision": "named_place_reference",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "geometry_note": "沿用主站已登记的具名城市／站址参考点；不定位具体建筑、墓地或未测历史疆界。"
       }
     }
   ]
