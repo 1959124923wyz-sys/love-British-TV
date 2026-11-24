@@ -25,7 +25,7 @@ def focus(event_id,year,lat,lon,filename):
     assert js("return !!document.querySelector('.major-story-article')"),"Story closed on event jump"
     driver.save_screenshot(str(out/filename))
 try:
-    driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+'?review19c=1&year=1839')
+    driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+'?year=1839')
     wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
     wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById('E19-T26-1877-ICHANG-OPEN')"))
     for event_id in ('E19-T26-1843-SHANGHAI-OPEN','E19-T26-1868-ANPING-ASSAULT','E19-T26-1877-ICHANG-OPEN','E19-T26-1885-OPIUM-ADDITIONAL'):

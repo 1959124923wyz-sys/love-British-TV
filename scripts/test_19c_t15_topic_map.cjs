@@ -8,7 +8,7 @@ const meta=index.topics.find(t=>t.id===story.id),ids=new Map(chron.events.map(e=
 const sourceIds=new Set(chron.sources.map(s=>s.id)),ownSource=new Set(story.sources.map(s=>s.id));
 assert.equal(story.sections.length,8);assert.equal(story.sections.reduce((a,s)=>a+s.paragraphs.length,0),24);
 assert(meta&&meta.article_file==='data/stories/serial/e19-t15-indian-uprising-reprisals-1857-1859.json');
-assert(meta.status==='editorial_review'&&meta.publication_review==='not_submitted');
+assert(meta.status==='published'&&meta.publication_review==='approved');
 const newEvents=chron.events.filter(e=>e.id.startsWith('E19-T15-'));
 assert.equal(newEvents.length,8,'eight actual new history entries');
 assert.equal(new Set(chron.events.map(e=>e.id)).size,chron.events.length,'chronology duplicate ID');
