@@ -5188,24 +5188,25 @@
       "icon_code": "POL",
       "lat": -42.8821,
       "lng": 147.3272,
-      "geo_precision": "named_place_reference",
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
       "source_ids": [
         "19C-T45-HOB-LANNE",
         "19C-T45-HOB-GEO"
-      ],
-      "source_urls": [
-        "https://www.hobartcity.com.au/Things-To-Do/Arts-and-culture/Creative-Hobart-projects/Crowther-Reinterpreted",
-        "https://ungegn.un.org/dashboard/cities/details?id=534"
       ],
       "research_original_node_ids": [
         "C66-E01"
       ],
       "significance": {
-        "level": "high",
-        "reason": "T45 source-linked documented historical event"
+        "level": 8,
+        "rationale": "据T45史料核实历史节点"
       },
-      "historical_boundary_confirmed": false,
-      "exclude_from_area_aggregation": true
+      "visible_from": 1869,
+      "short_description": "William Lanne在霍巴特去世，殖民医疗机构、科学收藏者与原住民社群之间随即发生围绕其遗体的争执。",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": []
     },
     {
       "id": "E19-T45-1869-N-LANNE-REMAINS",
@@ -5219,14 +5220,10 @@
       "icon_code": "REP",
       "lat": -42.8821,
       "lng": 147.3272,
-      "geo_precision": "named_place_reference",
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
       "source_ids": [
         "19C-T45-HOB-LANNE",
         "19C-T45-HOB-GEO"
-      ],
-      "source_urls": [
-        "https://www.hobartcity.com.au/Things-To-Do/Arts-and-culture/Creative-Hobart-projects/Crowther-Reinterpreted",
-        "https://ungegn.un.org/dashboard/cities/details?id=534"
       ],
       "research_original_node_ids": [
         "C66-E02",
@@ -5234,11 +5231,16 @@
         "C66-E04"
       ],
       "significance": {
-        "level": "high",
-        "reason": "T45 source-linked documented historical event"
+        "level": 8,
+        "rationale": "据T45史料核实历史节点"
       },
-      "historical_boundary_confirmed": false,
-      "exclude_from_area_aggregation": true
+      "visible_from": 1869,
+      "short_description": "霍巴特市政府公共史确认，殖民外科医生William Crowther在兰恩死后侵夺其遗骸，并涉及头骨被盗。",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "research_v6_event_ids": []
     }
   ],
   "routes": [
