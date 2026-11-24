@@ -1,5 +1,7 @@
 # T45 帕拉瓦战争、强迁、儿童分离与遗骸侵夺：史料及 GIS 审计
 
+**正式出版验证（2026-11-24）：** 制作PR #555 已合并；独立正式出版PR [#558](https://github.com/1959124923wyz-sys/love-British-TV/pull/558) 11/11全部成功，main `a51b8a4d502fdc54ea9ab2ce9ac858339fef64a7`。独立普通年份真实1780×1020 Chrome [#45308849357](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45308849357) 静态与桌面双成功；[Pages #45309244116](https://github.com/1959124923wyz-sys/love-British-TV/actions/runs/45309244116) build/deploy双成功。旧待核线索继续保存。
+
 制作状态：editorial_review / not_submitted；独立出版和真实桌面验收待完成。
 
 ## 证据分级
