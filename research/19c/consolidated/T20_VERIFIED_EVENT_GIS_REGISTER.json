@@ -462,13 +462,14 @@
       "short_description": "1869—1870年英印政府取得与斋浦尔、焦特布尔两土邦相关的桑巴尔盐湖租赁权，由内陆关税机构参与管理。",
       "category": "political",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
+      "lat": 26.966667,
+      "lng": 75.083333,
       "source_ids": [
         "19C-T20-B70-S03",
-        "19C-T20-B70-S02"
+        "19C-T20-B70-S02",
+        "19C-T20-G-SAMBHAR"
       ],
-      "geo_precision": "unlocated",
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
       "significance": {
         "level": 8,
         "rationale": "殖民政策、财产及劳动关系史事"
@@ -702,12 +703,13 @@
       "short_description": "1891年3月旁遮普政府在古杰兰瓦拉选定村庄拍卖约一万英亩土地，官志记录平均每英亩45卢比。",
       "category": "political",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
+      "lat": 32.15567,
+      "lng": 74.18705,
       "source_ids": [
-        "19C-T20-B71-S01"
+        "19C-T20-B71-S01",
+        "19C-T20-G-GUJ"
       ],
-      "geo_precision": "unlocated",
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
       "significance": {
         "level": 8,
         "rationale": "殖民政策、财产及劳动关系史事"
@@ -735,13 +737,14 @@
       "short_description": "1894—1895年古杰兰瓦拉官志列杰纳布灌渠殖民地部分授地四类合计149,285英亩，不含另行拍卖地。",
       "category": "political",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
+      "lat": 32.15567,
+      "lng": 74.18705,
       "source_ids": [
         "19C-T20-B71-S01",
-        "19C-T20-B71-S02"
+        "19C-T20-B71-S02",
+        "19C-T20-G-GUJ"
       ],
-      "geo_precision": "unlocated",
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
       "significance": {
         "level": 8,
         "rationale": "殖民政策、财产及劳动关系史事"
@@ -769,12 +772,14 @@
       "short_description": "缅甸1895—1896年度行政报告列仰光和毛淡棉柚木出口204,857原表吨，价值15,247,258卢比。",
       "category": "political",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
+      "lat": 16.8052778,
+      "lng": 96.1561111,
       "source_ids": [
-        "19C-T20-B73-S04"
+        "19C-T20-B73-S04",
+        "19C-T20-G-YANGON",
+        "19C-T20-G-MOULMEIN"
       ],
-      "geo_precision": "unlocated",
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
       "significance": {
         "level": 8,
         "rationale": "殖民政策、财产及劳动关系史事"
@@ -802,12 +807,13 @@
       "short_description": "缅甸政府行政报告列1894—1895和1895—1896年度林政收入分别为2,217,987及2,277,389卢比。",
       "category": "political",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
+      "lat": 16.8052778,
+      "lng": 96.1561111,
       "source_ids": [
-        "19C-T20-B73-S04"
+        "19C-T20-B73-S04",
+        "19C-T20-G-YANGON"
       ],
-      "geo_precision": "unlocated",
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
       "significance": {
         "level": 8,
         "rationale": "殖民政策、财产及劳动关系史事"
@@ -1049,6 +1055,182 @@
         ],
         "mapping_method": "现代具名地点参考，非历史边界",
         "geometry_source": "https://www.geonames.org/2643743/london.html",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T20-1860-SAMBHAR",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.083333,
+          26.966667
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T20-1860-SAMBHAR",
+        "stable_id": "GIS-19C-T20-1860-SAMBHAR",
+        "name": "桑巴尔盐湖",
+        "display_kind": "documentary",
+        "start_year": 1869,
+        "end_year": 1869,
+        "related_event_ids": [
+          "E19-T20-1869-B70-E02"
+        ],
+        "source_ids": [
+          "19C-T20-B70-S03",
+          "19C-T20-B70-S02",
+          "19C-T20-G-SAMBHAR"
+        ],
+        "source_urls": [
+          "https://library.bjp.org/jspui/bitstream/123456789/1919/1/The%20Imperial-Gazetteer%20of%20India%20Provincial%20Series%20Rajputana.pdf",
+          "https://library.bjp.org/jspui/bitstream/123456789/1852/1/Imperial_Gazetteer_of_India-Vol.04%20%20Administratave.pdf",
+          "https://geographic.org/geographic_names/name.php?c=india&fid=2698&uni=-2929070"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "英属印度殖民财政、铁路保息和资源转移：具名地点参照",
+        "named_anchors": [
+          "桑巴尔盐湖"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://geographic.org/geographic_names/name.php?c=india&fid=2698&uni=-2929070",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T20-1890-GUJ",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.18705,
+          32.15567
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T20-1890-GUJ",
+        "stable_id": "GIS-19C-T20-1890-GUJ",
+        "name": "古杰兰瓦拉",
+        "display_kind": "documentary",
+        "start_year": 1891,
+        "end_year": 1895,
+        "related_event_ids": [
+          "E19-T20-1891-B71-E03",
+          "E19-T20-1895-B71-E06"
+        ],
+        "source_ids": [
+          "19C-T20-B71-S01",
+          "19C-T20-G-GUJ",
+          "19C-T20-B71-S02"
+        ],
+        "source_urls": [
+          "https://ignca.gov.in/Asi_data/30596.pdf",
+          "https://www.geonames.org/1177662/gujranwala.html",
+          "https://repository.lahoreschool.edu.pk/xmlui/bitstream/handle/123456789/17653/Canals%2C%20colonies%20and%20class%20Complete%20Book%20Done.pdf?isAllowed=y&sequence=1"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "英属印度殖民财政、铁路保息和资源转移：具名地点参照",
+        "named_anchors": [
+          "古杰兰瓦拉"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/1177662/gujranwala.html",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T20-1890-YANGON",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.1561111,
+          16.8052778
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T20-1890-YANGON",
+        "stable_id": "GIS-19C-T20-1890-YANGON",
+        "name": "仰光（Rangoon）",
+        "display_kind": "documentary",
+        "start_year": 1896,
+        "end_year": 1896,
+        "related_event_ids": [
+          "E19-T20-1896-B73-E03",
+          "E19-T20-1896-B73-E05"
+        ],
+        "source_ids": [
+          "19C-T20-B73-S04",
+          "19C-T20-G-YANGON"
+        ],
+        "source_urls": [
+          "https://myanmar-law-library.org/IMG/pdf/1895-96_report_on_the_administration_of_burma.pdf",
+          "https://www.geonames.org/1298824/yangon.html"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "英属印度殖民财政、铁路保息和资源转移：具名地点参照",
+        "named_anchors": [
+          "仰光（Rangoon）"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/1298824/yangon.html",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T20-1890-MOULMEIN",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          97.628248,
+          16.490514
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T20-1890-MOULMEIN",
+        "stable_id": "GIS-19C-T20-1890-MOULMEIN",
+        "name": "毛淡棉（Moulmein）",
+        "display_kind": "documentary",
+        "start_year": 1896,
+        "end_year": 1896,
+        "related_event_ids": [
+          "E19-T20-1896-B73-E03"
+        ],
+        "source_ids": [
+          "19C-T20-B73-S04",
+          "19C-T20-G-YANGON",
+          "19C-T20-G-MOULMEIN"
+        ],
+        "source_urls": [
+          "https://myanmar-law-library.org/IMG/pdf/1895-96_report_on_the_administration_of_burma.pdf",
+          "https://www.geonames.org/1298824/yangon.html",
+          "https://www.geonames.org/1308465/mawlamyine.html"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "英属印度殖民财政、铁路保息和资源转移：具名地点参照",
+        "named_anchors": [
+          "毛淡棉（Moulmein）"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.geonames.org/1308465/mawlamyine.html",
         "fill_authorized": false,
         "territorial_claim": false,
         "area_sqkm": null

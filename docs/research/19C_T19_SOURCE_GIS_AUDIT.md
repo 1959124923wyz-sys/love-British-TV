@@ -2,7 +2,7 @@
 
 制作候选，史料登记及具名地点整理完成；全站注册、专项CI、真实桌面和Pages须独立验收。
 
-14节42段，2855正文字符，16来源；14新增、0既有互动；3分年代参考点。所有新增点是现代具名城市导航，不代表历史现场或界线，不计入面积。未定位事件坐标为空。原研究卷完整保留，档案目录并非逐页原件查阅。
+14节42段，3069正文字符，17来源；14新增、0既有互动；3分年代参考点。所有新增点均为现代具名地理导航，不代表历史现场或界线，不计入面积。未定位事件坐标为空。原研究卷完整保留，档案目录并非逐页原件查阅。
 
 ## 来源
 - 19C-T19-B41-S02｜Bengal Secretariat Office：Annual Report on the Administration of the Bengal Presidency for 1866–67｜1866–67｜Famine in Orissa and other parts of Bengal。同期政府报告｜进口政策、委员会、港口和救济，偏政府视角｜https://upload.wikimedia.org/wikipedia/commons/f/f1/ANNUAL_REPORT_ON_THE_ADMINISTRATION_OF_THE_BENGAL_PRESIDENCY_FOR_1866-67_%28IA_dli.bengal.10689.20304%29.pdf
@@ -21,6 +21,7 @@
 - 19C-T19-B56-S01｜Gokhale Institute of Politics and Economics：Famine correspondence and reports｜1899–1900｜原印pp.75–77文书No.10和11，pp.83–87文书No.13及18县附表和No.14；线上影像可查。同期行政往来影像及转录｜1899通知与1900补表及减缓各级分列｜https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/25870/GIPE-064142.pdf?isAllowed=y&sequence=3
 - 19C-T19-G-NAG｜GeoNames：那格浦尔｜现代城市地理参照，非历史现场边界｜https://www.geonames.org/1262180/nagpur.html
 - 19C-T19-B04-S05｜Indian Famine Commission：Famine Relief｜1880｜C.2591, Pt.I；British Library IOR/L/PARL/2/174。目录定位待调原表｜搜索 Report Indian Famine Commission Part I Famine Relief；Temple报告和地区表｜https://searcharchives.bl.uk/
+- 19C-T19-ENV-FAMINE-RELIEF｜环境与社会研究中心：印度饥荒与政府救济｜大学研究机构历史专题，论及1883临时饥荒法典及1896—1897救济政策｜https://www.environmentandsociety.org/exhibitions/famines-india/government-response
 
 ## 原案交叉索引
 - B41-E01 → E19-T19-1866-B41-E01

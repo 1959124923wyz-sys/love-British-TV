@@ -2,7 +2,7 @@
 
 制作候选，史料登记及具名地点整理完成；全站注册、专项CI、真实桌面和Pages须独立验收。
 
-20节60段，3279正文字符，21来源；16新增、4既有互动；1分年代参考点。所有新增点是现代具名城市导航，不代表历史现场或界线，不计入面积。未定位事件坐标为空。原研究卷完整保留，档案目录并非逐页原件查阅。
+20节60段，3339正文字符，23来源；16新增、4既有互动；4分年代参考点。所有新增点均为现代具名地理导航，不代表历史现场或界线，不计入面积。未定位事件坐标为空。原研究卷完整保留，档案目录并非逐页原件查阅。
 
 ## 来源
 - 19C-T38-D33｜Amathole Museum：Andries Botha and his descendants｜Blinkwater、Kat River、赦免及赔偿各段，注8、10、12。本地博物馆居民及地方史研究｜记毁屋逐人、Botha 抗议、158与83宗、赔款和批准回返，转查划地图和付款凭据。｜https://www.amatholemuseum.co.za/andries-botha-and-his-descendants/
@@ -26,6 +26,8 @@
 - 19C-T38-C48-S02｜Harry Saker、J. Aldridge：The Origins of the Langeberg Rebellion｜The Journal of African History 12(2)，1971，pp.299–317。同行研究｜土地竞争、权威变动及牛瘟为多重背景｜https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/origins-of-the-langeberg-rebellion/BDEE919D066B423AA44904E7F344ABC5
 - 19C-T38-C48-S03｜Imvo Zabantsundu／University of Cape Town：Imvo，1897-08-26｜数字转录影像页 3，the disposal of the Bechuanaland rebels 段。同期当地报纸｜战后分派措施在地报刊已提出批评｜https://emandulo.apc.uct.ac.za/collection/Imvo/Typescripts/1897/IMVO_1897-08-26.pdf
 - 19C-T38-C48-S05｜Joshua Vallance／University of Bristol：Aborigines’ Protection Society and the Indenturing of Bechuana Rebels in 1897｜2016，日期附录与档案索引，C.8797 pp.1–67；TNA CO 50/9、DO 119/327–330。含档案引注的研究｜帝国审批、申诉与契约监督的档号；本科研究仅作档案入口｜https://www.bristol.ac.uk/media-library/sites/history/documents/dissertations/Josh_Vallance2016.pdf
+- 19C-T38-G-QONCE｜GeoNames：威廉王城（Qonce）｜现代具名地点坐标，只作历史事件的地理导航，不表示历史现场或范围｜https://www.geonames.org/advanced-search.html?q=Cape+Town
+- 19C-T38-G-KURUMAN｜GeoNames：库鲁曼｜现代具名地点坐标，只作历史事件的地理导航，不表示历史现场或范围｜https://www.geonames.org/search.html?country=ZA&q=Kapa+Leboa&startRow=50
 
 ## 原案交叉索引
 - C08-E24 → E19-X8-1850-BLINKWATER（既有复用）

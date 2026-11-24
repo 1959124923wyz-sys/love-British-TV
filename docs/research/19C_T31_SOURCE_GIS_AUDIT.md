@@ -2,7 +2,7 @@
 
 制作候选，史料登记及具名地点整理完成；全站注册、专项CI、真实桌面和Pages须独立验收。
 
-20节60段，3202正文字符，29来源；20新增、0既有互动；5分年代参考点。所有新增点是现代具名城市导航，不代表历史现场或界线，不计入面积。未定位事件坐标为空。原研究卷完整保留，档案目录并非逐页原件查阅。
+20节60段，3238正文字符，31来源；20新增、0既有互动；7分年代参考点。所有新增点均为现代具名地理导航，不代表历史现场或界线，不计入面积。未定位事件坐标为空。原研究卷完整保留，档案目录并非逐页原件查阅。
 
 ## 来源
 - 19C-T31-H05｜The London Gazette：Charter of Imperial British East Africa Company（1888）｜issue 25854 p.5017ff，1888-09-07 刊。原公报影像｜公司特许、沿海特许与地方协议｜https://www.thegazette.co.uk/London/issue/25854/page/5017/data.pdf
@@ -34,6 +34,8 @@
 - 19C-T31-C47-S02｜C. Hewetson 与编者／Uganda Journal：An Early Cash Book from Nandi Station｜印 pp.28–31，尤其 p.31 editorial note；Johnston 1899-12-01 despatch。账簿研究及同期公函摘述｜1899 年远征日段、畜群与村落；原账与原公函应分别核｜https://ufdcimages.uflib.ufl.edu/UF/00/08/08/55/00031/UF00080855_00031.pdf
 - 19C-T31-C-X07-S01｜罗马第三大学开放库：罗伯特·赫斯等地区研究汇录｜Somalia: Past and Present｜历史汇编｜印页 18，Habr Awal 各年条约。地区研究转条约｜定位 1884 年 7 月 14 日港约及条款。｜https://arcadia.sba.uniroma3.it/bitstream/2307/2999/2/Somalia.%20Past%20and%20Present.pdf
 - 19C-T31-G-BER｜GeoNames：柏培拉｜现代城市地理参照，非历史现场边界｜https://www.geonames.org/64435/berbera.html
+- 19C-T31-G-WITU｜肯尼亚政府 KISIP：维图｜现代具名地点坐标，只作历史事件的地理导航，不表示历史现场或范围｜https://www.kisip.go.ke/sites/default/files/2025-05/Witu%20%20CPR.pdf
+- 19C-T31-G-HOIMA｜霍伊马市政府：霍伊马｜现代具名地点坐标，只作历史事件的地理导航，不表示历史现场或范围｜https://www.hoimacity.go.ug/page/about-us
 
 ## 原案交叉索引
 - C10-E07 → E19-T31-1888-C10-E07

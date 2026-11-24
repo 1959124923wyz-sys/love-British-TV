@@ -301,12 +301,13 @@
       "short_description": "1890年7月1日英德订立协议，德国退出对维图保护权的主张，并安排其他东非相关权利。",
       "category": "political",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
+      "lat": -2.388897,
+      "lng": 40.437769,
       "source_ids": [
-        "19C-T31-H16"
+        "19C-T31-H16",
+        "19C-T31-G-WITU"
       ],
-      "geo_precision": "unlocated",
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
       "significance": {
         "level": 8,
         "rationale": "殖民政策、财产及劳动关系史事"
@@ -334,13 +335,14 @@
       "short_description": "1890年英方对维图实施军事攻击并焚毁城镇，学术研究结合海军档和地方社会史记录破坏。",
       "category": "political",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
+      "lat": -2.388897,
+      "lng": 40.437769,
       "source_ids": [
         "19C-T31-H17",
-        "19C-T31-H18"
+        "19C-T31-H18",
+        "19C-T31-G-WITU"
       ],
-      "geo_precision": "unlocated",
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
       "significance": {
         "level": 8,
         "rationale": "殖民政策、财产及劳动关系史事"
@@ -536,17 +538,18 @@
       "visible_from": 1893,
       "date_label": "1893年",
       "name": "英国对布尼奥罗发动征服",
-      "description": "1893—1894年英方行政及地方盟军对布尼奥罗王国发动军事行动。 地方政治权力及居民生活发生变化，土地、人口迁移与资源征用成为后续争议的重要基础。",
-      "short_description": "1893—1894年英方行政及地方盟军对布尼奥罗王国发动军事行动。",
+      "description": "1893—1894年英方行政及地方盟军对布尼奥罗王国发动军事行动。史料涉及布尼奥罗王国的Mparo和霍伊马一带；霍伊马仅作为现代地理参照。 地方政治权力及居民生活发生变化，土地、人口迁移与资源征用成为后续争议的重要基础。",
+      "short_description": "1893—1894年英方行政及地方盟军对布尼奥罗王国发动军事行动。史料涉及布尼奥罗王国的Mparo和霍伊马一带；霍伊马仅作为现代地理参照。",
       "category": "political",
       "icon_code": "POL",
-      "lat": null,
-      "lng": null,
+      "lat": 1.431944,
+      "lng": 31.3525,
       "source_ids": [
         "19C-T31-C18-S01",
-        "19C-T31-C18-S04"
+        "19C-T31-C18-S04",
+        "19C-T31-G-HOIMA"
       ],
-      "geo_precision": "unlocated",
+      "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
       "significance": {
         "level": 8,
         "rationale": "殖民政策、财产及劳动关系史事"
@@ -1101,6 +1104,97 @@
         ],
         "mapping_method": "现代具名地点参考，非历史边界",
         "geometry_source": "https://www.geonames.org/64435/berbera.html",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T31-1890-WITU",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.437769,
+          -2.388897
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T31-1890-WITU",
+        "stable_id": "GIS-19C-T31-1890-WITU",
+        "name": "维图",
+        "display_kind": "documentary",
+        "start_year": 1890,
+        "end_year": 1890,
+        "related_event_ids": [
+          "E19-T31-1890-C10-E14",
+          "E19-T31-1890-C10-E15"
+        ],
+        "source_ids": [
+          "19C-T31-H16",
+          "19C-T31-G-WITU",
+          "19C-T31-H17",
+          "19C-T31-H18"
+        ],
+        "source_urls": [
+          "https://germanhistorydocs.org/en/wilhelmine-germany-and-the-first-world-war-1890-1918/ghdi%3Adocument-782",
+          "https://www.kisip.go.ke/sites/default/files/2025-05/Witu%20%20CPR.pdf",
+          "https://brill.com/view/journals/jgs/6/3/article-p275_1.pdf",
+          "https://digital.soas.ac.uk/content/AA/00/00/06/46/00001/AA00000646.pdf"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "英国在东非的公司统治、保护地与铁路扩张：具名地点参照",
+        "named_anchors": [
+          "维图"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.kisip.go.ke/sites/default/files/2025-05/Witu%20%20CPR.pdf",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GIS-19C-T31-1890-HOIMA",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3525,
+          1.431944
+        ]
+      },
+      "properties": {
+        "id": "GIS-19C-T31-1890-HOIMA",
+        "stable_id": "GIS-19C-T31-1890-HOIMA",
+        "name": "霍伊马",
+        "display_kind": "documentary",
+        "start_year": 1893,
+        "end_year": 1893,
+        "related_event_ids": [
+          "E19-T31-1893-C18-E01"
+        ],
+        "source_ids": [
+          "19C-T31-C18-S01",
+          "19C-T31-C18-S04",
+          "19C-T31-G-HOIMA"
+        ],
+        "source_urls": [
+          "https://hansard.parliament.uk/Commons/1895-05-31/debates/3fb75a0c-4ce9-49d4-8de1-201d2446253e/Supply30ThMay",
+          "https://britishonlinearchives.com/microfilm-catalogue/R00611/uganda-blue-books",
+          "https://www.hoimacity.go.ug/page/about-us"
+        ],
+        "geo_precision": "modern_named_place_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "英国在东非的公司统治、保护地与铁路扩张：具名地点参照",
+        "named_anchors": [
+          "霍伊马"
+        ],
+        "mapping_method": "现代具名地点参考，非历史边界",
+        "geometry_source": "https://www.hoimacity.go.ug/page/about-us",
         "fill_authorized": false,
         "territorial_claim": false,
         "area_sqkm": null

@@ -2,7 +2,7 @@
 
 制作候选，史料登记及具名地点整理完成；全站注册、专项CI、真实桌面和Pages须独立验收。
 
-19节57段，3152正文字符，27来源；19新增、0既有互动；5分年代参考点。所有新增点是现代具名城市导航，不代表历史现场或界线，不计入面积。未定位事件坐标为空。原研究卷完整保留，档案目录并非逐页原件查阅。
+19节57段，3152正文字符，31来源；19新增、0既有互动；9分年代参考点。所有新增点均为现代具名地理导航，不代表历史现场或界线，不计入面积。未定位事件坐标为空。原研究卷完整保留，档案目录并非逐页原件查阅。
 
 ## 来源
 - 19C-T20-B69-S01｜英国上议院：Resolution moved, Government of Indian Territories｜1857-02-19｜1849始订合同、伦敦董事会与5%段。同期辩论｜该段是议员对机制与军事理由的说明｜https://api.parliament.uk/historic-hansard/lords/1857/feb/19/resolution-moved
@@ -32,6 +32,10 @@
 - 19C-T20-B71-S01｜Punjab District Gazetteer；Lieut. F. P. Young：Gujranwala District Gazetteer，Chenab Canal Colony｜1894–95冬编成｜pp.160–163，III–VI节，分级、牧地及份额。殖民官志及分地表｜149,285英亩不含拍卖地，古杰兰瓦拉范围｜https://ignca.gov.in/Asi_data/30596.pdf
 - 19C-T20-B71-S02｜Lahore School of Economics repository：Canals, colonies and class: British policy in the Punjab 1880–1940｜现代｜p.149，Government Tenants (Punjab) Act III。地区史研究｜成法、1899实际生效和此前授地安排分开｜https://repository.lahoreschool.edu.pk/xmlui/bitstream/handle/123456789/17653/Canals%2C%20colonies%20and%20class%20Complete%20Book%20Done.pdf?isAllowed=y&sequence=1
 - 19C-T20-B73-S04｜Burma Government：Report on the Administration of Burma, 1895–96｜1895–96｜pp.42–44，Forests，尤p.44林政表及§148出口。同期行政财务报告｜按来源记实收与税源，政府自述需查村社｜https://myanmar-law-library.org/IMG/pdf/1895-96_report_on_the_administration_of_burma.pdf
+- 19C-T20-G-SAMBHAR｜美国NGA地名资料转载：桑巴尔盐湖｜现代具名地点坐标，只作历史事件的地理导航，不表示历史现场或范围｜https://geographic.org/geographic_names/name.php?c=india&fid=2698&uni=-2929070
+- 19C-T20-G-GUJ｜GeoNames：古杰兰瓦拉｜现代具名地点坐标，只作历史事件的地理导航，不表示历史现场或范围｜https://www.geonames.org/1177662/gujranwala.html
+- 19C-T20-G-YANGON｜GeoNames：仰光（Rangoon）｜现代具名地点坐标，只作历史事件的地理导航，不表示历史现场或范围｜https://www.geonames.org/1298824/yangon.html
+- 19C-T20-G-MOULMEIN｜GeoNames：毛淡棉（Moulmein）｜现代具名地点坐标，只作历史事件的地理导航，不表示历史现场或范围｜https://www.geonames.org/1308465/mawlamyine.html
 
 ## 原案交叉索引
 - B69-E01 → E19-T20-1849-B69-E01
