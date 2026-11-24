@@ -1725,7 +1725,9 @@
         "mapping_method": "Named historical site or town anchored to cited WGS84 place reference.",
         "related_event_ids": [
           "E19-TAS-1833-WYBALENNA",
-          "E19-TAS-1835-MANNALARGENNA"
+          "E19-TAS-1835-MANNALARGENNA",
+          "E19-T45-1836-N-CHRONICLE",
+          "E19-T45-1837-N-ARTHUR"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -3183,6 +3185,50 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "political_controller": "colonial_mauritius_administration_named_place_without_actual_land_parcel_geometry"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t45-mel-1830",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.96332,
+          -37.814
+        ]
+      },
+      "properties": {
+        "id": "t45-mel-1830",
+        "stable_id": "t45-mel-1830",
+        "name": "墨尔本 · 1830年代帕拉瓦专题",
+        "display_kind": "documentary",
+        "start_year": 1839,
+        "end_year": 1839,
+        "related_event_ids": [
+          "E19-T45-1839-N-PORTPHILLIP"
+        ],
+        "source_ids": [
+          "19C-T45-ADB-TRUG",
+          "19C-T45-ADB-PEEVAY",
+          "19C-T45-MEL-GEO"
+        ],
+        "source_urls": [
+          "https://adb.anu.edu.au/biography/trugernanner-truganini-4752",
+          "https://adb.anu.edu.au/biography/eumarrah-12905",
+          "https://www.geonames.org/2158177/melbourne.html"
+        ],
+        "geo_precision": "modern_named_city_reference_not_historic_site_or_boundary",
+        "historical_boundary_confirmed": false,
+        "exclude_from_area_aggregation": true,
+        "summary_zh": "罗宾逊转往菲利普港任职期间，部分塔斯马尼亚原住民也随他跨越巴斯海峡，其中包括Truganini与Peevay等人。",
+        "named_anchors": [
+          "Melbourne"
+        ],
+        "mapping_method": "沿用主站已经登记的现代城市地名坐标，不定位具体建筑、墓地或历史疆界。",
+        "geometry_source": "GeoNames named place, present-day WGS84",
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null
       }
     }
   ]
