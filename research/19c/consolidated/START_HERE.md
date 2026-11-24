@@ -1,3 +1,5 @@
+**2026-11-24 T01/T02/T03批量正式注册候选：** 15章82节246段、74条专题史源/地名登记、82互动（58新增24复用）、22分年代具名地图点。T01：25节75段25来源18新事件7复用9分年代GIS点；原研究保留；主编批准注册；Chrome与Pages待验；T02：25节75段19来源24新事件1复用7分年代GIS点；原研究保留；主编批准注册；Chrome与Pages待验；T03：32节96段30来源16新事件16复用6分年代GIS点；原研究保留；主编批准注册；Chrome与Pages待验。分支 `feat/19c-t01-t02-t03-caribbean-labour-20261124`。236条原始研究均保留；各专题 SOURCE_GIS_AUDIT、CASE_CROSSWALK、NEXT_ACTIONS 续查。T57 #562已合并c013da54，14项CI及真实桌面Chrome全部通过，Pages待复核。下一批T19/T20及T31/T38，以工作板为准。
+
 **2026-11-24 T57正式注册候选：** 一章24节72段22来源24新事件10分年代GIS点；主编批准注册，独立Chrome及Pages待验。分支 `feat/19c-t57-residential-schools-20261124`；原18事件14史料26GIS线索保留。详 [史料GIS审计](../../../docs/research/19C_T57_CANADA_STATUS_RESIDENTIAL_SCHOOLS_SOURCE_GIS_AUDIT.md) 与 [追档](T57_NEXT_ACTIONS.md)。T53及T55 出版#561合并92fb15eb；13项CI全部成功及普通年份Chrome通过；Pages待核。下一回补首批T01/T02/T03、T19/T20、T31/T38及旧候审T15/T26，以最新工作板为准。
 
 **2026-11-24 T53与T55正式注册候选：** 制作#560已合并 cba3a028；专项Chrome通过；主编批准正式注册，独立普通年份Chrome及Pages待验；T55 两章20节60段17来源20新事件7分年代GIS点；主编批准注册，独立Chrome及Pages待验。分支 `feat/19c-t55-cpr-chinese-head-tax-20261124`；下一加拿大首批 T57。详 [T55审计](../../../docs/research/19C_T55_RAILWAY_CHINESE_HEAD_TAX_SOURCE_GIS_AUDIT.md) 与 [追档](T55_NEXT_ACTIONS.md)。部署未核前不登记已上线。
