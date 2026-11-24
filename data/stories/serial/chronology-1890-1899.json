@@ -382,15 +382,16 @@
       "short_description": "查尔斯·布鲁克在1890年宣布兼并林梦地区，原属于文莱苏丹主张的地域被纳入砂拉越政权。",
       "category": "land_dispossession",
       "icon_code": "LAND",
-      "lat": null,
-      "lng": null,
+      "lat": 4.75477,
+      "lng": 115.01011,
       "source_ids": [
         "19C-T29-B51-S01",
         "19C-T29-B51-S02",
         "19C-T29-B51-S03",
-        "19C-T29-T29-HANSARD-1890"
+        "19C-T29-T29-HANSARD-1890",
+        "19C-T29-GEO-B51-E02"
       ],
-      "geo_precision": "historic_named_site_or_region_unlocated",
+      "geo_precision": "modern_named_locality_reference_not_historic_site",
       "significance": {
         "level": 7,
         "rationale": "条约、官方机构档案与历史研究索引"
@@ -7864,23 +7865,25 @@
       "area_sqkm": null
     },
     {
-      "id": "E19-T29-1897-B29-E04",
+      "id": "E19-T29-1897-B29-E03",
       "year": 1897,
       "start_year": 1897,
       "end_year": 1897,
       "visible_from": 1897,
-      "date_label": "1897年",
-      "name": "公司与马特萨烈的冲突继续",
-      "description": "1897年地方反抗者袭击加雅岛公司的贸易站，之后公司武装对马特萨烈一方继续进行镇压。",
-      "short_description": "1897年地方反抗者袭击加雅岛公司的贸易站，之后公司武装对马特萨烈一方继续进行镇压。",
+      "date_label": "1897年7月",
+      "name": "加雅岛公司贸易站遭焚毁",
+      "description": "1897年，马特萨烈领导的地方反抗者焚毁北婆罗洲公司在加雅岛的贸易站。亚庇市政厅的历史记录记载，公司随后将其定居点迁往大陆。",
+      "short_description": "1897年，马特萨烈领导的地方反抗者焚毁北婆罗洲公司在加雅岛的贸易站。亚庇市政厅的历史记录记载，公司随后将其定居点迁往大陆。",
       "category": "resistance",
       "icon_code": "RES",
-      "lat": null,
-      "lng": null,
+      "lat": 6.0193,
+      "lng": 116.0298,
       "source_ids": [
-        "19C-T29-B29-S02"
+        "19C-T29-B29-S02",
+        "19C-T29-GAYA-DBKK",
+        "19C-T29-GEO-B29-E03"
       ],
-      "geo_precision": "historic_named_site_or_region_unlocated",
+      "geo_precision": "modern_named_locality_reference_not_historic_site",
       "significance": {
         "level": 7,
         "rationale": "条约、官方机构档案与历史研究索引"
@@ -7890,8 +7893,8 @@
       "fill_authorized": false,
       "area_sqkm": null,
       "research_original_node_ids": [
-        "B29-E04",
-        "B29-E03"
+        "B29-E03",
+        "B29-E04"
       ]
     },
     {
@@ -15426,6 +15429,30 @@
       "label": "Universiti Malaysia Sabah｜Jurnal Borneo Akhailogia, Vol.7 (1)",
       "url": "https://jurcon.ums.edu.my/ojums/index.php/JBA/article/download/4131/2604/15336",
       "access": "2022｜pp.36–51，CO 874/54所列转让。地区研究，列土地档｜1898 Menggatal档供地界，勿当作战事同一动作"
+    },
+    {
+      "id": "19C-T29-GEO-B51-E02",
+      "publisher": "GeoNames",
+      "title": "林梦现代地名坐标",
+      "label": "GeoNames｜林梦",
+      "url": "https://www.geonames.org/advanced-search.html?q=Malajsie&startRow=550",
+      "access": "城镇参考；非兼并范围"
+    },
+    {
+      "id": "19C-T29-GAYA-DBKK",
+      "publisher": "亚庇市政厅（DBKK）",
+      "title": "Profil DBKK — Sejarah Awal Kota Kinabalu",
+      "label": "亚庇市政厅｜亚庇早期历史",
+      "url": "https://dbkk.sabah.gov.my/profil-dbkk",
+      "access": "已核对市政府关于1882年设站及1897年焚毁的历史说明"
+    },
+    {
+      "id": "19C-T29-GEO-B29-E03",
+      "publisher": "GeoNames",
+      "title": "加雅岛现代地名坐标",
+      "label": "GeoNames｜加雅岛",
+      "url": "https://www.geonames.org/advanced-search.html?q=Sabah%2C+Malaysia&startRow=300",
+      "access": "现代岛屿参考；非贸易站旧址"
     }
   ]
 }

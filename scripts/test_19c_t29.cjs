@@ -4,7 +4,7 @@ const load=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const a=load('data/stories/serial/e19-t29-malaya-north-borneo-1824-1898.json');
 const m=load('data/stories/serial/index.json').topics.find(t=>t.id===a.id);
 assert(m);assert.equal(a.sections.length,22);
-assert.equal(a.sources.length,38);
+assert.equal(a.sources.length,44);
 assert.equal(new Set(a.sections.map(s=>s.primary_event_id)).size,22);
 assert.deepEqual(m.event_ids,a.sections.map(s=>s.primary_event_id));
 const archived=load('research/19c/consolidated/T29_EDITORIAL_DRAFT.json');
@@ -25,7 +25,7 @@ for(const s of a.sections){
 }
 assert.equal(added,17);assert.equal(reused,5);
 let n=0;
-for(const y of [1850,1870])for(const f of load('data/nineteenth-century-spatial-'+y+'-'+(y+9)+'.geojson').features.filter(f=>f.id?.startsWith('GIS-19C-T29-'))){
+for(const y of [1820,1850,1870,1880,1890])for(const f of load('data/nineteenth-century-spatial-'+y+'-'+(y+9)+'.geojson').features.filter(f=>f.id?.startsWith('GIS-19C-T29-'))){
  n++;assert.equal(f.geometry.type,'Point');assert.equal(f.properties.fill_authorized,false);assert.equal(f.properties.territorial_claim,false);assert.equal(f.properties.historical_boundary_confirmed,false);assert.equal(f.properties.exclude_from_area_aggregation,true);assert(f.properties.source_urls.includes(f.properties.geometry_source));const d=load('data/stories/serial/chronology-'+y+'-'+(y+9)+'.json');const e=d.events.find(e=>e.id===f.properties.related_event_ids[0]);assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat]);
 }
-assert.equal(n,2);console.log('PASS T29: 22 sections, 17 new and 5 reused events, 2 evidence-backed points');
+assert.equal(n,7);console.log('PASS T29: 22 sections, 17 new and 5 reused events, 7 evidence-backed points');
