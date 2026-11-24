@@ -16,7 +16,7 @@ for(const c of story.topic_source_claims)assert(sectids.has(c.section_id)&&c.sou
 const links=[...story.sections.flatMap(s=>s.paragraphs).join('\n').matchAll(/\[\[(E19-[A-Za-z0-9-]+)\|([^\]\n]+)\]\]/g)].map(m=>m[1]);
 assert.equal(links.length,34);assert.equal(new Set(links).size,34);assert.deepEqual(new Set(links),new Set(topic.event_ids));assert.deepEqual(new Set(links),new Set(m.events.map(x=>x.id)));
 assert.equal(m.reuse_existing.length,18);assert.equal(m.events.filter(x=>!x.already_in_site).length,16);
-const chronicles=[1800,1810,1820,1830,1840,1850,1860,1870].filter(n=>fs.existsSync(path.resolve(__dirname,'..','data/stories/serial/chronology-'+n+'-'+(n+9)+'.json'))).map(n=>load('data/stories/serial/chronology-'+n+'-'+(n+9)+'.json'));
+const chronicles=fs.readdirSync(path.resolve(__dirname,'..','data/stories/serial')).filter(p=>/^chronology-18\d\d-18\d\d\.json$/.test(p)).map(p=>load('data/stories/serial/'+p));
 const all=chronicles.flatMap(c=>c.events),events=new Map(all.map(e=>[e.id,e]));
 for(const e of m.events)assert(events.has(e.id),e.id);
 const added=all.filter(e=>e.id.startsWith('E19-T45-'));assert.equal(added.length,16);
