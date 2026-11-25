@@ -1,0 +1,5 @@
+# T010 锡兰：研究底稿
+- 1915年7月6日英国下院承认戒严扩至五省：https://api.parliament.uk/historic-hansard/commons/1915/jul/06/riots-in-ceylon ；7月27日质询军事法院、戒严及强制赔偿：https://api.parliament.uk/historic-hansard/commons/1915/jul/27/ceylon-martial-law 。
+- 1916年7月18日关于收取赔偿与未经审判担保的争议：https://api.parliament.uk/historic-hansard/written-answers/1916/jul/18/ceylon ；1916年8月3日议会讨论军事法院与赔偿：https://api.parliament.uk/historic-hansard/commons/1916/aug/03/colonial-office-class-ii ；1917年Weke军事法院案：https://api.parliament.uk/historic-hansard/commons/1917/apr/23/weke-ceylon-court-martial 。
+- 学术研究：群体暴力与殖民回应 https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/ceylons-kristallnacht-a-reassessment-of-the-pogrom-of-1915/102C551FC135A89CDFA4C35A5ABCE4CF ；CO 54/782、54/783档案线索 https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/action-phase-of-the-1915-riots/9DE56CE6E915FF03D6A564520233F7CB ；事后救济 https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/post-riots-campaign-for-justice/90D8579B061BDAC91C8F5CAF4EAFE675 。
+- 种植园工人健康研究 https://doi.org/10.1525/awr.2006.27.3.14 主要涉及19世纪；追查1908劳工委员会、20世纪土地法及1948前待遇。地点与历史范围未核准，未绘公开图元。

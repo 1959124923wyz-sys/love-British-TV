@@ -5348,6 +5348,84 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "india-t007-patna"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "india-t009-lahore",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.35071,
+          31.558
+        ]
+      },
+      "properties": {
+        "name": "拉合尔 · 拉合尔政治会议反对分治",
+        "start_year": 1947,
+        "end_year": 1947,
+        "display_kind": "political",
+        "summary_zh": "印度教及锡克政治领袖在拉合尔集会反对建立巴基斯坦。",
+        "source_ids": [
+          "E20-T009-SRC-PUN",
+          "E20-T009-SRC-GL"
+        ],
+        "source_urls": [
+          "https://www.partitionmuseum.org/partition-of-india/punjab",
+          "https://www.geonames.org/1172451/lahore.html"
+        ],
+        "named_anchors": [
+          "拉合尔"
+        ],
+        "mapping_method": "Documented WGS84 named locality reference; no historical boundary inferred",
+        "related_event_ids": [
+          "E20-T009-LAHORE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "india-t009-lahore"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "india-t009-delhi",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.23149,
+          28.65195
+        ]
+      },
+      "properties": {
+        "name": "德里 · 印度内阁讨论德里难民安置",
+        "start_year": 1948,
+        "end_year": 1948,
+        "display_kind": "economic",
+        "summary_zh": "尼赫鲁称德里约有45万难民，要求中央统筹。",
+        "source_ids": [
+          "E20-T009-SRC-JAN48",
+          "E20-T009-SRC-GD"
+        ],
+        "source_urls": [
+          "https://nehruarchive.in/documents/central-help-for-rehabilitation-10-january-1948-wdy2v5",
+          "https://www.geonames.org/1273294/delhi.html"
+        ],
+        "named_anchors": [
+          "德里"
+        ],
+        "mapping_method": "Documented WGS84 named locality reference; no historical boundary inferred",
+        "related_event_ids": [
+          "E20-T009-DELHI"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "india-t009-delhi"
+      }
     }
   ]
 }
