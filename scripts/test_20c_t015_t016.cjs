@@ -24,4 +24,9 @@ const p=f.properties,e=events.get(p.related_event_ids[0]).e;
 assert.equal(f.geometry.type,'Point');assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat]);assert(p.named_anchors.every(x=>typeof x==='string'));assert.equal(p.fill_authorized,false);assert.equal(p.area_sqkm,null);points.push(f.id);
 }
 assert.deepEqual(points.sort(),["china-t015-han","china-t015-jiu","china-t015-weiret","china-t016-gzsup","china-t016-hk","china-t016-shunion"]);
+const sha=events.get('E20-T016-SHA').e, gz=events.get('E20-T016-GZSUP').e;
+assert.deepEqual([sha.lng,sha.lat],[gz.lng,gz.lat]);
+assert.equal(sha.geo_precision,'named_locality_approximate');
+assert(sha.source_ids.includes('E20-T016-SRC-GGZ'));
+assert(load('data/twentieth-century-spatial-1920-1929.geojson').features.find(f=>f.id==='china-t016-gzsup').properties.related_event_ids.includes(sha.id));
 console.log('PASS T015/T016 evidence, dated links and named locality anchors');

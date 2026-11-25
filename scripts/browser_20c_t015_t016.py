@@ -13,7 +13,7 @@ out=Path('browser-smoke-results');out.mkdir(exist_ok=True)
 try:
  for topic,first,year,minimum,items in [
  ('E20-T015-CHINA-CONCESSIONS-EXTRATERRITORIALITY-1900-1949','E20-T015-HAN',1927,15,[('E20-T015-MAC',1902,None,None),('E20-T015-HAN',1927,30.57436,114.27713),('E20-T015-JIU',1927,29.70475,116.00206),('E20-T015-WEIRET',1930,37.509136,122.113557),('E20-MAL-CN-TREATY',1943,None,None)]),
- ('E20-T016-MAY-THIRTIETH-CANTON-HONG-KONG-STRIKE-1925-1927','E20-T016-SHUNION',1925,16,[('E20-T016-SHUNION',1925,31.22222,121.45806),('E20-T016-GZSUP',1925,23.11667,113.25),('E20-T016-HK',1925,22.2875,114.144167),('E20-T016-END',1926,None,None),('E20-T016-REV',1927,None,None)])]:
+ ('E20-T016-MAY-THIRTIETH-CANTON-HONG-KONG-STRIKE-1925-1927','E20-T016-SHUNION',1925,16,[('E20-T016-SHUNION',1925,31.22222,121.45806),('E20-T016-GZSUP',1925,23.11667,113.25),('E20-T016-SHA',1925,23.11667,113.25),('E20-T016-HK',1925,22.2875,114.144167),('E20-T016-END',1926,None,None),('E20-T016-REV',1927,None,None)])]:
   driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+'?year='+str(year))
   wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
   wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById(arguments[0])",first))
