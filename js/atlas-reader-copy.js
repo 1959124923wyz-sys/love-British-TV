@@ -79,7 +79,9 @@
  }
  // Public prose: remove editorial process and defensive prose, not historical negation.
  const readerOnly=[
-  /(?:本批|本轮|前辈引用|原研究档|研究底稿|研究工作板|编审|候审|原案|继续追档|待核|不虚构|不能编造|不生成假想|假想路径|主权Polygon)/,
+  /(?:本(?:批|轮)(?:用|核|审|制|补|查|增|整|复|移|选|收录|将|完成|已)|前辈引用|原研究档|研究底稿|研究工作板|专题编审|研究候审|研究原案|原案编号|继续追档|原档待核|不虚构|不能编造|不生成假想|假想路径|主权Polygon)/,
+  /(?:本专题|本研究|本资料库).{0,32}(?:说明|参考|采用|收录|地图|绘图|核实|标注|展示|只讨论|聚焦)/,
+  /(?:本地图|现有地图|地图只|地图仅|地图标|地图绘|该图层|GIS绘图|地理配准|在地图上标为|在地图中显示|在地图上显示|地图上以).{0,45}/,
   /(?:地图|图层|色块|虚线|坐标|地名锚点|现代国界|现代边界|现代地理|配准|实测图|契约底图|后世的矿区边界).{0,60}(?:不代表|不等于|不能|不可|不得|不应|不把|不将|不作|只作|仅作|仅供|尚未|未找到|未经|无法|推定|参考|示意|标成|反投|反推)/,
   /(?:不代表|不等于|不能|不可|不得|不应|不把|不将|不作|未经|暂不|无法).{0,45}(?:画出|画成|涂出|地图|图层|坐标|配准|实测|实控领土|边界反推|占领边界|土地面积|采矿权边界)/,
   /(?:不能|不得|不可|不应).{0,42}(?:相加|累加|重复计|混合统计|外推|统一判决统计|单年人数|单年的事实|逐年记录|地图年窗|误认为政府已经报告的实绩|用宣告日替代全部执行日期|把某一项海关统计当成殖民政府净利润|仅用靠近市场的少数住户推算)/,
@@ -96,8 +98,12 @@
   return chunks.map(s=>{
    if(!editorial(restore(s)))return restore(s);
    const links=s.match(/\uE000\d+\uE001/g)||[];
-   const clauses=s.split(/[，,]/).filter(x=>!editorial(restore(x))&&/^\s*(?:\d{4}年|英军|法军|英国|当地|王室|公司|殖民政府|苏丹|条约|法令)/.test(x));
-   return clauses.length?clauses.map(restore).join('，').replace(/[。！？；]+$/,'')+'。':links.length?links.map(restore).join('；')+'。':'';
+   const clauses=s.split(/[，,]/).flatMap(x=>{
+    const restored=restore(x);
+    if(!editorial(restored)&&(/\uE000\d+\uE001/.test(x)||/^\s*(?:\d{4}年|英军|法军|英国|当地|王室|公司|殖民政府|苏丹|条约|法令)/.test(x)))return [restored];
+    return (x.match(/\uE000\d+\uE001/g)||[]).map(restore);
+   });
+   return clauses.length?clauses.join('，').replace(/[。！？；]+$/,'')+'。':links.length?links.map(restore).join('；')+'。':'';
   }).join('').trim();
  }
  function caption(value){

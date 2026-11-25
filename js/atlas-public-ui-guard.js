@@ -43,7 +43,9 @@
  function strip(value){
   const input=String(value??'');
   if(!isWarning(input))return input;
-  let output=reader.clean(reader.narrative(input));
+  const narrative=reader.narrative(input);
+  if(narrative!==input&&!isWarning(narrative))return narrative.replace(/[。；，,\s]+$/g,'');
+  let output=reader.clean(narrative);
   if(!output)return '';
   if(isWarning(output)){
    const paragraphs=output.split(/([。；！？\n]+)/);

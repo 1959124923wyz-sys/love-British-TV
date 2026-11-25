@@ -151,8 +151,8 @@
     '<a href="'+esc(law.source_url)+'" target="_blank" rel="noopener noreferrer">1699年法令转录</a></p>'+
     '':'';
   return '<section class="story-statistics" aria-label="强制运输人口统计">'+
-    '<h3>'+esc(q.title)+'</h3><p class="story-stat-measure">'+'估计被迫从非洲登船人数；'+esc(q.carrier)+'</p>'+
-    '<table class="story-stat-table"><caption>1601—1700年 · 每25年登船人数估算</caption><thead><tr><th scope="col">时期</th><th scope="col">英船旗登船</th><th scope="col">全部船旗登船</th></tr></thead><tbody>'+carrierRows+
+    '<h3>'+esc(q.title)+'</h3><p class="story-stat-measure">'+esc(String(q.measure||'').replace(/\s*[（(]不是[^）)]*[）)]/g,''))+'；'+esc(q.carrier)+'</p>'+
+    '<table class="story-stat-table"><caption>'+esc(q.total.period)+' · 每25年登船人数估算</caption><thead><tr><th scope="col">时期</th><th scope="col">英船旗登船</th><th scope="col">全部船旗登船</th></tr></thead><tbody>'+carrierRows+
     '<tr class="story-stat-total"><th scope="row">'+esc(q.total.period)+'合计</th><td>'+num(q.total.embarked)+'</td><td>'+num(q.total.all_carriers_embarked)+'</td></tr></tbody></table>'+
     '<p class="story-stat-note"><a href="'+esc(q.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(q.source_label)+'</a></p>'+
     '<h4>皇家非洲公司航次样本</h4>'+cohort+second+costs+namedHtml+siteHtml+smaller+specificHtml+censusHtml+sameSourceHtml+lawHtml+'</section>';

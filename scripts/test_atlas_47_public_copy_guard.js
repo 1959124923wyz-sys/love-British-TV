@@ -79,3 +79,7 @@ const storyCode=read('js/history-stories.js');
 assert(!storyCode.includes("return clean||String(text||'')"));
 assert(!/esc\([^)]*\.warning\)/.test(storyCode));
 assert(storyCode.includes('map(readerFriendly).filter(Boolean)'));
+
+for(const s of ['本专题仅说明历史地理和权力结构。','本研究参考了现代资料。','地图只显示英军据点。','这一事件在地图上标为当地历史地点。','GIS绘图保留原有参考区。'])assert.equal(reader.narrative(s),'',s);
+for(const s of ['原案判决后，殖民法院宣布没收土地。','本批货物从印度运往英国。','法令规定被奴役者不能自由迁徙。','史学家对实际人数有不同看法。'])assert.equal(reader.narrative(s),s,s);
+assert.match(reader.narrative('英国于1894年建立保护地，[[E19-TEST|英军攻占城镇]]，地图不代表实控领土。'),/\[\[E19-TEST\|英军攻占城镇\]\]/);
