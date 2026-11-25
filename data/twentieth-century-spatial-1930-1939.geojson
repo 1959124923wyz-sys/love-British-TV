@@ -4491,6 +4491,49 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "burma-t011-tharrawaddy"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "china-t015-weiret",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.113557,
+          37.509136
+        ]
+      },
+      "properties": {
+        "name": "威海卫 · 中国收回威海卫",
+        "start_year": 1930,
+        "end_year": 1930,
+        "display_kind": "political",
+        "summary_zh": "中国收回威海卫",
+        "source_ids": [
+          "E20-T015-SRC-LOCAL",
+          "E20-T015-SRC-WEIT",
+          "E20-T015-SRC-LIU",
+          "E20-T015-SRC-GEOWEI"
+        ],
+        "source_urls": [
+          "https://mzj.weihai.gov.cn/art/2024/12/23/art_53829_1604024.html",
+          "https://api.parliament.uk/historic-hansard/commons/1930/may/05/wei-hai-wei-rendition",
+          "https://www.weihai.gov.cn/art/2019/6/4/art_58900_1733906.html",
+          "https://www.geonames.org/advanced-search.html?q=Shandong%2C+China"
+        ],
+        "named_anchors": [
+          "威海卫"
+        ],
+        "mapping_method": "WGS84 named-place coordinates; documented city-level event",
+        "related_event_ids": [
+          "E20-T015-WEIRET"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "china-t015-weiret"
+      }
     }
   ]
 }

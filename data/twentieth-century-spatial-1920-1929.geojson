@@ -3755,6 +3755,203 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "india-t006-ahmedabad-trial"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "china-t015-han",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.27713,
+          30.57436
+        ]
+      },
+      "properties": {
+        "name": "汉口 · 汉口英国租界归还协议",
+        "start_year": 1927,
+        "end_year": 1927,
+        "display_kind": "political",
+        "summary_zh": "汉口英国租界归还协议",
+        "source_ids": [
+          "E20-T015-SRC-HAN",
+          "E20-T015-SRC-GEOHAN"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1927/feb/21/sir-a-chamberlains-statement",
+          "https://www.geonames.org/advanced-search.html?q=HuBei+WuHan&startRow=0"
+        ],
+        "named_anchors": [
+          "汉口"
+        ],
+        "mapping_method": "WGS84 named-place coordinates; documented city-level event",
+        "related_event_ids": [
+          "E20-T015-HAN"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "china-t015-han"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "china-t015-jiu",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.00206,
+          29.70475
+        ]
+      },
+      "properties": {
+        "name": "九江 · 九江英国租界协议",
+        "start_year": 1927,
+        "end_year": 1927,
+        "display_kind": "political",
+        "summary_zh": "九江英国租界协议",
+        "source_ids": [
+          "E20-T015-SRC-JIU",
+          "E20-T015-SRC-GEOJIU"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1927/feb/22/kiukiang-concession-agreement",
+          "https://www.geonames.org/1805179/jiujiang.html"
+        ],
+        "named_anchors": [
+          "九江"
+        ],
+        "mapping_method": "WGS84 named-place coordinates; documented city-level event",
+        "related_event_ids": [
+          "E20-T015-JIU"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "china-t015-jiu"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "china-t016-shunion",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.45806,
+          31.22222
+        ]
+      },
+      "properties": {
+        "name": "上海 · 上海总工会成立并组织总罢工",
+        "start_year": 1925,
+        "end_year": 1925,
+        "display_kind": "resistance",
+        "summary_zh": "上海总工会成立并组织总罢工",
+        "source_ids": [
+          "E20-T016-SRC-SH",
+          "E20-T016-SRC-GSH"
+        ],
+        "source_urls": [
+          "https://www.chnmuseum.cn/zp/zpml/gmww/202112/t20211208_252766.shtml",
+          "https://www.geonames.org/1796236/shanghai.html"
+        ],
+        "named_anchors": [
+          "上海"
+        ],
+        "mapping_method": "WGS84 named-place coordinates; documented city-level event",
+        "related_event_ids": [
+          "E20-T016-SHUNION"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "china-t016-shunion"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "china-t016-gzsup",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.25,
+          23.11667
+        ]
+      },
+      "properties": {
+        "name": "广州 · 广州各界集会支援上海",
+        "start_year": 1925,
+        "end_year": 1925,
+        "display_kind": "resistance",
+        "summary_zh": "广州各界集会支援上海",
+        "source_ids": [
+          "E20-T016-SRC-GZ",
+          "E20-T016-SRC-GGZ"
+        ],
+        "source_urls": [
+          "https://www.gzsqw.org.cn/c/sdfzpc/dsdsj/5784.jhtml",
+          "https://www.geonames.org/1809858"
+        ],
+        "named_anchors": [
+          "广州"
+        ],
+        "mapping_method": "WGS84 named-place coordinates; documented city-level event",
+        "related_event_ids": [
+          "E20-T016-GZSUP"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "china-t016-gzsup"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "china-t016-hk",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.144167,
+          22.2875
+        ]
+      },
+      "properties": {
+        "name": "香港 · 英国议会确认香港工人罢工",
+        "start_year": 1925,
+        "end_year": 1925,
+        "display_kind": "resistance",
+        "summary_zh": "英国议会确认香港工人罢工",
+        "source_ids": [
+          "E20-T016-SRC-HK",
+          "E20-T016-SRC-GZ",
+          "E20-T016-SRC-GHK"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1925/jun/24/hong-kong",
+          "https://www.gzsqw.org.cn/c/sdfzpc/dsdsj/5784.jhtml",
+          "https://www.geonames.org/search.html?country=HK"
+        ],
+        "named_anchors": [
+          "香港"
+        ],
+        "mapping_method": "WGS84 named-place coordinates; documented city-level event",
+        "related_event_ids": [
+          "E20-T016-HK"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "china-t016-hk"
+      }
     }
   ]
 }
