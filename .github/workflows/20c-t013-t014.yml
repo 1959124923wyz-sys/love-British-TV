@@ -1,0 +1,40 @@
+name: 20C T013 T014 Boxer indemnity and Tibet QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/**'
+      - 'data/twentieth-century-spatial-1900-1909.geojson'
+      - 'data/twentieth-century-spatial-1910-1919.geojson'
+      - 'scripts/test_20c_t013_t014.cjs'
+      - 'scripts/browser_20c_t013_t014.py'
+      - '.github/workflows/20c-t013-t014.yml'
+permissions:
+  contents: read
+jobs:
+  evidence-and-gis:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node scripts/test_20c_t013_t014.cjs
+          node scripts/test_serial_story_contract.js
+          python3 scripts/audit_spatial_semantics.py --strict
+          node scripts/test_atlas_47_public_copy_guard.js
+  desktop-history-and-map:
+    needs: evidence-and-gis
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-t013-t014.log 2>&1 &
+          python3 scripts/browser_20c_t013_t014.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 20c-t013-t014-map
+          path: browser-smoke-results/*.png
+          if-no-files-found: ignore
