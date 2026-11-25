@@ -5426,6 +5426,47 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "india-t009-delhi"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "burma-t012-rangoon",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.15611,
+          16.80528
+        ]
+      },
+      "properties": {
+        "name": "仰光 · 英方战时油业财产毁损",
+        "start_year": 1942,
+        "end_year": 1942,
+        "display_kind": "economic",
+        "summary_zh": "1964年上议院判例追述英国政策下仰光附近油业财产毁损。",
+        "source_ids": [
+          "E20-T012-SRC-OIL",
+          "E20-T012-SRC-OIL2",
+          "E20-T012-SRC-GEO"
+        ],
+        "source_urls": [
+          "https://www.bailii.org/uk/cases/UKHL/1964/1964_SC_HL_117.html",
+          "https://vlex.co.uk/vid/burmah-oil-company-burma-805532341",
+          "https://www.geonames.org/1298824/yangon.html"
+        ],
+        "named_anchors": [
+          "仰光"
+        ],
+        "mapping_method": "Documented WGS84 named locality reference; no facility location or historical boundary inferred",
+        "related_event_ids": [
+          "E20-T012-RANGOON"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "burma-t012-rangoon"
+      }
     }
   ]
 }
