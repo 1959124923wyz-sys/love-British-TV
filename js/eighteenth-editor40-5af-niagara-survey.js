@@ -33,7 +33,7 @@ function render(){
  if(yes&&!toggle.checked&&layer&&map.hasLayer(layer))map.removeLayer(layer);
  hint.textContent=error?'史图资料暂未加载，请打开原始馆藏':
   imageError?'原图影像暂不可用，请打开原始馆藏':
-  yes?'1790年配准史图，仅作堡垒与地形对照':
+  yes?'1790年军事地图':
   '切换到1790年可对照原始军事测绘图';
 }
 function validate(d){

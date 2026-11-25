@@ -77,8 +77,31 @@
   s=s.replace(/\s*·\s*非(?:整岛|全岛|全部区域)(?:持续|实际)(?:英方)?(?:统治|控制|占领)(?=\s*·|$)/g,'');
   return s.trim().replace(/[·／、，\s]+$/g,'');
  }
+ // Public prose: remove editorial process and defensive prose, not historical negation.
+ const readerOnly=[
+  /(?:本批|本轮|前辈引用|原研究档|研究底稿|研究工作板|编审|候审|原案|继续追档|待核|不虚构|不能编造|不生成假想|假想路径|主权Polygon)/,
+  /(?:地图|图层|色块|虚线|坐标|地名锚点|现代国界|现代边界|现代地理|配准|实测图|契约底图|后世的矿区边界).{0,60}(?:不代表|不等于|不能|不可|不得|不应|不把|不将|不作|只作|仅作|仅供|尚未|未找到|未经|无法|推定|参考|示意|标成|反投|反推)/,
+  /(?:不代表|不等于|不能|不可|不得|不应|不把|不将|不作|未经|暂不|无法).{0,45}(?:画出|画成|涂出|地图|图层|坐标|配准|实测|实控领土|边界反推|占领边界|土地面积|采矿权边界)/,
+  /(?:不能|不得|不可|不应).{0,42}(?:相加|累加|重复计|混合统计|外推|统一判决统计|单年人数|单年的事实|逐年记录|地图年窗|误认为政府已经报告的实绩|用宣告日替代全部执行日期|把某一项海关统计当成殖民政府净利润|仅用靠近市场的少数住户推算)/,
+  /(?:不能|不得|不应).{0,48}(?:当成新的独立物件证据|替代受害者记载|作为另一套独立原始目击文献|归入一份统一判决统计|直接套用到现代全部性别少数群体|把群体身份等同于犯罪事实)/,
+  /(?:研究参考区|未核证地理参考|历史地理推定|驻军周边参考|岛屿殖民参考|军事影响参考|历史区域参考|殖民行政与争夺参考|包含大致位置参考|◎地区参考点)/,
+  /(?:悬停高亮区域.{0,8}点击展开详情|单击事件定位年份.{0,8}双击打开事件档案|应保留完整2019字段参考)/
+ ];
+ const editorial=value=>readerOnly.some(rx=>rx.test(String(value??'')));
+ function narrative(value){
+  const tokens=[];
+  const source=String(value??'').replace(/\[\[[A-Za-z0-9-]+\|[^\]\n]{1,90}\]\]/g,t=>'\uE000'+(tokens.push(t)-1)+'\uE001');
+  const restore=s=>s.replace(/\uE000(\d+)\uE001/g,(_,i)=>tokens[Number(i)]||'');
+  const chunks=source.match(/[^。！？；\n]+[。！？；\n]*/g)||[];
+  return chunks.map(s=>{
+   if(!editorial(restore(s)))return restore(s);
+   const links=s.match(/\uE000\d+\uE001/g)||[];
+   const clauses=s.split(/[，,]/).filter(x=>!editorial(restore(x))&&/^\s*(?:\d{4}年|英军|法军|英国|当地|王室|公司|殖民政府|苏丹|条约|法令)/.test(x));
+   return clauses.length?clauses.map(restore).join('，').replace(/[。！？；]+$/,'')+'。':links.length?links.map(restore).join('；')+'。':'';
+  }).join('').trim();
+ }
  function caption(value){
   return label(clean(value)||'');
  }
- return Object.freeze({clean,label,caption,academic});
+ return Object.freeze({clean,label,caption,academic,editorial,narrative});
 });

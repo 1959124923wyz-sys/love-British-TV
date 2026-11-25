@@ -40,22 +40,22 @@
    Math.max(...result.map(x=>x[0])),Math.max(...result.map(x=>x[1]))];
  };
  const labelByKind={
-  charter:'王室／公司纸面特许',company:'公司商站与贸易',island:'岛屿殖民参考',
+  charter:'王室／公司纸面特许',company:'公司商站与贸易',island:'岛屿殖民',
   conquest:'军事行动与殖民争夺',administrative:'殖民行政与政策',
   economic_network:'贸易经济网络',land_dispossession:'土地没收与殖民',
   military_impact:'军事行动与抵抗',local_governance:'地方治理',
   control:'历史军事／行政控制',political:'政治关系及地方治理',
-  research:'研究参考区'
+  research:'历史区域'
  };
  const groupName={
   territory:'王室治理／历史区域',colonialClaims:'殖民声索／公司特许',
   seventeenthStudies:'17世纪地区专题',archaeologyReference:'古迹与现代考古参照',
-  warVicinity:'战争影响与驻军',warReach:'军事影响参考',
+  warVicinity:'战争影响与驻军',warReach:'军事活动',
   contestedZones:'冲突争夺区',earlyRegionalImpact:'军事与殖民影响',
   invasionImpact:'入侵与战争影响',tenthExtraction:'土地没收与掠夺',
   nineYearsWar:'爱尔兰战争与抵抗',atlanticContact:'港口与海上军事贸易',
   eleventhAreas:'16世纪末控制／影响区',
-  hypotheses:'未核证地理参考',enslavementBands:'强迫迁移／奴役贸易'
+  hypotheses:'历史区域',enslavementBands:'强迫迁移／奴役贸易'
  };
  const category=r=>{
   const p=r.feature.properties||{};
@@ -69,7 +69,7 @@
  const title=r=>{
   const p=r.feature.properties||{},y=host.getYear();
   const stage=p.year_stages?.find(x=>x.start_year<=y&&y<=x.end_year);
-  return String(stage?.title||p.public_name||p.name||p.title||r.feature.id||'历史区域参考');
+  return String(stage?.title||p.public_name||p.name||p.title||r.feature.id||'历史区域');
  };
  const summary=r=>{
   const p=r.feature.properties||{},y=host.getYear();
@@ -149,7 +149,7 @@
    (desc&&!isOpen?'<span class="atlas-18c-overlap-summary">'+esc(clip(desc))+'</span>':'')+'</button>'+
    (isOpen?'<div class="atlas-18c-overlap-detail">'+
     (is19c?'':'<div class="atlas-18c-overlap-facts"><div><span>'+periodLabel+'</span><b>'+esc(period(r))+'</b></div>'+
-    '<div><span>图层性质</span><b>'+esc(clip(category(r),75))+'</b></div></div>')+
+    '<div><span>区域类型</span><b>'+esc(clip(category(r),75))+'</b></div></div>')+
     (desc?'<p>'+esc(desc)+'</p>':'')+
     (events.length?'<div class="zone-related">'+events.map(e=>
      '<button type="button" class="zone-record-link" data-area-event="'+esc(e.id)+'">'+esc(e.name)+'</button>'
@@ -166,7 +166,6 @@
   container.innerHTML='<section id="atlasHistoricOverlapPanel" class="atlas-18c-overlap-panel">'+
    '<div class="dossier-kicker">历史地理区块 · '+host.getYear()+'年</div>'+
    '<h2>'+(activeRecords.length===1?'历史区域档案':'此处涉及 '+activeRecords.length+' 条历史区域记录')+'</h2>'+
-   '<p class="atlas-18c-overlap-lead">悬停高亮区域 · 点击展开详情</p>'+
    '<div class="atlas-18c-overlap-list">'+activeRecords.map(card).join('')+'</div>'+
    '</section>';
   for(const el of container.querySelectorAll('[data-historic-index]')){
