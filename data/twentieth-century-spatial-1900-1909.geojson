@@ -3279,6 +3279,84 @@
           "https://peo.gov.au/understand-our-parliament/history-of-parliament/federation/federation"
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "id": "ahmedabad-famine-1900",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.58727,
+          23.02579
+        ]
+      },
+      "properties": {
+        "name": "艾哈迈达巴德 · 地税与救济",
+        "start_year": 1900,
+        "end_year": 1900,
+        "display_kind": "economic_network",
+        "summary_zh": "孟买政府报告记载受管理地产所属地区缓征政府应收款354480卢比，并向佃户发放农业贷款。",
+        "source_ids": [
+          "E20-T001-SRC-B",
+          "E20-T001-SRC-M"
+        ],
+        "source_urls": [
+          "https://www.qdl.qa/en/archive/81055/vdc_100137734292.0x000058",
+          "https://www.geonames.org/1279233/ahmedabad.html"
+        ],
+        "named_anchors": [
+          "艾哈迈达巴德"
+        ],
+        "mapping_method": "Documented WGS84 named-city reference; not site-level",
+        "related_event_ids": [
+          "E20-T001-AHMEDABAD"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "ahmedabad-famine-1900"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bombay-famine-report-1901",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88261,
+          19.07283
+        ]
+      },
+      "properties": {
+        "name": "孟买 · 殖民行政报告",
+        "start_year": 1901,
+        "end_year": 1901,
+        "display_kind": "economic_network",
+        "summary_zh": "孟买政府年度报告在孟买印行，记录粮食进口、铁路收入、税收缓征与救济。",
+        "source_ids": [
+          "E20-T001-SRC-A",
+          "E20-T001-SRC-N"
+        ],
+        "source_urls": [
+          "https://www.qdl.qa/en/archive/81055/vdc_100137734292.0x000017",
+          "https://www.geonames.org/1275339/mumbai.html"
+        ],
+        "named_anchors": [
+          "孟买"
+        ],
+        "mapping_method": "Documented WGS84 named-city reference; not site-level",
+        "related_event_ids": [
+          "E20-T001-BOMBAY"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "bombay-famine-report-1901"
+      }
     }
   ]
 }
