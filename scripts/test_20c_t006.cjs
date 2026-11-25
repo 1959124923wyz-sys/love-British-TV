@@ -4,7 +4,7 @@ const index=load('data/stories/serial/index.json');
 for(const id of ['E20-T003-BENGAL-PARTITION-DETENTION-1905-1919','E20-AMRITSAR-MASSACRE']){const old=index.topics.find(t=>t.id===id);assert(old&&old.status==='published'&&old.publication_review==='approved');}
 const a=load('data/stories/serial/e20-salt-march-1930-1939.json'),t=load('data/stories/serial/index.json').topics.find(x=>x.id==='E20-SALT-MARCH');
 assert(t&&a.id===t.id&&a.sections.length===9&&a.sources.length===63);
-assert(['editorial_review','published'].includes(t.status));assert.equal(t.origin_year,1920);assert.equal(a.start_year,1920);if(t.status==='published')assert.equal(t.publication_review,'approved');
+assert.equal(t.status,'published');assert.equal(t.origin_year,1920);assert.equal(a.start_year,1920);if(t.status==='published')assert.equal(t.publication_review,'approved');
 const sources=new Set(a.sources.map(s=>s.id));assert(a.sections.every(s=>s.source_keys.every(k=>sources.has(k))));
 const links=[...new Set([...a.sections.flatMap(s=>s.paragraphs).join('').matchAll(/\[\[([A-Z0-9-]+)\|/g)].map(m=>m[1]))];
 assert.equal(links.length,80);assert.deepEqual(links.sort(),[...t.event_ids].sort());
