@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "purpose": "Supplement to PR #597; only unique conditional candidate, not loaded by public atlas",
+    "coordinate_reference": "WGS84 modern named-locality coordinates; no historical building location asserted",
+    "historical_boundaries": "not verified; no polygons"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ceylon-t010-ruwanwella",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2517,
+          7.0427
+        ]
+      },
+      "properties": {
+        "name": "鲁万韦拉 · 赔偿款争议",
+        "date": "1915-07-20",
+        "topic_id": "E20-T010",
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/written-answers/1916/jul/18/ceylon",
+          "https://www.geonames.org/1228438/ruwanwella.html"
+        ],
+        "event_source": "Date in question; original receipt pending",
+        "review_state": "conditional_candidate_pending_historical_toponym",
+        "geo_precision": "named_locality_approximate",
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geolocation_limit_zh": "1916年议会质询中所述Ruanwella与现代Ruwanwella近似同名；需核1915年地图及原始收据后才能进入公开地图。"
+      }
+    }
+  ]
+}
