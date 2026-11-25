@@ -2255,6 +2255,116 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E20-T006-START",
+      "year": 1920,
+      "start_year": 1920,
+      "end_year": 1920,
+      "visible_from": 1920,
+      "date_label": "1920年8月1日",
+      "name": "不合作运动发动",
+      "description": "印度官方纪念资料记载不合作运动在这一天发动。",
+      "short_description": "印度官方纪念资料记载不合作运动在这一天发动。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T006-SRC-START"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "政治司法、殖民拘押及经济惩罚"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T006-ALI",
+      "year": 1922,
+      "start_year": 1922,
+      "end_year": 1922,
+      "visible_from": 1922,
+      "date_label": "1922年2月14日",
+      "name": "英国下院质询政治起诉",
+      "description": "议员援引阿里兄弟被起诉和定罪的情况，追问对政治宣传的处置。",
+      "short_description": "议员援引阿里兄弟被起诉和定罪的情况，追问对政治宣传的处置。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T006-SRC-ALI"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "政治司法、殖民拘押及经济惩罚"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T006-TRIAL",
+      "year": 1922,
+      "start_year": 1922,
+      "end_year": 1922,
+      "visible_from": 1922,
+      "date_label": "1922年3月18日",
+      "name": "艾哈迈达巴德政治审判",
+      "description": "甘地因《青年印度》三篇文章被判六年监禁，印刷者班克尔亦获刑。",
+      "short_description": "甘地因《青年印度》三篇文章被判六年监禁，印刷者班克尔亦获刑。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": 23.02579,
+      "lng": 72.58727,
+      "source_ids": [
+        "E20-T006-SRC-TRIAL",
+        "E20-T006-SRC-JAIL",
+        "E20-T006-SRC-GEO"
+      ],
+      "geo_precision": "named_city",
+      "significance": {
+        "level": 8,
+        "rationale": "政治司法、殖民拘押及经济惩罚"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T006-RELEASE",
+      "year": 1924,
+      "start_year": 1924,
+      "end_year": 1924,
+      "visible_from": 1924,
+      "date_label": "1924年2月26日",
+      "name": "上院讨论甘地获释与政治犯",
+      "description": "议会回顾1922年六年刑期及因健康状况获释的情况。",
+      "short_description": "议会回顾1922年六年刑期及因健康状况获释的情况。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T006-SRC-RELEASE"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "政治司法、殖民拘押及经济惩罚"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "routes": [
@@ -4914,6 +5024,54 @@
       "label": "英国议会 Hansard｜Action against Punjab Officials, 27 October 1920",
       "url": "https://api.parliament.uk/historic-hansard/written-answers/1920/oct/27/action-against-punjab-officials",
       "access": "133卷1754–1755W栏，官员处分和批评"
+    },
+    {
+      "id": "E20-T006-SRC-START",
+      "publisher": "印度政府新闻局",
+      "title": "2017年独立运动纪念讲话",
+      "label": "印度政府新闻局｜2017年独立运动纪念讲话",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1497753&lang=2&reg=3",
+      "access": "回顾1920年8月1日不合作运动发动。"
+    },
+    {
+      "id": "E20-T006-SRC-ALI",
+      "publisher": "英国议会 Hansard",
+      "title": "Mr. Gandhi, 14 February 1922",
+      "label": "英国议会 Hansard｜Mr. Gandhi, 14 February 1922",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1922/feb/14/mr-gandhi",
+      "access": "150 c788；阿里兄弟被起诉、定罪的议会质询。"
+    },
+    {
+      "id": "E20-T006-SRC-TRIAL",
+      "publisher": "Gandhi Heritage Portal",
+      "title": "Court Room, Circuit House, Ahmedabad",
+      "label": "Gandhi Heritage Portal｜Court Room, Circuit House, Ahmedabad",
+      "url": "https://www.gandhiheritageportal.org/as/gandhi_heritage_site/writeup/MTI%3D",
+      "access": "1922年3月18日审判、三篇文章与六年监禁。"
+    },
+    {
+      "id": "E20-T006-SRC-JAIL",
+      "publisher": "Gandhi Heritage Portal",
+      "title": "Gandhi Cell, Gandhi Yard, Sabarmati Jail",
+      "label": "Gandhi Heritage Portal｜Gandhi Cell, Gandhi Yard, Sabarmati Jail",
+      "url": "https://www.gandhiheritageportal.org/te/gandhi_heritage_site/writeup/NA%3D%3D",
+      "access": "审前拘禁、甘地与班克尔刑期。"
+    },
+    {
+      "id": "E20-T006-SRC-RELEASE",
+      "publisher": "英国议会 Hansard",
+      "title": "India, 26 February 1924",
+      "label": "英国议会 Hansard｜India, 26 February 1924",
+      "url": "https://api.parliament.uk/historic-hansard/lords/1924/feb/26/india",
+      "access": "回顾1922年判刑与因健康获释。"
+    },
+    {
+      "id": "E20-T006-SRC-GEO",
+      "publisher": "GeoNames",
+      "title": "Ahmedabad 1279233",
+      "label": "GeoNames｜Ahmedabad 1279233",
+      "url": "https://www.geonames.org/1279233/ahmedabad.html",
+      "access": "23.02579,72.58727，现代城市PPL。"
     }
   ]
 }

@@ -1543,8 +1543,8 @@
       "visible_from": 1931,
       "date_label": "1931年3月5日",
       "name": "甘地与欧文达成暂时停争协议",
-      "description": "国大党同意停止公民不服从。政府承诺撤销若干条例及相关起诉，释放符合条件的被判监禁者并处置部分财产。",
-      "short_description": "国大党同意停止公民不服从。政府承诺撤销若干条例及相关起诉，释放符合条件的被判监禁者并处置部分财产。",
+      "description": "国大党同意停止公民不服从。政府承诺撤销若干条例及相关起诉，释放符合条件的被判监禁者并处置部分财产。 已收缴的罚金及已实现的保证金不退，已售予第三方的不动产原则上不撤销交易。",
+      "short_description": "国大党同意停止公民不服从。政府承诺撤销若干条例及相关起诉，释放符合条件的被判监禁者并处置部分财产。 已收缴的罚金及已实现的保证金不退，已售予第三方的不动产原则上不撤销交易。",
       "category": "political",
       "icon_code": "POL",
       "significance": {
@@ -1556,7 +1556,8 @@
       "source_ids": [
         "E20-SALT-SRC-GIP",
         "E20-SALT-SRC-PACT",
-        "E20-SALT-SRC-GIPNE"
+        "E20-SALT-SRC-GIPNE",
+        "E20-T006-SRC-PACT"
       ],
       "geo_precision": "named_site_reference",
       "historical_control_boundary_verified": false,
@@ -2523,6 +2524,87 @@
         "E20-SALT-SRC-GIA"
       ],
       "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T006-MAR",
+      "year": 1932,
+      "start_year": 1932,
+      "end_year": 1932,
+      "visible_from": 1932,
+      "date_label": "1932年5月12日",
+      "name": "政府公布截至三月底定罪及羁押统计",
+      "description": "普通法定罪27375项、条例定罪12142项，在监服刑31114人；紧急权力条例第3条累计拘捕5506人，3月底仍在押149人。",
+      "short_description": "普通法定罪27375项、条例定罪12142项，在监服刑31114人；紧急权力条例第3条累计拘捕5506人，3月底仍在押149人。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T006-SRC-MAR"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "政治司法、殖民拘押及经济惩罚"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T006-SEP",
+      "year": 1932,
+      "start_year": 1932,
+      "end_year": 1932,
+      "visible_from": 1932,
+      "date_label": "1932年10月31日",
+      "name": "政府公布截至九月底定罪统计",
+      "description": "累计定罪61551项，已定罪在监19858人。",
+      "short_description": "累计定罪61551项，已定罪在监19858人。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T006-SRC-SEP"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "政治司法、殖民拘押及经济惩罚"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T006-FINE",
+      "year": 1932,
+      "start_year": 1932,
+      "end_year": 1932,
+      "visible_from": 1932,
+      "date_label": "1932年10月31日",
+      "name": "下院追问城镇与村落集体罚金",
+      "description": "议员要求提供次数、金额及理由，印度事务大臣当时未能提供。",
+      "short_description": "议员要求提供次数、金额及理由，印度事务大臣当时未能提供。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T006-SRC-FINE"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "政治司法、殖民拘押及经济惩罚"
+      },
       "historical_control_boundary_verified": false,
       "territorial_claim": false,
       "fill_authorized": false,
@@ -5784,6 +5866,38 @@
       "label": "GeoNames｜Kolkata 1275004",
       "url": "https://www.geonames.org/1275004",
       "access": "现代具名城市22.56263,88.36304"
+    },
+    {
+      "id": "E20-T006-SRC-PACT",
+      "publisher": "英国议会 Hansard",
+      "title": "Conversations between the Governor-General of India and Mr. Gandhi, 5 March 1931",
+      "label": "英国议会 Hansard｜Conversations between the Governor-General of India and Mr. Gandhi, 5 March 1931",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1931/mar/05/conversations-between-the-governor",
+      "access": "协定第13–18条：罚金、警费及财产处分。"
+    },
+    {
+      "id": "E20-T006-SRC-MAR",
+      "publisher": "英国议会 Hansard",
+      "title": "Civil Disobedience Movement (Arrests and Convictions), 12 May 1932",
+      "label": "英国议会 Hansard｜Civil Disobedience Movement (Arrests and Convictions), 12 May 1932",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1932/may/12/civil-disobedience-movement-arrests-and",
+      "access": "265 cc2084–2085，截至3月底统计。"
+    },
+    {
+      "id": "E20-T006-SRC-SEP",
+      "publisher": "英国议会 Hansard",
+      "title": "India (Civil Disobedience Movement), 31 October 1932",
+      "label": "英国议会 Hansard｜India (Civil Disobedience Movement), 31 October 1932",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1932/oct/31/india-civil-disobedience-movement",
+      "access": "269 c1448W，截至9月底统计。"
+    },
+    {
+      "id": "E20-T006-SRC-FINE",
+      "publisher": "英国议会 Hansard",
+      "title": "Collective Fines, 31 October 1932",
+      "label": "英国议会 Hansard｜Collective Fines, 31 October 1932",
+      "url": "https://api.parliament.uk/historic-hansard//commons/1932/oct/31/collective-fines",
+      "access": "269 c1415；部长当时未提供集体罚金统计。"
     }
   ]
 }
