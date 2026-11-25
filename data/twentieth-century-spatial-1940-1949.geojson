@@ -5309,6 +5309,45 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "india-t008-price"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "india-t007-patna",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.13563,
+          25.59408
+        ]
+      },
+      "properties": {
+        "name": "巴特那 · 比哈尔国大党领导人遭拘禁",
+        "start_year": 1942,
+        "end_year": 1942,
+        "display_kind": "repression",
+        "summary_zh": "巴特那地方行政机关拘捕拉金德拉·普拉萨德，将其送入班基普尔监狱。",
+        "source_ids": [
+          "E20-T007-SRC-BIHAR",
+          "E20-T007-SRC-GPA"
+        ],
+        "source_urls": [
+          "https://biharfoundation.bihar.gov.in/know-your-bihar/profile-history/history-of-bihar",
+          "https://www.geonames.org/1260086/patna.html"
+        ],
+        "named_anchors": [
+          "巴特那"
+        ],
+        "mapping_method": "Documented WGS84 named locality reference; no historical boundary inferred",
+        "related_event_ids": [
+          "E20-T007-PATNA"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "india-t007-patna"
+      }
     }
   ]
 }
