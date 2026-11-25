@@ -287,6 +287,33 @@
       "area_sqkm": null
     },
     {
+      "id": "E20-T005-FINE1912",
+      "year": 1912,
+      "start_year": 1912,
+      "end_year": 1912,
+      "visible_from": 1912,
+      "date_label": "1912年（1913年议会追述）",
+      "name": "马哈苏德部族遭罚款",
+      "description": "1913年财政辩论回顾上一年罚款的征收。",
+      "short_description": "1913年财政辩论回顾上一年罚款的征收。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T005-SRC-B13"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民行政及民众处境"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
       "id": "E20-AMR-DELHI-COUNCIL",
       "year": 1913,
       "start_year": 1913,
@@ -2254,6 +2281,34 @@
       "significance": {
         "level": 8,
         "rationale": "殖民行政、教育压制与政治拘禁"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T005-NAIKUCH",
+      "year": 1919,
+      "start_year": 1919,
+      "end_year": 1919,
+      "visible_from": 1919,
+      "date_label": "约1919年",
+      "name": "奈库奇村遭殖民军拆毁",
+      "description": "国家陆军博物馆馆藏影像记录村落毁损。",
+      "short_description": "国家陆军博物馆馆藏影像记录村落毁损。",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T005-SRC-NAI",
+        "E20-T005-SRC-WAR"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民行政及民众处境"
       },
       "historical_control_boundary_verified": false,
       "territorial_claim": false,
@@ -4870,6 +4925,30 @@
       "label": "GeoNames｜Lucknow 1264733",
       "url": "https://www.geonames.org/1264733",
       "access": "现代城市26.83928,80.92313"
+    },
+    {
+      "id": "E20-T005-SRC-B13",
+      "publisher": "英国下院",
+      "title": "印度财政账目",
+      "label": "英国下院｜印度财政账目",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1913/aug/07/east-india-revenue-accounts-indian-budget",
+      "access": "1913年8月7日回顾1912年征罚。"
+    },
+    {
+      "id": "E20-T005-SRC-NAI",
+      "publisher": "英国国家陆军博物馆",
+      "title": "约1919年奈库奇村落毁损照片",
+      "label": "英国国家陆军博物馆｜约1919年奈库奇村落毁损照片",
+      "url": "https://collection.nam.ac.uk/detail.php?acc=1983-12-4-82",
+      "access": "馆藏1983-12-4-82。"
+    },
+    {
+      "id": "E20-T005-SRC-WAR",
+      "publisher": "英国国家陆军博物馆",
+      "title": "第三次英阿战争与瓦济里斯坦起义",
+      "label": "英国国家陆军博物馆｜第三次英阿战争与瓦济里斯坦起义",
+      "url": "https://www.nam.ac.uk/explore/third-afghan-war-and-revolt-waziristan",
+      "access": "1919年战争及瓦济里斯坦抵抗。"
     }
   ]
 }
