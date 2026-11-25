@@ -3600,6 +3600,45 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "punjab-accountability-london-1919"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "ceylon-t010-colombo",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.84868,
+          6.93548
+        ]
+      },
+      "properties": {
+        "name": "科伦坡 · 科伦坡特别专员发布戒严公告",
+        "start_year": 1915,
+        "end_year": 1915,
+        "display_kind": "repression",
+        "summary_zh": "1917年英国议会质询1915年科伦坡公告，政府为公告辩护。",
+        "source_ids": [
+          "E20-T010-SRC-WEKE",
+          "E20-T010-SRC-GEO"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1917/apr/23/weke-ceylon-court-martial",
+          "https://www.geonames.org/1248991/colombo.html"
+        ],
+        "named_anchors": [
+          "科伦坡"
+        ],
+        "mapping_method": "Modern WGS84 named locality reference; exact building not established",
+        "related_event_ids": [
+          "E20-T010-COLOMBO"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "ceylon-t010-colombo"
+      }
     }
   ]
 }
