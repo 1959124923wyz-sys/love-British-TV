@@ -3632,6 +3632,88 @@
           "https://irishwarmemorials.ie/wp-content/uploads/pdf/1282.1_1.pdf"
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "id": "india-land-e20-t002-assess",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.111506,
+          21.122973
+        ]
+      },
+      "properties": {
+        "name": "巴尔多利 · 地税与财产处分",
+        "start_year": 1927,
+        "end_year": 1927,
+        "display_kind": "land_dispossession",
+        "summary_zh": "据1928年7月英国政府声明，1927年新评估平均上调20%，初案平均上调30%。",
+        "source_ids": [
+          "E20-T002-SRC-BARD",
+          "E20-T002-SRC-GEO5"
+        ],
+        "source_urls": [
+          "https://hansard.parliament.uk/commons/1928-07-09/debates/ff68e092-0957-4aed-8b78-2cd71c35964b/CommonsChamber",
+          "https://www.geonames.org/search.html?country=IN&q=&startRow=800"
+        ],
+        "named_anchors": [
+          "巴尔多利"
+        ],
+        "mapping_method": "Documented WGS84 named-city reference; regional event anchor, not a historical cadastral footprint",
+        "related_event_ids": [
+          "E20-T002-ASSESS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "india-land-e20-t002-assess"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "india-land-e20-t002-bard",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.111506,
+          21.122973
+        ]
+      },
+      "properties": {
+        "name": "巴尔多利 · 地税与财产处分",
+        "start_year": 1928,
+        "end_year": 1928,
+        "display_kind": "land_dispossession",
+        "summary_zh": "帕特尔组织农民要求重新调查地税，殖民政府拒绝后农民拒绝缴税。英国政府7月9日追述，至5月中旬约1600英亩已被没收并转给新占有人。官方称约65000英亩已宣布没收；其中1618英亩（均属非农业经营者）已售给新占有人，售价10581卢比。",
+        "source_ids": [
+          "E20-T002-SRC-BARD",
+          "E20-T002-SRC-GEO5",
+          "E20-T002-SRC-BARD3"
+        ],
+        "source_urls": [
+          "https://hansard.parliament.uk/commons/1928-07-09/debates/ff68e092-0957-4aed-8b78-2cd71c35964b/CommonsChamber",
+          "https://www.geonames.org/search.html?country=IN&q=&startRow=800",
+          "https://hansard.parliament.uk/commons/1928-07-23/debates/0c8a46c8-1333-4348-b288-ea1920a5123c/WrittenAnswers"
+        ],
+        "named_anchors": [
+          "巴尔多利"
+        ],
+        "mapping_method": "Documented WGS84 named-city reference; regional event anchor, not a historical cadastral footprint",
+        "related_event_ids": [
+          "E20-T002-BARD",
+          "E20-T002-FORFEIT",
+          "E20-T002-SEIZURE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "india-land-e20-t002-bard"
+      }
     }
   ]
 }
