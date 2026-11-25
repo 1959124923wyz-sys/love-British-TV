@@ -3714,6 +3714,47 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "india-land-e20-t002-bard"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "india-t006-ahmedabad-trial",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.58727,
+          23.02579
+        ]
+      },
+      "properties": {
+        "name": "艾哈迈达巴德 · 政治审判",
+        "start_year": 1922,
+        "end_year": 1922,
+        "display_kind": "political",
+        "summary_zh": "甘地因《青年印度》三篇文章被判六年监禁，印刷者班克尔亦获刑。",
+        "source_ids": [
+          "E20-T006-SRC-TRIAL",
+          "E20-T006-SRC-JAIL",
+          "E20-T006-SRC-GEO"
+        ],
+        "source_urls": [
+          "https://www.gandhiheritageportal.org/as/gandhi_heritage_site/writeup/MTI%3D",
+          "https://www.gandhiheritageportal.org/te/gandhi_heritage_site/writeup/NA%3D%3D",
+          "https://www.geonames.org/1279233/ahmedabad.html"
+        ],
+        "named_anchors": [
+          "艾哈迈达巴德"
+        ],
+        "mapping_method": "Documented WGS84 named city reference",
+        "related_event_ids": [
+          "E20-T006-TRIAL"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "india-t006-ahmedabad-trial"
+      }
     }
   ]
 }
