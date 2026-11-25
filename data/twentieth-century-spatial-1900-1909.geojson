@@ -3751,6 +3751,166 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "bengal-e20-t003-barin"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "china-t013-beijing",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.39723,
+          39.9075
+        ]
+      },
+      "properties": {
+        "name": "北京 · 英方承认北京占领区财物收取与拍卖",
+        "start_year": 1901,
+        "end_year": 1901,
+        "display_kind": "economic",
+        "summary_zh": "英国指挥官授权集中收取房屋财物、拍卖并将所得用于部队基金。",
+        "source_ids": [
+          "E20-T013-SRC-LORD",
+          "E20-T013-SRC-NAM",
+          "E20-T013-SRC-PEK"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/lords/1901/mar/28/china-present-position-and-policy",
+          "https://www.nam.ac.uk/explore/boxer-rebellion",
+          "https://www.geonames.org/1816670/beijing.html"
+        ],
+        "named_anchors": [
+          "北京"
+        ],
+        "mapping_method": "Documented modern WGS84 named locality; exact building not inferred",
+        "related_event_ids": [
+          "E20-T013-PEK"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "china-t013-beijing"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "china-t013-tianjin",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.17667,
+          39.1422222
+        ]
+      },
+      "properties": {
+        "name": "天津 · 英国上院确认天津占领区同类财物政策",
+        "start_year": 1901,
+        "end_year": 1901,
+        "display_kind": "economic",
+        "summary_zh": "同一报告点名北京与天津英方占领区。",
+        "source_ids": [
+          "E20-T013-SRC-LORD",
+          "E20-T013-SRC-TJ"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/lords/1901/mar/28/china-present-position-and-policy",
+          "https://www.geonames.org/1792947/tianjin.html"
+        ],
+        "named_anchors": [
+          "天津"
+        ],
+        "mapping_method": "Documented modern WGS84 named locality; exact building not inferred",
+        "related_event_ids": [
+          "E20-T013-TJ"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "china-t013-tianjin"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tibet-t014-gyantse",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.59956,
+          28.92026
+        ]
+      },
+      "properties": {
+        "name": "江孜 · 江孜寺院占领与文化财物流失",
+        "start_year": 1904,
+        "end_year": 1904,
+        "display_kind": "economic",
+        "summary_zh": "馆藏研究追溯江孜白居寺相关物件。",
+        "source_ids": [
+          "E20-T014-SRC-MOMA",
+          "E20-T014-SRC-CARR",
+          "E20-T014-SRC-GY"
+        ],
+        "source_urls": [
+          "https://post.moma.org/from-loot-to-legacy-rethinking-tibetan-art-in-western-museums/",
+          "https://doi.org/10.1017/S0026749X03001033",
+          "https://www.geonames.org/1281119/jiangzi.html"
+        ],
+        "named_anchors": [
+          "江孜"
+        ],
+        "mapping_method": "Documented modern WGS84 named locality; exact building not inferred",
+        "related_event_ids": [
+          "E20-T014-GY"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "tibet-t014-gyantse"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tibet-t014-lhasa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.1,
+          29.65
+        ]
+      },
+      "properties": {
+        "name": "拉萨 · 拉萨条约签署",
+        "start_year": 1904,
+        "end_year": 1904,
+        "display_kind": "political",
+        "summary_zh": "英国与西藏地方代表订立条约。",
+        "source_ids": [
+          "E20-T014-SRC-TREAT",
+          "E20-T014-SRC-LH"
+        ],
+        "source_urls": [
+          "https://treaties.fcdo.gov.uk/data/Library2/pdf/1906-TS0009.pdf",
+          "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=Washington&nation=&place=national+capital&subjectid=7001874"
+        ],
+        "named_anchors": [
+          "拉萨"
+        ],
+        "mapping_method": "Documented modern WGS84 named locality; exact building not inferred",
+        "related_event_ids": [
+          "E20-T014-LHASA"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "tibet-t014-lhasa"
+      }
     }
   ]
 }
