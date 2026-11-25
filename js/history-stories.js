@@ -348,11 +348,12 @@
   const container=activeBody();
   container.innerHTML='<p class="loading">正在打开历史专题……</p>';
   window.atlasStoryBridge?.showDossier?.();
-  const serial=++requestSerial;
+  const serial=++requestSerial,loading=container.firstElementChild;
+  const stillCurrent=()=>serial===requestSerial&&loading?.isConnected&&container.firstElementChild===loading;
   try{
    let story=storyCache.get(id);
    if(!story){const res=await fetch(meta.file,{cache:'no-store'});if(!res.ok)throw new Error('article not available');story=await res.json();if(story.id!==id)throw new Error('article identifier mismatch');storyCache.set(id,story);}
-   if(serial!==requestSerial)return;
+   if(!stillCurrent())return;
    container.innerHTML=storyHtml(story);
    if(restore){
     const chronology=container.querySelector('.major-story-article .story-chronology');
@@ -360,7 +361,7 @@
    }
    container.scrollTop=restore?readingScroll:0;
   }catch(err){
-   if(serial!==requestSerial)return;
+   if(!stillCurrent())return;
    container.innerHTML='<p>历史专题暂时无法读取，请稍后再试。</p><button class="story-back" type="button" data-story-return="1">← 返回原事件</button>';
   }
  }

@@ -65,3 +65,22 @@ for(const p of ['AGENTS.md','docs/READER_PUBLIC_COPY_POLICY.md','.github/pull_re
  assert(read(p).includes('读者'),p+' missing reader-facing restrictions');
 }
 console.log('PASS atlas47: '+examples.length+' forbidden variants filtered, seven historical facts preserved; live DOM guard, future-agent policy and source evidence intact.');
+
+// Simulate the TreeWalker cursor being detached when the first warning is removed.
+// A snapshot of the cursor sequence must preserve the later sibling.
+{
+ const vm=require('node:vm');
+ const warning=examples[0];
+ const body={nodeType:1,tagName:'BODY',isConnected:true,parentNode:null,hasAttribute:()=>false,closest:()=>null};
+ function paragraph(){
+  const p={nodeType:1,tagName:'P',parentNode:body,parentElement:body,isConnected:true,hasAttribute:()=>false,closest:()=>null,attributes:{getNamedItem:()=>null},querySelector:()=>null};
+  const n={nodeType:3,nodeValue:warning,parentNode:p,parentElement:p,isConnected:true};
+  p.childNodes=[n];p.remove=()=>{p.isConnected=n.isConnected=false};return [p,n];
+ }
+ const parts=[...paragraph(),...paragraph()];
+ body.contains=n=>n.isConnected;
+ const document={body,createTreeWalker(){let i=-1;return {currentNode:body,nextNode(){if(i>=0&&!this.currentNode.isConnected)return null;this.currentNode=parts[++i];return this.currentNode||null;}}}};
+ const context={window:{document,AtlasReaderCopy:reader},MutationObserver:class{observe(){}}};
+ vm.runInNewContext(code,context);
+ assert.equal(parts.filter(n=>n.isConnected).length,0,'warning removal must not skip a later sibling');
+}
