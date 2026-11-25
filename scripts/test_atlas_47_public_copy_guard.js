@@ -83,3 +83,21 @@ assert(storyCode.includes('map(p=>readerFriendly(p)).filter(Boolean)'));
 for(const s of ['本专题仅说明历史地理和权力结构。','本研究参考了现代资料。','地图只显示英军据点。','这一事件在地图上标为当地历史地点。','GIS绘图保留原有参考区。'])assert.equal(reader.narrative(s),'',s);
 for(const s of ['原案判决后，殖民法院宣布没收土地。','本批货物从印度运往英国。','法令规定被奴役者不能自由迁徙。','史学家对实际人数有不同看法。'])assert.equal(reader.narrative(s),s,s);
 assert.match(reader.narrative('英国于1894年建立保护地，[[E19-TEST|英军攻占城镇]]，地图不代表实控领土。'),/\[\[E19-TEST\|英军攻占城镇\]\]/);
+
+
+// Reader-flow regressions: detached asynchronous loads and delayed clicks must
+// not replace a more recent view. Keep the navigation and history-data contracts.
+{
+ const appCode=read('app.js'),storyCode=read('js/history-stories.js');
+ assert(appCode.includes('function cancelEventListClick()'));
+ assert(appCode.includes('node.isConnected&&!workspace.classList.contains'));
+ assert(appCode.includes('setYear:v=>{stopPlay();setYear(v)}'));
+ assert(appCode.includes('pause:()=>stopPlay()'));
+ assert(storyCode.includes('loading?.isConnected&&container.firstElementChild===loading'));
+ assert.equal((storyCode.match(/if\(!stillCurrent\(\)\)return;/g)||[]).length,2);
+ assert(storyCode.includes('anchor.isConnected&&activeBody().contains(anchor)'));
+ assert(storyCode.includes("if(e.key==='Escape'){cancelPendingClick();closePreview();}"));
+ assert(storyCode.includes('bridge.pause?.()'));
+ assert(appCode.includes('if(ev.detail===0)'));
+ assert(storyCode.includes('if(e.detail===0)'));
+}

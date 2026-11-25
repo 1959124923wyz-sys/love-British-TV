@@ -974,3 +974,16 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  margin-top:4px
 }
 .atlas-search-entire-chapter{display:block;margin-top:8px}
+
+/* Desktop: the event list is the primary surface; keep existing controls, remove stacked panel chrome. */
+@media(min-width:1050px){
+ .sidebar .year-arrival-summary,.sidebar .year-arrival-summary.none{background:none;border:0;border-radius:0;padding:2px 0;margin:2px 5px 5px}
+ .sidebar .atlas-event-tools-17c{background:none;border:0;border-radius:0;padding:4px 0 6px;margin:2px 0;gap:5px}
+ .sidebar .atlas-event-window-summary{background:none;border:0;border-radius:0;padding:2px 0;margin:2px 0}
+ .sidebar .atlas-event-search-details{gap:4px;margin-top:0}
+ .sidebar .atlas-event-search-details:has(#seventeenthSearchStatus:empty){display:none}
+ .sidebar .atlas-event-search-status:empty{min-height:0}
+}
+@media(min-width:1050px) and (prefers-reduced-motion:reduce){
+ .atlas-17c-expansive-claim{transition:none}
+}

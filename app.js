@@ -182,15 +182,19 @@ function syncMobileEventsButton(){
  button.textContent=open?'✕ 关闭事件':'☰ 事件';
 }
 syncMobileEventsButton();
+let panelResizeTimer=null;
 function syncPanels(){
-setTimeout(()=>map.invalidateSize({pan:false}),250);
+ if(panelResizeTimer!==null)clearTimeout(panelResizeTimer);
+ panelResizeTimer=setTimeout(()=>{panelResizeTimer=null;map.invalidateSize({pan:false});},250);
 }
 workspace.addEventListener('transitionend',event=>{
  if(event.target===workspace&&event.propertyName==='grid-template-columns'){
+  if(panelResizeTimer!==null){clearTimeout(panelResizeTimer);panelResizeTimer=null;}
   map.invalidateSize({pan:false});
  }
 });
 function openPanel(which){
+ cancelEventListClick();
  // One readable sidebar at a time, including the desktop layout.
  // This prevents the historical dossier from obscuring the map or timeline.
  if(which==='dossier'){
@@ -203,6 +207,7 @@ function openPanel(which){
  syncMobileEventsButton();syncPanels();
 }
 function togglePanel(which){
+ cancelEventListClick();
  workspace.classList.toggle(which==='sidebar'?'sidebar-collapsed':'dossier-collapsed');
  syncMobileEventsButton();syncPanels();
 }
@@ -479,7 +484,7 @@ function openCollection(items,title){
  openPanel('dossier');
  $('dossierBody').querySelectorAll('.cluster-entry').forEach(btn=>btn.addEventListener('click',()=>{const x=choices[Number(btn.dataset.record)];openDossier(x.item,x.type)}));
 }
-function resetDossier(){window.HistoryStories?.onReset?.();selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');if(!isCompactMap())workspace.classList.remove('sidebar-collapsed');syncMobileEventsButton();syncPanels();if(atlas)renderPoints()}
+function resetDossier(){cancelEventListClick();window.HistoryStories?.onReset?.();selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');if(!isCompactMap())workspace.classList.remove('sidebar-collapsed');syncMobileEventsButton();syncPanels();if(atlas)renderPoints()}
 
 // Only event symbols use this rolling window. Map territories remain tied to
 // the selected single year and cannot be combined into an invented 4-year border.
@@ -524,8 +529,9 @@ function setSeventeenthEventWindowMode(mode){
 }
 function isNewEventThisYear(item){return item&&item.category!=='status'&&Number(item.year)===year;}
 let eventListClickTimer=null;
+function cancelEventListClick(){if(eventListClickTimer!==null){clearTimeout(eventListClickTimer);eventListClickTimer=null;}}
 function renderEventList(){
- if(eventListClickTimer!==null){clearTimeout(eventListClickTimer);eventListClickTimer=null;}
+ cancelEventListClick();
  // Map and default sidebar reveal history at or before the selected year.
  // A deliberate archival switch allows browsing the full chapter without changing time.
  const fullArchive=$('showFullChapterArchive').checked;
@@ -547,8 +553,8 @@ function renderEventList(){
   $('showRollingFourYears').setAttribute('aria-pressed',String(eventWindowMode17c==='rolling4'&&!fullArchive));
   $('showDecadeEventsToYear').setAttribute('aria-pressed',String(eventWindowMode17c==='decade'&&!fullArchive));
   $('seventeenthEventWindowRange').textContent=fullArchive?
-   '正在浏览完整十年档案（含未来记录），地图事件仍按所选窗口显示':
-   '地图动态事件：'+range+' · 共'+windowEvents.length+'项，'+windowEvents.filter(e=>canLocateEvent(e,year)).length+'项可定位';
+   '完整档案 · 地图仍显示'+range:
+   range+' · '+windowEvents.length+'项事件';
   $('clearSeventeenthEventSearch').hidden=!query;
   const searchRange=fullArchive?'本章 '+atlas.period.from+'—'+atlas.period.to+'年':range;
   $('seventeenthSearchScope').textContent='搜索范围：'+searchRange;
@@ -557,7 +563,7 @@ function renderEventList(){
  const hint=$('yearArrivalSummary');
  if(hint){
   hint.textContent=tools17?
-   '事件窗口 '+seventeenthEventWindowStart(year)+'—'+year+'年 · 本年新增 '+currentEvents.length+'项'+(locatable<currentEvents.length?'（其中'+locatable+'项可定位）':''):
+   '本年新增 '+currentEvents.length+'项':
    currentEvents.length?
     '本年新增 '+currentEvents.length+' 项'+(locatable<currentEvents.length?' · '+locatable+' 项可定位':''):
     '本年无新增记录';
@@ -567,17 +573,20 @@ function renderEventList(){
  $('eventList').querySelectorAll('.event-item').forEach(node=>{
   node.addEventListener('click',ev=>{
    // A double-click must complete before the first click hides its target.
-   if(eventListClickTimer!==null){clearTimeout(eventListClickTimer);eventListClickTimer=null;}
+   cancelEventListClick();
    if(ev.detail>1)return;
    const item=events.find(e=>e.id===node.dataset.eid);
+   stopPlay();
+   if(ev.detail===0){if(item)openDossier(item,'event');return;}
    eventListClickTimer=setTimeout(()=>{
     eventListClickTimer=null;
-    if(item)openDossier(item,'event');
+    if(item&&node.isConnected&&!workspace.classList.contains('sidebar-collapsed'))openDossier(item,'event');
    },290);
   });
   node.addEventListener('dblclick',ev=>{
    ev.preventDefault();
-   if(eventListClickTimer!==null){clearTimeout(eventListClickTimer);eventListClickTimer=null;}
+   cancelEventListClick();
+   stopPlay();
    focusEventFromSidebar(events.find(e=>e.id===node.dataset.eid));
   });
  });
@@ -4449,7 +4458,8 @@ window.atlasStoryBridge={
  showDossier:()=>openPanel('dossier'),
  openEvent:item=>openDossier(item,'event'),
  focusEvent:(item,opts)=>focusEventFromSidebar(item,opts),
- setYear:v=>setYear(v),
+ setYear:v=>{stopPlay();setYear(v)},
+ pause:()=>stopPlay(),
  resetDossier:()=>resetDossier()
 };
 syncPanels();
