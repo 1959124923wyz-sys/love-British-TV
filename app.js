@@ -191,6 +191,7 @@ workspace.addEventListener('transitionend',event=>{
  }
 });
 function openPanel(which){
+ cancelEventListClick();
  // One readable sidebar at a time, including the desktop layout.
  // This prevents the historical dossier from obscuring the map or timeline.
  if(which==='dossier'){
@@ -479,7 +480,7 @@ function openCollection(items,title){
  openPanel('dossier');
  $('dossierBody').querySelectorAll('.cluster-entry').forEach(btn=>btn.addEventListener('click',()=>{const x=choices[Number(btn.dataset.record)];openDossier(x.item,x.type)}));
 }
-function resetDossier(){window.HistoryStories?.onReset?.();selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');if(!isCompactMap())workspace.classList.remove('sidebar-collapsed');syncMobileEventsButton();syncPanels();if(atlas)renderPoints()}
+function resetDossier(){cancelEventListClick();window.HistoryStories?.onReset?.();selected='';selectedItemYear=null;focusedEventId=null;focusRequestToken++;$('dossierBody').innerHTML=infoDefault;document.querySelectorAll('.event-item').forEach(n=>n.classList.remove('selected'));workspace.classList.add('dossier-collapsed');if(!isCompactMap())workspace.classList.remove('sidebar-collapsed');syncMobileEventsButton();syncPanels();if(atlas)renderPoints()}
 
 // Only event symbols use this rolling window. Map territories remain tied to
 // the selected single year and cannot be combined into an invented 4-year border.
@@ -524,8 +525,9 @@ function setSeventeenthEventWindowMode(mode){
 }
 function isNewEventThisYear(item){return item&&item.category!=='status'&&Number(item.year)===year;}
 let eventListClickTimer=null;
+function cancelEventListClick(){if(eventListClickTimer!==null){clearTimeout(eventListClickTimer);eventListClickTimer=null;}}
 function renderEventList(){
- if(eventListClickTimer!==null){clearTimeout(eventListClickTimer);eventListClickTimer=null;}
+ cancelEventListClick();
  // Map and default sidebar reveal history at or before the selected year.
  // A deliberate archival switch allows browsing the full chapter without changing time.
  const fullArchive=$('showFullChapterArchive').checked;
@@ -570,9 +572,10 @@ function renderEventList(){
    if(eventListClickTimer!==null){clearTimeout(eventListClickTimer);eventListClickTimer=null;}
    if(ev.detail>1)return;
    const item=events.find(e=>e.id===node.dataset.eid);
+   if(ev.detail===0){if(item)openDossier(item,'event');return;}
    eventListClickTimer=setTimeout(()=>{
     eventListClickTimer=null;
-    if(item)openDossier(item,'event');
+    if(item&&node.isConnected&&!workspace.classList.contains('sidebar-collapsed'))openDossier(item,'event');
    },290);
   });
   node.addEventListener('dblclick',ev=>{
@@ -4449,7 +4452,7 @@ window.atlasStoryBridge={
  showDossier:()=>openPanel('dossier'),
  openEvent:item=>openDossier(item,'event'),
  focusEvent:(item,opts)=>focusEventFromSidebar(item,opts),
- setYear:v=>setYear(v),
+ setYear:v=>{stopPlay();setYear(v)},
  resetDossier:()=>resetDossier()
 };
 syncPanels();

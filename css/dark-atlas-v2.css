@@ -974,3 +974,11 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
  margin-top:4px
 }
 .atlas-search-entire-chapter{display:block;margin-top:8px}
+
+/* Desktop maintenance: keep the existing counts and controls, remove stacked card chrome. */
+@media(min-width:981px){
+ .sidebar .year-arrival-summary,.sidebar .year-arrival-summary.none{background:none;border:0;border-radius:0;padding:2px 0;margin:2px 5px 5px}
+ .sidebar .atlas-event-window-summary{background:none;border:0;border-radius:0;padding:2px 0;margin:2px 0}
+ .sidebar .atlas-event-search-details{gap:4px}
+ .sidebar .atlas-event-search-details:has(#seventeenthSearchStatus:empty){display:none}
+}
