@@ -129,7 +129,7 @@
   const siteHtml=site?'<h4>1681年·非洲沿岸拘禁场所的反抗</h4><p class="story-stat-cohort"><strong>'+esc(site.location)+'</strong>：殖民方报告被囚'+num(site.held)+'人，镇压致死'+num(site.colonial_claim_killed)+'人、受伤'+num(site.colonial_claim_wounded)+'人。<a href="'+esc(site.source_url)+'" target="_blank" rel="noopener noreferrer">原信学术引录</a></p>':'';
   const smaller=Array.isArray(rs?.voyages)?rs.voyages.map(v=>'<p class="story-stat-cohort"><strong>'+esc(String(v.year))+'年'+esc(v.vessel)+'号（航次'+num(v.voyage_id)+'）</strong>：被迫登船'+num(v.embarked)+'人，抵岸'+num(v.landed)+'人；登记船上起义。<a href="'+esc(v.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(v.evidence)+'</a></p>').join(''):'';
   const specific=rs?.albion_revolt_killed_secondary;
-  const specificHtml=specific?'<p class="story-stat-cohort"><strong>同船反抗 · Taylor 2006年研究</strong>：被奴役者'+num(specific.enslaved_people)+'人、船员'+num(specific.crew)+'人。<a href="'+esc(specific.source_url)+'" target="_blank" rel="noopener noreferrer">学术出版书目</a></p>':'';
+  const specificHtml=specific?'<p class="story-stat-cohort"><strong>起义死亡记载 · Taylor 2006年研究</strong>：被奴役者'+num(specific.enslaved_people)+'人、船员'+num(specific.crew)+'人。<a href="'+esc(specific.source_url)+'" target="_blank" rel="noopener noreferrer">学术出版书目</a></p>':'';
   const census=q.resistance_census_2019;
   const censusRows=Array.isArray(census?.documented_examples)?census.documented_examples.map(v=>
     '<tr><th scope="row">'+esc(String(v.year))+'</th><td>'+esc(v.ship)+'</td><td>'+num(v.id)+'</td><td>'+esc(v.code===1?'船上起义':v.code===2?'沿岸袭船':'其他（核实编码）')+'</td><td>'+num(v.embarked_imputed)+'</td><td>'+num(v.disembarked_imputed)+'</td></tr>'
@@ -138,7 +138,7 @@
     '<h4>2019版航次数据库：留有记录的反抗</h4>'+
     '<p class="story-stat-cohort"><strong>'+esc(census.dataset_label)+'</strong>：全部船旗有记录航次'+num(census.recorded_all_carriers_voyages)+'条，其中英国推定船旗'+num(census.recorded_british_flag_voyages)+'条；英旗非空反抗编码'+num(census.british_coded_resistance)+'条（船上起义'+num(census.british_coded_ship_insurrections)+'条；岸上袭船'+num(census.british_coded_shore_vessel_attacks)+'条）。</p>'+
     '<details class="story-stat-census"><summary>查看'+num(census.british_coded_resistance)+'条有记录的英国旗反抗航次</summary>'+
-    '<table class="story-stat-table"><caption>2019版航次库 · 推定抵岸年份及船旗</caption><thead><tr><th scope="col">抵岸年份</th><th scope="col">登记船名</th><th scope="col">航次编号</th><th scope="col">抵抗类型</th><th scope="col">估计登船人数</th><th scope="col">估计抵岸人数</th></tr></thead><tbody>'+censusRows+'</tbody></table></details>'+
+    '<table class="story-stat-table"><caption>2019版航次库 · 推定抵岸年份及船旗</caption><thead><tr><th scope="col">抵岸年份</th><th scope="col">登记船名</th><th scope="col">航次编号</th><th scope="col">抵抗类型</th><th scope="col">估计登船人数（IMP）</th><th scope="col">估计抵岸人数（IMP）</th></tr></thead><tbody>'+censusRows+'</tbody></table></details>'+
     '<p class="story-stat-note"><a href="'+esc(census.source_url)+'" target="_blank" rel="noopener noreferrer">官方2019版航次数据</a> · <a href="'+esc(census.codebook_url)+'" target="_blank" rel="noopener noreferrer">编码手册</a></p>':'';
   const sameSource=q.resistance_census_2019?.crossedition_2020;
   const sameSourceHtml=sameSource?
@@ -152,7 +152,7 @@
     '':'';
   return '<section class="story-statistics" aria-label="强制运输人口统计">'+
     '<h3>'+esc(q.title)+'</h3><p class="story-stat-measure">'+esc(String(q.measure||'').replace(/\s*[（(]不是[^）)]*[）)]/g,''))+'；'+esc(q.carrier)+'</p>'+
-    '<table class="story-stat-table"><caption>'+esc(q.total.period)+' · 每25年登船人数估算</caption><thead><tr><th scope="col">时期</th><th scope="col">英船旗登船</th><th scope="col">全部船旗登船</th></tr></thead><tbody>'+carrierRows+
+    '<table class="story-stat-table"><caption>'+esc(q.total.period)+'年 · 每25年登船人数估算</caption><thead><tr><th scope="col">时期</th><th scope="col">英船旗登船</th><th scope="col">全部船旗登船</th></tr></thead><tbody>'+carrierRows+
     '<tr class="story-stat-total"><th scope="row">'+esc(q.total.period)+'合计</th><td>'+num(q.total.embarked)+'</td><td>'+num(q.total.all_carriers_embarked)+'</td></tr></tbody></table>'+
     '<p class="story-stat-note"><a href="'+esc(q.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(q.source_label)+'</a></p>'+
     '<h4>皇家非洲公司航次样本</h4>'+cohort+second+costs+namedHtml+siteHtml+smaller+specificHtml+censusHtml+sameSourceHtml+lawHtml+'</section>';
@@ -306,7 +306,7 @@
     relatedMarkup+storyChronologyHtml(article)+quantitativeHistoryHtml(article)+
     '<div class="story-body">'+article.sections.map(sec=>
      '<section class="story-section" id="story-section-'+esc(sec.id)+'"><h3 title="'+esc(window.AtlasReaderCopy.label(sec.heading))+'">'+esc(sectionHeadline(sec.heading))+'</h3>'+
-      sec.paragraphs.map(readerFriendly).filter(Boolean).map(p=>'<p>'+renderInline(p)+'</p>').join('')+
+      sec.paragraphs.map(p=>readerFriendly(p)).filter(Boolean).map(p=>'<p>'+renderInline(p)+'</p>').join('')+
      '</section>').join('')+'</div>'+
     '<details class="story-sources"><summary>参考资料 · '+article.sources.length+'项 <span aria-hidden="true">▾</span></summary>'+
 

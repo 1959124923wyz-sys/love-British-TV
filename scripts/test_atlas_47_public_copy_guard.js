@@ -78,7 +78,7 @@ assert.equal(reader.narrative('苏格兰王国始终保持独立。英国未取�
 const storyCode=read('js/history-stories.js');
 assert(!storyCode.includes("return clean||String(text||'')"));
 assert(!/esc\([^)]*\.warning\)/.test(storyCode));
-assert(storyCode.includes('map(readerFriendly).filter(Boolean)'));
+assert(storyCode.includes('map(p=>readerFriendly(p)).filter(Boolean)'));
 
 for(const s of ['本专题仅说明历史地理和权力结构。','本研究参考了现代资料。','地图只显示英军据点。','这一事件在地图上标为当地历史地点。','GIS绘图保留原有参考区。'])assert.equal(reader.narrative(s),'',s);
 for(const s of ['原案判决后，殖民法院宣布没收土地。','本批货物从印度运往英国。','法令规定被奴役者不能自由迁徙。','史学家对实际人数有不同看法。'])assert.equal(reader.narrative(s),s,s);
