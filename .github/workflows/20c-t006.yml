@@ -1,0 +1,21 @@
+name: 20C T006 source and GIS QA
+on:
+  pull_request:
+    paths:
+      - 'data/stories/serial/e20-salt-march-1930-1939.json'
+      - 'data/stories/serial/index.json'
+      - 'scripts/test_20c_t006.cjs'
+      - '.github/workflows/20c-t006.yml'
+permissions:
+  contents: read
+jobs:
+  evidence-and-gis:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node scripts/test_20c_t006.cjs
+          node scripts/test_serial_story_contract.js
+          python3 scripts/audit_spatial_semantics.py --strict
+          node scripts/test_atlas_47_public_copy_guard.js
+          node scripts/lint_atlas_47_frontend_copy.js
