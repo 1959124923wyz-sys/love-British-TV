@@ -5,6 +5,10 @@ on:
       - 'data/stories/serial/e20-salt-march-1930-1939.json'
       - 'data/stories/serial/index.json'
       - 'scripts/test_20c_t006.cjs'
+      - 'scripts/browser_20c_t006.py'
+      - 'data/stories/serial/chronology-1920-1929.json'
+      - 'data/stories/serial/chronology-1930-1939.json'
+      - 'data/twentieth-century-spatial-1920-1929.geojson'
       - '.github/workflows/20c-t006.yml'
 permissions:
   contents: read
@@ -19,3 +23,21 @@ jobs:
           python3 scripts/audit_spatial_semantics.py --strict
           node scripts/test_atlas_47_public_copy_guard.js
           node scripts/lint_atlas_47_frontend_copy.js
+  desktop-history-and-map:
+    needs: evidence-and-gis
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install --quiet selenium==4.28.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/atlas-t006.log 2>&1 &
+          python3 scripts/browser_20c_t006.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 20c-t006-map
+          path: browser-smoke-results/*.png
+          if-no-files-found: ignore
