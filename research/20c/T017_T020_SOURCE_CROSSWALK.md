@@ -32,12 +32,12 @@
 | M4 | [Economic History Malaysia，British Malayan capitalism](https://www.ehm.my/publications/articles/british-malayan-capitalism-1874%E2%80%931957-an-economic-historical-perspective) | 检索摘要：1929–1932世界需求下滑导致生产与工人处境恶化；马来西亚国家档案馆历史矿场照片2001/0025947，待单独查原件 |
 | M5 | [Exceptions to the Abolition of Chinese Indenture，DOI 10.1080/0144039X.2024.2344393](https://www.tandfonline.com/doi/full/10.1080/0144039X.2024.2344393) | 检索摘要，吉兰丹华工及契约劳动废除后的例外；全文403，暂不声称全马来亚法规或实施年份 |
 | M6 | [Economic History Malaysia，Malaysian economic growth and catch-up](https://www.ehm.my/publications/articles/malaysian-economic-growth-and-catch-up-1870%E2%80%931980) | 检索摘要：欧洲胶园集中于雪兰莪、霹雳等西海岸地区；小农亦生产橡胶，不能把全部产量归英资 |
-| M7 | [Economic History Malaysia，Economic inequality in British Colonial Malaya](https://www.ehm.my/publications/articles/economic-inequality-in-british-colonial-malaya) | 检索摘要：中世纪土地权属统计须核具体年份、分母与原文，不作殖民地全期土地面积 |
+| M7 | [Economic History Malaysia，Economic inequality in British Colonial Malaya](https://www.ehm.my/publications/articles/economic-inequality-in-british-colonial-malaya) | 检索摘要：20世纪中期土地权属统计须核具体年份、分母与原文，不作殖民地全期土地面积 |
 
 拟章节：锡矿华工与矿权；橡胶兴起及殖民招商；南印度契约与kangani招募；劳动限制及实际工资；经济危机；土地法与本地小农。须调1912 Labour Code、1907 Indian Immigration Fund原件、各州土地法规与劳工调查，不将1948年出口数据倒填至战前。GIS候选槟城、新加坡、霹雳、雪兰莪、吉兰丹、马德拉斯及纳加帕蒂南；省区、矿区、种植园分别核证，不能由区域统计画出单个庄园或迁移路线。
 
 ## T020 马来亚紧急状态（重点去重）
-**现有专题 E20-MAL-BATANG-KALI 已在正式数据目录中，状态 editorial_review / not_submitted，尚非公开出版。** article: data/stories/serial/e20-batang-kali-malaya-1940-1949.json；索引已有67个事件链接（以实际数组为准）。1940–49年表已有紧急状态、紧急条例、巴当加里、焚村、集体拘押与遣返等记录。禁止再造同名独立专题；优先扩充既有专题并进行出版审查。
+**现有专题 E20-MAL-BATANG-KALI 已在正式数据目录中，状态 editorial_review / not_submitted，尚非公开出版。** article: data/stories/serial/e20-batang-kali-malaya-1940-1949.json；索引已有66个事件链接（以实际数组为准）。1940–49年表已有紧急状态、紧急条例、巴当加里、焚村、集体拘押与遣返等记录。禁止再造同名独立专题；优先扩充既有专题并进行出版审查。
 复用例：E20-MAL-EMERG、E20-MAL-ER、E20-MAL-KILL、E20-MAL-HUTS、E20-MAL-INQUIRY、E20-MAL-DET、E20-MAL-ERD、E20-MAL-ANHUI。1950–59年表已有 E20-KEN-MALAYA 独立事件；1960–69年表在本次读取返回404，先核数据结构与后续年代出版范围。
 | 代号 | 来源 | 核证级别与证据 |
 |---|---|---|
