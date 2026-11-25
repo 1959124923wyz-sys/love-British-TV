@@ -1,0 +1,104 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ceylon-t010-colombo",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.84868,
+          6.93548
+        ]
+      },
+      "properties": {
+        "topic_id": "E20-T010",
+        "name": "科伦坡",
+        "event_candidate": "1915年科伦坡戒严公告争议",
+        "start_year": 1915,
+        "end_year": 1915,
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1917/apr/23/weke-ceylon-court-martial",
+          "https://www.geonames.org/1248991/colombo.html"
+        ],
+        "named_anchors": [
+          "科伦坡"
+        ],
+        "mapping_method": "WGS84 modern named-place reference",
+        "research_status": "candidate_review",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geolocation_limit_zh": "1917年下院答复讨论1915年科伦坡特别专员公告；公告原件待调，城市位置已核。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "burma-t011-tharrawaddy",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.78813,
+          17.65399
+        ]
+      },
+      "properties": {
+        "topic_id": "E20-T011",
+        "name": "Tharrawaddy（沙耶桑起义地区）",
+        "event_candidate": "1930年12月Tharrawaddy地区反抗兴起",
+        "start_year": 1930,
+        "end_year": 1930,
+        "source_urls": [
+          "https://academic.oup.com/hwj/article/doi/10.1093/hwj/dbac023/6694935",
+          "https://www.geonames.org/1292313/tharyarwady.html"
+        ],
+        "named_anchors": [
+          "Tharrawaddy（沙耶桑起义地区）"
+        ],
+        "mapping_method": "WGS84 modern named-place reference",
+        "research_status": "candidate_review",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geolocation_limit_zh": "现代同名聚落；起义的具体村落与历史辖界待核。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "burma-t011-pyapon",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.67882,
+          16.28543
+        ]
+      },
+      "properties": {
+        "topic_id": "E20-T011",
+        "name": "Pyapon区",
+        "event_candidate": "1931年Pyapon区特别法庭审理",
+        "start_year": 1931,
+        "end_year": 1931,
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1931/apr/20/burma",
+          "https://www.geonames.org/1299237/pyapon.html"
+        ],
+        "named_anchors": [
+          "Pyapon区"
+        ],
+        "mapping_method": "WGS84 modern named-place reference",
+        "research_status": "candidate_review",
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "geolocation_limit_zh": "同名城市为地区参照；不能将该点解释为特别法庭建筑位置。"
+      }
+    }
+  ]
+}
