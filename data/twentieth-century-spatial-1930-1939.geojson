@@ -4292,6 +4292,88 @@
           }
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "id": "india-land-e20-t002-mdebt",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.27847,
+          13.08784
+        ]
+      },
+      "properties": {
+        "name": "马德拉斯 · 农业债务法公报",
+        "start_year": 1938,
+        "end_year": 1938,
+        "display_kind": "economic_network",
+        "summary_zh": "1938年第IV号法于3月11日获总督批准，3月22日在圣乔治堡公报刊行，处理农业债务关系。",
+        "source_ids": [
+          "E20-T002-SRC-MDEBT",
+          "E20-T002-SRC-GEO7"
+        ],
+        "source_urls": [
+          "https://www.indiacode.nic.in/bitstream/123456789/20407/1/1938tn4.pdf",
+          "https://www.geonames.org/1264527/chennai.html"
+        ],
+        "named_anchors": [
+          "马德拉斯"
+        ],
+        "mapping_method": "Documented WGS84 named locality reference, not historical cadastral footprint",
+        "related_event_ids": [
+          "E20-T002-MDEBT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "india-land-e20-t002-mdebt"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "india-land-e20-t002-floud",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.36304,
+          22.56263
+        ]
+      },
+      "properties": {
+        "name": "加尔各答 · 土地收入委员会成立",
+        "start_year": 1938,
+        "end_year": 1938,
+        "display_kind": "economic_network",
+        "summary_zh": "孟加拉财政部门1938年11月5日第22716 L.R.号决议在加尔各答正式组建委员会，承接4月2日公告。",
+        "source_ids": [
+          "E20-T002-SRC-FLOUD",
+          "E20-T002-SRC-PERM",
+          "E20-T002-SRC-FPRIMARY",
+          "E20-T002-SRC-GEO6"
+        ],
+        "source_urls": [
+          "https://en.banglapedia.org/index.php?title=Floud_Commission",
+          "https://en.banglapedia.org/index.php?title=Permanent_Settlement,_The",
+          "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/27011/GIPE-022303.pdf?isAllowed=y&sequence=3",
+          "https://www.geonames.org/1275004"
+        ],
+        "named_anchors": [
+          "加尔各答"
+        ],
+        "mapping_method": "Documented WGS84 named locality reference, not historical cadastral footprint",
+        "related_event_ids": [
+          "E20-T002-FLOUD"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "india-land-e20-t002-floud"
+      }
     }
   ]
 }

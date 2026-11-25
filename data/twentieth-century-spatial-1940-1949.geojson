@@ -4995,6 +4995,86 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "malaya45-hkport"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "india-land-e20-t002-fstats",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.323178,
+          22.531952
+        ]
+      },
+      "properties": {
+        "name": "阿利波尔 · 孟加拉土地调查报告",
+        "start_year": 1940,
+        "end_year": 1940,
+        "display_kind": "economic_network",
+        "summary_zh": "委员会调查典型村庄19599户家庭，其中4408户完全依赖农业雇佣劳动，占22.5%；该数字是调查样本比例。",
+        "source_ids": [
+          "E20-T002-SRC-FPRIMARY",
+          "E20-T002-SRC-GEO8"
+        ],
+        "source_urls": [
+          "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/27011/GIPE-022303.pdf?isAllowed=y&sequence=3",
+          "https://www.geonames.org/search.html?country=IN&q=%C4%80lipur"
+        ],
+        "named_anchors": [
+          "阿利波尔"
+        ],
+        "mapping_method": "Documented WGS84 named locality reference, not historical cadastral footprint",
+        "related_event_ids": [
+          "E20-T002-FSTATS"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "india-land-e20-t002-fstats"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "india-land-e20-t002-tebres",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.36304,
+          22.56263
+        ]
+      },
+      "properties": {
+        "name": "加尔各答 · 分成佃农运动决议",
+        "start_year": 1946,
+        "end_year": 1946,
+        "display_kind": "economic_network",
+        "summary_zh": "据IGNOU历史教材，孟加拉农民组织在加尔各答通过要求实际耕作者保留三分之二收成的决议。",
+        "source_ids": [
+          "E20-T002-SRC-IGNOU",
+          "E20-T002-SRC-SHARE",
+          "E20-T002-SRC-GEO6"
+        ],
+        "source_urls": [
+          "https://www.egyankosh.ac.in/bitstream/123456789/27280/1/Unit-31.pdf",
+          "https://ras.org.in/articles/103/text/article.html",
+          "https://www.geonames.org/1275004"
+        ],
+        "named_anchors": [
+          "加尔各答"
+        ],
+        "mapping_method": "Documented WGS84 named locality reference, not historical cadastral footprint",
+        "related_event_ids": [
+          "E20-T002-TEBRES"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "india-land-e20-t002-tebres"
+      }
     }
   ]
 }
