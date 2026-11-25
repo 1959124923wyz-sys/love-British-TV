@@ -26,7 +26,7 @@
  ].join(',');
  const named={
   military:'英方军事驻守',wartime_occupation:'短期军事占领',
-  military_vicinity:'驻军周边参考',administration:'殖民行政',
+  military_vicinity:'驻军活动',administration:'殖民行政',
   revenue:'公司财政税权',trade_influence:'贸易与商业联系',
   paper_claim:'法理声索',diplomacy:'外交与条约',
   resistance:'当地自主与抵抗',displacement:'强制迁移',
@@ -157,7 +157,7 @@
    (desc&&!isOpen?'<span class="atlas-18c-overlap-summary">'+esc(desc)+'</span>':'')+'</button>'+
    (isOpen?'<div class="atlas-18c-overlap-detail">'+
     '<div class="atlas-18c-overlap-facts"><div><span>历史时期</span><b>'+p.start_year+'—'+p.end_year+'</b></div>'+
-    '<div><span>图层性质</span><b>'+esc(kind)+'</b></div></div>'+
+    '<div><span>区域类型</span><b>'+esc(kind)+'</b></div></div>'+
     (n?'<p>'+esc(n)+'</p>':'')+
     '<details class="atlas-18c-overlap-sources"><summary>历史文献与来源</summary>'+
     '<div class="atlas-18c-overlap-source-links">'+sources(record).map(u=>
@@ -190,7 +190,7 @@
   const el=$('dossierBody'),y=host.getYear(),count=activeRecords.length;
   el.innerHTML='<section id="atlas18cOverlapPanel" class="atlas-18c-overlap-panel">'+
    '<div class="dossier-kicker">历史地理区域 · '+y+'年</div>'+
-   '<h2>'+(count>1?'此处涉及 '+count+' 条历史记录':'历史区域档案')+'</h2>'+   '<p class="atlas-18c-overlap-lead">悬停高亮区域 · 点击展开详情</p>'+
+   '<h2>'+(count>1?'此处涉及 '+count+' 条历史记录':'历史区域档案')+'</h2>'+
    '<div class="atlas-18c-overlap-list">'+activeRecords.map((r,i)=>inlineCard(r,i,r.id===selected)).join('')+'</div>'+
    '</section>';
   bindCardInteractions();

@@ -36,14 +36,16 @@
  ];
  const isWarning=value=>{
   const v=String(value||'');
-  return v.split(/[。；！？\n]+/).some(sentence=>warnings.some(rx=>rx.test(sentence)));
+  return v.split(/[。；！？\n]+/).some(sentence=>warnings.some(rx=>rx.test(sentence))||reader.editorial(sentence));
  };
  // The reader-copy parser retains documented historical clauses while removing
  // cartographic notes. Fail closed only for the remaining editorial clauses.
  function strip(value){
   const input=String(value??'');
   if(!isWarning(input))return input;
-  let output=reader.clean(input);
+  const narrative=reader.narrative(input);
+  if(narrative!==input&&!isWarning(narrative))return narrative.replace(/[。；，,\s]+$/g,'');
+  let output=reader.clean(narrative);
   if(!output)return '';
   if(isWarning(output)){
    const paragraphs=output.split(/([。；！？\n]+)/);
@@ -60,7 +62,7 @@
   return isWarning(output)?'':output;
  }
  const counters={text:0,attributes:0,removedEmpty:0,scans:0};
- const skipTags='script,style,noscript,template,textarea,pre,code,input,select,option,svg,canvas';
+ const skipTags='script,style,noscript,template,canvas';
  function ignored(node){
   const el=node?.nodeType===1?node:node?.parentElement;
   return !el||Boolean(el.closest(skipTags));
@@ -99,9 +101,10 @@
   if(node.nodeType!==1&&node.nodeType!==9&&node.nodeType!==11)return;
   if(node.nodeType===1)sanitizeAttributes(node);
   const walker=doc.createTreeWalker(node,4|1);
-  while(walker.nextNode()){
-   const part=walker.currentNode;
-   if(ignored(part))continue;
+  const parts=[];
+  while(walker.nextNode())parts.push(walker.currentNode);
+  for(const part of parts){
+   if(!node.contains(part)||ignored(part))continue;
    if(part.nodeType===3)sanitizeText(part);
    else sanitizeAttributes(part);
   }
@@ -121,13 +124,15 @@
  if(doc?.body){
   scan(doc.body);
   const observer=new MutationObserver(records=>{
-   const nodes=new Set();
+   const nodes=new Set(),attributes=new Set();
    for(const change of records){
     if(change.type==='childList')for(const added of change.addedNodes)nodes.add(added);
     else if(change.type==='characterData')nodes.add(change.target);
-    else if(change.type==='attributes')nodes.add(change.target);
+    else if(change.type==='attributes')attributes.add(change.target);
    }
-   for(const n of nodes)if(n.isConnected)scan(n);
+   const covered=n=>{for(let p=n.parentNode;p;p=p.parentNode)if(nodes.has(p))return true;return false;};
+   for(const n of nodes)if(n.isConnected&&!covered(n))scan(n);
+   for(const n of attributes)if(n.isConnected&&!nodes.has(n)&&!covered(n))sanitizeAttributes(n);
   });
   observer.observe(doc.body,{subtree:true,childList:true,characterData:true,
    attributes:true,attributeFilter:['title','aria-label','placeholder']});

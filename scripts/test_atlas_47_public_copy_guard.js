@@ -65,3 +65,21 @@ for(const p of ['AGENTS.md','docs/READER_PUBLIC_COPY_POLICY.md','.github/pull_re
  assert(read(p).includes('读者'),p+' missing reader-facing restrictions');
 }
 console.log('PASS atlas47: '+examples.length+' forbidden variants filtered, seven historical facts preserved; live DOM guard, future-agent policy and source evidence intact.');
+
+for(const s of [
+ '1894年保护地制度不能直接用现代国界显示为当时全部实控领土。',
+ '不能把议员要求的统计量误认为政府已经报告的实绩。',
+ '同一时期不同被告受到的指控、判决及处理方式有所区别，不能把所有当地抵抗者归入一份统一判决统计。',
+ '不能编造当年已剥夺的全部寺庙土地面积。'
+])assert.equal(reader.narrative(s),'',s);
+assert.equal(reader.narrative('英国于1894年建立保护地。不能把现代国界画成历史边界。'),'英国于1894年建立保护地。');
+assert.equal(reader.narrative('[[E19-TEST|英军攻占城镇]]。地图不代表全部实控领土。'),'[[E19-TEST|英军攻占城镇]]。');
+assert.equal(reader.narrative('苏格兰王国始终保持独立。英国未取得该地的主权。'),'苏格兰王国始终保持独立。英国未取得该地的主权。');
+const storyCode=read('js/history-stories.js');
+assert(!storyCode.includes("return clean||String(text||'')"));
+assert(!/esc\([^)]*\.warning\)/.test(storyCode));
+assert(storyCode.includes('map(p=>readerFriendly(p)).filter(Boolean)'));
+
+for(const s of ['本专题仅说明历史地理和权力结构。','本研究参考了现代资料。','地图只显示英军据点。','这一事件在地图上标为当地历史地点。','GIS绘图保留原有参考区。'])assert.equal(reader.narrative(s),'',s);
+for(const s of ['原案判决后，殖民法院宣布没收土地。','本批货物从印度运往英国。','法令规定被奴役者不能自由迁徙。','史学家对实际人数有不同看法。'])assert.equal(reader.narrative(s),s,s);
+assert.match(reader.narrative('英国于1894年建立保护地，[[E19-TEST|英军攻占城镇]]，地图不代表实控领土。'),/\[\[E19-TEST\|英军攻占城镇\]\]/);
