@@ -9,6 +9,7 @@
  let sourceEventId=null, lastStoryId=null, readingScroll=0, returnStoryId=null;
  let chronologyExpanded=false;
  let clickTimer=null, requestSerial=0, preview=null;
+ function cancelPendingClick(){if(clickTimer!==null){clearTimeout(clickTimer);clickTimer=null;}}
  function closePreview(){if(preview){preview.remove();preview=null;}}
  // Inline map records without coordinates get a small non-modal summary.
  function showUnlocatedPreview(item,anchor){
@@ -51,6 +52,7 @@
    (metas.length===1?'<small>'+esc(metas[0].period)+'</small>':'')+'</section>';
  }
  function onEventOpened(item,typ){
+  cancelPendingClick();
   // Cancel in-flight article fetches when a different dossier opens.
   ++requestSerial;
   closePreview();
@@ -62,6 +64,7 @@
   body.insertAdjacentHTML('afterbegin','<button type="button" class="story-back" data-story-back="1">← 返回重大历史专题</button>');
  }
  function onReset(){
+  cancelPendingClick();
   // Closing the dossier invalidates outstanding article fetches.
   ++requestSerial;
   closePreview();
@@ -326,6 +329,7 @@
    '</article>';
  }
  async function openStory(id,restore,originId){
+  cancelPendingClick();
   const meta=storyMeta.get(id);if(!meta)return;
   if(!restore){
    // Anchor the return path to the exact child from which this article opened.
@@ -416,6 +420,7 @@
  document.addEventListener('click',function(e){
   const el=e.target.closest('[data-story-open],[data-story-event],[data-story-index-event],[data-story-back],[data-story-return],[data-story-preview-close],[data-story-open-event]');
   if(!el){
+   cancelPendingClick();
    if(preview&&!e.target.closest('.story-event-preview'))closePreview();
    return;
   }
@@ -425,18 +430,20 @@
   if(el.hasAttribute('data-story-back')){openStory(returnStoryId||lastStoryId,true);return;}
   if(el.hasAttribute('data-story-return')){returnToOrigin();return;}
   if(el.hasAttribute('data-story-event')||el.hasAttribute('data-story-index-event')){
-   if(clickTimer!==null)clearTimeout(clickTimer);
+   cancelPendingClick();
+   if(e.detail>1)return;
    const id=el.dataset.storyEvent||el.dataset.storyIndexEvent,anchor=el;
-   clickTimer=setTimeout(function(){clickTimer=null;focusStoryEvent(eventInMemory(id),anchor);},285);
+   if(e.detail===0){focusStoryEvent(eventInMemory(id),anchor);return;}
+   clickTimer=setTimeout(function(){clickTimer=null;if(anchor.isConnected&&activeBody().contains(anchor))focusStoryEvent(eventInMemory(id),anchor);},285);
   }
  });
- document.addEventListener('keydown',function(e){if(e.key==='Escape')closePreview();});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'){cancelPendingClick();closePreview();}});
  activeBody().addEventListener('scroll',closePreview,{passive:true});
  document.addEventListener('dblclick',function(e){
   const el=e.target.closest('[data-story-event],[data-story-index-event]');
   if(!el)return;
   e.preventDefault();
-  if(clickTimer!==null){clearTimeout(clickTimer);clickTimer=null;}
+  cancelPendingClick();
   doubleOpen(eventInMemory(el.dataset.storyEvent||el.dataset.storyIndexEvent));
  });
  async function init(){

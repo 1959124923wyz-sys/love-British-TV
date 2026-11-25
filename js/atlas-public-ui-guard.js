@@ -99,9 +99,10 @@
   if(node.nodeType!==1&&node.nodeType!==9&&node.nodeType!==11)return;
   if(node.nodeType===1)sanitizeAttributes(node);
   const walker=doc.createTreeWalker(node,4|1);
-  while(walker.nextNode()){
-   const part=walker.currentNode;
-   if(ignored(part))continue;
+  const parts=[];
+  while(walker.nextNode())parts.push(walker.currentNode);
+  for(const part of parts){
+   if(!node.contains(part)||ignored(part))continue;
    if(part.nodeType===3)sanitizeText(part);
    else sanitizeAttributes(part);
   }
@@ -121,13 +122,15 @@
  if(doc?.body){
   scan(doc.body);
   const observer=new MutationObserver(records=>{
-   const nodes=new Set();
+   const nodes=new Set(),attributes=new Set();
    for(const change of records){
     if(change.type==='childList')for(const added of change.addedNodes)nodes.add(added);
     else if(change.type==='characterData')nodes.add(change.target);
-    else if(change.type==='attributes')nodes.add(change.target);
+    else if(change.type==='attributes')attributes.add(change.target);
    }
-   for(const n of nodes)if(n.isConnected)scan(n);
+   const covered=n=>{for(let p=n.parentNode;p;p=p.parentNode)if(nodes.has(p))return true;return false;};
+   for(const n of nodes)if(n.isConnected&&!covered(n))scan(n);
+   for(const n of attributes)if(n.isConnected&&!nodes.has(n)&&!covered(n))sanitizeAttributes(n);
   });
   observer.observe(doc.body,{subtree:true,childList:true,characterData:true,
    attributes:true,attributeFilter:['title','aria-label','placeholder']});
