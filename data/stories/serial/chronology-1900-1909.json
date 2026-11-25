@@ -1263,6 +1263,63 @@
       "area_sqkm": null
     },
     {
+      "id": "E20-T005-PROVINCE",
+      "year": 1901,
+      "start_year": 1901,
+      "end_year": 1901,
+      "visible_from": 1901,
+      "date_label": "1901年11月9日",
+      "name": "西北边省从旁遮普分出",
+      "description": "殖民政府设立独立省级行政机构。",
+      "short_description": "殖民政府设立独立省级行政机构。",
+      "category": "political",
+      "icon_code": "POL",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T005-SRC-PROV",
+        "E20-T005-SRC-NAM",
+        "E20-T005-SRC-PAK"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民行政及民众处境"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T005-FCR",
+      "year": 1901,
+      "start_year": 1901,
+      "end_year": 1901,
+      "visible_from": 1901,
+      "date_label": "1901年",
+      "name": "殖民政府修订边境犯罪条例",
+      "description": "特别行政司法制度赋予行政官员广泛权力。",
+      "short_description": "特别行政司法制度赋予行政官员广泛权力。",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T005-SRC-PAK",
+        "E20-T005-SRC-LAW"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民行政及民众处境"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
       "id": "E20-SAW-1902-BLACK-RET",
       "year": 1902,
       "start_year": 1902,
@@ -2167,6 +2224,33 @@
       "significance": {
         "level": 8,
         "rationale": "殖民行政、教育压制与政治拘禁"
+      },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T005-MOHMAND",
+      "year": 1908,
+      "start_year": 1908,
+      "end_year": 1908,
+      "visible_from": 1908,
+      "date_label": "1908年7月22日",
+      "name": "议会回顾莫赫曼德军事行动",
+      "description": "英国政府在印度财政辩论中讨论军事行动及支出。",
+      "short_description": "英国政府在印度财政辩论中讨论军事行动及支出。",
+      "category": "repression",
+      "icon_code": "REP",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T005-SRC-B08"
+      ],
+      "geo_precision": "unlocated",
+      "significance": {
+        "level": 8,
+        "rationale": "殖民行政及民众处境"
       },
       "historical_control_boundary_verified": false,
       "territorial_claim": false,
@@ -4947,6 +5031,46 @@
       "label": "GeoNames｜Port Blair search",
       "url": "https://www.geonames.org/advanced-search.html?q=Blair%2F",
       "access": "现代城市11.66613,92.74635"
+    },
+    {
+      "id": "E20-T005-SRC-PROV",
+      "publisher": "POHAN Archive",
+      "title": "设立西北边省通知",
+      "label": "POHAN Archive｜设立西北边省通知",
+      "url": "https://www.pohan.org/documents/notification-1901",
+      "access": "1901年11月9日通知转录；与馆方历史及巴基斯坦政府报告对读。"
+    },
+    {
+      "id": "E20-T005-SRC-NAM",
+      "publisher": "英国国家陆军博物馆",
+      "title": "西北边境历史",
+      "label": "英国国家陆军博物馆｜西北边境历史",
+      "url": "https://www.nam.ac.uk/explore/north-west-frontier-india",
+      "access": "1901年省份、1919—1922、1927、1936—1939、1941—1942与1947。"
+    },
+    {
+      "id": "E20-T005-SRC-PAK",
+      "publisher": "巴基斯坦联邦政府",
+      "title": "2016年前联邦直辖部落地区改革委员会报告",
+      "label": "巴基斯坦联邦政府｜2016年前联邦直辖部落地区改革委员会报告",
+      "url": "https://safron.gov.pk/SiteImage/Downloads/Report%20of%20%20Committee%20on%20FATA%20Reforms%202016.pdf",
+      "access": "印刷第19页，第31—33段；电子文本可读，截图服务未返回。"
+    },
+    {
+      "id": "E20-T005-SRC-LAW",
+      "publisher": "Review of Human Rights",
+      "title": "边境犯罪条例中的法律、权利与殖民行政",
+      "label": "Review of Human Rights｜边境犯罪条例中的法律、权利与殖民行政",
+      "url": "https://reviewhumanrights.galaxmo.com/index.php/RHR/article/view/70",
+      "access": "2017年研究，殖民行政司法权及1947年后制度延续。"
+    },
+    {
+      "id": "E20-T005-SRC-B08",
+      "publisher": "英国下院",
+      "title": "印度财政账目",
+      "label": "英国下院｜印度财政账目",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1908/jul/22/east-india-revenue-accounts",
+      "access": "1908年7月22日，莫赫曼德行动与印度财政。"
     }
   ]
 }
