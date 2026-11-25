@@ -13,6 +13,7 @@ for(const id of ['E20-T005-FRONTIER-COLLECTIVE-PUNISHMENT-1901-1947','E20-T009-P
  assert(a.sections.every(s=>Array.isArray(s.paragraphs)&&s.paragraphs.length>=2&&s.paragraphs.every(p=>typeof p==='string')&&s.source_keys.every(k=>sk.has(k))));
  const body=a.sections.flatMap(s=>s.paragraphs).join('');
  assert(body.replace(/\[\[[A-Z0-9-]+\|([^\]]+)\]\]/g,'$1').length>=3000,id);
+ assert(!/(地理参照|地理配准|独立配准|地理中心|同期测绘|实控边界|未绘|具名城市参照)/.test(body),id+' public prose must omit internal cartographic notes');
  const links=[...new Set([...body.matchAll(/\[\[([A-Z0-9-]+)\|/g)].map(m=>m[1]))];assert.deepEqual(links.sort(),[...t.event_ids].sort());
  for(const k of links){const x=events.get(k);assert(x&&x.e.source_ids.every(k=>x.keys.has(k)),k);}
  if(t.status==='published')assert.equal(t.publication_review,'approved');
