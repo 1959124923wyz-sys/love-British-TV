@@ -29,4 +29,5 @@ assert.deepEqual([sha.lng,sha.lat],[gz.lng,gz.lat]);
 assert.equal(sha.geo_precision,'named_locality_approximate');
 assert(sha.source_ids.includes('E20-T016-SRC-GGZ'));
 assert(load('data/twentieth-century-spatial-1920-1929.geojson').features.find(f=>f.id==='china-t016-gzsup').properties.related_event_ids.includes(sha.id));
+for(const id of ['E20-T016-COMMIT','E20-T016-END']){const e=events.get(id).e;assert.deepEqual([e.lng,e.lat],[gz.lng,gz.lat]);assert.equal(e.geo_precision,'named_locality_approximate');assert(e.source_ids.includes('E20-T016-SRC-GGZ'));const p=load('data/twentieth-century-spatial-1920-1929.geojson').features.find(f=>f.id==='china-t016-gzsup').properties;assert(p.related_event_ids.includes(id));assert(p.start_year<=e.year&&p.end_year>=e.year);}
 console.log('PASS T015/T016 evidence, dated links and named locality anchors');
