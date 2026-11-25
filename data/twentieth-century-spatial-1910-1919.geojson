@@ -3481,6 +3481,128 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "india-land-e20-t002-khed"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "bengal-e20-t003-release",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.92313,
+          26.83928
+        ]
+      },
+      "properties": {
+        "name": "DATTA,GL · 反分割运动",
+        "start_year": 1910,
+        "end_year": 1910,
+        "display_kind": "political",
+        "summary_zh": "Banglapedia记载达特在勒克瑙监狱被拘至1910年。",
+        "source_ids": [
+          "E20-T003-SRC-DATTA",
+          "E20-T003-SRC-GL"
+        ],
+        "source_urls": [
+          "https://en.banglapedia.org/index.php/Datta,_Aswini_Kumar",
+          "https://www.geonames.org/1264733"
+        ],
+        "named_anchors": [
+          [
+            "DATTA",
+            "GL"
+          ]
+        ],
+        "mapping_method": "Documented WGS84 named locality reference; no historical boundary inferred",
+        "related_event_ids": [
+          "E20-T003-RELEASE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "bengal-e20-t003-release"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "punjab-accountability-calcutta-1919",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.36304,
+          22.56263
+        ]
+      },
+      "properties": {
+        "name": "加尔各答 · 泰戈尔抗议",
+        "start_year": 1919,
+        "end_year": 1919,
+        "display_kind": "political",
+        "summary_zh": "加尔各答 · 泰戈尔抗议，1919年。",
+        "source_ids": [
+          "E20-AMR-SRC-TAG",
+          "E20-AMR-SRC-TAGTEXT",
+          "E20-AMR-SRC-KOL"
+        ],
+        "source_urls": [
+          "https://indianculture.nvli.in/system/files/NAIStoryPDF/13_Tagore%27s_request_to_be_relieved_of_knighthood.pdf",
+          "https://indiaofthepast.org/node/214",
+          "https://www.geonames.org/1275004"
+        ],
+        "named_anchors": [
+          "加尔各答"
+        ],
+        "mapping_method": "Existing documented chronology city anchor, civic protest and accountability",
+        "related_event_ids": [
+          "E20-AMR-TAGORE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "punjab-accountability-calcutta-1919"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "punjab-accountability-london-1919",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1246,
+          51.5007
+        ]
+      },
+      "properties": {
+        "name": "伦敦 · 议会追责辩论",
+        "start_year": 1919,
+        "end_year": 1919,
+        "display_kind": "political",
+        "summary_zh": "伦敦 · 议会追责辩论，1919年。",
+        "source_ids": [
+          "E20-AMR-SRC-HANS",
+          "E20-AMR-SRC-INQ"
+        ],
+        "source_urls": [
+          "https://hansard.parliament.uk/Commons/1919-12-22/debates/853864ac-1923-4c8e-b6ff-40ba4109ee9c/OrdersOfTheDay",
+          "https://upload.wikimedia.org/wikipedia/commons/f/fe/Disorders_Inquiry_Committee_1919-1920_%28report%29_Calcutta-_Superintendent_Government_Printing%2C_India_1920_-_ape9901.0001.001.umich.edu.pdf#page=33"
+        ],
+        "named_anchors": [
+          "伦敦"
+        ],
+        "mapping_method": "Existing documented chronology city anchor, civic protest and accountability",
+        "related_event_ids": [
+          "E20-AMR-DEBATE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "punjab-accountability-london-1919"
+      }
     }
   ]
 }
