@@ -45,3 +45,5 @@ const halfGate=getGate({get:()=>null})(1950,half);
 assert(approved.event_ids.every(id=>!halfGate.eventIds.has(id)));assert(topics[1].event_ids.every(id=>halfGate.eventIds.has(id)));
 assert(fs.readFileSync('js/history-stories.js','utf8').includes("topic.review_entry_required!==true||review.get('review20c')==='1'"));
 console.log('PASS T088/T089: 34 cited events, 25 sources, 10 points, 34 sections, payment reconciliation and visibility gate');
+
+for(const t of topics){const a=load(t.article_file);for(const s of a.sections)for(const p of s.paragraphs)assert(!/地图不填充|地图使用|地图仅呈现|地理参考|地籍界线|原始.*图件核定|本世纪时间轴|推测区域|原始地图.*重建/.test(p),s.id+' reader mapping disclaimer');}
