@@ -3694,6 +3694,95 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "egypt-t027-malta-exile"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-t030-t031-basra-1910",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.7804,
+          30.50852
+        ]
+      },
+      "properties": {
+        "name": "巴士拉 · 伊拉克专题",
+        "start_year": 1914,
+        "end_year": 1914,
+        "display_kind": "conflict",
+        "summary_zh": "巴士拉遭英国与英印军队占领。英国军队以保护石油供应为政策目标，占领巴士拉港。",
+        "source_ids": [
+          "E20-T030-SRC-NAM",
+          "E20-T030-SRC-GEOBAS"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/mesopotamia-campaign",
+          "https://www.geonames.org/99532/al-ba-rah.html"
+        ],
+        "named_anchors": [
+          "巴士拉"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T030-BASRA"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-t030-t031-basra-1910"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-baghdad-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40088,
+          33.34058
+        ]
+      },
+      "properties": {
+        "name": "巴格达 · 英国军事占领",
+        "start_year": 1917,
+        "end_year": 1919,
+        "display_kind": "political",
+        "summary_zh": "1917年英国军队占领巴格达。",
+        "source_ids": [
+          "E20-T030-SRC-NAM",
+          "E20-T030-SRC-OSU",
+          "E20-T030-SRC-GEOBAG"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/mesopotamia-campaign",
+          "https://origins.osu.edu/connecting-history/iraq-1920-revolution-revolt",
+          "https://www.geonames.org/98182/baghdad.html"
+        ],
+        "named_anchors": [
+          "巴格达"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T030-BAGHDAD"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-baghdad-administration",
+        "year_stages": [
+          {
+            "start_year": 1917,
+            "end_year": 1919,
+            "controller": "british",
+            "title": "巴格达 · 英国军事占领",
+            "summary_zh": "1917年英国军队占领巴格达。"
+          }
+        ]
+      }
     }
   ]
 }
