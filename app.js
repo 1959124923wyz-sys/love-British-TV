@@ -2732,7 +2732,8 @@ async function boot(){
   'data/cshapes-20c/middle-east.geojson',
   'data/cshapes-20c/gulf-south-arabia.geojson',
   'data/cshapes-20c/caribbean-pacific.geojson',
-  'data/cshapes-20c/dominions.geojson'
+  'data/cshapes-20c/dominions.geojson',
+  'data/twentieth-century-territorial-islands-batch2.geojson'
  ].map(path=>fetch(path,{cache:'no-store'}).then(response=>{
   if(!response.ok)throw new Error('HTTP '+response.status);
   return response.json();
