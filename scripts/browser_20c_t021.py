@@ -12,7 +12,7 @@ js=lambda q,*args:driver.execute_script(q,*args)
 out=Path('browser-smoke-results');out.mkdir(exist_ok=True)
 try:
  for topic,first,year,minimum,items in [
- ('E20-T021-SINGAPORE-LABOUR-DETENTION-1945-1959','E20-T021-GENERAL',1946,19,[('E20-T021-GENERAL',1946,1.289,103.853),('E20-T021-STUD',1954,1.289,103.853),('E20-T021-BUS',1955,1.289,103.853),('E20-T021-DET57',1957,None,None),('E20-T021-DET58',1958,None,None),('E20-T021-ELECT',1959,1.289,103.853)])]:
+ ('E20-T021-SINGAPORE-LABOUR-DETENTION-1945-1959','E20-T021-GENERAL',1946,20,[('E20-T021-GENERAL',1946,1.289,103.853),('E20-T021-STUD',1954,1.289,103.853),('E20-T021-BUS',1955,1.289,103.853),('E20-T021-DET57',1957,None,None),('E20-T021-DET58',1958,None,None),('E20-T021-DET59',1959,None,None),('E20-T021-ELECT',1959,1.289,103.853)])]:
   driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+'?year='+str(year))
   wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
   wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById(arguments[0])",first))
