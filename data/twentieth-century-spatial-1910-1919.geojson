@@ -3651,6 +3651,49 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "ceylon-t010-colombo"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "egypt-t027-malta-exile",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.44908,
+          35.88182
+        ]
+      },
+      "properties": {
+        "name": "马耳他 · 埃及政治流放",
+        "start_year": 1919,
+        "end_year": 1919,
+        "display_kind": "repression",
+        "summary_zh": "英国政府确认批准拘捕并驱逐扎格卢勒及另外三名民族主义领袖至马耳他。",
+        "source_ids": [
+          "E20-T027-SRC-M18",
+          "E20-T027-SRC-M15",
+          "E20-T027-SRC-OU",
+          "E20-T027-SRC-MALTA"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1919/mar/18/notable-egyptians-deportation",
+          "https://api.parliament.uk/historic-hansard/commons/1919/may/15/affairs-in-egypt",
+          "https://www.open.edu/openlearn/history-the-arts/history/after-the-first-world-war-the-1919-egyptian-revolution",
+          "https://www.geonames.org/advanced-search.html?country=MT&q=Malta"
+        ],
+        "named_anchors": [
+          "马耳他岛"
+        ],
+        "mapping_method": "GeoNames named island WGS84 anchor; no exact confinement site or route inferred.",
+        "related_event_ids": [
+          "E20-T027-EXILE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "egypt-t027-malta-exile"
+      }
     }
   ]
 }
