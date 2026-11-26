@@ -5087,6 +5087,155 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "egypt-t029-said-relief"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-baghdad-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40088,
+          33.34058
+        ]
+      },
+      "properties": {
+        "name": "巴格达 · 独立伊拉克王国",
+        "start_year": 1950,
+        "end_year": 1959,
+        "display_kind": "political",
+        "summary_zh": "伊拉克与英国继续就石油、军事设施与条约关系谈判。",
+        "source_ids": [
+          "E20-T031-SRC-OIL52",
+          "E20-T031-SRC-OIL51",
+          "E20-T031-SRC-GEOBAG",
+          "E20-T031-SRC-SPECIAL",
+          "E20-T031-SRC-JUL58"
+        ],
+        "source_urls": [
+          "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d245",
+          "https://history.state.gov/historicaldocuments/frus1951v05/d132",
+          "https://www.geonames.org/98182/baghdad.html",
+          "https://treaties.fcdo.gov.uk/data/Library2/pdf/1955-TS0050.pdf",
+          "https://api.parliament.uk/historic-hansard/commons/1958/jul/14/iraq"
+        ],
+        "named_anchors": [
+          "巴格达"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T031-OIL52",
+          "E20-T031-SPECIAL",
+          "E20-T031-WORKERS",
+          "E20-T031-REPUBLIC"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-baghdad-administration",
+        "year_stages": [
+          {
+            "start_year": 1950,
+            "end_year": 1957,
+            "controller": "local",
+            "title": "巴格达 · 独立伊拉克王国",
+            "summary_zh": "伊拉克与英国继续就石油、军事设施与条约关系谈判。"
+          },
+          {
+            "start_year": 1958,
+            "end_year": 1959,
+            "controller": "local",
+            "title": "巴格达 · 伊拉克共和国",
+            "summary_zh": "1958年革命废除君主制。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-t030-t031-london-1950",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.12574,
+          51.50853
+        ]
+      },
+      "properties": {
+        "name": "伦敦 · 伊拉克专题",
+        "start_year": 1955,
+        "end_year": 1955,
+        "display_kind": "political",
+        "summary_zh": "英国宣布加入土伊条约。英国政府宣布决定加入土伊合作条约，并另签英伊特别协议。；财产估值、英国采购承诺及免费设施。英国议会公布£2,755,000财产估值及免除支付、伊方承诺至少£2,000,000对英采购的安排。",
+        "source_ids": [
+          "E20-T031-SRC-PACT",
+          "E20-T031-SRC-SPECIAL",
+          "E20-T031-SRC-GEOLON",
+          "E20-T031-SRC-PAR55"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/lords/1955/mar/30/britain-and-turco-iraqi-pact",
+          "https://treaties.fcdo.gov.uk/data/Library2/pdf/1955-TS0050.pdf",
+          "https://www.geonames.org/advanced-search.html?country=GB&q=Londres",
+          "https://api.parliament.uk/historic-hansard/commons/1955/dec/21/united-kingdom-and-iraq-special-agreement"
+        ],
+        "named_anchors": [
+          "伦敦"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T031-PACT",
+          "E20-T031-FINANCE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-t030-t031-london-1950"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-t030-t031-habbaniya-1950",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.5864,
+          33.3836
+        ]
+      },
+      "properties": {
+        "name": "哈巴尼亚 · 伊拉克专题",
+        "start_year": 1955,
+        "end_year": 1955,
+        "display_kind": "political",
+        "summary_zh": "哈巴尼亚设施指挥交接。特别协议规定5月2日任命伊方军官，英国皇家空军历史材料记录该日交接安排。",
+        "source_ids": [
+          "E20-T031-SRC-SPECIAL",
+          "E20-T031-SRC-RAF",
+          "E20-T031-SRC-GEOHAB"
+        ],
+        "source_urls": [
+          "https://treaties.fcdo.gov.uk/data/Library2/pdf/1955-TS0050.pdf",
+          "https://www.raf.mod.uk/what-we-do/our-history/air-historical-branch/regional-studies-post-coldwar-narratives/flight-from-the-middle-east-by-acm-sir-david-lee/",
+          "https://geographic.org/geographic_names/name.php?c=iraq&fid=3182&uni=-4385592"
+        ],
+        "named_anchors": [
+          "哈巴尼亚"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T031-HANDOVER"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-t030-t031-habbaniya-1950"
+      }
     }
   ]
 }
