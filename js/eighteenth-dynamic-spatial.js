@@ -18,9 +18,7 @@
  const active=periods=>periods.find(p=>p.start_year<=year&&year<=p.end_year);
  const short=p=>(p||'').replace(/^[一二三四五六七八九十0-9]+世纪/,'');
  const isOutlineOnly=c=>c.includes('纸面')||c.includes('影响')||c.includes('商贸')||c.includes('土地');
- const tint=c=>c.includes('纸面')?'#e5ba74':c.includes('土地')?'#d49a7b':
-  c.includes('影响')||c.includes('商贸')?'#7ac5c2':
-  c.includes('王室法政')?'#94aec0':'#ad8be8';
+ const tint=c=>window.AtlasMapColors.resolve(c.includes('纸面')?'charter':c.includes('土地')?'land_dispossession':c.includes('商贸')?'trade_influence':c.includes('军事')&&c.includes('影响')?'military_impact':c.includes('影响')?'neutral':c.includes('王室法政')?'diplomacy':'administration');
  const urls=arr=>[...new Set(arr||[])].map(url=>{
    let host=url;try{host=new URL(url).hostname}catch{}
    return '<li><a href="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(host)+'</a></li>';
@@ -67,7 +65,7 @@
      const period=active(site.periods);if(!period)continue;
      const ephemeral=site.category.includes('年内短占');
      const company=site.category.includes('公司')||site.category.includes('商贸')||site.category.includes('港口');
-     const color=ephemeral?'#edb66a':company?'#92bfee':'#b989f4';
+     const color=window.AtlasMapColors.resolve(company&&!ephemeral?'trade_influence':'administration');
      const center=[site.geometry.coordinates[1],site.geometry.coordinates[0]];
      L.circleMarker(center,{pane:sitePane,renderer:siteRenderer,
        radius:19,color,weight:1.6,opacity:.8,dashArray:'3 6',fill:false,
