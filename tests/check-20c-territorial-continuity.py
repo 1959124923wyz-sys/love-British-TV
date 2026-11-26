@@ -10,6 +10,7 @@ paths = [ROOT / "data/twentieth-century-territorial-areas.geojson",
     ROOT / "data/twentieth-century-india-provinces-1900-1930.geojson",
     ROOT / "data/twentieth-century-india-provinces-1931-1946.geojson",
     ROOT / "data/twentieth-century-territorial-local-batch6.geojson",
+    ROOT / "data/twentieth-century-territorial-canada-batch7.geojson",
          *sorted((ROOT / "data/cshapes-20c").glob("*.geojson"))]
 app = (ROOT / "app.js").read_text()
 all_features, ids, source_ids = [], set(), set()
@@ -119,3 +120,19 @@ assert not active("newfoundland-island-20c", 1949)
 for stable in ("au-nsw-land-rights-legacy", "au-nt-land-rights-legacy", "nz-moriori-chatham-legacy", "banaba-island", "nauru-island"):
     assert active(stable, 1982)[0]["display_kind"] == "land_dispossession"
 print("PASS: batch six jurisdictions and 1982 legacy layers.")
+
+# Batch seven: Canadian historical border changes and land rights.
+assert active("yukon-district", 1900)[0]["start_year"] == 1900
+assert active("yukon-district", 1901)[0]["start_year"] == 1901
+assert not active("alberta-province-20c", 1904) and active("alberta-province-20c", 1905)
+assert not active("alberta-district", 1905)
+assert active("british-columbia-polity", 1902)[0]["end_year"] == 1902
+assert active("british-columbia-polity", 1903)[0]["start_year"] == 1903
+assert active("manitoba-province", 1912)[0]["start_year"] == 1912
+assert active("ontario-province", 1912)[0]["start_year"] == 1912
+assert active("quebec-province", 1927)[0]["start_year"] == 1927
+assert active("newfoundland-labrador-mainland", 1934)[0]["display_kind"] == "administrative"
+assert not active("newfoundland-labrador-mainland", 1949)
+assert active("yukon-land-claims-legacy", 1982)[0]["display_kind"] == "land_dispossession"
+assert active("nunavut-1999-territory", 1999) and not active("nunavut-1999-territory", 1998)
+print("PASS: Canadian provincial boundaries, 1982 land rights and Nunavut 1999.")
