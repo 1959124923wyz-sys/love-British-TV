@@ -155,7 +155,7 @@
      '<button type="button" class="zone-record-link" data-area-event="'+esc(e.id)+'">'+esc(e.name)+'</button>'
     ).join('')+'</div>':'')+
     '<details class="atlas-18c-overlap-sources"><summary>历史文献与来源 ('+src.length+')</summary>'+
-    '<div class="atlas-18c-overlap-source-links">'+src.map(u=>
+    '<div class="atlas-18c-overlap-source-links">'+(r.feature.properties.geometry_source_blob?'<p>疆界数据：CShapes 2.0（Schvitz 等）；BorderDrift 简化数据；<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>。</p>':'')+src.map(u=>
      '<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">资料来源 · '+esc(urlHost(u))+' ↗</a>').join('')+
 
     '</div></details></div>':'')+'</article>';

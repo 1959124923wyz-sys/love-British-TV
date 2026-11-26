@@ -1321,9 +1321,10 @@ function loadModernAtlas(from,end,status,[data,geo]){
 }
 function loadNineteenthTerritorialAreas(data){
  const {metadata,features,sources}=data||{};
- if(data?.type!=='FeatureCollection'||metadata?.schema!=='atlas-19c-territorial-areas-v1'||
+ if(data?.type!=='FeatureCollection'||!['atlas-19c-territorial-areas-v1','atlas-20c-territorial-areas-v1'].includes(metadata?.schema)||
     metadata.historical_area_statistics!==false||!features?.length||!sources?.length)
   throw new Error('Nineteenth-century territory dataset is incomplete');
+ const firstYear=metadata.schema==='atlas-20c-territorial-areas-v1'?1900:1800;
  const sourceIds=new Set(sources.map(source=>source.id));
  const eventIds=new Set([...serialPreviewByDecade.values()].flatMap(chapter=>chapter.events.map(event=>event.id)));
  const validCoordinate=point=>
@@ -1344,7 +1345,7 @@ function loadNineteenthTerritorialAreas(data){
     p?.geometry_precision==='source_backed_historical_line'&&lines.every(validLine):
     polygons.length>0&&polygons.every(polygon=>Array.isArray(polygon)&&polygon.length&&polygon.every(validRing));
   return feature.type==='Feature'&&typeof feature.id==='string'&&p?.stable_id&&p.name&&p.summary_zh&&validShape&&
-   [p.start_year,p.end_year].every(y=>Number.isInteger(y)&&y>=1800&&y<=1899)&&p.start_year<=p.end_year&&
+   [p.start_year,p.end_year].every(y=>Number.isInteger(y)&&y>=firstYear&&y<=firstYear+99)&&p.start_year<=p.end_year&&
    p.historical_boundary_confirmed===false&&p.fill_authorized===false&&p.dash_only===true&&
    p.exclude_from_area_aggregation===true&&p.area_sqkm===null&&p.source_ids?.length&&
    p.source_ids.every(id=>sourceIds.has(id))&&Array.isArray(p.related_event_ids)&&
@@ -1386,10 +1387,10 @@ function renderNineteenthSpatial(){
   if(['Polygon','MultiPolygon'].includes(feature.geometry.type)){
    const layer=L.geoJSON(site,{
     pane:'territoryPane',renderer:territoryRenderer,bubblingMouseEvents:false,
-    style:{color,weight:2,dashArray:'7 6',fillColor:color,fillOpacity:.10,className:'atlas-19c-area'},
+    style:{color,weight:2,dashArray:'7 6',fillColor:color,fillOpacity:year>=1900?.18:.10,className:year>=1900?'atlas-19c-area atlas-20c-area':'atlas-19c-area'},
     onEachFeature:(_,shape)=>shape.on('click',e=>{
      if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
-     window.historicOverlapDossier?.openAt?.(e.latlng,'visible-polygon');
+     if(!window.historicOverlapDossier?.openAt?.(e.latlng,'visible-polygon'))openTerritoryDossier(site);
     })
    });
    layer.addTo(group);
@@ -2721,7 +2722,18 @@ async function boot(){
   'data/nineteenth-century-territorial-areas-batch4.geojson',
   'data/nineteenth-century-territorial-areas-batch5.geojson',
   'data/nineteenth-century-territorial-areas-batch6.geojson',
-  'data/nineteenth-century-territorial-areas-batch7.geojson'
+  'data/nineteenth-century-territorial-areas-batch7.geojson',
+  'data/twentieth-century-territorial-areas.geojson',
+  'data/cshapes-20c/south-east-asia.geojson',
+  'data/cshapes-20c/sudan-uganda.geojson',
+  'data/cshapes-20c/east-africa.geojson',
+  'data/cshapes-20c/west-africa.geojson',
+  'data/cshapes-20c/southern-africa.geojson',
+  'data/cshapes-20c/middle-east.geojson',
+  'data/cshapes-20c/gulf-south-arabia.geojson',
+  'data/cshapes-20c/caribbean-pacific.geojson',
+  'data/cshapes-20c/dominions.geojson',
+  'data/twentieth-century-territorial-islands-batch2.geojson'
  ].map(path=>fetch(path,{cache:'no-store'}).then(response=>{
   if(!response.ok)throw new Error('HTTP '+response.status);
   return response.json();

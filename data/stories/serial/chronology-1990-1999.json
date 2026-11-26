@@ -1,0 +1,84 @@
+{
+  "schema": "atlas-20c-chronology-v1",
+  "dataset_id": "twentieth-century-1990s",
+  "period": {
+    "from": 1990,
+    "to": 1999
+  },
+  "editorial_status": "editorial_review",
+  "events": [
+    {
+      "id": "E20-EXIT-HKNAT",
+      "year": 1990,
+      "start_year": 1990,
+      "end_year": 1990,
+      "visible_from": 1990,
+      "date_label": "1990年",
+      "name": "香港英国国籍选择计划",
+      "description": "英国1990年香港国籍法设立特定合资格人士注册英国公民的制度。",
+      "short_description": "英国1990年香港国籍法设立特定合资格人士注册英国公民的制度。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "联合国及官方条约、独立与国籍资料"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "20EXIT-NAT"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-EXIT-HKRETURN",
+      "year": 1997,
+      "start_year": 1997,
+      "end_year": 1997,
+      "visible_from": 1997,
+      "date_label": "1997年",
+      "name": "香港回归中国",
+      "description": "1997年7月1日，中华人民共和国恢复对香港行使主权，英国在香港的殖民行政结束。",
+      "short_description": "1997年7月1日，中华人民共和国恢复对香港行使主权，英国在香港的殖民行政结束。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "联合国及官方条约、独立与国籍资料"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "20EXIT-HK"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    }
+  ],
+  "routes": [],
+  "sources": [
+    {
+      "id": "20EXIT-NAT",
+      "publisher": "英国内政部",
+      "title": "国籍法历史背景",
+      "label": "英国内政部｜国籍法历史背景",
+      "url": "https://www.gov.uk/government/publications/historical-background-information-on-nationality/historical-background-information-on-nationality-accessible",
+      "access": "独立、国籍与属地身份"
+    },
+    {
+      "id": "20EXIT-HK",
+      "publisher": "英国外交、联邦及发展事务部",
+      "title": "中英联合声明",
+      "label": "英国条约档案｜中英联合声明",
+      "url": "https://treaties.fcdo.gov.uk/awweb/pdfopener?did=68291&md=1",
+      "access": "1997年7月1日恢复行使主权"
+    }
+  ]
+}
