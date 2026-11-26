@@ -12,7 +12,7 @@ js=lambda q,*args:driver.execute_script(q,*args)
 out=Path('browser-smoke-results');out.mkdir(exist_ok=True)
 try:
  for topic,first,year,minimum,items in [
- ('E20-T027-EGYPT-OCCUPATION-DENSHAWAI-REVOLUTION-1900-1922','E20-T027-INC',1906,20,[('E20-T027-INC',1906,30.6014,30.8206),('E20-T027-VILL',1906,30.6014,30.8206),('E20-T027-RESTORE',1907,30.6014,30.8206),('E20-AMR-EGYPT',1914,30.06263,31.24967),('E20-T027-WOMEN',1919,30.06263,31.24967),('E20-T027-COURTS',1919,None,None),('E20-CORK-EGYPT',1922,30.06263,31.24967),('E20-T027-CENSOR',1922,None,None)])]:
+ ('E20-T027-EGYPT-OCCUPATION-DENSHAWAI-REVOLUTION-1900-1922','E20-T027-INC',1906,20,[('E20-T027-INC',1906,30.6014,30.8206),('E20-T027-VILL',1906,30.6014,30.8206),('E20-T027-RESTORE',1907,30.6014,30.8206),('E20-AMR-EGYPT',1914,30.06263,31.24967),('E20-T027-EXILE',1919,35.88182,14.44908),('E20-T027-EXILE2',1922,-4.67643,55.47426),('E20-T027-WOMEN',1919,30.06263,31.24967),('E20-T027-COURTS',1919,None,None),('E20-CORK-EGYPT',1922,30.06263,31.24967),('E20-T027-CENSOR',1922,None,None)])]:
   driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+'?year='+str(year))
   wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
   wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById(arguments[0])",first))
