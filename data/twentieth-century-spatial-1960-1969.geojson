@@ -5,5 +5,45 @@
     "coverage": "1960–1969: dated decolonization events; polygon overlays loaded separately",
     "historical_area_statistics": false
   },
-  "features": []
+  "features": [
+    {
+      "type": "Feature",
+      "id": "e20-t089-us-reference",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.474,
+          1.94
+        ]
+      },
+      "properties": {
+        "name": "Kiritimati岛 · 美国试验及英国协助",
+        "start_year": 1962,
+        "end_year": 1962,
+        "display_kind": "political",
+        "summary_zh": "1962年活动由美国实施并有英国人员参与，责任主体与1957—1958年英国试验分开。",
+        "source_ids": [
+          "E20-T089-SRC-MOD",
+          "E20-T089-SRC-KIR"
+        ],
+        "source_urls": [
+          "https://www.gov.uk/guidance/nuclear-emergency-planning-and-atmospheric-testing-programme",
+          "https://www.geonames.org/4030944/kiritimati-island.html"
+        ],
+        "named_anchors": [
+          "Kiritimati岛"
+        ],
+        "mapping_method": "WGS84具名岛屿、地区或居民聚落参考点；不标示试验操作位置、历史污染范围或领土边界。",
+        "related_event_ids": [
+          "E20-T089-US"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "e20-t089-us-reference"
+      }
+    }
+  ]
 }
