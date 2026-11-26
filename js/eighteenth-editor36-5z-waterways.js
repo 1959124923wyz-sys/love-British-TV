@@ -27,7 +27,7 @@
   host.openPanel('dossier');
  }
  function makeLayer(f){
-  const lake=f.properties.kind==='lake_shore',c=lake?'#63bfd0':'#6bafd5';
+  const lake=f.properties.kind==='lake_shore',c=window.AtlasMapColors.resolve('physical');
   const layer=L.geoJSON(f.geometry,{
    pane,renderer,color:c,weight:lake?1.65:2.4,
    opacity:lake?.91:.85,dashArray:lake?'5 7':'7 5',
