@@ -36,3 +36,9 @@ assert.equal(finance.length,10);assert.deepEqual(finance[0].slice(0,4),['1959','
 const tax=fs.readFileSync(root+'T083_BANABA_TAX_SHARE_1946_1968.csv','utf8').trim().split('\n').slice(1);assert.equal(tax.length,23);assert(tax.includes('1949 (9 months),15.74'));assert.equal(tax.at(-1),'1968,54.24');
 assert.equal(events.get('E20-T084-IND68').year,1968);assert.equal(events.get('E20-T084-TRANSFER70').year,1970);
 console.log('PASS T083/T084: 40 events, 42 source keys, 18 point records, 41 distinct story links and two original financial tables');
+
+const candidates=idx.topics.filter(t=>/^E20-T08[34]-/.test(t.id));
+assert(candidates.every(t=>t.review_entry_required===true));
+assert.deepEqual([...new Set(candidates.flatMap(t=>t.review_event_ids))].sort(),[...events.keys()].sort());
+assert.deepEqual([...new Set(candidates.flatMap(t=>t.review_feature_ids))].sort(),[...points.keys()].sort());
+assert(!candidates.some(t=>t.review_event_ids.includes('E20-EXIT-KIRIBATI')));
