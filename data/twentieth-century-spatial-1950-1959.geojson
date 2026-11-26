@@ -3084,7 +3084,8 @@
           "E20-CORK-SRC-EGYPT",
           "E20-CORK-SRC-EGYP2",
           "E20-AMR-SRC-EG",
-          "E20-AMR-SRC-CAI"
+          "E20-AMR-SRC-CAI",
+          "E20-T028-SRC-CROSS"
         ],
         "named_anchors": [
           "开罗"
@@ -3094,7 +3095,8 @@
           "E20-CORK-EGYPT",
           "E20-AMR-EGYPT",
           "E20-SALT-EGYPT",
-          "E20-KEN-SUEZ"
+          "E20-KEN-SUEZ",
+          "E20-T028-RATIFY"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -3109,7 +3111,8 @@
           "https://hansard.parliament.uk/Commons/1922-02-28/debates/00d2618f-1175-498a-ae16-999bc194b871/ORALANSWERSTOQUESTIONS",
           "https://history.state.gov/historicaldocuments/frus1922v02/d94",
           "https://www.thegazette.co.uk/London/issue/29010/supplement/10801/data.pdf",
-          "https://www.geonames.org/360630"
+          "https://www.geonames.org/360630",
+          "https://history.state.gov/historicaldocuments/frus1952-54v09p2/d1348"
         ],
         "year_stages": [
           {
@@ -4832,11 +4835,25 @@
         "summary_zh": "埃及宣布运河公司国有化后，以色列、英国和法国出兵。英法空降部队抵达塞得港一带，随后有海上部队登陆。",
         "source_ids": [
           "E20-KEN-SRC-SUE",
-          "E20-KEN-SRC-SUE54"
+          "E20-KEN-SRC-SUE54",
+          "E20-T029-SRC-ICRC",
+          "E20-T029-SRC-ERC",
+          "E20-T029-SRC-HUM",
+          "E20-T029-SRC-CAS",
+          "E20-T029-SRC-PHOTO",
+          "E20-T029-SRC-INQ",
+          "E20-T029-SRC-UNYEAR"
         ],
         "source_urls": [
           "https://www.nam.ac.uk/explore/suez-crisis",
-          "https://treaties.un.org/doc/publication/UNTS/Volume%20210/v210.pdf"
+          "https://treaties.un.org/doc/publication/UNTS/Volume%20210/v210.pdf",
+          "https://international-review.icrc.org/sites/default/files/S0020860400084837a.pdf",
+          "https://humanities-collections.exeter.ac.uk/dame/files/original/3acdcff6e1312a522da08f5300f3e96d6b2e2c33.pdf",
+          "https://www.tandfonline.com/doi/full/10.1080/13507486.2015.1121970",
+          "https://api.parliament.uk/historic-hansard/commons/1956/nov/21/casualties-port-said",
+          "https://collection.nam.ac.uk/detail.php?acc=2007-12-6-111",
+          "https://api.parliament.uk/historic-hansard/commons/1956/dec/20/port-said-casualties",
+          "https://www.un.org/unispal/document/auto-insert-197214/"
         ],
         "named_anchors": [
           "塞得港"
@@ -4844,7 +4861,13 @@
         "mapping_method": "Named historical site or locality reference in WGS84.",
         "geo_precision": "named_locality_approximate",
         "related_event_ids": [
-          "E20-KEN-SUEZ"
+          "E20-KEN-SUEZ",
+          "E20-T029-RELIEF",
+          "E20-T029-SUPPLY",
+          "E20-T029-CAS",
+          "E20-T029-INQ",
+          "E20-T029-EXCHANGE",
+          "E20-T029-WITHDRAW"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -4976,6 +4999,93 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "stable_id": "malaya-t020-baling"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "egypt-t028-ismailia",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.27225,
+          30.60427
+        ]
+      },
+      "properties": {
+        "name": "伊斯梅利亚 · 埃及警察与驻军冲突",
+        "start_year": 1951,
+        "end_year": 1952,
+        "display_kind": "conflict",
+        "summary_zh": "1951—1952年当地警务冲突与埃及警察抵抗。",
+        "source_ids": [
+          "E20-T028-SRC-ISMAILIA",
+          "E20-T028-SRC-NAM",
+          "E20-T028-SRC-GEO",
+          "E20-T028-SRC-POLICE"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1952/jan/31/egypt-british-military-action-ismailia",
+          "https://www.nam.ac.uk/explore/suez-canal-zone",
+          "https://www.geonames.org/361055/ismailia.html",
+          "https://sis.gov.eg/zh/%E5%AA%92%E4%BD%93%E4%B8%AD%E5%BF%83/%E6%B4%BB%E5%8A%A8/%E8%AD%A6%E5%AF%9F%E8%8A%82/"
+        ],
+        "named_anchors": [
+          "伊斯梅利亚"
+        ],
+        "mapping_method": "Named-place WGS84 anchor; fixed screen symbol.",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T028-IS51",
+          "E20-T028-IS52"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "egypt-t028-ismailia"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "egypt-t029-said-relief",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3019,
+          31.2624
+        ]
+      },
+      "properties": {
+        "name": "塞得港 · 战后住房救济",
+        "start_year": 1957,
+        "end_year": 1957,
+        "display_kind": "repression",
+        "summary_zh": "埃及红新月会与国际救援机构组织对失去住房居民的救济。",
+        "source_ids": [
+          "E20-T029-SRC-ICRC",
+          "E20-T029-SRC-PHOTO",
+          "E20-T029-SRC-HUM"
+        ],
+        "source_urls": [
+          "https://international-review.icrc.org/sites/default/files/S0020860400084837a.pdf",
+          "https://collection.nam.ac.uk/detail.php?acc=2007-12-6-111",
+          "https://www.tandfonline.com/doi/full/10.1080/13507486.2015.1121970"
+        ],
+        "named_anchors": [
+          "塞得港"
+        ],
+        "mapping_method": "Named-place WGS84 anchor; fixed screen symbol.",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T029-HOME"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "egypt-t029-said-relief"
       }
     }
   ]
