@@ -29,10 +29,11 @@
   ['coercive_policy','强制迁移、拘禁与强制政策'],
   ['military_impact','军事镇压、袭击与战时毁损'],
   ['battle','战斗与争夺'],
-  ['resistance','当地自主政权与抵抗'],
+  ['resistance','当地自主政权、自治领与抵抗'],
   ['trade_influence','贸易与经济联系'],
   ['diplomacy','保护、条约与政治关系'],
   ['foreign_occupation','其他国家控制、英国失去据点'],
+  ['scottish','独立苏格兰王权'],
   ['physical','地理参考线及海岸'],
   ['neutral','历史地点与其他背景']
  ]);
