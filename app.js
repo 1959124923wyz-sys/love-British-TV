@@ -1387,7 +1387,7 @@ function renderNineteenthSpatial(){
   if(['Polygon','MultiPolygon'].includes(feature.geometry.type)){
    const layer=L.geoJSON(site,{
     pane:'territoryPane',renderer:territoryRenderer,bubblingMouseEvents:false,
-    style:{color,weight:2,dashArray:'7 6',fillColor:color,fillOpacity:.10,className:'atlas-19c-area'},
+    style:{color,weight:2,dashArray:'7 6',fillColor:color,fillOpacity:year>=1900?.18:.10,className:year>=1900?'atlas-19c-area atlas-20c-area':'atlas-19c-area'},
     onEachFeature:(_,shape)=>shape.on('click',e=>{
      if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
      if(!window.historicOverlapDossier?.openAt?.(e.latlng,'visible-polygon'))openTerritoryDossier(site);
@@ -2723,7 +2723,16 @@ async function boot(){
   'data/nineteenth-century-territorial-areas-batch5.geojson',
   'data/nineteenth-century-territorial-areas-batch6.geojson',
   'data/nineteenth-century-territorial-areas-batch7.geojson',
-  'data/twentieth-century-territorial-areas.geojson'
+  'data/twentieth-century-territorial-areas.geojson',
+  'data/cshapes-20c/south-east-asia.geojson',
+  'data/cshapes-20c/sudan-uganda.geojson',
+  'data/cshapes-20c/east-africa.geojson',
+  'data/cshapes-20c/west-africa.geojson',
+  'data/cshapes-20c/southern-africa.geojson',
+  'data/cshapes-20c/middle-east.geojson',
+  'data/cshapes-20c/gulf-south-arabia.geojson',
+  'data/cshapes-20c/caribbean-pacific.geojson',
+  'data/cshapes-20c/dominions.geojson'
  ].map(path=>fetch(path,{cache:'no-store'}).then(response=>{
   if(!response.ok)throw new Error('HTTP '+response.status);
   return response.json();
