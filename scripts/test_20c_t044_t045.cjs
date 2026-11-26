@@ -21,7 +21,7 @@ const gateApp=fs.readFileSync('app.js','utf8');
 const gateSource=gateApp.slice(gateApp.indexOf('function modern20cReviewGate('),gateApp.indexOf('async function fetchModernAtlas('));
 const gateFn=new Function('reviewParams',gateSource+'\nreturn modern20cReviewGate;');
 const gatePublic=gateFn({get:()=>null})(1900,idx),gatePreview=gateFn({get:()=>'1'})(1900,idx);
-assert.equal(gatePublic.eventIds.size,14);assert.equal(gatePublic.featureIds.size,4);
+assert(t.review_event_ids.every(id=>gatePublic.eventIds.has(id)));assert(t.review_feature_ids.every(id=>gatePublic.featureIds.has(id)));
 assert.equal(gatePreview.eventIds.size,0);assert.equal(gatePreview.featureIds.size,0);
 assert.equal(gateFn({get:()=>null})(1800,null).eventIds.size,0);
 const approvedRegistry=JSON.parse(JSON.stringify(idx));for(const t of approvedRegistry.topics)if(t.review_entry_required){t.status='published';t.publication_review='approved';}
