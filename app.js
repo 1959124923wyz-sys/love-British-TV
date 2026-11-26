@@ -2734,7 +2734,9 @@ async function boot(){
   'data/cshapes-20c/caribbean-pacific.geojson',
   'data/cshapes-20c/dominions.geojson',
   'data/twentieth-century-territorial-islands-batch2.geojson',
-  'data/twentieth-century-territorial-local-batch3.geojson'
+  'data/twentieth-century-territorial-local-batch3.geojson',
+  'data/twentieth-century-india-provinces-1900-1930.geojson',
+  'data/twentieth-century-india-provinces-1931-1946.geojson'
  ].map(path=>fetch(path,{cache:'no-store'}).then(response=>{
   if(!response.ok)throw new Error('HTTP '+response.status);
   return response.json();
