@@ -185,6 +185,14 @@
       "label": "GeoNames｜Port Louis 934154",
       "url": "https://www.geonames.org/search.html?country=MU&q=Mauritius",
       "access": "57.4988889,-20.1619444；CC BY"
+    },
+    {
+      "id": "E20-T066-SRC-MAHE",
+      "publisher": "GeoNames",
+      "title": "Mahé island, 241274",
+      "label": "GeoNames｜马埃岛",
+      "url": "https://www.geonames.org/search.html?country=SC&q=Mahe",
+      "access": "岛屿参考点55.47426,-4.67643；非监狱地址"
     }
   ],
   "events": [
@@ -541,6 +549,66 @@
       "fill_authorized": false,
       "area_sqkm": null,
       "responsibility": "英国政府；领地行政当局"
+    },
+    {
+      "id": "E20-T066-SALOMON71",
+      "year": 1971,
+      "start_year": 1971,
+      "end_year": 1971,
+      "visible_from": 1971,
+      "date_label": "1971年",
+      "name": "迁离迪戈加西亚的居民转往萨洛蒙环礁",
+      "description": "查戈斯居民代表Bancoult后来在英国议会作证，部分居民被要求转往佩罗斯巴纽斯、萨洛蒙或毛里求斯；群岛内部迁居亦是强制离开家园的一部分。",
+      "short_description": "查戈斯居民代表Bancoult后来在英国议会作证，部分居民被要求转往佩罗斯巴纽斯、萨洛蒙或毛里求斯；群岛内部迁居亦是强制离开家园的一部分。",
+      "category": "repression",
+      "icon_code": "REP",
+      "significance": {
+        "level": 8,
+        "rationale": "法院记录及居民证言"
+      },
+      "lat": -5.33333,
+      "lng": 72.25,
+      "source_ids": [
+        "E20-T066-SRC-TESTIMONY",
+        "E20-T066-SRC-COURT20",
+        "E20-T066-SRC-SA"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "responsibility": "英国领地行政当局；岛民"
+    },
+    {
+      "id": "E20-T066-MAHE71",
+      "year": 1971,
+      "start_year": 1971,
+      "end_year": 1971,
+      "visible_from": 1971,
+      "date_label": "1971年9月30日至10月8日",
+      "name": "被迁离岛民在马埃岛监狱闲置区域暂住",
+      "description": "英国高等法院回顾部分被迁离岛民在塞舌尔马埃岛监狱闲置区域暂住，随后乘船前往路易港。",
+      "short_description": "英国高等法院回顾部分被迁离岛民在塞舌尔马埃岛监狱闲置区域暂住，随后乘船前往路易港。",
+      "category": "repression",
+      "icon_code": "REP",
+      "significance": {
+        "level": 8,
+        "rationale": "法院记录及居民证言"
+      },
+      "lat": -4.67643,
+      "lng": 55.47426,
+      "source_ids": [
+        "E20-T066-SRC-COURT03",
+        "E20-T066-SRC-HRW",
+        "E20-T066-SRC-MAHE"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null,
+      "responsibility": "英国领地行政当局；岛民"
     },
     {
       "id": "E20-T066-SET72",
@@ -1163,6 +1231,69 @@
       "metric": "1983—84发放对象",
       "source_id": "E20-T066-SRC-ICJ",
       "notes": "非被驱离总人数"
+    },
+    {
+      "event_id": "E20-T066-LAND67",
+      "year": 1967,
+      "unit": "acres",
+      "value": 8700,
+      "metric": "迪戈加西亚征收登记面积",
+      "source_id": "E20-T066-SRC-H75",
+      "notes": "1975议会披露的1967年征收文书面积，非GIS面积；66万英镑为整体价款"
+    },
+    {
+      "event_id": "E20-T066-LAND67",
+      "year": 1967,
+      "unit": "acres",
+      "value": 2900,
+      "metric": "佩罗斯巴纽斯征收登记面积",
+      "source_id": "E20-T066-SRC-H75",
+      "notes": "1975议会披露的1967年征收文书面积，非GIS面积；66万英镑为整体价款"
+    },
+    {
+      "event_id": "E20-T066-LAND67",
+      "year": 1967,
+      "unit": "acres",
+      "value": 2000,
+      "metric": "萨洛蒙征收登记面积",
+      "source_id": "E20-T066-SRC-H75",
+      "notes": "1975议会披露的1967年征收文书面积，非GIS面积；66万英镑为整体价款"
+    },
+    {
+      "event_id": "E20-T066-LAND67",
+      "year": 1967,
+      "unit": "acres",
+      "value": 638,
+      "metric": "埃格蒙特征收登记面积",
+      "source_id": "E20-T066-SRC-H75",
+      "notes": "1975议会披露的1967年征收文书面积，非GIS面积；66万英镑为整体价款"
+    },
+    {
+      "event_id": "E20-T066-LAND67",
+      "year": 1967,
+      "unit": "acres",
+      "value": 30,
+      "metric": "Three Brothers含Sea Cow约登记面积",
+      "source_id": "E20-T066-SRC-H75",
+      "notes": "1975议会披露的1967年征收文书面积，非GIS面积；66万英镑为整体价款"
+    },
+    {
+      "event_id": "E20-T066-LAND67",
+      "year": 1967,
+      "unit": "acres",
+      "value": 250,
+      "metric": "Danger登记面积",
+      "source_id": "E20-T066-SRC-H75",
+      "notes": "1975议会披露的1967年征收文书面积，非GIS面积；66万英镑为整体价款"
+    },
+    {
+      "event_id": "E20-T066-LAND67",
+      "year": 1967,
+      "unit": "acres",
+      "value": 300,
+      "metric": "Eagle登记面积",
+      "source_id": "E20-T066-SRC-H75",
+      "notes": "1975议会披露的1967年征收文书面积，非GIS面积；66万英镑为整体价款"
     }
   ],
   "reused_event_ids": [
