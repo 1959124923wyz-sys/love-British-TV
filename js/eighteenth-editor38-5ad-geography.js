@@ -10,15 +10,7 @@ const hydroRenderer=L.svg({pane:hydroPane}),siteRenderer=L.svg({pane:sitePane});
 const group=L.layerGroup().addTo(map);
 let records=[],layers=new Map(),loaded=false,error=null,year=host.getYear();
 const active=(f,y)=>f.properties.periods.some(p=>p.start_year<=y&&y<=p.end_year);
-const colors={
- indigenous_resistance:'#b89c7a',fur_trade_site:'#c8b17f',fiscal_administration:'#d1b17d',
- fiscal_coercion:'#c9a190',coastal_factory:'#a6b9c8',enslaved_resistance:'#d09da1',
- anti_colonial_resistance:'#db9d92',south_india_war_site:'#d4a18a',
- south_india_diplomacy:'#a7b89d',south_india_naval_site:'#9cbec9',
- american_revolution_battle:'#d2a08f',american_revolution_river_site:'#95b9c9',
- belize_treaty_reference:'#cab38b',belize_logwood_settlement:'#c4b18d',
- physical_trade_waterways:'#70b9cf'
-};
+const colors=Object.fromEntries(Object.entries({"indigenous_resistance":"resistance","fur_trade_site":"trade_influence","fiscal_administration":"revenue","fiscal_coercion":"coercive_policy","coastal_factory":"trade_influence","enslaved_resistance":"resistance","anti_colonial_resistance":"resistance","south_india_war_site":"battle","south_india_diplomacy":"diplomacy","south_india_naval_site":"battle","american_revolution_battle":"battle","american_revolution_river_site":"physical","belize_treaty_reference":"charter","belize_logwood_settlement":"trade_influence","physical_trade_waterways":"physical"}).map(([k,kind])=>[k,window.AtlasMapColors.resolve(kind)]));
 function open(f){
  host.clearSelection();const p=f.properties;
  const sources=[...new Set(p.source_urls)].map(u=>{
@@ -33,7 +25,7 @@ function open(f){
 function make(f){
  const line=f.geometry.type==='MultiLineString';
  const pane=line?hydroPane:sitePane,renderer=line?hydroRenderer:siteRenderer;
- const color=colors[f.properties.kind]||'#a4afc0';
+ const color=colors[f.properties.kind]||window.AtlasMapColors.resolve('neutral');
  const layer=L.geoJSON(f.geometry,{pane,renderer,color,weight:line?2.05:1.55,opacity:.85,
   dashArray:line?'5 7':'2 3',lineCap:'round',interactive:true,bubblingMouseEvents:false,
   pointToLayer:(_f,loc)=>L.circleMarker(loc,{pane,renderer,radius:5.1,color,weight:1.55,
