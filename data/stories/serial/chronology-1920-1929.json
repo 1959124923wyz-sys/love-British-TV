@@ -1408,34 +1408,6 @@
       "area_sqkm": null
     },
     {
-      "id": "E20-T027-EXILE2",
-      "year": 1921,
-      "start_year": 1921,
-      "end_year": 1921,
-      "visible_from": 1921,
-      "date_label": "1921年12月",
-      "name": "扎格卢勒再次遭流放",
-      "description": "扎格卢勒再次遭流放至塞舌尔。",
-      "short_description": "扎格卢勒再次遭流放至塞舌尔。",
-      "category": "repression",
-      "icon_code": "REP",
-      "significance": {
-        "level": 8,
-        "rationale": "同期议会文书及当地历史、学术研究"
-      },
-      "lat": null,
-      "lng": null,
-      "source_ids": [
-        "E20-T027-SRC-OU",
-        "E20-T027-SRC-AHR"
-      ],
-      "geo_precision": "unlocated",
-      "historical_control_boundary_verified": false,
-      "territorial_claim": false,
-      "fill_authorized": false,
-      "area_sqkm": null
-    },
-    {
       "id": "E20-CORK-ADVANCE",
       "year": 1922,
       "start_year": 1922,
@@ -1880,6 +1852,37 @@
         "level": 8,
         "rationale": "殖民行政及民众处境"
       },
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T027-EXILE2",
+      "year": 1922,
+      "start_year": 1922,
+      "end_year": 1922,
+      "visible_from": 1922,
+      "date_label": "1922年3月1日",
+      "name": "扎格卢勒等流放者被移送塞舌尔",
+      "description": "1921年底再次遭拘捕驱逐的扎格卢勒于1922年3月1日被移送塞舌尔，英国议会4月质询明确拘禁于马埃岛。",
+      "short_description": "1921年底再次遭拘捕驱逐的扎格卢勒于1922年3月1日被移送塞舌尔，英国议会4月质询明确拘禁于马埃岛。",
+      "category": "repression",
+      "icon_code": "REP",
+      "significance": {
+        "level": 8,
+        "rationale": "同期议会文书及当地历史、学术研究"
+      },
+      "lat": -4.67643,
+      "lng": 55.47426,
+      "source_ids": [
+        "E20-T027-SRC-OU",
+        "E20-T027-SRC-AHR",
+        "E20-T027-SRC-LOBBAN",
+        "E20-T027-SRC-APR22",
+        "E20-T027-SRC-MAHE"
+      ],
+      "geo_precision": "named_locality_approximate",
       "historical_control_boundary_verified": false,
       "territorial_claim": false,
       "fill_authorized": false,
@@ -6417,6 +6420,30 @@
       "label": "英国议会 Hansard｜Election and Arrests, 31 July 1922",
       "url": "https://api.parliament.uk/historic-hansard/commons/1922/jul/31/election-and-arrests",
       "access": "选举、拘禁及继续戒严的议会质询"
+    },
+    {
+      "id": "E20-T027-SRC-LOBBAN",
+      "publisher": "Cambridge University Press",
+      "title": "Detention Comes to Court: African Appeals to the Courts in Whitehall and Westminster, 1895–1922",
+      "label": "Cambridge University Press｜Detention Comes to Court: African Appeals to the Courts in Whitehall and Westminster, 1895–1922",
+      "url": "https://www.cambridge.org/core/books/imperial-incarceration/detention-comes-to-court-african-appeals-to-the-courts-in-whitehall-and-westminster-18951922/15C03D021D48C0491B152ED53956E247",
+      "access": "1922年3月1日移送塞舌尔、拘禁条例及诉讼"
+    },
+    {
+      "id": "E20-T027-SRC-APR22",
+      "publisher": "英国议会 Hansard",
+      "title": "Egypt (Deportees), 5 April 1922",
+      "label": "英国议会 Hansard｜Egypt (Deportees), 5 April 1922",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1922/apr/05/egypt-deportees",
+      "access": "质询确认马埃岛拘禁及健康申诉，政府答复须分别阅读"
+    },
+    {
+      "id": "E20-T027-SRC-MAHE",
+      "publisher": "GeoNames",
+      "title": "Mahé",
+      "label": "GeoNames｜Mahé",
+      "url": "https://www.geonames.org/241274/mahe.html",
+      "access": "岛屿地名参考坐标 -4.67643,55.47426"
     }
   ]
 }
