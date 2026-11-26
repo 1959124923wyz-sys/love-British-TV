@@ -10,3 +10,9 @@ assert.equal([...events.keys()].filter(k=>k.startsWith('E20-T044-')).length,14);
 assert.equal(idx.topics.filter(x=>x.id==='E20-KEN-HOLA').length,1);assert(h.sources.filter(s=>s.id.startsWith('E20-T045-SRC-')).length===4);assert.equal(h.sections.length,13);
 if(t.status==='published')assert.equal(t.publication_review,'approved');
 console.log('PASS T044/T045: 14 new events, 21 distinct story links, four localities, retained Hola topic.');
+
+assert.equal(t.review_entry_required,true);
+assert.deepEqual([...t.review_event_ids].sort(),[...events.keys()].filter(id=>id.startsWith('E20-T044-')).sort());
+assert.deepEqual([...t.review_feature_ids].sort(),[...maps.values()].map(f=>f.id).sort());
+assert.equal(idx.topics.find(x=>x.id==='E20-KEN-HOLA').review_entry_required,true);
+assert(!t.review_event_ids.some(id=>!id.startsWith('E20-T044-')));
