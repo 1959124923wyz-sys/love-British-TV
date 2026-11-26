@@ -5605,6 +5605,100 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "t023-surabaya"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "t024-hanoi",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.84117,
+          21.0245
+        ]
+      },
+      "properties": {
+        "name": "河内 · 独立运动",
+        "start_year": 1945,
+        "end_year": 1946,
+        "display_kind": "resistance",
+        "summary_zh": "越南独立宣言、河内抗议与法越谈判。",
+        "source_ids": [
+          "E20-T024-SRC-DECL",
+          "E20-T024-SRC-GH",
+          "E20-T024-SRC-VN1",
+          "E20-T024-SRC-F32",
+          "E20-T024-SRC-F33"
+        ],
+        "source_urls": [
+          "https://baotanglichsu.vn/vi/Articles/3096/71055/tuyen-ngon-djoc-lap-2-9-1945-ban-tuyen-ngon-ve-y-chi-khong-co-gi-quy-hon-djoc-lap-tu-do-cua-dan-toc-viet-nam.html",
+          "https://baotanglichsu.vn/vi/Articles/3097/61816/ngay-nam-bo-khang-chien23-9-1945.html",
+          "https://history.state.gov/historicaldocuments/frus1946v08/d32",
+          "https://history.state.gov/historicaldocuments/frus1946v08/d33",
+          "https://www.geonames.org/1581130/hanoi.html"
+        ],
+        "named_anchors": [
+          "河内"
+        ],
+        "mapping_method": "GeoNames fixed WGS84 populated place",
+        "related_event_ids": [
+          "E20-T024-DECL",
+          "E20-T024-HANOI",
+          "E20-T024-CONV"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "t024-hanoi"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "t024-saigon",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.62965,
+          10.82302
+        ]
+      },
+      "properties": {
+        "name": "西贡（今胡志明市） · 南部抗战",
+        "start_year": 1945,
+        "end_year": 1945,
+        "display_kind": "resistance",
+        "summary_zh": "英国军事介入、当地政治限制与南部抗战。",
+        "source_ids": [
+          "E20-T024-SRC-NAM",
+          "E20-T024-SRC-H24",
+          "E20-T024-SRC-GS",
+          "E20-T024-SRC-VN1",
+          "E20-T024-SRC-VN2"
+        ],
+        "source_urls": [
+          "https://baotanglichsu.vn/vi/Articles/3097/61816/ngay-nam-bo-khang-chien23-9-1945.html",
+          "https://baotanglichsu.vn/vi/Articles/3097/12520/ky-niem-nam-bo-khang-chien-23-9-1945-23-9-2012.html",
+          "https://www.nam.ac.uk/explore/september-1945",
+          "https://api.parliament.uk/historic-hansard/written-answers/1945/oct/24/indo-china-situation",
+          "https://www.geonames.org/1566083/ho-chi-minh-city.html"
+        ],
+        "named_anchors": [
+          "西贡（今胡志明市）"
+        ],
+        "mapping_method": "GeoNames fixed WGS84 populated place",
+        "related_event_ids": [
+          "E20-T024-SEAC",
+          "E20-T024-RESTRICT",
+          "E20-T024-SOUTH"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "t024-saigon"
+      }
     }
   ]
 }
