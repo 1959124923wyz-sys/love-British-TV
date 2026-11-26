@@ -3911,6 +3911,58 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "tibet-t014-lhasa"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "egypt-t027-denshawai",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.8206,
+          30.6014
+        ]
+      },
+      "properties": {
+        "name": "登沙瓦 · 村民与殖民惩罚",
+        "start_year": 1906,
+        "end_year": 1907,
+        "display_kind": "repression",
+        "summary_zh": "1906年特别法庭惩罚及村级行政权削减；1907年恢复村长。",
+        "source_ids": [
+          "E20-T027-SRC-LUKE",
+          "E20-T027-SRC-SIS",
+          "E20-T027-SRC-GETTY",
+          "E20-T027-SRC-MAP",
+          "E20-T027-SRC-J2",
+          "E20-T027-SRC-D6",
+          "E20-T027-SRC-R08"
+        ],
+        "source_urls": [
+          "https://onlinelibrary.wiley.com/doi/10.1111/j.1478-0542.2007.00410.x/full",
+          "https://sis.gov.eg/en/egypt/society/days-and-occasions/governorate-days/",
+          "https://api.parliament.uk/historic-hansard/commons/1906/jul/02/the-denshawi-executions",
+          "https://api.parliament.uk/historic-hansard/commons/1906/dec/06/the-denshawai-affray",
+          "https://api.parliament.uk/historic-hansard/commons/1908/feb/04/the-denshawai-affair-release-of-prisoners",
+          "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=7018159&nation=&place=&subjectid=7523043",
+          "https://mapcarta.com/13061956"
+        ],
+        "named_anchors": [
+          "登沙瓦"
+        ],
+        "mapping_method": "Getty TGN 7523043 inhabited place; corroborated by Mapcarta / OSM village record",
+        "related_event_ids": [
+          "E20-T027-INC",
+          "E20-T027-PUN",
+          "E20-T027-VILL",
+          "E20-T027-RESTORE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "egypt-t027-denshawai"
+      }
     }
   ]
 }
