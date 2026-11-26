@@ -14,6 +14,7 @@ OUT.mkdir(exist_ok=True)
 paths = [
     ROOT / "data/twentieth-century-territorial-areas.geojson",
     ROOT / "data/twentieth-century-territorial-islands-batch2.geojson",
+    ROOT / "data/twentieth-century-territorial-local-batch3.geojson",
     *sorted((ROOT / "data/cshapes-20c").glob("*.geojson")),
 ]
 features = [f for path in paths for f in json.loads(path.read_text())["features"]]
