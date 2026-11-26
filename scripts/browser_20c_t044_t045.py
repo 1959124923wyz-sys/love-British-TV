@@ -15,6 +15,11 @@ try:
  first='E20-T044-RES22'
  driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+'?year=1922')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
+ wait.until(lambda _:js("return !!window.atlasStoryBridge?.eventById&&!!window.HistoryStories?.openStory"))
+ assert not js("return !!window.atlasStoryBridge.eventById(arguments[0])",first), 'candidate event leaked to ordinary entry'
+ assert not driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]')
+ driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+'?review20c=1&year=1922')
+ wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
  wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById(arguments[0])",first))
  js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]'))>0)
