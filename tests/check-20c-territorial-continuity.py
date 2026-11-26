@@ -7,6 +7,8 @@ ROOT = Path(__file__).resolve().parents[1]
 paths = [ROOT / "data/twentieth-century-territorial-areas.geojson",
          ROOT / "data/twentieth-century-territorial-islands-batch2.geojson",
     ROOT / "data/twentieth-century-territorial-local-batch3.geojson",
+    ROOT / "data/twentieth-century-india-provinces-1900-1930.geojson",
+    ROOT / "data/twentieth-century-india-provinces-1931-1946.geojson",
          *sorted((ROOT / "data/cshapes-20c").glob("*.geojson"))]
 app = (ROOT / "app.js").read_text()
 all_features, ids, source_ids = [], set(), set()
@@ -86,3 +88,24 @@ assert not active("au-policy-nt", 1964)
 assert active("nz-raupatu-legacy-waikato", 1995)[0]["start_year"] == 1995
 assert active("nz-raupatu-legacy-eastern-bay", 1999)[0]["start_year"] == 1999
 print("PASS: local coercive-law jurisdiction and historical confiscation-claim phase checks.")
+
+# Historical India layers: check each legal phase and distinguish direct
+# provincial administration from princely-state relations.
+india = [f for f in all_features if f["properties"].get("topic_id") == "E20-T002"]
+assert len(india) == 273
+for f in india:
+    p = f["properties"]
+    assert p["geometry_license"] == "LGPL-3.0"
+    assert p["upstream_shp_sha"] and p["upstream_dbf_sha"]
+    assert p["display_kind"] == ("political" if p["upstream_native"] == "1" else "administrative")
+    assert p["end_year"] <= 1946 and p["territorial_claim"] is False
+assert all(any(f["properties"]["start_year"] <= y <= f["properties"]["end_year"] for f in india) for y in range(1900, 1947))
+assert active("india20-eastern-bengal-and-assam-province", 1905)
+assert active("india20-eastern-bengal-and-assam-province", 1911)
+assert not active("india20-eastern-bengal-and-assam-province", 1912)
+assert active("india20-bihar-and-orissa-province", 1912)
+assert not active("india20-bihar-and-orissa-province", 1936)
+assert active("india20-sindh-province", 1936)
+assert active("india20-hyderabad-states", 1946)
+assert not active("india20-hyderabad-states", 1947)
+print("PASS: historical India provinces, princely-state semantics, Bengal and 1936 changes, independence end.")
