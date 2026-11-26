@@ -62,3 +62,27 @@ assert counts[1997] < counts[1996]  # Hong Kong handover
 print(f"{len(all_features)} dated footprints; {len(source_ids)} source registrations")
 print("All 100 years pass interval, source, geometry-structure and uniqueness checks.")
 print({y: counts[y] for y in (1900, 1920, 1945, 1960, 1980, 1996, 1997, 1999)})
+
+# Coercive-policy jurisdictions and inherited confiscation footprints are
+# separately identified, dated and must never enter sovereignty statistics.
+policy = [f for f in all_features if f["properties"].get("topic_id") == "E20-T077"]
+raupatu = [f for f in all_features if f["properties"].get("topic_id") == "E20-T079"]
+assert len(policy) >= 20 and len(raupatu) >= 29
+for f in policy + raupatu:
+    p = f["properties"]
+    assert p["territorial_claim"] is False
+    assert p["inherited_geometry_feature_id"] and p["spatial_semantics"]
+    assert p["display_kind"] == ("coercive_policy" if f in policy else "land_dispossession")
+def active(stable, y):
+    return [f["properties"] for f in all_features if f["properties"]["stable_id"] == stable
+            and f["properties"]["start_year"] <= y <= f["properties"]["end_year"]]
+assert active("au-policy-wa", 1905)[0]["start_year"] == 1905
+assert active("au-policy-wa", 1962) and not active("au-policy-wa", 1963)
+assert active("au-policy-qld", 1939)[0]["start_year"] == 1939
+assert not active("au-policy-qld", 1965)
+assert active("au-policy-nt", 1911)[0]["start_year"] == 1911
+assert active("au-policy-nt", 1957)[0]["start_year"] == 1957
+assert not active("au-policy-nt", 1964)
+assert active("nz-raupatu-legacy-waikato", 1995)[0]["start_year"] == 1995
+assert active("nz-raupatu-legacy-eastern-bay", 1999)[0]["start_year"] == 1999
+print("PASS: local coercive-law jurisdiction and historical confiscation-claim phase checks.")
