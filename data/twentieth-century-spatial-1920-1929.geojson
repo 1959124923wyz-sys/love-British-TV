@@ -3965,6 +3965,51 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "china-t016-hk"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "egypt-t027-mahe-exile",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.47426,
+          -4.67643
+        ]
+      },
+      "properties": {
+        "name": "马埃岛 · 埃及政治流放",
+        "start_year": 1922,
+        "end_year": 1922,
+        "display_kind": "repression",
+        "summary_zh": "1921年底再次遭拘捕驱逐的扎格卢勒于1922年3月1日被移送塞舌尔，英国议会4月质询明确拘禁于马埃岛。",
+        "source_ids": [
+          "E20-T027-SRC-OU",
+          "E20-T027-SRC-AHR",
+          "E20-T027-SRC-LOBBAN",
+          "E20-T027-SRC-APR22",
+          "E20-T027-SRC-MAHE"
+        ],
+        "source_urls": [
+          "https://www.open.edu/openlearn/history-the-arts/history/after-the-first-world-war-the-1919-egyptian-revolution",
+          "https://english.ahram.org.eg/NewsContent/1/1199/327838/Egypt/-REVOLUTION/Egypts--Revolution-A-timeline.aspx",
+          "https://www.cambridge.org/core/books/imperial-incarceration/detention-comes-to-court-african-appeals-to-the-courts-in-whitehall-and-westminster-18951922/15C03D021D48C0491B152ED53956E247",
+          "https://api.parliament.uk/historic-hansard/commons/1922/apr/05/egypt-deportees",
+          "https://www.geonames.org/241274/mahe.html"
+        ],
+        "named_anchors": [
+          "马埃岛"
+        ],
+        "mapping_method": "GeoNames named island WGS84 anchor; no exact confinement site or route inferred.",
+        "related_event_ids": [
+          "E20-T027-EXILE2"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "egypt-t027-mahe-exile"
+      }
     }
   ]
 }
