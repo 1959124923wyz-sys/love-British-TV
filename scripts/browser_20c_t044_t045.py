@@ -18,6 +18,9 @@ try:
  wait.until(lambda _:js("return !!window.atlasStoryBridge?.eventById&&!!window.HistoryStories?.openStory"))
  assert not js("return !!window.atlasStoryBridge.eventById(arguments[0])",first), 'candidate event leaked to ordinary entry'
  assert not driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]')
+ assert not js("return nineteenthSpatial?.features?.some(f=>f.properties.related_event_ids.includes(arguments[0]))",first), 'candidate geometry leaked'
+ driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",topic,first)
+ assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article'), 'candidate article leaked by direct openStory'
  driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+'?review20c=1&year=1922')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
  wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById(arguments[0])",first))
