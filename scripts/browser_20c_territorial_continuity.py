@@ -18,6 +18,7 @@ paths = [
     ROOT / "data/twentieth-century-india-provinces-1900-1930.geojson",
     ROOT / "data/twentieth-century-india-provinces-1931-1946.geojson",
     ROOT / "data/twentieth-century-territorial-local-batch6.geojson",
+    ROOT / "data/twentieth-century-territorial-canada-batch7.geojson",
     *sorted((ROOT / "data/cshapes-20c").glob("*.geojson")),
 ]
 features = [f for path in paths for f in json.loads(path.read_text())["features"]]
@@ -44,6 +45,7 @@ def snapshot():
           svg:!!el?.isConnected, dash:el?.getAttribute('stroke-dasharray'),
           fill:Number(el?.getAttribute('fill-opacity')||0),
           clickable:el?.classList.contains('leaflet-interactive'),
+          color:el?.getAttribute('stroke'), expectedColor:window.AtlasMapColors.resolve(p.display_kind),
           description:!!p.summary_zh, sources:(p.source_ids||[]).every(id=>!!window.__historicOverlapHost.sourceForId(id))};
       });""")
 try:
@@ -63,7 +65,7 @@ try:
         assert actual == expected[y], (y, "missing", sorted(expected[y]-actual), "stale", sorted(actual-expected[y]))
         assert len(rows) == len(actual), (y, "duplicate live shapes")
         bad = [r for r in rows if not (r["svg"] and r["dash"] and r["fill"] > 0 and r["clickable"]
-               and r["description"] and r["sources"] and r["start"] <= y <= r["end"])]
+               and r["description"] and r["sources"] and r["color"] == r["expectedColor"] and r["start"] <= y <= r["end"])]
         assert not bad, (y, "invisible/noninteractive/unsourced area", bad[:10])
         if y in (1900, 1914, 1920, 1929, 1937, 1942, 1945, 1947, 1948, 1956, 1960, 1963, 1967, 1971, 1982, 1996, 1997, 1999):
             driver.save_screenshot(str(OUT / f"atlas20c-{y}.png"))
