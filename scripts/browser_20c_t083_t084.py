@@ -12,7 +12,7 @@ js=lambda q,*args:driver.execute_script(q,*args)
 out=Path('browser-smoke-results');out.mkdir(exist_ok=True)
 try:
  for topic,first,year,minimum,items in [
- ('E20-T083-BANABA-PHOSPHATE-1900-1997','E20-T083-ARRIVE45',1945,23,[('E20-T083-DISC00',1900,-0.855,169.539),('E20-T083-ARRIVE45',1945,-16.50095,-179.9667),('E20-T083-ACCT68',1968,None,None),('E20-T083-TAR77',1977,1.3278,172.97696),('E20-T083-UK97',1997,None,None)]),
+ ('E20-T083-BANABA-PHOSPHATE-1900-1997','E20-T083-ARRIVE45',1945,26,[('E20-T083-DISC00',1900,-0.855,169.539),('E20-T083-ACQUIRE31',1931,-0.855,169.539),('E20-T083-ARRIVE45',1945,-16.50095,-179.9667),('E20-T083-COUNCIL46',1946,-16.50095,-179.9667),('E20-T083-LEASE47',1947,None,None),('E20-T083-ACCT68',1968,None,None),('E20-T083-TAR77',1977,1.3278,172.97696),('E20-T083-UK97',1997,None,None)]),
  ('E20-T084-NAURU-PHOSPHATE-1906-1994','E20-T084-IND68',1968,21,[('E20-T084-AGREE67',1967,-35.283,149.128),('E20-T084-IND68',1968,-0.55085,166.9252),('E20-T084-TRANSFER70',1970,None,None),('E20-T084-ICJ92',1992,52.077,4.299),('E20-T084-PLAN94',1994,-0.55085,166.9252)])]:
   driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+'?year='+str(year))
   wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
