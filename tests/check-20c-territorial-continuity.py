@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 paths = [ROOT / "data/twentieth-century-territorial-areas.geojson",
          ROOT / "data/twentieth-century-territorial-islands-batch2.geojson",
+    ROOT / "data/twentieth-century-territorial-local-batch3.geojson",
          *sorted((ROOT / "data/cshapes-20c").glob("*.geojson"))]
 app = (ROOT / "app.js").read_text()
 all_features, ids, source_ids = [], set(), set()
