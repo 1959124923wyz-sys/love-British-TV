@@ -1283,7 +1283,8 @@ const modernAtlasCentury=from=>from>=1900?'twentieth':'nineteenth';
    if(!r.ok)throw new Error('20C review registry missing');
    return r.json();
   }).then(reg=>{
-   if(reg.schema!=='atlas-serial-stories-v1'||!Array.isArray(reg.topics))throw new Error('20C review registry invalid');
+   if(reg.schema!=='atlas-serial-stories-v1'||!Array.isArray(reg.topics)||reg.topics.some(t=>t.review_entry_required===true&&
+    ['review_event_ids','review_feature_ids','review_route_ids'].some(k=>!Array.isArray(t[k])||t[k].some(id=>typeof id!=='string'))))throw new Error('20C review registry invalid');
    return reg;
   });
   return modern20cReviewRegistryPromise;
@@ -1291,12 +1292,23 @@ const modernAtlasCentury=from=>from>=1900?'twentieth':'nineteenth';
  function modern20cReviewGate(from,registry){
   const eventIds=new Set(),featureIds=new Set(),routeIds=new Set();
   if(from<1900||reviewParams.get('review20c')==='1')return {eventIds,featureIds,routeIds};
+  const approvedEvents=new Set(),approvedFeatures=new Set(),approvedRoutes=new Set();
   for(const t of registry.topics){
-   if(t.review_entry_required!==true||(t.status==='published'&&t.publication_review==='approved'))continue;
-   for(const id of t.review_event_ids||[])eventIds.add(id);
-   for(const id of t.review_feature_ids||[])featureIds.add(id);
-   for(const id of t.review_route_ids||[])routeIds.add(id);
+   if(t.status==='published'&&t.publication_review==='approved'){
+    for(const id of t.event_ids||[])approvedEvents.add(id);
+    for(const id of t.review_feature_ids||[])approvedFeatures.add(id);
+    for(const id of t.review_route_ids||[])approvedRoutes.add(id);
+   }else if(t.review_entry_required===true){
+    for(const id of t.review_event_ids)eventIds.add(id);
+    for(const id of t.review_feature_ids)featureIds.add(id);
+    for(const id of t.review_route_ids)routeIds.add(id);
+   }
   }
+  // Shared ownership: one approved story may release its referenced events and
+  // explicitly owned map features while another story is still in review.
+  for(const id of approvedEvents)eventIds.delete(id);
+  for(const id of approvedFeatures)featureIds.delete(id);
+  for(const id of approvedRoutes)routeIds.delete(id);
   return {eventIds,featureIds,routeIds};
  }
 async function fetchModernAtlas(from,end){
