@@ -1,0 +1,288 @@
+{
+  "id": "E20-T031-IRAQ-BASES-OIL-1941-1932-1958",
+  "path": "data/stories/serial/e20-t031-iraq-bases-oil-1941-1932-1958.json",
+  "locations": {
+    "baghdad": [
+      "BAG",
+      "巴格达",
+      33.34058,
+      44.40088,
+      "https://www.geonames.org/98182/baghdad.html"
+    ],
+    "london": [
+      "LON",
+      "伦敦",
+      51.50853,
+      -0.12574,
+      "https://www.geonames.org/advanced-search.html?country=GB&q=Londres"
+    ],
+    "portsmouth": [
+      "POR",
+      "朴次茅斯",
+      50.79899,
+      -1.09125,
+      "https://www.geonames.org/advanced-search.html?q=Portsmouth%2F"
+    ],
+    "fallujah": [
+      "FAL",
+      "费卢杰",
+      33.34913,
+      43.78599,
+      "https://www.geonames.org/99454/al-fallujah.html"
+    ],
+    "habbaniya": [
+      "HAB",
+      "哈巴尼亚",
+      33.3836,
+      43.5864,
+      "https://geographic.org/geographic_names/name.php?c=iraq&fid=3182&uni=-4385592"
+    ]
+  },
+  "events": [
+    {
+      "id": "E20-T030-ADMIT",
+      "reuse": true,
+      "year": 1932,
+      "date_label": "1932年10月3日",
+      "name": "委任终止，新同盟条约生效",
+      "category": "political",
+      "loc": null,
+      "source_ids": [
+        "E20-T031-SRC-TREATY",
+        "E20-T031-SRC-DEB30"
+      ],
+      "description": "伊拉克成为国际联盟成员，英国委任终止，新英伊条约同日生效。"
+    },
+    {
+      "id": "E20-T031-BASE33",
+      "reuse": false,
+      "year": 1933,
+      "date_label": "1933年3月15日",
+      "name": "英国议会确认驻军土地安排",
+      "category": "political",
+      "loc": "london",
+      "source_ids": [
+        "E20-T031-SRC-HINAIDI",
+        "E20-T031-SRC-DEB30",
+        "E20-T031-SRC-GEOLON"
+      ],
+      "description": "英国政府表示须在伊拉克入盟后五年内撤出原有驻地，并按条约取得新设施土地。"
+    },
+    {
+      "id": "E20-T031-GOV41",
+      "reuse": false,
+      "year": 1941,
+      "date_label": "1941年4月3日",
+      "name": "伊拉克新政府与英国外交冲突",
+      "category": "political",
+      "loc": "baghdad",
+      "source_ids": [
+        "E20-T031-SRC-FR41",
+        "E20-T031-SRC-GEOBAG"
+      ],
+      "description": "美国驻伊外交官报告拉希德·阿里领导的新政府成立，英国大使拒绝与其建立关系。"
+    },
+    {
+      "id": "E20-T031-WAR41",
+      "reuse": false,
+      "year": 1941,
+      "date_label": "1941年5月",
+      "name": "英伊战争中的居民损害指控",
+      "category": "war",
+      "loc": null,
+      "source_ids": [
+        "E20-T031-SRC-CIV41",
+        "E20-T031-SRC-FR41"
+      ],
+      "description": "美国外交档案保存伊拉克关于英国军事行动影响平民和医疗交通的抗议。"
+    },
+    {
+      "id": "E20-T031-FALLUJAH",
+      "reuse": false,
+      "year": 1941,
+      "date_label": "1941年5月4日",
+      "name": "费卢杰宗教场所相关外交抗议",
+      "category": "political",
+      "loc": "fallujah",
+      "source_ids": [
+        "E20-T031-SRC-CIV41",
+        "E20-T031-SRC-GEOFAL"
+      ],
+      "description": "伊拉克外交部向美国外交官通报关于英国行动影响费卢杰宗教场所的指控。"
+    },
+    {
+      "id": "E20-T031-WATHBA",
+      "reuse": false,
+      "year": 1948,
+      "date_label": "1948年1月5日",
+      "name": "巴格达学生反对拟议英伊条约",
+      "category": "resistance",
+      "loc": "baghdad",
+      "source_ids": [
+        "E20-T031-SRC-WATHBA",
+        "E20-T031-SRC-GEOBAG"
+      ],
+      "description": "巴格达法律学院学生因拟议英伊条约抗议，与伊拉克警察发生冲突。"
+    },
+    {
+      "id": "E20-T031-PORT",
+      "reuse": false,
+      "year": 1948,
+      "date_label": "1948年1月15日",
+      "name": "朴次茅斯条约签署",
+      "category": "political",
+      "loc": "portsmouth",
+      "source_ids": [
+        "E20-T031-SRC-PORT",
+        "E20-T031-SRC-REGENT",
+        "E20-T031-SRC-GEOPOR"
+      ],
+      "description": "英国与伊拉克签署拟取代1930年条约的新协议，但未获伊拉克最终批准。"
+    },
+    {
+      "id": "E20-T031-REJECT",
+      "reuse": false,
+      "year": 1948,
+      "date_label": "1948年1月21日",
+      "name": "民众抗议迫使新条约未获批准",
+      "category": "resistance",
+      "loc": "baghdad",
+      "source_ids": [
+        "E20-T031-SRC-REGENT",
+        "E20-T031-SRC-GEOBAG"
+      ],
+      "description": "伊拉克摄政公开表示朴次茅斯条约未实现国家愿望，内阁随后辞职。"
+    },
+    {
+      "id": "E20-T031-OIL51",
+      "reuse": false,
+      "year": 1951,
+      "date_label": "1951年",
+      "name": "石油公司利益分配的重新谈判",
+      "category": "economic",
+      "loc": null,
+      "source_ids": [
+        "E20-T031-SRC-OIL31",
+        "E20-T031-SRC-OIL51",
+        "E20-T031-SRC-OIL51B"
+      ],
+      "description": "外交档案记录石油公司与伊拉克政府围绕利润分成、价格和税收重新谈判。"
+    },
+    {
+      "id": "E20-T031-OIL52",
+      "reuse": false,
+      "year": 1952,
+      "date_label": "1952年2月3日",
+      "name": "新石油收益协议签署",
+      "category": "economic",
+      "loc": "baghdad",
+      "source_ids": [
+        "E20-T031-SRC-OIL52",
+        "E20-T031-SRC-OIL51",
+        "E20-T031-SRC-GEOBAG"
+      ],
+      "description": "美国外交报告确认伊拉克政府与石油公司于2月3日签署协议，仍需国内批准。"
+    },
+    {
+      "id": "E20-T031-OIL54",
+      "reuse": false,
+      "year": 1954,
+      "date_label": "1954年",
+      "name": "石油公司分成执行与价格争议",
+      "category": "economic",
+      "loc": null,
+      "source_ids": [
+        "E20-T031-SRC-OIL54",
+        "E20-T031-SRC-PRICE"
+      ],
+      "description": "同期外交资料记载1952协议的技术执行安排及伊拉克因邻国石油协议条件暂停价格谈判。"
+    },
+    {
+      "id": "E20-T031-PACT",
+      "reuse": false,
+      "year": 1955,
+      "date_label": "1955年3月30日",
+      "name": "英国宣布加入土伊条约",
+      "category": "political",
+      "loc": "london",
+      "source_ids": [
+        "E20-T031-SRC-PACT",
+        "E20-T031-SRC-SPECIAL",
+        "E20-T031-SRC-GEOLON"
+      ],
+      "description": "英国政府宣布决定加入土伊合作条约，并另签英伊特别协议。"
+    },
+    {
+      "id": "E20-T031-SPECIAL",
+      "reuse": false,
+      "year": 1955,
+      "date_label": "1955年4月4日",
+      "name": "英伊特别协议：军事权利与设施移交",
+      "category": "political",
+      "loc": "baghdad",
+      "source_ids": [
+        "E20-T031-SRC-SPECIAL",
+        "E20-T031-SRC-GEOBAG"
+      ],
+      "description": "巴格达特别协议签署，明确伊方接管设施指挥权和英方保留合作权利。"
+    },
+    {
+      "id": "E20-T031-WORKERS",
+      "reuse": false,
+      "year": 1955,
+      "date_label": "1955年4月4日",
+      "name": "基地地方雇员与生计安排",
+      "category": "political",
+      "loc": "baghdad",
+      "source_ids": [
+        "E20-T031-SRC-SPECIAL",
+        "E20-T031-SRC-GEOBAG"
+      ],
+      "description": "特别协议照会规定尽力延续当地雇员工作，并提出养老金、补助及职业培训措施。"
+    },
+    {
+      "id": "E20-T031-HANDOVER",
+      "reuse": false,
+      "year": 1955,
+      "date_label": "1955年5月2日",
+      "name": "哈巴尼亚设施指挥交接",
+      "category": "political",
+      "loc": "habbaniya",
+      "source_ids": [
+        "E20-T031-SRC-SPECIAL",
+        "E20-T031-SRC-RAF",
+        "E20-T031-SRC-GEOHAB"
+      ],
+      "description": "特别协议规定5月2日任命伊方军官，英国皇家空军历史材料记录该日交接安排。"
+    },
+    {
+      "id": "E20-T031-FINANCE",
+      "reuse": false,
+      "year": 1955,
+      "date_label": "1955年12月21日",
+      "name": "财产估值、英国采购承诺及免费设施",
+      "category": "economic",
+      "loc": "london",
+      "source_ids": [
+        "E20-T031-SRC-SPECIAL",
+        "E20-T031-SRC-PAR55",
+        "E20-T031-SRC-GEOLON"
+      ],
+      "description": "英国议会公布£2,755,000财产估值及免除支付、伊方承诺至少£2,000,000对英采购的安排。"
+    },
+    {
+      "id": "E20-T031-REPUBLIC",
+      "reuse": false,
+      "year": 1958,
+      "date_label": "1958年7月14日",
+      "name": "伊拉克共和国成立",
+      "category": "political",
+      "loc": "baghdad",
+      "source_ids": [
+        "E20-T031-SRC-JUL58",
+        "E20-T031-SRC-GEOBAG"
+      ],
+      "description": "英国外交大臣转述驻伊使馆报告，确认伊拉克共和国已经宣布成立。"
+    }
+  ]
+}
