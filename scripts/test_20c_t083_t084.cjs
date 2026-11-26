@@ -1,9 +1,9 @@
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const load=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const root='research/20c/',reg=load(root+'T083_T084_EVENT_REGISTER.json');
-assert.equal(reg.events.length,40);assert.equal(reg.sources.length,42);
+assert.equal(reg.events.length,43);assert.equal(reg.sources.length,45);
 const source=new Map(reg.sources.map(s=>[s.id,s])),events=new Map(reg.events.map(e=>[e.id,e]));
-assert.equal(source.size,42);assert.equal(events.size,40);
+assert.equal(source.size,45);assert.equal(events.size,43);
 const actual=new Map(),points=new Map();
 for(let y=1900;y<2000;y+=10){
  const c=load('data/stories/serial/chronology-'+y+'-'+(y+9)+'.json');
@@ -17,11 +17,11 @@ for(let y=1900;y<2000;y+=10){
   assert.equal(p.related_event_ids.length,1);const e=events.get(p.related_event_ids[0]);assert(e);assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat]);assert.equal(e.year,p.start_year);assert.deepEqual(p.source_urls,p.source_ids.map(k=>source.get(k).url));
  }
 }
-assert.equal(actual.size,40);assert.equal(points.size,18);
+assert.equal(actual.size,43);assert.equal(points.size,20);
 for(const e of reg.events){const located=Number.isFinite(e.lat)&&Number.isFinite(e.lng);assert.equal([...points.values()].filter(f=>f.properties.related_event_ids.includes(e.id)).length,located?1:0);if(!located){assert.equal(e.lat,null);assert.equal(e.lng,null);}}
 const idx=load('data/stories/serial/index.json');
 const all=new Set();
-for(const [id,n] of [['E20-T083-BANABA-PHOSPHATE-1900-1997',23],['E20-T084-NAURU-PHOSPHATE-1906-1994',21]]){
+for(const [id,n] of [['E20-T083-BANABA-PHOSPHATE-1900-1997',26],['E20-T084-NAURU-PHOSPHATE-1906-1994',21]]){
  const t=idx.topics.find(t=>t.id===id);assert(t);assert.equal(t.status,'editorial_review');const a=load(t.article_file);assert.equal(a.id,id);
  const s=new Set(a.sources.map(x=>x.id));assert.equal(s.size,a.sources.length);assert(a.sections.length>=14);
  const prose=a.sections.flatMap(s=>s.paragraphs).join('');assert(prose.replace(/\[\[[^|]+\|([^\]]+)\]\]/g,'$1').length>=3000);
@@ -30,12 +30,12 @@ for(const [id,n] of [['E20-T083-BANABA-PHOSPHATE-1900-1997',23],['E20-T084-NAURU
  for(const sec of a.sections){assert(sec.period_start_year>=a.start_year&&sec.period_end_year<=a.end_year&&sec.period_start_year<=sec.period_end_year);assert(sec.source_keys.every(k=>s.has(k)));assert(sec.paragraphs.length>=2);}
  for(const c of a.topic_source_claims){assert(a.sections.some(s=>s.id===c.section_id));assert(c.source_keys.every(k=>s.has(k)));assert(c.original_document_page||c.verification_depth);}
 }
-assert.equal(all.size,41);
+assert.equal(all.size,44);
 const finance=fs.readFileSync(root+'T083_BANABA_FINANCE_1959_1968.csv','utf8').trim().split('\n').slice(1).map(l=>l.split(','));
 assert.equal(finance.length,10);assert.deepEqual(finance[0].slice(0,4),['1959','1052000','233725','29216']);assert.deepEqual(finance.at(-1),['1968','2559000','921418','162415','','14094']);assert.equal(finance.filter(r=>r[4]==='15000').length,6);
 const tax=fs.readFileSync(root+'T083_BANABA_TAX_SHARE_1946_1968.csv','utf8').trim().split('\n').slice(1);assert.equal(tax.length,23);assert(tax.includes('1949 (9 months),15.74'));assert.equal(tax.at(-1),'1968,54.24');
 assert.equal(events.get('E20-T084-IND68').year,1968);assert.equal(events.get('E20-T084-TRANSFER70').year,1970);
-console.log('PASS T083/T084: 40 events, 42 source keys, 18 point records, 41 distinct story links and two original financial tables');
+console.log('PASS T083/T084: 43 events, 45 source keys, 20 point records, 44 distinct story links and two original financial tables');
 
 const candidates=idx.topics.filter(t=>/^E20-T08[34]-/.test(t.id));
 assert(candidates.every(t=>t.review_entry_required===true));
@@ -56,3 +56,5 @@ assert.equal(gateFn({get:()=>null})(1900,approvedRegistry).featureIds.size,0);
 
 const halfRegistry=JSON.parse(JSON.stringify(idx));const halfTopic=halfRegistry.topics.find(t=>t.id.startsWith('E20-T083-'));halfTopic.status='published';halfTopic.publication_review='approved';
 const halfGate=gateFn({get:()=>null})(1900,halfRegistry);assert(!halfGate.eventIds.has('E20-PHOS-AGREE19'));assert(halfGate.eventIds.has('E20-T084-IND68'));assert.equal([...events.keys()].filter(id=>halfGate.eventIds.has(id)).length,18);assert.equal([...points.keys()].filter(id=>halfGate.featureIds.has(id)).length,7);
+
+assert.equal(events.get('E20-T083-ACQUIRE31').year,1931);assert.equal(events.get('E20-T083-COUNCIL46').year,1946);assert.equal(events.get('E20-T083-LEASE47').year,1947);
