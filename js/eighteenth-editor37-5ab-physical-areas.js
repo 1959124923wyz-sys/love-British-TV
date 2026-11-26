@@ -9,10 +9,7 @@
  const group=L.layerGroup().addTo(map),areaRenderer=L.svg({pane:areaPane}),siteRenderer=L.svg({pane:pointPane});
  let records=[],layers=new Map(),loaded=false,error=null,year=host.getYear();
  const active=(f,y)=>f.properties.periods.some(p=>p.start_year<=y&&y<=p.end_year);
- const palette={physical_shore:'#68b8cd',physical_river:'#67a9d4',
-  gold_coast_historic_fort_trade_locality:'#e0bc81',fort_main_enclosure:'#d4bd84',
-  northern_circars_revenue_locality:'#e9bf74',island_trade_wartime:'#c49ce0',
-  island_war_context:'#bb9bd7',named_harbour:'#bfa5d9','1763_treaty_return':'#8db0db'};
+ const palette=Object.fromEntries(Object.entries({"physical_shore":"physical","physical_river":"physical","gold_coast_historic_fort_trade_locality":"trade_influence","fort_main_enclosure":"neutral","northern_circars_revenue_locality":"revenue","island_trade_wartime":"trade_influence","island_war_context":"battle","named_harbour":"neutral","1763_treaty_return":"foreign_occupation"}).map(([k,kind])=>[k,window.AtlasMapColors.resolve(kind)]));
  function open(f){
   host.clearSelection();const p=f.properties;
   const links=[...new Set(p.source_urls)].map(u=>{let domain=u;
@@ -32,7 +29,7 @@
  function make(f){
   const clickable=!passThroughLegacy.has(f.id);
   const geom=f.geometry.type,point=geom==='Point',line=geom==='MultiLineString';
-  const c=palette[f.properties.kind]||'#c7aedb',pane=point?pointPane:areaPane,renderer=point?siteRenderer:areaRenderer;
+  const c=palette[f.properties.kind]||window.AtlasMapColors.resolve('neutral'),pane=point?pointPane:areaPane,renderer=point?siteRenderer:areaRenderer;
   const layer=L.geoJSON(f.geometry,{pane,renderer,color:c,weight:line?2.1:1.7,opacity:.85,
    fill:!line&&!point,fillColor:c,fillOpacity:line?0:.048,
    dashArray:line?'5 6':'4 6',lineCap:'round',interactive:clickable,bubblingMouseEvents:false,
