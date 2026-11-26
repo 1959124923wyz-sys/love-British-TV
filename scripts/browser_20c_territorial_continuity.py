@@ -17,6 +17,7 @@ paths = [
     ROOT / "data/twentieth-century-territorial-local-batch3.geojson",
     ROOT / "data/twentieth-century-india-provinces-1900-1930.geojson",
     ROOT / "data/twentieth-century-india-provinces-1931-1946.geojson",
+    ROOT / "data/twentieth-century-territorial-local-batch6.geojson",
     *sorted((ROOT / "data/cshapes-20c").glob("*.geojson")),
 ]
 features = [f for path in paths for f in json.loads(path.read_text())["features"]]
