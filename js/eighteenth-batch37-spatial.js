@@ -15,10 +15,7 @@
  const areaRenderer=L.svg({pane:areaPane}),siteRenderer=L.svg({pane:sitePane});
  const regions=['africa','india-ocean','caribbean'];
  const counts={africa:[39,27], 'india-ocean':[60,44],caribbean:[41,37]};
- const colors={administration:'#a58df5',military:'#c29dfe',displacement:'#dca18a',
-  resistance:'#5cccc0',paper_claim:'#ebc479',diplomacy:'#6cb4e7',
-  trade_influence:'#7bd2c6',battle:'#ed9a78',revenue:'#e4bd76',
-  coercion:'#e399ab',foreign_occupation:'#879eac'};
+ const colors=window.AtlasMapColors.map(["administration","military","displacement","resistance","paper_claim","diplomacy","trade_influence","battle","revenue","coercion","foreign_occupation"]);
  const label={administration:'殖民行政',military:'英方军事堡垒／局部占领',
   displacement:'强制迁移／人口剥夺',resistance:'当地政治自治／抵抗',
   paper_claim:'纸面或外交声索',diplomacy:'外交会商与条约',
@@ -62,7 +59,7 @@
    if(!site?.periods.some(p=>p.start_year<=year&&year<=p.end_year))continue;
    const [w,s,e,n]=z.bbox;
    L.rectangle([[s,w],[n,e]],{
-    pane:areaPane,renderer:areaRenderer,color:colors[z.kind]||'#bdb5b8',
+    pane:areaPane,renderer:areaRenderer,color:colors[z.kind]||window.AtlasMapColors.resolve('neutral'),
     weight:1.35,opacity:.5,dashArray:'2 10',lineCap:'round',fill:false,fillOpacity:0,
     interactive:true,bubblingMouseEvents:false,
     className:'atlas-18c-5aj-reference-outline'
