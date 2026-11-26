@@ -1,0 +1,310 @@
+{
+  "id": "E20-T032-PALESTINE-MANDATE-LAND-REPRESSION-1917-1939",
+  "path": "data/stories/serial/e20-t032-palestine-mandate-land-repression-1917-1939.json",
+  "locations": {
+    "london": [
+      "LON",
+      "伦敦",
+      51.50853,
+      -0.12574,
+      "https://www.geonames.org/advanced-search.html?country=GB&q=Londres"
+    ],
+    "jerusalem": [
+      "JER",
+      "耶路撒冷",
+      31.76904,
+      35.21633,
+      "https://www.geonames.org/281184/jerusalem.html"
+    ],
+    "jaffa": [
+      "JAF",
+      "雅法",
+      32.05043,
+      34.75224,
+      "https://www.geonames.org/293253/jaffa.html"
+    ],
+    "mahe": [
+      "MAH",
+      "马埃岛",
+      -4.67643,
+      55.47426,
+      "https://www.geonames.org/241274/mahe.html"
+    ]
+  },
+  "events": [
+    {
+      "id": "E20-T032-BAL",
+      "year": 1917,
+      "date_label": "1917年11月2日",
+      "name": "英国发表贝尔福宣言",
+      "category": "political",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-BAL",
+        "E20-T032-SRC-NAM",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "英国政府支持在巴勒斯坦建立犹太民族家园，同时承诺不损害当地非犹太居民的公民及宗教权利。"
+    },
+    {
+      "id": "E20-T032-OCC",
+      "year": 1917,
+      "date_label": "1917年12月",
+      "name": "耶路撒冷进入英国军事占领时期",
+      "category": "war",
+      "loc": "jerusalem",
+      "source_ids": [
+        "E20-T032-SRC-NAM",
+        "E20-T032-SRC-GEOJER"
+      ],
+      "description": "英国军队占领耶路撒冷，奥斯曼统治在当地结束。"
+    },
+    {
+      "id": "E20-T032-MAND",
+      "year": 1922,
+      "date_label": "1922年7月24日",
+      "name": "国际联盟批准英国委任文件",
+      "category": "law",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-MAND",
+        "E20-T032-SRC-REPORT22",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "委任文件在伦敦获得批准，赋予英国立法与行政权，并规定建立犹太民族家园及保障居民权利。"
+    },
+    {
+      "id": "E20-T032-ORDER",
+      "year": 1922,
+      "date_label": "1922年8月10日",
+      "name": "英国枢密院令规定高级专员权力",
+      "category": "law",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-REPORT22",
+        "E20-T032-SRC-MAND",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "英国枢密院令确立高级专员、行政与立法机构及司法制度。"
+    },
+    {
+      "id": "E20-T032-LAND",
+      "year": 1922,
+      "date_label": "1922年7月24日",
+      "name": "委任文件中的土地安置与资源管理权",
+      "category": "economic",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-MAND",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "委任文件第6条鼓励犹太移民及土地安置，第11条规定自然资源及公共设施管理。"
+    },
+    {
+      "id": "E20-T032-EFFECT",
+      "year": 1923,
+      "date_label": "1923年9月29日",
+      "name": "委任制度正式生效",
+      "category": "law",
+      "loc": null,
+      "source_ids": [
+        "E20-T032-SRC-FR23",
+        "E20-T032-SRC-AA",
+        "E20-T032-SRC-MAND"
+      ],
+      "description": "美国外交文书目录及英美调查委员会记录委任文件于1923年9月生效。"
+    },
+    {
+      "id": "E20-T032-MIS",
+      "year": 1930,
+      "date_label": "1930年5月7日",
+      "name": "英国派遣土地与移民调查",
+      "category": "political",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-MIS30",
+        "E20-T032-SRC-LAND30",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "英国政府宣布派Hope Simpson赴巴勒斯坦调查土地安置、移民及开发。"
+    },
+    {
+      "id": "E20-T032-LAND30",
+      "year": 1930,
+      "date_label": "1930年11月17日",
+      "name": "失地农民与租户保护进入议会辩论",
+      "category": "economic",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-LAND30",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "英国下院讨论土地转让后失地的阿拉伯农民及租户保护措施的规避。"
+    },
+    {
+      "id": "E20-T032-PROTEST33",
+      "year": 1933,
+      "date_label": "1933年10月27日",
+      "name": "雅法政治示威及殖民警务冲突",
+      "category": "resistance",
+      "loc": "jaffa",
+      "source_ids": [
+        "E20-T032-SRC-DEMO33",
+        "E20-T032-SRC-GEOJAF"
+      ],
+      "description": "英国政府11月7日回顾阿拉伯行政委员会在雅法组织示威及随后的警务冲突。"
+    },
+    {
+      "id": "E20-T032-STRIKE",
+      "year": 1936,
+      "date_label": "1936年春",
+      "name": "巴勒斯坦全国委员会与总罢工",
+      "category": "resistance",
+      "loc": "jerusalem",
+      "source_ids": [
+        "E20-T032-SRC-REV",
+        "E20-T032-SRC-CHRON",
+        "E20-T032-SRC-GEOJER"
+      ],
+      "description": "巴勒斯坦阿拉伯高级委员会及地方组织发动政治抗议与总罢工。"
+    },
+    {
+      "id": "E20-T032-FINE",
+      "year": 1936,
+      "date_label": "1936年6月19日",
+      "name": "英国公布紧急治理与集体罚款政策",
+      "category": "law",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-FINE",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "英国殖民大臣在议会确认新规允许对城镇或村庄即时施加集体罚款及宵禁。"
+    },
+    {
+      "id": "E20-T032-JAFFA",
+      "year": 1936,
+      "date_label": "1936年6月",
+      "name": "雅法旧城居民住宅遭英国军方拆除",
+      "category": "repression",
+      "loc": "jaffa",
+      "source_ids": [
+        "E20-T032-SRC-JUN24",
+        "E20-T032-SRC-JUL1",
+        "E20-T032-SRC-GEOJAF"
+      ],
+      "description": "英国政府承认军方实施雅法拆屋，并声称已作临时安置及补助。"
+    },
+    {
+      "id": "E20-T032-GAZOUR",
+      "year": 1936,
+      "date_label": "1936年6月24日",
+      "name": "英国议会讨论Gazour村集体罚款与没收指控",
+      "category": "economic",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-GAZ",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "议员转述村民遭搜查、拘押及家产牲畜没收的指控；英国政府表示尚未查明并拒绝停止罚款。"
+    },
+    {
+      "id": "E20-T032-JAFFA2",
+      "year": 1936,
+      "date_label": "1936年7月1日",
+      "name": "议会继续追问雅法拆屋和替代住房",
+      "category": "political",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-JUL1",
+        "E20-T032-SRC-JUN24",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "英国议员继续追问被迫迁离人口与替代住房，英国政府维护拆屋决定。"
+    },
+    {
+      "id": "E20-T032-PEEL",
+      "year": 1937,
+      "date_label": "1937年7月",
+      "name": "皮尔委员会提出分区方案",
+      "category": "political",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-PEEL",
+        "E20-T032-SRC-AA",
+        "E20-T032-SRC-REV",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "英国皇家委员会建议划分阿拉伯和犹太国家，并保留部分地区为委任行政区。"
+    },
+    {
+      "id": "E20-T032-BAN",
+      "year": 1937,
+      "date_label": "1937年10月",
+      "name": "阿拉伯高级委员会和地方委员会遭取缔",
+      "category": "repression",
+      "loc": null,
+      "source_ids": [
+        "E20-T032-SRC-BAN",
+        "E20-T032-SRC-AA"
+      ],
+      "description": "英国当局宣布阿拉伯高级委员会及全国委员会为非法组织，实施拘押和驱逐。"
+    },
+    {
+      "id": "E20-T032-EXILE",
+      "year": 1937,
+      "date_label": "1937年10月",
+      "name": "五名巴勒斯坦政治人士遭流放塞舌尔",
+      "category": "repression",
+      "loc": "mahe",
+      "source_ids": [
+        "E20-T032-SRC-EXILE",
+        "E20-T032-SRC-DIARY",
+        "E20-T032-SRC-AA",
+        "E20-T032-SRC-GEOMAH"
+      ],
+      "description": "英国流放五人至塞舌尔；1938年政府承认未先经过公开审判或定罪。"
+    },
+    {
+      "id": "E20-T032-DEM38",
+      "year": 1938,
+      "date_label": "1938年3月9日",
+      "name": "英国官方确认惩罚性拆屋统计",
+      "category": "economic",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-DEM38",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "英国政府报告1936年102间、1937年14间住宅作为惩罚被拆毁，另不含雅法清拆。"
+    },
+    {
+      "id": "E20-T032-RELEASE",
+      "year": 1938,
+      "date_label": "1938年12月",
+      "name": "英国下令释放塞舌尔流放者",
+      "category": "political",
+      "loc": "mahe",
+      "source_ids": [
+        "E20-T032-SRC-REPORT38",
+        "E20-T032-SRC-DIARY",
+        "E20-T032-SRC-GEOMAH"
+      ],
+      "description": "英国年度报告记录下令释放1937年流放塞舌尔的五人。"
+    },
+    {
+      "id": "E20-T032-WHITE",
+      "year": 1939,
+      "date_label": "1939年5月17日",
+      "name": "英国白皮书调整移民、土地与独立政策",
+      "category": "law",
+      "loc": "london",
+      "source_ids": [
+        "E20-T032-SRC-WHITE",
+        "E20-T032-SRC-FR39",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "description": "英国提出十年内独立目标、五年有条件移民配额及限制土地转让的新政策。"
+    }
+  ]
+}
