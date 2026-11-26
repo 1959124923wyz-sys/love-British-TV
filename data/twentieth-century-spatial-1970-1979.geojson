@@ -5,5 +5,45 @@
     "coverage": "1970–1979: dated decolonization events; polygon overlays loaded separately",
     "historical_area_statistics": false
   },
-  "features": []
+  "features": [
+    {
+      "type": "Feature",
+      "id": "e20-t086-court78-reference",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.31366,
+          -17.73648
+        ]
+      },
+      "properties": {
+        "name": "维拉港 · 联合司法机构改制",
+        "start_year": 1978,
+        "end_year": 1978,
+        "display_kind": "political",
+        "summary_zh": "馆藏说明联合法院被新赫布里底最高法院取代。",
+        "source_ids": [
+          "S86-COURT",
+          "S86-VILA"
+        ],
+        "source_urls": [
+          "https://natlib.govt.nz/records/22644002",
+          "https://www.geonames.org/advanced-search.html?country=VU&q=vanuatu&startRow=0"
+        ],
+        "named_anchors": [
+          "维拉港"
+        ],
+        "mapping_method": "具名现代城镇或岛屿参考点；非历史地籍、拘禁设施或行动位置。",
+        "related_event_ids": [
+          "E20-T086-COURT78"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "e20-t086-court78-reference"
+      }
+    }
+  ]
 }
