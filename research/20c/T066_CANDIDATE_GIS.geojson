@@ -462,6 +462,82 @@
         "stable_id": "e20-t066-pay83-ref",
         "mapping_method": "具名环礁或城市参考点，非建筑或航迹。"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "e20-t066-salomon71-ref",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.25,
+          -5.33333
+        ]
+      },
+      "properties": {
+        "name": "萨洛蒙环礁 · 迁离迪戈加西亚的居民转往萨洛蒙环礁",
+        "start_year": 1971,
+        "end_year": 1971,
+        "display_kind": "repression",
+        "summary_zh": "查戈斯居民代表Bancoult后来在英国议会作证，部分居民被要求转往佩罗斯巴纽斯、萨洛蒙或毛里求斯；群岛内部迁居亦是强制离开家园的一部分。",
+        "source_ids": [
+          "E20-T066-SRC-TESTIMONY",
+          "E20-T066-SRC-COURT20",
+          "E20-T066-SRC-SA"
+        ],
+        "source_urls": [
+          "https://publications.parliament.uk/pa/cm200708/cmselect/cmfaff/147/8012302.htm",
+          "https://www.bailii.org/ew/cases/EWCA/Civ/2020/1010.html",
+          "https://www.marineregions.org/gazetteer.php?id=19800&p=details"
+        ],
+        "related_event_ids": [
+          "E20-T066-SALOMON71"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "e20-t066-salomon71-ref",
+        "mapping_method": "岛屿地名参考点，非建筑或精确迁移路径。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "e20-t066-mahe71-ref",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.47426,
+          -4.67643
+        ]
+      },
+      "properties": {
+        "name": "马埃岛 · 被迁离岛民在马埃岛监狱闲置区域暂住",
+        "start_year": 1971,
+        "end_year": 1971,
+        "display_kind": "repression",
+        "summary_zh": "英国高等法院回顾部分被迁离岛民在塞舌尔马埃岛监狱闲置区域暂住，随后乘船前往路易港。",
+        "source_ids": [
+          "E20-T066-SRC-COURT03",
+          "E20-T066-SRC-HRW",
+          "E20-T066-SRC-MAHE"
+        ],
+        "source_urls": [
+          "https://www.bailii.org/ew/cases/EWHC/QB/2003/2222.html",
+          "https://www.hrw.org/report/2023/02/15/thats-when-nightmare-started/uk-and-us-forced-displacement-chagossians-and",
+          "https://www.geonames.org/search.html?country=SC&q=Mahe"
+        ],
+        "related_event_ids": [
+          "E20-T066-MAHE71"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "e20-t066-mahe71-ref",
+        "mapping_method": "岛屿地名参考点，非建筑或精确迁移路径。"
+      }
     }
   ]
 }
