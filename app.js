@@ -870,8 +870,8 @@ function ensureTerritorialPatterns(){
  let defs=root.querySelector('defs');
  if(!defs){defs=doc.createElementNS(ns,'defs');root.insertBefore(defs,root.firstChild)}
  for(const [id,color,cross] of [
-  ['atlas-hatch-manx','#cdb18b',true],
-  ['atlas-hatch-crown','#cfb0f2',false]
+  ['atlas-hatch-manx',mapTint('local_governance'),true],
+  ['atlas-hatch-crown',mapTint('diplomacy'),false]
  ]){
   const pattern=doc.createElementNS(ns,'pattern');
   for(const [k,v] of Object.entries({id,width:'10',height:'10',patternUnits:'userSpaceOnUse'}))pattern.setAttribute(k,v);
@@ -987,8 +987,9 @@ function renderSeventeenthColonialClaims(){
    &&(f.properties.map_presentation!=='optional_maximal_paper_claim'||$('showMaximalPaperCharters').checked))
   .sort((a,b)=>displaySpan(b)-displaySpan(a));
  // Point-only replacements still need their own reference geometry.
- const colors=mapColors.map(['charter','company','island','conquest','administrative']);
- const claimTint=p=>mapTint(p.map_presentation==='optional_maximal_paper_claim'?'charter':p.display_class);
+ const claimTint=p=>mapTint(p.map_presentation==='optional_maximal_paper_claim'?'charter':p.display_class==='company'&&/港岛管辖|堡垒据点|商馆／堡垒/.test(p.label_type||'')?'administration':p.display_class);
+ const claimKinds=new Map(seventeenthColonialClaims.features.map(f=>[f.id,claimTint(f.properties)]));
+ const inheritedTint=f=>claimKinds.get(f.properties.supersedes_visual_reference)||mapTint('neutral');
  L.geoJSON({type:'FeatureCollection',features:selected},{
   pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
   style:f=>{
@@ -1053,16 +1054,16 @@ function renderSeventeenthColonialClaims(){
  if(sourcePlaces.length){
   L.geoJSON({type:'FeatureCollection',features:sourcePlaces},{
    pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
-   style:f=>f.geometry.type==='Polygon'?({pane:'seventeenthColonialClaimsPane',color:'#9dc8ca',weight:2.1,opacity:.92,
+   style:f=>f.geometry.type==='Polygon'?({pane:'seventeenthColonialClaimsPane',color:inheritedTint(f),weight:2.1,opacity:.92,
     dashArray:'6 6',lineCap:'round',fill:false,fillOpacity:0,
     bubblingMouseEvents:false,className:'atlas-17c-5ai-physical-island atlas-17c-5ai-id-'+f.id.toLowerCase()}):
-    ({pane:'seventeenthColonialClaimsPane',radius:7.3,color:'#bda6e0',weight:1.8,
-     opacity:.98,dashArray:'3 4',fill:true,fillColor:'#8e76b8',fillOpacity:.28,
+    ({pane:'seventeenthColonialClaimsPane',radius:7.3,color:inheritedTint(f),weight:1.8,
+     opacity:.98,dashArray:'3 4',fill:true,fillColor:inheritedTint(f),fillOpacity:.28,
      bubblingMouseEvents:false,className:'atlas-17c-5ai-localized-point atlas-17c-5ai-id-'+f.id.toLowerCase()}),
    pointToLayer:(f,latlng)=>L.circleMarker(latlng,{
     pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
-    radius:7.3,color:'#bda6e0',weight:1.8,dashArray:'3 4',opacity:.98,
-    fill:true,fillColor:'#8e76b8',fillOpacity:.28,bubblingMouseEvents:false,
+    radius:7.3,color:inheritedTint(f),weight:1.8,dashArray:'3 4',opacity:.98,
+    fill:true,fillColor:inheritedTint(f),fillOpacity:.28,bubblingMouseEvents:false,
     className:'atlas-17c-5ai-localized-point atlas-17c-5ai-id-'+f.id.toLowerCase()}),
    onEachFeature:(f,layer)=>{
     const p=f.properties;
@@ -1086,7 +1087,7 @@ function renderSeventeenthRegionalStudies(){
   return $('toggleControlAreas').checked;
  });
  // Do not return early when the old research rectangles are all replaced by dated points.
- const colors=mapColors.map(['economic_network','land_dispossession','military_impact','local_governance']);
+ // Shared historical category colors.
  const overlay=L.geoJSON({type:'FeatureCollection',features:selected},{
   pane:'seventeenthStudiesPane',renderer:seventeenthStudiesRenderer,
   style:f=>{
@@ -1482,11 +1483,12 @@ function renderTerritories(){
    const siteEnvelope=p.geometry_role==='attested_settlement_envelope_not_surveyed_border';
    const controller=controllerAtYear(p,year);
    const palette=controller?historicControllerPalette[controller.controller_group]:null;
+   const semantic=mapTint(rel==='autonomous_lordship'?'local_governance':rel==='scottish_crown_territory'?'scottish':rel==='direct_french_crown_control'?'foreign_occupation':rel==='crown_dependency'?'diplomacy':rel==='partial_crown_administration'?'charter':'administration');
    const hatch=rel==='autonomous_lordship'?'atlas-hatch-manx':
      rel==='crown_dependency'?'atlas-hatch-crown':'';
-   return {pane:'territoryPane',color:palette?.stroke||p.color||'#a78cdb',weight:siteEnvelope?3.8:research?2.7:2.3,
+   return {pane:'territoryPane',color:palette?.stroke||semantic,weight:siteEnvelope?3.8:research?2.7:2.3,
     opacity:1,dashArray:research?'7 6':siteEnvelope?'7 5':null,
-    fillColor:palette?.areaFill||p.color||'#9871cc',fillOpacity:research?.12:siteEnvelope?.3:rel==='scottish_crown_territory'?.22:.26,
+    fillColor:palette?.areaFill||semantic,fillOpacity:research?.12:siteEnvelope?.3:rel==='scottish_crown_territory'?.22:.26,
     className:hatch?'atlas-territory-'+(rel==='autonomous_lordship'?'manx':'crown'):'atlas-territory-solid'};
   },
   onEachFeature:(feature,layer)=>{
@@ -1508,7 +1510,7 @@ function renderPoliticalRelationAreas(){
  for(const f of politicalRelationAreas.features||[]){
   const p=f.properties||{},lnglat=f.geometry?.coordinates;
   if(f.geometry?.type!=='Point'||!lnglat||year<(p.start_year||1500)||year>(p.observed_through_year||1519)||footprintEnabledFor(p.source_place_id))continue;
-  const center=[lnglat[1],lnglat[0]],color=p.stroke_color||'#b2a1d0';
+  const center=[lnglat[1],lnglat[0]],color=mapTint(p.render_mode==='scottish_solid_symbol'?'scottish':p.render_mode==='crosshatched_bounded_symbol'?'local_governance':p.render_mode==='hatch_bounded_symbol'?'diplomacy':'administration');
   const radius=p.render_radius_px||19;
   const uid=String(f.id).replace(/[^a-z0-9]/gi,'-');
   // Crosshatch and diagonal hatch encode type of political relationship, not a measured island perimeter.
@@ -1723,9 +1725,9 @@ function renderEleventhInfluenceAreas(){
  if(!eleventhInfluenceAreas||year<1590||year>1599||!$('toggleTerritorialFootprints').checked||!$('toggleControlAreas').checked)return;
  L.geoJSON(eleventhInfluenceAreas,{renderer:warVicinityRenderer,pane:'warVicinityPane',
   filter:f=>f.properties?.fill_authorized===false&&f.properties?.valid_years?.includes(year),
-  style:f=>({color:f.properties.stroke_hex||'#9778b5',weight:Number(f.properties.stroke_weight)||2,
+  style:f=>({color:mapTint(f.id==='ch11-munster-raleigh-blackwater-reference'?'land_dispossession':'charter'),weight:Number(f.properties.stroke_weight)||2,
    dashArray:f.properties.stroke_dash_array||'7 6',opacity:.9,fill:true,
-   fillColor:f.properties.fill_hex||'#a185b1',
+   fillColor:mapTint(f.id==='ch11-munster-raleigh-blackwater-reference'?'land_dispossession':'charter'),
    fillOpacity:Math.min(.085,Number(f.properties.fill_opacity)||.055),
    className:'atlas-eleventh-research-area',bubblingMouseEvents:false}),
   onEachFeature:(f,layer)=>{
@@ -2047,7 +2049,7 @@ function renderChapter11ActionLinks(){
   const brazil=p.zone_type==='documented_overseas_raid_town_sequence';
   L.geoJSON(f,{pane:'warReachPane',renderer:warReachRenderer,
    interactive:true,bubblingMouseEvents:false,
-   style:()=>({color:brazil?'#ca7378':'#e4a86a',weight:3.0,
+   style:()=>({color:mapTint('military_impact'),weight:3.0,
      opacity:.89,dashArray:'7 7',lineJoin:'round',
      className:brazil?'atlas-ch11-brazil-two-town-link':'atlas-ch11-yellow-ford-relief-link'}),
    onEachFeature:(feat,layer)=>{
@@ -2678,7 +2680,7 @@ async function loadKingdomBoundaries(){
    if(!group)continue;
    sovereigntyReferenceAreas.push({feature:f,group});
    count++;
-   const c=group==='scotland'?'#588ba8':group==='wales'?'#a78acb':'#815fd5';
+   const c=mapTint(group==='scotland'?'scottish':'administration');
    const layer=L.geoJSON(f,{renderer:sovereigntyRenderer,pane:'sovereigntyPane',interactive:true,bubblingMouseEvents:false,
      style:{color:c,weight:group==='wales'?1.8:1.4,dashArray:group==='wales'?'6 5':null,fillColor:c,fillOpacity:group==='scotland'?.25:group==='wales'?.18:.35,opacity:.95},
      onEachFeature:(_feature,shape)=>shape.on('click',e=>{
@@ -2729,7 +2731,8 @@ async function boot(){
   'data/twentieth-century-territorial-local-batch3.geojson',
   'data/twentieth-century-india-provinces-1900-1930.geojson',
   'data/twentieth-century-india-provinces-1931-1946.geojson',
-  'data/twentieth-century-territorial-local-batch6.geojson'
+  'data/twentieth-century-territorial-local-batch6.geojson',
+  'data/twentieth-century-territorial-canada-batch7.geojson'
  ].map(path=>fetch(path,{cache:'no-store'}).then(response=>{
   if(!response.ok)throw new Error('HTTP '+response.status);
   return response.json();
