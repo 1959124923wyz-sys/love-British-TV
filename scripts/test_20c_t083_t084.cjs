@@ -42,3 +42,17 @@ assert(candidates.every(t=>t.review_entry_required===true));
 assert.deepEqual([...new Set(candidates.flatMap(t=>t.review_event_ids))].sort(),[...events.keys()].sort());
 assert.deepEqual([...new Set(candidates.flatMap(t=>t.review_feature_ids))].sort(),[...points.keys()].sort());
 assert(!candidates.some(t=>t.review_event_ids.includes('E20-EXIT-KIRIBATI')));
+
+const gateApp=fs.readFileSync('app.js','utf8');
+const gateSource=gateApp.slice(gateApp.indexOf('function modern20cReviewGate('),gateApp.indexOf('async function fetchModernAtlas('));
+const gateFn=new Function('reviewParams',gateSource+'\nreturn modern20cReviewGate;');
+const gatePublic=gateFn({get:()=>null})(1900,idx),gatePreview=gateFn({get:()=>'1'})(1900,idx);
+assert.equal(gatePublic.eventIds.size,40);assert.equal(gatePublic.featureIds.size,18);
+assert.equal(gatePreview.eventIds.size,0);assert.equal(gatePreview.featureIds.size,0);
+assert.equal(gateFn({get:()=>null})(1800,null).eventIds.size,0);
+const approvedRegistry=JSON.parse(JSON.stringify(idx));for(const t of approvedRegistry.topics)if(t.review_entry_required){t.status='published';t.publication_review='approved';}
+assert.equal(gateFn({get:()=>null})(1900,approvedRegistry).eventIds.size,0);
+assert.equal(gateFn({get:()=>null})(1900,approvedRegistry).featureIds.size,0);
+
+const halfRegistry=JSON.parse(JSON.stringify(idx));const halfTopic=halfRegistry.topics.find(t=>t.id.startsWith('E20-T083-'));halfTopic.status='published';halfTopic.publication_review='approved';
+const halfGate=gateFn({get:()=>null})(1900,halfRegistry);assert(!halfGate.eventIds.has('E20-PHOS-AGREE19'));assert(halfGate.eventIds.has('E20-T084-IND68'));assert.equal(halfGate.eventIds.size,18);assert.equal(halfGate.featureIds.size,7);
