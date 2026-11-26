@@ -987,3 +987,8 @@ html,body,.site{background:var(--atlas-bg);color:var(--atlas-text)}
 @media(min-width:1050px) and (prefers-reduced-motion:reduce){
  .atlas-17c-expansive-claim{transition:none}
 }
+
+/* Shared map semantic legend: each color has an independent row. */
+.sidebar-settings-wrap .map-mode-help-body>#atlasSemanticColorLegend{display:grid;gap:7px;width:100%;min-width:0;}
+#atlasSemanticColorLegend>[data-map-color-kind]{display:flex;gap:10px;align-items:flex-start;min-width:0;}
+#atlasSemanticColorLegend>[data-map-color-kind]>span{flex:1;min-width:0;overflow-wrap:anywhere;}
