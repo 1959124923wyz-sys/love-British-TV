@@ -229,6 +229,48 @@
       "url": "https://unstats.un.org/unsd/geoinfo/ungegn/docs/8th-uncsgn-docs/crp/8th_UNCSGN_econf.94_crp.96.pdf",
       "type": "测绘档案线索",
       "scope": "英法两套地形图与1974地名录；未获取图幅"
+    },
+    {
+      "id": "S86-LAB09",
+      "title": "Hansard, Native Labour In New Hebrides, 12 August 1909",
+      "url": "https://hansard.parliament.uk/Commons/1909-08-12/debates/022e89a4-7c6f-4813-89e7-f81a59de1792/NativeLabourInNewHebrides",
+      "type": "同期议会原文",
+      "scope": "1908年英方雇主招募230名男性；议员提出夫妻分离问题，部长称可随行、住在雇主庄园"
+    },
+    {
+      "id": "S86-LORIG",
+      "title": "Hansard, New Hebrides (Labour Regulations), 22 November 1920, vol 135 cc80–81W",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1920/nov/22/new-hebrides-labour-regulations",
+      "type": "同期议会原文",
+      "scope": "Mildred Lorig于1919年11月被强招的指控；英方称无资料、属法国当局事务；未确认返乡"
+    },
+    {
+      "id": "S86-MOTA",
+      "title": "GeoNames, Mota Lava Island",
+      "url": "https://www.geonames.org/2135842",
+      "type": "现代地名",
+      "scope": "-13.666667,167.666667"
+    },
+    {
+      "id": "S86-LABSTUDY",
+      "title": "Shlomowitz and Bedford, The internal labor trade in New Hebrides and Solomon Islands c.1900–1941, 1988, p.61",
+      "url": "https://www.persee.fr/doc/jso_0300-953x_1988_num_86_1_2844",
+      "type": "学术论文原文首页",
+      "scope": "劳工报告档案链；CO 881 1911–1923，西太平洋高级专员档案，后续原表页未取到"
+    },
+    {
+      "id": "S85-MALA",
+      "title": "Clive Moore, Making Mala, chapter 2",
+      "url": "https://press-files.anu.edu.au/downloads/press/n2401/html/ch02.xhtml?page=10",
+      "type": "学术著作",
+      "scope": "马莱塔36,596份合同独立交叉核对；工资制度另见原文"
+    },
+    {
+      "id": "S86-PLANT",
+      "title": "ANU Archives AU ANUA 811-4, Employment records for plantation workers, 1944–1969",
+      "url": "https://archivescollection.anu.edu.au/index.php/anua-811-4",
+      "type": "档案目录",
+      "scope": "雇佣、劳务与移民原记录待调"
     }
   ],
   "events": [
@@ -324,7 +366,9 @@
       "description": "研究统计54,110份合同，其中马莱塔来源36,596份；重复签约存在。",
       "responsibility": "英国保护地政府；种植园雇主",
       "source_ids": [
-        "S85-LAB"
+        "S85-LAB",
+        "S85-MALA",
+        "S86-LABSTUDY"
       ],
       "anchor": null,
       "evidence": "二手表，合同非人数",
@@ -414,20 +458,20 @@
       "status": "research_candidate"
     },
     {
-      "id": "E20-T085-ULA49",
+      "id": "E20-T085-MANIFESTO",
       "topic_id": "E20-T085",
       "start_year": 1949,
       "end_year": 1949,
-      "date_label": "1949年6月",
-      "title": "乌拉瓦岛拘捕质询所涉事件",
-      "description": "1950年议会提问称乌拉瓦发生拘捕，部长承认进一步拘捕但未确认所报人数。",
-      "responsibility": "英国保护地政府",
+      "date_label": "1949年",
+      "title": "Sisili呈交诉求",
+      "description": "运动在奥基向地区官员提出地方司法、议事机关和岛级领导诉求。",
+      "responsibility": "所罗门岛民自治运动",
       "source_ids": [
-        "S85-HAN",
-        "S85-ULA"
+        "S85-MAA",
+        "S85-AUK"
       ],
-      "anchor": "ulawa",
-      "evidence": "月份来自议员提问",
+      "anchor": "auki",
+      "evidence": "原文待调",
       "status": "research_candidate"
     },
     {
@@ -448,20 +492,20 @@
       "status": "research_candidate"
     },
     {
-      "id": "E20-T085-MANIFESTO",
+      "id": "E20-T085-ULA49",
       "topic_id": "E20-T085",
       "start_year": 1949,
       "end_year": 1949,
-      "date_label": "1949年",
-      "title": "Sisili呈交诉求",
-      "description": "运动在奥基向地区官员提出地方司法、议事机关和岛级领导诉求。",
-      "responsibility": "所罗门岛民自治运动",
+      "date_label": "1949年6月",
+      "title": "乌拉瓦岛拘捕质询所涉事件",
+      "description": "1950年议会提问称乌拉瓦发生拘捕，部长承认进一步拘捕但未确认所报人数。",
+      "responsibility": "英国保护地政府",
       "source_ids": [
-        "S85-MAA",
-        "S85-AUK"
+        "S85-HAN",
+        "S85-ULA"
       ],
-      "anchor": "auki",
-      "evidence": "原文待调",
+      "anchor": "ulawa",
+      "evidence": "月份来自议员提问",
       "status": "research_candidate"
     },
     {
@@ -548,6 +592,22 @@
       "status": "research_candidate"
     },
     {
+      "id": "E20-T086-BRIT08",
+      "topic_id": "E20-T086",
+      "start_year": 1908,
+      "end_year": 1908,
+      "date_label": "1908年（1909年议会披露）",
+      "title": "英国雇主招募岛民劳工",
+      "description": "1909年部长答复称上一年英国臣民雇主招募230名男性。",
+      "responsibility": "英籍雇主；英国殖民部",
+      "source_ids": [
+        "S86-LAB09"
+      ],
+      "anchor": null,
+      "evidence": "部长公布数字，未分合同重复",
+      "status": "research_candidate"
+    },
+    {
       "id": "E20-T086-PROTOCOL",
       "topic_id": "E20-T086",
       "start_year": 1914,
@@ -562,6 +622,39 @@
       ],
       "anchor": null,
       "evidence": "条约登记与馆藏说明",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T086-LORIG19",
+      "topic_id": "E20-T086",
+      "start_year": 1919,
+      "end_year": 1919,
+      "date_label": "1919年11月（1920年质询）",
+      "title": "Mildred Lorig被强招指控",
+      "description": "议员称她在莫塔拉瓦岛遭强制招募为法国种植园劳工；英方未掌握个案资料，后续命运待核。",
+      "responsibility": "法国种植园雇主被指控；英国殖民部答复",
+      "source_ids": [
+        "S86-LORIG",
+        "S86-MOTA"
+      ],
+      "anchor": "motalava",
+      "evidence": "同期质询，非经判决确认事实",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T086-LORIG20",
+      "topic_id": "E20-T086",
+      "start_year": 1920,
+      "end_year": 1920,
+      "date_label": "1920年11月22日",
+      "title": "英国殖民部回应强招指控",
+      "description": "英国副殖民大臣称未掌握个案信息，将其视为法国当局事务，并说明英国臣民不得招募女性劳工。",
+      "responsibility": "英国殖民部",
+      "source_ids": [
+        "S86-LORIG"
+      ],
+      "anchor": null,
+      "evidence": "同期原文",
       "status": "research_candidate"
     },
     {
@@ -726,10 +819,16 @@
     "E20-EXIT-SOLOMON"
   ],
   "unverified": [
-    "Vanuatu exit ID",
     "exact arrest totals in 1949",
     "historical cadastral boundaries",
     "original labour regulations",
-    "precise Fanafo map geometry"
-  ]
+    "precise Fanafo map geometry",
+    "Mildred Lorig allegation and subsequent fate",
+    "Vanuatu labour contract reports CO 881 / WPHC original tables"
+  ],
+  "deduplication": {
+    "main_chronologies": "1900–1999 ten decade files read, found E20-EXIT-SOLOMON only; no Vanuatu exit event found by names/IDs search",
+    "serial_index": "E19-T51-PACIFIC-LABOUR-GUANO-JURISDICTION-1843-1899 predecessor, no repeated 20c mother topic",
+    "parallel": "PR #634 territorial map pending; do not alter its geometry; #637 phosphate topics separate"
+  }
 }
