@@ -4329,6 +4329,88 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "iraq-t030-t031-ankara-1920"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "phosphate-ban-1920",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.539,
+          -0.855
+        ]
+      },
+      "properties": {
+        "name": "巴纳巴岛 · 三国购买两岛磷矿公司权利",
+        "stable_id": "phosphate-ban-1920",
+        "start_year": 1920,
+        "end_year": 1920,
+        "display_kind": "economic_network",
+        "summary_zh": "三国政府购买太平洋磷矿公司在瑙鲁和巴纳巴的矿业权益，随后由共同任命的磷矿委员机构经营。",
+        "source_ids": [
+          "E20-PHOS-SRC-BAN-1927",
+          "E20-PHOS-SRC-NAU-1947",
+          "E20-PHOS-SRC-G-BAN"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/written-answers/1927/dec/12/ocean-island-phosphates",
+          "https://www.dfat.gov.au/about-us/publications/historical-documents/Pages/volume-12/35-cabinet-submission-by-chifley-and-chambers",
+          "https://www.geonames.org/2110256"
+        ],
+        "named_anchors": [
+          "巴纳巴岛"
+        ],
+        "mapping_method": "具名地点参考点；不表示矿区、地块或历史行政边界。",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-PHOS-BPC20"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "phosphate-ban-1927",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.539,
+          -0.855
+        ]
+      },
+      "properties": {
+        "name": "巴纳巴岛 · 英国公布巴纳巴磷矿权利金",
+        "stable_id": "phosphate-ban-1927",
+        "start_year": 1927,
+        "end_year": 1927,
+        "display_kind": "economic_network",
+        "summary_zh": "英国殖民部答复，巴纳巴当时装运磷矿每吨支付一先令权利金，部分计入殖民地财政，部分进入当地人受益基金；另有购地款。",
+        "source_ids": [
+          "E20-PHOS-SRC-BAN-1927",
+          "E20-PHOS-SRC-G-BAN"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/written-answers/1927/dec/12/ocean-island-phosphates",
+          "https://www.geonames.org/2110256"
+        ],
+        "named_anchors": [
+          "巴纳巴岛"
+        ],
+        "mapping_method": "具名地点参考点；不表示矿区、地块或历史行政边界。",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T083-ROY27"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
     }
   ]
 }
