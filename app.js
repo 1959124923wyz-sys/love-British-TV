@@ -3,6 +3,7 @@
    All speculative routes are marked illustrative. */
 (function(){
 'use strict';
+const mapColors=window.AtlasMapColors, mapTint=mapColors.resolve;
 const $ = id=>document.getElementById(id);
 const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Street-scale evidence needs room between nearby points and route endpoints.
@@ -410,10 +411,7 @@ function openHypothesis(feature){
 }
 // All clickable polygon types share a source-aware map territory dossier.
 // Government identity is a dated property of historic evidence, not a map style.
-const historicControllerPalette={
- english_crown:{stroke:'#9e6cde',areaFill:'#9e6cde',cityFill:'#9867dd',cityHalo:'#a57de3'},
- french_crown:{stroke:'#65c9bc',areaFill:'#357f76',cityFill:'#49b6ad',cityHalo:'#93e5d7'}
-};
+const historicControllerPalette=Object.fromEntries(['english_crown','french_crown'].map(k=>{const c=mapTint(k);return [k,{stroke:c,areaFill:c,cityFill:c,cityHalo:c}]}));
 function controllerAtYear(properties,selectedYear){
  const intervals=properties?.controller_periods;
  if(!Array.isArray(intervals))return null;
@@ -989,11 +987,12 @@ function renderSeventeenthColonialClaims(){
    &&(f.properties.map_presentation!=='optional_maximal_paper_claim'||$('showMaximalPaperCharters').checked))
   .sort((a,b)=>displaySpan(b)-displaySpan(a));
  // Point-only replacements still need their own reference geometry.
- const colors={charter:'#b985e8',company:'#ad7bd2',island:'#c5a6db',conquest:'#b875c5',administrative:'#c6a06c'};
+ const colors=mapColors.map(['charter','company','island','conquest','administrative']);
+ const claimTint=p=>mapTint(p.map_presentation==='optional_maximal_paper_claim'?'charter':p.display_class);
  L.geoJSON({type:'FeatureCollection',features:selected},{
   pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
   style:f=>{
-   const p=f.properties||{},shade=colors[p.display_class]||'#ab85d1';
+   const p=f.properties||{},shade=claimTint(p);
    const maxPaper=p.map_presentation==='optional_maximal_paper_claim';
    const detailed=$('showDetailedClaimBoundaries').checked;
    // Overview mode avoids visually compounding uncertain paper claims into "more control".
@@ -1034,7 +1033,7 @@ function renderSeventeenthColonialClaims(){
   f.properties.source_urls?.length);
  if(contextClaims.length)L.geoJSON({type:'FeatureCollection',features:contextClaims},{
   pane:'seventeenthColonialClaimsPane',renderer:seventeenthColonialClaimsRenderer,
-  style:f=>({pane:'seventeenthColonialClaimsPane',color:colors[f.properties.display_class]||'#b985e8',
+  style:f=>({pane:'seventeenthColonialClaimsPane',color:claimTint(f.properties),
    weight:1.5,opacity:.54,dashArray:'2 10',lineCap:'round',
    fill:false,fillOpacity:0,bubblingMouseEvents:false,
    className:'atlas-17c-5aj-reference-outline atlas-17c-5aj-claim-outline'}),
@@ -1087,15 +1086,12 @@ function renderSeventeenthRegionalStudies(){
   return $('toggleControlAreas').checked;
  });
  // Do not return early when the old research rectangles are all replaced by dated points.
- const colors={
-  economic_network:'#78b6ad',land_dispossession:'#d1a35a',
-  military_impact:'#bc7786',local_governance:'#ac8ad0'
- };
+ const colors=mapColors.map(['economic_network','land_dispossession','military_impact','local_governance']);
  const overlay=L.geoJSON({type:'FeatureCollection',features:selected},{
   pane:'seventeenthStudiesPane',renderer:seventeenthStudiesRenderer,
   style:f=>{
    const p=f.properties||{},isPolygon=f.geometry?.type==='Polygon';
-   const c=colors[p.display_kind]||'#ac8ad0';
+   const c=mapTint(p.display_kind);
    return {pane:'seventeenthStudiesPane',color:c,weight:isPolygon?2.8:2.5,
     opacity:.88,dashArray:isPolygon?'7 6':'6 7',lineCap:'round',
     fill:isPolygon,fillColor:c,fillOpacity:isPolygon?.085:0,
@@ -1134,7 +1130,7 @@ function renderSeventeenthRegionalStudies(){
  if(contextStudies.length)L.geoJSON({type:'FeatureCollection',features:contextStudies},{
   pane:'seventeenthStudiesPane',renderer:seventeenthStudiesRenderer,
   style:f=>({pane:'seventeenthStudiesPane',
-   color:colors[f.properties.display_kind]||'#ac8ad0',
+   color:mapTint(f.properties.display_kind),
    weight:1.5,opacity:.55,dashArray:'2 10',lineCap:'round',
    fill:false,fillOpacity:0,bubblingMouseEvents:false,
    className:'atlas-17c-5aj-reference-outline atlas-17c-5aj-study-outline'}),
@@ -1157,8 +1153,8 @@ function renderSeventeenthRegionalStudies(){
  if(localPlaces.length)L.geoJSON({type:'FeatureCollection',features:localPlaces},{
   pane:'seventeenthStudiesPane',renderer:seventeenthStudiesRenderer,
   pointToLayer:(f,latlng)=>L.circleMarker(latlng,{pane:'seventeenthStudiesPane',
-   renderer:seventeenthStudiesRenderer,radius:7.6,color:'#d6a3a0',weight:1.7,dashArray:'3 4',
-   fill:true,fillColor:'#d6a3a0',fillOpacity:.22,bubblingMouseEvents:false,
+   renderer:seventeenthStudiesRenderer,radius:7.6,color:mapTint(studyKinds.get(f.properties.supersedes_visual_reference)),weight:1.7,dashArray:'3 4',
+   fill:true,fillColor:mapTint(studyKinds.get(f.properties.supersedes_visual_reference)),fillOpacity:.22,bubblingMouseEvents:false,
    className:'atlas-17c-5ai-referenced-event atlas-17c-5ai-id-'+f.id.toLowerCase()}),
   onEachFeature:(f,layer)=>{
    const p=f.properties;
@@ -1179,7 +1175,7 @@ function renderSeventeenthRegionalStudies(){
     minX:Math.min(...ring.map(p=>p[0])),maxX:Math.max(...ring.map(p=>p[0])),
     minY:Math.min(...ring.map(p=>p[1])),maxY:Math.max(...ring.map(p=>p[1]))};
    const pos=[(box.minY+box.maxY)/2,(box.minX+box.maxX)/2];
-   const p=feature.properties,display=p.display_kind,color=colors[display]||'#ac8ad0';
+   const p=feature.properties,display=p.display_kind,color=mapTint(display);
    const cue=L.circleMarker(pos,{renderer:seventeenthStudiesRenderer,pane:'seventeenthStudiesPane',
     radius:display==='land_dispossession'?20:16,color,weight:2.2,
     dashArray:'4 6',opacity:.85,fill:true,fillColor:color,fillOpacity:.04,
@@ -1206,9 +1202,9 @@ function renderEighteenthAcadiaControlCores(){
   const stage=p.year_stages?.find(x=>year>=x.start_year&&year<=x.end_year);
   if(!stage)continue;
   const center=[coords[1],coords[0]];
-  const c=p.control_class==='british_colonial_urban_administrative_core'?'#b79af2':'#bd9bdc';
+  const c=mapTint('administration');
   const point=L.circleMarker(center,{pane:'controlAreaPane',radius:8,color:c,weight:2.2,
-   fill:true,fillColor:'#513a75',fillOpacity:0.65,opacity:0.95,bubblingMouseEvents:false});
+   fill:true,fillColor:c,fillOpacity:0.65,opacity:0.95,bubblingMouseEvents:false});
   point.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
    escapeHTML(stage.role)+'</div>',{
     sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover',offset:[12,0]});
@@ -1251,7 +1247,7 @@ function renderEighteenthReviewEvidenceCores(){
  for(const {f,mode,text:caption} of visible){
   const p=f.properties||{},c=f.geometry.coordinates;
   const french=/French|法方/.test(p.actor||p.controller||'');
-  const color=mode==='maroon_autonomy'?'#54b9a1':french?'#58a7c9':/English Royal African/.test(p.actor||'')?'#c9958d':'#ab98dd';
+  const color=mapTint(mode==='maroon_autonomy'?'resistance':french?'foreign_occupation':/English Royal African/.test(p.actor||'')?'trade_influence':'administration');
   const circle=L.circleMarker([c[1],c[0]],{pane:'controlAreaPane',radius:7,
    color,weight:2,dashArray:'3 3',fill:true,fillColor:color,fillOpacity:0.15,bubblingMouseEvents:false});
   circle.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+
@@ -1375,13 +1371,12 @@ function renderNineteenthSpatial(){
  nineteenthSiteMarkers.clearLayers();
  if(year<1800||!nineteenthSpatial||!$('toggleTerritorialFootprints').checked)return;
  const localSiteStyle=year<1900;
- const colors={coercive_policy:'#d5937d',land_dispossession:'#e4b571',political:'#79bacb',local_governance:'#65c7b6',conflict:'#a5cdec',
-  administrative:'#ba9ced',charter:'#d5ac70',military_impact:'#d5937d'};
+ // Shared semantic palette, independent of century and boundary certainty.
  for(const feature of nineteenthSpatial.features){
   const p=feature.properties;
   if(year<p.start_year||year>p.end_year)continue;
   const stage=p.year_stages?.find(x=>year>=x.start_year&&year<=x.end_year);
-  const color=colors[p.display_kind]||'#ae97db';
+  const color=mapTint(p.display_kind);
   const site=stage?{...feature,properties:{...p,name:stage.title,summary_zh:stage.summary_zh,
    start_year:stage.start_year,end_year:stage.end_year}}:feature;
   if(['Polygon','MultiPolygon'].includes(feature.geometry.type)){
@@ -1416,7 +1411,7 @@ function renderNineteenthSpatial(){
    pane:'controlAreaPane',renderer:wartimeRenderer,
    radius:localSiteStyle?(p.opens_area_id?7:5):(p.opens_area_id?13:9),
    weight:1.8,fill:localSiteStyle,fillOpacity:.45,
-   dashArray:localSiteStyle?'3 3':'5 3',color:stage?.controller==='british'?'#c5a6f5':p.display_kind==='conflict'?color:'#65c7b6',
+   dashArray:localSiteStyle?'3 3':'5 3',color:stage?.controller==='british'&&['administrative','local_governance'].includes(p.display_kind)?mapTint('administration'):color,
    bubblingMouseEvents:false,className:'atlas-19c-site'
   }).bindTooltip(hoverCard(site.properties.name,site.properties.summary_zh),{
    pane:'eventTooltipPane',className:'atlas-hover',direction:'auto',offset:[12,0]
@@ -1451,9 +1446,7 @@ function renderSeventeenthSpatialEvidence(){
   const display=p.display_kind;
   // Fixed screen-space radius: NOT meters, colony area, historical cadastral
   // plot, verified battlefront, geographical influence buffer or sovereignty.
-  const color=display==='economic_network'?'#78b6ad':
-   display==='military_impact'?'#bc7786':
-   display==='land_dispossession'?'#d1a35a':'#ac8ad0';
+  const color=mapTint(display);
   const radius=display==='land_dispossession'?23:
    display==='military_impact'?20:display==='economic_network'?18:18;
   const center=[coordinate[1],coordinate[0]];
@@ -1603,8 +1596,8 @@ function renderWartimeVicinities(){
  if(!selected.length)return;
  L.geoJSON({type:'FeatureCollection',features:selected},{
   renderer:warVicinityRenderer,pane:'warVicinityPane',interactive:true,bubblingMouseEvents:false,
-  style:()=>({color:'#bd92fa',weight:2,opacity:.95,dashArray:'4 7',
-    fill:true,fillColor:'#8652dd',fillOpacity:.23,className:'atlas-violet-wartime-vicinity'}),
+  style:()=>({color:mapTint('administration'),weight:2,opacity:.95,dashArray:'4 7',
+    fill:true,fillColor:mapTint('administration'),fillOpacity:.23,className:'atlas-violet-wartime-vicinity'}),
   onEachFeature:(feature,layer)=>{
    layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">英军驻点 · 点击查看历史</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'});
@@ -1624,8 +1617,8 @@ function renderWarReachCorridors(){
  for(const feature of selected){
   const p=feature.properties||{},points=feature.geometry.coordinates.map(c=>[c[1],c[0]]);
   if(points.length<2)continue;
-  const stroke=p.stroke_color||'#c5a4f8';
-  L.polyline(points,{renderer:warReachRenderer,pane:'warReachPane',color:p.halo_color||'#9473d8',
+  const stroke=mapTint('military_impact');
+  L.polyline(points,{renderer:warReachRenderer,pane:'warReachPane',color:stroke,
    weight:Math.min(26,Number(p.halo_weight_px)||20),opacity:Math.min(.2,Number(p.halo_opacity)||.12),
    interactive:false,className:'atlas-war-reach-halo'}).addTo(groups.warReach);
   const visible=L.polyline(points,{renderer:warReachRenderer,pane:'warReachPane',color:stroke,
@@ -1651,8 +1644,7 @@ function renderSeventhControlSites(){
   if(feature.geometry?.type!=='Point'||!c||year<p.start_year||year>p.end_year)continue;
   const group=p.controller_group==='english_to_french'
     ?(year>=p.change_to_french_year?'french':'english'):p.controller_group;
-  const palette={english:'#ae83ef',french:'#57c9b8',scottish:'#70afcf',french_allied_scotland:'#7dbdc4'};
-  const color=palette[group]||'#d8a980';
+  const color=mapTint(group);
   const status={english:'英王驻军所在地点',french:'法国已收复的城市或要塞',scottish:'苏格兰恢复控制的城堡',french_allied_scotland:'苏格兰境内的法军或苏法盟军堡垒'}[group]||'历史军防地点';
   const record=findPlaceAcrossChapters(p.stable_id);
   const center=[c[1],c[0]];
@@ -1689,13 +1681,13 @@ function renderNinthControlSites(){
   };
   const tt='<strong>'+escapeHTML(name)+'</strong><div class="atlas-hover-summary">英军局部据点 · 查看史料</div>';
   L.circleMarker(coordinate,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:17,
-    color:'#ae83ef',weight:3,dashArray:'5 5',fill:true,fillColor:'#ae83ef',
+    color:mapTint('administration'),weight:3,dashArray:'5 5',fill:true,fillColor:mapTint('administration'),
     fillOpacity:.14,opacity:.98,bubblingMouseEvents:false,
     className:'atlas-ninth-english-garrison'})
    .bindTooltip(tt,{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
    .on('click',open).addTo(groups.wartimeControl);
   L.circleMarker(coordinate,{renderer:garrisonHitRenderer,pane:'garrisonHitPane',
-    radius:24,color:'#ae83ef',weight:7,opacity:.018,fill:false,
+    radius:24,color:mapTint('administration'),weight:7,opacity:.018,fill:false,
     bubblingMouseEvents:false,className:'atlas-ninth-english-garrison-hit'})
    .on('click',open).addTo(groups.garrisonHit);
  }
@@ -1715,13 +1707,13 @@ function renderEleventhControlCores(){
    if(pl)openDossier(pl,'place');else openTerritoryDossier(f,'historic');
   };
   L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius,
-   color:'#ac84e3',weight:3,dashArray:'5 5',fill:true,fillColor:'#a57adc',fillOpacity:.17,
+   color:mapTint('administration'),weight:3,dashArray:'5 5',fill:true,fillColor:mapTint('administration'),fillOpacity:.17,
    bubblingMouseEvents:false,className:'atlas-eleventh-core'})
   .bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">当年年末据点 · 查看来源</div>',
    {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
   .on('click',open).addTo(groups.eleventhCores);
   L.circleMarker(center,{renderer:garrisonHitRenderer,pane:'garrisonHitPane',radius:radius+8,
-   color:'#a57adc',weight:7,opacity:.018,fill:false,bubblingMouseEvents:false,
+   color:mapTint('administration'),weight:7,opacity:.018,fill:false,bubblingMouseEvents:false,
    className:'atlas-eleventh-core-hit'}).on('click',open).addTo(groups.eleventhHits);
  }
 }
@@ -1776,7 +1768,7 @@ function renderEarlyRegionalImpactAreas(){
   if(p.historical_boundary_confirmed!==false||
      p.fill_authorized!==false||p.territorial_claim!==false||p.area_sqkm!==null)continue;
   const ochre=p.color_role==='plantation_ochre',violet=p.color_role==='occupation_violet',blue=p.color_role==='restoration_blue';
-  const color=ochre?'#c49c58':violet?'#9475bc':blue?'#77b3ca':'#c56873',ring=feature.geometry.coordinates[0];
+  const color=mapTint(ochre?'land_dispossession':violet?'wartime_occupation':blue?'foreign_occupation':p.zone_type==='rebellion_and_crown_response'||p.zone_type==='gaelic_refuge_anti_crown_resistance_schematic'?'battle':p.zone_type==='indigenous_defense_and_privateer_contact_schematic'?'resistance':p.zone_type==='colonial_fiscal_military_coercion'?'coercive_policy':'military_impact'),ring=feature.geometry.coordinates[0];
   const style={color,weight:2.5,opacity:.95,dashArray:ochre?'7 6':'8 6',fill:true,fillColor:color,
    fillOpacity:ochre?.11:.14,className:'atlas-early-regional-impact'};
   const open=e=>{if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);openTerritoryDossier(feature,regionalFeatureKind(p));};
@@ -1870,8 +1862,8 @@ function renderTenthInvasionImpactAreas(){
    const ring=f.geometry.coordinates[0].slice(0,-1);
    const center=ring.reduce((acc,[lon,lat])=>[acc[0]+lat/ring.length,acc[1]+lon/ring.length],[0,0]);
    L.circleMarker(center,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
-    radius:27,color:'#bf6671',weight:2.3,opacity:.85,dashArray:'8 6',
-    fill:true,fillColor:'#b34e5c',fillOpacity:.12,
+    radius:27,color:mapTint('military_impact'),weight:2.3,opacity:.85,dashArray:'8 6',
+    fill:true,fillColor:mapTint('military_impact'),fillOpacity:.12,
     className:'atlas-tenth-invasion-impact atlas-schematic-screen-cue',
     bubblingMouseEvents:false})
     .bindTooltip(tooltip,{sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
@@ -1879,8 +1871,8 @@ function renderTenthInvasionImpactAreas(){
   }else{
    L.geoJSON(f,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
     interactive:true,bubblingMouseEvents:false,
-    style:()=>({color:'#bf6671',weight:2.3,opacity:.85,dashArray:'8 6',
-     fill:true,fillColor:'#b34e5c',fillOpacity:.14,className:'atlas-tenth-invasion-impact'}),
+    style:()=>({color:mapTint('military_impact'),weight:2.3,opacity:.85,dashArray:'8 6',
+     fill:true,fillColor:mapTint('military_impact'),fillOpacity:.14,className:'atlas-tenth-invasion-impact'}),
     onEachFeature:(_f,layer)=>layer.bindTooltip(tooltip,
      {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'}).on('click',open)
    }).addTo(groups.invasionImpact);
@@ -1906,9 +1898,9 @@ function renderTenthLandRaidImpactAreas(){
   const p=feature.properties,land=p.zone_type==='crown_land_dispossession_policy_study',
    stage=p.year_stages?.find(item=>year>=item.start_year&&year<=item.end_year);
   const title=stage?.title||p.name,zoom=map.getZoom();
-  const style={color:land?'#b99a62':'#c65c68',weight:land?2.1:2.6,opacity:.9,
+  const style={color:mapTint(land?'land_dispossession':'military_impact'),weight:land?2.1:2.6,opacity:.9,
    dashArray:land?'6 6':'8 5',fill:true,
-   fillColor:land?'#b78b4b':'#bf4656',fillOpacity:land?.13:.2,
+   fillColor:mapTint(land?'land_dispossession':'military_impact'),fillOpacity:land?.13:.2,
    className:land?'atlas-tenth-land-policy-impact':'atlas-tenth-port-raid-impact'};
   // At the default world-scale zoom an urban 0.1-degree envelope is below 2px.
   // The fixed-pixel symbol is ONLY an on-screen cue, never a larger GIS area.
@@ -1981,8 +1973,8 @@ function renderAtlanticContactSites(){
   if(small){
    L.circleMarker(p.center_lat_lon,{
     renderer:invasionImpactRenderer,pane:'invasionImpactPane',
-    radius:29,color:'#be6473',weight:2.5,dashArray:'7 6',opacity:.92,
-    fill:true,fillColor:'#aa4657',fillOpacity:.14,
+    radius:29,color:mapTint('military_impact'),weight:2.5,dashArray:'7 6',opacity:.92,
+    fill:true,fillColor:mapTint('military_impact'),fillOpacity:.14,
     className:'atlas-trinidad-1595-impact atlas-schematic-screen-cue',
     bubblingMouseEvents:false
    }).bindTooltip(tooltip,{sticky:true,pane:'eventTooltipPane',className:'atlas-hover'})
@@ -1990,8 +1982,8 @@ function renderAtlanticContactSites(){
   }else{
    L.geoJSON(f,{renderer:invasionImpactRenderer,pane:'invasionImpactPane',
     interactive:true,bubblingMouseEvents:false,
-    style:()=>({color:'#be6473',weight:2.5,dashArray:'7 6',opacity:.9,
-     fill:true,fillColor:'#aa4657',fillOpacity:.14,className:'atlas-trinidad-1595-impact'}),
+    style:()=>({color:mapTint('military_impact'),weight:2.5,dashArray:'7 6',opacity:.9,
+     fill:true,fillColor:mapTint('military_impact'),fillOpacity:.14,className:'atlas-trinidad-1595-impact'}),
     onEachFeature:(_f,layer)=>layer.bindTooltip(tooltip,{sticky:true,
      pane:'eventTooltipPane',className:'atlas-hover'}).on('click',open)
    }).addTo(groups.atlanticContact);
@@ -2004,7 +1996,7 @@ function renderAtlanticContactSites(){
   const isMilitary=f.properties.zone_type==='caribbean_english_military_action_sequence';
   L.geoJSON(f,{pane:'warReachPane',renderer:warReachRenderer,
    interactive:true,bubblingMouseEvents:false,style:()=>({
-    color:isMilitary?'#d57c80':'#65bda7',weight:isMilitary?3.3:2.2,
+    color:mapTint(isMilitary?'military_impact':'trade_influence'),weight:isMilitary?3.3:2.2,
     opacity:isMilitary?.93:.75,dashArray:isMilitary?'7 5':'5 7',
     className:isMilitary?'atlas-trinidad-1595-action-sequence':'atlas-maghreb-trade-sequence'}),
    onEachFeature:(item,layer)=>{
@@ -2020,7 +2012,7 @@ function renderAtlanticContactSites(){
   const p=f.properties,c=f.geometry.coordinates,commerce=p.zone_type.startsWith('north_african_'),
    occupied=p.zone_type==='caribbean_temporary_english_occupation',
    failed=p.zone_type==='caribbean_english_failed_assault';
-  const color=commerce?'#64c6b0':occupied?'#ab87dd':failed?'#d57a78':'#c86169';
+  const color=mapTint(commerce?'trade_influence':occupied?'wartime_occupation':'military_impact');
   const radius=commerce?12:occupied?24:19;
   L.circleMarker([c[1],c[0]],{
    pane:'controlAreaPane',renderer:wartimeRenderer,
@@ -2088,11 +2080,11 @@ function renderNineYearsWarImpact(){
   const isRoute=f.geometry.type==='LineString',isResistance=p.zone_type==='gaelic_resistance_plantation_collapse_schematic',
    isBattle=p.zone_type==='gaelic_resistance_to_crown_campaign_schematic';
   const style=isRoute?
-   {color:'#e4a86a',weight:3.1,opacity:.94,dashArray:'10 7',
+   {color:mapTint('military_impact'),weight:3.1,opacity:.94,dashArray:'10 7',
     lineJoin:'round',className:'atlas-essex-1599-schematic'}:
-   {color:isResistance?'#66bc9e':isBattle?'#68b5bb':'#79aaa9',
+   {color:mapTint(isResistance?'resistance':isBattle?'battle':'diplomacy'),
     weight:2.2,opacity:.9,dashArray:'8 6',
-    fill:true,fillColor:isResistance?'#3d9275':'#4e8f9f',
+    fill:true,fillColor:mapTint(isResistance?'resistance':isBattle?'battle':'diplomacy'),
     fillOpacity:.12,className:'atlas-nine-years-war-study'};
   const pane=isRoute?'warReachPane':'invasionImpactPane';
   const renderer=isRoute?warReachRenderer:invasionImpactRenderer;
@@ -2121,14 +2113,14 @@ function renderTenthControlSites(){
    const place=findPlaceAcrossChapters(p.stable_id);
    if(place)openDossier(place,'place');else openTerritoryDossier(feature,'historic');
   };
-  L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:17,color:'#ae83ef',
-   weight:3,dashArray:'5 5',fill:true,fillColor:'#ae83ef',fillOpacity:.14,opacity:.98,
+  L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:17,color:mapTint('administration'),
+   weight:3,dashArray:'5 5',fill:true,fillColor:mapTint('administration'),fillOpacity:.14,opacity:.98,
    bubblingMouseEvents:false,className:'atlas-tenth-english-site'})
    .bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">局部历史据点 · 查看史料</div>',
     {sticky:true,direction:'auto',pane:'eventTooltipPane',className:'atlas-hover'})
    .on('click',open).addTo(groups.wartimeControl);
   L.circleMarker(center,{renderer:garrisonHitRenderer,pane:'garrisonHitPane',radius:24,weight:7,
-   color:'#ae83ef',opacity:.018,fill:false,bubblingMouseEvents:false,
+   color:mapTint('administration'),opacity:.018,fill:false,bubblingMouseEvents:false,
    className:'atlas-tenth-english-site-hit'}).on('click',open).addTo(groups.garrisonHit);
  }
 }
@@ -2137,7 +2129,7 @@ function renderEighthControlSites(){
  for(const f of eighthControlSites.features){
   const p=f.properties,c=f.geometry?.coordinates;
   if(f.geometry?.type!=='Point'||!c||year<p.start_year||year>p.end_year||p.fill_authorized!==false)continue;
-  const english=p.controller_group==='english',color=english?'#ae83ef':'#57c9b8';
+  const english=p.controller_group==='english',color=mapTint(english?'administration':'foreign_occupation');
   const open=e=>{if(e?.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);
    const place=findPlaceAcrossChapters(p.stable_id);
    if(place)openDossier(place,'place');else openTerritoryDossier(f,'historic');
@@ -2188,7 +2180,7 @@ function renderEighthCoastalActivity(){
  if(!list.length)return;
  L.geoJSON({type:'FeatureCollection',features:list},{
   renderer:enslavementBandRenderer,pane:'enslavementBandPane',interactive:true,bubblingMouseEvents:false,
-  style:()=>({color:'#dca16d',weight:2.2,opacity:.94,dashArray:'6 8',
+  style:()=>({color:mapTint('coercive_policy'),weight:2.2,opacity:.94,dashArray:'6 8',
    fill:true,fillColor:'url(#atlas-eighth-coast-hatch)',fillOpacity:.6,
    className:'atlas-eighth-enslavement-coast'}),
   onEachFeature:(f,layer)=>{const p=f.properties;
@@ -2225,7 +2217,7 @@ function renderContestedZones(){
  if(!selected.length)return;
  L.geoJSON({type:'FeatureCollection',features:selected},{
   renderer:contestedZoneRenderer,pane:'contestedZonePane',interactive:true,bubblingMouseEvents:false,
-  style:()=>({color:'#91c7ec',weight:2,opacity:.91,dashArray:'7 6',
+  style:()=>({color:mapTint('battle'),weight:2,opacity:.91,dashArray:'7 6',
    fill:true,fillColor:'url(#atlas-blue-violet-contested)',fillOpacity:.74,className:'atlas-contested-zone'}),
   onEachFeature:(feature,layer)=>{
    layer.bindTooltip('<strong>'+escapeHTML(feature.properties.name)+'</strong><div class="atlas-hover-summary">交战地区 · 查看史料</div>',
@@ -2243,7 +2235,7 @@ function renderWartimeControls(){
   const p=f.properties||{},coords=f.geometry?.coordinates;
   if(f.geometry?.type!=='Point'||!coords||year<p.year_end_start||year>p.year_end_stop)continue;
   const french=p.not_an_English_control_feature===true;
-  const color=french?'#5bb6a2':'#8e62dc';
+  const color=mapTint(french?'foreign_occupation':'administration');
   const center=[coords[1],coords[0]];
   const record=findPlaceAcrossChapters(p.stable_id);
   // At low/medium zoom the point symbol can fully cover its historically
@@ -2259,7 +2251,7 @@ function renderWartimeControls(){
     else openTerritoryDossier(f,french?'historic':'occupied');
   };
   L.circleMarker(center,{renderer:wartimeRenderer,pane:'controlAreaPane',radius:map.getZoom()>=6?19:17,weight:3,
-   color:french?'#58c6b7':'#d1acfd',opacity:.98,
+   color,opacity:.98,
    dashArray:french?'3 5':'6 4',fill:true,fillColor:color,fillOpacity:.09,
    className:french?'atlas-french-counterfort':'atlas-local-english-garrison',
    bubblingMouseEvents:false})
