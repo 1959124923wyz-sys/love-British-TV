@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),load=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const id='E20-T027-EGYPT-OCCUPATION-DENSHAWAI-REVOLUTION-1900-1922',t=load('data/stories/serial/index.json').topics.find(t=>t.id===id),a=load(t.article_file),keys=new Set(a.sources.map(s=>s.id));
-assert.equal(a.id,id);assert.equal(a.sections.length,20);assert.equal(keys.size,30);
+assert.equal(a.id,id);assert.equal(a.sections.length,20);assert.equal(keys.size,34);
 assert(a.sections.every(s=>s.paragraphs.length>=2&&s.source_keys.every(k=>keys.has(k))));
 const body=a.sections.flatMap(s=>s.paragraphs).join('');
 assert(body.replace(/\[\[[A-Z0-9-]+\|([^\]]+)\]\]/g,'$1').length>=3000);
@@ -16,7 +16,9 @@ for(const d of ['1900-1909','1910-1919','1920-1929']){
   if(e.id.startsWith('E20-T027-')&&e.lat!=null){placed++;const f=fs.find(f=>f.properties.related_event_ids?.includes(e.id));assert(f,e.id);assert.equal(f.geometry.type,'Point');assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat]);assert.equal(f.properties.fill_authorized,false);assert.equal(f.properties.area_sqkm,null);}
  }
 }
-assert.equal(placed,6);assert.equal(es.size,20);assert.equal([...es.keys()].filter(k=>k.startsWith('E20-T027-')).length,18);
+assert.equal(placed,8);assert.equal(es.size,20);assert.equal([...es.keys()].filter(k=>k.startsWith('E20-T027-')).length,18);
+assert.deepEqual([es.get('E20-T027-EXILE').lat,es.get('E20-T027-EXILE').lng],[35.88182,14.44908]);
+assert.deepEqual([es.get('E20-T027-EXILE2').year,es.get('E20-T027-EXILE2').lat,es.get('E20-T027-EXILE2').lng],[1922,-4.67643,55.47426]);
 assert(es.has('E20-AMR-EGYPT')&&es.has('E20-CORK-EGYPT'));
 const g=load('data/twentieth-century-spatial-1900-1909.geojson').features.filter(f=>f.id==='egypt-t027-denshawai');
 assert.equal(g.length,1);assert.deepEqual(g[0].geometry.coordinates,[30.8206,30.6014]);assert.equal(g[0].properties.territorial_claim,false);
