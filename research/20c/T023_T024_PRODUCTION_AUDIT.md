@@ -1,0 +1,12 @@
+# T023/T024 正式制作史料与GIS审计（第63窗口）
+- T023：16节、3428净正文字符、21来源、16新增事件、2具名城市点（3定位事件）。
+- T024：15节、3119净正文字符、17来源、15新增事件、2具名城市点（6定位事件）。
+- 查主分支1940年代年表、GIS与专题索引：无对应新题或四个同名图元。继承19世纪印度尼西亚旧专题为关联阅读，不重复事件。四城市WGS84坐标查GeoNames固定ID 1642911、1625822、1581130、1566083，均为具名城市，不是事件精确历史地址。河内为当地独立宣言、抗议及法越谈判地点，不称英国占领。无证Polygon、路线与面积均未制作。
+- T023英荷行政恢复协议以1945-11-23贝文议会答复为据；11-19拒绝承认共和国为同期外交部原话。当地独立史核印尼国家档案馆、广播委员会、泗水市政府。军事成本约400万英镑为1946-01-28粗估支出，非英国获利。村庄毁损只引议会报道与军人回忆，不推定具体地点、责任与人数。1946-11-30英军撤出据FRUS d640。6-17印尼反提案以荷方公告转述为据，11-27为美方草案概要，不作为已实施疆界。
+- T024核越南国家历史博物馆的当地历史及抗议照片，英方议会答复区分职责与实际参与；16度线仅战区任务划分。1946-01-30撤军完成日期是政府计划，NAM回顾为夏季撤出，故不强行确定实际日。1-28议会答复缺乏越方精确伤亡数据，不把交战人员估算称平民死亡。2月信函为外交官转述；4-18英国非正式拒绝承认据FRUS d38。后续追英法协议全文、撤出军政原卷、民众财产及生命损失档案。
+- 31节、6547净正文字符、38来源键、31新事件、4城市点。部分两题共用的同期文件以各题引用键登记，非38份互异档案。新增T025/T026研究认领，1959之后正式互动数据仍缺。
+- 独立生产审查及出版门禁分开；未经Pages证明不填已上线。
+
+## Rebase-equivalent integration checkpoint
+
+PR #617 has merged at f0678832fd7df3d15b96e5d3faaa6fa0f50106bb. PR #618 now targets main directly; require fresh mandatory checks and review on this head before merge. The 38 source records are per-topic references, not necessarily 38 distinct documents. All four coordinates are modern named-city reference points, not exact sites of individual incidents or historic occupation boundaries.
