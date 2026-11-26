@@ -5702,6 +5702,140 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "t024-saigon"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-baghdad-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40088,
+          33.34058
+        ]
+      },
+      "properties": {
+        "name": "巴格达 · 独立伊拉克王国",
+        "start_year": 1940,
+        "end_year": 1949,
+        "display_kind": "political",
+        "summary_zh": "1941年英国军事干涉并未恢复委任统治。",
+        "source_ids": [
+          "E20-T031-SRC-FR41",
+          "E20-T031-SRC-GEOBAG",
+          "E20-T031-SRC-WATHBA",
+          "E20-T031-SRC-REGENT"
+        ],
+        "source_urls": [
+          "https://history.state.gov/historicaldocuments/frus1941v03/d499",
+          "https://www.geonames.org/98182/baghdad.html",
+          "https://history.state.gov/historicaldocuments/frus1948v05p1/d154",
+          "https://history.state.gov/historicaldocuments/frus1948v05p1/d157"
+        ],
+        "named_anchors": [
+          "巴格达"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T031-GOV41",
+          "E20-T031-WATHBA",
+          "E20-T031-REJECT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-baghdad-administration",
+        "year_stages": [
+          {
+            "start_year": 1940,
+            "end_year": 1949,
+            "controller": "local",
+            "title": "巴格达 · 独立伊拉克王国",
+            "summary_zh": "1941年英国军事干涉并未恢复委任统治。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-t030-t031-fallujah-1940",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.78599,
+          33.34913
+        ]
+      },
+      "properties": {
+        "name": "费卢杰 · 伊拉克专题",
+        "start_year": 1941,
+        "end_year": 1941,
+        "display_kind": "political",
+        "summary_zh": "费卢杰宗教场所相关外交抗议。伊拉克外交部向美国外交官通报关于英国行动影响费卢杰宗教场所的指控。",
+        "source_ids": [
+          "E20-T031-SRC-CIV41",
+          "E20-T031-SRC-GEOFAL"
+        ],
+        "source_urls": [
+          "https://history.state.gov/historicaldocuments/frus1941v03/d525",
+          "https://www.geonames.org/99454/al-fallujah.html"
+        ],
+        "named_anchors": [
+          "费卢杰"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T031-FALLUJAH"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-t030-t031-fallujah-1940"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-t030-t031-portsmouth-1940",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.09125,
+          50.79899
+        ]
+      },
+      "properties": {
+        "name": "朴次茅斯 · 伊拉克专题",
+        "start_year": 1948,
+        "end_year": 1948,
+        "display_kind": "political",
+        "summary_zh": "朴次茅斯条约签署。英国与伊拉克签署拟取代1930年条约的新协议，但未获伊拉克最终批准。",
+        "source_ids": [
+          "E20-T031-SRC-PORT",
+          "E20-T031-SRC-REGENT",
+          "E20-T031-SRC-GEOPOR"
+        ],
+        "source_urls": [
+          "https://history.state.gov/historicaldocuments/frus1948v05p1/d155",
+          "https://history.state.gov/historicaldocuments/frus1948v05p1/d157",
+          "https://www.geonames.org/advanced-search.html?q=Portsmouth%2F"
+        ],
+        "named_anchors": [
+          "朴次茅斯"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T031-PORT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-t030-t031-portsmouth-1940"
+      }
     }
   ]
 }

@@ -3003,6 +3003,63 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E20-T030-BASRA",
+      "year": 1914,
+      "start_year": 1914,
+      "end_year": 1914,
+      "visible_from": 1914,
+      "date_label": "1914年11月",
+      "name": "巴士拉遭英国与英印军队占领",
+      "description": "英国军队以保护石油供应为政策目标，占领巴士拉港。",
+      "short_description": "英国军队以保护石油供应为政策目标，占领巴士拉港。",
+      "category": "war",
+      "icon_code": "WAR",
+      "significance": {
+        "level": 8,
+        "rationale": "同期文书、政府调查及具名地点"
+      },
+      "lat": 30.50852,
+      "lng": 47.7804,
+      "source_ids": [
+        "E20-T030-SRC-NAM",
+        "E20-T030-SRC-GEOBAS"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T030-BAGHDAD",
+      "year": 1917,
+      "start_year": 1917,
+      "end_year": 1917,
+      "visible_from": 1917,
+      "date_label": "1917年3月",
+      "name": "巴格达沦为英军占领城市",
+      "description": "英国及英印军队占领巴格达，英方宣称是解放而非征服。",
+      "short_description": "英国及英印军队占领巴格达，英方宣称是解放而非征服。",
+      "category": "war",
+      "icon_code": "WAR",
+      "significance": {
+        "level": 8,
+        "rationale": "同期文书、政府调查及具名地点"
+      },
+      "lat": 33.34058,
+      "lng": 44.40088,
+      "source_ids": [
+        "E20-T030-SRC-NAM",
+        "E20-T030-SRC-OSU",
+        "E20-T030-SRC-GEOBAG"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "routes": [
@@ -5838,6 +5895,38 @@
       "label": "GeoNames｜Malta Island",
       "url": "https://www.geonames.org/advanced-search.html?country=MT&q=Malta",
       "access": "岛屿地名参考坐标 35.88182,14.44908"
+    },
+    {
+      "id": "E20-T030-SRC-NAM",
+      "publisher": "英国国家陆军博物馆",
+      "title": "Mesopotamia campaign",
+      "label": "英国国家陆军博物馆｜Mesopotamia campaign",
+      "url": "https://www.nam.ac.uk/explore/mesopotamia-campaign",
+      "access": "馆方历史综述及1917馆藏照片"
+    },
+    {
+      "id": "E20-T030-SRC-GEOBAS",
+      "publisher": "GeoNames",
+      "title": "巴士拉现代地名",
+      "label": "GeoNames｜巴士拉",
+      "url": "https://www.geonames.org/99532/al-ba-rah.html",
+      "access": "WGS84城市参考坐标 30.50852, 47.7804"
+    },
+    {
+      "id": "E20-T030-SRC-OSU",
+      "publisher": "Ohio State University Origins",
+      "title": "Iraq's 1920 Revolution",
+      "label": "Ohio State University Origins｜Iraq's 1920 Revolution",
+      "url": "https://origins.osu.edu/connecting-history/iraq-1920-revolution-revolt",
+      "access": "研究综述及文献表，税收、农业制度、民众抗争"
+    },
+    {
+      "id": "E20-T030-SRC-GEOBAG",
+      "publisher": "GeoNames",
+      "title": "巴格达现代地名",
+      "label": "GeoNames｜巴格达",
+      "url": "https://www.geonames.org/98182/baghdad.html",
+      "access": "WGS84城市参考坐标 33.34058, 44.40088"
     }
   ]
 }
