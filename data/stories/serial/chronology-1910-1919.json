@@ -3060,6 +3060,34 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E20-T074-PIN13",
+      "year": 1913,
+      "start_year": 1913,
+      "end_year": 1913,
+      "visible_from": 1913,
+      "date_label": "1913年1月1日",
+      "name": "平贾拉农场学校接收首批儿童",
+      "description": "Find & Connect记载13名来自英国的男孩抵达该学校。",
+      "short_description": "Find & Connect记载13名来自英国的男孩抵达该学校。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 8,
+        "rationale": "官方调查、档案、法律或研究证据"
+      },
+      "lat": -32.6298,
+      "lng": 115.87351,
+      "source_ids": [
+        "E20-T074-SRC-PIN",
+        "E20-T074-SRC-PINC"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "routes": [
@@ -5927,6 +5955,22 @@
       "label": "GeoNames｜巴格达",
       "url": "https://www.geonames.org/98182/baghdad.html",
       "access": "WGS84城市参考坐标 33.34058, 44.40088"
+    },
+    {
+      "id": "E20-T074-SRC-PIN",
+      "publisher": "Find & Connect",
+      "title": "Fairbridge Farm School, Pinjarra",
+      "label": "Find & Connect｜Fairbridge Farm School, Pinjarra",
+      "url": "https://www.findandconnect.gov.au/wp-admin/admin-ajax.php?action=pdf_download&id=19759",
+      "access": "首批13人、1920购地3200英亩、校址分期；PDF文字提取，截图仅返回iframe"
+    },
+    {
+      "id": "E20-T074-SRC-PINC",
+      "publisher": "GeoNames",
+      "title": "Pinjarra 2063293",
+      "label": "GeoNames｜Pinjarra 2063293",
+      "url": "https://www.geonames.org/2063293/pinjarra.html",
+      "access": "115.87351,-32.62980 城镇参考"
     }
   ]
 }
