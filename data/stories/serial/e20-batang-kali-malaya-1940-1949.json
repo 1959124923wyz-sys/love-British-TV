@@ -1,13 +1,13 @@
 {
   "schema": "atlas-major-story-v1",
   "id": "E20-MAL-BATANG-KALI",
-  "title": "巴当加里屠杀：英军枪杀、焚村与马来亚橡胶锡业",
+  "title": "马来亚紧急状态：巴当加里、集体拘留与强制迁村",
   "region": "马来亚雪兰莪、霹雳、新加坡及华南港口",
   "start_year": 1945,
-  "end_year": 1949,
-  "period": "1945—1949年",
-  "subtitle": "橡胶园家庭、殖民紧急条例与追责",
-  "lead": "1948年12月，英军苏格兰卫队巡逻队在雪兰莪巴当加里一带的橡胶园先后射杀24名手无武器的平民，烧毁工人长屋。殖民当局称死者逃跑。家属提出调查要求，部分士兵后来供述了另一种经过。同一时期，英方以紧急条例授权拘押、焚毁和遣送，并通过供应部采购及英镑区储备制度支配重要原料和外汇。",
+  "end_year": 1959,
+  "period": "1945—1959年（附1960年结局）",
+  "subtitle": "殖民橡胶锡业、居民流离失所与独立",
+  "lead": "1948年12月，英军苏格兰卫队巡逻队在雪兰莪巴当加里一带的橡胶园先后射杀24名手无武器的平民，烧毁工人长屋。殖民当局称死者逃跑。家属提出调查要求，部分士兵后来供述了另一种经过。同一时期，英方以紧急条例授权拘押、焚毁和遣送，并通过供应部采购及英镑区储备制度支配重要原料和外汇。 1950年代，殖民行政推行大规模迁村与集体拘禁，地方居民在失去住所、行动自由和生计的过程中经历了长期社会改变。1957年独立后，紧急状态延续至1960年。",
   "sections": [
     {
       "id": "industry",
@@ -129,6 +129,122 @@
         "E20-MAL-SRC-ECHR",
         "E20-MAL-SRC-WEST"
       ]
+    },
+    {
+      "id": "resettle",
+      "heading": "从拘留走向大规模强制迁村",
+      "period_start_year": 1950,
+      "period_end_year": 1951,
+      "source_keys": [
+        "E20-T020-SRC-MAR50",
+        "E20-T020-SRC-FEB51",
+        "E20-T020-SRC-MAY51",
+        "E20-T020-SRC-NAM"
+      ],
+      "paragraphs": [
+        "[[E20-T020-POLICY|1950年3月16日英国政府公布土地及迁村政策]]。殖民大臣声称，州政府优先考虑在原有土地上安置居民并赋予地权，不能原地安置时则实行异地迁移。联邦政府拨款建设道路、排水及其他设施，马来亚华人公会等组织亦参与援助。政策由殖民行政机关推动，移居家庭的生计与土地权利因而受到行政决定支配。",
+        "[[E20-T020-FEB|1951年2月27日英国殖民大臣称约12万人已经迁置、另约28万人待迁]]。[[E20-T020-MAY|5月2日又报告联邦范围的迁村计划约完成一半]]。官方把安置与反叛乱政策以及种植园劳工集中管理联系在一起。[[E20-T020-TOTAL|截至1951年底已有逾40万人进入约500个新村]]，为英国国家陆军博物馆的回顾统计。新村建设与对居民自由行动的严厉限制并存。"
+      ]
+    },
+    {
+      "id": "detention",
+      "heading": "集体拘留与申诉权",
+      "period_start_year": 1951,
+      "period_end_year": 1951,
+      "source_keys": [
+        "E20-T020-SRC-FEB51",
+        "E20-T020-SRC-MAR51",
+        "E20-T020-SRC-DET51"
+      ],
+      "paragraphs": [
+        "1951年2月的英国议会辩论中，议员指出此前未经审判的拘禁者中包括被承认无辜的人。殖民大臣承认行政拘留有误拘风险，并承认有人不知道可以申诉，表示已要求高级专员加强告知。政府未在该次答复中给出当日全部拘禁人数。",
+        "[[E20-T020-COLLECT|1951年3月14日殖民部确认集体拘留令的使用]]，居民可因所在村落或地区被视为不合作而受到集体拘留，之后才接受审查。[[E20-T020-DET|5月9日英国政府承认有人被拘禁超过两年]]，且多数案件没有刑事审判。个别拘留令虽有异议程序，却不能替代公开法庭对罪责的审理。"
+      ]
+    },
+    {
+      "id": "tras",
+      "heading": "彭亨都赖居民集体迁离",
+      "period_start_year": 1951,
+      "period_end_year": 1951,
+      "source_keys": [
+        "E20-T020-SRC-TRAS",
+        "E20-T020-SRC-GTR"
+      ],
+      "paragraphs": [
+        "都赖（Tras）是彭亨的旧矿业及橡胶产区聚落。历史学者Tan Teng Phee通过当地居民的访谈和同期报道追查殖民紧急状态下的生活。1951年英国高级专员遇害后，殖民政府把都赖居民视为怀疑对象，实施集体迁离。",
+        "[[E20-T020-TRAS|1951年11月殖民当局强制迁走都赖新村和镇区2,160名居民]]。居民被送往霹雳怡保拘留营，家庭被迫离开住房、经营场所和耕作地。对许多居民而言，迁村不仅改变住处，也中断了原来的生活与经济关系。"
+      ]
+    },
+    {
+      "id": "ipoh",
+      "heading": "拘留营中的居民与流散",
+      "period_start_year": 1952,
+      "period_end_year": 1952,
+      "source_keys": [
+        "E20-T020-SRC-TRAS"
+      ],
+      "paragraphs": [
+        "[[E20-T020-IPOH|1952年2—3月都赖被拘居民在怡保分批获释]]。当地研究记载首批485人获释，随后另有400人获释；仍被拘者继续受到调查。部分接受访谈的原居民陈述，他们未获告知拘留理由而失去自由一至两年。",
+        "获释居民当时仍不得返回都赖，不少家庭迁居彭亨其他新村或投靠亲属。新的居住与生产安排使原有社区关系发生分散。有关居民后来如何取得住房和耕地、原财产是否获得赔偿，仍是具体家庭生活史的重要问题。"
+      ]
+    },
+    {
+      "id": "tanjong",
+      "heading": "丹戎马林的集体惩罚",
+      "period_start_year": 1952,
+      "period_end_year": 1952,
+      "source_keys": [
+        "E20-T020-SRC-LORD52",
+        "E20-T020-SRC-APR52",
+        "E20-T020-SRC-GTM"
+      ],
+      "paragraphs": [
+        "[[E20-T020-TM|1952年4月7日英国上院辩论丹戎马林的集体惩罚]]。议员质问对居民施加严厉居家宵禁、粮食限制及其公共卫生后果。政府以安全和切断叛乱者物资来源解释措施，但议会内部也有意见认为限制具有惩罚性，波及无辜居民。",
+        "[[E20-T020-TMEND|1952年4月9日每日22小时居家宵禁解除]]。4月30日殖民大臣在下院说明，较短的宵禁仍然存在，贫困居民所获救济主要来自当地社团，并称政府认为不必提供额外救济。议员继续追问普通家庭遭受的生活困难与集体惩罚的正当性。"
+      ]
+    },
+    {
+      "id": "councils",
+      "heading": "新村行政、地方权力与土地",
+      "period_start_year": 1952,
+      "period_end_year": 1954,
+      "source_keys": [
+        "E20-T020-SRC-EHM",
+        "E20-T020-SRC-HACK"
+      ],
+      "paragraphs": [
+        "[[E20-T020-COUNCIL|1952年地方议会条例设立新村地方议会制度]]。历史研究记载，部分社区随后发展民选地方行政机构。殖民政府同时借公共服务和政治参与谋求居民支持；这与此前的强制迁离、行动管制属于同一时期的不同政策。",
+        "Karl Hack的研究区分新村迁置和矿业、种植园劳动者的集中管理：二者涵盖不同人群及不同安排。其研究估计1949年底至1954年逾56万人被迫迁入新村。该阶段估计范围与1951年底统计不同，反映迁移政策在后续年份继续发展。"
+      ]
+    },
+    {
+      "id": "reopening",
+      "heading": "都赖重新开放与漫长返乡",
+      "period_start_year": 1954,
+      "period_end_year": 1957,
+      "source_keys": [
+        "E20-T020-SRC-TRAS",
+        "E20-T020-SRC-GTR"
+      ],
+      "paragraphs": [
+        "[[E20-T020-REOPEN|1954年12月英国殖民政府重新开放都赖并允许胶园经营者返回割胶]]。但居民住宅及商业设施的重建仍需时间。先前被迁居民在外地建立新的家庭生计，回到旧社区也需要新的住房及土地安排。",
+        "[[E20-T020-RETURN|1957年9月23日首批约40户、250名原居民回到都赖]]。这一批返乡已经发生在马来亚独立之后。口述史研究记载，到1958年6月返乡者超过600人；至1960年紧急状态结束，约三分之一的原居民返回。"
+      ]
+    },
+    {
+      "id": "independence",
+      "heading": "华玲谈判与独立后的紧急状态",
+      "period_start_year": 1955,
+      "period_end_year": 1959,
+      "source_keys": [
+        "E20-T020-SRC-BAL",
+        "E20-T020-SRC-EHM",
+        "E20-T020-SRC-NAM"
+      ],
+      "paragraphs": [
+        "[[E20-T020-BALING|1955年12月华玲谈判未能达成协议]]。马来亚地方政治领导人与马共代表就结束冲突及政治地位等问题进行谈判，未达成共识。谈判已发生在地方政府权力逐步扩大的时期。",
+        "[[E20-KEN-MALAYA|1957年8月31日马来亚联合邦独立]]。英国直接殖民统治终结，但紧急状态持续至1960年。此前英国殖民政府的政策责任，与独立后马来亚政府及仍参与的英联邦力量的责任须按政治制度和实际行为分别理解。"
+      ]
     }
   ],
   "topic_source_claims": [
@@ -222,6 +338,82 @@
         "E20-MAL-SRC-WEST"
       ],
       "verification_depth": "法院档案、议会答复、殖民行政与统计文书及家属证词。"
+    },
+    {
+      "section_id": "resettle",
+      "claim": "从拘留走向大规模强制迁村",
+      "source_keys": [
+        "E20-T020-SRC-MAR50",
+        "E20-T020-SRC-FEB51",
+        "E20-T020-SRC-MAY51",
+        "E20-T020-SRC-NAM"
+      ],
+      "verification_depth": "同期议会原文、当地口述史研究、官方历史；独立前后责任分期"
+    },
+    {
+      "section_id": "detention",
+      "claim": "集体拘留与申诉权",
+      "source_keys": [
+        "E20-T020-SRC-FEB51",
+        "E20-T020-SRC-MAR51",
+        "E20-T020-SRC-DET51"
+      ],
+      "verification_depth": "同期议会原文、当地口述史研究、官方历史；独立前后责任分期"
+    },
+    {
+      "section_id": "tras",
+      "claim": "彭亨都赖居民集体迁离",
+      "source_keys": [
+        "E20-T020-SRC-TRAS",
+        "E20-T020-SRC-GTR"
+      ],
+      "verification_depth": "同期议会原文、当地口述史研究、官方历史；独立前后责任分期"
+    },
+    {
+      "section_id": "ipoh",
+      "claim": "拘留营中的居民与流散",
+      "source_keys": [
+        "E20-T020-SRC-TRAS"
+      ],
+      "verification_depth": "同期议会原文、当地口述史研究、官方历史；独立前后责任分期"
+    },
+    {
+      "section_id": "tanjong",
+      "claim": "丹戎马林的集体惩罚",
+      "source_keys": [
+        "E20-T020-SRC-LORD52",
+        "E20-T020-SRC-APR52",
+        "E20-T020-SRC-GTM"
+      ],
+      "verification_depth": "同期议会原文、当地口述史研究、官方历史；独立前后责任分期"
+    },
+    {
+      "section_id": "councils",
+      "claim": "新村行政、地方权力与土地",
+      "source_keys": [
+        "E20-T020-SRC-EHM",
+        "E20-T020-SRC-HACK"
+      ],
+      "verification_depth": "同期议会原文、当地口述史研究、官方历史；独立前后责任分期"
+    },
+    {
+      "section_id": "reopening",
+      "claim": "都赖重新开放与漫长返乡",
+      "source_keys": [
+        "E20-T020-SRC-TRAS",
+        "E20-T020-SRC-GTR"
+      ],
+      "verification_depth": "同期议会原文、当地口述史研究、官方历史；独立前后责任分期"
+    },
+    {
+      "section_id": "independence",
+      "claim": "华玲谈判与独立后的紧急状态",
+      "source_keys": [
+        "E20-T020-SRC-BAL",
+        "E20-T020-SRC-EHM",
+        "E20-T020-SRC-NAM"
+      ],
+      "verification_depth": "同期议会原文、当地口述史研究、官方历史；独立前后责任分期"
     }
   ],
   "sources": [
@@ -568,7 +760,130 @@
       "label": "英国印太事务国务大臣｜2025年3月31日致家属行动委员会信",
       "url": "https://m.aliran.com/web-specials/uk-government-deeply-regrets-batang-kali-massacre-full-text-of-the-letter",
       "access": "马来西亚团体公布全文，承认过去给死者贴标签的说法错误。"
+    },
+    {
+      "id": "E20-T020-SRC-MAR50",
+      "publisher": "英国议会 Hansard",
+      "title": "Malaya (Chinese Squatters)",
+      "label": "英国议会 Hansard｜Malaya (Chinese Squatters)",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1950/mar/16/malaya-chinese-squatters",
+      "access": "1950-03-16，卷472栏77–78W，迁居与土地权利"
+    },
+    {
+      "id": "E20-T020-SRC-FEB51",
+      "publisher": "英国议会 Hansard",
+      "title": "Malaya",
+      "label": "英国议会 Hansard｜Malaya",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1951/feb/27/malaya",
+      "access": "1951-02-27，卷484栏2041–2043，迁村进度及误拘无辜者"
+    },
+    {
+      "id": "E20-T020-SRC-MAR51",
+      "publisher": "英国议会 Hansard",
+      "title": "Detained Persons",
+      "label": "英国议会 Hansard｜Detained Persons",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1951/mar/14/detained-persons",
+      "access": "1951-03-14，卷485栏175–176W，第109问，个别及集体拘留令"
+    },
+    {
+      "id": "E20-T020-SRC-MAY51",
+      "publisher": "英国议会 Hansard",
+      "title": "Malaya (Anti-Bandit Campaign)",
+      "label": "英国议会 Hansard｜Malaya (Anti-Bandit Campaign)",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1951/may/02/malaya-anti-bandit-campaign",
+      "access": "1951-05-02，卷487栏142–143W，迁村进展及劳工集中"
+    },
+    {
+      "id": "E20-T020-SRC-DET51",
+      "publisher": "英国议会 Hansard",
+      "title": "Detained Persons",
+      "label": "英国议会 Hansard｜Detained Persons",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1951/may/09/detained-persons",
+      "access": "1951-05-09，卷487栏219W，第79问，逾两年拘留及申诉"
+    },
+    {
+      "id": "E20-T020-SRC-NAM",
+      "publisher": "英国国家陆军博物馆",
+      "title": "Malayan Emergency",
+      "label": "英国国家陆军博物馆｜Malayan Emergency",
+      "url": "https://www.nam.ac.uk/explore/malayan-emergency",
+      "access": "New villages、Independence章节；1951年底统计及1957/1960分期"
+    },
+    {
+      "id": "E20-T020-SRC-TRAS",
+      "publisher": "新加坡国家图书馆 BiblioAsia",
+      "title": "Tan Teng Phee：The Case of Tras New Village and the Assassination of Henry Gurney During the Malayan Emergency",
+      "label": "新加坡国家图书馆 BiblioAsia｜Tan Teng Phee：The Case of Tras New Village and the Assassination of Henry Gurney During the Malayan Emergency",
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-6-issue-4-jan-2011-henry-gurney-assasination-malayan-emergency/",
+      "access": "2011年，第6卷第4期；当地居民口述史及同期报道，迁离、拘留、释放、返乡"
+    },
+    {
+      "id": "E20-T020-SRC-LORD52",
+      "publisher": "英国议会 Hansard",
+      "title": "Restrictions at Tanjong Malim",
+      "label": "英国议会 Hansard｜Restrictions at Tanjong Malim",
+      "url": "https://api.parliament.uk/historic-hansard/lords/1952/apr/07/restrictions-at-tanjong-malim",
+      "access": "1952-04-07，卷176栏15–32，集体惩罚、人道质询"
+    },
+    {
+      "id": "E20-T020-SRC-APR52",
+      "publisher": "英国议会 Hansard",
+      "title": "Tanjong Malim (Collective Punishment)",
+      "label": "英国议会 Hansard｜Tanjong Malim (Collective Punishment)",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1952/apr/30/tanjong-malim-collective-punishment",
+      "access": "1952-04-30，卷499栏1453–1455，宵禁与救济答复"
+    },
+    {
+      "id": "E20-T020-SRC-HACK",
+      "publisher": "Economic History Malaysia",
+      "title": "Karl Hack：The Emergency 1948–1960: Malayan communist party strategies",
+      "label": "Economic History Malaysia｜Karl Hack：The Emergency 1948–1960: Malayan communist party strategies",
+      "url": "https://www.ehm.my/publications/articles/the-emergency-1948%E2%80%931960-malayan-communist-party-strategies",
+      "access": "全文，迁村统计、遣返及独立前后责任"
+    },
+    {
+      "id": "E20-T020-SRC-EHM",
+      "publisher": "Economic History Malaysia",
+      "title": "From friend to foe: Britain and the communist party of Malaya in the contest for the federation",
+      "label": "Economic History Malaysia｜From friend to foe: Britain and the communist party of Malaya in the contest for the federation",
+      "url": "https://www.ehm.my/publications/articles/from-friend-to-foe-britain-and-the-communist-party-of-malaya-in-the-contest-for-the-federation",
+      "access": "全文，1952新村地方议会与1955谈判，CO 1022档案索引"
+    },
+    {
+      "id": "E20-T020-SRC-BAL",
+      "publisher": "马来西亚皇家警察",
+      "title": "History of Royal Malaysia Police: Baling Peace Talks",
+      "label": "马来西亚皇家警察｜History of Royal Malaysia Police: Baling Peace Talks",
+      "url": "https://www.rmp.gov.my/content/garis-masa-sejarah?lang=en",
+      "access": "1955-12-28至29，谈判未达成协议；官方回顾"
+    },
+    {
+      "id": "E20-T020-SRC-GTR",
+      "publisher": "GeoNames",
+      "title": "Teras / Tras / 都赖",
+      "label": "GeoNames｜Teras / Tras / 都赖",
+      "url": "https://www.geonames.org/1732664/teras.html",
+      "access": "WGS84具名聚落坐标3.742,101.8112"
+    },
+    {
+      "id": "E20-T020-SRC-GTM",
+      "publisher": "GeoNames",
+      "title": "Tanjong Malim / Tanjung Malim",
+      "label": "GeoNames｜Tanjong Malim / Tanjung Malim",
+      "url": "https://www.geonames.org/1732672/tanjong-malim.html",
+      "access": "WGS84具名聚落坐标3.681,101.5198"
+    },
+    {
+      "id": "E20-T020-SRC-GBAL",
+      "publisher": "GeoNames",
+      "title": "Baling, Kedah",
+      "label": "GeoNames｜Baling, Kedah",
+      "url": "https://www.geonames.org/advanced-search.html?q=Malaysia&startRow=3000",
+      "access": "检索结果具名聚落5.6780611,100.917703；分页可能变动"
     }
   ],
-  "related_story_ids": []
+  "related_story_ids": [
+    "E20-T019-MALAYA-RUBBER-TIN-LABOUR-1900-1942",
+    "E20-T021-SINGAPORE-LABOUR-DETENTION-1945-1959"
+  ]
 }
