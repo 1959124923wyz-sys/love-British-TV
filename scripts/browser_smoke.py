@@ -269,9 +269,16 @@ try:
     driver.find_element(By.ID, "browseDecadeNext").click()
     verify("1950s are available as a historical preview",
            """document.querySelector('#chapterTrack [data-decade="1950"]').classList.contains('topic-preview')""", driver)
-    verify("1960s remain unavailable",
-           """document.querySelector('#chapterTrack [data-decade="1960"]').classList.contains('unpublished')""", driver)
+    for decade in range(1960, 2000, 10):
+        verify(f"{decade}s are available as a historical preview",
+               f"""document.querySelector('#chapterTrack [data-decade="{decade}"]').classList.contains('topic-preview')""", driver)
     driver.execute_script("""document.querySelector('#chapterTrack [data-decade="1960"]').click()""")
+    wait.until(lambda d: d.execute_script("return document.getElementById('bigYear').textContent==='1960' && document.querySelector('#yearRange').max==='1969' && document.querySelector('#workspace').dataset.atlasReady==='true'"))
+    current = driver.execute_script("return document.getElementById('bigYear').textContent")
+    driver.find_element(By.ID, "browseDecadeNext").click()
+    verify("2000s remain unavailable",
+           """document.querySelector('#chapterTrack [data-decade="2000"]').classList.contains('unpublished')""", driver)
+    driver.execute_script("""document.querySelector('#chapterTrack [data-decade="2000"]').click()""")
     assert driver.execute_script("return document.getElementById('bigYear').textContent")==current
     # Stress a 500-year navigation span: card count and slot widths must remain bounded.
     driver.execute_script("""
