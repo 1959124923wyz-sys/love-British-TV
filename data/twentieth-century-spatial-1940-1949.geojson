@@ -5467,6 +5467,47 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "burma-t012-rangoon"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "malaya-t019-klang",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.44333,
+          3.03667
+        ]
+      },
+      "properties": {
+        "name": "巴生 · 橡胶劳工罢工",
+        "start_year": 1941,
+        "end_year": 1941,
+        "display_kind": "resistance",
+        "summary_zh": "1941年巴生地区胶园劳工罢工。",
+        "source_ids": [
+          "E20-T019-SRC-H",
+          "E20-T019-SRC-WIL",
+          "E20-T019-SRC-G"
+        ],
+        "source_urls": [
+          "https://hansard.parliament.uk/commons/1941-05-28/debates/8390e49d-b514-4722-9b49-7967d7ac996b/Malaya%28RubberEstateWorkers%29",
+          "https://bookshop.iseas.edu.sg/publication/1400",
+          "https://www.geonames.org/1732905"
+        ],
+        "named_anchors": [
+          "巴生"
+        ],
+        "mapping_method": "WGS84 named locality; ISEAS Klang strike study and GeoNames",
+        "related_event_ids": [
+          "E20-T019-KLANG"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "malaya-t019-klang"
+      }
     }
   ]
 }
