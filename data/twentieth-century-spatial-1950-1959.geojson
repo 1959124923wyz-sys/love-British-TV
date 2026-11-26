@@ -3845,12 +3845,14 @@
         "source_ids": [
           "E20-KEN-SRC-MAL",
           "E20-MAL-SRC-MINE",
-          "E20-MAL-SRC-UN2"
+          "E20-MAL-SRC-UN2",
+          "E20-T020-SRC-TRAS"
         ],
         "source_urls": [
           "https://www.legislation.gov.uk/uksi/1957/1533/pdfs/uksi_19571533_en.pdf",
           "https://publications.gc.ca/collections/collection_2026/isde-ised/c12-54/C12-54-6-137-eng.pdf",
-          "https://digitallibrary.un.org/record/4072429/files/A_1269_Add.2-EN.pdf"
+          "https://digitallibrary.un.org/record/4072429/files/A_1269_Add.2-EN.pdf",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-6-issue-4-jan-2011-henry-gurney-assasination-malayan-emergency/"
         ],
         "named_anchors": [
           "怡保与近打河谷"
@@ -3858,7 +3860,8 @@
         "mapping_method": "Named historical site or locality reference in WGS84.",
         "related_event_ids": [
           "E20-MAL-TIN-PERAK",
-          "E20-KEN-MALAYA"
+          "E20-KEN-MALAYA",
+          "E20-T020-IPOH"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -4849,6 +4852,130 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "stable_id": "kenya46-said"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "malaya-t020-tras",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.8112,
+          3.742
+        ]
+      },
+      "properties": {
+        "name": "都赖 · 强制迁离与返乡",
+        "start_year": 1951,
+        "end_year": 1957,
+        "display_kind": "repression",
+        "summary_zh": "1951年居民被强制迁离；1954年重新开放，1957年首批居民返乡。",
+        "source_ids": [
+          "E20-T020-SRC-TRAS",
+          "E20-T020-SRC-GTR"
+        ],
+        "source_urls": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-6-issue-4-jan-2011-henry-gurney-assasination-malayan-emergency/",
+          "https://www.geonames.org/1732664/teras.html"
+        ],
+        "named_anchors": [
+          "都赖"
+        ],
+        "mapping_method": "WGS84 named populated place",
+        "related_event_ids": [
+          "E20-T020-TRAS",
+          "E20-T020-REOPEN",
+          "E20-T020-RETURN"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "malaya-t020-tras"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "malaya-t020-tanjong-malim",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5198,
+          3.681
+        ]
+      },
+      "properties": {
+        "name": "丹戎马林 · 集体惩罚",
+        "start_year": 1952,
+        "end_year": 1952,
+        "display_kind": "repression",
+        "summary_zh": "1952年殖民当局施加严厉宵禁及粮食限制。",
+        "source_ids": [
+          "E20-T020-SRC-LORD52",
+          "E20-T020-SRC-GTM",
+          "E20-T020-SRC-APR52"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/lords/1952/apr/07/restrictions-at-tanjong-malim",
+          "https://api.parliament.uk/historic-hansard/commons/1952/apr/30/tanjong-malim-collective-punishment",
+          "https://www.geonames.org/1732672/tanjong-malim.html"
+        ],
+        "named_anchors": [
+          "丹戎马林"
+        ],
+        "mapping_method": "WGS84 named populated place",
+        "related_event_ids": [
+          "E20-T020-TM",
+          "E20-T020-TMEND"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "malaya-t020-tanjong-malim"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "malaya-t020-baling",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.917703,
+          5.6780611
+        ]
+      },
+      "properties": {
+        "name": "华玲 · 1955年谈判",
+        "start_year": 1955,
+        "end_year": 1955,
+        "display_kind": "political",
+        "summary_zh": "马来亚地方政府与马共代表谈判未达成协议。",
+        "source_ids": [
+          "E20-T020-SRC-BAL",
+          "E20-T020-SRC-EHM",
+          "E20-T020-SRC-GBAL"
+        ],
+        "source_urls": [
+          "https://www.ehm.my/publications/articles/from-friend-to-foe-britain-and-the-communist-party-of-malaya-in-the-contest-for-the-federation",
+          "https://www.rmp.gov.my/content/garis-masa-sejarah?lang=en",
+          "https://www.geonames.org/advanced-search.html?q=Malaysia&startRow=3000"
+        ],
+        "named_anchors": [
+          "华玲"
+        ],
+        "mapping_method": "WGS84 named populated place",
+        "related_event_ids": [
+          "E20-T020-BALING"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "malaya-t020-baling"
       }
     }
   ]
