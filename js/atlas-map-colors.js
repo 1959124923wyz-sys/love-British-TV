@@ -39,5 +39,6 @@
  ]);
  const api=Object.freeze({colors,aliases,resolve,map,legend});
  root.AtlasMapColors=api;
+ if(root.document?.documentElement){for(const [k,v] of Object.entries(colors))root.document.documentElement.style.setProperty('--atlas-map-'+k.replaceAll('_','-'),v);}
  if(typeof module!=='undefined'&&module.exports)module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);
