@@ -615,6 +615,35 @@
       "area_sqkm": null
     },
     {
+      "id": "E20-T083-DISC00",
+      "year": 1900,
+      "start_year": 1900,
+      "end_year": 1900,
+      "visible_from": 1900,
+      "date_label": "1900年",
+      "name": "巴纳巴磷矿进入公司开发计划",
+      "description": "1900年巴纳巴的磷矿受到太平洋群岛公司关注，开采及出口逐步改变岛上的土地用途和生计。",
+      "short_description": "1900年巴纳巴的磷矿受到太平洋群岛公司关注，开采及出口逐步改变岛上的土地用途和生计。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "同期立法、议会或司法文书与地方社区研究"
+      },
+      "lat": -0.855,
+      "lng": 169.539,
+      "source_ids": [
+        "E20-PHOS-SRC-BAN-FLIGHT",
+        "E20-PHOS-SRC-BAN-COM",
+        "E20-PHOS-SRC-G-BAN"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
       "id": "E20-SAW-1901-BOS",
       "year": 1901,
       "start_year": 1901,
@@ -3001,6 +3030,33 @@
         "E20-T027-SRC-GETTY"
       ],
       "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T084-CONC06",
+      "year": 1906,
+      "start_year": 1906,
+      "end_year": 1906,
+      "visible_from": 1906,
+      "date_label": "1906年",
+      "name": "太平洋磷矿公司取得瑙鲁矿权",
+      "description": "瑙鲁在德国殖民统治下，矿权于1906年转给英国注册的太平洋磷矿公司；随后开始开采。",
+      "short_description": "瑙鲁在德国殖民统治下，矿权于1906年转给英国注册的太平洋磷矿公司；随后开始开采。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "同期立法、议会或司法文书与地方社区研究"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-PHOS-SRC-NAU-CLAIM"
+      ],
+      "geo_precision": "unlocated",
       "historical_control_boundary_verified": false,
       "territorial_claim": false,
       "fill_authorized": false,
@@ -6565,6 +6621,38 @@
       "label": "Mapcarta / OpenStreetMap｜Denshawai village",
       "url": "https://mapcarta.com/13061956",
       "access": "村点30.60667,30.81987，与Getty同地名参考；采用Getty"
+    },
+    {
+      "id": "E20-PHOS-SRC-BAN-FLIGHT",
+      "publisher": "阿德莱德大学研究库",
+      "title": "Flight of the frigate bird: Ocean Island, phosphate mining and Project Banaba",
+      "label": "阿德莱德大学研究库｜Flight of the frigate bird: Ocean Island, phosphate mining and Project Banaba",
+      "url": "https://digital.library.adelaide.edu.au/items/c7f83eec-e386-4cd8-aa57-1b75aaff4be4",
+      "access": "论文摘要：采矿造成土地、生计与文化破坏；不以百分比反推几何"
+    },
+    {
+      "id": "E20-PHOS-SRC-BAN-COM",
+      "publisher": "Banaban Voice（巴纳巴社区史）",
+      "title": "拉比岛购买与移居史",
+      "label": "Banaban Voice（巴纳巴社区史）｜拉比岛购买与移居史",
+      "url": "https://www.banaban.com/banabans-rabi-history",
+      "access": "含1946年殖民土地专员Maude备忘录转录；购买年份以ANU核对"
+    },
+    {
+      "id": "E20-PHOS-SRC-G-BAN",
+      "publisher": "GeoNames",
+      "title": "Banaba Island 2110256",
+      "label": "GeoNames｜Banaba Island 2110256",
+      "url": "https://www.geonames.org/2110256",
+      "access": "现代岛屿参考点 -0.855,169.539"
+    },
+    {
+      "id": "E20-PHOS-SRC-NAU-CLAIM",
+      "publisher": "国际法院（瑙鲁申请书）",
+      "title": "Certain Phosphate Lands in Nauru, Application 1989",
+      "label": "国际法院（瑙鲁申请书）｜Certain Phosphate Lands in Nauru, Application 1989",
+      "url": "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/80/6652.pdf",
+      "access": "申请书文本、前置地图图例；为原告主张，不是法院认定；地图截图超时"
     }
   ]
 }
