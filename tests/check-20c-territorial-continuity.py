@@ -136,3 +136,22 @@ assert not active("newfoundland-labrador-mainland", 1949)
 assert active("yukon-land-claims-legacy", 1982)[0]["display_kind"] == "land_dispossession"
 assert active("nunavut-1999-territory", 1999) and not active("nunavut-1999-territory", 1998)
 print("PASS: Canadian provincial boundaries, 1982 land rights and Nunavut 1999.")
+
+# Batch eight: year-end Hong Kong transition and Australian law-context layers.
+for stable in ("hong-kong-main-island", "kowloon-south-peninsula", "stonecutters-island", "lantau-new-territories", "lamma-new-territories", "hong-kong-new-territories-mainland"):
+    assert active(stable, 1981)[0]["end_year"] == 1981
+    assert active(stable, 1982)[0]["related_event_ids"] == ["E20-B8-HK-NEG1982"]
+    assert active(stable, 1983)[0]["end_year"] == 1983
+    assert active(stable, 1984)[0]["related_event_ids"] == ["E20-EXIT-HKDECL"]
+    assert active(stable, 1996) and not active(stable, 1997)
+    assert active(stable, 1982)[0]["display_kind"] == "administrative"
+assert not active("au-qld-land-rights-legacy", 1981)
+assert active("au-qld-land-rights-legacy", 1982)[0]["related_event_ids"] == ["E20-B8-QLD-LAND1982"]
+assert active("au-qld-land-rights-legacy", 1984)[0]["start_year"] == 1984
+assert active("au-qld-land-rights-legacy", 1991)[0]["start_year"] == 1991
+assert not active("au-wa-heritage-law-legacy", 1971) and active("au-wa-heritage-law-legacy", 1972)
+for stable in ("au-qld-land-rights-legacy", "au-wa-heritage-law-legacy"):
+    p = active(stable, 1982)[0]
+    assert p["territorial_claim"] is False and p["dash_only"] and not p["fill_authorized"]
+    assert p["display_kind"] == "land_dispossession" and p["spatial_semantics"]
+print("PASS: batch eight Hong Kong transition and 1982 Australian law context.")
