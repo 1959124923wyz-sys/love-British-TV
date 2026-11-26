@@ -4479,6 +4479,8 @@ window.atlasStoryBridge={
  activeFocusId:()=>focusedEventId,
  selectedEventId:()=>selected,
  activeHasEvent:id=>Boolean(atlas?.events?.some(e=>e.id===id)),
+ // Read-only loaded spatial evidence for candidate-isolation desktop QA.
+ activeSpatialHasEvent:id=>Boolean(nineteenthSpatial?.features?.some(f=>f.properties?.related_event_ids?.includes(id))),
  // A narrow read-only QA hook for independently dated military/admin site cores.
  active18cControlCoreIds:()=>year>=1700&&preview18cReady&&$('toggleControlAreas').checked?
   (eighteenthAcadiaControlCores?.features||[])
