@@ -17,7 +17,7 @@
   host.openPanel('dossier');
  }
  function make(f){
-  const line=f.geometry.type==='MultiLineString',c=line?'#77baca':f.properties.kind==='orissa_maratha_and_nominal_fiscal_claim'?'#86c9aa':'#e4bd76';
+  const line=f.geometry.type==='MultiLineString',c=window.AtlasMapColors.resolve(line?'physical':f.properties.kind==='orissa_maratha_and_nominal_fiscal_claim'?'local_governance':'revenue');
   const lay=L.geoJSON(f.geometry,{pane,renderer,color:c,weight:line?1.85:1.5,opacity:line?.85:1,dashArray:line?'5 6':'2 3',
    lineCap:'round',fill:!line,fillOpacity:line?0:.68,interactive:true,bubblingMouseEvents:false,
    pointToLayer:(_f,latlng)=>L.circleMarker(latlng,{pane,renderer,radius:5.2,color:c,weight:1.5,
