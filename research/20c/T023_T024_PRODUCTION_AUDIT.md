@@ -6,3 +6,7 @@
 - T024核越南国家历史博物馆的当地历史及抗议照片，英方议会答复区分职责与实际参与；16度线仅战区任务划分。1946-01-30撤军完成日期是政府计划，NAM回顾为夏季撤出，故不强行确定实际日。1-28议会答复缺乏越方精确伤亡数据，不把交战人员估算称平民死亡。2月信函为外交官转述；4-18英国非正式拒绝承认据FRUS d38。后续追英法协议全文、撤出军政原卷、民众财产及生命损失档案。
 - 31节、6547净正文字符、38来源键、31新事件、4城市点。部分两题共用的同期文件以各题引用键登记，非38份互异档案。新增T025/T026研究认领，1959之后正式互动数据仍缺。
 - 独立生产审查及出版门禁分开；未经Pages证明不填已上线。
+
+## Rebase-equivalent integration checkpoint
+
+PR #617 has merged at f0678832fd7df3d15b96e5d3faaa6fa0f50106bb. PR #618 now targets main directly; require fresh mandatory checks and review on this head before merge. The 38 source records are per-topic references, not necessarily 38 distinct documents. All four coordinates are modern named-city reference points, not exact sites of individual incidents or historic occupation boundaries.
