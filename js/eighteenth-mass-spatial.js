@@ -16,10 +16,7 @@ const polyRenderer=L.svg({pane:areaPane}),pointRenderer=L.svg({pane:corePane});
 let meta=null,loaded=false,error=null,year=host.getYear();
  const reader=window.AtlasReaderCopy;
 const active=(x,y)=>!x.superseded_by&&x.periods.some(p=>p.start_year<=y&&y<=p.end_year);
-const color={military:'#ae95df',settlement:'#8eccab',administration:'#a78bfa',wartime_occupation:'#e0a17c',paper_claim:'#e2ba79',
-revenue:'#dfb66c',trade_influence:'#73cbbf',military_vicinity:'#d0a8ff',foreign_occupation:'#7faab6',
- treaty_fishing:'#61c9ca',company_post:'#cbb2f5',conflict_damage:'#e2af7a',diplomacy:'#65c7b6',historic_ruins:'#c2b6a2',
- battle:'#e0a17c',resistance:'#8eccab'};
+const color=window.AtlasMapColors.map(["military","settlement","administration","wartime_occupation","paper_claim","revenue","trade_influence","military_vicinity","foreign_occupation","treaty_fishing","company_post","conflict_damage","diplomacy","historic_ruins","battle","resistance"]);
 const classText={military:'英方驻堡',settlement:'聚落',administration:'殖民行政涉及区',wartime_occupation:'英军短期占领',
 paper_claim:'法律/主权名义声索',revenue:'公司税收及财政权',trade_influence:'贸易、外交与间接影响',
 military_vicinity:'驻军活动地区',foreign_occupation:'其他国家管辖',
@@ -92,8 +89,8 @@ function render(){
   if(!active(x,year))continue;
   const p=x.periods.find(p=>p.start_year<=year&&year<=p.end_year);
   L.circleMarker([x.coordinates[1],x.coordinates[0]],{
-   pane:corePane,renderer:pointRenderer,radius:5.5,color:'#d7c1ff',weight:1.35,
-   fillColor:'#9d79df',fillOpacity:.88,bubblingMouseEvents:false,
+   pane:corePane,renderer:pointRenderer,radius:5.5,color:color[p.kind||x.kind]||window.AtlasMapColors.resolve('administration'),weight:1.35,
+   fillColor:color[p.kind||x.kind]||window.AtlasMapColors.resolve('administration'),fillOpacity:.88,bubblingMouseEvents:false,
    className:'atlas-18c-mass-core'
   }).bindTooltip('<strong>'+escapeHTML(x.title)+'</strong><div class="atlas-hover-summary">'+
    escapeHTML(p.start_year+'—'+p.end_year)+'</div>',
