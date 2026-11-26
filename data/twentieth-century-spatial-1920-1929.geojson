@@ -4329,6 +4329,46 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "iraq-t030-t031-ankara-1920"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "kenya-t044-kijabe-reference-1922",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.583333,
+          -0.916667
+        ]
+      },
+      "properties": {
+        "name": "基贾贝 · 保留地拨让记录",
+        "stable_id": "kenya-t044-kijabe-reference-1922",
+        "start_year": 1922,
+        "end_year": 1922,
+        "display_kind": "economic",
+        "summary_zh": "1922年12月，殖民大臣提供保留地拨让清单，其中列出1919年Kijabe附近Siabei一处5英亩地块。",
+        "source_ids": [
+          "E20-T044-SRC-RES22",
+          "E20-T044-SRC-KIJ"
+        ],
+        "source_urls": [
+          "https://hansard.parliament.uk/commons/1922-12-08/debates/953c003b-7c8a-4b02-90be-8cfd1647b7fd/NativeReservesKenya%28Alienations%29",
+          "https://geographic.org/geographic_names/name.php?c=kenya&fid=3319&uni=-3107077"
+        ],
+        "named_anchors": [
+          "Kijabe铁路站"
+        ],
+        "mapping_method": "Modern named railway station reference to archival nearby Siabei parcel; not the parcel boundary.",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T044-RES22"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
     }
   ]
 }
