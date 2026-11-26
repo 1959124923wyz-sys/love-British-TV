@@ -43,6 +43,20 @@
       46.20222,
       6.14569,
       "https://www.geonames.org/advanced-search.html?country=CH&q=Geneva"
+    ],
+    "sanremo": [
+      "REM",
+      "圣雷莫",
+      43.81725,
+      7.7772,
+      "https://www.geonames.org/3167777/sanremo.html"
+    ],
+    "ankara": [
+      "ANK",
+      "安卡拉",
+      39.91987,
+      32.85427,
+      "https://www.geonames.org/323786/ankara.html"
     ]
   },
   "events": [
@@ -79,12 +93,13 @@
       "date_label": "1920年4月25日",
       "name": "战后委任统治安排",
       "category": "political",
-      "loc": null,
+      "loc": "sanremo",
       "source_ids": [
         "E20-T030-SRC-LEAGUE",
-        "E20-T030-SRC-OSU"
+        "E20-T030-SRC-OSU",
+        "E20-T030-SRC-GEOREM"
       ],
-      "description": "战后列强指定美索不达米亚为A级委任地区，英国取得委任任务。"
+      "description": "战后列强在意大利圣雷莫指定美索不达米亚为A级委任地区，英国取得委任任务。"
     },
     {
       "id": "E20-T030-TAX",
@@ -272,9 +287,10 @@
       "date_label": "1926年6月5日",
       "name": "伊拉克与土耳其边界条约",
       "category": "political",
-      "loc": null,
+      "loc": "ankara",
       "source_ids": [
-        "E20-T030-SRC-LEAGUE"
+        "E20-T030-SRC-LEAGUE",
+        "E20-T030-SRC-GEOANK"
       ],
       "description": "英国、伊拉克和土耳其签订条约，处理两国边界争议。"
     },
