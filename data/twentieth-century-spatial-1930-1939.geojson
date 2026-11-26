@@ -4534,6 +4534,147 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "china-t015-weiret"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-baghdad-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40088,
+          33.34058
+        ]
+      },
+      "properties": {
+        "name": "巴格达 · 委任统治下的伊拉克王国",
+        "start_year": 1930,
+        "end_year": 1939,
+        "display_kind": "political",
+        "summary_zh": "1930年条约规定独立后的英伊关系。",
+        "source_ids": [
+          "E20-T030-SRC-LEAGUE",
+          "E20-T030-SRC-T30",
+          "E20-T030-SRC-GEOBAG"
+        ],
+        "source_urls": [
+          "https://history.state.gov/historicaldocuments/frus1919Parisv13/ch10subch1",
+          "https://api.parliament.uk/historic-hansard/commons/1930/jul/31/iraq",
+          "https://www.geonames.org/98182/baghdad.html"
+        ],
+        "named_anchors": [
+          "巴格达"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T030-TREATY30"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-baghdad-administration",
+        "year_stages": [
+          {
+            "start_year": 1930,
+            "end_year": 1931,
+            "controller": "local",
+            "title": "巴格达 · 委任统治下的伊拉克王国",
+            "summary_zh": "1930年条约规定独立后的英伊关系。"
+          },
+          {
+            "start_year": 1932,
+            "end_year": 1939,
+            "controller": "local",
+            "title": "巴格达 · 独立伊拉克王国",
+            "summary_zh": "1932年伊拉克加入国际联盟，委任统治终止。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-t030-t031-geneva-1930",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.14569,
+          46.20222
+        ]
+      },
+      "properties": {
+        "name": "日内瓦 · 伊拉克专题",
+        "start_year": 1932,
+        "end_year": 1932,
+        "display_kind": "political",
+        "summary_zh": "伊拉克加入国际联盟并终止委任。国际联盟在日内瓦接纳伊拉克；英国委任体制正式终止。",
+        "source_ids": [
+          "E20-T030-SRC-LEAGUE",
+          "E20-T030-SRC-ADMIT",
+          "E20-T030-SRC-FR32",
+          "E20-T030-SRC-GEOGEN"
+        ],
+        "source_urls": [
+          "https://history.state.gov/historicaldocuments/frus1919Parisv13/ch10subch1",
+          "https://iraqiembassy.us/press-statement-16/",
+          "https://history.state.gov/historicaldocuments/frus1932v02/d487",
+          "https://www.geonames.org/advanced-search.html?country=CH&q=Geneva"
+        ],
+        "named_anchors": [
+          "日内瓦"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T030-ADMIT"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-t030-t031-geneva-1930"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "iraq-t030-t031-london-1930",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.12574,
+          51.50853
+        ]
+      },
+      "properties": {
+        "name": "伦敦 · 伊拉克专题",
+        "start_year": 1933,
+        "end_year": 1933,
+        "display_kind": "political",
+        "summary_zh": "英国议会确认驻军土地安排。英国政府表示须在伊拉克入盟后五年内撤出原有驻地，并按条约取得新设施土地。",
+        "source_ids": [
+          "E20-T031-SRC-HINAIDI",
+          "E20-T031-SRC-DEB30",
+          "E20-T031-SRC-GEOLON"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1933/mar/15/hinaidi-aerodrome-bagdad",
+          "https://api.parliament.uk/historic-hansard/commons/1930/jul/31/iraq",
+          "https://www.geonames.org/advanced-search.html?country=GB&q=Londres"
+        ],
+        "named_anchors": [
+          "伦敦"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T031-BASE33"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "iraq-t030-t031-london-1930"
+      }
     }
   ]
 }
