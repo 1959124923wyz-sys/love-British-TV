@@ -9,6 +9,7 @@ paths = [ROOT / "data/twentieth-century-territorial-areas.geojson",
     ROOT / "data/twentieth-century-territorial-local-batch3.geojson",
     ROOT / "data/twentieth-century-india-provinces-1900-1930.geojson",
     ROOT / "data/twentieth-century-india-provinces-1931-1946.geojson",
+    ROOT / "data/twentieth-century-territorial-local-batch6.geojson",
          *sorted((ROOT / "data/cshapes-20c").glob("*.geojson"))]
 app = (ROOT / "app.js").read_text()
 all_features, ids, source_ids = [], set(), set()
@@ -73,7 +74,7 @@ assert len(policy) >= 20 and len(raupatu) >= 29
 for f in policy + raupatu:
     p = f["properties"]
     assert p["territorial_claim"] is False
-    assert p["inherited_geometry_feature_id"] and p["spatial_semantics"]
+    assert (p.get("inherited_geometry_feature_id") or p.get("upstream_geometry_feature_id")) and p["spatial_semantics"]
     assert p["display_kind"] == ("coercive_policy" if f in policy else "land_dispossession")
 def active(stable, y):
     return [f["properties"] for f in all_features if f["properties"]["stable_id"] == stable
@@ -109,3 +110,12 @@ assert active("india20-sindh-province", 1936)
 assert active("india20-hyderabad-states", 1946)
 assert not active("india20-hyderabad-states", 1947)
 print("PASS: historical India provinces, princely-state semantics, Bengal and 1936 changes, independence end.")
+
+# Batch six: annual legal jurisdictions and independent-state legacy layers.
+assert active("au-policy-act", 1911) and not active("au-policy-act", 1965)
+assert not active("au-policy-jervis-bay", 1914) and active("au-policy-jervis-bay", 1915)
+assert active("au-policy-nsw-pre-act", 1915) and not active("au-policy-nsw-pre-act", 1969)
+assert not active("newfoundland-island-20c", 1949)
+for stable in ("au-nsw-land-rights-legacy", "au-nt-land-rights-legacy", "nz-moriori-chatham-legacy", "banaba-island", "nauru-island"):
+    assert active(stable, 1982)[0]["display_kind"] == "land_dispossession"
+print("PASS: batch six jurisdictions and 1982 legacy layers.")
