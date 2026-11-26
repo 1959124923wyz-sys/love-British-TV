@@ -1375,7 +1375,7 @@ function renderNineteenthSpatial(){
  nineteenthSiteMarkers.clearLayers();
  if(year<1800||!nineteenthSpatial||!$('toggleTerritorialFootprints').checked)return;
  const localSiteStyle=year<1900;
- const colors={land_dispossession:'#e4b571',political:'#79bacb',local_governance:'#65c7b6',conflict:'#a5cdec',
+ const colors={coercive_policy:'#d5937d',land_dispossession:'#e4b571',political:'#79bacb',local_governance:'#65c7b6',conflict:'#a5cdec',
   administrative:'#ba9ced',charter:'#d5ac70',military_impact:'#d5937d'};
  for(const feature of nineteenthSpatial.features){
   const p=feature.properties;
