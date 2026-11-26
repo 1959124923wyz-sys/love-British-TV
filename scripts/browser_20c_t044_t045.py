@@ -15,7 +15,7 @@ try:
  first='E20-T044-RES22'
  driver.get(os.environ.get('ATLAS_TEST_URL','http://127.0.0.1:8765/')+'?year=1922')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'"))
- wait.until(lambda _:js("return !!window.atlasStoryBridge?.eventById&&!!window.HistoryStories?.openStory"))
+ wait.until(lambda _:js("return !!window.atlasStoryBridge?.eventById('E20-EXIT-KIRIBATI')&&!!window.HistoryStories?.isLinkedEvent('E20-T030-MANDATE')"))
  assert not js("return !!window.atlasStoryBridge.eventById(arguments[0])",first), 'candidate event leaked to ordinary entry'
  assert not driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]')
  assert not js("return nineteenthSpatial?.features?.some(f=>f.properties.related_event_ids.includes(arguments[0]))",first), 'candidate geometry leaked'
