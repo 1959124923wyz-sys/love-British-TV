@@ -16,3 +16,14 @@ assert.deepEqual([...t.review_event_ids].sort(),[...events.keys()].filter(id=>id
 assert.deepEqual([...t.review_feature_ids].sort(),[...maps.values()].map(f=>f.id).sort());
 assert.equal(idx.topics.find(x=>x.id==='E20-KEN-HOLA').review_entry_required,true);
 assert(!t.review_event_ids.some(id=>!id.startsWith('E20-T044-')));
+
+const gateApp=fs.readFileSync('app.js','utf8');
+const gateSource=gateApp.slice(gateApp.indexOf('function modern20cReviewGate('),gateApp.indexOf('async function fetchModernAtlas('));
+const gateFn=new Function('reviewParams',gateSource+'\nreturn modern20cReviewGate;');
+const gatePublic=gateFn({get:()=>null})(1900,idx),gatePreview=gateFn({get:()=>'1'})(1900,idx);
+assert.equal(gatePublic.eventIds.size,14);assert.equal(gatePublic.featureIds.size,4);
+assert.equal(gatePreview.eventIds.size,0);assert.equal(gatePreview.featureIds.size,0);
+assert.equal(gateFn({get:()=>null})(1800,null).eventIds.size,0);
+const approvedRegistry=JSON.parse(JSON.stringify(idx));for(const t of approvedRegistry.topics)if(t.review_entry_required){t.status='published';t.publication_review='approved';}
+assert.equal(gateFn({get:()=>null})(1900,approvedRegistry).eventIds.size,0);
+assert.equal(gateFn({get:()=>null})(1900,approvedRegistry).featureIds.size,0);
