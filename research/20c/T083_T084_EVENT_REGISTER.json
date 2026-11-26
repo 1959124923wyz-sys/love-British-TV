@@ -340,6 +340,30 @@
       "label": "英国下议院｜吉尔伯特与埃利斯群岛磷矿税占内部财政收入比例",
       "url": "https://api.parliament.uk/historic-hansard/written-answers/1969/dec/19/gilbert-and-ellice-islands-revenues",
       "access": "全文及1946–1968年逐期百分比，1949仅九个月"
+    },
+    {
+      "id": "E20-PHOS-SRC-BAN-JUD-TEXT",
+      "publisher": "英格兰衡平法院判决文本（非官方全文转录）",
+      "title": "Tito v Waddell (No. 2) [1977] Ch 106",
+      "label": "Tito v Waddell (No. 2) 1977判决全文转录",
+      "url": "https://www.uniset.ca/other/buttes/1977Ch106.html",
+      "access": "全文转录，原判页126–129、185–187及1947土地测界段；未比对纸本法报原件。1931/1947地权交易性质、面积、1975勘察及1942购岛"
+    },
+    {
+      "id": "E20-PHOS-SRC-BAN-RABI46",
+      "publisher": "斐济殖民政府，Rabi District Officer Donald Kennedy；阿德莱德大学档案",
+      "title": "Progress Report on Banaban Settlement Scheme, 23 October 1945 to 28 January 1946",
+      "label": "1946年1月28日拉比安置进度报告及会议纪要",
+      "url": "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/d9ca608c-6725-491f-844f-9393cbd0b1f0/content",
+      "access": "原报告文字、编号第5–12段及附录5；PDF截图因约60MB超限未取，区分官员自述与居民意见"
+    },
+    {
+      "id": "E20-PHOS-SRC-BAN-MAP1957",
+      "publisher": "Banaban Voice（社区历史档案）",
+      "title": "Maps, Diagrams — Ocean Island Map Showing Mined Out Areas by 1957",
+      "label": "巴纳巴社区地图目录：1957矿尽地区、早期矿业与原住居民地名图",
+      "url": "https://www.banaban.com/maps-diagrams",
+      "access": "目录标题及图源说明可见；原图静态链接访问失败，站点保留版权，未取图、未配准、未取得再用许可"
     }
   ],
   "events": [
@@ -595,6 +619,34 @@
       "area_sqkm": null
     },
     {
+      "id": "E20-T083-ACQUIRE31",
+      "year": 1931,
+      "start_year": 1931,
+      "end_year": 1931,
+      "visible_from": 1931,
+      "date_label": "1931年",
+      "name": "殖民当局强制取得约150英亩巴纳巴矿地",
+      "description": "1977年法院判决回顾1931年以强制取得约150英亩土地为核心的交易，涉及殖民官员确定矿业租约权利金的利益冲突争议。该数字是交易面积而非测绘采矿面积。",
+      "short_description": "1977年法院判决回顾1931年以强制取得约150英亩土地为核心的交易，涉及殖民官员确定矿业租约权利金的利益冲突争议。该数字是交易面积而非测绘采矿面积。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "同期安置报告或1977判决所述历史地权交易"
+      },
+      "lat": -0.855,
+      "lng": 169.539,
+      "source_ids": [
+        "E20-PHOS-SRC-BAN-JUD-TEXT",
+        "E20-PHOS-SRC-G-BAN"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
       "id": "E20-T083-RABI42",
       "year": 1942,
       "start_year": 1942,
@@ -658,9 +710,9 @@
       "end_year": 1945,
       "visible_from": 1945,
       "date_label": "1945年12月15日",
-      "name": "巴纳巴人及吉尔伯特岛民抵达拉比岛",
-      "description": "1945年12月15日，研究记载约703名巴纳巴人和300名吉尔伯特岛民抵达斐济拉比岛；购地资金出自社区磷矿收入。",
-      "short_description": "1945年12月15日，研究记载约703名巴纳巴人和300名吉尔伯特岛民抵达斐济拉比岛；购地资金出自社区磷矿收入。",
+      "name": "巴纳巴及吉尔伯特岛民在拉比岛登陆",
+      "description": "拉比地区官员1946年报告称载运船14日傍晚抵达拉比、15日在努库登陆；ANU研究记录703名巴纳巴人及300名吉尔伯特岛民。",
+      "short_description": "拉比地区官员1946年报告称载运船14日傍晚抵达拉比、15日在努库登陆；ANU研究记录703名巴纳巴人及300名吉尔伯特岛民。",
       "category": "political",
       "icon_code": "POL",
       "significance": {
@@ -672,7 +724,8 @@
       "source_ids": [
         "E20-PHOS-SRC-BAN-ANU",
         "E20-PHOS-SRC-BAN-FORCED",
-        "E20-PHOS-SRC-G-RABI"
+        "E20-PHOS-SRC-G-RABI",
+        "E20-PHOS-SRC-BAN-RABI46"
       ],
       "geo_precision": "named_locality_approximate",
       "historical_control_boundary_verified": false,
@@ -702,6 +755,34 @@
         "E20-PHOS-SRC-NAU-1946"
       ],
       "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T083-COUNCIL46",
+      "year": 1946,
+      "start_year": 1946,
+      "end_year": 1946,
+      "visible_from": 1946,
+      "date_label": "1946年1月26日",
+      "name": "拉比家庭代表讨论新地方议会与合作社",
+      "description": "1946年1月28日地区官员报告及附录5记载，1月26日拉比努库会议有153名家庭长老代表153个家庭，讨论地方议会和合作社组织。居民仍要求妥善解决原乡矿地协议。",
+      "short_description": "1946年1月28日地区官员报告及附录5记载，1月26日拉比努库会议有153名家庭长老代表153个家庭，讨论地方议会和合作社组织。居民仍要求妥善解决原乡矿地协议。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "同期安置报告或1977判决所述历史地权交易"
+      },
+      "lat": -16.50095,
+      "lng": -179.9667,
+      "source_ids": [
+        "E20-PHOS-SRC-BAN-RABI46",
+        "E20-PHOS-SRC-G-RABI"
+      ],
+      "geo_precision": "named_locality_approximate",
       "historical_control_boundary_verified": false,
       "territorial_claim": false,
       "fill_authorized": false,
@@ -787,6 +868,33 @@
         "E20-PHOS-SRC-NAU-UN",
         "E20-PHOS-SRC-NAU-1947",
         "E20-PHOS-SRC-NAU-JUD"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T083-LEASE47",
+      "year": 1947,
+      "start_year": 1947,
+      "end_year": 1947,
+      "visible_from": 1947,
+      "date_label": "1947年",
+      "name": "巴纳巴矿地主签订新的矿地协议",
+      "description": "1977年法院判决回顾1947年两批291及380英亩矿地协议，涉及一次性付款和权利金；与1931年强制交易区别，1947年签约并无直接强制但法定强制权仍存在。两批面积系协议范围而非实测开采区。",
+      "short_description": "1977年法院判决回顾1947年两批291及380英亩矿地协议，涉及一次性付款和权利金；与1931年强制交易区别，1947年签约并无直接强制但法定强制权仍存在。两批面积系协议范围而非实测开采区。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "同期安置报告或1977判决所述历史地权交易"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-PHOS-SRC-BAN-JUD-TEXT"
       ],
       "geo_precision": "unlocated",
       "historical_control_boundary_verified": false,
