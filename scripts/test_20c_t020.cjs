@@ -4,7 +4,7 @@ const t=load('data/stories/serial/index.json').topics.find(t=>t.id==='E20-MAL-BA
 assert.equal(a.id,t.id);assert.equal(a.end_year,1959);assert.equal(a.sections.length,13);assert.equal(a.sources.length,58);assert.equal(t.event_ids.length,81);
 const keys=new Set(a.sources.map(s=>s.id));assert.equal(keys.size,a.sources.length);
 const body=a.sections.flatMap(s=>s.paragraphs).join('');
-const links=[...new Set([...body.matchAll(/\[\[([A-Z0-9-]+)\|/g)].map(m=>m[1]))])];
+const links=[...new Set([...body.matchAll(/\[\[([A-Z0-9-]+)\|/g)].map(m=>m[1]))];
 assert.equal(links.length,60);assert(links.every(id=>t.event_ids.includes(id)));
 const all=new Map();
 for(const d of ['1940-1949','1950-1959']){
