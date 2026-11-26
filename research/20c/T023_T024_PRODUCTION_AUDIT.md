@@ -10,3 +10,5 @@
 ## Rebase-equivalent integration checkpoint
 
 PR #617 has merged at f0678832fd7df3d15b96e5d3faaa6fa0f50106bb. PR #618 now targets main directly; require fresh mandatory checks and review on this head before merge. The 38 source records are per-topic references, not necessarily 38 distinct documents. All four coordinates are modern named-city reference points, not exact sites of individual incidents or historic occupation boundaries.
+
+- #620 已合并 05423a8；42项工作流全绿及Codex独立审核通过。本独立出版PR仅批准T023/T024，实际Pages核验前仍为 release_review；未修改地图事件及历史范围。
