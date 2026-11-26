@@ -5930,21 +5930,23 @@
         ]
       },
       "properties": {
-        "name": "拉比岛 · 巴纳巴人及吉尔伯特岛民抵达拉比岛",
+        "name": "拉比岛 · 巴纳巴及吉尔伯特岛民在拉比岛登陆",
         "stable_id": "phosphate-rabi-1945",
         "start_year": 1945,
         "end_year": 1945,
         "display_kind": "political",
-        "summary_zh": "1945年12月15日，研究记载约703名巴纳巴人和300名吉尔伯特岛民抵达斐济拉比岛；购地资金出自社区磷矿收入。",
+        "summary_zh": "拉比地区官员1946年报告称载运船14日傍晚抵达拉比、15日在努库登陆；ANU研究记录703名巴纳巴人及300名吉尔伯特岛民。",
         "source_ids": [
           "E20-PHOS-SRC-BAN-ANU",
           "E20-PHOS-SRC-BAN-FORCED",
-          "E20-PHOS-SRC-G-RABI"
+          "E20-PHOS-SRC-G-RABI",
+          "E20-PHOS-SRC-BAN-RABI46"
         ],
         "source_urls": [
           "https://press-files.anu.edu.au/downloads/press/n4043/html/ch02.xhtml?page=4&referer=",
           "https://doi.org/10.1080/03086534.2013.814252",
-          "https://www.geonames.org/4035932/rabi-island.html"
+          "https://www.geonames.org/4035932/rabi-island.html",
+          "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/d9ca608c-6725-491f-844f-9393cbd0b1f0/content"
         ],
         "named_anchors": [
           "拉比岛"
@@ -6037,6 +6039,46 @@
         "geo_precision": "named_locality_approximate",
         "related_event_ids": [
           "E20-T083-REOPEN47"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "phosphate-rabi-1946",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -179.9667,
+          -16.50095
+        ]
+      },
+      "properties": {
+        "name": "拉比岛 · 拉比家庭代表讨论新地方议会与合作社",
+        "stable_id": "phosphate-rabi-1946",
+        "start_year": 1946,
+        "end_year": 1946,
+        "display_kind": "political",
+        "summary_zh": "1946年1月28日地区官员报告及附录5记载，1月26日拉比努库会议有153名家庭长老代表153个家庭，讨论地方议会和合作社组织。居民仍要求妥善解决原乡矿地协议。",
+        "source_ids": [
+          "E20-PHOS-SRC-BAN-RABI46",
+          "E20-PHOS-SRC-G-RABI"
+        ],
+        "source_urls": [
+          "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/d9ca608c-6725-491f-844f-9393cbd0b1f0/content",
+          "https://www.geonames.org/4035932/rabi-island.html"
+        ],
+        "named_anchors": [
+          "拉比岛"
+        ],
+        "mapping_method": "具名地点参考点；不表示矿区、地块或历史行政边界。",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T083-COUNCIL46"
         ],
         "historical_boundary_confirmed": false,
         "territorial_claim": false,
