@@ -73,6 +73,7 @@
  '1690S-E132':'Albion Frigate号船上反抗'
  };
  const storyTitles={
+ 'E20-T044-KENYA-LAND-1900-1963':'肯尼亚白人高地与殖民夺地',
  'E20-T074-BRITISH-CHILD-MIGRATION-1902-1998':'英国儿童海外迁送与机构虐待',
  'E20-T066-CHAGOS-FORCED-DISPLACEMENT-1964-1998':'查戈斯群岛强制迁离与返乡',
  'E20-T083-BANABA-PHOSPHATE-1900-1997':'巴纳巴磷矿、迁居与土地赔偿',
