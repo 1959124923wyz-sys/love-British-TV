@@ -4053,6 +4053,90 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E20-T074-LAND20",
+      "year": 1920,
+      "start_year": 1920,
+      "end_year": 1920,
+      "visible_from": 1920,
+      "date_label": "1920年",
+      "name": "平贾拉农场学校购地扩建",
+      "description": "该机构购入一处3200英亩地产，为扩大接收与农场训练提供条件。",
+      "short_description": "该机构购入一处3200英亩地产，为扩大接收与农场训练提供条件。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 8,
+        "rationale": "官方调查、档案、法律或研究证据"
+      },
+      "lat": -32.6298,
+      "lng": 115.87351,
+      "source_ids": [
+        "E20-T074-SRC-PIN",
+        "E20-T074-SRC-PINC"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T074-LAW22",
+      "year": 1922,
+      "start_year": 1922,
+      "end_year": 1922,
+      "visible_from": 1922,
+      "date_label": "1922年",
+      "name": "帝国定居法支持儿童迁送",
+      "description": "法律为英国政府补贴帝国移民项目提供依据；调查确认儿童迁送的旅费与16岁以前的维持费用受到补助。",
+      "short_description": "法律为英国政府补贴帝国移民项目提供依据；调查确认儿童迁送的旅费与16岁以前的维持费用受到补助。",
+      "category": "law",
+      "icon_code": "DOC",
+      "significance": {
+        "level": 8,
+        "rationale": "官方调查、档案、法律或研究证据"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T074-SRC-ESA22",
+        "E20-T074-SRC-HIST"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T074-BOND24",
+      "year": 1924,
+      "start_year": 1924,
+      "end_year": 1924,
+      "visible_from": 1924,
+      "date_label": "1924年",
+      "name": "Bondfield报告与加拿大安置改革",
+      "description": "英国劳工部长Margaret Bondfield访问加拿大后，报告建议不再将未满14岁的儿童移往私人家庭及农场从事可能损害教育的安置。",
+      "short_description": "英国劳工部长Margaret Bondfield访问加拿大后，报告建议不再将未满14岁的儿童移往私人家庭及农场从事可能损害教育的安置。",
+      "category": "law",
+      "icon_code": "DOC",
+      "significance": {
+        "level": 8,
+        "rationale": "官方调查、档案、法律或研究证据"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T074-SRC-PRE",
+        "E20-T074-SRC-CAN"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "routes": [
@@ -7408,6 +7492,54 @@
       "label": "GeoNames｜Nigeria largest cities",
       "url": "https://www.geonames.org/NG/largest-cities-in-nigeria.html",
       "access": "Aba 5.107N 7.367E；Lagos 6.454N 3.395E；现代地名"
+    },
+    {
+      "id": "E20-T074-SRC-PIN",
+      "publisher": "Find & Connect",
+      "title": "Fairbridge Farm School, Pinjarra",
+      "label": "Find & Connect｜Fairbridge Farm School, Pinjarra",
+      "url": "https://www.findandconnect.gov.au/wp-admin/admin-ajax.php?action=pdf_download&id=19759",
+      "access": "首批13人、1920购地3200英亩、校址分期；PDF文字提取，截图仅返回iframe"
+    },
+    {
+      "id": "E20-T074-SRC-PINC",
+      "publisher": "GeoNames",
+      "title": "Pinjarra 2063293",
+      "label": "GeoNames｜Pinjarra 2063293",
+      "url": "https://www.geonames.org/2063293/pinjarra.html",
+      "access": "115.87351,-32.62980 城镇参考"
+    },
+    {
+      "id": "E20-T074-SRC-ESA22",
+      "publisher": "UK legislation",
+      "title": "Empire Settlement Act 1922",
+      "label": "UK legislation｜Empire Settlement Act 1922",
+      "url": "https://www.legislation.gov.uk/ukpga/Geo5/12-13/13/resources",
+      "access": "官方法令目录；具体资助机制由IICSA §7互证，正文网页抓取失败"
+    },
+    {
+      "id": "E20-T074-SRC-HIST",
+      "publisher": "IICSA",
+      "title": "2018 Child Migration Programmes, Part B.1",
+      "label": "IICSA｜2018 Child Migration Programmes, Part B.1",
+      "url": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/child-migration/part-b-child-sexual-abuse-child-migration-programmes/1-brief-history-child-migration.html",
+      "access": "§§1–7、13–15；迁送人数、范围、英国政府融资及最后迁送"
+    },
+    {
+      "id": "E20-T074-SRC-PRE",
+      "publisher": "IICSA",
+      "title": "Pre-War evidence",
+      "label": "IICSA｜Pre-War evidence",
+      "url": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/child-migration/part-b-child-sexual-abuse-child-migration-programmes/pre-war-evidence.html",
+      "access": "§§7–10；1902监督、1924 Bondfield、1940及1944报告；原件号PRT000273_001-006、EWM000395等"
+    },
+    {
+      "id": "E20-T074-SRC-CAN",
+      "publisher": "Library and Archives Canada",
+      "title": "Home Children and Board of Guardians",
+      "label": "Library and Archives Canada｜Home Children and Board of Guardians",
+      "url": "https://www.canada.ca/en/library-archives/collection/research-help/genealogy-family-history/immigration/home-children.html",
+      "access": "RG76 C4a、C4c；1869至1930年代晚期总量及1911–32等监察名册；跨世纪人口不可直接加总"
     }
   ]
 }
