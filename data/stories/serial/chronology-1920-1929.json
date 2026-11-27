@@ -4476,6 +4476,89 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E20-T044-RES22",
+      "year": 1922,
+      "start_year": 1922,
+      "end_year": 1922,
+      "visible_from": 1922,
+      "date_label": "1922年12月8日",
+      "name": "英国下院公布肯尼亚保留地拨让清单",
+      "description": "1922年12月，殖民大臣提供保留地拨让清单，其中列出1919年Kijabe附近Siabei一处5英亩地块。",
+      "short_description": "1922年12月，殖民大臣提供保留地拨让清单，其中列出1919年Kijabe附近Siabei一处5英亩地块。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "肯尼亚官方调查、司法意见及同期英国议会文书"
+      },
+      "lat": -0.916667,
+      "lng": 36.583333,
+      "source_ids": [
+        "E20-T044-SRC-RES22",
+        "E20-T044-SRC-KIJ"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T044-NGONG22",
+      "year": 1922,
+      "start_year": 1922,
+      "end_year": 1922,
+      "visible_from": 1922,
+      "date_label": "1922年",
+      "name": "恩贡山地块划给马加迪纯碱公司",
+      "description": "1922年议会清单列出恩贡山95英亩地块授予马加迪纯碱公司用于供水工程，同时记载为马赛人保留用水需求。",
+      "short_description": "1922年议会清单列出恩贡山95英亩地块授予马加迪纯碱公司用于供水工程，同时记载为马赛人保留用水需求。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "1922年英国下院土地拨让原始清单"
+      },
+      "lat": -1.4,
+      "lng": 36.633333,
+      "source_ids": [
+        "E20-T044-SRC-RES22",
+        "E20-T044-SRC-NGONG"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T044-ALI25",
+      "year": 1925,
+      "start_year": 1925,
+      "end_year": 1925,
+      "visible_from": 1925,
+      "date_label": "1925年3月16日",
+      "name": "英国下院公布土地拨让审批及拟议项目",
+      "description": "议会答复列出已批准的63,675英亩土地，租赁产权尚未办结；另列拟议拍卖、退伍军人定居及交换地。",
+      "short_description": "议会答复列出已批准的63,675英亩土地，租赁产权尚未办结；另列拟议拍卖、退伍军人定居及交换地。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "肯尼亚官方调查、司法意见及同期英国议会文书"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T044-SRC-ALI25"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "routes": [
@@ -8023,6 +8106,38 @@
       "label": "Wiley｜The geo-classifications of colonial statelessness",
       "url": "https://onlinelibrary.wiley.com/doi/10.1111/taja.12108",
       "access": "学术摘要；殖民时期身份和kastom"
+    },
+    {
+      "id": "E20-T044-SRC-RES22",
+      "publisher": "英国下院",
+      "title": "1922年12月8日：Native Reserves, Kenya (Alienations)",
+      "label": "英国下院｜1922年12月8日：Native Reserves, Kenya (Alienations)",
+      "url": "https://hansard.parliament.uk/commons/1922-12-08/debates/953c003b-7c8a-4b02-90be-8cfd1647b7fd/NativeReservesKenya%28Alienations%29",
+      "access": "表列保留地用途及Kijabe附近Siabei个案"
+    },
+    {
+      "id": "E20-T044-SRC-KIJ",
+      "publisher": "美国NGA地名资料转录",
+      "title": "Kijabe铁路站地名",
+      "label": "美国NGA地名资料转录｜Kijabe铁路站地名",
+      "url": "https://geographic.org/geographic_names/name.php?c=kenya&fid=3319&uni=-3107077",
+      "access": "现代具名铁路站坐标；不定位Siabei地块本身"
+    },
+    {
+      "id": "E20-T044-SRC-ALI25",
+      "publisher": "英国下院",
+      "title": "1925年3月16日：Kenya",
+      "label": "英国下院｜1925年3月16日：Kenya",
+      "url": "https://hansard.parliament.uk/Commons/1925-03-16/debates/cff308c2-2e0f-481f-b548-07ca81d24a0d/Kenya",
+      "access": "已授租地、换地和拟议拨地分项"
+    },
+    {
+      "id": "E20-T044-SRC-NGONG",
+      "publisher": "美国NGA地名资料转录",
+      "title": "Ngong Hills",
+      "label": "NGA｜Ngong Hills地名",
+      "url": "https://geographic.org/geographic_names/name.php?c=kenya&fid=3305&uni=-3118263",
+      "access": "现代山地地名坐标"
     }
   ]
 }

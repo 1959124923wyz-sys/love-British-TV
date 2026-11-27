@@ -3997,6 +3997,86 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "e20-t085-tulagi-reference"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "kenya-t044-kaim12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.94167,
+          0.13521
+        ]
+      },
+      "properties": {
+        "name": "凯莫西 · 欧洲农场划分",
+        "stable_id": "kenya-t044-kaim12",
+        "start_year": 1912,
+        "end_year": 1912,
+        "display_kind": "economic_network",
+        "summary_zh": "1922年议会清单记载，1912年凯莫西一带5,087英亩土地获准划分为欧洲农场；殖民部称该地不在当时已定义的保留区内。部分于1912年拍卖，余部1919年分配。",
+        "source_ids": [
+          "E20-T044-SRC-RES22",
+          "E20-T044-SRC-KAIM"
+        ],
+        "source_urls": [
+          "https://hansard.parliament.uk/commons/1922-12-08/debates/953c003b-7c8a-4b02-90be-8cfd1647b7fd/NativeReservesKenya%28Alienations%29",
+          "https://www.geonames.org/195376/kaimosi.html"
+        ],
+        "named_anchors": [
+          "凯莫西"
+        ],
+        "mapping_method": "Historical parliamentary schedule and modern named-locality reference; no parcel geometry.",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T044-KAIM12"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kenya-t044-ker19",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.28,
+          -0.37
+        ]
+      },
+      "properties": {
+        "name": "凯里乔 · 退伍军人定居",
+        "stable_id": "kenya-t044-ker19",
+        "start_year": 1919,
+        "end_year": 1919,
+        "display_kind": "land_dispossession",
+        "summary_zh": "1922年英国议会清单记载，1919年凯里乔附近的土地被用于退伍军人定居计划。英方称该地1912年列作Lumbwa保留区的一部分，1919年经改界已不在保留区内。",
+        "source_ids": [
+          "E20-T044-SRC-RES22",
+          "E20-T044-SRC-KERICHO"
+        ],
+        "source_urls": [
+          "https://hansard.parliament.uk/commons/1922-12-08/debates/953c003b-7c8a-4b02-90be-8cfd1647b7fd/NativeReservesKenya%28Alienations%29",
+          "https://ungegn.un.org/dashboard/cities/details?id=3386"
+        ],
+        "named_anchors": [
+          "凯里乔"
+        ],
+        "mapping_method": "Historical parliamentary schedule and modern named-locality reference; no parcel geometry.",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T044-KER19"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
     }
   ]
 }
