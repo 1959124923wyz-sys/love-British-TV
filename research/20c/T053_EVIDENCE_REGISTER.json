@@ -1,0 +1,356 @@
+{
+  "schema": "research/20c-candidate-evidence-v1",
+  "topics": [
+    "E20-T053"
+  ],
+  "publication_status": "research_only",
+  "sources": [
+    {
+      "id": "E20-T053-SRC-TRC",
+      "publisher": "塞拉利昂真相与和解委员会",
+      "title": "Report, Volume Three B, Chapter One: Mineral Resources",
+      "label": "塞拉利昂真相与和解委员会｜Report, Volume Three B, Chapter One: Mineral Resources",
+      "url": "https://sierraleonetrc.org/index.php/view-report-text-vol-3b/item/volume-three-b-chapter-one",
+      "access": "官方调查网页，第16—25段，回溯殖民矿业"
+    },
+    {
+      "id": "E20-T053-SRC-TAX39",
+      "publisher": "英国议会",
+      "title": "Sierra Leone, 2 Aug 1939",
+      "label": "英国议会｜Sierra Leone, 2 Aug 1939",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1939/aug/02/sierra-leone",
+      "access": "同期答复全文，税收及酋长报酬"
+    },
+    {
+      "id": "E20-T053-SRC-LAB55",
+      "publisher": "英国议会",
+      "title": "Situation, Sierra Leone (Commission of Inquiry), 17 Feb 1955",
+      "label": "英国议会｜Situation, Sierra Leone (Commission of Inquiry), 17 Feb 1955",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1955/feb/17/situation-sierra-leone-commission-of",
+      "access": "同期政府说明与议员质询；殖民官方立场"
+    },
+    {
+      "id": "E20-T053-SRC-DIA55",
+      "publisher": "英国议会",
+      "title": "Diamond Mining, 22 Jun 1955",
+      "label": "英国议会｜Diamond Mining, 22 Jun 1955",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1955/jun/22/diamond-mining",
+      "access": "同期答复，政策磋商尚在进行"
+    },
+    {
+      "id": "E20-T053-SRC-DIA56",
+      "publisher": "英国议会",
+      "title": "Sierra Leone (Diamond Industry), 29 Feb 1956",
+      "label": "英国议会｜Sierra Leone (Diamond Industry), 29 Feb 1956",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1956/feb/29/sierra-leone-diamond-industry",
+      "access": "同期答复全文，说明新制度已运行约三周"
+    },
+    {
+      "id": "E20-T053-SRC-LOKO56",
+      "publisher": "英国议会",
+      "title": "Loko Masami Chiefdom (Situation), 28 Mar 1956",
+      "label": "英国议会｜Loko Masami Chiefdom (Situation), 28 Mar 1956",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1956/mar/28/loko-masami-chiefdom-situation",
+      "access": "同期答复全文，判刑范围"
+    },
+    {
+      "id": "E20-T053-SRC-MAR",
+      "publisher": "GeoNames",
+      "title": "Marampa Mines, Sierra Leone",
+      "label": "GeoNames｜Marampa Mines, Sierra Leone",
+      "url": "https://www.geonames.org/advanced-search.html?country=SL&featureClass=S&q=&startRow=50",
+      "access": "地名矿区点8.678692,-12.514747；非历史矿界"
+    }
+  ],
+  "events": [
+    {
+      "id": "E20-T053-TAX00",
+      "year": 1900,
+      "start_year": 1900,
+      "end_year": 1900,
+      "visible_from": 1900,
+      "date_label": "20世纪初",
+      "name": "保护国茅屋税制度延续",
+      "description": "十九世纪已经实行的茅屋税延续至二十世纪。1939年英国议会答复详述通过殖民行政及酋长征收的安排；本节点为研究背景，沿用1897年既有制度设立节点。",
+      "short_description": "十九世纪已经实行的茅屋税延续至二十世纪。1939年英国议会答复详述通过殖民行政及酋长征收的安排；本节点为研究背景，沿用1897年既有制度设立节点。",
+      "category": "law",
+      "icon_code": "DOC",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T053-SRC-TAX39"
+      ],
+      "responsibility": "英国殖民行政及酋长",
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T053-IRON33",
+      "year": 1933,
+      "start_year": 1933,
+      "end_year": 1933,
+      "visible_from": 1933,
+      "date_label": "1933年",
+      "name": "马兰帕铁矿投产",
+      "description": "塞拉利昂官方真相与和解调查回顾马兰帕铁矿于1933年投产，矿业成为殖民经济的重要组成部分。",
+      "short_description": "塞拉利昂官方真相与和解调查回顾马兰帕铁矿于1933年投产，矿业成为殖民经济的重要组成部分。",
+      "category": "economic",
+      "icon_code": "TRADE",
+      "lat": 8.678692,
+      "lng": -12.514747,
+      "source_ids": [
+        "E20-T053-SRC-TRC",
+        "E20-T053-SRC-MAR"
+      ],
+      "responsibility": "殖民行政及矿业经营者",
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T053-DIAM34",
+      "year": 1934,
+      "start_year": 1934,
+      "end_year": 1934,
+      "visible_from": 1934,
+      "date_label": "1934年",
+      "name": "钻石公司设立与排他矿权",
+      "description": "当地真相与和解委员会记载SLST于1934年设立，并获长期排他性钻石勘探开采权；原始特许合同须另核实际授予时间及具体范围。",
+      "short_description": "当地真相与和解委员会记载SLST于1934年设立，并获长期排他性钻石勘探开采权；原始特许合同须另核实际授予时间及具体范围。",
+      "category": "law",
+      "icon_code": "DOC",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T053-SRC-TRC"
+      ],
+      "responsibility": "英国殖民政府及SLST",
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T053-IRON38",
+      "year": 1938,
+      "start_year": 1938,
+      "end_year": 1938,
+      "visible_from": 1938,
+      "date_label": "1938年",
+      "name": "铁矿出口收益比重",
+      "description": "官方调查回顾指出马兰帕铁矿在1938年占殖民地出口收入近三成；出口收入并非企业净利润。",
+      "short_description": "官方调查回顾指出马兰帕铁矿在1938年占殖民地出口收入近三成；出口收入并非企业净利润。",
+      "category": "economic",
+      "icon_code": "TRADE",
+      "lat": 8.678692,
+      "lng": -12.514747,
+      "source_ids": [
+        "E20-T053-SRC-TRC",
+        "E20-T053-SRC-MAR"
+      ],
+      "responsibility": "矿业企业与殖民贸易体系",
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T053-TAX39",
+      "year": 1939,
+      "start_year": 1939,
+      "end_year": 1939,
+      "visible_from": 1939,
+      "date_label": "1939年8月2日",
+      "name": "殖民政府公布税收征管结构",
+      "description": "殖民部长答复，保护国部分地区由助理区专员及最高酋长评税，酋长代收；一般茅屋税进入公共财政，另经批准的酋长辖区税进入相应地方金库。",
+      "short_description": "殖民部长答复，保护国部分地区由助理区专员及最高酋长评税，酋长代收；一般茅屋税进入公共财政，另经批准的酋长辖区税进入相应地方金库。",
+      "category": "law",
+      "icon_code": "DOC",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T053-SRC-TAX39"
+      ],
+      "responsibility": "英国殖民政府及酋长",
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T053-LAB55",
+      "year": 1955,
+      "start_year": 1955,
+      "end_year": 1955,
+      "visible_from": 1955,
+      "date_label": "1955年2月",
+      "name": "弗里敦劳工争议与殖民镇压",
+      "description": "工人要求提高日工资，争议升级后殖民警察和军队的镇压造成平民死伤。英国议会收到政府说明并讨论调查；完整调查与当地证词仍待对读。",
+      "short_description": "工人要求提高日工资，争议升级后殖民警察和军队的镇压造成平民死伤。英国议会收到政府说明并讨论调查；完整调查与当地证词仍待对读。",
+      "category": "social",
+      "icon_code": "DOC",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T053-SRC-LAB55"
+      ],
+      "responsibility": "英国殖民行政、警察及军队",
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T053-KONO55",
+      "year": 1955,
+      "start_year": 1955,
+      "end_year": 1956,
+      "visible_from": 1955,
+      "date_label": "1955—1956年",
+      "name": "科诺矿业管制争议与抗议",
+      "description": "当地真相与和解调查记载矿区居民反对酋长和殖民当局的过度控制，排他性矿权及利益分配成为争议焦点。",
+      "short_description": "当地真相与和解调查记载矿区居民反对酋长和殖民当局的过度控制，排他性矿权及利益分配成为争议焦点。",
+      "category": "social",
+      "icon_code": "DOC",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T053-SRC-TRC"
+      ],
+      "responsibility": "殖民行政、矿业企业、地方酋长及居民",
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T053-POL55",
+      "year": 1955,
+      "start_year": 1955,
+      "end_year": 1955,
+      "visible_from": 1955,
+      "date_label": "1955年6月22日",
+      "name": "英国与当地部长磋商钻石政策",
+      "description": "英国殖民部长称将同塞拉利昂首席部长等人磋商钻石产业未来政策，尚未公布结论。",
+      "short_description": "英国殖民部长称将同塞拉利昂首席部长等人磋商钻石产业未来政策，尚未公布结论。",
+      "category": "political",
+      "icon_code": "DOC",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T053-SRC-DIA55"
+      ],
+      "responsibility": "英国政府及塞拉利昂殖民地部长",
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T053-ADMS",
+      "year": 1956,
+      "start_year": 1956,
+      "end_year": 1956,
+      "visible_from": 1956,
+      "date_label": "1956年2月",
+      "name": "冲积钻石许可证新制度实施",
+      "description": "1956年2月议会答复称新制度实施约三周，非本地人士可受雇于许可证持有人或获交易商许可证。当地调查将政策转折记于1955年，区分政策决定与实际运行。",
+      "short_description": "1956年2月议会答复称新制度实施约三周，非本地人士可受雇于许可证持有人或获交易商许可证。当地调查将政策转折记于1955年，区分政策决定与实际运行。",
+      "category": "law",
+      "icon_code": "DOC",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T053-SRC-TRC",
+        "E20-T053-SRC-DIA56"
+      ],
+      "responsibility": "殖民行政、矿业企业及采矿者",
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T053-LOKO56",
+      "year": 1956,
+      "start_year": 1956,
+      "end_year": 1956,
+      "visible_from": 1956,
+      "date_label": "1956年3月28日",
+      "name": "酋长辖区抗争后的判刑记录",
+      "description": "英国部长报告Loko Masami辖区1月动荡后有居民被判监禁，刑期从一个月至四年不等；不得将其与科诺矿区案件合并统计。",
+      "short_description": "英国部长报告Loko Masami辖区1月动荡后有居民被判监禁，刑期从一个月至四年不等；不得将其与科诺矿区案件合并统计。",
+      "category": "law",
+      "icon_code": "DOC",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T053-SRC-LOKO56"
+      ],
+      "responsibility": "英国殖民司法行政",
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    }
+  ],
+  "reused_event_ids": [
+    "E20-EXIT-SIERRA",
+    "E19-T35-1897-C07-E09"
+  ],
+  "quantitative_records": [
+    {
+      "id": "E20-T053-Q-IRONSHARE38",
+      "year": 1938,
+      "value": 30,
+      "unit": "%",
+      "scope": "官方调查回顾：马兰帕铁矿占殖民地出口收入近30%，约数",
+      "source_id": "E20-T053-SRC-TRC",
+      "locator": "第16—17段"
+    },
+    {
+      "id": "E20-T053-Q-TERM",
+      "year": 1934,
+      "value": 99,
+      "unit": "年",
+      "scope": "官方调查所述SLST排他矿权期限；非原始特许签署年确认",
+      "source_id": "E20-T053-SRC-TRC",
+      "locator": "第17段"
+    },
+    {
+      "id": "E20-T053-Q-CHIEF39",
+      "year": 1939,
+      "value": 5,
+      "unit": "%",
+      "scope": "酋长代收茅屋税报酬比例",
+      "source_id": "E20-T053-SRC-TAX39",
+      "locator": "部长答复"
+    },
+    {
+      "id": "E20-T053-Q-SENT56",
+      "year": 1956,
+      "value": 20,
+      "unit": "人",
+      "scope": "Loko Masami动荡后被判监禁人数，部长报告",
+      "source_id": "E20-T053-SRC-LOKO56",
+      "locator": "部长答复"
+    }
+  ],
+  "limitations": [
+    "原始矿权合同及边界未取得，矿区参考点不表示历史开采面积。1955弗里敦调查及科诺当地证词待补；不登记多事件死亡人数。",
+    "1897税制为旧节点，仅作为背景；1955政策决定与1956实施分开。"
+  ]
+}
