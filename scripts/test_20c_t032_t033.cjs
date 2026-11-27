@@ -16,7 +16,7 @@ for(const [n,count,ns] of [['032',20,27],['033',22,33]]){
  assert.deepEqual(e.source_ids,x.source_ids);assert(e.source_ids.every(k=>keys.has(k)));assert.equal(e.fill_authorized,false);assert.equal(e.area_sqkm,null);
  if(x.loc){const f=maps.get(x.id).find(f=>f.properties.related_event_ids?.includes(x.id));assert(f,x.id);assert.equal(f.geometry.type,'Point');assert.deepEqual(f.geometry.coordinates,[e.lng,e.lat]);assert.equal(f.properties.territorial_claim,false);assert.equal(f.properties.fill_authorized,false);assert.equal(f.properties.area_sqkm,null);}
  else assert.equal(e.lat,null,x.id);
- }if(t.status==='published')assert.equal(t.publication_review,'approved');
+ }assert.equal(t.status,'published');assert.equal(t.publication_review,'approved');
 }
 assert.equal(events.size,41);
 assert.equal([...events.values()].filter(e=>e.lat!==null).length,32);
@@ -38,13 +38,16 @@ assert.equal(candidates.length,2);
 const app=fs.readFileSync('app.js','utf8'),code=app.slice(app.indexOf('function modern20cReviewGate('),app.indexOf('async function fetchModernAtlas('));
 const getGate=new Function('reviewParams',code+'\nreturn modern20cReviewGate;');
 const pub=getGate({get:()=>null})(1900,idx),rev=getGate({get:()=>'1'})(1900,idx);
-assert([...events.keys()].every(id=>pub.eventIds.has(id)));
-assert(candidates.every(t=>t.review_entry_required&&t.review_feature_ids.every(id=>pub.featureIds.has(id))));
+assert([...events.keys()].every(id=>!pub.eventIds.has(id)));
+assert(candidates.every(t=>t.review_entry_required&&t.review_feature_ids.every(id=>!pub.featureIds.has(id))));
 assert.equal(new Set(candidates.flatMap(t=>t.review_feature_ids)).size,16);
 assert(!pub.featureIds.has('iraq-t030-t031-london-1920'));assert(!pub.featureIds.has('iraq-t030-t031-london-1930'));
 for(const d of ['1920-1929','1930-1939']){
  const fs0=load('data/twentieth-century-spatial-'+d+'.geojson').features,iraq=fs0.find(f=>f.id==='iraq-t030-t031-london-'+d.slice(0,4));
  assert(iraq.properties.related_event_ids.every(id=>!/^E20-T03[23]-/.test(id)));assert(iraq.properties.source_ids.every(id=>!/^E20-T03[23]-/.test(id)));
 }
+const pending=JSON.parse(JSON.stringify(idx));for(const t of pending.topics.filter(t=>/^E20-T03[23]-/.test(t.id))){t.status='editorial_review';t.publication_review='not_submitted';}
+const pendingGate=getGate({get:()=>null})(1900,pending);assert([...events.keys()].every(id=>pendingGate.eventIds.has(id)));assert(candidates.every(t=>t.review_feature_ids.every(id=>pendingGate.featureIds.has(id))));
+const half=JSON.parse(JSON.stringify(pending));const approved=half.topics.find(t=>t.id===candidates[0].id);approved.status='published';approved.publication_review='approved';const halfGate=getGate({get:()=>null})(1900,half);assert(approved.review_event_ids.every(id=>!halfGate.eventIds.has(id)));assert(candidates[1].review_event_ids.filter(id=>!approved.event_ids.includes(id)).every(id=>halfGate.eventIds.has(id)));
 assert.equal(rev.eventIds.size,0);assert.equal(rev.featureIds.size,0);
-console.log('PASS candidate isolation: 41 event IDs, 16 feature IDs, shared public Iraq features preserved');
+console.log('PASS approved release and simulated candidate isolation: 41 event IDs, 16 feature IDs, shared public Iraq features preserved');
