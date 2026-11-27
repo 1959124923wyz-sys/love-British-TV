@@ -3963,6 +3963,48 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "egypt-t027-denshawai"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "phosphate-ban-1900",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.539,
+          -0.855
+        ]
+      },
+      "properties": {
+        "name": "巴纳巴岛 · 巴纳巴磷矿进入公司开发计划",
+        "stable_id": "phosphate-ban-1900",
+        "start_year": 1900,
+        "end_year": 1900,
+        "display_kind": "economic_network",
+        "summary_zh": "1900年巴纳巴的磷矿受到太平洋群岛公司关注，开采及出口逐步改变岛上的土地用途和生计。",
+        "source_ids": [
+          "E20-PHOS-SRC-BAN-FLIGHT",
+          "E20-PHOS-SRC-BAN-COM",
+          "E20-PHOS-SRC-G-BAN"
+        ],
+        "source_urls": [
+          "https://digital.library.adelaide.edu.au/items/c7f83eec-e386-4cd8-aa57-1b75aaff4be4",
+          "https://www.banaban.com/banabans-rabi-history",
+          "https://www.geonames.org/2110256"
+        ],
+        "named_anchors": [
+          "巴纳巴岛"
+        ],
+        "mapping_method": "具名地点参考点；不表示矿区、地块或历史行政边界。",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T083-DISC00"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
     }
   ]
 }

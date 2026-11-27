@@ -3145,6 +3145,61 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E20-T084-OCC14",
+      "year": 1914,
+      "start_year": 1914,
+      "end_year": 1914,
+      "visible_from": 1914,
+      "date_label": "1914年",
+      "name": "澳大利亚占领瑙鲁",
+      "description": "第一次世界大战期间，澳大利亚取得对德国殖民地瑙鲁的控制。",
+      "short_description": "第一次世界大战期间，澳大利亚取得对德国殖民地瑙鲁的控制。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 7,
+        "rationale": "同期立法、议会或司法文书与地方社区研究"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-PHOS-SRC-NAU-CLAIM"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-PHOS-AGREE19",
+      "year": 1919,
+      "start_year": 1919,
+      "end_year": 1919,
+      "visible_from": 1919,
+      "date_label": "1919年7月2日",
+      "name": "英国、澳大利亚与新西兰签订瑙鲁岛协议",
+      "description": "协议把矿权及相关资产归交三国任命的委员，规定成本供货和初始配额英国42%、澳大利亚42%、新西兰16%。",
+      "short_description": "协议把矿权及相关资产归交三国任命的委员，规定成本供货和初始配额英国42%、澳大利亚42%、新西兰16%。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "同期立法、议会或司法文书与地方社区研究"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-PHOS-SRC-NAU-1919",
+        "E20-PHOS-SRC-NAU-1920"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "routes": [
@@ -6092,6 +6147,30 @@
       "label": "GeoNames｜Pinjarra 2063293",
       "url": "https://www.geonames.org/2063293/pinjarra.html",
       "access": "115.87351,-32.62980 城镇参考"
+    },
+    {
+      "id": "E20-PHOS-SRC-NAU-CLAIM",
+      "publisher": "国际法院（瑙鲁申请书）",
+      "title": "Certain Phosphate Lands in Nauru, Application 1989",
+      "label": "国际法院（瑙鲁申请书）｜Certain Phosphate Lands in Nauru, Application 1989",
+      "url": "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/80/6652.pdf",
+      "access": "申请书文本、前置地图图例；为原告主张，不是法院认定；地图截图超时"
+    },
+    {
+      "id": "E20-PHOS-SRC-NAU-1919",
+      "publisher": "澳大利亚联邦立法",
+      "title": "Nauru Island Agreement Act 1919 附表",
+      "label": "澳大利亚联邦立法｜Nauru Island Agreement Act 1919 附表",
+      "url": "https://www.legislation.gov.au/C1919A00008/asmade/1919-10-28/text/original/pdf",
+      "access": "已读取原文并查看原页3、4；第6–15条"
+    },
+    {
+      "id": "E20-PHOS-SRC-NAU-1920",
+      "publisher": "英国下院",
+      "title": "Nauru Island Agreement Bill, 1920-06-16",
+      "label": "英国下院｜Nauru Island Agreement Bill, 1920-06-16",
+      "url": "https://hansard.parliament.uk/%E2%80%8CCommons/1920-06-16/debates/4eef47f7-5e6a-4d03-8ea2-b3f39ecd0723/NAURUISLANDAGREEMENTBILL",
+      "access": "议会辩论，签署日、批准与成本定价"
     }
   ]
 }

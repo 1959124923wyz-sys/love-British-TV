@@ -126,6 +126,90 @@
     },
     {
       "type": "Feature",
+      "id": "phosphate-nau-1987",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          166.9252,
+          -0.55085
+        ]
+      },
+      "properties": {
+        "name": "瑙鲁雅伦 · 瑙鲁调查已采磷矿土地恢复问题",
+        "stable_id": "phosphate-nau-1987",
+        "start_year": 1987,
+        "end_year": 1987,
+        "display_kind": "political",
+        "summary_zh": "瑙鲁成立独立调查委员会，1988年发布多卷调查报告，考察委任及托管时期采矿地的复垦责任。",
+        "source_ids": [
+          "E20-PHOS-SRC-NAU-ARCH",
+          "E20-PHOS-SRC-NAU-CLAIM",
+          "E20-PHOS-SRC-G-NAU"
+        ],
+        "source_urls": [
+          "https://natlib.govt.nz/records/22626127",
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/80/6652.pdf",
+          "https://www.geonames.org/advanced-search.html?q=Nauru"
+        ],
+        "named_anchors": [
+          "瑙鲁雅伦"
+        ],
+        "mapping_method": "具名地点参考点；不表示矿区、地块或历史行政边界。",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T084-INQ87"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "phosphate-hag-1989",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.299,
+          52.077
+        ]
+      },
+      "properties": {
+        "name": "海牙 · 瑙鲁在国际法院起诉澳大利亚",
+        "stable_id": "phosphate-hag-1989",
+        "start_year": 1989,
+        "end_year": 1989,
+        "display_kind": "political",
+        "summary_zh": "瑙鲁请求处理独立前已采磷矿地的复垦争议；原告附上瑙鲁土地测量机构绘制的采矿分期地图。",
+        "source_ids": [
+          "E20-PHOS-SRC-NAU-CLAIM",
+          "E20-PHOS-SRC-NAU-JUD",
+          "E20-PHOS-SRC-G-HAG"
+        ],
+        "source_urls": [
+          "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/80/6652.pdf",
+          "https://api.icj-cij.org/sites/default/files/case-related/80/080-19920626-JUD-01-00-EN.pdf",
+          "https://www.geonames.org/NL/largest-cities-in-the-netherlands.html"
+        ],
+        "named_anchors": [
+          "海牙"
+        ],
+        "mapping_method": "具名地点参考点；不表示矿区、地块或历史行政边界。",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T084-ICJ89"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
+    },
+    {
+      "type": "Feature",
       "id": "e20-t088-land-reference",
       "geometry": {
         "type": "Point",
