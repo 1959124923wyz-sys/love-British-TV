@@ -73,6 +73,10 @@
  '1690S-E132':'Albion Frigate号船上反抗'
  };
  const storyTitles={
+ 'E20-T074-BRITISH-CHILD-MIGRATION-1902-1998':'英国儿童海外迁送与机构虐待',
+ 'E20-T066-CHAGOS-FORCED-DISPLACEMENT-1964-1998':'查戈斯群岛强制迁离与返乡',
+ 'E20-T083-BANABA-PHOSPHATE-1900-1997':'巴纳巴磷矿、迁居与土地赔偿',
+ 'E20-T084-NAURU-PHOSPHATE-1906-1994':'瑙鲁磷矿与土地复垦争议',
  'E20-SALT-MARCH':'印度不合作与食盐抗争',
  'E20-T001-INDIA-FAMINE-RELIEF-1900-1909':'英属印度饥荒与殖民财政',
  'E20-T007-QUIT-INDIA-DETENTION-1942-1945':'退出印度运动与战时拘禁',
