@@ -4332,6 +4332,110 @@
     },
     {
       "type": "Feature",
+      "id": "palestine-jerusalem-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.21633,
+          31.76904
+        ]
+      },
+      "properties": {
+        "name": "耶路撒冷 · 英国民政管理",
+        "start_year": 1920,
+        "end_year": 1929,
+        "display_kind": "political",
+        "summary_zh": "英国建立民政管理，1922年委任条款获批准。",
+        "source_ids": [
+          "E20-T032-SRC-NAM",
+          "E20-T032-SRC-MAND",
+          "E20-T032-SRC-REPORT22",
+          "E20-T032-SRC-FR23",
+          "E20-T032-SRC-AA",
+          "E20-T032-SRC-GEOJER"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/british-army-palestine",
+          "https://avalon.law.yale.edu/20th_Century/Palmanda.asp",
+          "https://www.un.org/unispal/document/auto-insert-195974/",
+          "https://history.state.gov/historicaldocuments/frus1923v02/papers",
+          "https://avalon.law.yale.edu/20th_century/angap04.asp",
+          "https://www.geonames.org/281184/jerusalem.html"
+        ],
+        "named_anchors": [
+          "耶路撒冷"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "palestine-jerusalem-administration",
+        "year_stages": [
+          {
+            "start_year": 1920,
+            "end_year": 1922,
+            "controller": "british",
+            "title": "耶路撒冷 · 英国民政管理",
+            "summary_zh": "英国建立民政管理，1922年委任条款获批准。"
+          },
+          {
+            "start_year": 1923,
+            "end_year": 1929,
+            "controller": "british",
+            "title": "耶路撒冷 · 英国委任管理",
+            "summary_zh": "1923年委任条款正式生效。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "palestine-t032-t033-london-1920",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.12574,
+          51.50853
+        ]
+      },
+      "properties": {
+        "name": "伦敦 · 巴勒斯坦委任统治政策与议会记录",
+        "start_year": 1922,
+        "end_year": 1922,
+        "display_kind": "economic_network",
+        "summary_zh": "委任文件在伦敦获得批准，赋予英国立法与行政权，并规定建立犹太民族家园及保障居民权利。；委任文件第6条鼓励犹太移民及土地安置，第11条规定自然资源及公共设施管理。；英国枢密院令确立高级专员、行政与立法机构及司法制度。",
+        "source_ids": [
+          "E20-T032-SRC-MAND",
+          "E20-T032-SRC-REPORT22",
+          "E20-T032-SRC-GEOLON"
+        ],
+        "source_urls": [
+          "https://avalon.law.yale.edu/20th_Century/Palmanda.asp",
+          "https://www.un.org/unispal/document/auto-insert-195974/",
+          "https://www.geonames.org/advanced-search.html?country=GB&q=Londres"
+        ],
+        "named_anchors": [
+          "伦敦"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T032-MAND",
+          "E20-T032-LAND",
+          "E20-T032-ORDER"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "palestine-t032-t033-london-1920"
+      }
+    },
+    {
+      "type": "Feature",
       "id": "e20-t050-count29-reference",
       "geometry": {
         "type": "Point",
