@@ -13,12 +13,7 @@
  map.getPane(pane).style.zIndex='439';
  const renderer=L.svg({pane});
  const group=L.layerGroup().addTo(map);
- const kindColor={
-  revenue:'#c8a36c',battle:'#db9c89',resistance:'#65b9a6',
-  displacement:'#c8a181',coercion:'#d79ca1',
-  trade_influence:'#80bdb7',diplomacy:'#9cb5d3',
-  military:'#a894d2',administration:'#ba9bd9'
- };
+ const kindColor=window.AtlasMapColors.map(["revenue","battle","resistance","displacement","coercion","trade_influence","diplomacy","military","administration"]);
  const kindLabel={
   revenue:'财政活动地区',battle:'历史战事地点',
   resistance:'当地抵抗地区',displacement:'强制迁移相关地点',
@@ -58,7 +53,7 @@
    return area(b)-area(a);
   });
   for(const r of chosen){
-   const [w,s,e,n]=r.bbox,c=kindColor[r.kind]||'#b5a7c0';
+   const [w,s,e,n]=r.bbox,c=kindColor[r.kind]||window.AtlasMapColors.resolve('neutral');
    const shape=L.rectangle([[s,w],[n,e]],{
     renderer,pane,color:c,weight:1.35,opacity:.56,dashArray:'2 9',
     lineCap:'round',fill:false,fillOpacity:0,

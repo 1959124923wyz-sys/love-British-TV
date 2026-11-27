@@ -37,13 +37,7 @@ const areaRenderer=L.svg({pane:areaPane}),siteRenderer=L.svg({pane:sitePane});
 const group=L.layerGroup().addTo(map);
 let records=[],layers=new Map(),loaded=false,error=null,year=host.getYear();
 const active=(f,y)=>f.properties.periods.some(p=>p.start_year<=y&&y<=p.end_year);
-const palette={
- historic_proclamation_line:'#bc9b76',historic_indigenous_treaty_line:'#a6c7b2',
- physical_coastline:'#78adc1',physical_river:'#6baec7',american_revolution_battle_site:'#cba587',
- independent_coorg_royal_fort:'#c3a68b',forced_deportation_island:'#cf97a6',
- indigenous_land_island_context:'#baa88e',anglo_corsican_kingdom_island:'#9faec9',
- paper_claim_falkland_island_geography:'#c7b1a0'
-};
+const palette=Object.fromEntries(Object.entries({"historic_proclamation_line":"charter","historic_indigenous_treaty_line":"diplomacy","physical_coastline":"physical","physical_river":"physical","american_revolution_battle_site":"battle","independent_coorg_royal_fort":"local_governance","forced_deportation_island":"coercive_policy","indigenous_land_island_context":"land_dispossession","anglo_corsican_kingdom_island":"diplomacy","paper_claim_falkland_island_geography":"charter"}).map(([k,kind])=>[k,window.AtlasMapColors.resolve(kind)]));
 function show(f){
  host.clearSelection();const p=f.properties;
  const links=[...new Set(p.source_urls)].map(u=>{
@@ -58,7 +52,7 @@ function show(f){
 function make(f){
  const p=f.properties,geom=f.geometry.type,point=geom==='Point',line=['LineString','MultiLineString'].includes(geom);
  const pane=point?sitePane:areaPane,renderer=point?siteRenderer:areaRenderer;
- const color=palette[p.kind]||'#b6aabc';
+ const color=palette[p.kind]||window.AtlasMapColors.resolve('neutral');
  // Existing original dossiers, treaty clicks and historic fort overlays retain priority.
  const interactive=!p.source_geometry_id;
  const layer=L.geoJSON(f.geometry,{pane,renderer,color,opacity:.84,weight:line?2.2:1.7,

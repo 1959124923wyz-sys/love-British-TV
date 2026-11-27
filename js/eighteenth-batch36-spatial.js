@@ -15,11 +15,7 @@
  const zoneRenderer=L.svg({pane:zonePane}),pointRenderer=L.svg({pane:pointPane});
  let meta=null,loaded=false,error=null,year=host.getYear();
  const reader=window.AtlasReaderCopy;
- const colors={
-  administration:'#a58df5',military:'#cc9ffc',displacement:'#dca18a',resistance:'#60c9ba',
-  paper_claim:'#ebc479',diplomacy:'#70b8e1',trade_influence:'#7ad2cc',
-  battle:'#ed9a78',revenue:'#e4bd76',coercion:'#d88da2',foreign_occupation:'#a4b9c4'
- };
+ const colors=window.AtlasMapColors.map(["administration","military","displacement","resistance","paper_claim","diplomacy","trade_influence","battle","revenue","coercion","foreign_occupation"]);
  const labels={
   administration:'殖民行政涉及区',military:'英军堡垒／港口局部驻守',
   displacement:'强迫迁移／剥夺影响区',resistance:'当地抵抗与政治自主区',

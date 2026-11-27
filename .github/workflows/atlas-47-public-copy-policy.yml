@@ -13,6 +13,7 @@ on:
       - 'style.css'
       - 'data/**'
       - 'scripts/test_atlas_47_public_copy_guard.js'
+      - 'scripts/test_atlas_map_colors.js'
       - 'scripts/browser_atlas_47_public_copy_guard.py'
       - 'AGENTS.md'
       - 'docs/READER_PUBLIC_COPY_POLICY.md'
@@ -46,6 +47,7 @@ jobs:
           node --check js/atlas-public-ui-guard.js
           node --check js/atlas-reader-copy.js
           node --check app.js
+          node scripts/test_atlas_map_colors.js
           node scripts/test_atlas_47_public_copy_guard.js
           node --check scripts/lint_atlas_47_frontend_copy.js
           node scripts/lint_atlas_47_frontend_copy.js

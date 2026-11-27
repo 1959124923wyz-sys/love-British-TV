@@ -14,10 +14,7 @@
  const areaRenderer=L.svg({pane:areaPane}),siteRenderer=L.svg({pane:sitePane});
  const regions=['south-campaign','hudson-company','india-mysore'];
  const counts={'south-campaign':[48,41], 'hudson-company':[32,16],'india-mysore':[47,33]};
- const colors={administration:'#a58df5',military:'#c29dfe',displacement:'#dca18a',
-  resistance:'#5cccc0',paper_claim:'#ebc479',diplomacy:'#6cb4e7',
-  trade_influence:'#7bd2c6',battle:'#ed9a78',revenue:'#e4bd76',
-  coercion:'#e399ab',foreign_occupation:'#879eac'};
+ const colors=window.AtlasMapColors.map(["administration","military","displacement","resistance","paper_claim","diplomacy","trade_influence","battle","revenue","coercion","foreign_occupation"]);
  const label={administration:'殖民行政',military:'英方军事堡垒／局部占领',
   displacement:'强制迁移／人口剥夺',resistance:'当地政治自治／抵抗',
   paper_claim:'纸面或外交声索',diplomacy:'外交会商与条约',

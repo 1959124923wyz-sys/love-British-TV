@@ -82,10 +82,9 @@ try:
     # without claiming the Pale shape is a verified outer boundary.
     seek(1595)
     clicked = driver.execute_script("""
-      const paths=[...document.querySelectorAll('.leaflet-territory-pane path')];
-      const target=paths.find(el =>
-        (el.getAttribute('stroke')||'').toLowerCase()==='#c7a16e');
-      if(!target)return false;
+      const target=document.querySelector('.leaflet-territory-pane path.atlas-territory-id-irish-pale-1488-localities-approx-1497-1519');
+      if(!target || !target.getAttribute('stroke-dasharray') ||
+         (target.getAttribute('stroke')||'').toLowerCase()!==window.AtlasMapColors.resolve('charter').toLowerCase())return false;
       target.dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true}));
       return true;
     """)

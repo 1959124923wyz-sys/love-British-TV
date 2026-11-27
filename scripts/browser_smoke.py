@@ -842,13 +842,13 @@ try:
     verify("1556 Midland forts absent / invented county occupation",
            """document.querySelectorAll('#map .atlas-seventh-english').length===4 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
-              document.querySelectorAll('#map .atlas-territory-solid[fill="#357f76"]').length===0""",driver)
+              !Array.from(document.querySelectorAll('#map .atlas-territory-solid')).some(el=>el.getAttribute('fill')===window.AtlasMapColors.resolve('french_crown'))""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1556-irish-colonisation.png"))
     set_year(1558, expected_count(1558))
     verify("1558 Calais French recovery and Guines/Risban switch missing",
            """document.querySelectorAll('#map .atlas-seventh-french').length===3 &&
               document.querySelectorAll('#map .atlas-seventh-english').length===2 &&
-              document.querySelectorAll('#map .atlas-territory-solid[stroke="#65c9bc"]').length>=1""",driver)
+              Array.from(document.querySelectorAll('#map .atlas-territory-solid')).some(el=>el.getAttribute('stroke')===window.AtlasMapColors.resolve('french_crown'))""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1558-calais-french-recovery.png"))
     set_year(1559, expected_count(1559))
     verify("1559 Calais must stay French and Eyemouth unverified position must expire",

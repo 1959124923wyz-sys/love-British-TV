@@ -9,9 +9,7 @@ map.createPane(sitePane);map.getPane(sitePane).style.zIndex='454';
 const polygons=L.svg({pane:polyPane}),sites=L.svg({pane:sitePane}),group=L.layerGroup().addTo(map);
 let features=[],layers=new Map(),loaded=false,error=null,year=host.getYear();
 const active=(f,y)=>f.properties.periods.some(p=>p.start_year<=y&&y<=p.end_year);
-const colors={nps_abpp_revolutionary_war_study_polygon:'#d9aa81',disconnected_historic_garrison_areas:'#bd99b4',
- historical_fort_main_wall:'#e2c58b',physical_coastline:'#6cb9d3',physical_river:'#68aed0',
- forced_deportation:'#dcb0ac',southern_war_locality:'#cdbba2',south_indian_war_site:'#c2b89b'};
+const colors=Object.fromEntries(Object.entries({"nps_abpp_revolutionary_war_study_polygon":"battle","disconnected_historic_garrison_areas":"military","historical_fort_main_wall":"neutral","physical_coastline":"physical","physical_river":"physical","forced_deportation":"coercive_policy","southern_war_locality":"battle","south_indian_war_site":"battle"}).map(([k,kind])=>[k,window.AtlasMapColors.resolve(kind)]));
 function open(f){
  const p=f.properties;host.clearSelection();
  const urls=[...new Set(p.source_urls)].map(u=>{let domain=u;try{domain=new URL(u).hostname}catch{}
@@ -24,7 +22,7 @@ function open(f){
 function createLayer(f){
  const line=f.geometry.type==='MultiLineString',point=f.geometry.type==='Point';
  const pane=point?sitePane:polyPane,renderer=point?sites:polygons;
- const color=colors[f.properties.kind]||'#d3ae9c';
+ const color=colors[f.properties.kind]||window.AtlasMapColors.resolve('neutral');
  // Existing detailed official site dossiers remain above our new regional source geometry.
  const interactive=f.id!=='EDITOR37_5AC_FORT_CUMBERLAND_CHIGNECTO';
  const layer=L.geoJSON(f.geometry,{pane,renderer,color,weight:line?2.05:1.7,

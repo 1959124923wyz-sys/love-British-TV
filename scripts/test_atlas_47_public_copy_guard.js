@@ -127,3 +127,14 @@ assert.match(reader.narrative('英国于1894年建立保护地，[[E19-TEST|英�
   assert.equal(guard.strip(s),fact);
  }
 }
+
+// Preserve historical legal scope, suppress the editorial boundary note.
+{
+ const raw='1984年昆士兰实行土地权利制度。州界仅为制度适用背景。';
+ const fact='1984年昆士兰实行土地权利制度';
+ assert.equal(reader.clean(raw),fact);
+ assert.equal(guard.strip(raw),fact);
+ assert(guard.isWarning('州界仅为制度适用背景'));
+ assert.equal(reader.narrative('州界仅为制度适用背景。'),'');
+ assert.equal(reader.clean('昆士兰州土地法适用于该州'),'昆士兰州土地法适用于该州');
+}
