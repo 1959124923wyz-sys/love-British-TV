@@ -3060,6 +3060,63 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E20-T032-BAL",
+      "year": 1917,
+      "start_year": 1917,
+      "end_year": 1917,
+      "visible_from": 1917,
+      "date_label": "1917年11月2日",
+      "name": "英国发表贝尔福宣言",
+      "description": "英国政府支持在巴勒斯坦建立犹太民族家园，同时承诺不损害当地非犹太居民的公民及宗教权利。",
+      "short_description": "英国政府支持在巴勒斯坦建立犹太民族家园，同时承诺不损害当地非犹太居民的公民及宗教权利。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "同期法律、议会记录、官方报告或机构研究及具名地点"
+      },
+      "lat": 51.50853,
+      "lng": -0.12574,
+      "source_ids": [
+        "E20-T032-SRC-BAL",
+        "E20-T032-SRC-NAM",
+        "E20-T032-SRC-GEOLON"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T032-OCC",
+      "year": 1917,
+      "start_year": 1917,
+      "end_year": 1917,
+      "visible_from": 1917,
+      "date_label": "1917年12月",
+      "name": "耶路撒冷进入英国军事占领时期",
+      "description": "英国军队占领耶路撒冷，奥斯曼统治在当地结束。",
+      "short_description": "英国军队占领耶路撒冷，奥斯曼统治在当地结束。",
+      "category": "war",
+      "icon_code": "WAR",
+      "significance": {
+        "level": 8,
+        "rationale": "同期法律、议会记录、官方报告或机构研究及具名地点"
+      },
+      "lat": 31.76904,
+      "lng": 35.21633,
+      "source_ids": [
+        "E20-T032-SRC-NAM",
+        "E20-T032-SRC-GEOJER"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "routes": [
@@ -5927,6 +5984,70 @@
       "label": "GeoNames｜巴格达",
       "url": "https://www.geonames.org/98182/baghdad.html",
       "access": "WGS84城市参考坐标 33.34058, 44.40088"
+    },
+    {
+      "id": "E20-T032-SRC-BAL",
+      "publisher": "英国下议院图书馆",
+      "title": "Balfour Declaration",
+      "label": "英国下议院图书馆｜Balfour Declaration",
+      "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-7766/",
+      "access": "2016年研究简报及1917宣言文字"
+    },
+    {
+      "id": "E20-T032-SRC-NAM",
+      "publisher": "英国国家陆军博物馆",
+      "title": "The British Army in Palestine",
+      "label": "英国国家陆军博物馆｜The British Army in Palestine",
+      "url": "https://www.nam.ac.uk/explore/british-army-palestine",
+      "access": "机构历史，1917年占领与政治承诺"
+    },
+    {
+      "id": "E20-T032-SRC-GEOLON",
+      "publisher": "GeoNames",
+      "title": "伦敦现代具名参考点",
+      "label": "GeoNames｜伦敦",
+      "url": "https://www.geonames.org/advanced-search.html?country=GB&q=Londres",
+      "access": "WGS84 51.50853,-0.12574；现代地点参照"
+    },
+    {
+      "id": "E20-T032-SRC-GEOJER",
+      "publisher": "GeoNames",
+      "title": "耶路撒冷现代具名参考点",
+      "label": "GeoNames｜耶路撒冷",
+      "url": "https://www.geonames.org/281184/jerusalem.html",
+      "access": "WGS84 31.76904,35.21633；现代地点参照"
+    },
+    {
+      "id": "E20-T032-SRC-MAND",
+      "publisher": "耶鲁大学 Avalon Project",
+      "title": "The Palestine Mandate, 24 July 1922",
+      "label": "耶鲁大学 Avalon Project｜The Palestine Mandate, 24 July 1922",
+      "url": "https://avalon.law.yale.edu/20th_Century/Palmanda.asp",
+      "access": "全文，第1、2、4、6、11、25、28条；伦敦批准"
+    },
+    {
+      "id": "E20-T032-SRC-REPORT22",
+      "publisher": "国际联盟／联合国 UNISPAL",
+      "title": "Report of the Mandatory to the League of Nations, 1922",
+      "label": "国际联盟／联合国 UNISPAL｜Report of the Mandatory to the League of Nations, 1922",
+      "url": "https://www.un.org/unispal/document/auto-insert-195974/",
+      "access": "官方报告检索节录，1922-08-10枢密院令"
+    },
+    {
+      "id": "E20-T032-SRC-FR23",
+      "publisher": "美国国务院 FRUS",
+      "title": "Foreign Relations of the United States 1923, vol II, Palestine",
+      "label": "美国国务院 FRUS｜Foreign Relations of the United States 1923, vol II, Palestine",
+      "url": "https://history.state.gov/historicaldocuments/frus1923v02/papers",
+      "access": "文书目录摘要，1923-09-29正式生效"
+    },
+    {
+      "id": "E20-T032-SRC-AA",
+      "publisher": "英美调查委员会／耶鲁 Avalon",
+      "title": "Anglo-American Committee of Inquiry, Appendix IV",
+      "label": "英美调查委员会／耶鲁 Avalon｜Anglo-American Committee of Inquiry, Appendix IV",
+      "url": "https://avalon.law.yale.edu/20th_century/angap04.asp",
+      "access": "1946年调查委员会历史回顾，委任制度、皮尔方案及1937流放"
     }
   ]
 }
