@@ -101,3 +101,29 @@ assert.match(reader.narrative('英国于1894年建立保护地，[[E19-TEST|英�
  assert(appCode.includes('if(ev.detail===0)'));
  assert(storyCode.includes('if(e.detail===0)'));
 }
+
+// T088 candidate timeline and GIS captions: retain the original evidence, filter only at render time.
+{
+ const raw='英国在澳大利亚许可下启动试验计划；群岛为历史地区参考。';
+ const fact='英国在澳大利亚许可下启动试验计划';
+ for(const s of [raw]){
+  assert.equal(reader.clean(s),fact);
+  assert.equal(guard.strip(s),fact);
+  assert(reader.narrative(s).includes(fact));
+  assert(!reader.narrative(s).includes('历史地区参考'));
+ }
+ const historical='传统土地界线仍存在争议。';
+ assert.equal(reader.narrative(historical),historical);
+ assert.equal(reader.narrative('原始禁区和传统土地界线尚未核定，地图不填充任何推测区域。'),'');
+ const timeline=JSON.parse(read('data/stories/serial/chronology-1950-1959.json'));
+ const geo=JSON.parse(read('data/twentieth-century-spatial-1950-1959.geojson'));
+ const event=timeline.events.find(x=>x.id==='E20-T088-ISLANDS');
+ const feature=geo.features.find(x=>x.id==='e20-t088-islands-reference');
+ // Candidate data stays intact. The reader-copy parser and last-line guard are both tested.
+ assert(event&&feature);
+ for(const s of [event.description,event.short_description,feature.properties.summary_zh]){
+  assert.equal(s,raw);
+  assert.equal(reader.clean(s),fact);
+  assert.equal(guard.strip(s),fact);
+ }
+}
