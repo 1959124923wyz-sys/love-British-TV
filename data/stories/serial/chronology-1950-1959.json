@@ -4874,6 +4874,118 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E20-T085-PARL",
+      "year": 1950,
+      "start_year": 1950,
+      "end_year": 1950,
+      "visible_from": 1950,
+      "date_label": "1950年6月22日",
+      "name": "英国议会询问拘捕",
+      "description": "殖民大臣答复确认警务措施，称尚需向高级专员查证乌拉瓦和圣安娜拘捕人数。",
+      "short_description": "殖民大臣答复确认警务措施，称尚需向高级专员查证乌拉瓦和圣安娜拘捕人数。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "同期文书、当地调查或学术研究支持的专题节点"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "S85-HAN"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T085-RELEASE50",
+      "year": 1950,
+      "start_year": 1950,
+      "end_year": 1950,
+      "visible_from": 1950,
+      "date_label": "1950年",
+      "name": "自治运动领袖获有条件释放",
+      "description": "新任殖民行政长官改变政策，与在押领袖交涉，随后对部分领袖实行有条件释放。",
+      "short_description": "新任殖民行政长官改变政策，与在押领袖交涉，随后对部分领袖实行有条件释放。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "同期文书、当地调查或学术研究支持的专题节点"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "S85-FIFI",
+        "S85-MAA"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T085-COUNCIL52",
+      "year": 1952,
+      "start_year": 1952,
+      "end_year": 1952,
+      "visible_from": 1952,
+      "date_label": "1952年7月",
+      "name": "奥基议会筹议",
+      "description": "拟设岛级议会的代表于奥基举行会议；部分代表拒绝参加。",
+      "short_description": "拟设岛级议会的代表于奥基举行会议；部分代表拒绝参加。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "同期文书、当地调查或学术研究支持的专题节点"
+      },
+      "lat": -8.767778,
+      "lng": 160.697778,
+      "source_ids": [
+        "S85-MAA",
+        "S85-AUK"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T085-COUNCIL53",
+      "year": 1953,
+      "start_year": 1953,
+      "end_year": 1953,
+      "visible_from": 1953,
+      "date_label": "1953年1月26日",
+      "name": "马莱塔议会成立",
+      "description": "马莱塔议会在奥基附近Aimela新总部召开首次会议，许多原抵抗领袖进入议会。",
+      "short_description": "马莱塔议会在奥基附近Aimela新总部召开首次会议，许多原抵抗领袖进入议会。",
+      "category": "political",
+      "icon_code": "POL",
+      "significance": {
+        "level": 8,
+        "rationale": "同期文书、当地调查或学术研究支持的专题节点"
+      },
+      "lat": -8.767778,
+      "lng": 160.697778,
+      "source_ids": [
+        "S85-COUNCIL",
+        "S85-MAA",
+        "S85-AUK"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "routes": [
@@ -9147,6 +9259,46 @@
       "label": "GeoNames：London Village",
       "url": "https://www.geonames.org/4030939/london-village.html",
       "access": "居民聚落参考"
+    },
+    {
+      "id": "S85-HAN",
+      "publisher": "UK Parliament",
+      "title": "Hansard, Solomon Islands, 22 June 1950",
+      "label": "UK Parliament｜Hansard, Solomon Islands, 22 June 1950",
+      "url": "https://hansard.parliament.uk/Commons/1950-06-22/debates/f4782825-ab59-4a5b-85cc-08e5ea882e2b/SolomonIslands",
+      "access": "同期议会原文；提问与部长答复分列，人数未获确认"
+    },
+    {
+      "id": "S85-MAA",
+      "publisher": "Solomon Islands Historical Encyclopaedia",
+      "title": "Solomon Islands Historical Encyclopaedia, Maasina Rule",
+      "label": "Solomon Islands Historical Encyclopaedia｜Solomon Islands Historical Encyclopaedia, Maasina Rule",
+      "url": "https://www.solomonencyclopaedia.net/biogs/E000181b.htm",
+      "access": "学术汇编；1944起源、1947 Auki会议、1948–52拘捕、1952–55议会"
+    },
+    {
+      "id": "S85-AUK",
+      "publisher": "GeoNames",
+      "title": "GeoNames, Auki",
+      "label": "GeoNames｜GeoNames, Auki",
+      "url": "https://www.geonames.org/advanced-search.html?country=SB&q=Auki",
+      "access": "现代地名；-8.767778,160.697778"
+    },
+    {
+      "id": "S85-COUNCIL",
+      "publisher": "Solomon Islands Historical Encyclopaedia",
+      "title": "Malaita District Council",
+      "label": "Solomon Islands Historical Encyclopaedia｜Malaita District Council",
+      "url": "https://www.solomonencyclopaedia.net/biogs/E000763b.htm",
+      "access": "1952年选主席、1953年首次会议、1964年改选"
+    },
+    {
+      "id": "S85-FIFI",
+      "publisher": "Solomon Islands Historical Encyclopaedia",
+      "title": "Fifi'i, Jonathan",
+      "label": "Solomon Islands Historical Encyclopaedia｜Fifi'i, Jonathan",
+      "url": "https://www.solomonencyclopaedia.net/biogs/E000452b.htm",
+      "access": "当地运动领袖生平、1947年判刑与1950年获释"
     }
   ]
 }
