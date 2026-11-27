@@ -4675,6 +4675,86 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "iraq-t030-t031-london-1930"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "e20-t050-inq30-reference",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.367,
+          5.107
+        ]
+      },
+      "properties": {
+        "name": "阿巴（Aba） · 殖民政府设立调查委员会",
+        "start_year": 1930,
+        "end_year": 1930,
+        "display_kind": "political",
+        "summary_zh": "殖民政府任命调查委员会，随后在阿巴等城市公开听证。报告记录38天公开庭审及485名证人，妇女证词成为追索责任的重要材料。",
+        "source_ids": [
+          "E20-T050-SRC-INQ",
+          "E20-T050-SRC-LAND",
+          "E20-T050-SRC-GEO2"
+        ],
+        "source_urls": [
+          "https://s3-eu-west-1.amazonaws.com/s3.sourceafrica.net/documents/121264/NAWI-Prayers-for-a-Cruel-Blessed-World.pdf",
+          "https://ucp.manifoldapp.org/read/the-land-has-changed-history-society-and-gender-in-colonial-eastern-nigeria/section/a4469113-1eff-46a6-87f6-6709feece7bd",
+          "https://www.geonames.org/NG/largest-cities-in-nigeria.html"
+        ],
+        "named_anchors": [
+          "阿巴（Aba）"
+        ],
+        "mapping_method": "具名现代城镇参考点，非历史设施建筑、行动地点或矿区边界。",
+        "related_event_ids": [
+          "E20-T050-INQ30"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "e20-t050-inq30-reference"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "e20-t050-owerri30-reference",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.0342,
+          5.4897
+        ]
+      },
+      "properties": {
+        "name": "奥韦里（Owerri） · 奥韦里公开听证",
+        "start_year": 1930,
+        "end_year": 1930,
+        "display_kind": "political",
+        "summary_zh": "调查委员会在奥韦里开展公开听证，审查1929年反税事件及殖民当局的处置。",
+        "source_ids": [
+          "E20-T050-SRC-INQ",
+          "E20-T050-SRC-GEO3"
+        ],
+        "source_urls": [
+          "https://s3-eu-west-1.amazonaws.com/s3.sourceafrica.net/documents/121264/NAWI-Prayers-for-a-Cruel-Blessed-World.pdf",
+          "https://mapcarta.com/Owerri"
+        ],
+        "named_anchors": [
+          "奥韦里（Owerri）"
+        ],
+        "mapping_method": "具名现代城镇参考点，非历史设施建筑、行动地点或矿区边界。",
+        "related_event_ids": [
+          "E20-T050-OWERRI30"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "e20-t050-owerri30-reference"
+      }
     }
   ]
 }
