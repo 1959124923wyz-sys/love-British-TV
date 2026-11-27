@@ -4063,11 +4063,11 @@
         ]
       },
       "properties": {
-        "name": "伦敦 · 英国殖民政策与议会记录",
+        "name": "伦敦 · 伊拉克专题",
         "start_year": 1920,
         "end_year": 1924,
         "display_kind": "economic_network",
-        "summary_zh": "英国议会质询殖民行政税负。英国下院议员以巴格达公布的预算指出地方税收大幅增加。；英国上院讨论行政成本与控制。上院追问英国驻留的行政组织及财政成本。；英国否认以空中军事行动征税。英国议会政府答复否认征税目的行动，后来的英国调查报告记载强制征税行动。；英国议会追问村镇居民伤亡。英国议会质询居民损失；政府承认进行军事行动，但称未收到当地伤亡报告。 同期另有巴勒斯坦相关政策及议会记录。",
+        "summary_zh": "英国议会质询殖民行政税负。英国下院议员以巴格达公布的预算指出地方税收大幅增加。；英国上院讨论行政成本与控制。上院追问英国驻留的行政组织及财政成本。；英国否认以空中军事行动征税。英国议会政府答复否认征税目的行动，后来的英国调查报告记载强制征税行动。；英国议会追问村镇居民伤亡。英国议会质询居民损失；政府承认进行军事行动，但称未收到当地伤亡报告。",
         "source_ids": [
           "E20-T030-SRC-TAX",
           "E20-T030-SRC-OSU",
@@ -4075,10 +4075,7 @@
           "E20-T030-SRC-LORDS",
           "E20-T030-SRC-TAXDENY",
           "E20-T030-SRC-INQ",
-          "E20-T030-SRC-BOMB",
-          "E20-T032-SRC-MAND",
-          "E20-T032-SRC-REPORT22",
-          "E20-T032-SRC-GEOLON"
+          "E20-T030-SRC-BOMB"
         ],
         "source_urls": [
           "https://api.parliament.uk/historic-hansard/commons/1920/jun/23/mesopotamia-1",
@@ -4087,9 +4084,7 @@
           "https://api.parliament.uk/historic-hansard/lords/1920/jun/25/mesopotamia",
           "https://api.parliament.uk/historic-hansard/written-answers/1924/mar/13/iraq-air-operations",
           "https://assets.publishing.service.gov.uk/media/5a815450e5274a2e8ab5364d/The_Report_of_the_Iraq_Inquiry_-_Volume_XII.pdf",
-          "https://api.parliament.uk/historic-hansard/commons/1924/jul/03/bombing-operations-iraq",
-          "https://avalon.law.yale.edu/20th_Century/Palmanda.asp",
-          "https://www.un.org/unispal/document/auto-insert-195974/"
+          "https://api.parliament.uk/historic-hansard/commons/1924/jul/03/bombing-operations-iraq"
         ],
         "named_anchors": [
           "伦敦"
@@ -4099,10 +4094,7 @@
           "E20-T030-TAX",
           "E20-T030-COST",
           "E20-T030-TAXDENIAL",
-          "E20-T030-BOMBQUESTION",
-          "E20-T032-MAND",
-          "E20-T032-LAND",
-          "E20-T032-ORDER"
+          "E20-T030-BOMBQUESTION"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -4397,6 +4389,49 @@
             "summary_zh": "1923年委任条款正式生效。"
           }
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "palestine-t032-t033-london-1920",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.12574,
+          51.50853
+        ]
+      },
+      "properties": {
+        "name": "伦敦 · 巴勒斯坦委任统治政策与议会记录",
+        "start_year": 1922,
+        "end_year": 1922,
+        "display_kind": "economic_network",
+        "summary_zh": "委任文件在伦敦获得批准，赋予英国立法与行政权，并规定建立犹太民族家园及保障居民权利。；委任文件第6条鼓励犹太移民及土地安置，第11条规定自然资源及公共设施管理。；英国枢密院令确立高级专员、行政与立法机构及司法制度。",
+        "source_ids": [
+          "E20-T032-SRC-MAND",
+          "E20-T032-SRC-REPORT22",
+          "E20-T032-SRC-GEOLON"
+        ],
+        "source_urls": [
+          "https://avalon.law.yale.edu/20th_Century/Palmanda.asp",
+          "https://www.un.org/unispal/document/auto-insert-195974/",
+          "https://www.geonames.org/advanced-search.html?country=GB&q=Londres"
+        ],
+        "named_anchors": [
+          "伦敦"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T032-MAND",
+          "E20-T032-LAND",
+          "E20-T032-ORDER"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "palestine-t032-t033-london-1920"
       }
     }
   ]

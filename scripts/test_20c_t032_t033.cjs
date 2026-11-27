@@ -32,3 +32,19 @@ for(const d of ['1910-1919','1920-1929','1930-1939','1940-1949']){
 }
 assert.equal(previous,1947);
 console.log('PASS Palestine evidence, 41 unique events, 42 story links, locality points and political continuity');
+
+const candidates=idx.topics.filter(t=>/^E20-T03[23]-/.test(t.id));
+assert.equal(candidates.length,2);
+const app=fs.readFileSync('app.js','utf8'),code=app.slice(app.indexOf('function modern20cReviewGate('),app.indexOf('async function fetchModernAtlas('));
+const getGate=new Function('reviewParams',code+'\nreturn modern20cReviewGate;');
+const pub=getGate({get:()=>null})(1900,idx),rev=getGate({get:()=>'1'})(1900,idx);
+assert([...events.keys()].every(id=>pub.eventIds.has(id)));
+assert(candidates.every(t=>t.review_entry_required&&t.review_feature_ids.every(id=>pub.featureIds.has(id))));
+assert.equal(new Set(candidates.flatMap(t=>t.review_feature_ids)).size,16);
+assert(!pub.featureIds.has('iraq-t030-t031-london-1920'));assert(!pub.featureIds.has('iraq-t030-t031-london-1930'));
+for(const d of ['1920-1929','1930-1939']){
+ const fs0=load('data/twentieth-century-spatial-'+d+'.geojson').features,iraq=fs0.find(f=>f.id==='iraq-t030-t031-london-'+d.slice(0,4));
+ assert(iraq.properties.related_event_ids.every(id=>!/^E20-T03[23]-/.test(id)));assert(iraq.properties.source_ids.every(id=>!/^E20-T03[23]-/.test(id)));
+}
+assert.equal(rev.eventIds.size,0);assert.equal(rev.featureIds.size,0);
+console.log('PASS candidate isolation: 41 event IDs, 16 feature IDs, shared public Iraq features preserved');
