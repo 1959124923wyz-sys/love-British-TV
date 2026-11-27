@@ -5014,6 +5014,46 @@
         "exclude_from_area_aggregation": true,
         "stable_id": "e20-t074-cow35-reference"
       }
+    },
+    {
+      "type": "Feature",
+      "id": "phosphate-ban-1931",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.539,
+          -0.855
+        ]
+      },
+      "properties": {
+        "name": "巴纳巴岛 · 殖民当局强制取得约150英亩巴纳巴矿地",
+        "stable_id": "phosphate-ban-1931",
+        "start_year": 1931,
+        "end_year": 1931,
+        "display_kind": "land_dispossession",
+        "summary_zh": "1977年法院判决回顾1931年以强制取得约150英亩土地为核心的交易，涉及殖民官员确定矿业租约权利金的利益冲突争议。该数字是交易面积而非测绘采矿面积。",
+        "source_ids": [
+          "E20-PHOS-SRC-BAN-JUD-TEXT",
+          "E20-PHOS-SRC-G-BAN"
+        ],
+        "source_urls": [
+          "https://www.uniset.ca/other/buttes/1977Ch106.html",
+          "https://www.geonames.org/2110256"
+        ],
+        "named_anchors": [
+          "巴纳巴岛"
+        ],
+        "mapping_method": "具名地点参考点；不表示矿区、地块或历史行政边界。",
+        "geo_precision": "named_locality_approximate",
+        "related_event_ids": [
+          "E20-T083-ACQUIRE31"
+        ],
+        "historical_boundary_confirmed": false,
+        "territorial_claim": false,
+        "fill_authorized": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true
+      }
     }
   ]
 }

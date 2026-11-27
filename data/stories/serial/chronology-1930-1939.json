@@ -3954,6 +3954,62 @@
       "area_sqkm": null
     },
     {
+      "id": "E20-T083-FUND31",
+      "year": 1931,
+      "start_year": 1931,
+      "end_year": 1931,
+      "visible_from": 1931,
+      "date_label": "1931年",
+      "name": "巴纳巴迁居储备基金建立",
+      "description": "殖民当局以部分矿业权利金建立储备基金，准备购买将来迁居土地。",
+      "short_description": "殖民当局以部分矿业权利金建立储备基金，准备购买将来迁居土地。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "同期立法、议会或司法文书与地方社区研究"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-PHOS-SRC-BAN-COM",
+        "E20-PHOS-SRC-BAN-1979"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T083-ACQUIRE31",
+      "year": 1931,
+      "start_year": 1931,
+      "end_year": 1931,
+      "visible_from": 1931,
+      "date_label": "1931年",
+      "name": "殖民当局强制取得约150英亩巴纳巴矿地",
+      "description": "1977年法院判决回顾1931年以强制取得约150英亩土地为核心的交易，涉及殖民官员确定矿业租约权利金的利益冲突争议。该数字是交易面积而非测绘采矿面积。",
+      "short_description": "1977年法院判决回顾1931年以强制取得约150英亩土地为核心的交易，涉及殖民官员确定矿业租约权利金的利益冲突争议。该数字是交易面积而非测绘采矿面积。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 7,
+        "rationale": "同期安置报告或1977判决所述历史地权交易"
+      },
+      "lat": -0.855,
+      "lng": 169.539,
+      "source_ids": [
+        "E20-PHOS-SRC-BAN-JUD-TEXT",
+        "E20-PHOS-SRC-G-BAN"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
       "id": "E20-T085-WAGE35",
       "year": 1935,
       "start_year": 1935,
@@ -7861,6 +7917,38 @@
       "label": "UK legislation｜Empire Settlement Act 1937, c.18",
       "url": "https://www.legislation.gov.uk/ukpga/Edw8and1Geo6/1/18/pdfs/ukpga_19370018_en.pdf",
       "access": "原件1、2页截图核验；1937-03-19，第1(1)(2)条，总计划支出上限和资助比例"
+    },
+    {
+      "id": "E20-PHOS-SRC-BAN-COM",
+      "publisher": "Banaban Voice（巴纳巴社区史）",
+      "title": "拉比岛购买与移居史",
+      "label": "Banaban Voice（巴纳巴社区史）｜拉比岛购买与移居史",
+      "url": "https://www.banaban.com/banabans-rabi-history",
+      "access": "含1946年殖民土地专员Maude备忘录转录；购买年份以ANU核对"
+    },
+    {
+      "id": "E20-PHOS-SRC-BAN-1979",
+      "publisher": "英国下院",
+      "title": "Kiribati Bill, 1979-05-24",
+      "label": "英国下院｜Kiribati Bill, 1979-05-24",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1979/may/24/kiribati-bill",
+      "access": "全文，庭审结果、三国方案、矿业退出、独立辩论；区分议员言论与部长答复"
+    },
+    {
+      "id": "E20-PHOS-SRC-BAN-JUD-TEXT",
+      "publisher": "英格兰衡平法院判决文本（非官方全文转录）",
+      "title": "Tito v Waddell (No. 2) [1977] Ch 106",
+      "label": "Tito v Waddell (No. 2) 1977判决全文转录",
+      "url": "https://www.uniset.ca/other/buttes/1977Ch106.html",
+      "access": "全文转录，原判页126–129、185–187及1947土地测界段；未比对纸本法报原件。1931/1947地权交易性质、面积、1975勘察及1942购岛"
+    },
+    {
+      "id": "E20-PHOS-SRC-G-BAN",
+      "publisher": "GeoNames",
+      "title": "Banaba Island 2110256",
+      "label": "GeoNames｜Banaba Island 2110256",
+      "url": "https://www.geonames.org/2110256",
+      "access": "现代岛屿参考点 -0.855,169.539"
     },
     {
       "id": "S85-ANU10",
