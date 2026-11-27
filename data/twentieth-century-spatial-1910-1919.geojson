@@ -3786,6 +3786,103 @@
     },
     {
       "type": "Feature",
+      "id": "palestine-jerusalem-administration",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.21633,
+          31.76904
+        ]
+      },
+      "properties": {
+        "name": "耶路撒冷 · 英国军事占领",
+        "start_year": 1917,
+        "end_year": 1919,
+        "display_kind": "political",
+        "summary_zh": "1917年英军占领耶路撒冷。",
+        "source_ids": [
+          "E20-T032-SRC-NAM",
+          "E20-T032-SRC-MAND",
+          "E20-T032-SRC-REPORT22",
+          "E20-T032-SRC-FR23",
+          "E20-T032-SRC-AA",
+          "E20-T032-SRC-GEOJER"
+        ],
+        "source_urls": [
+          "https://www.nam.ac.uk/explore/british-army-palestine",
+          "https://avalon.law.yale.edu/20th_Century/Palmanda.asp",
+          "https://www.un.org/unispal/document/auto-insert-195974/",
+          "https://history.state.gov/historicaldocuments/frus1923v02/papers",
+          "https://avalon.law.yale.edu/20th_century/angap04.asp",
+          "https://www.geonames.org/281184/jerusalem.html"
+        ],
+        "named_anchors": [
+          "耶路撒冷"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T032-OCC"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "palestine-jerusalem-administration",
+        "year_stages": [
+          {
+            "start_year": 1917,
+            "end_year": 1919,
+            "controller": "british",
+            "title": "耶路撒冷 · 英国军事占领",
+            "summary_zh": "1917年英军占领耶路撒冷。"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "palestine-t032-t033-london-1910",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.12574,
+          51.50853
+        ]
+      },
+      "properties": {
+        "name": "伦敦 · 巴勒斯坦专题",
+        "start_year": 1917,
+        "end_year": 1917,
+        "display_kind": "political",
+        "summary_zh": "英国政府支持在巴勒斯坦建立犹太民族家园，同时承诺不损害当地非犹太居民的公民及宗教权利。",
+        "source_ids": [
+          "E20-T032-SRC-BAL",
+          "E20-T032-SRC-NAM",
+          "E20-T032-SRC-GEOLON"
+        ],
+        "source_urls": [
+          "https://commonslibrary.parliament.uk/research-briefings/cbp-7766/",
+          "https://www.nam.ac.uk/explore/british-army-palestine",
+          "https://www.geonames.org/advanced-search.html?country=GB&q=Londres"
+        ],
+        "named_anchors": [
+          "伦敦"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T032-BAL"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "palestine-t032-t033-london-1910"
+      }
+    },
+    {
+      "type": "Feature",
       "id": "e20-t074-pin13-reference",
       "geometry": {
         "type": "Point",
