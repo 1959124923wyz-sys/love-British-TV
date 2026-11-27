@@ -18,6 +18,7 @@ for(let y=1900;y<=1990;y+=10){
 assert.equal(found.size,24);assert.equal(points.size,12);assert.equal(reuseFound.size,2);
 const t=idx.topics.find(t=>t.id==='E20-T050-NIGERIA-TAX-LABOUR-1914-1960'),a=read(t.article_file);
 assert.equal(t.status,'editorial_review');assert.equal(t.publication_review,'not_submitted');assert.equal(t.review_entry_required,true);assert.deepEqual(a,read('research/20c/T050_ARTICLE_CANDIDATE.json'));assert.equal(a.sections.length,15);const src=new Set(a.sources.map(s=>s.id));
+assert(a.sections.flatMap(s=>s.paragraphs).join('').replace(/\[\[[^|]+\|([^\]]+)\]\]/g,'$1').length>=3000,'publication prose minimum');
 const links=a.sections.flatMap(s=>s.paragraphs.flatMap(p=>[...p.matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]]+\]\]/g)].map(m=>m[1])));
 assert.equal(new Set(links).size,26);assert.deepEqual(links,t.event_ids);assert.deepEqual(new Set(t.review_event_ids),found);assert.deepEqual(new Set(t.review_feature_ids),points);
 for(const s of a.sections){assert(s.paragraphs.length>=2);assert(s.source_keys.every(k=>src.has(k)));}
