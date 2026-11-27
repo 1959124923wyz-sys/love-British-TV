@@ -140,6 +140,14 @@
       "label": "GeoNames｜Cameroon populated place search: Tiko",
       "url": "https://www.geonames.org/advanced-search.html?country=CM&featureClass=P&q=&startRow=0",
       "access": "现代蒂科地名4.075,9.36005，非庄园"
+    },
+    {
+      "id": "E20-T055-SRC-TL738",
+      "publisher": "United Nations Trusteeship Council",
+      "title": "T/L.738, Examination of the annual report on the administration of Togoland under British administration, 1955, 13 March 1957",
+      "label": "联合国托管理事会｜T/L.738",
+      "url": "https://digitallibrary.un.org/nanna/record/4025184/files/T_L.738-EN.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+      "access": "官方PDF可检索文本，第9—16段；第5、6页影像403，数值为候审转录，须核扫描件；第8段识别有错，以1044决议为准"
     }
   ],
   "events": [
@@ -373,15 +381,16 @@
       "visible_from": 1957,
       "date_label": "1957年3月6日",
       "name": "英属多哥与黄金海岸联合独立",
-      "description": "托管决议预定黄金海岸独立日期为1957年3月6日；联合国图书馆目录确认英属多哥成为加纳的一部分。 本节点仅记录英属多哥托管终止及联合，黄金海岸独立本身沿用E20-KEN-GHANA。",
-      "short_description": "托管决议预定黄金海岸独立日期为1957年3月6日；联合国图书馆目录确认英属多哥成为加纳的一部分。 本节点仅记录英属多哥托管终止及联合，黄金海岸独立本身沿用E20-KEN-GHANA。",
+      "description": "托管决议预定黄金海岸独立日期为1957年3月6日；联合国图书馆目录确认英属多哥成为加纳的一部分。 本节点仅记录英属多哥托管终止及联合，黄金海岸独立本身沿用E20-KEN-GHANA。 联合国1957年3月13日工作文件第9段转述3月6日英国通知T/1301，确认联合实际生效。",
+      "short_description": "托管决议预定黄金海岸独立日期为1957年3月6日；联合国图书馆目录确认英属多哥成为加纳的一部分。 本节点仅记录英属多哥托管终止及联合，黄金海岸独立本身沿用E20-KEN-GHANA。 联合国1957年3月13日工作文件第9段转述3月6日英国通知T/1301，确认联合实际生效。",
       "category": "political",
       "icon_code": "DOC",
       "lat": null,
       "lng": null,
       "source_ids": [
         "E20-T055-SRC-T56",
-        "E20-T055-SRC-UN-T"
+        "E20-T055-SRC-UN-T",
+        "E20-T055-SRC-TL738"
       ],
       "responsibility": "当地居民、加纳、英国及联合国",
       "geo_precision": "unlocated",
@@ -536,6 +545,54 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E20-T055-COCOA55",
+      "year": 1955,
+      "start_year": 1955,
+      "end_year": 1955,
+      "visible_from": 1955,
+      "date_label": "1955年",
+      "name": "可可出口与殖民营销制度",
+      "description": "1957年联合国工作文件第10—11段汇总1955年行政报告，南部经济依赖可可，由黄金海岸可可营销委员会经许可代理商收购。年度出口价值、可可出口价值是贸易额，不是英国净收益。",
+      "short_description": "1957年联合国工作文件第10—11段汇总1955年行政报告，南部经济依赖可可，由黄金海岸可可营销委员会经许可代理商收购。年度出口价值、可可出口价值是贸易额，不是英国净收益。",
+      "category": "economic",
+      "icon_code": "TRADE",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T055-SRC-TL738"
+      ],
+      "responsibility": "英国殖民行政、营销委员会及当地种植者",
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T055-LAB55",
+      "year": 1955,
+      "start_year": 1955,
+      "end_year": 1955,
+      "visible_from": 1955,
+      "date_label": "1955年",
+      "name": "可可种植园季节性劳工条件调查",
+      "description": "同一文件第16段记载可可业依赖季节性及移民劳工；当局报告派高级官员赴霍调查农场劳动条件。具体虐待个案与调查结果待核。",
+      "short_description": "同一文件第16段记载可可业依赖季节性及移民劳工；当局报告派高级官员赴霍调查农场劳动条件。具体虐待个案与调查结果待核。",
+      "category": "social",
+      "icon_code": "DOC",
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T055-SRC-TL738"
+      ],
+      "responsibility": "英国殖民行政、营销委员会及当地种植者",
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "reused_event_ids": [
@@ -559,10 +616,47 @@
       "scope": "同一选择占登记选民比例",
       "source_id": "E20-T055-SRC-C61",
       "locator": "部长答复"
+    },
+    {
+      "id": "E20-T055-Q-EXPORT",
+      "year": 1955,
+      "value": 4021151,
+      "unit": "英镑",
+      "scope": "英属多哥1955年全部出口价值；PDF文本候审，影像未复核",
+      "source_id": "E20-T055-SRC-TL738",
+      "locator": "T/L.738 第10、13段"
+    },
+    {
+      "id": "E20-T055-Q-COCOA",
+      "year": 1955,
+      "value": 3227635,
+      "unit": "英镑",
+      "scope": "英属多哥1955年可可出口价值；PDF文本候审，影像未复核",
+      "source_id": "E20-T055-SRC-TL738",
+      "locator": "T/L.738 第10、13段"
+    },
+    {
+      "id": "E20-T055-Q-REVENUE",
+      "year": 1955,
+      "value": 3399862,
+      "unit": "英镑",
+      "scope": "英属多哥1954—55财年公共收入；PDF文本候审，影像未复核",
+      "source_id": "E20-T055-SRC-TL738",
+      "locator": "T/L.738 第10、13段"
+    },
+    {
+      "id": "E20-T055-Q-EXPENSE",
+      "year": 1955,
+      "value": 3233696,
+      "unit": "英镑",
+      "scope": "英属多哥1954—55财年含发展支出的公共支出；PDF文本候审，影像未复核",
+      "source_id": "E20-T055-SRC-TL738",
+      "locator": "T/L.738 第10、13段"
     }
   ],
   "limitations": [
     "1914—1922军事管理细节、原始委任协议、托管及投票报告影像未逐页查核；不推断原始边界或地方票数。",
-    "蒂科为议会谈到的种植园所在地参考点，不是庄园范围、议会地点或确切劳动事件。殖民时期公司财务与劳工档案缺。"
+    "蒂科为议会谈到的种植园所在地参考点，不是庄园范围、议会地点或确切劳动事件。殖民时期公司财务与劳工档案缺。",
+    "T/L.738官方PDF文字转录可读，影像访问403；新增金额仍为候审，未作为已核损失或收益发布。"
   ]
 }
