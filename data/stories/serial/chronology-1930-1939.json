@@ -3896,6 +3896,62 @@
       "territorial_claim": false,
       "fill_authorized": false,
       "area_sqkm": null
+    },
+    {
+      "id": "E20-T074-COW35",
+      "year": 1935,
+      "start_year": 1935,
+      "end_year": 1935,
+      "visible_from": 1935,
+      "date_label": "1935年",
+      "name": "Fairbridge在考伊琴站购地",
+      "description": "加拿大地方历史遗产登记证实Fairbridge Society购入该地产，后来在当地经营其加拿大农场学校。",
+      "short_description": "加拿大地方历史遗产登记证实Fairbridge Society购入该地产，后来在当地经营其加拿大农场学校。",
+      "category": "economic",
+      "icon_code": "ECO",
+      "significance": {
+        "level": 8,
+        "rationale": "官方调查、档案、法律或研究证据"
+      },
+      "lat": 48.733333,
+      "lng": -123.66667,
+      "source_ids": [
+        "E20-T074-SRC-CANF",
+        "E20-T074-SRC-CAN",
+        "E20-T074-SRC-COWC"
+      ],
+      "geo_precision": "named_locality_approximate",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
+    },
+    {
+      "id": "E20-T074-LAW37",
+      "year": 1937,
+      "start_year": 1937,
+      "end_year": 1937,
+      "visible_from": 1937,
+      "date_label": "1937年3月19日",
+      "name": "英国延长帝国定居法",
+      "description": "法律将资助期限延至1952年5月31日，规定1937财政年度及其后年度相关全部计划的净额支出上限150万英镑，并调整特定计划资助比例。",
+      "short_description": "法律将资助期限延至1952年5月31日，规定1937财政年度及其后年度相关全部计划的净额支出上限150万英镑，并调整特定计划资助比例。",
+      "category": "law",
+      "icon_code": "DOC",
+      "significance": {
+        "level": 8,
+        "rationale": "官方调查、档案、法律或研究证据"
+      },
+      "lat": null,
+      "lng": null,
+      "source_ids": [
+        "E20-T074-SRC-ESA37"
+      ],
+      "geo_precision": "unlocated",
+      "historical_control_boundary_verified": false,
+      "territorial_claim": false,
+      "fill_authorized": false,
+      "area_sqkm": null
     }
   ],
   "routes": [
@@ -7745,6 +7801,38 @@
       "label": "英国议会 Hansard｜Southern Nigeria, 12 November 1930, vol. 244 cc1655–6",
       "url": "https://api.parliament.uk/historic-hansard/commons/1930/nov/12/southern-nigeria",
       "access": "议员引调查报告质疑警察开枪正当性、集体罚款及赦免；部长称待殖民政府意见"
+    },
+    {
+      "id": "E20-T074-SRC-CANF",
+      "publisher": "Canadian Register of Historic Places",
+      "title": "Fairbridge Farm Schoolhouse",
+      "label": "Canadian Register of Historic Places｜Fairbridge Farm Schoolhouse",
+      "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=22798",
+      "access": "1935购入Cowichan Station地产；现存建筑登记不等于历史整个学校地界"
+    },
+    {
+      "id": "E20-T074-SRC-CAN",
+      "publisher": "Library and Archives Canada",
+      "title": "Home Children and Board of Guardians",
+      "label": "Library and Archives Canada｜Home Children and Board of Guardians",
+      "url": "https://www.canada.ca/en/library-archives/collection/research-help/genealogy-family-history/immigration/home-children.html",
+      "access": "RG76 C4a、C4c；1869至1930年代晚期总量及1911–32等监察名册；跨世纪人口不可直接加总"
+    },
+    {
+      "id": "E20-T074-SRC-COWC",
+      "publisher": "Natural Resources Canada",
+      "title": "Canadian Geographical Names Database, Cowichan Station JAHLF",
+      "label": "Natural Resources Canada｜Canadian Geographical Names Database, Cowichan Station JAHLF",
+      "url": "https://geogratis.gc.ca/services/geoname/en/geonames.html?category=O%2CP%2CM&expand=items.status%2Citems.concise%2Citems.generic%2Citems.province&q=&select=items.status.term%2Citems.concise.term%2Citems.generic.term%2Citems.province.description&skip=60400&sort-field=name",
+      "access": "-123.66667,48.733333 社区参考"
+    },
+    {
+      "id": "E20-T074-SRC-ESA37",
+      "publisher": "UK legislation",
+      "title": "Empire Settlement Act 1937, c.18",
+      "label": "UK legislation｜Empire Settlement Act 1937, c.18",
+      "url": "https://www.legislation.gov.uk/ukpga/Edw8and1Geo6/1/18/pdfs/ukpga_19370018_en.pdf",
+      "access": "原件1、2页截图核验；1937-03-19，第1(1)(2)条，总计划支出上限和资助比例"
     }
   ]
 }
