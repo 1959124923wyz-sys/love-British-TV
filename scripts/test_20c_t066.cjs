@@ -11,7 +11,7 @@ for(let d=1900;d<=1990;d+=10){
 }
 assert.equal(observed.size,29);assert.equal(observedPoints.size,14);assert.equal(reused.size,2);
 const t=index.topics.find(t=>t.id==='E20-T066-CHAGOS-FORCED-DISPLACEMENT-1964-1998'),a=read(t.article_file);
-assert.equal(t.status,'editorial_review');assert.equal(t.publication_review,'not_submitted');assert.equal(t.review_entry_required,true);assert.equal(a.sections.length,17);assert(a.lead.length>=120);const sources=new Set(a.sources.map(s=>s.id));
+assert.equal(t.status,'published');assert.equal(t.publication_review,'approved');assert.equal(t.review_entry_required,true);assert.equal(a.sections.length,17);assert(a.sections.flatMap(s=>s.paragraphs).join('').replace(/\[\[[^|]+\|([^\]]+)\]\]/g,'$1').length>=3000);assert(a.lead.length>=120);const sources=new Set(a.sources.map(s=>s.id));
 const links=[...a.sections.flatMap(s=>s.paragraphs).join('').matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]]+\]\]/g)].map(m=>m[1]);
 assert.equal(new Set(links).size,31);assert.deepEqual(links,t.event_ids);assert(links.every(id=>es.has(id)||reused.has(id)));
 assert.deepEqual(new Set(t.review_event_ids),observed);assert.deepEqual(new Set(t.review_feature_ids),observedPoints);
@@ -21,7 +21,7 @@ assert.equal(reg.quantitative.filter(q=>q.event_id==='E20-T066-LAST73').reduce((
 assert.equal(reg.quantitative.filter(q=>q.event_id==='E20-T066-DISBURSE77').reduce((n,q)=>n+q.value,0),595);
 assert.equal(reg.territorial_phases[0].to,1975);assert.deepEqual(reg.territorial_phases[1].returned,['Aldabra','Farquhar','Desroches']);
 const app=fs.readFileSync('app.js','utf8'),gate=app.slice(app.indexOf('function modern20cReviewGate('),app.indexOf('async function fetchModernAtlas(')),getGate=new Function('reviewParams',gate+'\nreturn modern20cReviewGate;');
-const pub=getGate({get:()=>null})(1960,index),rev=getGate({get:()=> '1'})(1960,index);assert([...observed].every(id=>pub.eventIds.has(id)));assert([...observedPoints].every(id=>pub.featureIds.has(id)));assert([...reused].every(id=>!pub.eventIds.has(id)));assert.equal(rev.eventIds.size,0);assert.equal(rev.featureIds.size,0);
-const approved=JSON.parse(JSON.stringify(index));const topic=approved.topics.find(x=>x.id===t.id);topic.status='published';topic.publication_review='approved';const release=getGate({get:()=>null})(1960,approved);assert([...observed].every(id=>!release.eventIds.has(id)));assert([...observedPoints].every(id=>!release.featureIds.has(id)));
+const pub=getGate({get:()=>null})(1960,index),rev=getGate({get:()=> '1'})(1960,index);assert([...observed].every(id=>!pub.eventIds.has(id)));assert([...observedPoints].every(id=>!pub.featureIds.has(id)));assert([...reused].every(id=>!pub.eventIds.has(id)));assert.equal(rev.eventIds.size,0);assert.equal(rev.featureIds.size,0);
+const pending=JSON.parse(JSON.stringify(index));const topic=pending.topics.find(x=>x.id===t.id);topic.status='editorial_review';topic.publication_review='not_submitted';const release=getGate({get:()=>null})(1960,pending);assert([...observed].every(id=>release.eventIds.has(id)));assert([...observedPoints].every(id=>release.featureIds.has(id)));
 assert(fs.readFileSync('js/history-stories.js','utf8').includes("topic.review_entry_required!==true||review.get('review20c')==='1'"));
 console.log('PASS T066: source, chronology, GIS, distinct finance and candidate gate');
