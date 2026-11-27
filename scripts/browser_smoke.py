@@ -1487,8 +1487,17 @@ try:
        window.atlasStoryBridge.selectedEventId()==='E20-MAL-KILL'"""))
     print("PASS: Batang Kali dossier, 1949 mass detention decree and return to 1948")
 
+    # The expanded Hola article is a review-only candidate. Its existing public
+    # event and route remain accessible; its new article must not leak.
     driver.get("http://127.0.0.1:8765/?year=1959")
     wait.until(lambda d: d.execute_script("return document.querySelector('#workspace').dataset.atlasReady==='true'"))
+    wait.until(lambda d: d.execute_script("return window.atlasStoryBridge?.activeHasEvent('E20-KEN-HO-KILL')&&window.HistoryStories?.isLinkedEvent({id:'E20-T030-MANDATE'},'event')"))
+    driver.find_element(By.CSS_SELECTOR, '#eventList [data-eid="E20-KEN-HO-KILL"]').send_keys("\n")
+    assert not driver.find_elements(By.CSS_SELECTOR, '#dossierBody [data-story-open="E20-KEN-HOLA"]')
+    assert driver.execute_script("return window.atlasStoryBridge.activeEventWindow().routeIds.includes('E20-KEN-ROUTE-LOD')")
+    driver.get("http://127.0.0.1:8765/?review20c=1&year=1959")
+    wait.until(lambda d: d.execute_script("return document.querySelector('#workspace').dataset.atlasReady==='true'"))
+    wait.until(lambda d: d.execute_script("return window.HistoryStories?.isLinkedEvent({id:'E20-KEN-HO-KILL'},'event')"))
     verify("1959 is available in chapter 46",
            """document.querySelector('#chapterLabel').textContent.includes('第46章') &&
               window.atlasStoryBridge.activeEventWindow().routeIds.includes('E20-KEN-ROUTE-LOD')""", driver)
