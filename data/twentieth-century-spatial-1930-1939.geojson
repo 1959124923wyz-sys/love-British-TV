@@ -4646,60 +4646,27 @@
         ]
       },
       "properties": {
-        "name": "伦敦 · 英国殖民政策与议会记录",
-        "start_year": 1930,
-        "end_year": 1939,
+        "name": "伦敦 · 伊拉克专题",
+        "start_year": 1933,
+        "end_year": 1933,
         "display_kind": "political",
-        "summary_zh": "英国议会确认驻军土地安排。英国政府表示须在伊拉克入盟后五年内撤出原有驻地，并按条约取得新设施土地。 同期另有巴勒斯坦相关政策及议会记录。",
+        "summary_zh": "英国议会确认驻军土地安排。英国政府表示须在伊拉克入盟后五年内撤出原有驻地，并按条约取得新设施土地。",
         "source_ids": [
           "E20-T031-SRC-HINAIDI",
           "E20-T031-SRC-DEB30",
-          "E20-T031-SRC-GEOLON",
-          "E20-T032-SRC-MIS30",
-          "E20-T032-SRC-LAND30",
-          "E20-T032-SRC-GEOLON",
-          "E20-T032-SRC-FINE",
-          "E20-T032-SRC-GAZ",
-          "E20-T032-SRC-JUL1",
-          "E20-T032-SRC-JUN24",
-          "E20-T032-SRC-PEEL",
-          "E20-T032-SRC-AA",
-          "E20-T032-SRC-REV",
-          "E20-T032-SRC-DEM38",
-          "E20-T032-SRC-WHITE",
-          "E20-T032-SRC-FR39"
+          "E20-T031-SRC-GEOLON"
         ],
         "source_urls": [
           "https://api.parliament.uk/historic-hansard/commons/1933/mar/15/hinaidi-aerodrome-bagdad",
           "https://api.parliament.uk/historic-hansard/commons/1930/jul/31/iraq",
-          "https://www.geonames.org/advanced-search.html?country=GB&q=Londres",
-          "https://api.parliament.uk/historic-hansard/commons/1930/may/07/mission",
-          "https://api.parliament.uk/historic-hansard/commons/1930/nov/17/palestine",
-          "https://api.parliament.uk/historic-hansard/commons/1936/jun/19/colonial-office",
-          "https://api.parliament.uk/historic-hansard/commons/1936/jun/24/gazour-collective-penalty",
-          "https://api.parliament.uk/historic-hansard/commons/1936/jul/01/jaffa-demolition-of-houses",
-          "https://api.parliament.uk/historic-hansard/commons/1936/jun/24/jaffa-demolition-of-houses",
-          "https://www.un.org/unispal/document/auto-insert-197740/",
-          "https://avalon.law.yale.edu/20th_century/angap04.asp",
-          "https://www.palquest.org/en/highlight/158/great-palestinian-rebellion-1936-1939",
-          "https://api.parliament.uk/historic-hansard/written-answers/1938/mar/09/palestine",
-          "https://avalon.law.yale.edu/20th_century/brwh1939.asp",
-          "https://history.state.gov/historicaldocuments/frus1939v04/d811"
+          "https://www.geonames.org/advanced-search.html?country=GB&q=Londres"
         ],
         "named_anchors": [
           "伦敦"
         ],
         "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
         "related_event_ids": [
-          "E20-T031-BASE33",
-          "E20-T032-MIS",
-          "E20-T032-LAND30",
-          "E20-T032-FINE",
-          "E20-T032-GAZOUR",
-          "E20-T032-JAFFA2",
-          "E20-T032-PEEL",
-          "E20-T032-DEM38",
-          "E20-T032-WHITE"
+          "E20-T031-BASE33"
         ],
         "historical_boundary_confirmed": false,
         "fill_authorized": false,
@@ -4857,6 +4824,74 @@
         "area_sqkm": null,
         "exclude_from_area_aggregation": true,
         "stable_id": "palestine-t032-t033-mahe-1930"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "palestine-t032-t033-london-1930",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.12574,
+          51.50853
+        ]
+      },
+      "properties": {
+        "name": "伦敦 · 巴勒斯坦委任统治政策与议会记录",
+        "start_year": 1930,
+        "end_year": 1939,
+        "display_kind": "political",
+        "summary_zh": "英国政府宣布派Hope Simpson赴巴勒斯坦调查土地安置、移民及开发。；英国下院讨论土地转让后失地的阿拉伯农民及租户保护措施的规避。；英国殖民大臣在议会确认新规允许对城镇或村庄即时施加集体罚款及宵禁。；议员转述村民遭搜查、拘押及家产牲畜没收的指控；英国政府表示尚未查明并拒绝停止罚款。；英国议员继续追问被迫迁离人口与替代住房，英国政府维护拆屋决定。；英国皇家委员会建议划分阿拉伯和犹太国家，并保留部分地区为委任行政区。；英国政府报告1936年102间、1937年14间住宅作为惩罚被拆毁，另不含雅法清拆。；英国提出十年内独立目标、五年有条件移民配额及限制土地转让的新政策。",
+        "source_ids": [
+          "E20-T032-SRC-MIS30",
+          "E20-T032-SRC-LAND30",
+          "E20-T032-SRC-GEOLON",
+          "E20-T032-SRC-FINE",
+          "E20-T032-SRC-GAZ",
+          "E20-T032-SRC-JUL1",
+          "E20-T032-SRC-JUN24",
+          "E20-T032-SRC-PEEL",
+          "E20-T032-SRC-AA",
+          "E20-T032-SRC-REV",
+          "E20-T032-SRC-DEM38",
+          "E20-T032-SRC-WHITE",
+          "E20-T032-SRC-FR39"
+        ],
+        "source_urls": [
+          "https://api.parliament.uk/historic-hansard/commons/1930/may/07/mission",
+          "https://api.parliament.uk/historic-hansard/commons/1930/nov/17/palestine",
+          "https://www.geonames.org/advanced-search.html?country=GB&q=Londres",
+          "https://api.parliament.uk/historic-hansard/commons/1936/jun/19/colonial-office",
+          "https://api.parliament.uk/historic-hansard/commons/1936/jun/24/gazour-collective-penalty",
+          "https://api.parliament.uk/historic-hansard/commons/1936/jul/01/jaffa-demolition-of-houses",
+          "https://api.parliament.uk/historic-hansard/commons/1936/jun/24/jaffa-demolition-of-houses",
+          "https://www.un.org/unispal/document/auto-insert-197740/",
+          "https://avalon.law.yale.edu/20th_century/angap04.asp",
+          "https://www.palquest.org/en/highlight/158/great-palestinian-rebellion-1936-1939",
+          "https://api.parliament.uk/historic-hansard/written-answers/1938/mar/09/palestine",
+          "https://avalon.law.yale.edu/20th_century/brwh1939.asp",
+          "https://history.state.gov/historicaldocuments/frus1939v04/d811"
+        ],
+        "named_anchors": [
+          "伦敦"
+        ],
+        "mapping_method": "WGS84 现代具名地点参考点；不表示历史设施精确范围或领土边界。",
+        "related_event_ids": [
+          "E20-T032-MIS",
+          "E20-T032-LAND30",
+          "E20-T032-FINE",
+          "E20-T032-GAZOUR",
+          "E20-T032-JAFFA2",
+          "E20-T032-PEEL",
+          "E20-T032-DEM38",
+          "E20-T032-WHITE"
+        ],
+        "historical_boundary_confirmed": false,
+        "fill_authorized": false,
+        "territorial_claim": false,
+        "area_sqkm": null,
+        "exclude_from_area_aggregation": true,
+        "stable_id": "palestine-t032-t033-london-1930"
       }
     }
   ]
