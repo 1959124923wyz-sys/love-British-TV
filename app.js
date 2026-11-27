@@ -1272,15 +1272,51 @@ function renderEighteenthReviewEvidenceCores(){
 }
 
 const modernAtlasCentury=from=>from>=1900?'twentieth':'nineteenth';
+ // Explicit candidate-only 20C records are owned by the serial review manifest.
+ // Read once; reject a missing/invalid registry rather than expose candidate records.
+ let modern20cReviewRegistryPromise;
+ function fetchModern20cReviewRegistry(){
+  if(!modern20cReviewRegistryPromise)modern20cReviewRegistryPromise=fetch('data/stories/serial/index.json',{cache:'no-store'}).then(r=>{
+   if(!r.ok)throw new Error('20C review registry missing');
+   return r.json();
+  }).then(reg=>{
+   if(reg.schema!=='atlas-serial-stories-v1'||!Array.isArray(reg.topics)||reg.topics.some(t=>t.review_entry_required===true&&
+    ['review_event_ids','review_feature_ids','review_route_ids'].some(k=>!Array.isArray(t[k])||t[k].some(id=>typeof id!=='string'))))throw new Error('20C review registry invalid');
+   return reg;
+  });
+  return modern20cReviewRegistryPromise;
+ }
+ function modern20cReviewGate(from,registry){
+  const eventIds=new Set(),featureIds=new Set(),routeIds=new Set();
+  if(from<1900||reviewParams.get('review20c')==='1')return {eventIds,featureIds,routeIds};
+  const approvedEvents=new Set(),approvedFeatures=new Set(),approvedRoutes=new Set();
+  for(const t of registry.topics){
+   if(t.status==='published'&&t.publication_review==='approved'){
+    for(const id of t.event_ids||[])approvedEvents.add(id);
+    for(const id of t.review_feature_ids||[])approvedFeatures.add(id);
+    for(const id of t.review_route_ids||[])approvedRoutes.add(id);
+   }else if(t.review_entry_required===true){
+    for(const id of t.review_event_ids)eventIds.add(id);
+    for(const id of t.review_feature_ids)featureIds.add(id);
+    for(const id of t.review_route_ids)routeIds.add(id);
+   }
+  }
+  // Shared ownership: one approved story may release its referenced events and
+  // explicitly owned map features while another story is still in review.
+  for(const id of approvedEvents)eventIds.delete(id);
+  for(const id of approvedFeatures)featureIds.delete(id);
+  for(const id of approvedRoutes)routeIds.delete(id);
+  return {eventIds,featureIds,routeIds};
+ }
 async function fetchModernAtlas(from,end){
  const [chronology,spatial]=await Promise.all([
   fetch(`data/stories/serial/chronology-${from}-${end}.json`,{cache:'no-store'}),
   fetch(`data/${modernAtlasCentury(from)}-century-spatial-${from}-${end}.geojson`,{cache:'no-store'})
  ]);
  if(!chronology.ok||!spatial.ok)throw new Error('Modern chronology or map missing');
- return Promise.all([chronology.json(),spatial.json()]);
+ return Promise.all([chronology.json(),spatial.json(),from>=1900?fetchModern20cReviewRegistry():null]);
 }
-function loadModernAtlas(from,end,status,[data,geo]){
+function loadModernAtlas(from,end,status,[data,geo,registry]){
  const sourceIds=new Set(data.sources?.map(s=>s.id));
  const eventIds=new Set(data.events?.map(e=>e.id));
  const earlierEventIds=new Set([...serialPreviewByDecade.entries()]
@@ -1305,15 +1341,16 @@ function loadModernAtlas(from,end,status,[data,geo]){
      f.properties.area_sqkm!==null||!f.properties.exclude_from_area_aggregation||
      !f.properties.related_event_ids.every(id=>eventIds.has(id)||earlierEventIds.has(id))))
   throw new Error('Modern review failed chronology, source or spatial checks');
+ const gate=modern20cReviewGate(from,registry);
  for(let d=from;d<=end;d+=10){
   serialPreviewByDecade.set(d,{
    dataset_id:modernAtlasCentury(d)+'-century-'+d,period:{from:d,to:d+9},editorial_status:status,
-   events:data.events.filter(e=>decadeForYear(e.year)===d),
-   routes:data.routes.filter(r=>decadeForYear(r.year)===d),places:[],colonial_polygons:[]
+   events:data.events.filter(e=>decadeForYear(e.year)===d&&!gate.eventIds.has(e.id)),
+   routes:data.routes.filter(r=>decadeForYear(r.year)===d&&!gate.routeIds.has(r.id)),places:[],colonial_polygons:[]
   });
  }
  for(const s of data.sources)sourcesById.set(s.id,s);
- nineteenthSpatial={...geo,features:[...(nineteenthSpatial?.features||[]),...geo.features]};
+ nineteenthSpatial={...geo,features:[...(nineteenthSpatial?.features||[]),...geo.features.filter(f=>!gate.featureIds.has(f.id))]};
  nineteenthAtlasEnd=end;
 }
 function loadNineteenthTerritorialAreas(data){
@@ -1494,7 +1531,7 @@ function renderTerritories(){
   onEachFeature:(feature,layer)=>{
    const p=feature.properties||{};
    const rel=p.relation_type,klass=rel==='autonomous_lordship'?'atlas-territory-manx':rel==='crown_dependency'?'atlas-territory-crown':'atlas-territory-solid';
-   layer.options.className=klass;
+   layer.options.className=klass+' atlas-territory-id-'+String(feature.id).replace(/[^a-z0-9_-]/gi,'-');
    const controller=controllerAtYear(p,year);
    const controllerLine=controller?'当年治理主体：'+controller.controller_zh+'。':'';
    layer.bindTooltip('<strong>'+escapeHTML(p.name)+'</strong><div class="atlas-hover-summary">'+escapeHTML(controllerLine+' '+historicAreaDescription(p,year))+'</div>',
@@ -4441,6 +4478,8 @@ window.atlasStoryBridge={
  activeFocusId:()=>focusedEventId,
  selectedEventId:()=>selected,
  activeHasEvent:id=>Boolean(atlas?.events?.some(e=>e.id===id)),
+ // Read-only loaded spatial evidence for candidate-isolation desktop QA.
+ activeSpatialHasEvent:id=>Boolean(nineteenthSpatial?.features?.some(f=>f.properties?.related_event_ids?.includes(id))),
  // A narrow read-only QA hook for independently dated military/admin site cores.
  active18cControlCoreIds:()=>year>=1700&&preview18cReady&&$('toggleControlAreas').checked?
   (eighteenthAcadiaControlCores?.features||[])

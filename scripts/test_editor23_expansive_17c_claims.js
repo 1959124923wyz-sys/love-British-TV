@@ -149,7 +149,7 @@ assert(app.includes("openSeventeenthClaimDirectory);")&&app.includes("openTerrit
 assert(app.includes("densityPolicy?.radiusForZoom(map.getZoom())"),'shared zoom-dependent clustering must apply');
 assert(app.includes("if(count>8||(map.getZoom()<=4&&pin))"),'giant clusters must not fan out into screen-filling icon walls');
 assert(app.includes("if(pin)openCollection(items,'该地区的'+count+'项历史记录')"),'large cluster click should reveal every event in a scrollable accessible dossier');
-assert(html.includes('class="swatch expansive-claim"'));assert(css.includes('.atlas-17c-expansive-claim'));
+assert(html.includes('id="atlasSemanticColorLegend"')&&html.includes('AtlasMapColors.legend.map')&&require('../js/atlas-map-colors.js').legend.some(([kind,label])=>kind==='charter'&&label.includes('纸面声索')));assert(css.includes('.atlas-17c-expansive-claim'));
 for(let d=1600;d<=1690;d+=10){const atlas=json('data/atlas-'+d+'-'+(d+9)+'.json');assert.deepEqual(atlas.colonial_polygons,[],'paper-only expansive overlays may not contaminate measured Atlas sovereign shapes');}
 assert.equal(json('data/chapters.json').chapters.length,10);
 // Read-only point-in-schematic-polygon regression: overlaps are *claims*, not area or occupation.

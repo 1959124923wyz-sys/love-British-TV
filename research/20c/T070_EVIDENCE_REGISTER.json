@@ -1,0 +1,632 @@
+{
+  "schema": "research/20c-candidate-evidence-v1",
+  "topics": [
+    "E20-T070"
+  ],
+  "publication_status": "research_only",
+  "sources": [
+    {
+      "id": "E20-T070-SRC-PAR",
+      "publisher": "圭亚那议会",
+      "title": "History of Parliament",
+      "label": "圭亚那议会｜History of Parliament",
+      "url": "https://parliament.gov.gy/about-parliament/history-of-parliament/1000",
+      "access": "1953年议会制度、12月22日任命议会、1956修订、1957与1961议会结构；当地官方制度史",
+      "depth": "当地官方全文"
+    },
+    {
+      "id": "E20-T070-SRC-H53",
+      "publisher": "英国议会",
+      "title": "Suspension of Constitution, 21 October 1953",
+      "label": "英国议会｜Suspension of Constitution, 21 October 1953",
+      "url": "https://hansard.parliament.uk/Commons/1953-10-21/debates/d5779777-8129-4a98-b6a3-cf8ad03815b9/SuspensionOfConstitution",
+      "access": "部长答复与议员质询；明确区分政府主张和反对意见",
+      "depth": "同期议会全文"
+    },
+    {
+      "id": "E20-T070-SRC-V53",
+      "publisher": "英国议会",
+      "title": "Written Answers — Electorate, 28 October 1953",
+      "label": "英国议会｜Written Answers — Electorate, 28 October 1953",
+      "url": "https://hansard.parliament.uk/Commons/1953-10-28/debates/2ef07668-e422-4bfa-b92c-78a5d55a9017/WrittenAnswers",
+      "access": "问题83：选民数、投票率及各党票数；问题95：记者被拒绝进入",
+      "depth": "同期议会全文"
+    },
+    {
+      "id": "E20-T070-SRC-H54",
+      "publisher": "英国议会",
+      "title": "Oral Answers — Dr Jagan, 14 April 1954",
+      "label": "英国议会｜Oral Answers — Dr Jagan, 14 April 1954",
+      "url": "https://hansard.parliament.uk/commons/1954-04-14/debates/395fc655-ebc0-4151-84ea-03fa1bcb984d/OralAnswersToQuestions",
+      "access": "问题23、29、35、51：行动限制、拘捕及部长支持总督；以部长报告为归属",
+      "depth": "同期议会全文"
+    },
+    {
+      "id": "E20-T070-SRC-H60",
+      "publisher": "英国议会",
+      "title": "Constitutional Conference, 5 April 1960",
+      "label": "英国议会｜Constitutional Conference, 5 April 1960",
+      "url": "https://hansard.parliament.uk/commons/1960-04-05/debates/a382a14f-cd17-42fb-96e9-4f65a6a5af81/CommonsChamber",
+      "access": "问题17、23、25：会议结束时间及对宪制方案的争议",
+      "depth": "同期议会文本"
+    },
+    {
+      "id": "E20-T070-SRC-R61",
+      "publisher": "圭亚那议会藏殖民政府年报",
+      "title": "Report on British Guiana for the Year 1961",
+      "label": "圭亚那议会藏殖民政府年报｜Report on British Guiana for the Year 1961",
+      "url": "https://parliament.gov.gy/new2/documents/documents-laid/18804-report_of_british_guiana_1961.pdf",
+      "access": "Part I General Review, Administration：1961年7月18日宪制实施，8月21日选举",
+      "depth": "官方报告文字摘录；图像待核"
+    },
+    {
+      "id": "E20-T070-SRC-C62",
+      "publisher": "圭亚那议会藏英国会议报告",
+      "title": "British Guiana Independence Conference, 1962",
+      "label": "圭亚那议会藏英国会议报告｜British Guiana Independence Conference, 1962",
+      "url": "https://www.parliament.gov.gy/documents/documents-laid/18812-report_on_british_guiana_independence_conference%2C_1962.pdf",
+      "access": "印刷页3及后续第1—12段：选举结果、1961年11月决议、伦敦会议、三项争议、11月6日休会。页图请求403",
+      "depth": "同期官方报告可检索文字，图像未取得"
+    },
+    {
+      "id": "E20-T070-SRC-F63",
+      "publisher": "美国国务院史料办公室",
+      "title": "FRUS 1961–1963, vol. XII, doc. 295",
+      "label": "美国国务院史料办公室｜FRUS 1961–1963, vol. XII, doc. 295",
+      "url": "https://history.state.gov/historicaldocuments/frus1961-63v12/d295",
+      "access": "英美政策会谈；Sandys对反Jagan联合政府的偏好，美国国内政治考虑",
+      "depth": "解密外交原文"
+    },
+    {
+      "id": "E20-T070-SRC-F64",
+      "publisher": "美国国务院史料办公室",
+      "title": "FRUS 1964–1968, vol. XXXII, doc. 371, 6 February 1964",
+      "label": "美国国务院史料办公室｜FRUS 1964–1968, vol. XXXII, doc. 371, 6 February 1964",
+      "url": "https://history.state.gov/historicaldocuments/frus1964-68v32/d371",
+      "access": "Rusk备忘录与1963年7月18日Macmillan函的转述；英美有共同目标，也对直接统治存在分歧。RG 59, Lot 66 D 204为函件索引",
+      "depth": "解密外交原文；函件原件另调"
+    },
+    {
+      "id": "E20-T070-SRC-FUND",
+      "publisher": "美国国务院史料办公室",
+      "title": "FRUS 1964–1968, vol. XXXII, doc. 370 Editorial Note",
+      "label": "美国国务院史料办公室｜FRUS 1964–1968, vol. XXXII, doc. 370 Editorial Note",
+      "url": "https://history.state.gov/historicaldocuments/frus1964-68v32/d370",
+      "access": "1962–1968约208万美元为美国秘密行动批准款，含独立后；用于反对派支持及罢工相关活动的部分未在此分项",
+      "depth": "官方档案编者综述"
+    },
+    {
+      "id": "E20-T070-SRC-H64",
+      "publisher": "英国议会",
+      "title": "British Guiana, 15 June 1964",
+      "label": "英国议会｜British Guiana, 15 June 1964",
+      "url": "https://hansard.parliament.uk/Commons/1964-06-15/debates/de59931f-1540-4034-82c3-eaa647811e65/BritishGuiana",
+      "access": "Sandys确认5月29日命令、授权总督自决、被拘捕的议员及无审判拘押争议",
+      "depth": "同期议会全文"
+    },
+    {
+      "id": "E20-T070-SRC-J64",
+      "publisher": "Cheddi Jagan Research Centre",
+      "title": "Archives 1964",
+      "label": "Cheddi Jagan Research Centre｜Archives 1964",
+      "url": "https://jagan.org/Archives/1964.html",
+      "access": "馆藏目录条目1015、1046、1047等：当地政治当事人对总督、拘押及和解的陈述；此处仅读目录摘要，不作指控已证",
+      "depth": "当地当事人档案索引"
+    },
+    {
+      "id": "E20-T070-SRC-EL64",
+      "publisher": "圭亚那议会藏选举报告",
+      "title": "Report on the House of Assembly General Election 1964",
+      "label": "圭亚那议会藏选举报告｜Report on the House of Assembly General Election 1964",
+      "url": "https://parliament.gov.gy/new2/documents/documents-laid/18991-10._report_on_the_house_of_general_election_1964.pdf",
+      "access": "第20—22段：1964年6月23日命令、9月25日实施、12月7日投票；第48—50段与表格OCR明显错位（如总票数、总席位），页图404，精确票数不采用",
+      "depth": "官方报告文字摘录；图像未取得"
+    },
+    {
+      "id": "E20-T070-SRC-HDEC",
+      "publisher": "英国议会",
+      "title": "Situation, 17 December 1964, vol. 704 cc127–128W",
+      "label": "英国议会｜Situation, 17 December 1964, vol. 704 cc127–128W",
+      "url": "https://api.parliament.uk/historic-hansard/written-answers/1964/dec/17/situation",
+      "access": "选举三党席数、Jagan拒绝辞职、英国改宪制安排、Burnham组阁；当地联合政府形成",
+      "depth": "同期议会全文"
+    },
+    {
+      "id": "E20-T070-SRC-LOCAL",
+      "publisher": "Stabroek News",
+      "title": "Election Day 2020: historical outline and contemporary observations",
+      "label": "Stabroek News｜Election Day 2020: historical outline and contemporary observations",
+      "url": "https://www.stabroeknews.com/2020/03/03/news/guyana/election-day-2020-historical-outline-and-contemporary-observations/",
+      "access": "当地媒体历史回顾，1961及1964席数交叉核对；精确票数在原扫描核清前不采用",
+      "depth": "当地媒体历史回顾"
+    },
+    {
+      "id": "E20-T070-SRC-H66",
+      "publisher": "英国议会",
+      "title": "Guyana Independence Bill, 29 April 1966",
+      "label": "英国议会｜Guyana Independence Bill, 29 April 1966",
+      "url": "https://hansard.parliament.uk/Commons/1966-04-29/debates/09f70d3f-ce37-4621-bfce-081e1f9f32df/GuyanaIndependenceBill",
+      "access": "1963会议、1965年11月会议、PPP缺席；1966年紧急权力归属争议，部长称地方政府掌权",
+      "depth": "同期议会全文"
+    },
+    {
+      "id": "E20-T070-SRC-ACT",
+      "publisher": "英国成文法",
+      "title": "Guyana Independence Act 1966, c.14",
+      "label": "英国成文法｜Guyana Independence Act 1966, c.14",
+      "url": "https://www.legislation.gov.uk/ukpga/1966/14/enacted",
+      "access": "1966年5月12日通过，第1条明确5月26日英国政府终止治理责任",
+      "depth": "法律原文"
+    },
+    {
+      "id": "E20-T070-SRC-UN",
+      "publisher": "联合国",
+      "title": "List of former Trust and Non-Self-Governing Territories",
+      "label": "联合国｜List of former Trust and Non-Self-Governing Territories",
+      "url": "https://www.un.org/dppa/decolonization/history/former-trust-and-nsgts",
+      "access": "British Guiana → Guyana 1966独立；复用主站E20-EXIT-GUYANA",
+      "depth": "联合国官方名录"
+    },
+    {
+      "id": "E20-T070-SRC-GEO",
+      "publisher": "Getty Research Institute",
+      "title": "TGN 7005275: Georgetown",
+      "label": "Getty Research Institute｜TGN 7005275: Georgetown",
+      "url": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=7005988&nation=&place=&subjectid=7005275",
+      "access": "地名坐标 6.7667N, 58.1667W；现有图层采用6.8，候审沿用精确出处值作城市参考",
+      "depth": "地名索引全文"
+    },
+    {
+      "id": "E20-T070-SRC-LAN",
+      "publisher": "Historic England",
+      "title": "Lancaster House, list entry 1236546",
+      "label": "Historic England｜Lancaster House, list entry 1236546",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1236546?section=overview",
+      "access": "Westminster, Stable Yard, SW1; TQ 2979 NW。建筑身份与历史会场核验",
+      "depth": "官方建筑名录"
+    },
+    {
+      "id": "E20-T070-SRC-LCO",
+      "publisher": "British Listed Buildings",
+      "title": "Lancaster House, St James's, London",
+      "label": "British Listed Buildings｜Lancaster House, St James's, London",
+      "url": "https://gb.britishlistedbuildings.co.uk/101236546-lancaster-house-st-jamess-ward/maps",
+      "access": "列名建筑坐标 51.5038N,-0.1391E；与Historic England编号交叉核验",
+      "depth": "地理参考"
+    }
+  ],
+  "events": [
+    {
+      "id": "E20-T070-VOTE53",
+      "topic_id": "E20-T070",
+      "start_year": 1953,
+      "end_year": 1953,
+      "date_label": "1953年4月27日",
+      "title": "普选与人民进步党胜选",
+      "description": "新宪制扩大成人选举权并设部长制度。人民进步党在4月选举胜出；英国议会所报选民总数208939、约73%投票。",
+      "responsibility": "英国殖民政府；英属圭亚那选民与政党",
+      "source_ids": [
+        "E20-T070-SRC-PAR",
+        "E20-T070-SRC-V53",
+        "E20-T070-SRC-LOCAL"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-SUSP53",
+      "topic_id": "E20-T070",
+      "start_year": 1953,
+      "end_year": 1953,
+      "date_label": "1953年10月",
+      "title": "英国中止新宪制并派兵",
+      "description": "英国政府撤销刚建立的部长政治安排，军队进入殖民地。议会对英国政府指控的依据提出质询。",
+      "responsibility": "英国政府；英属圭亚那殖民总督",
+      "source_ids": [
+        "E20-T070-SRC-H53",
+        "E20-T070-SRC-PAR"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-PRESS53",
+      "topic_id": "E20-T070",
+      "start_year": 1953,
+      "end_year": 1953,
+      "date_label": "1953年10月28日（答复）",
+      "title": "英国部长说明记者入境排斥",
+      "description": "殖民大臣承认Arthur Clegg被拒绝进入英属圭亚那，理由是其共产主义身份。议员质疑新闻自由受到限制。",
+      "responsibility": "英国政府及殖民行政",
+      "source_ids": [
+        "E20-T070-SRC-V53"
+      ],
+      "anchor": null,
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-INTERIM53",
+      "topic_id": "E20-T070",
+      "start_year": 1953,
+      "end_year": 1953,
+      "date_label": "1953年12月22日",
+      "title": "任命制临时议会",
+      "description": "临时宪制命令创设议会，议长由总督任命，其余构成包括三名当然成员及最多24名获任命成员。",
+      "responsibility": "英国政府；英属圭亚那总督",
+      "source_ids": [
+        "E20-T070-SRC-PAR"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-RESTRICT54",
+      "topic_id": "E20-T070",
+      "start_year": 1954,
+      "end_year": 1954,
+      "date_label": "1954年4月（议会报告）",
+      "title": "政治人物行动受限与拘捕",
+      "description": "英国部长确认Jagan因违反限制其行动范围的命令被捕，随后Jagan夫妇与其他党人分别因游行受到拘捕；部长公开支持总督。",
+      "responsibility": "英属圭亚那殖民总督与执法机关；英国殖民部",
+      "source_ids": [
+        "E20-T070-SRC-H54"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-AMEND56",
+      "topic_id": "E20-T070",
+      "start_year": 1956,
+      "end_year": 1956,
+      "date_label": "1956年",
+      "title": "临时宪制命令修订",
+      "description": "英国修订1953年临时安排，为下一阶段议会组成提供法律基础。",
+      "responsibility": "英国政府",
+      "source_ids": [
+        "E20-T070-SRC-PAR"
+      ],
+      "anchor": null,
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-RESTORE57",
+      "topic_id": "E20-T070",
+      "start_year": 1957,
+      "end_year": 1957,
+      "date_label": "1957年6月29日及其后",
+      "title": "有限选举与任命议席并存",
+      "description": "旧任命制议会解散，随后议会含14名选举产生的成员及其他当然和任命成员。",
+      "responsibility": "英属圭亚那殖民政府；当地选民",
+      "source_ids": [
+        "E20-T070-SRC-PAR",
+        "E20-T070-SRC-LOCAL"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-CONF60",
+      "topic_id": "E20-T070",
+      "start_year": 1960,
+      "end_year": 1960,
+      "date_label": "1960年3—4月",
+      "title": "内部自治方案磋商",
+      "description": "伦敦会议推进1961年内部自治安排；英国仍掌握正式独立的决定权。议会就方案是否获当地代表同意提出质询。",
+      "responsibility": "英国政府；英属圭亚那代表",
+      "source_ids": [
+        "E20-T070-SRC-H60",
+        "E20-T070-SRC-C62"
+      ],
+      "anchor": null,
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-CONST61",
+      "topic_id": "E20-T070",
+      "start_year": 1961,
+      "end_year": 1961,
+      "date_label": "1961年7月18日",
+      "title": "内部自治宪制实施",
+      "description": "殖民地实施内部自治宪制，设35名民选议员及13名任命参议员。",
+      "responsibility": "英国政府；英属圭亚那政府",
+      "source_ids": [
+        "E20-T070-SRC-PAR",
+        "E20-T070-SRC-R61"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-VOTE61",
+      "topic_id": "E20-T070",
+      "start_year": 1961,
+      "end_year": 1961,
+      "date_label": "1961年8月21日",
+      "title": "人民进步党重新取得议席多数",
+      "description": "35个席位中PPP获20席，PNC获11席，UF获4席；Jagan出任总理。",
+      "responsibility": "英属圭亚那选举机构及政党",
+      "source_ids": [
+        "E20-T070-SRC-R61",
+        "E20-T070-SRC-C62",
+        "E20-T070-SRC-LOCAL"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-RES61",
+      "topic_id": "E20-T070",
+      "start_year": 1961,
+      "end_year": 1961,
+      "date_label": "1961年11月",
+      "title": "议会请求英国授予独立",
+      "description": "英属圭亚那立法机构通过请求独立的决议，英国殖民大臣同意举行会议讨论宪制与日期。",
+      "responsibility": "英属圭亚那立法机构；英国殖民部",
+      "source_ids": [
+        "E20-T070-SRC-C62"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-CONF62",
+      "topic_id": "E20-T070",
+      "start_year": 1962,
+      "end_year": 1962,
+      "date_label": "1962年10月23日—11月6日",
+      "title": "伦敦独立会议陷入僵局",
+      "description": "三党就选举制度、投票年龄及独立前是否重选无法一致，会议休会。PPP支持单议席选区和降低投票年龄，PNC与UF要求比例代表制及重选。",
+      "responsibility": "英国殖民大臣；圭亚那三党代表",
+      "source_ids": [
+        "E20-T070-SRC-C62",
+        "E20-T070-SRC-LAN",
+        "E20-T070-SRC-LCO"
+      ],
+      "anchor": "lancaster",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-POL63",
+      "topic_id": "E20-T070",
+      "start_year": 1963,
+      "end_year": 1963,
+      "date_label": "1963年7月18日（函件）",
+      "title": "英国决定重订选举制度",
+      "description": "1964年美国国务卿备忘录转述Macmillan致Kennedy信：英国计划不经公投引入比例代表制再举行选举。美国外交记录揭示其目标涉及阻止Jagan领导下的独立。",
+      "responsibility": "英国政府；美国政府",
+      "source_ids": [
+        "E20-T070-SRC-F63",
+        "E20-T070-SRC-F64",
+        "E20-T070-SRC-FUND"
+      ],
+      "anchor": null,
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-ORDER64",
+      "topic_id": "E20-T070",
+      "start_year": 1964,
+      "end_year": 1964,
+      "date_label": "1964年5月29日",
+      "title": "英国扩大殖民总督紧急权力",
+      "description": "新命令允许总督在获得殖民大臣授权后自行行使紧急权力，而不必依照圭亚那部长建议。",
+      "responsibility": "英国政府；殖民总督",
+      "source_ids": [
+        "E20-T070-SRC-H64"
+      ],
+      "anchor": null,
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-DET64",
+      "topic_id": "E20-T070",
+      "start_year": 1964,
+      "end_year": 1964,
+      "date_label": "1964年6月15日（议会报告）",
+      "title": "总督拘押地方议员与工会领导人",
+      "description": "Sandys报告被拘押者包括副总理Brindley Benn、工会领导人Harry Lall及多名议员。议会争论无审判拘押及公平审查；当事人馆藏亦登记Jagan对拘押的回应。",
+      "responsibility": "英国殖民大臣授权；英属圭亚那总督执行",
+      "source_ids": [
+        "E20-T070-SRC-H64",
+        "E20-T070-SRC-J64"
+      ],
+      "anchor": null,
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-REFORM64",
+      "topic_id": "E20-T070",
+      "start_year": 1964,
+      "end_year": 1964,
+      "date_label": "1964年6月23日；9月25日实施",
+      "title": "新宪制改为比例代表选举",
+      "description": "英国制定新宪制命令，设53席民选一院制议会，9月25日生效，12月进行选举。",
+      "responsibility": "英国政府；英属圭亚那总督",
+      "source_ids": [
+        "E20-T070-SRC-EL64",
+        "E20-T070-SRC-HDEC"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-VOTE64",
+      "topic_id": "E20-T070",
+      "start_year": 1964,
+      "end_year": 1964,
+      "date_label": "1964年12月7日",
+      "title": "比例代表选举改变议席多数",
+      "description": "PPP获24席，PNC获22席，UF获7席；后两党联合获29席，在53席中占多数。",
+      "responsibility": "英属圭亚那选举机构；地方政党",
+      "source_ids": [
+        "E20-T070-SRC-HDEC",
+        "E20-T070-SRC-LOCAL"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-CHANGE64",
+      "topic_id": "E20-T070",
+      "start_year": 1964,
+      "end_year": 1964,
+      "date_label": "1964年12月17日（议会确认）",
+      "title": "英国修改安排并任命Burnham",
+      "description": "英国殖民大臣表示Jagan拒绝辞职，因此另作宪制安排以任命获联合多数支持的Burnham为总理。",
+      "responsibility": "英国政府；英属圭亚那总督；地方联合政府",
+      "source_ids": [
+        "E20-T070-SRC-HDEC"
+      ],
+      "anchor": "georgetown",
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-CONF65",
+      "topic_id": "E20-T070",
+      "start_year": 1965,
+      "end_year": 1965,
+      "date_label": "1965年11月",
+      "title": "独立宪制会议重新召开",
+      "description": "英国召开会议确定独立安排，已成为反对党的PPP拒绝参加。",
+      "responsibility": "英国政府；英属圭亚那联合政府与反对党",
+      "source_ids": [
+        "E20-T070-SRC-H66"
+      ],
+      "anchor": null,
+      "status": "research_candidate"
+    },
+    {
+      "id": "E20-T070-ACT66",
+      "topic_id": "E20-T070",
+      "start_year": 1966,
+      "end_year": 1966,
+      "date_label": "1966年5月12日",
+      "title": "英国制定圭亚那独立法",
+      "description": "英国成文法规定5月26日起英国政府不再承担治理该殖民地的责任。",
+      "responsibility": "英国议会与英国政府",
+      "source_ids": [
+        "E20-T070-SRC-ACT",
+        "E20-T070-SRC-PAR"
+      ],
+      "anchor": null,
+      "status": "research_candidate"
+    }
+  ],
+  "statistics": [
+    {
+      "year": 1953,
+      "measure": "登记选民",
+      "value": 208939,
+      "unit": "人",
+      "source_ids": [
+        "E20-T070-SRC-V53"
+      ]
+    },
+    {
+      "year": 1953,
+      "measure": "投票率（部长四舍五入）",
+      "value": 73,
+      "unit": "百分比",
+      "source_ids": [
+        "E20-T070-SRC-V53"
+      ]
+    },
+    {
+      "year": 1961,
+      "measure": "民选议席",
+      "party": "PPP",
+      "value": 20,
+      "unit": "席",
+      "source_ids": [
+        "E20-T070-SRC-C62",
+        "E20-T070-SRC-LOCAL"
+      ]
+    },
+    {
+      "year": 1961,
+      "measure": "民选议席",
+      "party": "PNC",
+      "value": 11,
+      "unit": "席",
+      "source_ids": [
+        "E20-T070-SRC-C62",
+        "E20-T070-SRC-LOCAL"
+      ]
+    },
+    {
+      "year": 1961,
+      "measure": "民选议席",
+      "party": "UF",
+      "value": 4,
+      "unit": "席",
+      "source_ids": [
+        "E20-T070-SRC-C62",
+        "E20-T070-SRC-LOCAL"
+      ]
+    },
+    {
+      "year": 1964,
+      "measure": "民选议席",
+      "party": "PPP",
+      "value": 24,
+      "unit": "席",
+      "source_ids": [
+        "E20-T070-SRC-HDEC",
+        "E20-T070-SRC-LOCAL"
+      ]
+    },
+    {
+      "year": 1964,
+      "measure": "民选议席",
+      "party": "PNC",
+      "value": 22,
+      "unit": "席",
+      "source_ids": [
+        "E20-T070-SRC-HDEC",
+        "E20-T070-SRC-LOCAL"
+      ]
+    },
+    {
+      "year": 1964,
+      "measure": "民选议席",
+      "party": "UF",
+      "value": 7,
+      "unit": "席",
+      "source_ids": [
+        "E20-T070-SRC-HDEC",
+        "E20-T070-SRC-LOCAL"
+      ]
+    },
+    {
+      "start_year": 1962,
+      "end_year": 1968,
+      "measure": "美国秘密行动计划批准款（跨独立前后）",
+      "value": 2080000,
+      "unit": "约美元",
+      "source_ids": [
+        "E20-T070-SRC-FUND"
+      ],
+      "scope": "美国批准款；非英国收入，非英国支出，非实际付款；未将其分配至具体事件"
+    }
+  ],
+  "reuse": [
+    {
+      "id": "E20-EXIT-GUYANA",
+      "year": 1966,
+      "date_label": "1966年5月26日",
+      "source_ids": [
+        "E20-T070-SRC-ACT",
+        "E20-T070-SRC-UN"
+      ],
+      "note": "复用正式既有独立事件；不复制，不改变旧事件。"
+    }
+  ],
+  "unverified": [
+    "1962年会议报告及1964年选举报告的PDF截图分别返回403及404；后者OCR将总票数、PPP票数及总席位混淆，不采用原报告精确票数，席位采用Hansard及当地媒体交叉核对。",
+    "1953年两份枢密院命令、公报影像、Cmd. 8980原件及1963年7月18日首相函件原件待取得；当前对后者只使用Rusk备忘录明确转述。",
+    "拘禁营地点、逐人拘押期限、民间损失、地方档案及精确历史边界尚未核实。1964地方当事人指控只保留档案索引，不作为已证史事。",
+    "主站已存在乔治敦1950–1959殖民行政点（demerara-georgetown-government），沿用城市身份；候审点仅用于专题事件链接，不扩大行政范围。1960s的独立事件E20-EXIT-GUYANA必须复用。T069糖业地权与1948年个案另题，不重复。"
+  ],
+  "deduplication": "主索引、1950年代、1960年代事件逐条检查；1966独立为既有ID，候审20个新事件不重复；前19世纪圭亚那劳工、地权、边界专题保留。"
+}
