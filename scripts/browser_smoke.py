@@ -842,7 +842,7 @@ try:
     verify("1556 Midland forts absent / invented county occupation",
            """document.querySelectorAll('#map .atlas-seventh-english').length===4 &&
               document.querySelectorAll('#map .atlas-seventh-french_allied_scotland').length===2 &&
-              document.querySelectorAll('#map .atlas-territory-solid[fill="#357f76"]').length===0""",driver)
+              !Array.from(document.querySelectorAll('#map .atlas-territory-solid')).some(el=>el.getAttribute('fill')===window.AtlasMapColors.resolve('french_crown'))""",driver)
     driver.save_screenshot(str(OUT / "chapter7-1556-irish-colonisation.png"))
     set_year(1558, expected_count(1558))
     verify("1558 Calais French recovery and Guines/Risban switch missing",
