@@ -73,6 +73,7 @@
  '1690S-E132':'Albion Frigate号船上反抗'
  };
  const storyTitles={
+ 'E20-T040-CYPRUS-EMERGENCY-DETENTION-1931-1960':'塞浦路斯反殖民运动与拘禁',
  'E20-T088-AUSTRALIA-NUCLEAR-LAND-1950-1999':'澳大利亚核试验与原住民失地',
  'E20-T089-PACIFIC-NUCLEAR-COMMUNITIES-1957-1999':'太平洋核试验与居民、劳工保障',
  'E20-T050-NIGERIA-TAX-LABOUR-1914-1960':'尼日利亚税收与劳工抗争',
