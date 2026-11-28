@@ -2,7 +2,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
 const load=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const reg=load('research/20c/T088_T089_EVIDENCE_REGISTER.json');
 const es=new Map(reg.events.map(e=>[e.id,e])),ss=new Map(reg.sources.map(s=>[s.id,s]));
-assert.equal(es.size,34);assert.equal(ss.size,25);
+assert.equal(es.size,34);assert.equal(ss.size,30);
 const actual=new Set(),points=new Set();
 for(let y=1900;y<2000;y+=10){
  const c=load('data/stories/serial/chronology-'+y+'-'+(y+9)+'.json'),g=load('data/twentieth-century-spatial-'+y+'-'+(y+9)+'.geojson');
@@ -25,7 +25,7 @@ const idx=load('data/stories/serial/index.json'),topics=idx.topics.filter(t=>/^E
 assert.equal(topics.length,2);let count=0;
 for(const t of topics){
  assert.equal(t.status,'editorial_review');assert.equal(t.publication_review,'not_submitted');assert.equal(t.review_entry_required,true);
- const a=load(t.article_file);assert.equal(a.id,t.id);assert(a.lead.length>=120);const src=new Set(a.sources.map(x=>x.id));const linked=[];
+ const a=load(t.article_file);assert.equal(a.id,t.id);assert(a.lead.length>=120);const src=new Set(a.sources.map(x=>x.id));const linked=[];assert(a.sections.flatMap(s=>s.paragraphs).join('').replace(/\[\[[^|]+\|([^\]]+)\]\]/g,'$1').length>=3000,'publication prose minimum');
  for(const sec of a.sections){assert(sec.paragraphs.length>=2);assert(sec.source_keys.every(id=>src.has(id)));assert(sec.period_start_year>=a.start_year&&sec.period_end_year<=a.end_year);
  for(const p of sec.paragraphs)for(const m of p.matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]]+\]\]/g)){assert(es.has(m[1]));linked.push(m[1]);}}
  assert.deepEqual(linked,t.event_ids);assert.deepEqual(linked,t.review_event_ids);assert.deepEqual(t.review_feature_ids,linked.filter(id=>es.get(id).point).map(id=>id.toLowerCase()+'-reference'));
@@ -44,6 +44,6 @@ const half=JSON.parse(JSON.stringify(idx));let approved=half.topics.find(t=>t.id
 const halfGate=getGate({get:()=>null})(1950,half);
 assert(approved.event_ids.every(id=>!halfGate.eventIds.has(id)));assert(topics[1].event_ids.every(id=>halfGate.eventIds.has(id)));
 assert(fs.readFileSync('js/history-stories.js','utf8').includes("topic.review_entry_required!==true||review.get('review20c')==='1'"));
-console.log('PASS T088/T089: 34 cited events, 25 sources, 10 points, 34 sections, payment reconciliation and visibility gate');
+console.log('PASS T088/T089: 34 cited events, 30 sources, 10 points, 34 sections, payment reconciliation and visibility gate');
 
 for(const t of topics){const a=load(t.article_file);for(const s of a.sections)for(const p of s.paragraphs)assert(!/地图不填充|地图使用|地图仅呈现|地理参考|地籍界线|原始.*图件核定|本世纪时间轴|推测区域|原始地图.*重建/.test(p),s.id+' reader mapping disclaimer');}
