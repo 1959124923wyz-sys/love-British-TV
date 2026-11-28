@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),load=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const t=load('data/stories/serial/index.json').topics.find(t=>t.id==='E20-MAL-BATANG-KALI'),a=load(t.article_file);
-assert.equal(a.id,t.id);assert.equal(a.end_year,1960);assert.equal(t.historical_end_year,1960);assert.equal(t.research_window.end_year,1960);assert.equal(a.sections.length,13);assert.equal(a.sources.length,61);assert.equal(t.event_ids.length,82);
+assert.equal(t.status,'published');assert.equal(t.publication_review,'approved');assert.equal(a.id,t.id);assert.equal(a.end_year,1960);assert.equal(t.historical_end_year,1960);assert.equal(t.research_window.end_year,1960);assert.equal(a.sections.length,13);assert.equal(a.sources.length,61);assert.equal(t.event_ids.length,82);
 const keys=new Set(a.sources.map(s=>s.id));assert.equal(keys.size,a.sources.length);
 const body=a.sections.flatMap(s=>s.paragraphs).join('');
 const links=[...new Set([...body.matchAll(/\[\[([A-Z0-9-]+)\|/g)].map(m=>m[1]))];
