@@ -15,8 +15,8 @@ try:
  driver.get(base+'?year=1953')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&window.HistoryStories?.isLinkedEvent({id:'E20-T030-MANDATE'},'event')"))
  wait.until(lambda _:js("return window.HistoryStories?.isLinkedEvent({id:arguments[0]},'event')&&window.atlasStoryBridge?.activeHasEvent(arguments[0])",first))
- pending='E20-CORK-BURNING'
- driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-CORK-BURN')
+ pending='E20-T068-CARIBBEAN-LABOUR-1934-1939'
+ driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-T068-NUM34')
  assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article')
  assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
  js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)

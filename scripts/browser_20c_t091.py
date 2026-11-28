@@ -14,12 +14,11 @@ topic='E20-CORK-BURNING';first='E20-CORK-BURN';new='E20-T091-BAL20'
 try:
  driver.get(base+'?year=1920')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&!!window.atlasStoryBridge?.eventById(arguments[0])&&window.HistoryStories?.isLinkedEvent({id:'E20-T030-MANDATE'},'event')",first))
- assert not js("return !!window.atlasStoryBridge.eventById(arguments[0])",new)
- assert not js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",new)
- js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)
- assert not driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]')
- driver.get(base+'?review20c=1&year=1920')
- wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&!!window.atlasStoryBridge?.eventById(arguments[0])",new))
+ wait.until(lambda _:js("return !!window.atlasStoryBridge.eventById(arguments[0])",new))
+ assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",new)
+ pending='E20-T068-CARIBBEAN-LABOUR-1934-1939'
+ driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-T068-NUM34')
+ assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article')
  js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]'))>0)
  js("window.HistoryStories.openStory(arguments[0],false,arguments[1])",topic,first)
@@ -34,6 +33,6 @@ try:
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-back]'))>0)
  js("document.querySelector('[data-story-back]').click()")
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article [data-story-event="'+new+'"]'))>0)
- print('PASS T091 real desktop candidate isolation, locality, cross-decade navigation')
+ print('PASS T091 real ordinary-entry desktop publication, locality, cross-decade navigation')
 finally:
  driver.quit()
