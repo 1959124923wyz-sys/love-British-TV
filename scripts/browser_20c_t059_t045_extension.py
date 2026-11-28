@@ -18,9 +18,9 @@ try:
   wait.until(lambda _:js("return !!window.HistoryStories?.openStory&&!!window.atlasStoryBridge?.eventById(arguments[0])",first))
   js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)
   wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]'))>0)
-  pending='E20-CORK-BURNING'
+  pending='E20-T068-CARIBBEAN-LABOUR-1934-1939'
   assert not driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+pending+'"]')
-  driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-CORK-BURN')
+  driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-T068-NUM34')
   assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article')
   wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]'))>0)
   js("window.HistoryStories.openStory(arguments[0],false,arguments[1])",topic,first)

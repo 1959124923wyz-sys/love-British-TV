@@ -1409,10 +1409,9 @@ try:
                .every(id=>window.atlasStoryBridge.activeEventWindow().routeIds.includes(id))""", driver)
     wait.until(lambda d: d.execute_script("return window.HistoryStories?.isLinkedEvent({id:'E20-T030-MANDATE'},'event')"))
     driver.find_element(By.CSS_SELECTOR, '#eventList [data-eid="E20-CORK-BURN"]').click()
-    assert not driver.find_elements(By.CSS_SELECTOR, '#dossierBody [data-story-open="E20-CORK-BURNING"]')
-    driver.get("http://127.0.0.1:8765/?review20c=1&year=1920")
-    wait.until(lambda d: d.execute_script("return document.querySelector('#workspace').dataset.atlasReady==='true'"))
-    driver.find_element(By.CSS_SELECTOR, '#eventList [data-eid="E20-CORK-BURN"]').click()
+    # Cork is now published; the T068 production candidate remains isolated.
+    driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",'E20-T068-CARIBBEAN-LABOUR-1934-1939','E20-T068-NUM34')
+    assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article')
     wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '#dossierBody [data-story-open="E20-CORK-BURNING"]'))
     driver.find_element(By.CSS_SELECTOR, '#dossierBody [data-story-open="E20-CORK-BURNING"]').click()
     handover_link = '.story-body [data-story-event="E20-CORK-HANDOVER"]'

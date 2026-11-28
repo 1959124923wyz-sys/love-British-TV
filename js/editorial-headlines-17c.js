@@ -73,6 +73,9 @@
  '1690S-E132':'Albion Frigate号船上反抗'
  };
  const storyTitles={
+ 'E20-T090-EASTER-RISING-DETENTION-1916-1919':'爱尔兰复活节起义与行政拘禁',
+ 'E20-CORK-BURNING':'爱尔兰军警报复、焚城与分治',
+ 'E20-T092-NORTHERN-IRELAND-DETENTION-1969-1998':'北爱尔兰拘禁与国家责任',
  'E20-T051-ASANTE-ANNEXATION-EXILE-1900-1924':'阿散蒂吞并与王室流放',
  'E20-T070-BRITISH-GUIANA-CONSTITUTION-1953-1966':'英属圭亚那宪政中止与政治拘押',
  'E20-KEN-HOLA':'肯尼亚茅茅镇压与殖民拘禁',
