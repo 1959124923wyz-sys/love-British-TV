@@ -138,3 +138,14 @@ assert.match(reader.narrative('英国于1894年建立保护地，[[E19-TEST|英�
  assert.equal(reader.narrative('州界仅为制度适用背景。'),'');
  assert.equal(reader.clean('昆士兰州土地法适用于该州'),'昆士兰州土地法适用于该州');
 }
+
+// T068: preserve the source article, suppress cartographic drafting notes at both render layers.
+{
+ const article=JSON.parse(read('data/stories/serial/e20-t068-caribbean-labour-1934-1939.json'));
+ const raw=article.sections.flatMap(s=>s.paragraphs).join('\n');
+ const samples=["圣文森特和牙买加的1935年记录目前仅作为具年事件，不以现代国界或整个岛屿表示警务行动覆盖范围。","现有地理资料支持在布里奇敦标出城市参考点，不支持绘出驱逐过程或抗争行动的精确范围。","地理点仅用于已知聚落和港口城市的定位。"];
+ for(const s of samples){assert(raw.includes(s));assert.equal(reader.narrative(s),'',s);assert.equal(reader.clean(s),'',s);assert(guard.isWarning(s));assert.equal(guard.strip(s),'',s);}
+ const fact='1937年7月26日殖民行政当局驱逐佩恩。';
+ assert.equal(reader.narrative(fact+samples[1]),fact);assert.equal(guard.strip(fact+samples[1]),fact.slice(0,-1));
+ assert.equal(reader.narrative('巴巴多斯政府限制了佩恩的政治活动。'),'巴巴多斯政府限制了佩恩的政治活动。');
+}
