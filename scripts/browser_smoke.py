@@ -1416,7 +1416,9 @@ try:
     driver.find_element(By.CSS_SELECTOR, '#dossierBody [data-story-open="E20-CORK-BURNING"]').click()
     handover_link = '.story-body [data-story-event="E20-CORK-HANDOVER"]'
     wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, handover_link))
-    driver.find_element(By.CSS_SELECTOR, handover_link).click()
+    # Immediate activation uses the existing keyboard/programmatic path.
+    handover=driver.find_element(By.CSS_SELECTOR, handover_link)
+    driver.execute_script("arguments[0].scrollIntoView({block:'center'});arguments[0].click()",handover)
     wait.until(lambda d: d.execute_script("return window.atlasStoryBridge.currentYear()===1922"))
     wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '#dossierBody [data-story-open-event="E20-CORK-HANDOVER"]'))
     driver.find_element(By.CSS_SELECTOR, '#dossierBody [data-story-open-event="E20-CORK-HANDOVER"]').click()
