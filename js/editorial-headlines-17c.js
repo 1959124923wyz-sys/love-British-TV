@@ -73,6 +73,8 @@
  '1690S-E132':'Albion Frigate号船上反抗'
  };
  const storyTitles={
+ 'E20-T051-ASANTE-ANNEXATION-EXILE-1900-1924':'阿散蒂吞并与王室流放',
+ 'E20-T070-BRITISH-GUIANA-CONSTITUTION-1953-1966':'英属圭亚那宪政中止与政治拘押',
  'E20-KEN-HOLA':'肯尼亚茅茅镇压与殖民拘禁',
  'E20-SOUTH-AFRICAN-WAR-CAMPS':'英布战争焦土与集中营',
  'E20-MAL-BATANG-KALI':'马来亚紧急状态与强制迁村',
