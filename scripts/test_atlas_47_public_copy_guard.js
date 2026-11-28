@@ -138,3 +138,32 @@ assert.match(reader.narrative('英国于1894年建立保护地，[[E19-TEST|英�
  assert.equal(reader.narrative('州界仅为制度适用背景。'),'');
  assert.equal(reader.clean('昆士兰州土地法适用于该州'),'昆士兰州土地法适用于该州');
 }
+
+// T068: preserve the source article, suppress cartographic drafting notes at both render layers.
+{
+ const article=JSON.parse(read('data/stories/serial/e20-t068-caribbean-labour-1934-1939.json'));
+ const raw=article.sections.flatMap(s=>s.paragraphs).join('\n');
+ const samples=["圣文森特和牙买加的1935年记录目前仅作为具年事件，不以现代国界或整个岛屿表示警务行动覆盖范围。","现有地理资料支持在布里奇敦标出城市参考点，不支持绘出驱逐过程或抗争行动的精确范围。","地理点仅用于已知聚落和港口城市的定位。"];
+ for(const s of samples){assert(raw.includes(s));assert.equal(reader.narrative(s),'',s);assert.equal(reader.clean(s),'',s);assert(guard.isWarning(s));assert.equal(guard.strip(s),'',s);}
+ const fact='1937年7月26日殖民行政当局驱逐佩恩。';
+ assert.equal(reader.narrative(fact+samples[1]),fact);assert.equal(guard.strip(fact+samples[1]),fact.slice(0,-1));
+ assert.equal(reader.narrative('巴巴多斯政府限制了佩恩的政治活动。'),'巴巴多斯政府限制了佩恩的政治活动。');
+}
+
+// T068 SK35 event dossier: remove unfinished-research status without touching evidence.
+{
+ const t=JSON.parse(read('data/stories/serial/chronology-1930-1939.json')).events.find(e=>e.id==='E20-T068-SK35');
+ const note='当地劳工诉求与行政处置仍需原卷确认。';
+ const fact='英国殖民部1938年回顾记录圣基茨发生导致人员受伤害的动荡';
+ assert(t&&t.description.includes(note)&&t.short_description.includes(note));
+ assert(guard.isWarning(note));assert.equal(reader.clean(note),'');assert.equal(reader.narrative(note),'');assert.equal(guard.strip(note),'');
+ for(const raw of [t.description,t.short_description]){assert.equal(reader.clean(raw),fact);assert.equal(guard.strip(raw),fact);assert(reader.narrative(raw).includes(fact));assert(!reader.narrative(raw).includes('仍需原卷确认'));}
+ const historical='1938年殖民政府开始调查当地劳工诉求。';assert.equal(reader.narrative(historical),historical);assert.equal(guard.strip(historical),historical);
+}
+
+// The real T068 article uses the Latin spelling, not a Chinese transliteration.
+{
+ const a=JSON.parse(read('data/stories/serial/e20-t068-caribbean-labour-1934-1939.json'));
+ const rendered=a.sections.flatMap(s=>s.paragraphs.map(p=>guard.strip(reader.narrative(p)))).join('\n');
+ for(const fact of ['工资','Clement Payne','1937年7月26日遭驱逐'])assert(rendered.includes(fact),fact);
+}
