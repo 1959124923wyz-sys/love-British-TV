@@ -160,3 +160,10 @@ assert.match(reader.narrative('英国于1894年建立保护地，[[E19-TEST|英�
  for(const raw of [t.description,t.short_description]){assert.equal(reader.clean(raw),fact);assert.equal(guard.strip(raw),fact);assert(reader.narrative(raw).includes(fact));assert(!reader.narrative(raw).includes('仍需原卷确认'));}
  const historical='1938年殖民政府开始调查当地劳工诉求。';assert.equal(reader.narrative(historical),historical);assert.equal(guard.strip(historical),historical);
 }
+
+// The real T068 article uses the Latin spelling, not a Chinese transliteration.
+{
+ const a=JSON.parse(read('data/stories/serial/e20-t068-caribbean-labour-1934-1939.json'));
+ const rendered=a.sections.flatMap(s=>s.paragraphs.map(p=>guard.strip(reader.narrative(p)))).join('\n');
+ for(const fact of ['工资','Clement Payne','1937年7月26日遭驱逐'])assert(rendered.includes(fact),fact);
+}
