@@ -14,12 +14,10 @@ topic="E20-T070-BRITISH-GUIANA-CONSTITUTION-1953-1966";first='E20-T070-VOTE53'
 try:
  driver.get(base+'?year=1953')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&window.HistoryStories?.isLinkedEvent({id:'E20-T030-MANDATE'},'event')"))
- assert not js("return !!window.atlasStoryBridge.eventById(arguments[0])",first)
- assert not js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
- driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",topic,first)
+ wait.until(lambda _:js("return window.HistoryStories?.isLinkedEvent({id:arguments[0]},'event')&&window.atlasStoryBridge?.activeHasEvent(arguments[0])",first))
+ pending='E20-CORK-BURNING'
+ driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-CORK-BURN')
  assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article')
- driver.get(base+'?review20c=1&year=1953')
- wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&window.HistoryStories?.isLinkedEvent({id:arguments[0]},'event')&&window.atlasStoryBridge?.activeHasEvent(arguments[0])",first))
  assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
  js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]'))>0)
@@ -35,6 +33,6 @@ try:
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-back]'))>0)
  js("document.querySelector('[data-story-back]').click()")
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article [data-story-event="'+first+'"]'))>0)
- print('PASS T070 real desktop reader isolation, chronological navigation, location and return')
+ print('PASS T070 real desktop reader release and isolation, chronological navigation, location and return')
 finally:
  driver.quit()
