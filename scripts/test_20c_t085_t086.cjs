@@ -26,7 +26,7 @@ assert.equal(topics.length,2);let count=0,totalLinks=0;
 const sorted=a=>[...a].sort();
 for(const t of topics){
  assert.equal(t.status,'editorial_review');assert.equal(t.publication_review,'not_submitted');assert.equal(t.review_entry_required,true);
- const a=load(t.article_file);assert.equal(a.id,t.id);const src=new Set(a.sources.map(x=>x.id));const linked=[];
+ const a=load(t.article_file);assert.equal(a.id,t.id);const src=new Set(a.sources.map(x=>x.id));const linked=[];assert(a.sections.flatMap(s=>s.paragraphs).join('').replace(/\[\[[^|]+\|([^\]]+)\]\]/g,'$1').length>=3000,'publication prose minimum');
  for(const sec of a.sections){assert(sec.paragraphs.length>=2);assert(sec.source_keys.every(id=>src.has(id)));assert(sec.period_start_year>=a.start_year&&sec.period_end_year<=a.end_year);
  for(const p of sec.paragraphs)for(const m of p.matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]]+\]\]/g)){assert(es.has(m[1])||reuse.has(m[1]));linked.push(m[1]);}}
  assert.deepEqual(linked,t.event_ids);assert.deepEqual(sorted(linked.filter(id=>es.has(id))),sorted(t.review_event_ids));assert.deepEqual(sorted(t.review_feature_ids),sorted(linked.filter(id=>points.has(id.toLowerCase()+'-reference')).map(id=>id.toLowerCase()+'-reference')));
