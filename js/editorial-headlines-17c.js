@@ -73,6 +73,8 @@
  '1690S-E132':'Albion Frigate号船上反抗'
  };
  const storyTitles={
+ 'E20-KEN-HOLA':'肯尼亚茅茅镇压与殖民拘禁',
+ 'E20-SOUTH-AFRICAN-WAR-CAMPS':'英布战争焦土与集中营',
  'E20-MAL-BATANG-KALI':'马来亚紧急状态与强制迁村',
  'E20-T040-CYPRUS-EMERGENCY-DETENTION-1931-1960':'塞浦路斯反殖民运动与拘禁',
  'E20-T088-AUSTRALIA-NUCLEAR-LAND-1950-1999':'澳大利亚核试验与原住民失地',
