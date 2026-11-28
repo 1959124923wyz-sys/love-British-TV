@@ -33,7 +33,7 @@ try:
  article=wait.until(lambda _:driver.find_element(By.CSS_SELECTOR,'.major-story-article'))
  for forbidden in ('现有地理资料支持在布里奇敦','不支持绘出驱逐过程','目前仅作为具年事件','不以现代国界或整个岛屿','地理点仅用于已知聚落','保存原始工资单位与研究证据边界'):
   assert forbidden not in article.text, forbidden
- assert '工资' in article.text and '佩恩' in article.text
+ assert '工资' in article.text and 'Clement Payne' in article.text and '1937年7月26日遭驱逐' in article.text
  for event,y,lat,lng in [('E20-T068-NUM34',1934,10.66668,-61.51889),('E20-T068-BB37',1937,13.10732,-59.62021),('E20-T068-FROME38',1938,18.294068,-78.154692),('E20-T068-KING38',1938,17.997019,-76.793575),('E20-T068-BUT39',1939,None,None)]:
   el=wait.until(lambda _:driver.find_element(By.CSS_SELECTOR,'.major-story-article [data-story-event="'+event+'"]'))
   js("arguments[0].scrollIntoView({block:'center'});arguments[0].click()",el)
