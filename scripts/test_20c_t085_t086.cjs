@@ -25,7 +25,7 @@ const idx=load('data/stories/serial/index.json'),topics=idx.topics.filter(t=>/^E
 assert.equal(topics.length,2);let count=0,totalLinks=0;
 const sorted=a=>[...a].sort();
 for(const t of topics){
- assert.equal(t.status,'editorial_review');assert.equal(t.publication_review,'not_submitted');assert.equal(t.review_entry_required,true);
+ assert.equal(t.status,'published');assert.equal(t.publication_review,'approved');assert.equal(t.review_entry_required,true);
  const a=load(t.article_file);assert.equal(a.id,t.id);const src=new Set(a.sources.map(x=>x.id));const linked=[];assert(a.sections.flatMap(s=>s.paragraphs).join('').replace(/\[\[[^|]+\|([^\]]+)\]\]/g,'$1').length>=3000,'publication prose minimum');
  for(const sec of a.sections){assert(sec.paragraphs.length>=2);assert(sec.source_keys.every(id=>src.has(id)));assert(sec.period_start_year>=a.start_year&&sec.period_end_year<=a.end_year);
  for(const p of sec.paragraphs)for(const m of p.matchAll(/\[\[([A-Za-z0-9-]+)\|[^\]]+\]\]/g)){assert(es.has(m[1])||reuse.has(m[1]));linked.push(m[1]);}}
@@ -41,8 +41,10 @@ assert.equal(reg.annual_labour.rows.length,16);assert(reg.annual_labour.rows.eve
 const app=fs.readFileSync('app.js','utf8'),gate=app.slice(app.indexOf('function modern20cReviewGate('),app.indexOf('async function fetchModernAtlas('));
 const getGate=new Function('reviewParams',gate+'\nreturn modern20cReviewGate;');
 const publicGate=getGate({get:()=>null})(1950,idx),reviewGate=getGate({get:()=> '1'})(1950,idx);
-assert([...actual].every(id=>publicGate.eventIds.has(id)));assert([...points].every(id=>publicGate.featureIds.has(id)));assert([...reuse].every(id=>!publicGate.eventIds.has(id)));assert.equal(reviewGate.eventIds.size,0);assert.equal(reviewGate.featureIds.size,0);
-const half=JSON.parse(JSON.stringify(idx));let approved=half.topics.find(t=>t.id===topics[0].id);approved.status='published';approved.publication_review='approved';
+assert([...actual].every(id=>!publicGate.eventIds.has(id)));assert([...points].every(id=>!publicGate.featureIds.has(id)));assert([...reuse].every(id=>!publicGate.eventIds.has(id)));assert.equal(reviewGate.eventIds.size,0);assert.equal(reviewGate.featureIds.size,0);
+const pending=JSON.parse(JSON.stringify(idx));for(const t of pending.topics.filter(t=>/^E20-T08[56]-/.test(t.id))){t.status='editorial_review';t.publication_review='not_submitted';}
+const pendingGate=getGate({get:()=>null})(1950,pending);assert([...actual].every(id=>pendingGate.eventIds.has(id)));assert([...points].every(id=>pendingGate.featureIds.has(id)));assert([...reuse].every(id=>!pendingGate.eventIds.has(id)));
+const half=JSON.parse(JSON.stringify(pending));let approved=half.topics.find(t=>t.id===topics[0].id);approved.status='published';approved.publication_review='approved';
 const halfGate=getGate({get:()=>null})(1950,half);assert(approved.review_event_ids.every(id=>!halfGate.eventIds.has(id)));assert(topics[1].review_event_ids.every(id=>halfGate.eventIds.has(id)));
 assert(fs.readFileSync('js/history-stories.js','utf8').includes("topic.review_entry_required!==true||review.get('review20c')==='1'"));
 console.log('PASS T085/T086: 48 new events, 1 reuse, 53 sources, 15 reference points, 32 sections, 24 table rows, visibility gate');
