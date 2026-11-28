@@ -16,8 +16,8 @@ try:
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&!!window.atlasStoryBridge?.eventById(arguments[0])&&window.HistoryStories?.isLinkedEvent({id:'E20-T030-MANDATE'},'event')",first))
  wait.until(lambda _:js("return !!window.atlasStoryBridge.eventById(arguments[0])",new))
  assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",new)
- pending='E20-T068-CARIBBEAN-LABOUR-1934-1939'
- driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-T068-NUM34')
+ pending='E20-T056-NYASALAND-LAND-LABOUR-1900-1964'
+ driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-T056-LAND04')
  assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article')
  js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+topic+'"]'))>0)

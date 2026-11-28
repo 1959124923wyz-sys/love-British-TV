@@ -14,11 +14,12 @@ topic="E20-T069-GUIANA-SUGAR-LAND-1900-1966";first='E20-T069-ENMORE48'
 try:
  driver.get(base+'?year=1948')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&window.HistoryStories?.isLinkedEvent({id:'E20-T030-MANDATE'},'event')"))
- assert not js("return !!window.atlasStoryBridge.eventById(arguments[0])",first)
- assert not js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
- driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",topic,first)
+ wait.until(lambda _:js("return window.HistoryStories?.isLinkedEvent({id:arguments[0]},'event')&&window.atlasStoryBridge?.activeHasEvent(arguments[0])",first))
+ assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
+ pending='E20-T056-NYASALAND-LAND-LABOUR-1900-1964'
+ driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-T056-LAND04')
  assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article')
- driver.get(base+'?review20c=1&year=1948')
+ driver.get(base+'?year=1948')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&window.HistoryStories?.isLinkedEvent({id:arguments[0]},'event')&&window.atlasStoryBridge?.activeHasEvent(arguments[0])",first))
  assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
  js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)
@@ -35,6 +36,6 @@ try:
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-back]'))>0)
  js("document.querySelector('[data-story-back]').click()")
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article [data-story-event="'+first+'"]'))>0)
- print('PASS T069 real desktop candidate chronology, coordinates and event return')
+ print('PASS T069 real ordinary-entry desktop chronology, coordinates and event return')
 finally:
  driver.quit()

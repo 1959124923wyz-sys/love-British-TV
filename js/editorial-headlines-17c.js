@@ -73,6 +73,8 @@
  '1690S-E132':'Albion Frigate号船上反抗'
  };
  const storyTitles={
+ 'E20-T068-CARIBBEAN-LABOUR-1934-1939':'英属加勒比劳工抗争与殖民镇压',
+ 'E20-T069-GUIANA-SUGAR-LAND-1900-1966':'英属圭亚那糖业与劳工镇压',
  'E20-T090-EASTER-RISING-DETENTION-1916-1919':'爱尔兰复活节起义与行政拘禁',
  'E20-CORK-BURNING':'爱尔兰军警报复、焚城与分治',
  'E20-T092-NORTHERN-IRELAND-DETENTION-1969-1998':'北爱尔兰拘禁与国家责任',

@@ -15,8 +15,8 @@ try:
  driver.get(base+'?year=1900')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&!!window.atlasStoryBridge?.eventById('E20-SAW-1900-BLO-CAMP')&&window.HistoryStories?.isLinkedEvent({id:'E20-T030-MANDATE'},'event')"))
  wait.until(lambda _:js("return window.HistoryStories?.isLinkedEvent({id:arguments[0]},'event')&&window.atlasStoryBridge?.activeHasEvent(arguments[0])",first))
- pending='E20-T068-CARIBBEAN-LABOUR-1934-1939'
- driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-T068-NUM34')
+ pending='E20-T056-NYASALAND-LAND-LABOUR-1900-1964'
+ driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-T056-LAND04')
  assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article')
  assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
  js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)
