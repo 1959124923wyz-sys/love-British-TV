@@ -149,3 +149,14 @@ assert.match(reader.narrative('英国于1894年建立保护地，[[E19-TEST|英�
  assert.equal(reader.narrative(fact+samples[1]),fact);assert.equal(guard.strip(fact+samples[1]),fact.slice(0,-1));
  assert.equal(reader.narrative('巴巴多斯政府限制了佩恩的政治活动。'),'巴巴多斯政府限制了佩恩的政治活动。');
 }
+
+// T068 SK35 event dossier: remove unfinished-research status without touching evidence.
+{
+ const t=JSON.parse(read('data/stories/serial/chronology-1930-1939.json')).events.find(e=>e.id==='E20-T068-SK35');
+ const note='当地劳工诉求与行政处置仍需原卷确认。';
+ const fact='英国殖民部1938年回顾记录圣基茨发生导致人员受伤害的动荡';
+ assert(t&&t.description.includes(note)&&t.short_description.includes(note));
+ assert(guard.isWarning(note));assert.equal(reader.clean(note),'');assert.equal(reader.narrative(note),'');assert.equal(guard.strip(note),'');
+ for(const raw of [t.description,t.short_description]){assert.equal(reader.clean(raw),fact);assert.equal(guard.strip(raw),fact);assert(reader.narrative(raw).includes(fact));assert(!reader.narrative(raw).includes('仍需原卷确认'));}
+ const historical='1938年殖民政府开始调查当地劳工诉求。';assert.equal(reader.narrative(historical),historical);assert.equal(guard.strip(historical),historical);
+}

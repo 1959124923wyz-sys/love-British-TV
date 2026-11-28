@@ -18,6 +18,12 @@ try:
  assert not js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
  driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",topic,first)
  assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article')
+ driver.get(base+'?review20c=1&year=1935')
+ wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&window.atlasStoryBridge?.activeHasEvent('E20-T068-SK35')"))
+ js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById('E20-T068-SK35'))")
+ wait.until(lambda _:js("return window.atlasStoryBridge.selectedEventId()==='E20-T068-SK35'&&document.querySelector('#dossierBody')?.innerText.includes('圣基茨')"))
+ assert '仍需原卷确认' not in driver.find_element(By.ID,'dossierBody').text
+ assert '1938年回顾记录' in driver.find_element(By.ID,'dossierBody').text
  driver.get(base+'?review20c=1&year=1934')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&window.HistoryStories?.isLinkedEvent({id:arguments[0]},'event')&&window.atlasStoryBridge?.activeHasEvent(arguments[0])",first))
  assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
