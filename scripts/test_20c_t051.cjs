@@ -1,0 +1,13 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict'),read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const idx=read('data/stories/serial/index.json'),t=idx.topics.find(t=>t.id==="E20-T051-ASANTE-ANNEXATION-EXILE-1900-1924"),a=read(t.article_file),es=new Map(),points=new Map(),sources=new Set(a.sources.map(s=>s.id));
+assert.equal(t.status,'editorial_review');assert.equal(t.publication_review,'not_submitted');assert.equal(t.review_entry_required,true);assert.equal(a.sections.length,12);assert(a.lead.length>=120&&a.sections.flatMap(s=>s.paragraphs).join('').replace(/\[\[[^|]+\|([^\]]+)\]\]/g,'$1').length>=3000);
+for(const y of [1900,1920]){const c=read('data/stories/serial/chronology-'+y+'-'+(y+9)+'.json'),g=read('data/twentieth-century-spatial-'+y+'-'+(y+9)+'.geojson'),keys=new Set(c.sources.map(s=>s.id));
+ for(const e of c.events.filter(e=>e.id.startsWith('E20-T051-'))){assert(!es.has(e.id));es.set(e.id,e);assert(e.source_ids.every(k=>sources.has(k)&&keys.has(k)));assert.equal(e.fill_authorized,false);assert.equal(e.area_sqkm,null);}
+ for(const p of g.features.filter(p=>p.id.startsWith('e20-t051-'))){assert(!points.has(p.id));points.set(p.id,p);assert.equal(p.geometry.type,'Point');assert.equal(p.properties.fill_authorized,false);assert.equal(p.properties.area_sqkm,null);assert(p.properties.source_ids.every(k=>keys.has(k)));}}
+assert.equal(es.size,20);assert.equal(points.size,6);
+const links=[...new Set([...a.sections.flatMap(s=>s.paragraphs).join('').matchAll(/\[\[([A-Z0-9-]+)\|/g)].map(m=>m[1]))];assert.deepEqual(t.event_ids,links);assert.deepEqual(t.review_event_ids,links);assert(links.every(id=>es.has(id)));assert.deepEqual(new Set(t.review_feature_ids),new Set(points.keys()));for(const p of points.values()){const e=es.get(p.properties.related_event_ids[0]);assert.deepEqual(p.geometry.coordinates,[e.lng,e.lat]);}
+assert(a.sections.every(s=>s.paragraphs.length>=2&&s.source_keys.every(k=>sources.has(k))&&s.period_start_year>=a.start_year&&s.period_end_year<=a.end_year));assert(a.topic_source_claims.every(c=>c.source_keys.every(k=>sources.has(k))));
+const app=fs.readFileSync('app.js','utf8'),gate=app.slice(app.indexOf('function modern20cReviewGate('),app.indexOf('async function fetchModernAtlas(')),fn=new Function('reviewParams',gate+'\nreturn modern20cReviewGate;');
+const pub=fn({get:()=>null})(1900,idx),rev=fn({get:()=>'1'})(1900,idx);assert(links.every(id=>pub.eventIds.has(id)&&!rev.eventIds.has(id)));assert([...points.keys()].every(id=>pub.featureIds.has(id)&&!rev.featureIds.has(id)));assert(!pub.eventIds.has('E20-SAW-1900-BLO-CAMP'));
+console.log('PASS T051 chronology, sources, map references, ordinary reader isolation');
