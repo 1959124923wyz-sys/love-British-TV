@@ -25,9 +25,10 @@ try:
   assert js("return !!window.atlasStoryBridge.eventById(arguments[0])",first), 'approved event missing at ordinary entry'
   assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first), 'approved geometry missing at ordinary entry'
   # Retain a negative ordinary-entry check for an unrelated, unapproved topic.
-  pending=next(t for t in registry['topics'] if t.get('review_entry_required') and t['status']!='published' and t.get('review_event_ids'))
+  # A review-only article can reuse public events without owning any hidden event IDs.
+  pending=next(t for t in registry['topics'] if t.get('review_entry_required') and not (t['status']=='published' and t.get('publication_review')=='approved') and t.get('event_ids'))
   assert not driver.find_elements(By.CSS_SELECTOR,'[data-story-open="'+pending['id']+'"]')
-  driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending['id'],pending['review_event_ids'][0])
+  driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending['id'],(pending.get('review_event_ids') or pending['event_ids'])[0])
   assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article'), 'unapproved topic leaked by direct openStory'
   wait.until(lambda _:js("return window.HistoryStories?.isLinkedEvent({id:arguments[0]},'event')&&window.atlasStoryBridge?.activeHasEvent(arguments[0])",first))
   js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)
