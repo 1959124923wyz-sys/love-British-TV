@@ -14,17 +14,18 @@ topic="E20-T068-CARIBBEAN-LABOUR-1934-1939";first='E20-T068-NUM34'
 try:
  driver.get(base+'?year=1934')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&window.HistoryStories?.isLinkedEvent({id:'E20-T030-MANDATE'},'event')"))
- assert not js("return !!window.atlasStoryBridge.eventById(arguments[0])",first)
- assert not js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
- driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",topic,first)
+ wait.until(lambda _:js("return window.HistoryStories?.isLinkedEvent({id:arguments[0]},'event')&&window.atlasStoryBridge?.activeHasEvent(arguments[0])",first))
+ assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
+ pending='E20-T056-NYASALAND-LAND-LABOUR-1900-1964'
+ driver.execute_async_script("const done=arguments[arguments.length-1];Promise.resolve(window.HistoryStories.openStory(arguments[0],false,arguments[1])).then(()=>done(true),()=>done(false))",pending,'E20-T056-LAND04')
  assert not driver.find_elements(By.CSS_SELECTOR,'.major-story-article')
- driver.get(base+'?review20c=1&year=1935')
+ driver.get(base+'?year=1935')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&window.atlasStoryBridge?.activeHasEvent('E20-T068-SK35')"))
  js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById('E20-T068-SK35'))")
  wait.until(lambda _:js("return window.atlasStoryBridge.selectedEventId()==='E20-T068-SK35'&&document.querySelector('#dossierBody')?.innerText.includes('圣基茨')"))
  assert '仍需原卷确认' not in driver.find_element(By.ID,'dossierBody').text
  assert '1938年回顾记录' in driver.find_element(By.ID,'dossierBody').text
- driver.get(base+'?review20c=1&year=1934')
+ driver.get(base+'?year=1934')
  wait.until(lambda _:js("return document.getElementById('workspace')?.dataset.atlasReady==='true'&&window.HistoryStories?.isLinkedEvent({id:arguments[0]},'event')&&window.atlasStoryBridge?.activeHasEvent(arguments[0])",first))
  assert js("return window.atlasStoryBridge.activeSpatialHasEvent(arguments[0])",first)
  js("window.atlasStoryBridge.openEvent(window.atlasStoryBridge.eventById(arguments[0]))",first)
@@ -45,6 +46,6 @@ try:
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'[data-story-back]'))>0)
  js("document.querySelector('[data-story-back]').click()")
  wait.until(lambda _:len(driver.find_elements(By.CSS_SELECTOR,'.major-story-article [data-story-event="'+first+'"]'))>0)
- print('PASS T068 real desktop candidate chronology, coordinates and event return')
+ print('PASS T068 real ordinary-entry desktop chronology, coordinates and event return')
 finally:
  driver.quit()
